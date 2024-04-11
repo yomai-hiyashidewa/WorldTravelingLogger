@@ -1,288 +1,546 @@
-Transpotation,Start,-,-,-,End,-,-,-,-,-,-,-,-
-Type,Date,Countury,Place,Type,Date,Countury,Place,Type,Distance(KM),Time(Min),Fee,Currency,Memo
-Train,2022/5/17,Japan,Sanda,Station,2022/5/17,Japan,KTX,Station,92,120,2230,JPY,-
-Airplane,2022/5/17,Japan,KTX,AirPort,2022/5/17,Japan,HND,AirPort,537,60,10000,JPY,-
-Airplane,2022/5/17,JAPAN,HND,AirPort,2022/5/18,Australia,Sydney,AirPort,7821,590,37685,JPY,-
-Subway,2022/5/18,Australia,Sydney,AirPort,2022/5/18,Australia,Sydney,Central,11.4,10,16,AUD,-
-Train,2022/5/19,Australia,Sydney,Station,2022/5/19,Australia,katoomba,Station,102,120,8.6,AUD,-
-Train,2022/5/20,Australia,katoomba,Station,2022/5/20,Australia,blackheath,Station,10.8,25,4,AUD,-
-Train,2022/5/20,Australia,blackheath,Station,2022/5/20,Australia,katoomba,Station,10.8,25,4,AUD,-
-Train,2022/5/21,Australia,katoomba,Station,2022/5/19,Australia,Sydney,Station,102,120,8.6,AUD,-
-Bus,2022/5/21,Australia,Sydney,Station,2022/5/22,Australia,Melbourne,Station,949,720,WithLimitedPass,AUD,-
-Bus,2022/5/24,Australia,Melbourne,Station,2022/5/24,Australia,newhevens,Inn,126,150,10,AUD,-
-Bus,2022/5/24,Australia,newhevens,Inn,2022/5/24,Australia,cowes,Central,14.5,30,3.3,AUD,-
-Bus,2022/5/24,Australia,cowes,Central,2022/5/24,Australia,newhevens,Inn,14.5,30,3.3,AUD,-
-Bus,2022/5/25,Australia,newhevens,Inn,2022/5/25,Australia,cowes,Central,14.5,30,3.3,AUD,-
-Bus,2022/5/25,Australia,cowes,Central,2022/5/25,Australia,newhevens,Inn,14.5,30,3.3,AUD,-
-Bus,2022/5/26,Australia,newhevens,Inn,2022/5/26,Australia,Melbourne,Station,126,150,10,AUD,-
-Train,2022/5/27,Australia,Melbourne,Station,2022/5/27,Australia,Adelaide,Station,726,600,165,AUD,-
-Train,2022/5/28,Australia,Adelade,Station,2022/5/28,Australia,seaford,Stop,35.9,60,4.25,AUD,-
-Bus,2022/5/28,Australia,Seaford,Stop,2022/5/28,Australia,Moana,Beach,3.8,15,4.25,AUD,-
-Bus,2022/5/28,Australia,Moana,Beach,2022/5/28,Australia,Seaford,Stop,3.8,15,4.25,AUD,-
-Train,2022/5/28,Australia,seaford,Stop,2022/5/28,Australia,Adelade,Station,35.9,60,4.25,AUD,-
-Train,2022/5/29,Australia,Adelade,Station,2022/5/29,Australia,belair,Station,9.7,60,4.25,AUD,-
-Train,2022/5/29,Australia,belair,Station,2022/5/29,Australia,Adelade,Station,9.7,60,4.25,AUD,-
-Train,2022/5/29,Australia,Adelade,Station,2022/5/29,Australia,outer?harbar,Station,26.6,60,4.25,AUD,-
-Train,2022/5/29,Australia,outer?harbar,Station,2022/5/29,Australia,port adelade,Station,9.1,30,4.25,AUD,-
-Train,2022/5/29,Australia,port adelade,Station,2022/5/29,Australia,Adelade,Station,15.1,60,4.25,AUD,-
-Bus,2022/5/30,Australia,Adelade,Stop,2022/5/31,Australia,Alice springs,Stop,1534,1200,WithLimitedPass,AUD,-
-Bike,2022/6/2,Australia,Alice springs,Stop,2022/6/2,Australia,Alice springs,Stop,28,180,45,AUD,-
-Bus,2022/6/3,Australia,Alice springs,Stop,2022/6/4,Australia,Darwin,Stop,1496,1320,WithLimitedPass,AUD,-
-Bus,2022/6/6,Australia,Darwin,Stop,2022/6/6,Australia,east point,Stop,6,30,3,AUD,-
-Bus,2022/6/6,Australia,east point,Stop,2022/6/6,Australia,Darwin,Stop,6,30,3,AUD,-
-Bus,2022/6/6,Australia,Darwin,Stop,2022/6/6,Australia,Darwin,National Park,14.5,30,3,AUD,-
-Bus,2022/6/6,Australia,Darwin Natinal Park,Stop,2022/6/6,Australia,Darwin,Stop,14.5,30,3,AUD,-
-Bus,2022/6/7,Australia,Darwin Natinal Park,Stop,2022/6/7,Australia,Darwin,AirPort,10.8,30,3,AUD,-
-Airplane,2022/6/7,Australia,Darwin,AirPort,2022/6/7,Australia,Cairns,AirPort,2722,180,18107,JPY,-
-Bus,2022/6/7,Australia,Cairns,AirPort,2022/6/7,Australia,Cairns,Inn,5.7,30,5,AUD,-
-Bus,2022/6/8,Australia,Cairns,Inn,2022/6/8,Australia,Cairns,Central,1,10,0,AUD,-
-Bus,2022/6/9,Australia,Cairns,Central,2022/6/9,Australia,palm?cove,Beach,25.4,60,3,AUD,-
-Bus,2022/6/10,Australia,palm?cove,Beach,2022/6/10,Australia,Cairns,Central,25.4,60,3,AUD,-
-Bus,2022/6/10,Australia,Cairns,Central,2022/6/10,Australia,Cairns,smith?field,18,30,3,AUD,-
-Bus,2022/6/10,Australia,Cairns,smith?field,2022/6/10,Australia,Cairns,Central,18,30,3,AUD,-
-Bus,2022/6/12,Australia,Cairns,Central,2022/6/12,Australia,townsville,Central,347,360,WithLimitedPass,AUD,-
-Bus,2022/6/13,Australia,townsville,Central,2022/6/13,Australia,Airlie Beach,Central,274,300,WithLimitedPass,AUD,-
-Bus,2022/6/14,Australia,Airlie Beach,Central,2022/6/14,Australia,Shute Harbour,Stop,12.4,20,1.5,AUD,-
-Bus,2022/6/14,Australia,Shute Harbour,Stop,2022/6/14,Australia,Airlie Beach,Central,12.4,20,1.5,AUD,-
-Bus,2022/6/15,Australia,Airlie Beach,Central,2022/6/15,Australia,conway,Stop,18,30,1.5,AUD,-
-Bus,2022/6/15,Australia,conway,Stop,2022/6/15,Australia,Airlie Beach,Central,18,30,1.5,AUD,-
-Bus,2022/6/16,Australia,Airlie Beach,Central,2022/6/17,Australia,Brisbane,Central,1124,1140,WithLimitedPass,AUD,-
-Train,2022/6/18,Australia,Brisbane,Central,2022/6/18,Australia,Gold coast,Central,77.7,80,16.6,AUD,-
-Bus,2022/6/19,Australia,Gold coast,Central,2022/6/19,Australia,Snapper?Rocks,Stop,33.4,90,1.5,AUD,-
-Bus,2022/6/19,Australia,Snapper?Rocks,Stop,2022/6/19,Australia,Gold coast,Central,33.4,90,1.5,AUD,-
-Train,2022/6/20,Australia,Gold coast,Central,2022/6/20,Australia,woodly?point?jetty?,Station,109,170,20,AUD,-
-Train,2022/6/20,Australia,woodly?point?jetty?,Station,2022/6/20,Australia,Brisbane,Central,38.7,60,13,AUD,-
-Bus,2022/6/20,Australia,Brisbane,Central,2022/6/20,Australia,Mount?Coot-tha,Stop,7.5,30,1.5,AUD,-
-Bus,2022/6/20,Australia,Mount?Coot-tha,Stop,2022/6/20,Australia,Brisbane,Central,7.5,30,1.5,AUD,-
-Train,2022/6/21,Australia,Brisbane,Station,2022/6/21,Australia,Coffs Harbour,Central,384,600,43.76,AUD,-
-Train,2022/6/22,Australia,Coffs Harbour,Station,2022/6/22,Australia,Newcastle,Central,385,410,44.22,AUD,-
-Bus,2022/6/23,Australia,Newcastle,Stop,2022/6/23,Australia,Port Stephens,Stop,66.1,120,3.2,AUD,-
-Bus,2022/6/23,Australia,Port Stephens,Stop,2022/6/23,Australia,Newcastle,Stop,66.1,120,3.2,AUD,-
-Train,2022/6/24,Australia,Newcastle,Station,2022/6/24,Australia,Sydney,Station,164,150,18,AUD,-
-Bus,2022/6/24,Australia,Sydney,Stop,2022/6/24,Australia,watsonsbay,Stop,11.1,30,3.2,AUD,-
-Bus,2022/6/24,Australia,watsonsbay,Stop,2022/6/24,Australia,Sydney,Stop,11.1,30,3.2,AUD,-
-Train,2022/6/25,Australia,Sydney,Stop,2022/6/25,Australia,Sydney,AirPort,12,30,16,AUD,-
-Train,2022/6/25,Australia,Sydney,AirPort,2022/6/25,Australia,Sydney,Stop,12,30,16,AUD,-
-Train,2022/6/27,Australia,Sydney,Stop,2022/6/27,Australia,Sydney,AirPort,12,30,16,AUD,-
-Airplane,2022/6/27,Australia,Sydney,AirPort,2022/6/27,Japan,HND,AirPort,7821,590,40000,JPY,-
-Airplane,2022/6/27,JAPAN,HND,AirPort,2022/6/27,Japan,Itami,AirPort,514,60,8780,JPY,-
-Train,2022/6/27,Japan,Itami,AirPort,2022/6/27,Japan,Sanda,Station,92,70,2320,JPY,-
-Train,2022/7/1,Japan,Sanda,Station,2022/7/1,Japan,Kobe,Port,40.6,100,1240,JPY,-
-Ferry,2022/7/1,Japan,Kobe,Port,2022/7/2,Japan,Sinmoji,Port,509,60,5950,JPY,-
-Bus,2022/7/2,Japan,Sinmoji,Port,2022/7/2,Japan,Moji,Station,8.1,20,340,JPY,-
-Train,2022/7/2,Japan,Moji,Station,2022/7/2,Japan,Hakata,Station,79.8,134,1540,JPY,-
-Train,2022/7/2,Japan,Hakata,Station,2022/7/2,Japan,Kokura,Station,74.8,83,1310,JPY,-
-Train,2022/7/3,Japan,Kokura,Station,2022/7/3,Japan,Moji,Station,5.4,7,210,JPY,-
-Bus,2022/7/3,Japan,Moji,Station,2022/7/3,Japan,Shinmoji,Port,8.3,22,340,JPY,-
-Ferry,2022/7/3,Japan,Sinmoji,Port,2022/7/4,Japan,Kobe,Port,509,60,5950,JPY,-
-Train,2022/7/4,Japan,Sanda,Station,2022/7/4,Japan,Sanda,Station,40.6,100,1240,JPY,-
-Train,2022/7/8,Japan,Sanda,Station,2022/7/8,Japan,Toyoka,Station,114,180,2310,JPY,-
-Train,2022/7/8,Japan,Toyoka,Station,2022/7/8,Japan,KinosakiOnsen,Station,10,10,200,JPY,-
-Train,2022/7/9,Japan,KinosakiOnsen,Station,2022/7/9,Japan,Kasumi,Station,30,30,420,JPY,-
-Train,2022/7/9,Japan,Kasumi,Station,2022/7/9,Japan,KinosakiOnsen,Station,30,30,420,JPY,-
-Train,2022/7/10,Japan,KinosakiOnsen,Station,2022/7/10,Japan,Sanda,Station,125,190,2310,JPY,-
-Train,2022/7/13,Japan,Sanda,Station,2022/7/13,Japan,KIX,AirPort,92,120,2230,JPY,-
-Airplane,2022/7/13,Japan,KIX,AirPort,2022/7/13,Japan,HND,AirPort,537,60,9910,JPY,-
-Airplane,2022/7/13,Japan,HND,AirPort,2022/7/13,USA,Seattle,AirPort,7697,550,90000,JPY,-
-Airplane,2022/7/13,USA,Seattle,AirPort,2022/7/13,USA,Anchorage,AirPort,2320,180,4250,JPY,-
-Bus,2022/7/13,USA,Anchorage,AirPort,2022/7/13,USA,Anchorage,Inn,7.7,30,2,USD,-
-Bus,2022/7/14,USA,Anchorage,Inn,2022/7/14,USA,Anchorage,Central,2,10,2,USD,-
-Bus,2022/7/15,USA,Anchorage,Central,2022/7/15,USA,Anchorage,Univesity,6.2,15,2,USD,-
-Bus,2022/7/15,USA,Anchorage,Univesity,2022/7/15,USA,Anchorage,Central,6.2,15,2,USD,-
-Bus,2022/7/16,USA,Anchorage,Central,2022/7/16,USA,Anchorage,Zoo,15.77,20,0,USD,-
-Bus,2022/7/16,USA,Anchorage,Zoo,2022/7/16,USA,Anchorage,Central,15.77,20,0,USD,-
-Airplane,2022/7/17,USA,Anchorage,AirPort,2022/7/17,Canada,Vancouver,AirPort,2131,180,28140,USD,-
-Subway,2022/7/17,Canada,Vancouver,AirPort,2022/7/17,Canada,Vancouver,Central,14.2,26,3.75,CAD,-
-Bus,2022/7/18,Canada,Vancouver,Central,2022/7/18,Canada,Vancouver,Park,2.1,5,2.55,CAD,-
-Bus,2022/7/18,Canada,Vancouver,Park,2022/7/18,Canada,Vancouver,Beach,4.3,30,2.55,CAD,-
-Bus,2022/7/19,Canada,Vancouver,Beach,2022/7/19,Canada,Point Roberts,Stop,36,50,3.75,CAD,-
-Bus,2022/7/19,Canada,Point Roberts,Stop,2022/7/19,Canada,Vancouver,Central,36,50,3.75,CAD,-
-Subway,2022/7/19,Canada,Vancouver,Central,2022/7/19,Canada,Richmond,Station,16,33,3.75,CAD,-
-Bus,2022/7/19,Canada,Richmond,Station,2022/7/19,Canada,Richmond,Park,8.7,16,3.75,CAD,-
-Bus,2022/7/19,Canada,Richmond,Park,2022/7/19,Canada,Vancouver,Beach,23,30,3.75,CAD,-
-Bus,2022/7/20,Canada,Vancouver,Beach,2022/7/20,Canada,horse shoot bay,Port,27.1,90,4.8,CAD,-
-Ferry,2022/7/20,Canada,horse shoot bay,Port,2022/7/20,Canada,Nanaimo,Port,70,100,17.2,CAD,-
-Bus,2022/7/20,Canada,Nanaimo,Port,2022/7/20,Canada,Nanaimo,Central,5,13,2.5,CAD,-
-Bus,2022/7/21,Canada,Nanaimo,Central,2022/7/21,Canada,Neck?Point?Park,Stop,10,25,2.5,CAD,-
-Bus,2022/7/21,Canada,Neck?Point?Park,Stop,2022/7/21,Canada,Nanaimo,Port,5,13,2.5,CAD,-
-Ferry,2022/7/21,Canada,Nanaimo,Port,2022/7/21,Canada,horse shoot bay,Port,70,100,17.2,CAD,-
-Bus,2022/7/21,Canada,horse shoot bay,Port,2022/7/21,Canada,Vancouver,Park,26,60,4.8,CAD,-
-Subway,2022/7/21,Canada,Vancouver,Park,2022/7/21,Canada,Vancouver,Beach,8.5,30,3.75,CAD,-
-Bus,2022/7/22,Canada,Vancouver,Beach,2022/7/22,Canada,Vancouver,Museum,4.6,10,2.55,CAD,-
-Train,2022/7/22,Canada,Vancouver,Museum,2022/7/22,Canada,Vancouver,Station,5.6,10,2.55,CAD,-
-Train,2022/7/22,Canada,Vancouver,Station,2022/7/23,Canada,Edmonton,Station,1158,1620,235.2,CAD,-
-Bus,2022/7/23,Canada,Edomonton,Station,2022/7/23,Canada,Edomonton,Inn,8.4,30,3.5,CAD,-
-Bus,2022/7/24,Canada,Edomonton,Inn,2022/7/24,Canada,Edomonton,Central,4,16,3.5,CAD,-
-Bus,2022/7/24,Canada,Edomonton,Central,2022/7/24,Canada,Edomonton,Inn,4,16,3.5,CAD,-
-Bus,2022/7/25,Canada,Edomonton,Inn,2022/7/25,Canada,Edomonton,Central,4,16,3.5,CAD,-
-Bus,2022/7/25,Canada,Edomonton,Central,2022/7/25,Canada,Saskatoon,Stop,522,300,69.99,CAD,-
-Bus,2022/7/26,Canada,Saskatoon,Stop,2022/7/26,Canada,Saskatoon,Central,3,20,3,CAD,-
-Bus,2022/7/26,Canada,Saskatoon,Central,2022/7/26,Canada,Saskatoon,Stop,3,20,3,CAD,-
-Bus,2022/7/27,Canada,Saskatoon,Stop,2022/7/27,Canada,Saskatoon,Central,3,20,3,CAD,-
-Bus,2022/7/27,Canada,Saskatoon,Central,2022/7/27,Canada,Regina,Stop,261,180,60,CAD,-
-Bus,2022/7/28,Canada,Regina,Stop,2022/7/28,Canada,Regina,Central,3,20,3,CAD,-
-Bus,2022/7/28,Canada,Regina,Central,2022/7/28,Canada,Regina,Stop,3,20,3,CAD,-
-Bus,2022/7/29,Canada,Regina,Stop,2022/7/29,Canada,Regina,Central,3,20,3,CAD,-
-Bus,2022/7/29,Canada,Regina,Central,2022/7/30,Canada,Winnipeg,Central,572,540,120,CAD,-
-Train,2022/7/31,Canada,Winnipeg,Central,2022/8/2,Canada,Toronto,Station,2102,2280,262.5,CAD,-
-Subway,2022/8/2,Canada,Toronto,Station,2022/8/2,Canada,Toronto,Inn,4,15,3.35,CAD,-
-Subway,2022/8/3,Canada,Toronto,Inn,2022/8/3,Canada,Toronto,Station,4,15,3.35,CAD,-
-Train,2022/8/3,Canada,Toronto,Station,2022/8/3,Canada,Hamilton,Station,64,60,12,CAD,-
-Bus,2022/8/3,Canada,Hamilton,Station,2022/8/3,Canada,Niagara Falls,Stop,64,60,14,CAD,-
-Bus,2022/8/3,Canada,Niagara Falls,Stop,2022/8/3,Canada,Hamilton,Station,64,60,14,CAD,-
-Train,2022/8/3,Canada,Hamilton,Station,2022/8/3,Canada,Toronto,Station,64,60,12,CAD,-
-Subway,2022/8/3,Canada,Toronto,Station,2022/8/3,Canada,Toronto,Inn,4,15,3.35,CAD,-
-Subway,2022/8/4,Canada,Toronto,Inn,2022/8/4,Canada,Toronto,Univesity,4,15,3.35,CAD,-
-Subway,2022/8/4,Canada,Toronto,Univesity,2022/8/4,Canada,Toronto,Inn,4,15,3.35,CAD,-
-Subway,2022/8/5,Canada,Toronto,Inn,2022/8/5,Canada,Toronto,Station,4,15,3.35,CAD,-
-Train,2022/8/5,Canada,Toronto,Station,2022/8/5,Canada,Otawa,Station,402,250,101.7,CAD,-
-Train,2022/8/5,Canada,Otawa,Station,2022/8/5,Canada,Montr?al,Station,200,120,101.7,CAD,-
-Train,2022/8/6,Canada,Montr?al,Station,2022/8/6,Canada,Qu?bec,Station,254,180,110.375,CAD,-
-Ferry,2022/8/6,Canada,Qu?bec,Port,2022/8/6,Canada,Levis,Port,2.4,5,3.75,CAD,-
-Ferry,2022/8/6,Canada,Levis,Port,2022/8/6,Canada,Qu?bec,Port,2.4,5,3.75,CAD,-
-Train,2022/8/7,Canada,Qu?bec,Station,2022/8/7,Canada,Montr?al,Station,254,180,110.375,CAD,-
-Bus,2022/8/8,Canada,Montr?al,Central,2022/8/8,Canada,Montr?al,AirPort,20,34,10,CAD,-
-Airplane,2022/8/8,Canada,Montr?al,AirPort,2022/8/8,USA,Houston,AirPort,2974,225,23435,JPY,-
-Airplane,2022/8/8,USA,Houston,AirPort,2022/8/8,Mexico,Mexico City,AirPort,1230,150,23435,JPY,-
-UBER,2022/8/8,Mexico,Mexico City,AirPort,2022/8/8,Mexico,Mexico City,Inn,8.2,15,290.62,MXP,-
-Subway,2022/8/9,Mexico,Mexico City,Central,2022/8/9,Mexico,Mexico City,Inn,2,10,5,MXP,-
-UBER,2022/8/9,Mexico,Mexico City,Inn,2022/8/9,Mexico,Mexico City,Central,4,15,79.58,MXP,-
-Bus,2022/8/10,Mexico,Mexico City,Central,2022/8/10,Mexico,Mexico City,Museum,6.4,45,6,MXP,-
-Bus,2022/8/10,Mexico,Mexico City,Museum,2022/8/10,Mexico,Mexico City,Central,6.4,45,6,MXP,-
-Bus,2022/8/11,Mexico,Mexico City,Central,2022/8/11,Mexico,Mexico City,Terminal,5.9,21,6,MXP,-
-Bus,2022/8/11,Mexico,Mexico City,Terminal,2022/8/11,Mexico,Teotihuacan,Heritage,44.3,60,52,MXP,-
-Bus,2022/8/11,Mexico,Teotihuacan,Heritage,2022/8/11,Mexico,Mexico City,Terminal,44.3,60,52,MXP,-
-Bus,2022/8/11,Mexico,Mexico City,Terminal,2022/8/11,Mexico,Mexico City,Central,5.9,21,6,MXP,-
-Bus,2022/8/12,Mexico,Mexico City,Central,2022/8/12,Mexico,Mexico City,Terminal,5.9,21,6,MXP,-
-Bus,2022/8/12,Mexico,Mexico City,Terminal,2022/8/12,Mexico,Quer?taro,Terminal,201,180,406,MXP,-
-UBER,2022/8/12,Mexico,Quer?taro,Terminal,2022/8/12,Mexico,Quer?taro,Inn,5,30,103.18,MXP,-
-UBER,2022/8/13,Mexico,Quer?taro,Inn,2022/8/13,Mexico,Quer?taro,Terminal,5,35,124.8,MXP,-
-Bus,2022/8/13,Mexico,Quer?taro,Terminal,2022/8/13,Mexico,Guanajuato,Terminal,146,180,297,MXP,-
-UBER,2022/8/13,Mexico,Guanajuato,Terminal,2022/8/13,Mexico,Guanajuato,Central,8.5,15,84.98,MXP,-
-UBER,2022/8/15,Mexico,Guanajuato,Central,2022/8/15,Mexico,Guanajuato,Terminal,8.5,10,69.9,MXP,-
-Bus,2022/8/15,Mexico,Guanajuato,Terminal,2022/8/15,Mexico,Irapuato,Terminal,46.6,50,50,MXP,-
-Bus,2022/8/15,Mexico,Irapuato,Terminal,2022/8/15,Mexico,Morelia,Terminal,136,150,400,MXP,-
-UBER,2022/8/15,Mexico,Morelia,Terminal,2022/8/15,Mexico,Morelia,Central,2.5,20,114.97,MXP,-
-UBER,2022/8/16,Mexico,Morelia,Central,2022/8/16,Mexico,Morelia,Terminal,2.5,20,59.01,MXP,-
-Bus,2022/8/16,Mexico,Morelia,Terminal,2022/8/16,Mexico,Mexico City,Terminal,284,270,736,MXP,-
-Bus,2022/8/16,Mexico,Mexico City,Terminal,2022/8/16,Mexico,Puebla,Terminal,133,180,396,MXP,-
-UBER,2022/8/16,Mexico,Puebla,Terminal,2022/8/16,Mexico,Puebla,Central,10,14,139.91,MXP,-
-Bus,2022/8/17,Mexico,Puebla,Central,2022/8/17,Mexico,Cholula,Central,13.4,30,10,MXP,-
-Bus,2022/8/17,Mexico,Cholula,Central,2022/8/17,Mexico,Puebla,Central,13.4,30,10,MXP,-
-UBER,2022/8/18,Mexico,Puebla,Central,2022/8/18,Mexico,Puebla,Terminal,10,20,59.93,MXP,-
-Bus,2022/8/18,Mexico,Puebla,Terminal,2022/8/18,Mexico,Veracruz,Terminal,274,320,630,MXP,-
-UBER,2022/8/18,Mexico,Veracruz,Terminal,2022/8/18,Mexico,Veracruz,Central,2,9,43.94,MXP,-
-UBER,2022/8/20,Mexico,Veracruz,Central,2022/8/20,Mexico,Veracruz,Terminal,2,9,31.99,MXP,-
-Bus,2022/8/20,Mexico,Veracruz,Terminal,2022/8/20,Mexico,Coatzacoalcos,Terminal,324,390,678,MXP,-
-Bus,2022/8/21,Mexico,Coatzacoalcos,Terminal,2022/8/21,Mexico,Villahermosa,Terminal,166,165,326,MXP,-
-Bus,2022/8/21,Mexico,Villahermosa,Terminal,2022/8/21,Mexico,Palenque,Terminal,152,160,120,MXP,-
-Bus,2022/8/22,Mexico,Palenque,Central,2022/8/22,Mexico,Palenque,Heritage,8,15,Tour,MXP,-
-Bus,2022/8/22,Mexico,Palenque,Heritage,2022/8/22,Mexico,Palenque,cenote,40,40,Tour,MXP,-
-Bus,2022/8/22,Mexico,Palenque,cenote,2022/8/22,Mexico,Palenque,Central,30,30,Tour,MXP,-
-Bus,2022/8/23,Mexico,Palenque,Terminal,2022/8/23,Mexico,Campeche,Terminal,366,360,664,MXP,-
-Taxi,2022/8/23,Mexico,Campeche,Terminal,2022/8/23,Mexico,Campeche,Central,2.5,5,40,MXP,-
-Taxi,2022/8/24,Mexico,Campeche,Central,2022/8/24,Mexico,Campeche,Terminal,2.5,5,40,MXP,-
-Bus,2022/8/24,Mexico,Campeche,Terminal,2022/8/24,Mexico,Merida,Terminal,179,150,352,MXP,-
-Bus,2022/8/25,Mexico,Merida,Terminal,2022/8/25,Mexico,Uxmal,Heritage,83.2,90,100,MXP,-
-Bus,2022/8/25,Mexico,Uxmal,Heritage,2022/8/25,Mexico,Merida,Terminal,83.2,90,100,MXP,-
-Bus,2022/8/26,Mexico,Merida,Terminal,2022/8/26,Mexico,Chich?n Itz?,Heritage,119,120,175,MXP,-
-Bus,2022/8/26,Mexico,Chich?n Itz?,Heritage,2022/8/26,Mexico,Cancun,Terminal,197,210,400,MXP,-
-Taxi,2022/8/26,Mexico,Cancun,Terminal,2022/8/26,Mexico,Cancun,Inn,3.2,5,120,MXP,-
-Bus,2022/8/27,Mexico,Cancun,Terminal,2022/8/27,Mexico,Playa del Carmen,Terminal,68.2,80,250,MXP,-
-Ferry,2022/8/28,Mexico,Playa del Carmen,Port,2022/8/28,Mexico,Cozumel,Port,33,35,230,MXP,-
-Ferry,2022/8/28,Mexico,Cozumel,Port,2022/8/28,Mexico,Playa del Carmen,Port,33,35,230,MXP,-
-Bus,2022/8/28,Mexico,Playa del Carmen,Terminal,2022/8/28,Mexico,Cancun,Terminal,68.2,80,250,MXP,-
-Bus,2022/8/29,Mexico,Cancun,Terminal,2022/8/29,Mexico,Cancun,AirPort,15.7,30,120,MXP,-
-Airplane,2022/8/29,Mexico,Cancun,AirPort,2022/8/29,Cuba,Habana,AirPort,506,120,33910,JPY,-
-Taxi,2022/8/29,Cuba,Habana,AirPort,2022/8/29,Cuba,Habana,Inn,10,10,25,USD,-
-Taxi,2022/8/30,Cuba,Habana,Inn,2022/8/30,Cuba,Habana,Central,17,30,30,USD,-
-Car,2022/8/30,Cuba,Habana,Central,2022/8/30,Cuba,Habana,Terminal,2.7,10,13,USD,-
-Car,2022/8/30,Cuba,Habana,Terminal,2022/8/30,Cuba,Habana,Central,2.7,10,13,USD,-
-Car,2022/8/31,Cuba,Habana,Central,2022/8/31,Cuba,Vi?ales,Vally,184,150,Tour,USD,-
-Car,2022/8/31,Cuba,Vi?ales,Vally,2022/8/31,Cuba,Habana,Central,184,150,Tour,USD,-
-Car,2022/9/1,Cuba,Habana,Central,2022/9/1,Cuba,Habana,Terminal,2.7,10,1250,CUP,-
-Car,2022/9/1,Cuba,Habana,Terminal,2022/9/1,Cuba,Habana,AirPort,17,30,1250,CUP,-
-Airplane,2022/9/3,Cuba,Habana,AirPort,2022/9/3,Mexico,Cancun,AirPort,506,120,123670,JPY,-
-Bus,2022/9/3,Mexico,Cancun,AirPort,2022/9/3,Mexico,Cancun,Terminal,15.7,30,120,MXP,-
-Bus,2022/9/5,Mexico,Cancun,Terminal,2022/9/5,Mexico,Chetumal,Terminal,384,420,664,MXP,-
-Taxi,2022/9/5,Mexico,Chetumal,Terminal,2022/9/5,Mexico,Chetumal,Inn,4,10,40,MXP,-
-Taxi,2022/9/6,Mexico,Chetumal,Inn,2022/9/6,Mexico,Chetumal,Central,4,10,50,MXP,-
-Bus,2022/9/6,Mexico,Chetumal,Central,2022/9/6,Belize,Belize city,Central,158,240,25,MXP,-
-Taxi,2022/9/6,Belize,Belize city,Central,2022/9/6,Belize,Belize city,Inn,5,15,9,USD,-
-Bus,2022/9/7,Belize,Belize city,Inn,2022/9/7,Belize,Belize city,Central,5,15,2,BRD,-
-Bus,2022/9/7,Belize,Belize city,Central,2022/9/7,Belize,San Ignacio,Central,114,150,12,BRD,-
-Bus,2022/9/8,Belize,San Ignacio,Central,2022/9/8,Belize,Xunantunich,Heritage,6.2,15,2.5,BRD,-
-Bus,2022/9/8,Belize,Xunantunich,Heritage,2022/9/8,Belize,Belmopan?,Central,46.6,60,6,BRD,-
-Bus,2022/9/8,Belize,Belmopan?,Central,2022/9/8,Belize,San Ignacio,Central,40,50,4,BRD,-
-Bus,2022/9/9,Belize,San Ignacio,Central,2022/9/9,Belize,San Ignacio,Border,14,25,7,BRD,-
-Bus,2022/9/9,Guatemala,Melchor de Mencos,Border,2022/9/9,Guatemala,Flores,Central,92,120,10,USD,-
-Tuktuk,2022/9/9,Guatemala,Flores,Central,2022/9/9,Guatemala,Flores,Inn,1,5,15,GTQ,-
-Bus,2022/9/10,Guatemala,Flores,Inn,2022/9/10,Guatemala,Tikal,Heritage,65,60,45,GTQ,-
-Bus,2022/9/10,Guatemala,Tikal,Heritage,2022/9/10,Guatemala,Flores,Inn,65,60,45,GTQ,-
-Bus,2022/9/11,Guatemala,Flores,Inn,2022/9/11,Guatemala,Cob?n,Central,258,300,350,GTQ,-
-Bus,2022/9/11,Guatemala,Cob?n,Central,2022/9/11,Guatemala,Cob?n,Inn,4,10,30,GTQ,-
-Bus,2022/9/12,Guatemala,Cob?n,Inn,2022/9/12,Guatemala,Antigua,Central,249,450,225,GTQ,-
-UBER,2022/9/13,Guatemala,Antigua,Central,2022/9/13,Guatemala,guatemala city,Stop,41,60,200,GTQ,-
-Bus,2022/9/13,Guatemala,guatemala city,Stop,2022/9/13,El Salvador,Santa Ana,Stop,176,480,25,USD,-
-Taxi,2022/9/13,El Salvador,Santa Ana,Stop,2022/9/13,El Salvador,Santa Ana,Central,2.6,10,3,USD,-
-UBER,2022/9/14,El Salvador,Santa Ana,Central,2022/9/14,El Salvador,Santa Ana,Stop,2.6,10,2.56,USD,-
-UBER,2022/9/14,El Salvador,Santa Ana,Stop,2022/9/14,El Salvador,Santa Ana,Central,2.6,10,2.76,USD,-
-Bus,2022/9/16,El Salvador,Santa Ana,Central,2022/9/16,El Salvador,Santa Ana,Volcano,40,80,1,USD,-
-Bus,2022/9/16,El Salvador,Santa Ana,Volcano,2022/9/16,El Salvador,Santa Ana,Central,40,80,1,USD,-
-UBER,2022/9/17,El Salvador,Santa Ana,Central,2022/9/17,El Salvador,Santa Ana,Terminal,5.2,25,3.2,USD,-
-Bus,2022/9/17,El Salvador,Santa Ana,Terminal,2022/9/17,El Salvador,san salvador,Terminal,62,75,1.35,USD,-
-Bus,2022/9/17,El Salvador,san salvador,Terminal,2022/9/17,El Salvador,El Tunco,Stop,38,60,1,USD,-
-Bus,2022/9/18,El Salvador,El Tunco,Inn,2022/9/18,El Salvador,El Amatillo,Border,240,270,20,USD,-
-Bus,2022/9/18,Honduras,El Amatillo,Border,2022/9/18,Honduras,Guasaule,Border,131,160,20,USD,-
-Bus,2022/9/18,Nicaragua,Guasaule,Border,2022/9/18,Nicaragua,Leon,Central,105,210,10,USD,-
-Bicycle taxi,2022/9/19,Nicaragua,Leon,Terminal,2022/9/19,Nicaragua,Leon,Central,1,10,20,NIO,-
-Bicycle taxi,2022/9/20,Nicaragua,Leon,Central,2022/9/20,Nicaragua,Leon,Terminal,1,10,50,NIO,-
-Bus,2022/9/20,Nicaragua,Leon,Terminal,2022/9/20,Nicaragua,Managua,Terminal,97,100,78,NIO,-
-Taxi,2022/9/20,Nicaragua,Managua,Terminal,2022/9/20,Nicaragua,Managua,Inn,5,10,120,NIO,-
-Bus,2022/9/20,Nicaragua,Managua,Inn,2022/9/20,Nicaragua,Managua,Central,5,10,2.5,NIO,-
-Bus,2022/9/21,Nicaragua,Managua,Inn,2022/9/21,Nicaragua,Managua,Terminal,2,5,5,NIO,-
-Bus,2022/9/21,Nicaragua,Managua,Terminal,2022/9/21,Nicaragua,Guranada,Central,42.6,60,60,NIO,-
-Bus,2022/9/22,Nicaragua,Guranada,Central,2022/9/22,Nicaragua,Rivas,Terminal,70,80,100,NIO,-
-Taxi,2022/9/22,Nicaragua,Rivas,Terminal,2022/9/22,Nicaragua,San Jorge,Port,4.4,10,60,NIO,-
-Ferry,2022/9/22,Nicaragua,San Jorge,Port,2022/9/22,Nicaragua,San Jos? del Sur,Port,19.1,60,50,NIO,-
-Rental Motorcycle,2022/9/23,Nicaragua,Onopete,Island,2022/9/23,Nicaragua,Onopete,Island,95,420,20,USD,-
-Ferry,2022/9/24,Nicaragua,San Jos? del Sur,Port,2022/9/24,Nicaragua,San Jorge,Port,19.1,60,50,NIO,-
-Taxi,2022/9/24,Nicaragua,San Jorge,Port,2022/9/24,Nicaragua,Rivas,Terminal,4.4,10,1,USD,-
-Bus,2022/9/24,Nicaragua,Rivas,Terminal,2022/9/24,Nicaragua,Pe?as Blancas,Border,35.7,60,30,NIO,-
-Bus,2022/9/24,Costa Rica,Pe?as Blancas,Border,2022/9/24,Costa Rica,Liberia,Central,77.1,120,12,USD,-
-Bus,2022/9/25,Costa Rica,Liberia,Central,2022/9/25,Costa Rica,Puntarenas,Central,135,180,400,CRC,-
-Bus,2022/9/26,Costa Rica,Puntarenas,Central,2022/9/26,Costa Rica,San Jos?,Terminal,95.4,240,3255,CRC,-
-UBER,2022/9/26,Costa Rica,San Jos?,Terminal,2022/9/26,Costa Rica,San Jos?,Station,3.5,10,1960,CRC,-
-Train,2022/9/26,Costa Rica,San Jos?,Station,2022/9/26,Costa Rica,Alajuela,AirPort,19.3,90,1200,CRC,-
-Taxi,2022/9/26,Costa Rica,Alajuela,AirPort,2022/9/26,Costa Rica,Alajuela,Inn,1.2,5,17000,CRC,-
-Taxi,2022/9/26,Costa Rica,Alajuela,Inn,2022/9/26,Costa Rica,Alajuela,Central,3,15,20,USD,-
-Bus,2022/9/27,Costa Rica,Alajuela,Central,2022/9/27,Costa Rica,San Jos?,Central,19.3,50,760,CRC,-
-Bus,2022/9/28,Costa Rica,San Jos?,Central,2022/9/28,Costa Rica,PalmarNorte,Central,233,360,7370,CRC,-
-Taxi,2022/9/29,Costa Rica,PalmarNorte,Central,2022/9/29,Costa Rica,FINCA6,Museum,8.6,14,2000,CRC,-
-Bus,2022/9/29,Costa Rica,FINCA6,Museum,2022/9/29,Costa Rica,PalmarNorte,Central,8.6,20,400,CRC,-
-Bus,2022/9/29,Costa Rica,PalmarNorte,Central,2022/9/29,Costa Rica,Pasokanoas,Border,93.4,115,2600,CRC,-
-Bus,2022/9/29,Costa Rica,Pasokanoas,Border,2022/9/29,Panama,David,Central,53.6,60,2,USD,-
-Bus,2022/10/1,Panama,David,Terminal,2022/10/1,Panama,Boquete,Central,45.7,60,2,USD,-
-Bus,2022/10/2,Panama,Boquete,Central,2022/10/2,Panama,David,Terminal,45.7,60,1.75,USD,-
-Bus,2022/10/2,Panama,David,Terminal,2022/10/2,Panama,Santiago de Veraguas,Terminal,196,180,9,USD,-
-Bus,2022/10/3,Panama,Santiago de Veraguas,Terminal,2022/10/3,Panama,Sona,Terminal,51.2,90,2,USD,-
-Bus,2022/10/3,Panama,Sona,Terminal,2022/10/3,Panama,Santa Catalina,Central,69.6,120,4.75,USD,-
-Boat,2022/10/4,Panama,Santa Catalina,Central,2022/10/4,Panama,Coiba,Island,35,80,Tour,USD,-
-Boat,2022/10/4,Panama,Coiba,Island,2022/10/4,Panama,Santa Catalina,Central,35,80,Tour,USD,-
-Bus,2022/10/5,Panama,Santa Catalina,Central,2022/10/5,Panama,Sona,Terminal,69.6,120,4.75,USD,-
-Bus,2022/10/5,Panama,Sona,Terminal,2022/10/5,Panama,Santiago de Veraguas,Terminal,51.2,90,2,USD,-
-Bus,2022/10/5,Panama,Santiago de Veraguas,Terminal,2022/10/5,Panama,Santa Fe,Terminal,57.6,100,2.95,USD,-
-Bus,2022/10/5,Panama,Santa Fe,Terminal,2022/10/5,Panama,Santiago de Veraguas,Terminal,57.6,100,2.95,USD,-
-Bus,2022/10/6,Panama,Santiago de Veraguas,Terminal,2022/10/6,Panama,Panama City,Terminal,252,320,9,USD,-
-Bus,2022/10/6,Panama,Panama City,Terminal,2022/10/6,Panama,Panama City,Inn,8,25,0.25,USD,-
-Bus,2022/10/7,Panama,Panama City,Inn,2022/10/7,Panama,Panama City,Terminal,8,25,0.25,USD,-
-Bus,2022/10/7,Panama,Panama City,Terminal,2022/10/7,Panama,Colin,Terminal,73,150,2.15,USD,-
-Bus,2022/10/7,Panama,Colin,Terminal,2022/10/7,Panama,Gatun,Gate,12.4,40,1,USD,-
-Bus,2022/10/7,Panama,Gatun,Gate,2022/10/7,Panama,Colin,Terminal,12.4,40,1,USD,-
-Bus,2022/10/7,Panama,Colin,Terminal,2022/10/7,Panama,Panama City,Inn,73,120,3.15,USD,-
-Bus,2022/10/8,Panama,Panama City,Inn,2022/10/8,Panama,Miraflores,Gate,13.8,60,0.25,USD,-
-Bus,2022/10/8,Panama,Miraflores,Gate,2022/10/8,Panama,Amador,Gate,16.6,60,0.25,USD,-
-Bus,2022/10/9,Panama,Panama City,Inn,2022/10/9,Panama,Panama City,AirPort,20.3,60,1,USD,-
-Airplane,2022/10/9,Panama,Panama City,AirPort,2022/10/9,Colombia,Bogota,AirPort,760,115,28640,JPY,-
-Car,2022/10/9,Colombia,Bogota,AirPort,2022/10/9,Colombia,Bogota,Inn,11.4,30,0,COP,-
-UBER,2022/10/10,Colombia,Bogota,Inn,2022/10/10,Colombia,Bogota,Central,3.1,21,10000,COP,-
+Transpotation,Start,-,-,-,End,-,-,-,-,-,-,-,-,,
+Type,Date,Countury,Place,Type,Date,Countury,Place,Type,Distance(KM),Time(Min),Fee,Currency,Memo,,
+Train,2022/5/17,Japan,Sanda,Station,2022/5/17,Japan,KTX,Station,92,120,2230,JPY,-,,
+Airplane,2022/5/17,Japan,KTX,AirPort,2022/5/17,Japan,HND,AirPort,537,60,10000,JPY,-,,
+Airplane,2022/5/17,JAPAN,HND,AirPort,2022/5/18,Australia,Sydney,AirPort,7821,590,37685,JPY,-,,
+Subway,2022/5/18,Australia,Sydney,AirPort,2022/5/18,Australia,Sydney,Central,11.4,10,16,AUD,-,,
+Train,2022/5/19,Australia,Sydney,Station,2022/5/19,Australia,katoomba,Station,102,120,8.6,AUD,-,,
+Train,2022/5/20,Australia,katoomba,Station,2022/5/20,Australia,blackheath,Station,10.8,25,4,AUD,-,,
+Train,2022/5/20,Australia,blackheath,Station,2022/5/20,Australia,katoomba,Station,10.8,25,4,AUD,-,,
+Train,2022/5/21,Australia,katoomba,Station,2022/5/19,Australia,Sydney,Station,102,120,8.6,AUD,-,,
+Bus,2022/5/21,Australia,Sydney,Station,2022/5/22,Australia,Melbourne,Station,949,720,WithLimitedPass,AUD,-,,
+Bus,2022/5/24,Australia,Melbourne,Station,2022/5/24,Australia,newhevens,Inn,126,150,10,AUD,-,,
+Bus,2022/5/24,Australia,newhevens,Inn,2022/5/24,Australia,cowes,Central,14.5,30,3.3,AUD,-,,
+Bus,2022/5/24,Australia,cowes,Central,2022/5/24,Australia,newhevens,Inn,14.5,30,3.3,AUD,-,,
+Bus,2022/5/25,Australia,newhevens,Inn,2022/5/25,Australia,cowes,Central,14.5,30,3.3,AUD,-,,
+Bus,2022/5/25,Australia,cowes,Central,2022/5/25,Australia,newhevens,Inn,14.5,30,3.3,AUD,-,,
+Bus,2022/5/26,Australia,newhevens,Inn,2022/5/26,Australia,Melbourne,Station,126,150,10,AUD,-,,
+Train,2022/5/27,Australia,Melbourne,Station,2022/5/27,Australia,Adelaide,Station,726,600,165,AUD,-,,
+Train,2022/5/28,Australia,Adelade,Station,2022/5/28,Australia,seaford,Stop,35.9,60,4.25,AUD,-,,
+Bus,2022/5/28,Australia,Seaford,Stop,2022/5/28,Australia,Moana,Beach,3.8,15,4.25,AUD,-,,
+Bus,2022/5/28,Australia,Moana,Beach,2022/5/28,Australia,Seaford,Stop,3.8,15,4.25,AUD,-,,
+Train,2022/5/28,Australia,seaford,Stop,2022/5/28,Australia,Adelade,Station,35.9,60,4.25,AUD,-,,
+Train,2022/5/29,Australia,Adelade,Station,2022/5/29,Australia,belair,Station,9.7,60,4.25,AUD,-,,
+Train,2022/5/29,Australia,belair,Station,2022/5/29,Australia,Adelade,Station,9.7,60,4.25,AUD,-,,
+Train,2022/5/29,Australia,Adelade,Station,2022/5/29,Australia,outer?harbar,Station,26.6,60,4.25,AUD,-,,
+Train,2022/5/29,Australia,outer?harbar,Station,2022/5/29,Australia,port adelade,Station,9.1,30,4.25,AUD,-,,
+Train,2022/5/29,Australia,port adelade,Station,2022/5/29,Australia,Adelade,Station,15.1,60,4.25,AUD,-,,
+Bus,2022/5/30,Australia,Adelade,Stop,2022/5/31,Australia,Alice springs,Stop,1534,1200,WithLimitedPass,AUD,-,,
+Bike,2022/6/2,Australia,Alice springs,Stop,2022/6/2,Australia,Alice springs,Stop,28,180,45,AUD,-,,
+Bus,2022/6/3,Australia,Alice springs,Stop,2022/6/4,Australia,Darwin,Stop,1496,1320,WithLimitedPass,AUD,-,,
+Bus,2022/6/6,Australia,Darwin,Stop,2022/6/6,Australia,east point,Stop,6,30,3,AUD,-,,
+Bus,2022/6/6,Australia,east point,Stop,2022/6/6,Australia,Darwin,Stop,6,30,3,AUD,-,,
+Bus,2022/6/6,Australia,Darwin,Stop,2022/6/6,Australia,Darwin,National Park,14.5,30,3,AUD,-,,
+Bus,2022/6/6,Australia,Darwin Natinal Park,Stop,2022/6/6,Australia,Darwin,Stop,14.5,30,3,AUD,-,,
+Bus,2022/6/7,Australia,Darwin Natinal Park,Stop,2022/6/7,Australia,Darwin,AirPort,10.8,30,3,AUD,-,,
+Airplane,2022/6/7,Australia,Darwin,AirPort,2022/6/7,Australia,Cairns,AirPort,2722,180,18107,JPY,-,,
+Bus,2022/6/7,Australia,Cairns,AirPort,2022/6/7,Australia,Cairns,Inn,5.7,30,5,AUD,-,,
+Bus,2022/6/8,Australia,Cairns,Inn,2022/6/8,Australia,Cairns,Central,1,10,0,AUD,-,,
+Bus,2022/6/9,Australia,Cairns,Central,2022/6/9,Australia,palm?cove,Beach,25.4,60,3,AUD,-,,
+Bus,2022/6/10,Australia,palm?cove,Beach,2022/6/10,Australia,Cairns,Central,25.4,60,3,AUD,-,,
+Bus,2022/6/10,Australia,Cairns,Central,2022/6/10,Australia,Cairns,smith?field,18,30,3,AUD,-,,
+Bus,2022/6/10,Australia,Cairns,smith?field,2022/6/10,Australia,Cairns,Central,18,30,3,AUD,-,,
+Bus,2022/6/12,Australia,Cairns,Central,2022/6/12,Australia,townsville,Central,347,360,WithLimitedPass,AUD,-,,
+Bus,2022/6/13,Australia,townsville,Central,2022/6/13,Australia,Airlie Beach,Central,274,300,WithLimitedPass,AUD,-,,
+Bus,2022/6/14,Australia,Airlie Beach,Central,2022/6/14,Australia,Shute Harbour,Stop,12.4,20,1.5,AUD,-,,
+Bus,2022/6/14,Australia,Shute Harbour,Stop,2022/6/14,Australia,Airlie Beach,Central,12.4,20,1.5,AUD,-,,
+Bus,2022/6/15,Australia,Airlie Beach,Central,2022/6/15,Australia,conway,Stop,18,30,1.5,AUD,-,,
+Bus,2022/6/15,Australia,conway,Stop,2022/6/15,Australia,Airlie Beach,Central,18,30,1.5,AUD,-,,
+Bus,2022/6/16,Australia,Airlie Beach,Central,2022/6/17,Australia,Brisbane,Central,1124,1140,WithLimitedPass,AUD,-,,
+Train,2022/6/18,Australia,Brisbane,Central,2022/6/18,Australia,Gold coast,Central,77.7,80,16.6,AUD,-,,
+Bus,2022/6/19,Australia,Gold coast,Central,2022/6/19,Australia,Snapper?Rocks,Stop,33.4,90,1.5,AUD,-,,
+Bus,2022/6/19,Australia,Snapper?Rocks,Stop,2022/6/19,Australia,Gold coast,Central,33.4,90,1.5,AUD,-,,
+Train,2022/6/20,Australia,Gold coast,Central,2022/6/20,Australia,woodly?point?jetty?,Station,109,170,20,AUD,-,,
+Train,2022/6/20,Australia,woodly?point?jetty?,Station,2022/6/20,Australia,Brisbane,Central,38.7,60,13,AUD,-,,
+Bus,2022/6/20,Australia,Brisbane,Central,2022/6/20,Australia,Mount?Coot-tha,Stop,7.5,30,1.5,AUD,-,,
+Bus,2022/6/20,Australia,Mount?Coot-tha,Stop,2022/6/20,Australia,Brisbane,Central,7.5,30,1.5,AUD,-,,
+Train,2022/6/21,Australia,Brisbane,Station,2022/6/21,Australia,Coffs Harbour,Central,384,600,43.76,AUD,-,,
+Train,2022/6/22,Australia,Coffs Harbour,Station,2022/6/22,Australia,Newcastle,Central,385,410,44.22,AUD,-,,
+Bus,2022/6/23,Australia,Newcastle,Stop,2022/6/23,Australia,Port Stephens,Stop,66.1,120,3.2,AUD,-,,
+Bus,2022/6/23,Australia,Port Stephens,Stop,2022/6/23,Australia,Newcastle,Stop,66.1,120,3.2,AUD,-,,
+Train,2022/6/24,Australia,Newcastle,Station,2022/6/24,Australia,Sydney,Station,164,150,18,AUD,-,,
+Bus,2022/6/24,Australia,Sydney,Stop,2022/6/24,Australia,watsonsbay,Stop,11.1,30,3.2,AUD,-,,
+Bus,2022/6/24,Australia,watsonsbay,Stop,2022/6/24,Australia,Sydney,Stop,11.1,30,3.2,AUD,-,,
+Train,2022/6/25,Australia,Sydney,Stop,2022/6/25,Australia,Sydney,AirPort,12,30,16,AUD,-,,
+Train,2022/6/25,Australia,Sydney,AirPort,2022/6/25,Australia,Sydney,Stop,12,30,16,AUD,-,,
+Train,2022/6/27,Australia,Sydney,Stop,2022/6/27,Australia,Sydney,AirPort,12,30,16,AUD,-,,
+Airplane,2022/6/27,Australia,Sydney,AirPort,2022/6/27,Japan,HND,AirPort,7821,590,40000,JPY,-,,
+Airplane,2022/6/27,JAPAN,HND,AirPort,2022/6/27,Japan,Itami,AirPort,514,60,8780,JPY,-,,
+Train,2022/6/27,Japan,Itami,AirPort,2022/6/27,Japan,Sanda,Station,92,70,2320,JPY,-,,
+Train,2022/7/1,Japan,Sanda,Station,2022/7/1,Japan,Kobe,Port,40.6,100,1240,JPY,-,,
+Ferry,2022/7/1,Japan,Kobe,Port,2022/7/2,Japan,Sinmoji,Port,509,60,5950,JPY,-,,
+Bus,2022/7/2,Japan,Sinmoji,Port,2022/7/2,Japan,Moji,Station,8.1,20,340,JPY,-,,
+Train,2022/7/2,Japan,Moji,Station,2022/7/2,Japan,Hakata,Station,79.8,134,1540,JPY,-,,
+Train,2022/7/2,Japan,Hakata,Station,2022/7/2,Japan,Kokura,Station,74.8,83,1310,JPY,-,,
+Train,2022/7/3,Japan,Kokura,Station,2022/7/3,Japan,Moji,Station,5.4,7,210,JPY,-,,
+Bus,2022/7/3,Japan,Moji,Station,2022/7/3,Japan,Shinmoji,Port,8.3,22,340,JPY,-,,
+Ferry,2022/7/3,Japan,Sinmoji,Port,2022/7/4,Japan,Kobe,Port,509,60,5950,JPY,-,,
+Train,2022/7/4,Japan,Sanda,Station,2022/7/4,Japan,Sanda,Station,40.6,100,1240,JPY,-,,
+Train,2022/7/8,Japan,Sanda,Station,2022/7/8,Japan,Toyoka,Station,114,180,2310,JPY,-,,
+Train,2022/7/8,Japan,Toyoka,Station,2022/7/8,Japan,KinosakiOnsen,Station,10,10,200,JPY,-,,
+Train,2022/7/9,Japan,KinosakiOnsen,Station,2022/7/9,Japan,Kasumi,Station,30,30,420,JPY,-,,
+Train,2022/7/9,Japan,Kasumi,Station,2022/7/9,Japan,KinosakiOnsen,Station,30,30,420,JPY,-,,
+Train,2022/7/10,Japan,KinosakiOnsen,Station,2022/7/10,Japan,Sanda,Station,125,190,2310,JPY,-,,
+Train,2022/7/13,Japan,Sanda,Station,2022/7/13,Japan,KIX,AirPort,92,120,2230,JPY,-,,
+Airplane,2022/7/13,Japan,KIX,AirPort,2022/7/13,Japan,HND,AirPort,537,60,9910,JPY,-,,
+Airplane,2022/7/13,Japan,HND,AirPort,2022/7/13,USA,Seattle,AirPort,7697,550,90000,JPY,-,,
+Airplane,2022/7/13,USA,Seattle,AirPort,2022/7/13,USA,Anchorage,AirPort,2320,180,4250,JPY,-,,
+Bus,2022/7/13,USA,Anchorage,AirPort,2022/7/13,USA,Anchorage,Inn,7.7,30,2,USD,-,,
+Bus,2022/7/14,USA,Anchorage,Inn,2022/7/14,USA,Anchorage,Central,2,10,2,USD,-,,
+Bus,2022/7/15,USA,Anchorage,Central,2022/7/15,USA,Anchorage,Univesity,6.2,15,2,USD,-,,
+Bus,2022/7/15,USA,Anchorage,Univesity,2022/7/15,USA,Anchorage,Central,6.2,15,2,USD,-,,
+Bus,2022/7/16,USA,Anchorage,Central,2022/7/16,USA,Anchorage,Zoo,15.77,20,0,USD,-,,
+Bus,2022/7/16,USA,Anchorage,Zoo,2022/7/16,USA,Anchorage,Central,15.77,20,0,USD,-,,
+Airplane,2022/7/17,USA,Anchorage,AirPort,2022/7/17,Canada,Vancouver,AirPort,2131,180,28140,USD,-,,
+Subway,2022/7/17,Canada,Vancouver,AirPort,2022/7/17,Canada,Vancouver,Central,14.2,26,3.75,CAD,-,,
+Bus,2022/7/18,Canada,Vancouver,Central,2022/7/18,Canada,Vancouver,Park,2.1,5,2.55,CAD,-,,
+Bus,2022/7/18,Canada,Vancouver,Park,2022/7/18,Canada,Vancouver,Beach,4.3,30,2.55,CAD,-,,
+Bus,2022/7/19,Canada,Vancouver,Beach,2022/7/19,Canada,Point Roberts,Stop,36,50,3.75,CAD,-,,
+Bus,2022/7/19,Canada,Point Roberts,Stop,2022/7/19,Canada,Vancouver,Central,36,50,3.75,CAD,-,,
+Subway,2022/7/19,Canada,Vancouver,Central,2022/7/19,Canada,Richmond,Station,16,33,3.75,CAD,-,,
+Bus,2022/7/19,Canada,Richmond,Station,2022/7/19,Canada,Richmond,Park,8.7,16,3.75,CAD,-,,
+Bus,2022/7/19,Canada,Richmond,Park,2022/7/19,Canada,Vancouver,Beach,23,30,3.75,CAD,-,,
+Bus,2022/7/20,Canada,Vancouver,Beach,2022/7/20,Canada,horse shoot bay,Port,27.1,90,4.8,CAD,-,,
+Ferry,2022/7/20,Canada,horse shoot bay,Port,2022/7/20,Canada,Nanaimo,Port,70,100,17.2,CAD,-,,
+Bus,2022/7/20,Canada,Nanaimo,Port,2022/7/20,Canada,Nanaimo,Central,5,13,2.5,CAD,-,,
+Bus,2022/7/21,Canada,Nanaimo,Central,2022/7/21,Canada,Neck?Point?Park,Stop,10,25,2.5,CAD,-,,
+Bus,2022/7/21,Canada,Neck?Point?Park,Stop,2022/7/21,Canada,Nanaimo,Port,5,13,2.5,CAD,-,,
+Ferry,2022/7/21,Canada,Nanaimo,Port,2022/7/21,Canada,horse shoot bay,Port,70,100,17.2,CAD,-,,
+Bus,2022/7/21,Canada,horse shoot bay,Port,2022/7/21,Canada,Vancouver,Park,26,60,4.8,CAD,-,,
+Subway,2022/7/21,Canada,Vancouver,Park,2022/7/21,Canada,Vancouver,Beach,8.5,30,3.75,CAD,-,,
+Bus,2022/7/22,Canada,Vancouver,Beach,2022/7/22,Canada,Vancouver,Museum,4.6,10,2.55,CAD,-,,
+Train,2022/7/22,Canada,Vancouver,Museum,2022/7/22,Canada,Vancouver,Station,5.6,10,2.55,CAD,-,,
+Train,2022/7/22,Canada,Vancouver,Station,2022/7/23,Canada,Edmonton,Station,1158,1620,235.2,CAD,-,,
+Bus,2022/7/23,Canada,Edomonton,Station,2022/7/23,Canada,Edomonton,Inn,8.4,30,3.5,CAD,-,,
+Bus,2022/7/24,Canada,Edomonton,Inn,2022/7/24,Canada,Edomonton,Central,4,16,3.5,CAD,-,,
+Bus,2022/7/24,Canada,Edomonton,Central,2022/7/24,Canada,Edomonton,Inn,4,16,3.5,CAD,-,,
+Bus,2022/7/25,Canada,Edomonton,Inn,2022/7/25,Canada,Edomonton,Central,4,16,3.5,CAD,-,,
+Bus,2022/7/25,Canada,Edomonton,Central,2022/7/25,Canada,Saskatoon,Stop,522,300,69.99,CAD,-,,
+Bus,2022/7/26,Canada,Saskatoon,Stop,2022/7/26,Canada,Saskatoon,Central,3,20,3,CAD,-,,
+Bus,2022/7/26,Canada,Saskatoon,Central,2022/7/26,Canada,Saskatoon,Stop,3,20,3,CAD,-,,
+Bus,2022/7/27,Canada,Saskatoon,Stop,2022/7/27,Canada,Saskatoon,Central,3,20,3,CAD,-,,
+Bus,2022/7/27,Canada,Saskatoon,Central,2022/7/27,Canada,Regina,Stop,261,180,60,CAD,-,,
+Bus,2022/7/28,Canada,Regina,Stop,2022/7/28,Canada,Regina,Central,3,20,3,CAD,-,,
+Bus,2022/7/28,Canada,Regina,Central,2022/7/28,Canada,Regina,Stop,3,20,3,CAD,-,,
+Bus,2022/7/29,Canada,Regina,Stop,2022/7/29,Canada,Regina,Central,3,20,3,CAD,-,,
+Bus,2022/7/29,Canada,Regina,Central,2022/7/30,Canada,Winnipeg,Central,572,540,120,CAD,-,,
+Train,2022/7/31,Canada,Winnipeg,Central,2022/8/2,Canada,Toronto,Station,2102,2280,262.5,CAD,-,,
+Subway,2022/8/2,Canada,Toronto,Station,2022/8/2,Canada,Toronto,Inn,4,15,3.35,CAD,-,,
+Subway,2022/8/3,Canada,Toronto,Inn,2022/8/3,Canada,Toronto,Station,4,15,3.35,CAD,-,,
+Train,2022/8/3,Canada,Toronto,Station,2022/8/3,Canada,Hamilton,Station,64,60,12,CAD,-,,
+Bus,2022/8/3,Canada,Hamilton,Station,2022/8/3,Canada,Niagara Falls,Stop,64,60,14,CAD,-,,
+Bus,2022/8/3,Canada,Niagara Falls,Stop,2022/8/3,Canada,Hamilton,Station,64,60,14,CAD,-,,
+Train,2022/8/3,Canada,Hamilton,Station,2022/8/3,Canada,Toronto,Station,64,60,12,CAD,-,,
+Subway,2022/8/3,Canada,Toronto,Station,2022/8/3,Canada,Toronto,Inn,4,15,3.35,CAD,-,,
+Subway,2022/8/4,Canada,Toronto,Inn,2022/8/4,Canada,Toronto,Univesity,4,15,3.35,CAD,-,,
+Subway,2022/8/4,Canada,Toronto,Univesity,2022/8/4,Canada,Toronto,Inn,4,15,3.35,CAD,-,,
+Subway,2022/8/5,Canada,Toronto,Inn,2022/8/5,Canada,Toronto,Station,4,15,3.35,CAD,-,,
+Train,2022/8/5,Canada,Toronto,Station,2022/8/5,Canada,Otawa,Station,402,250,101.7,CAD,-,,
+Train,2022/8/5,Canada,Otawa,Station,2022/8/5,Canada,Montr?al,Station,200,120,101.7,CAD,-,,
+Train,2022/8/6,Canada,Montr?al,Station,2022/8/6,Canada,Qu?bec,Station,254,180,110.375,CAD,-,,
+Ferry,2022/8/6,Canada,Qu?bec,Port,2022/8/6,Canada,Levis,Port,2.4,5,3.75,CAD,-,,
+Ferry,2022/8/6,Canada,Levis,Port,2022/8/6,Canada,Qu?bec,Port,2.4,5,3.75,CAD,-,,
+Train,2022/8/7,Canada,Qu?bec,Station,2022/8/7,Canada,Montr?al,Station,254,180,110.375,CAD,-,,
+Bus,2022/8/8,Canada,Montr?al,Central,2022/8/8,Canada,Montr?al,AirPort,20,34,10,CAD,-,,
+Airplane,2022/8/8,Canada,Montr?al,AirPort,2022/8/8,USA,Houston,AirPort,2974,225,23435,JPY,-,,
+Airplane,2022/8/8,USA,Houston,AirPort,2022/8/8,Mexico,Mexico City,AirPort,1230,150,23435,JPY,-,,
+UBER,2022/8/8,Mexico,Mexico City,AirPort,2022/8/8,Mexico,Mexico City,Inn,8.2,15,290.62,MXP,-,,
+Subway,2022/8/9,Mexico,Mexico City,Central,2022/8/9,Mexico,Mexico City,Inn,2,10,5,MXP,-,,
+UBER,2022/8/9,Mexico,Mexico City,Inn,2022/8/9,Mexico,Mexico City,Central,4,15,79.58,MXP,-,,
+Bus,2022/8/10,Mexico,Mexico City,Central,2022/8/10,Mexico,Mexico City,Museum,6.4,45,6,MXP,-,,
+Bus,2022/8/10,Mexico,Mexico City,Museum,2022/8/10,Mexico,Mexico City,Central,6.4,45,6,MXP,-,,
+Bus,2022/8/11,Mexico,Mexico City,Central,2022/8/11,Mexico,Mexico City,Terminal,5.9,21,6,MXP,-,,
+Bus,2022/8/11,Mexico,Mexico City,Terminal,2022/8/11,Mexico,Teotihuacan,Heritage,44.3,60,52,MXP,-,,
+Bus,2022/8/11,Mexico,Teotihuacan,Heritage,2022/8/11,Mexico,Mexico City,Terminal,44.3,60,52,MXP,-,,
+Bus,2022/8/11,Mexico,Mexico City,Terminal,2022/8/11,Mexico,Mexico City,Central,5.9,21,6,MXP,-,,
+Bus,2022/8/12,Mexico,Mexico City,Central,2022/8/12,Mexico,Mexico City,Terminal,5.9,21,6,MXP,-,,
+Bus,2022/8/12,Mexico,Mexico City,Terminal,2022/8/12,Mexico,Quer?taro,Terminal,201,180,406,MXP,-,,
+UBER,2022/8/12,Mexico,Quer?taro,Terminal,2022/8/12,Mexico,Quer?taro,Inn,5,30,103.18,MXP,-,,
+UBER,2022/8/13,Mexico,Quer?taro,Inn,2022/8/13,Mexico,Quer?taro,Terminal,5,35,124.8,MXP,-,,
+Bus,2022/8/13,Mexico,Quer?taro,Terminal,2022/8/13,Mexico,Guanajuato,Terminal,146,180,297,MXP,-,,
+UBER,2022/8/13,Mexico,Guanajuato,Terminal,2022/8/13,Mexico,Guanajuato,Central,8.5,15,84.98,MXP,-,,
+UBER,2022/8/15,Mexico,Guanajuato,Central,2022/8/15,Mexico,Guanajuato,Terminal,8.5,10,69.9,MXP,-,,
+Bus,2022/8/15,Mexico,Guanajuato,Terminal,2022/8/15,Mexico,Irapuato,Terminal,46.6,50,50,MXP,-,,
+Bus,2022/8/15,Mexico,Irapuato,Terminal,2022/8/15,Mexico,Morelia,Terminal,136,150,400,MXP,-,,
+UBER,2022/8/15,Mexico,Morelia,Terminal,2022/8/15,Mexico,Morelia,Central,2.5,20,114.97,MXP,-,,
+UBER,2022/8/16,Mexico,Morelia,Central,2022/8/16,Mexico,Morelia,Terminal,2.5,20,59.01,MXP,-,,
+Bus,2022/8/16,Mexico,Morelia,Terminal,2022/8/16,Mexico,Mexico City,Terminal,284,270,736,MXP,-,,
+Bus,2022/8/16,Mexico,Mexico City,Terminal,2022/8/16,Mexico,Puebla,Terminal,133,180,396,MXP,-,,
+UBER,2022/8/16,Mexico,Puebla,Terminal,2022/8/16,Mexico,Puebla,Central,10,14,139.91,MXP,-,,
+Bus,2022/8/17,Mexico,Puebla,Central,2022/8/17,Mexico,Cholula,Central,13.4,30,10,MXP,-,,
+Bus,2022/8/17,Mexico,Cholula,Central,2022/8/17,Mexico,Puebla,Central,13.4,30,10,MXP,-,,
+UBER,2022/8/18,Mexico,Puebla,Central,2022/8/18,Mexico,Puebla,Terminal,10,20,59.93,MXP,-,,
+Bus,2022/8/18,Mexico,Puebla,Terminal,2022/8/18,Mexico,Veracruz,Terminal,274,320,630,MXP,-,,
+UBER,2022/8/18,Mexico,Veracruz,Terminal,2022/8/18,Mexico,Veracruz,Central,2,9,43.94,MXP,-,,
+UBER,2022/8/20,Mexico,Veracruz,Central,2022/8/20,Mexico,Veracruz,Terminal,2,9,31.99,MXP,-,,
+Bus,2022/8/20,Mexico,Veracruz,Terminal,2022/8/20,Mexico,Coatzacoalcos,Terminal,324,390,678,MXP,-,,
+Bus,2022/8/21,Mexico,Coatzacoalcos,Terminal,2022/8/21,Mexico,Villahermosa,Terminal,166,165,326,MXP,-,,
+Bus,2022/8/21,Mexico,Villahermosa,Terminal,2022/8/21,Mexico,Palenque,Terminal,152,160,120,MXP,-,,
+Bus,2022/8/22,Mexico,Palenque,Central,2022/8/22,Mexico,Palenque,Heritage,8,15,Tour,MXP,-,,
+Bus,2022/8/22,Mexico,Palenque,Heritage,2022/8/22,Mexico,Palenque,cenote,40,40,Tour,MXP,-,,
+Bus,2022/8/22,Mexico,Palenque,cenote,2022/8/22,Mexico,Palenque,Central,30,30,Tour,MXP,-,,
+Bus,2022/8/23,Mexico,Palenque,Terminal,2022/8/23,Mexico,Campeche,Terminal,366,360,664,MXP,-,,
+Taxi,2022/8/23,Mexico,Campeche,Terminal,2022/8/23,Mexico,Campeche,Central,2.5,5,40,MXP,-,,
+Taxi,2022/8/24,Mexico,Campeche,Central,2022/8/24,Mexico,Campeche,Terminal,2.5,5,40,MXP,-,,
+Bus,2022/8/24,Mexico,Campeche,Terminal,2022/8/24,Mexico,Merida,Terminal,179,150,352,MXP,-,,
+Bus,2022/8/25,Mexico,Merida,Terminal,2022/8/25,Mexico,Uxmal,Heritage,83.2,90,100,MXP,-,,
+Bus,2022/8/25,Mexico,Uxmal,Heritage,2022/8/25,Mexico,Merida,Terminal,83.2,90,100,MXP,-,,
+Bus,2022/8/26,Mexico,Merida,Terminal,2022/8/26,Mexico,Chich?n Itz?,Heritage,119,120,175,MXP,-,,
+Bus,2022/8/26,Mexico,Chich?n Itz?,Heritage,2022/8/26,Mexico,Cancun,Terminal,197,210,400,MXP,-,,
+Taxi,2022/8/26,Mexico,Cancun,Terminal,2022/8/26,Mexico,Cancun,Inn,3.2,5,120,MXP,-,,
+Bus,2022/8/27,Mexico,Cancun,Terminal,2022/8/27,Mexico,Playa del Carmen,Terminal,68.2,80,250,MXP,-,,
+Ferry,2022/8/28,Mexico,Playa del Carmen,Port,2022/8/28,Mexico,Cozumel,Port,33,35,230,MXP,-,,
+Ferry,2022/8/28,Mexico,Cozumel,Port,2022/8/28,Mexico,Playa del Carmen,Port,33,35,230,MXP,-,,
+Bus,2022/8/28,Mexico,Playa del Carmen,Terminal,2022/8/28,Mexico,Cancun,Terminal,68.2,80,250,MXP,-,,
+Bus,2022/8/29,Mexico,Cancun,Terminal,2022/8/29,Mexico,Cancun,AirPort,15.7,30,120,MXP,-,,
+Airplane,2022/8/29,Mexico,Cancun,AirPort,2022/8/29,Cuba,Habana,AirPort,506,120,33910,JPY,-,,
+Taxi,2022/8/29,Cuba,Habana,AirPort,2022/8/29,Cuba,Habana,Inn,10,10,25,USD,-,,
+Taxi,2022/8/30,Cuba,Habana,Inn,2022/8/30,Cuba,Habana,Central,17,30,30,USD,-,,
+Car,2022/8/30,Cuba,Habana,Central,2022/8/30,Cuba,Habana,Terminal,2.7,10,13,USD,-,,
+Car,2022/8/30,Cuba,Habana,Terminal,2022/8/30,Cuba,Habana,Central,2.7,10,13,USD,-,,
+Car,2022/8/31,Cuba,Habana,Central,2022/8/31,Cuba,Vi?ales,Vally,184,150,Tour,USD,-,,
+Car,2022/8/31,Cuba,Vi?ales,Vally,2022/8/31,Cuba,Habana,Central,184,150,Tour,USD,-,,
+Car,2022/9/1,Cuba,Habana,Central,2022/9/1,Cuba,Habana,Terminal,2.7,10,1250,CUP,-,,
+Car,2022/9/1,Cuba,Habana,Terminal,2022/9/1,Cuba,Habana,AirPort,17,30,1250,CUP,-,,
+Airplane,2022/9/3,Cuba,Habana,AirPort,2022/9/3,Mexico,Cancun,AirPort,506,120,123670,JPY,-,,
+Bus,2022/9/3,Mexico,Cancun,AirPort,2022/9/3,Mexico,Cancun,Terminal,15.7,30,120,MXP,-,,
+Bus,2022/9/5,Mexico,Cancun,Terminal,2022/9/5,Mexico,Chetumal,Terminal,384,420,664,MXP,-,,
+Taxi,2022/9/5,Mexico,Chetumal,Terminal,2022/9/5,Mexico,Chetumal,Inn,4,10,40,MXP,-,,
+Taxi,2022/9/6,Mexico,Chetumal,Inn,2022/9/6,Mexico,Chetumal,Central,4,10,50,MXP,-,,
+Bus,2022/9/6,Mexico,Chetumal,Central,2022/9/6,Belize,Belize city,Central,158,240,25,MXP,-,,
+Taxi,2022/9/6,Belize,Belize city,Central,2022/9/6,Belize,Belize city,Inn,5,15,9,USD,-,,
+Bus,2022/9/7,Belize,Belize city,Inn,2022/9/7,Belize,Belize city,Central,5,15,2,BRD,-,,
+Bus,2022/9/7,Belize,Belize city,Central,2022/9/7,Belize,San Ignacio,Central,114,150,12,BRD,-,,
+Bus,2022/9/8,Belize,San Ignacio,Central,2022/9/8,Belize,Xunantunich,Heritage,6.2,15,2.5,BRD,-,,
+Bus,2022/9/8,Belize,Xunantunich,Heritage,2022/9/8,Belize,Belmopan?,Central,46.6,60,6,BRD,-,,
+Bus,2022/9/8,Belize,Belmopan?,Central,2022/9/8,Belize,San Ignacio,Central,40,50,4,BRD,-,,
+Bus,2022/9/9,Belize,San Ignacio,Central,2022/9/9,Belize,San Ignacio,Border,14,25,7,BRD,-,,
+Bus,2022/9/9,Guatemala,Melchor de Mencos,Border,2022/9/9,Guatemala,Flores,Central,92,120,10,USD,-,,
+Tuktuk,2022/9/9,Guatemala,Flores,Central,2022/9/9,Guatemala,Flores,Inn,1,5,15,GTQ,-,,
+Bus,2022/9/10,Guatemala,Flores,Inn,2022/9/10,Guatemala,Tikal,Heritage,65,60,45,GTQ,-,,
+Bus,2022/9/10,Guatemala,Tikal,Heritage,2022/9/10,Guatemala,Flores,Inn,65,60,45,GTQ,-,,
+Bus,2022/9/11,Guatemala,Flores,Inn,2022/9/11,Guatemala,Cob?n,Central,258,300,350,GTQ,-,,
+Bus,2022/9/11,Guatemala,Cob?n,Central,2022/9/11,Guatemala,Cob?n,Inn,4,10,30,GTQ,-,,
+Bus,2022/9/12,Guatemala,Cob?n,Inn,2022/9/12,Guatemala,Antigua,Central,249,450,225,GTQ,-,,
+UBER,2022/9/13,Guatemala,Antigua,Central,2022/9/13,Guatemala,guatemala city,Stop,41,60,200,GTQ,-,,
+Bus,2022/9/13,Guatemala,guatemala city,Stop,2022/9/13,El Salvador,Santa Ana,Stop,176,480,25,USD,-,,
+Taxi,2022/9/13,El Salvador,Santa Ana,Stop,2022/9/13,El Salvador,Santa Ana,Central,2.6,10,3,USD,-,,
+UBER,2022/9/14,El Salvador,Santa Ana,Central,2022/9/14,El Salvador,Santa Ana,Stop,2.6,10,2.56,USD,-,,
+UBER,2022/9/14,El Salvador,Santa Ana,Stop,2022/9/14,El Salvador,Santa Ana,Central,2.6,10,2.76,USD,-,,
+Bus,2022/9/16,El Salvador,Santa Ana,Central,2022/9/16,El Salvador,Santa Ana,Volcano,40,80,1,USD,-,,
+Bus,2022/9/16,El Salvador,Santa Ana,Volcano,2022/9/16,El Salvador,Santa Ana,Central,40,80,1,USD,-,,
+UBER,2022/9/17,El Salvador,Santa Ana,Central,2022/9/17,El Salvador,Santa Ana,Terminal,5.2,25,3.2,USD,-,,
+Bus,2022/9/17,El Salvador,Santa Ana,Terminal,2022/9/17,El Salvador,san salvador,Terminal,62,75,1.35,USD,-,,
+Bus,2022/9/17,El Salvador,san salvador,Terminal,2022/9/17,El Salvador,El Tunco,Stop,38,60,1,USD,-,,
+Bus,2022/9/18,El Salvador,El Tunco,Inn,2022/9/18,El Salvador,El Amatillo,Border,240,270,20,USD,-,,
+Bus,2022/9/18,Honduras,El Amatillo,Border,2022/9/18,Honduras,Guasaule,Border,131,160,20,USD,-,,
+Bus,2022/9/18,Nicaragua,Guasaule,Border,2022/9/18,Nicaragua,Leon,Central,105,210,10,USD,-,,
+Bicycle taxi,2022/9/19,Nicaragua,Leon,Terminal,2022/9/19,Nicaragua,Leon,Central,1,10,20,NIO,-,,
+Bicycle taxi,2022/9/20,Nicaragua,Leon,Central,2022/9/20,Nicaragua,Leon,Terminal,1,10,50,NIO,-,,
+Bus,2022/9/20,Nicaragua,Leon,Terminal,2022/9/20,Nicaragua,Managua,Terminal,97,100,78,NIO,-,,
+Taxi,2022/9/20,Nicaragua,Managua,Terminal,2022/9/20,Nicaragua,Managua,Inn,5,10,120,NIO,-,,
+Bus,2022/9/20,Nicaragua,Managua,Inn,2022/9/20,Nicaragua,Managua,Central,5,10,2.5,NIO,-,,
+Bus,2022/9/21,Nicaragua,Managua,Inn,2022/9/21,Nicaragua,Managua,Terminal,2,5,5,NIO,-,,
+Bus,2022/9/21,Nicaragua,Managua,Terminal,2022/9/21,Nicaragua,Guranada,Central,42.6,60,60,NIO,-,,
+Bus,2022/9/22,Nicaragua,Guranada,Central,2022/9/22,Nicaragua,Rivas,Terminal,70,80,100,NIO,-,,
+Taxi,2022/9/22,Nicaragua,Rivas,Terminal,2022/9/22,Nicaragua,San Jorge,Port,4.4,10,60,NIO,-,,
+Ferry,2022/9/22,Nicaragua,San Jorge,Port,2022/9/22,Nicaragua,San Jos? del Sur,Port,19.1,60,50,NIO,-,,
+Rental Motorcycle,2022/9/23,Nicaragua,Onopete,Island,2022/9/23,Nicaragua,Onopete,Island,95,420,20,USD,-,,
+Ferry,2022/9/24,Nicaragua,San Jos? del Sur,Port,2022/9/24,Nicaragua,San Jorge,Port,19.1,60,50,NIO,-,,
+Taxi,2022/9/24,Nicaragua,San Jorge,Port,2022/9/24,Nicaragua,Rivas,Terminal,4.4,10,1,USD,-,,
+Bus,2022/9/24,Nicaragua,Rivas,Terminal,2022/9/24,Nicaragua,Pe?as Blancas,Border,35.7,60,30,NIO,-,,
+Bus,2022/9/24,Costa Rica,Pe?as Blancas,Border,2022/9/24,Costa Rica,Liberia,Central,77.1,120,12,USD,-,,
+Bus,2022/9/25,Costa Rica,Liberia,Central,2022/9/25,Costa Rica,Puntarenas,Central,135,180,400,CRC,-,,
+Bus,2022/9/26,Costa Rica,Puntarenas,Central,2022/9/26,Costa Rica,San Jos?,Terminal,95.4,240,3255,CRC,-,,
+UBER,2022/9/26,Costa Rica,San Jos?,Terminal,2022/9/26,Costa Rica,San Jos?,Station,3.5,10,1960,CRC,-,,
+Train,2022/9/26,Costa Rica,San Jos?,Station,2022/9/26,Costa Rica,Alajuela,AirPort,19.3,90,1200,CRC,-,,
+Taxi,2022/9/26,Costa Rica,Alajuela,AirPort,2022/9/26,Costa Rica,Alajuela,Inn,1.2,5,17000,CRC,-,,
+Taxi,2022/9/26,Costa Rica,Alajuela,Inn,2022/9/26,Costa Rica,Alajuela,Central,3,15,20,USD,-,,
+Bus,2022/9/27,Costa Rica,Alajuela,Central,2022/9/27,Costa Rica,San Jos?,Central,19.3,50,760,CRC,-,,
+Bus,2022/9/28,Costa Rica,San Jos?,Central,2022/9/28,Costa Rica,PalmarNorte,Central,233,360,7370,CRC,-,,
+Taxi,2022/9/29,Costa Rica,PalmarNorte,Central,2022/9/29,Costa Rica,FINCA6,Museum,8.6,14,2000,CRC,-,,
+Bus,2022/9/29,Costa Rica,FINCA6,Museum,2022/9/29,Costa Rica,PalmarNorte,Central,8.6,20,400,CRC,-,,
+Bus,2022/9/29,Costa Rica,PalmarNorte,Central,2022/9/29,Costa Rica,Pasokanoas,Border,93.4,115,2600,CRC,-,,
+Bus,2022/9/29,Costa Rica,Pasokanoas,Border,2022/9/29,Panama,David,Central,53.6,60,2,USD,-,,
+Bus,2022/10/1,Panama,David,Terminal,2022/10/1,Panama,Boquete,Central,45.7,60,2,USD,-,,
+Bus,2022/10/2,Panama,Boquete,Central,2022/10/2,Panama,David,Terminal,45.7,60,1.75,USD,-,,
+Bus,2022/10/2,Panama,David,Terminal,2022/10/2,Panama,Santiago de Veraguas,Terminal,196,180,9,USD,-,,
+Bus,2022/10/3,Panama,Santiago de Veraguas,Terminal,2022/10/3,Panama,Sona,Terminal,51.2,90,2,USD,-,,
+Bus,2022/10/3,Panama,Sona,Terminal,2022/10/3,Panama,Santa Catalina,Central,69.6,120,4.75,USD,-,,
+Boat,2022/10/4,Panama,Santa Catalina,Central,2022/10/4,Panama,Coiba,Island,35,80,Tour,USD,-,,
+Boat,2022/10/4,Panama,Coiba,Island,2022/10/4,Panama,Santa Catalina,Central,35,80,Tour,USD,-,,
+Bus,2022/10/5,Panama,Santa Catalina,Central,2022/10/5,Panama,Sona,Terminal,69.6,120,4.75,USD,-,,
+Bus,2022/10/5,Panama,Sona,Terminal,2022/10/5,Panama,Santiago de Veraguas,Terminal,51.2,90,2,USD,-,,
+Bus,2022/10/5,Panama,Santiago de Veraguas,Terminal,2022/10/5,Panama,Santa Fe,Terminal,57.6,100,2.95,USD,-,,
+Bus,2022/10/5,Panama,Santa Fe,Terminal,2022/10/5,Panama,Santiago de Veraguas,Terminal,57.6,100,2.95,USD,-,,
+Bus,2022/10/6,Panama,Santiago de Veraguas,Terminal,2022/10/6,Panama,Panama City,Terminal,252,320,9,USD,-,,
+Bus,2022/10/6,Panama,Panama City,Terminal,2022/10/6,Panama,Panama City,Inn,8,25,0.25,USD,-,,
+Bus,2022/10/7,Panama,Panama City,Inn,2022/10/7,Panama,Panama City,Terminal,8,25,0.25,USD,-,,
+Bus,2022/10/7,Panama,Panama City,Terminal,2022/10/7,Panama,Colin,Terminal,73,150,2.15,USD,-,,
+Bus,2022/10/7,Panama,Colin,Terminal,2022/10/7,Panama,Gatun,Gate,12.4,40,1,USD,-,,
+Bus,2022/10/7,Panama,Gatun,Gate,2022/10/7,Panama,Colin,Terminal,12.4,40,1,USD,-,,
+Bus,2022/10/7,Panama,Colin,Terminal,2022/10/7,Panama,Panama City,Inn,73,120,3.15,USD,-,,
+Bus,2022/10/8,Panama,Panama City,Inn,2022/10/8,Panama,Miraflores,Gate,13.8,60,0.25,USD,-,,
+Bus,2022/10/8,Panama,Miraflores,Gate,2022/10/8,Panama,Amador,Gate,16.6,60,0.25,USD,-,,
+Bus,2022/10/9,Panama,Panama City,Inn,2022/10/9,Panama,Panama City,AirPort,20.3,60,1,USD,-,,
+Airplane,2022/10/9,Panama,Panama City,AirPort,2022/10/9,Colombia,Bogota,AirPort,760,115,28640,JPY,-,,
+Car,2022/10/9,Colombia,Bogota,AirPort,2022/10/9,Colombia,Bogota,Inn,11.4,30,0,COP,-,,
+UBER,2022/10/10,Colombia,Bogota,Inn,2022/10/10,Colombia,Bogota,Central,3.1,21,10000,COP,-,,
+UBER,2022/10/11,Colombia,Bogota,Central,2022/10/11,Colombia,Bogota,Terminal,9,30,14900,COP,-,,
+Taxi,2022/10/11,Colombia,Bogota,Terminal,2022/10/11,Colombia,Bogota,Terminal,1,5,8000,COP,-,,
+Bus,2022/10/11,Colombia,Bogota,Terminal,2022/10/11,Colombia,tunha,Terminal,145,210,25000,COP,-,,
+Bus,2022/10/11,Colombia,tunha,Terminal,2022/10/11,Colombia,Villa de Leyva,Terminal,38,60,5000,COP,-,,
+Bus,2022/10/12,Colombia,Villa de Leyva,Terminal,2022/10/12,Colombia,Santa Sofia,Terminal,16.7,45,6000,COP,-,,
+Bus,2022/10/12,Colombia,Santa Sofia,Terminal,2022/10/12,Colombia,Villa de Leyva,Museum,12.7,25,4000,COP,-,,
+Bus,2022/10/12,Colombia,Villa de Leyva,Museum,2022/10/12,Colombia,Villa de Leyva,Terminal,4,20,2000,COP,-,,
+Bus,2022/10/13,Colombia,Villa de Leyva,Terminal,2022/10/13,Colombia,Chiqinkira,Terminal,23.9,60,10000,COP,-,,
+Bus,2022/10/13,Colombia,Chiqinkira,Terminal,2022/10/13,Colombia,Zipaquir??,Suberb,89,150,18000,COP,-,,
+Bus,2022/10/13,Colombia,Zipaquir??,Suberb,2022/10/13,Colombia,Zipaquir??,Central,5,20,2000,COP,-,,
+Bus,2022/10/14,Colombia,Zipaquir??,Central,2022/10/14,Colombia,Bogota,Terminal,36.3,90,7000,COP,-,,
+Tram Bus,2022/10/14,Colombia,Bogota,Terminal,2022/10/14,Colombia,Bogota,Terminal,10,60,2300,COP,-,,
+Bus,2022/10/14,Colombia,Bogota,Terminal,2022/10/14,Colombia,Melgar,Terminal,122,120,15000,COP,-,,
+Taxi,2022/10/14,Colombia,Melgar,Central,2022/10/14,Colombia,Melgar,Inn,2.5,5,6000,COP,-,,
+Taxi,2022/10/14,Colombia,Melgar,Inn,2022/10/14,Colombia,Melgar,Central,2.5,5,6000,COP,-,,
+Taxi,2022/10/14,Colombia,Melgar,Central,2022/10/14,Colombia,Melgar,Inn,2.5,5,7000,COP,-,,
+Taxi,2022/10/15,Colombia,Melgar,Inn,2022/10/15,Colombia,Melgar,Central,2.5,5,6000,COP,-,,
+Bus,2022/10/15,Colombia,Melgar,Terminal,2022/10/15,Colombia,Ibage,Terminal,87.4,120,25000,COP,-,,
+Bus,2022/10/17,Colombia,Ibage,Terminal,2022/10/17,Colombia,Pereira,Terminal,120,240,35000,COP,-,,
+UBER,2022/10/17,Colombia,Pereira,Terminal,2022/10/17,Colombia,Pereira,Central,1.5,10,6114,COP,-,,
+Tram Bus,2022/10/17,Colombia,Pereira,Central,2022/10/17,Colombia,Pereira,Final,6,15,1000,COP,-,,
+Tram Bus,2022/10/17,Colombia,Pereira,Final,2022/10/17,Colombia,Pereira,Central,6,15,1000,COP,-,,
+UBER,2022/10/18,Colombia,Pereira,Central,2022/10/18,Colombia,Pereira,Terminal,1.5,11,6857,COP,-,,
+bus,2022/10/18,Colombia,Pereira,Terminal,2022/10/18,Colombia,kari,Terminal,209,210,40000,COP,-,,
+Bus,2022/10/18,Colombia,kari,Terminal,2022/10/18,Colombia,kari,Central,2.5,10,2000,COP,-,,
+Taxi,2022/10/18,Colombia,kari,Central,2022/10/18,Colombia,kari,Inn,4,10,9000,COP,-,,
+Bus,2022/10/19,Colombia,kari,Zoo,2022/10/19,Colombia,kari,Inn,3.8,15,2000,COP,-,,
+Taxi,2022/10/20,Colombia,kari,Inn,2022/10/20,Colombia,kari,Terminal,2.5,10,9000,COP,-,,
+Bus,2022/10/20,Colombia,kari,Terminal,2022/10/20,Colombia,Manizales,Terminal,261,290,60000,COP,-,,
+Taxi,2022/10/20,Colombia,Manizales,Terminal,2022/10/20,Colombia,Manizales,Central,3,20,8000,COP,-,,
+Taxi,2022/10/21,Colombia,Manizales,Central,2022/10/21,Colombia,Manizales,Terminal,3,20,8000,COP,-,,
+Bus,2022/10/21,Colombia,Manizales,Terminal,2022/10/21,Colombia,Honda,Terminal,137,290,30000,COP,-,,
+Taxi,2022/10/21,Colombia,Honda,Terminal,2022/10/21,Colombia,Honda,Central,1,5,5000,COP,-,,
+Bus,2022/10/22,Colombia,Honda,Terminal,2022/10/22,Colombia,Bogota,Terminal,155,410,35000,COP,-,,
+Taxi,2022/10/22,Colombia,Bogota,Terminal,2022/10/22,Colombia,Bogota,Inn,5,15,22000,COP,-,,
+Bus,2022/10/24,Colombia,Bogota,Inn,2022/10/24,Colombia,Bogota,Central,8,20,2500,COP,-,,
+Bus,2022/10/24,Colombia,Bogota,Central,2022/10/24,Colombia,Bogota,Central,1,5,2500,COP,-,,
+Taxi,2022/10/24,Colombia,Bogota,Central,2022/10/24,Colombia,Bogota,AirPort,1,5,4000,COP,-,,
+Airplane,2022/10/24,Colombia,Bogota,AirPort,2022/10/24,Ecuador,Quito,AirPort,712,90,47770,JPY,-,,
+Bus,2022/10/24,Ecuador,Quito,AirPort,2022/10/24,Ecuador,RioCoca,Terminal,35,60,2.45,USD,-,,
+Taxi,2022/10/24,Ecuador,RioCoca,Terminal,2022/10/24,Ecuador,Quito,Inn,3,15,4,USD,-,,
+Bus,2022/10/25,Ecuador,Quito,Inn,2022/10/25,Ecuador,Quito,Central,5,15,0.35,USD,-,,
+Bus,2022/10/25,Ecuador,Quito,Central,2022/10/25,Ecuador,Quito,Central,5,15,0.35,USD,-,,
+Bus,2022/10/25,Ecuador,Quito,Central,2022/10/25,Ecuador,Quito,Central,2,5,0.35,USD,-,,
+Bus,2022/10/25,Ecuador,Quito,Central,2022/10/25,Ecuador,Quito,Central,5,10,0.35,USD,-,,
+Taxi,2022/10/25,Ecuador,Quito,Central,2022/10/25,Ecuador,Quito,Inn,2,5,2,USD,-,,
+Bus,2022/10/26,Ecuador,Quito,Inn,2022/10/26,Ecuador,Quito,Terminal,20,60,0.35,USD,-,,
+Bus,2022/10/26,Ecuador,Quito,Terminal,2022/10/26,Ecuador,ibara,Terminal,110,180,2,USD,-,,
+Taxi,2022/10/27,Ecuador,ibara,Inn,2022/10/27,Ecuador,ibara,Hospital,3,10,5,USD,-,,
+Taxi,2022/10/27,Ecuador,ibara,Hospital,2022/10/27,Ecuador,ibara,Terminal,3,10,5,USD,-,,
+Bus,2022/10/27,Ecuador,ibara,Terminal,2022/10/27,Ecuador,Otavalo,Terminal,24,30,0.5,USD,-,,
+Taxi,2022/10/27,Ecuador,Otavalo,Terminal,2022/10/27,Ecuador,Otavalo,Inn,1,5,1.2,USD,-,,
+Bus,2022/10/29,Ecuador,Otavalo,Terminal,2022/10/29,Ecuador,Quito,Terminal,83,120,1.5,USD,-,,
+Bus,2022/10/29,Ecuador,Quito,Terminal,2022/10/29,Ecuador,Quito,Central,10,60,0.35,USD,-,,
+Bus,2022/10/30,Ecuador,Quito,Central,2022/10/30,Ecuador,Quito,Terminal,20,20,0.35,USD,-,,
+Bus,2022/10/30,Ecuador,Quito,Terminal,2022/10/30,Ecuador,Santo Domingo,Terminal,127,180,4.25,USD,-,,
+Taxi,2022/10/30,Ecuador,Santo Domingo,Terminal,2022/10/30,Ecuador,Santo Domingo,Inn,4,10,2.75,USD,-,,
+Bus,2022/10/30,Ecuador,Santo Domingo,Inn,2022/10/30,Ecuador,Santo Domingo,Central,4.2,15,0.4,USD,-,,
+Bus,2022/10/30,Ecuador,Santo Domingo,Central,2022/10/30,Ecuador,Santo Domingo,Inn,4.2,15,0.4,USD,-,,
+Taxi,2022/10/31,Ecuador,Santo Domingo,Inn,2022/10/31,Ecuador,Santo Domingo,Terminal,5.7,15,5,USD,-,,
+Bus,2022/10/31,Ecuador,Santo Domingo,Terminal,2022/10/31,Ecuador,manta,Terminal,247,360,8.05,USD,-,,
+Bus,2022/10/31,Ecuador,manta,Terminal,2022/10/31,Ecuador,manta,Central,8.3,15,0.4,USD,-,,
+Taxi,2022/11/1,Ecuador,manta,Central,2022/11/1,Ecuador,manta,Terminal,8.3,15,3,USD,-,,
+Bus,2022/11/1,Ecuador,manta,Terminal,2022/11/1,Ecuador,Santa Elina,Terminal,209,240,7.5,USD,-,,
+Bus,2022/11/1,Ecuador,Santa Elina,Terminal,2022/11/1,Ecuador,Salinas,Stop,14,30,0.25,USD,-,,
+Bus,2022/11/2,Ecuador,Salinas,Stop,2022/11/2,Ecuador,Santa Elina,Terminal,14,30,0.35,USD,-,,
+Bus,2022/11/2,Ecuador,Santa Elina,Terminal,2022/11/2,Ecuador,Santiago de Guayaquil,Terminal,128,120,4.95,USD,-,,
+Bus,2022/11/2,Ecuador,Santiago de Guayaquil,Terminal,2022/11/2,Ecuador,Santiago de Guayaquil,Inn,2,5,0.3,USD,-,,
+Bus,2022/11/2,Ecuador,Santiago de Guayaquil,Inn,2022/11/2,Ecuador,Santiago de Guayaquil,Central,5,30,0.3,USD,-,,
+roapway,2022/11/2,Ecuador,Santiago de Guayaquil,Central,2022/11/2,Ecuador,Santiago de Guayaquil,Central,1,5,0.3,USD,-,,
+roapway,2022/11/2,Ecuador,Santiago de Guayaquil,Central,2022/11/2,Ecuador,Santiago de Guayaquil,Central,3,15,0.3,USD,-,,
+Bus,2022/11/2,Ecuador,Santiago de Guayaquil,Central,2022/11/2,Ecuador,Santiago de Guayaquil,Inn,5,30,0.3,USD,-,,
+Bus,2022/11/3,Ecuador,Santiago de Guayaquil,Inn,2022/11/3,Ecuador,Santiago de Guayaquil,AirPort,2,5,0.3,USD,-,,
+Metro Bus,2022/11/3,Ecuador,Santiago de Guayaquil,AirPort,2022/11/3,Ecuador,Santiago de Guayaquil,Central,5,15,0.3,USD,-,,
+Bus,2022/11/3,Ecuador,Santiago de Guayaquil,Central,2022/11/3,Ecuador,Santiago de Guayaquil,Inn,5,30,0.3,USD,-,,
+Bus,2022/11/4,Ecuador,Santiago de Guayaquil,Inn,2022/11/4,Ecuador,Santiago de Guayaquil,Terminal,2,5,0.3,USD,-,,
+Bus,2022/11/4,Ecuador,Santiago de Guayaquil,Terminal,2022/11/4,Ecuador,riobamba,Terminal,229,300,8.05,USD,-,,
+Bus,2022/11/4,Ecuador,riobamba,Terminal,2022/11/4,Ecuador,riobamba,Central,1,5,0.3,USD,-,,
+Bus,2022/11/5,Ecuador,riobamba,Terminal,2022/11/5,Ecuador,arausi,Central,96,120,2.5,USD,-,,.
+Bus,2022/11/6,Ecuador,arausi,Central,2022/11/6,Ecuador,Cuenca,Terminal,171,240,7,USD,-,,
+Taxi,2022/11/8,Ecuador,Cuenca,Inn,2022/11/8,Ecuador,Cuenca,Terminal,2.6,5,1.5,USD,-,,
+Bus,2022/11/8,Ecuador,Cuenca,Terminal,2022/11/8,Ecuador,huaqulias,Central,289,300,9,USD,-,,
+Taxi,2022/11/8,Ecuador,huaqulias,Central,2022/11/8,Ecuador,huaqulias,Border,10,15,3,USD,-,,
+Taxi,2022/11/8,Ecuador,huaqulias,Border,2022/11/8,Peru,Tumbes,Border,5,10,4,USD,-,,
+Taxi,2022/11/8,Peru,Tumbes,Border,2022/11/8,Peru,Tumbes,Central,30,45,13,USD,-,,
+Taxi,2022/11/8,Peru,Tumbes,Central,2022/11/8,Peru,Tumbes,Inn,12,20,7,USD,-,,
+Bus,2022/11/9,Peru,Tumbes,Inn,2022/11/9,Peru,Tumbes,Central,12,20,3,PEN,-,,
+Bus,2022/11/9,Peru,Tumbes,Central,2022/11/9,Peru,M?ncora,Central,106,140,25,PEN,-,,
+Tuktuk,2022/11/9,Peru,M?ncora,Central,2022/11/9,Peru,M?ncora,Inn,2,15,10,PEN,-,,
+Tuktuk,2022/11/10,Peru,M?ncora,Inn,2022/11/10,Peru,M?ncora,Central,2,15,15,PEN,-,,
+Bus,2022/11/10,Peru,M?ncora,Central,2022/11/10,Peru,Piura,Terminal,181,200,25,PEN,-,,
+Taxi,2022/11/10,Peru,Piura,Terminal,2022/11/10,Peru,Piura,Central,2,5,8,PEN,-,,
+Bus,2022/11/11,Peru,Piura,Central,2022/11/11,Peru,Piura,Terminal,2,5,1.5,PEN,-,,
+Bus,2022/11/11,Peru,Piura,Terminal,2022/11/11,Peru,Chiclayo,Terminal,215,210,25,PEN,-,,
+Taxi,2022/11/11,Peru,Chiclayo,Terminal,2022/11/11,Peru,Chiclayo,Inn,1.3,5,10,PEN,-,,
+Taxi,2022/11/12,Peru,Chiclayo,Inn,2022/11/12,Peru,Chiclayo,Terminal,1.3,5,8,PEN,-,,
+Bus,2022/11/12,Peru,Chiclayo,Terminal,2022/11/12,Peru,Cajamarca,Terminal,253,390,35,PEN,-,,
+Bus,2022/11/12,Peru,Cajamarca,Terminal,2022/11/12,Peru,Cajamarca,Inn,2,5,6,PEN,-,,
+Bus,2022/11/13,Peru,Cajamarca,Central,2022/11/13,Peru,Cajamarca,Hot Spring,6.2,15,2,PEN,-,,
+Bus,2022/11/13,Peru,Cajamarca,Hot Spring,2022/11/13,Peru,Cajamarca,Central,6.2,15,2,PEN,-,,
+Bus,2022/11/14,Peru,Cajamarca,Terminal,2022/11/14,Peru,Trujillo,Terminal,295,420,40,PEN,-,,
+Taxi,2022/11/14,Peru,Trujillo,Terminal,2022/11/14,Peru,Trujillo,Inn,2.5,10,8,PEN,-,,
+Bus,2022/11/15,Peru,Trujillo,Inn,2022/11/15,Peru,Trujillo,Heritage,7.3,25,Tour,PEN,Sun And Monn Waka,,
+Bus,2022/11/15,Peru,Trujillo,Heritage,2022/11/15,Peru,Trujillo,Central,7.3,25,Tour,PEN,-,,
+Bus,2022/11/15,Peru,Trujillo,Central,2022/11/15,Peru,Trujillo,Heritage,6.2,20,Tour,PEN,ChanChan,,
+Bus,2022/11/15,Peru,Trujillo,Heritage,2022/11/15,Peru,Trujillo,Beach,10.3,25,Tour,PEN,WanChaco,,
+Bus,2022/11/15,Peru,Trujillo,Beach,2022/11/15,Peru,Trujillo,Central,14,40,Tour,PEN,-,,
+Taxi,2022/11/16,Peru,Trujillo,Inn,2022/11/16,Peru,Trujillo,Terminal,2.5,10,4,PEN,-,,
+Bus,2022/11/16,Peru,Trujillo,Terminal,2022/11/16,Peru,Huaraz,Terminal,334,540,40,PEN,-,,
+Taxi,2022/11/16,Peru,Huaraz,Terminal,2022/11/16,Peru,Huaraz,Inn,2,10,8,PEN,-,,
+Bus,2022/11/17,Peru,Huaraz,Central,2022/11/17,Peru,Wilcawine,Heritage,8,30,2.5,PEN,-,,
+Bus,2022/11/17,Peru,Wilcawine,Heritage,2022/11/17,Peru,Huaraz,Central,8,30,2.5,PEN,-,,
+Bus,2022/11/18,Peru,Huaraz,Terminal,2022/11/18,Peru,Lima,Terminal,402,540,40,PEN,North Terminal,,
+Metro Bus,2022/11/18,Peru,Lima,Terminal,2022/11/18,Peru,Lima,Inn,16.9,40,0.5,PEN,MiraFlorres,,
+Taxi,2022/11/19,Peru,Lima,Central,2022/11/19,Peru,Lima,Museum,11.1,20,10,PEN,allogicary,,
+Bus,2022/11/19,Peru,Lima,Museum,2022/11/19,Peru,Lima,Stop,8,30,0.5,PEN,raruco,,
+Metro Bus,2022/11/19,Peru,Lima,Stop,2022/11/19,Peru,Lima,Stop,12,30,0.5,PEN,Centro,,
+Metro Bus,2022/11/19,Peru,Lima,Stop,2022/11/19,Peru,Lima,Inn,12,60,0.5,PEN,MiraFlorres,,
+Metro Bus,2022/11/20,Peru,Lima,Inn,2022/11/20,Peru,Lima,Terminal,16.9,40,0.5,PEN,North Terminal,,
+Metro Bus,2022/11/20,Peru,Lima,Terminal,2022/11/20,Peru,Lima,Terminal,12,30,0.5,PEN,Peru Bus,,
+Bus,2022/11/20,Peru,Lima,Terminal,2022/11/20,Peru,Ika,Terminal,305,270,50,PEN,-,,
+Tuktuk,2022/11/21,Peru,Ika,Inn,2022/11/21,Peru,Ika,Terminal,2,5,4,PEN,-,,
+Bus,2022/11/21,Peru,Ika,Terminal,2022/11/21,Peru,Nazca,Terminal,115,180,13,PEN,-,,
+Bus,2022/11/22,Peru,Nazca,Inn,2022/11/22,Peru,Nazca,AirPort,5.3,20,Tour,PEN,-,,
+Cesna,2022/11/22,Peru,Nazca,AirPort,2022/11/22,Peru,Nazca,AirPort,-,60,Tour,PEN,-,,
+Bus,2022/11/22,Peru,Nazca,AirPort,2022/11/22,Peru,Nazca,Inn,5.3,20,Tour,PEN,-,,
+Taxi,2022/11/22,Peru,Nazca,Inn,2022/11/22,Peru,Nazca,Terminal,2,5,10,PEN,-,,
+Bus,2022/11/23,Peru,Nazca,Terminal,2022/11/24,Peru,Arequipa,Terminal,568,600,100,PEN,-,,
+UBER,2022/11/24,Peru,Arequipa,Terminal,2022/11/24,Peru,Arequipa,Central,2.5,12,13.59,PEN,-,,
+UBER,2022/11/26,Peru,Arequipa,Central,2022/11/26,Peru,Arequipa,Terminal,2.5,10,12.84,PEN,-,,
+Bus,2022/11/26,Peru,Arequipa,Terminal,2022/11/26,Peru,Tacuna,Terminal,370,330,35,PEN,-,,
+Bus,2022/11/26,Peru,Tacuna,Border,2022/11/26,Chile,Arica,Border,57.6,60,7000,CLP,-,,
+Taxi,2022/11/26,Chile,Arica,Terminal,2022/11/26,Chile,Arica,Inn,3,10,3000,CLP,-,,
+Bus,2022/11/28,Chile,Arica,Inn,2022/11/28,Chile,Arica,Terminal,1.5,5,600,CLP,-,,
+Bus,2022/11/28,Chile,Arica,Terminal,2022/11/28,Chile,Iquique,Terminal,309,270,12000,CLP,-,,
+Bus,2022/11/28,Chile,Iquique,Terminal,2022/11/28,Chile,Iquique,Central,4.3,15,600,CLP,-,,
+Bus,2022/11/30,Chile,Iquique,Central,2022/11/30,Chile,Iquique,Terminal,4.3,15,600,CLP,-,,
+Bus,2022/11/30,Chile,Iquique,Terminal,2022/11/30,Chile,Antofagasta,Terminal,416,360,20000,CLP,-,,
+Bus,2022/11/30,Chile,Antofagasta,Terminal,2022/11/30,Chile,Antofagasta,Central,4.5,40,600,CLP,-,,
+Bus,2022/12/1,Chile,Antofagasta,Central,2022/12/1,Chile,Antofagasta,Terminal,4.5,40,600,CLP,-,,
+Bus,2022/12/1,Chile,Antofagasta,Terminal,2022/12/1,Chile,La Serena,Terminal,865,750,40000,CLP,-,,
+Taxi,2022/12/1,Chile,La Serena,Terminal,2022/12/1,Chile,La Serena,Inn,0.3,5,5000,CLP,-,,
+Bus,2022/12/3,Chile,La Serena,Terminal,2022/12/3,Chile,Santiago de Chile,Terminal,472,350,24000,CLP,-,,
+Train,2022/12/3,Chile,Santiago de Chile,Station,2022/12/3,Chile,San Bernardo,Station,20,15,1000,CLP,-,,
+Train,2022/12/3,Chile,San Bernardo,Station,2022/12/3,Chile,Santiago de Chile,Inn,20,15,1000,CLP,-,,
+Bus,2022/12/3,Chile,Santiago de Chile,Terminal,2022/12/3,Chile,Santiago de Chile,Inn,3,10,30,CLP,-,,
+Bus,2022/12/4,Chile,Santiago de Chile,Inn,2022/12/4,Chile,Santiago de Chile,Station,3,10,30,CLP,-,,
+Train,2022/12/4,Chile,Santiago de Chile,Station,2022/12/4,Chile,Rancagua,Station,86.6,60,2500,CLP,-,,
+Train,2022/12/4,Chile,Rancagua,Station,2022/12/4,Chile,Santiago de Chile,Station,86.6,60,2500,CLP,-,,
+Bus,2022/12/4,Chile,Santiago de Chile,Station,2022/12/4,Chile,Santiago de Chile,Inn,3,10,30,CLP,-,,
+Bus,2022/12/5,Chile,Santiago de Chile,Inn,2022/12/5,Chile,Santiago de Chile,Terminal,3,10,30,CLP,-,,
+Bus,2022/12/5,Chile,Santiago de Chile,Terminal,2022/12/5,Chile,Valparaiso,Terminal,121,95,5000,CLP,-,,
+Bus,2022/12/5,Chile,Valparaiso,Terminal,2022/12/5,Chile,Santiago de Chile,Terminal,121,95,4500,CLP,-,,
+Bus,2022/12/5,Chile,Santiago de Chile,Terminal,2022/12/5,Chile,Santiago de Chile,Inn,3,10,30,CLP,-,,
+Bus,2022/12/6,Chile,Santiago de Chile,Inn,2022/12/6,Chile,Santiago de Chile,Terminal,3,10,30,CLP,-,,
+Bus,2022/12/6,Chile,Santiago de Chile,Terminal,2022/12/6,Chile,Copiap?,Terminal,806,660,30000,CLP,-,,
+Bus,2022/12/7,Chile,Copiap?,Terminal,2022/12/7,Chile,Antofagasta,Terminal,540,540,30000,CLP,-,,
+Bus,2022/12/7,Chile,Antofagasta,Terminal,2022/12/7,Chile,Antofagasta,Central,4.5,40,600,CLP,-,,
+Bus,2022/12/8,Chile,Antofagasta,Central,2022/12/8,Chile,Antofagasta,Terminal,4.5,40,600,CLP,-,,
+Bus,2022/12/8,Chile,Antofagasta,Terminal,2022/12/8,Chile,Calama,Terminal,217,180,6000,CLP,-,,
+Bus,2022/12/8,Chile,Calama,Terminal,2022/12/8,Chile,San Pedro de Atacama,Terminal,101,90,4000,CLP,-,,
+Bus,2022/12/9,Chile,San Pedro de Atacama,Central,2022/12/9,Chile,San Pedro de Atacama,Border,40,40,0,CLP,Tour,,
+Bus,2022/12/9,Chile,San Pedro de Atacama,Border,2022/12/9,Chile,San Pedro de Atacama,Central,40,40,0,CLP,Tour,,
+Bus,2022/12/10,Chile,San Pedro de Atacama,Terminal,2022/12/10,Chile,Calama,Terminal,101,90,4000,CLP,-,,
+Bus,2022/12/11,Chile,Calama,Terminal,2022/12/11,Bolivia,Uyuni,Terminal,427,540,30000,CLP,-,,
+Bus,2022/12/12,Bolivia,Uyuni,Central,2022/12/12,Bolivia,Uyuni,Lake,15.6,20,0,BOB,Tour,,
+Bus,2022/12/12,Bolivia,Uyuni,Lake,2022/12/12,Bolivia,Uyuni,Central,15.6,20,0,BOB,Tour,,
+Bus,2022/12/13,Bolivia,Uyuni,Terminal,2022/12/13,Bolivia,Potos?,Terminal,204,270,30,BOB,-,,
+Taxi,2022/12/14,Bolivia,Potos?,Central,2022/12/14,Bolivia,Potos?,Terminal,10,20,10,BOB,-,,
+Bus,2022/12/14,Bolivia,Potos?,Terminal,2022/12/14,Bolivia,Sucre,Terminal,155,210,20,BOB,-,,
+Bus,2022/12/14,Bolivia,Sucre,Terminal,2022/12/14,Bolivia,Sucre,Central,1.7,10,2,BOB,-,,
+Bus,2022/12/15,Bolivia,Sucre,Central,2022/12/15,Bolivia,Yotara,Central,18.4,30,4,BOB,-,,
+Bus,2022/12/15,Bolivia,Yotara,Central,2022/12/15,Bolivia,Sucre,Central,18.4,30,4,BOB,-,,
+Bus,2022/12/15,Bolivia,Sucre,Central,2022/12/15,Bolivia,Sucre,Suberb,5,30,4,BOB,Dinasour foot stamp,,
+Bus,2022/12/15,Bolivia,Sucre,Suberb,2022/12/15,Bolivia,Sucre,Central,5,30,4,BOB,-,,
+Bus,2022/12/16,Bolivia,Sucre,Central,2022/12/16,Bolivia,Sucre,Terminal,1.7,40,2,BOB,-,,
+Bus,2022/12/16,Bolivia,Sucre,Terminal,2022/12/17,Bolivia,La Paz,Terminal,566,720,180,BOB,-,,
+Taxi,2022/12/17,Bolivia,La Paz,Terminal,2022/12/17,Bolivia,La Paz,Inn,3.6,25,28,BOB,-,,
+roapway,2022/12/17,Bolivia,La Paz,Inn,2022/12/17,Bolivia,La Paz,Central,1,10,3,BOB,-,,
+roapway,2022/12/17,Bolivia,La Paz,Central,2022/12/17,Bolivia,La Paz,Central,1,10,3,BOB,-,,
+roapway,2022/12/17,Bolivia,La Paz,Central,2022/12/17,Bolivia,La Paz,Central,1,10,3,BOB,-,,
+roapway,2022/12/17,Bolivia,La Paz,Central,2022/12/17,Bolivia,La Paz,inn,1,10,3,BOB,-,,
+roapway,2022/12/18,Bolivia,La Paz,inn,2022/12/18,Bolivia,La Paz,Terminal,4.2,40,3,BOB,Cemetary,,
+roapway,2022/12/18,Bolivia,La Paz,Terminal,2022/12/18,Bolivia,El Alto,Central,4,20,3,BOB,-,,
+roapway,2022/12/18,Bolivia,El Alto,Central,2022/12/18,Bolivia,El Alto,Central,4,20,3,BOB,-,,
+roapway,2022/12/18,Bolivia,El Alto,Central,2022/12/18,Bolivia,La Paz,Central,4,20,3,BOB,new central,,
+roapway,2022/12/18,Bolivia,La Paz,Central,2022/12/18,Bolivia,La Paz,inn,4,20,3,BOB,-,,
+roapway,2022/12/19,Bolivia,La Paz,inn,2022/12/19,Bolivia,La Paz,Terminal,4.2,40,3,BOB,Cemetary,,
+Bus,2022/12/19,Bolivia,La Paz,Terminal,2022/12/19,Bolivia,Copacabana,Terminal,143,195,20,BOB,-,,
+Bus,2022/12/20,Bolivia,Copacabana,Central,2022/12/20,Peru,Casani,Central,8.9,20,10,BOB,-,,
+Boat,2022/12/20,Peru,Casani,Central,2022/12/20,Peru,Puno,Port,150,300,150,BOB,-,,
+Tuktuk,2022/12/22,Peru,Puno,Central,2022/12/22,Peru,Puno,Port,1.2,5,9,PEN,-,,
+Boat,2022/12/22,Peru,Puno,Port,2022/12/22,Peru,Casani,Port,150,300,100,PEN,-,,
+Bus,2022/12/22,Peru,Casani,Port,2022/12/22,Bolivia,Copacabana,Terminal,8.9,20,4,BOB,-,,
+Bus,2022/12/22,Bolivia,Copacabana,Terminal,2022/12/22,Bolivia,La Paz,Terminal,143,255,20,BOB,Cemetary,,
+Bus,2022/12/22,Bolivia,La Paz,Terminal,2022/12/22,Bolivia,La Paz,Terminal,4.5,60,3,BOB,-,,
+Bus,2022/12/23,Bolivia,La Paz,Terminal,2022/12/23,Bolivia,Ciudad de Cochabamba,Terminal,381,540,106,BOB,-,,
+Bus,2022/12/23,Bolivia,Ciudad de Cochabamba,Terminal,2022/12/23,Bolivia,Ciudad de Cochabamba,Central,5,2.3,2,BOB,-,,
+roapway,2022/12/24,Bolivia,Ciudad de Cochabamba,Central,2022/12/24,Bolivia,Ciudad de Cochabamba,Mountain,6.2,10,7.5,BOB,-,,
+roapway,2022/12/24,Bolivia,Ciudad de Cochabamba,Mountain,2022/12/24,Bolivia,Ciudad de Cochabamba,Central,6.2,10,7.5,BOB,-,,
+Taxi,2022/12/26,Bolivia,Ciudad de Cochabamba,Central,2022/12/26,Bolivia,Ciudad de Cochabamba,Terminal,5,2.3,15,BOB,-,,
+Bus,2022/12/26,Bolivia,Ciudad de Cochabamba,Terminal,2022/12/26,Bolivia,Santa Cruz de la Sierra,Terminal,481,720,70,BOB,-,,
+Taxi,2022/12/26,Bolivia,Santa Cruz de la Sierra,Terminal,2022/12/26,Bolivia,Santa Cruz de la Sierra,Inn,3.3,10,20,BOB,-,,
+Bus,2022/12/26,Bolivia,Santa Cruz de la Sierra,Inn,2022/12/26,Bolivia,Santa Cruz de la Sierra,Terminal,5,2.3,2,BOB,-,,
+Bus,2022/12/27,Bolivia,Santa Cruz de la Sierra,Terminal,2022/12/27,Bolivia,Santa Cruz de la Sierra,Inn,5,2.3,2,BOB,-,,
+Bus,2022/12/27,Bolivia,Santa Cruz de la Sierra,Inn,2022/12/27,Bolivia,Santa Cruz de la Sierra,Terminal,5,2.3,2,BOB,-,,
+Bus,2022/12/29,Bolivia,Santa Cruz de la Sierra,Terminal,2022/12/29,Bolivia,Santa Cruz de la Sierra,Inn,5,2.3,2,BOB,-,,
+UBER,2022/12/29,Bolivia,Santa Cruz de la Sierra,Inn,2022/12/29,Bolivia,Santa Cruz de la Sierra,Terminal,5,14,17,BOB,-,,
+Bus,2022/12/29,Bolivia,Santa Cruz de la Sierra,Terminal,2022/12/30,Bolivia,Tarija,Terminal,659,1080,160,BOB,-,,
+Taxi,2022/12/30,Bolivia,Tarija,Terminal,2022/12/30,Bolivia,Tarija,Central,8.3,15,20,BOB,-,,
+Bus,2023/1/1,Bolivia,Tarija,Central,2023/1/1,Bolivia,Tarija,Terminal,8.3,15,2,BOB,-,,
+Bus,2023/1/1,Bolivia,Tarija,Terminal,2023/1/1,Bolivia,Tarija,Central,8.3,15,2,BOB,-,,
+Bus,2023/1/1,Bolivia,Tarija,Central,2023/1/1,Bolivia,Tarija,Terminal,8.3,15,2,BOB,-,,
+Bus,2023/1/1,Bolivia,Tarija,Terminal,2023/1/1,Bolivia,Tarija,Central,8.3,15,2,BOB,-,,
+Bus,2023/1/2,Bolivia,Tarija,Central,2023/1/2,Bolivia,Tarija,Terminal,8.3,15,2,BOB,-,,
+Bus,2023/1/2,Bolivia,Tarija,Terminal,2023/1/3,Argentina,Jujuy,Terminal,460,480,280,BOB,-,,
+Taxi,2023/1/3,Argentina,Jujuy,Terminal,2023/1/3,Argentina,Jujuy,Inn,5.6,15,900,ARS,-,,
+Bus,2023/1/3,Argentina,Jujuy,Inn,2023/1/3,Argentina,Jujuy,Terminal,5.6,20,200,ARS,-,,
+Bus,2023/1/3,Argentina,Jujuy,Terminal,2023/1/3,Argentina,purmamarca,Terminal,67.3,80,650,ARS,-,,
+Bus,2023/1/3,Argentina,purmamarca,Terminal,2023/1/3,Argentina,Jujuy,Central,62,70,650,ARS,-,,
+Bus,2023/1/4,Argentina,Jujuy,Central,2023/1/4,Argentina,Jujuy,Terminal,5.6,20,200,ARS,-,,
+Bus,2023/1/4,Argentina,Jujuy,Terminal,2023/1/4,Argentina,Salta,Terminal,115,180,2200,ARS,-,,
+roapway,2023/1/5,Argentina,Salta,Central,2023/1/5,Argentina,Salta,Mountain,8,15,1100,ARS,-,,
+roapway,2023/1/5,Argentina,Salta,Mountain,2023/1/5,Argentina,Salta,Central,8,15,1100,ARS,-,,
+Bus,2023/1/6,Argentina,Salta,Terminal,2023/1/6,Argentina,Cafayate,Terminal,197,300,1300,ARS,-,,
+Bus,2023/1/7,Argentina,Cafayate,Terminal,2023/1/7,Argentina,Salta,Terminal,197,240,1300,ARS,-,,
+Bus,2023/1/7,Argentina,Salta,Terminal,2023/1/8,Argentina,Corrientes,Terminal,836,960,13250,ARS,-,,
+Taxi,2023/1/8,Argentina,Corrientes,Terminal,2023/1/8,Argentina,Corrientes,Inn,4.2,10,1000,ARS,-,,
+Taxi,2023/1/8,Argentina,Corrientes,Inn,2023/1/8,Argentina,Corrientes,Central,4.2,10,1000,ARS,-,,
+UBER,2023/1/9,Argentina,Corrientes,Inn,2023/1/9,Argentina,Corrientes,Terminal,4.2,16,1043.9,ARS,-,,
+Bus,2023/1/9,Argentina,Corrientes,Terminal,2023/1/9,Argentina,Puerto Iguazu,Terminal,610,600,10000,ARS,-,,
+Bus,2023/1/10,Argentina,Puerto Iguazu,Terminal,2023/1/10,Brazil,Iguaz,Water fall,18,40,800,ARS,-,,
+Bus,2023/1/10,Brazil,Iguaz,Water fall,2023/1/10,Argentina,Puerto Iguazu,Terminal,18,40,800,ARS,-,,
+Bus,2023/1/10,Argentina,Puerto Iguazu,Terminal,2023/1/10,Argentina,Iguaz,Water fall,17.9,40,600,ARS,-,,
+Bus,2023/1/10,Argentina,Iguaz,Water fall,2023/1/10,Argentina,Puerto Iguazu,Terminal,17.9,40,600,ARS,-,,
+Bus,2023/1/11,Argentina,Puerto Iguazu,Terminal,2023/1/11,Paraguay,Ciudad del este,Border,29.2,120,800,ARS,-,,
+Motorcycle,2023/1/11,Paraguay,Ciudad del este,Border,2023/1/11,Paraguay,Ciudad del este,Terminal,3.7,10,40000,PYG,-,,
+Bus,2023/1/11,Paraguay,Ciudad del este,Terminal,2023/1/11,Paraguay,Yguaz??,Inn,63.2,60,40000,PYG,Minsyuku Kobayashi,,
+Car,2023/1/12,Paraguay,Yguaz??,Inn,2023/1/12,Paraguay,Yguaz??,Central,10,20,0,PYG,-,,
+Bus,2023/1/12,Paraguay,Yguaz??,Central,2023/1/12,Paraguay,Yguaz??,Inn,10,20,20000,PYG,-,,
+Car,2023/1/13,Paraguay,Yguaz??,Inn,2023/1/13,Paraguay,Yguaz??,Park,5,10,0,PYG,-,Ito Park,
+Car,2023/1/13,Paraguay,Yguaz??,Park,2023/1/13,Paraguay,Yguaz??,Inn,5,10,0,PYG,-,,
+Car,2023/1/14,Paraguay,Yguaz??,Inn,2023/1/14,Paraguay,Yguaz??,Central,5,10,0,PYG,-,,
+Bus,2023/1/14,Paraguay,Yguaz??,Central,2023/1/14,Paraguay,Ciudad del este,Central,40.7,60,20000,PYG,-,,
+Bus,2023/1/14,Paraguay,Ciudad del este,Central,2023/1/14,Paraguay,Itaipu,dam,17.4,30,5000,PYG,-,,
+Bus,2023/1/14,Paraguay,Itaipu,dam,2023/1/14,Paraguay,Ciudad del este,Central,17.4,30,5000,PYG,-,,
+Bus,2023/1/14,Paraguay,Ciudad del este,Central,2023/1/14,Paraguay,Yguaz??,Central,40.7,60,10000,PYG,-,,
+Bus,2023/1/15,Paraguay,Yguaz??,Central,2023/1/15,Paraguay,30km,Stop,10,15,15000,PYG,-,,
+Bus,2023/1/15,Paraguay,30km,Stop,2023/1/15,Paraguay,Encarnaci?n,Terminal,250,300,80000,PYG,-,,
+Bus,2023/1/16,Paraguay,Encarnaci?n,Terminal,2023/1/16,Paraguay,Trinidad,Heritage,30.4,90,20000,PYG,-,,
+Bus,2023/1/16,Paraguay,Trinidad,Heritage,2023/1/16,Paraguay,Encarnaci?n,Terminal,30.4,90,20000,PYG,-,,
+Bus,2023/1/17,Paraguay,Encarnaci?n,Terminal,2023/1/17,Paraguay,Ciudad de Asunci?n,Terminal,364,560,110000,PYG,-,,
+Bus,2023/1/17,Paraguay,Ciudad de Asunci?n,Terminal,2023/1/17,Paraguay,Ciudad de Asunci?n,Central,8.3,20,5000,PYG,-,,
+Bus,2023/1/18,Paraguay,Ciudad de Asunci?n,Central,2023/1/18,Paraguay,Ciudad de Asunci?n,Terminal,8.3,20,5000,PYG,-,,
+Bus,2023/1/18,Paraguay,Ciudad de Asunci?n,Terminal,2023/1/18,Paraguay,Ciudad de Asunci?n,Central,8.3,20,5000,PYG,-,,
+UBER,2023/1/19,Paraguay,Ciudad de Asunci?n,Central,2023/1/19,Paraguay,Ciudad de Asunci?n,Terminal,8.3,11,30600,PYG,-,,
+Bus,2023/1/19,Paraguay,Ciudad de Asunci?n,Terminal,2023/1/19,Argentina,Resistencia,Terminal,334.7,500,140000,PYG,-,,
+Taxi,2023/1/19,Argentina,Resistencia,Terminal,2023/1/19,Argentina,Resistencia,Central,5.4,10,1000,ARS,-,,
