@@ -1,1 +1,524 @@
-context	type	date	country	region	price	currency	memo
+"context	",type,date,country,region,price,currency,memo
+Overseas travel insurance for 2 years,insurance,2022/5/16,Japan,-,465250,JPY,-
+with limited pass for 30 days,ticket,2022/5/19,Australia,-,450,AUD,-
+St.Mery Chruch,inspection,2022/5/19,Australia,Sydney,0,AUD,-
+Blue Mountains,trekking,2022/5/20,Australia,Blue Mountains,0,AUD,-
+Echo Point,inspection,2022/5/20,Australia,Blue Mountains,0,AUD,-
+Australia national museum,inspection,2022/5/21,Australia,Sydney,0,AUD,-
+Melbourne zoo,inspection,2022/5/22,Australia,Melbourne,40,AUD,-
+The Royal Museum,inspection,2022/5/23,Australia,Melbourne,0,AUD,-
+Ramen lunch,Eating,2022/5/23,Australia,Melbourne,15.5,AUD,-
+St.Patric cathedral,inspection,2022/5/23,Australia,Melbourne,0,AUD,-
+island philip beach,walking,2022/5/23,Australia,island philip,0,AUD,-
+couldn't enter my room,accident,2022/5/25,Australia,island philip,0,AUD,-
+Had a fever,accident,2022/5/25,Australia,island philip,0,AUD,-
+Bus Lunch,Eating,2022/5/27,Australia,Melbourne,9.5,AUD,-
+moana beach,walking,2022/5/28,Australia,Adelade,0,AUD,-
+Garlic bread and beer,Eating,2022/5/28,Australia,Adelade,15,AUD,-
+belair,trekking,2022/5/29,Australia,Adelade,0,AUD,-
+Electric kickboard,Kick board,2022/5/30,Australia,Adelade,5,AUD,-
+Adelade art museum,inspection,2022/5/30,Australia,Adelade,5,AUD,-
+St.Petro Cathedral,inspection,2022/5/30,Australia,Adelade,0,AUD,-
+Adelade library,inspection,2022/5/30,Australia,Adelade,0,AUD,-
+light Viewing spot,walking,2022/5/30,Australia,Adelade,0,AUD,-
+Alice springs mountans,trekking,2022/6/1,Australia,Alice Springs,0,AUD,-
+"lost my mountain 
+hoodie",accident,2022/6/2,Australia,Alice Springs,0,AUD,-
+Alice springs dessert park,Cycring,2022/6/2,Australia,Alice Springs,45,AUD,-
+Burgar king,Eating,2022/6/3,Australia,Alice Springs,11.5,AUD,-
+telegraph station,inspection,2022/6/3,Australia,Alice Springs,16,AUD,-
+river side walking,walking,2022/6/3,Australia,Alice Springs,0,AUD,-
+Alice springs mountans,trekking,2022/6/3,Australia,Alice Springs,0,AUD,-
+anzac hill,trekking,2022/6/3,Australia,Alice Springs,0,AUD,-
+shower fee,other,2022/6/3,Australia,Alice Springs,5,AUD,-
+waintg a bus in gas station for 1 hour,accident,2022/6/3,Australia,Alice Springs,0,AUD,-
+"Practing a
+boomerang with old man ",walking,2022/6/5,Australia,Darwin,0,AUD,-
+1 day pass for darwin,ticket,2022/6/6,Australia,Darwin,7,AUD,-
+ice cream and cola,Eating,2022/6/6,Australia,Darwin,9,AUD,-
+around with water front,walking,2022/6/6,Australia,Darwin,0,AUD,-
+mindir beach,walking,2022/6/6,Australia,Darwin,0,AUD,-
+east point,walking,2022/6/6,Australia,Darwin,0,AUD,-
+darwin national park,walking,2022/6/6,Australia,Darwin,0,AUD,-
+The Museum and Art Gallery of the Northern Territory ,inspection,2022/6/7,Australia,Darwin,0,AUD,-
+coffee,Eating,2022/6/7,Australia,Darwin,4.5,AUD,-
+over baggage weight fee,accident,2022/6/7,Australia,Darwin,45,AUD,-
+eating in the airport,Eating,2022/6/7,Australia,Darwin,24,AUD,-
+Cairns beach,walking,2022/6/8,Australia,Cairns,0,AUD,-
+lunch,Eating,2022/6/9,Australia,palm cove,15,AUD,-
+palm cove beach,walking,2022/6/9,Australia,palm cove,0,AUD,-
+sky rail,cable car,2022/6/10,Australia,Cairns,89,AUD,-
+Curanda village,walking,2022/6/10,Australia,Cairns,0,AUD,-
+baron fall,inspection,2022/6/10,Australia,Cairns,0,AUD,-
+Great Barrier Reef,Tour,2022/6/11,Australia,island green,105,AUD,-
+fried squid,Eating,2022/6/12,Australia,between cairns and townsville,7.4,AUD,-
+townsville church,inspection,2022/6/13,Australia,townsville,0,AUD,-
+around townsville beach,walking,2022/6/13,Australia,townsville,0,AUD,-
+ruins of gun emplacement,trekking,2022/6/13,Australia,townsville,0,AUD,-
+Shute Harbour,walking,2022/6/14,Australia,Airlie Beach,0,AUD,-
+east conway national park,trekking,2022/6/14,Australia,Airlie Beach,0,AUD,-
+south conway national park,trekking,2022/6/15,Australia,Airlie Beach,0,AUD,-
+around airlie beach,walking,2022/6/16,Australia,Airlie Beach,0,AUD,-
+city cat,boat,2022/6/17,Australia,Brisbane,0,AUD,-
+margarita,Eating,2022/6/18,Australia,gold coast,8,AUD,-
+around gold coast,walking,2022/6/18,Australia,gold coast,0,AUD,-
+around gold coast,walking,2022/6/19,Australia,gold coast,0,AUD,-
+"addidas mountain 
+hoodie",shopping,2022/6/19,Australia,gold coast,30,AUD,-
+ice cream and coffee,Eating,2022/6/20,Australia,Brisbane,9.5,AUD,-
+woodly point jetty,walking,2022/6/20,Australia,Brisbane,0,AUD,-
+mount coot tha,walking,2022/6/20,Australia,Brisbane,0,AUD,-
+holiday coast,walking,2022/6/21,Australia,Brisbane,0,AUD,-
+Coffs Harbour beach,walking,2022/6/22,Australia,Coffs Harbour,0,AUD,-
+Port Stephens dessert,walking,2022/6/23,Australia,Newcastle,0,AUD,-
+Port Stephens beach,walking,2022/6/23,Australia,Newcastle,0,AUD,-
+Newcastle beach,walking,2022/6/24,Australia,Newcastle,0,AUD,-
+bondai beach,walking,2022/6/24,Australia,Sydney,0,AUD,-
+Sydney heads,walking,2022/6/24,Australia,Sydney,0,AUD,-
+PCR fee,medical,2022/6/25,Australia,Sydney,105,AUD,-
+washing fee,washing,2022/6/25,Australia,Sydney,6,AUD,-
+monly beach,walking,2022/6/25,Australia,Sydney,0,AUD,-
+harber bridge,inspection,2022/6/25,Australia,Sydney,0,AUD,-
+opera house,inspection,2022/6/25,Australia,Sydney,0,AUD,-
+watson bay,inspection,2022/6/25,Australia,Sydney,0,AUD,-
+Sydney bay,boat,2022/6/25,Australia,Sydney,0,AUD,-
+Eating seafood in fish marcket,Eating,2022/6/26,Australia,Sydney,20,AUD,-
+beer in bar,Eating,2022/6/25,Australia,Sydney,10,AUD,-
+yakiudon,Eating,2022/7/3,Japan,Kokura,600,JPY,-
+kokura castle,inspection,2022/7/3,Japan,Kokura,350,JPY,-
+kaimon channel museum,inspection,2022/7/3,Japan,Kokura,500,JPY,-
+around kokura,walking,2022/7/3,Japan,Kokura,0,JPY,-
+around moji port,walking,2022/7/3,Japan,moji,0,JPY,-
+hot spring outside ticket,ticket,2022/7/8,Japan,kinosaki,1300,JPY,-
+toyoka park,walking,2022/7/8,Japan,toyoka,0,JPY,-
+kinosaki hot spring,hot spring,2022/7/8,Japan,kinosaki,0,JPY,-
+hot spring outside ticket,ticket,2022/7/9,Japan,kinosaki,1300,JPY,-
+kinosaki literature museum,inspection,2022/7/9,Japan,kinosaki,500,JPY,-
+rakurakuura bay,walking,2022/7/9,Japan,kinosaki,0,JPY,-
+okami park,walking,2022/7/9,Japan,kinosaki,0,JPY,-
+kinosaki hot spring,hot spring,2022/7/9,Japan,kinosaki,0,JPY,-
+drinking with my friend,eating,2022/7/9,Japan,kinosaki,4000,JPY,-
+kinosaki hot spring,hot spring,2022/7/10,Japan,kinosaki,0,JPY,-
+immigration was so hard for 1 hours,accident,2022/7/13,USA,seattle,0,JPY,-
+Anchorage Mmuseum,inspection,2022/7/14,USA,Anchorage,20,USD,-
+Anchorage Mmuseum planetarium,inspection,2022/7/14,USA,Anchorage,6,USD,-
+campbell creak,walking,2022/7/15,USA,Anchorage,6,USD,-
+swward bus ticket,ticket,2022/7/16,USA,Anchorage,144,USD,overslept
+oversleeping,accident,2022/7/16,USA,Anchorage,0,USD,-
+alaska zoo,inspection,2022/7/16,USA,Anchorage,17,USD,-
+"noface mountain 
+hoodie",shopping,2022/7/16,USA,Anchorage,97.2,USD,-
+along to Anchorage sea,walking,2022/7/17,USA,Anchorage,0,USD,hard rain
+stan lee park,walking,2022/7/18,Canada,Vancouver,0,CAD,-
+around point roberts,walking,2022/7/19,Canada,Vancouver,0,CAD,-
+gally points park,walking,2022/7/19,Canada,Vancouver,0,CAD,-
+jerico beach,walking,2022/7/19,Canada,Vancouver,0,CAD,-
+my food was stolen,accident,2022/7/20,Canada,Nanaimo,0,CAD,-
+Neck point park,walking,2022/7/21,Canada,Nanaimo,0,CAD,-
+Queen Eqizabez park,walking,2022/7/21,Canada,Vancouver,0,CAD,-
+Vancouver museum,inspection,2022/7/22,Canada,Vancouver,15,CAD,-
+cheese burger,Eating,2022/7/22,Canada,canadian railway,8,CAD,train food
+chicken pie,Eating,2022/7/23,Canada,canadian railway,18,CAD,train food
+Edmonton bus ticket,ticket,2022/7/24,Canada,Edmonton,3.5,CAD,-
+diarrhea,accident,2022/7/25,Canada,Edmonton,0,CAD,-
+diarrhea,accident,2022/7/26,Canada,Saskatoon,0,CAD,-
+Buying annual bus ticket,accident,2022/7/26,Canada,Saskatoon,0,CAD,cancel in shop
+bus ticket,ticket,2022/7/27,Canada,Saskatoon,3.25,CAD,-
+around Saskatoon,walking,2022/7/27,Canada,Saskatoon,0,CAD,-
+around Regina,walking,2022/7/28,Canada,Regina,0,CAD,-
+"
+state hall",inspection,2022/7/28,Canada,Regina,0,CAD,-
+A&W,Eating,2022/7/29,Canada,Regina,10,CAD,-
+Regina museum,inspection,2022/7/29,Canada,Regina,0,CAD,-
+waiting a bus with homeless,accident,2022/7/29,Canada,Regina,0,CAD,-
+joined first misa ,accident,2022/7/30,Canada,Winnipeg,0,CAD,-
+St.poniface cathedral,inspection,2022/7/30,Canada,Winnipeg,0,CAD,-
+Manitoba museum,inspection,2022/7/31,Canada,Winnipeg,0,CAD,-
+around winnipeg,walking,2022/7/31,Canada,Winnipeg,0,CAD,-
+dinnner,Eating,2022/8/1,Canada,canadian railway,18,CAD,-
+breakfast,Eating,2022/8/2,Canada,canadian railway,10,CAD,-
+Niagara Falls,inspection,2022/8/3,Canada,Niagara Falls,0,CAD,-
+Pizza,Eating,2022/8/4,Canada,Toronto,6,CAD,-
+around lake ontario,walking,2022/8/4,Canada,Toronto,0,CAD,-
+macdnard,Eating,2022/8/5,Canada,Montrial,10,CAD,-
+stopped the train to otawa,accident,2022/8/5,Canada,Qubec,0,CAD,-
+coffee with milk and maffin,Eating,2022/8/7,Canada,Qubec,7.75,CAD,-
+Qubec chruch,inspection,2022/8/7,Canada,Qubec,0,CAD,-
+immigration to USA in Canada,accident,2022/8/8,Canada,Montrial,0,CAD,-
+Mexico city transport card,ticket,2022/8/9,Mexico,Mexico City,10,MXP,-
+I was helped a ticket by a mexican man,accident,2022/8/9,Mexico,Mexico City,0,MXP,-
+national museum,inspection,2022/8/10,Mexico,Mexico City,183,MXP,-
+lunch,Eating,2022/8/10,Mexico,Mexico City,150,MXP,national museum
+corn,Eating,2022/8/10,Mexico,Mexico City,2,MXP,stall
+Teotihuacan heritage,inspection,2022/8/11,Mexico,Teotihuacan,80,MXP,-
+Querotaro cathedral,inspection,2022/8/13,Mexico,Querotaro,0,MXP,-
+Querotaro water bridge,inspection,2022/8/13,Mexico,Querotaro,0,MXP,-
+mummy museum,inspection,2022/8/14,Mexico,Guanajuato,85,MXP,-
+Hibira memorial,inspection,2022/8/14,Mexico,Guanajuato,0,MXP,-
+around Guanajuato,walking,2022/8/14,Mexico,Guanajuato,0,MXP,-
+around Morelia,walking,2022/8/15,Mexico,Morelia,0,MXP,-
+Puebla Cathedral,inspection,2022/8/16,Mexico,Puebla,0,MXP,-
+Santo Domingo church,inspection,2022/8/17,Mexico,Cholula,0,MXP,-
+Cholula Heritage,inspection,2022/8/17,Mexico,Cholula,85,MXP,-
+washing fee,washing,2022/8/17,Mexico,Cholula,80,MXP,-
+broken sandal,accident,2022/8/19,Mexico,Veracruz,0,MXP,-
+new sandal fee,shopping,2022/8/19,Mexico,Veracruz,100,MXP,-
+Veracruz museum,inspection,2022/8/19,Mexico,Veracruz,90,MXP,-
+Veracruz jetty,walking,2022/8/19,Mexico,Veracruz,0,MXP,-
+staying love hotel,accident,2022/8/20,Mexico,Coatzacoalcos,0,MXP,-
+Palenque heritage and senote,tour,2022/8/22,Mexico,Palenque,650,MXP,-
+insecticide,shopping,2022/8/22,Mexico,Palenque,100,MXP,parenque heritage
+talking with girl about hello kitty,accident,2022/8/23,Mexico,bus,0,MXP,-
+Campeche cathedral,inspection,2022/8/24,Mexico,Campeche,0,MXP,-
+Campeche museum,inspection,2022/8/24,Mexico,Campeche,65,MXP,-
+Uxmal heritage,inspection,2022/8/25,Mexico,Uxmal,579,MXP,-
+Chichen Itza heritage,inspection,2022/8/26,Mexico,Chichen Itza,571,MXP,-
+juice,Eating,2022/8/26,Mexico,Chichen Itza,20,MXP,-
+sweets,Eating,2022/8/26,Mexico,Chichen Itza,20,MXP,-
+locker,other,2022/8/26,Mexico,Chichen Itza,100,MXP,-
+Having squall,accident,2022/8/26,Mexico,Chichen Itza,0,MXP,-
+lunch,Eating,2022/8/27,Mexico,Playa del Carmen,410,MXP,-
+changeng accomodation fee,accident,2022/8/27,Mexico,Cancun,168.635,MXP,-
+Playa del Carmen beach,walking,2022/8/27,Mexico,Playa del Carmen,0,MXP,-
+water bottle,shopping,2022/8/28,Mexico,Cozumel,150,MXP,-
+island cozmel,walking,2022/8/28,Mexico,Cozumel,0,MXP,-
+Cancun beach,walking,2022/8/29,Mexico,Cancun,0,MXP,-
+additional baggage for airplane,accident,2022/8/29,Mexico,Cancun,80,USD,-
+cuba tourist card,tax,2022/8/29,Mexico,Cancun,25,USD,-
+6000CUP,exchange,2022/8/29,Cuba,habana,1000,MXP,-
+breakfast,Eating,2022/8/30,Cuba,habana,7,USD,-
+wifi card,shopping,2022/8/30,Cuba,habana,125,CUP,-
+Mojito,eating,2022/8/30,Cuba,habana,1500,CUP,-
+lunch,eating,2022/8/30,Cuba,habana,1000,CUP,-
+alcohol fee,eating,2022/8/30,Cuba,habana,2500,CUP,-
+meeting with strange,accident,2022/8/30,Cuba,habana,0,CUP,-
+Vinales drive,tour,2022/8/30,Cuba,habana,120,USD,-
+Sim card,shopping,2022/8/30,Cuba,habana,3900,CUP,-
+Getting 10000 CUP,cashing,2022/8/30,Cuba,habana,83,USD,-
+Getting 20000 CUP,cashing,2022/8/30,Cuba,habana,166,USD,-
+breakfast,eating,2022/8/31,Cuba,service area,0,USD,-
+lunch,eating,2022/8/31,Cuba,Vinales,1900,CUP,paying his wife and friend 
+Vinales vally,inspection,2022/8/31,Cuba,Vinales,0,CUP,rour
+limestone cave,inspection,2022/8/31,Cuba,Vinales,0,CUP,rour
+wall image,inspection,2022/8/31,Cuba,Vinales,0,CUP,rour
+Sim card,shopping,2022/9/1,Cuba,habana,125,CUP,-
+breakfast,Eating,2022/9/2,Cuba,habana,7,USD,-
+breakfast,Eating,2022/9/3,Cuba,habana,7,USD,-
+throwing my flight ticket from camagway to cancun,accident,2022/9/3,Cuba,habana,5870,MXP,-
+contacting my parents,accident,2022/9/3,Cuba,habana,0,MXP,-
+"
+asked my parents to buy me a ticket.",accident,2022/9/3,Cuba,habana,120000,JPY,-
+coffee and milk,Eating,2022/9/6,Mexico,Chetumal,7,MXP,-
+Drinking with young people,accident,2022/9/7,Belize,San Ignacio,0,BRD,-
+Belize city beach,walking,2022/9/7,Belize,San Ignacio,0,BRD,-
+Cahal Pech heritage,inspection,2022/9/7,Belize,San Ignacio,10,BRD,-
+Xunantunich heritage,inspection,2022/9/8,Belize,Xunantunich,10,BRD,-
+Departure tax,tax,2022/9/9,Belize,border,20,USD,-
+Getting 30 GTQ,exchange,2022/9/9,Belize,border,9,BRD,-
+dinner's chicken,Eating,2022/9/9,Guatemala,Flores,25,GTQ,-
+tikal heritage,tour,2022/9/10,Guatemala,tikal,150,GTQ,-
+cola,Eating,2022/9/10,Guatemala,tikal,10,GTQ,-
+Coban cathedral,inspection,2022/9/12,Guatemala,Coban,0,GTQ,-
+Cheese tart,Eating,2022/9/12,Guatemala,Coban,20,GTQ,-
+abogado buger,Eating,2022/9/12,Guatemala,Coban,40,GTQ,-
+beer,Eating,2022/9/12,Guatemala,Coban,20,GTQ,-
+Pizza,Eating,2022/9/13,Guatemala,Antigua,5,USD,-
+Antigua cathedral,inspection,2022/9/13,Guatemala,Antigua,0,USD,-
+Antigua town,walking,2022/9/13,Guatemala,Antigua,0,USD,-
+macdnard,Eating,2022/9/13,El Salvador,Santa Ana,8,USD,-
+electric cable,shopping,2022/9/14,El Salvador,Santa Ana,5,USD,-
+throwing my bus ticket,accident,2022/9/14,El Salvador,Santa Ana,80,USD,lost a bus to leon
+independence day,accident,2022/9/15,El Salvador,Santa Ana,0,USD,-
+chnaging a accomodation,accident,2022/9/15,El Salvador,Santa Ana,0,USD,-
+big poteto fries,Eating,2022/9/16,El Salvador,Santa Ana,0,USD,-
+Santa ana volcano entrance fee,walking,2022/9/16,El Salvador,Santa Ana,10,USD,With guide
+I saw like a ded man,accident,2022/9/16,El Salvador,Santa Ana,0,USD,-
+The cake for presents,accident,2022/9/16,El Salvador,Santa Ana,0,USD,happy birthdayof the owner
+Meeting with yo san,accident,2022/9/17,El Salvador,El Tunco,0,USD,-
+Exchange from cuban pesos to Kyrgyzstan sums,accident,2022/9/17,El Salvador,El Tunco,0,USD,-
+dinner,accident,2022/9/17,El Salvador,El Tunco,5,USD,with yo san
+El Tunco beach,walking,2022/9/17,El Salvador,El Tunco,0,USD,-
+Honduras depature taz,tax,2022/9/18,Honduras,Guasaule,21,USD,-
+dinner,tax,2022/9/18,Honduras,anywhere,3.25,USD,-
+lunch,Eating,2022/9/19,Nicaragua,Leon,150,NIO,-
+the food in the marcket,Eating,2022/9/19,Nicaragua,Leon,50,NIO,-
+coffee,Eating,2022/9/19,Nicaragua,Leon,100,NIO,-
+Leon Cathedral,inspection,2022/9/19,Nicaragua,Leon,0,NIO,-
+go back to walk to my accomodation,accident,2022/9/20,Nicaragua,Managua,0,NIO,-
+lake Managua,walking,2022/9/20,Nicaragua,Managua,0,NIO,-
+Boat in lake nicaragua,tour,2022/9/21,Nicaragua,Guranada,12,USD,-
+"""I hate japanese"" was said by my accomodation",accident,2022/9/21,Nicaragua,Guranada,0,USD,-
+lunch,Eating,2022/9/22,Nicaragua,San Jorge,150,NIO,-
+Island entry tax,tax,2022/9/22,Nicaragua,San Jorge,1,USD,-
+coffee,Eating,2022/9/23,Nicaragua,Onopete,70,NIO,-
+first Overseas Touring,accident,2022/9/23,Nicaragua,Onopete,0,NIO,-
+I fell and injured myself on the moor.,accident,2022/9/23,Nicaragua,Onopete,0,NIO,-
+motorcycle fee,ticket,2022/9/23,Nicaragua,Onopete,20,USD,-
+fixing fee for a motorcycle,accident,2022/9/23,Nicaragua,Onopete,70,USD,-
+Departure tax,tax,2022/9/24,Nicaragua,border,3,USD,-
+tipical food,Eating,2022/9/25,Costa Rica,Puntarenas,3000,CRC,-
+coffee,Eating,2022/9/25,Costa Rica,Puntarenas,300,CRC,-
+Puntarenas beach,walking,2022/9/25,Costa Rica,Puntarenas,0,CRC,-
+Liberia cathedral,inspection,2022/9/25,Costa Rica,Liberia,0,CRC,-
+coffee,Eating,2022/9/26,Costa Rica,San Jose,500,CRC,-
+Lost my every money,accident,2022/9/26,Costa Rica,Alajuela,0,CRC,by taxi driver
+diner,Eating,2022/9/27,Costa Rica,San Jose,3000,CRC,-
+the national museum,inspection,2022/9/27,Costa Rica,San Jose,11,USD,-
+cutting my hair,shopping,2022/9/27,Costa Rica,San Jose,3,USD,-
+breakfast,Eating,2022/9/28,Costa Rica,San Jose,5000,CRC,marcket
+pupuka,Eating,2022/9/28,Costa Rica,bus,2000,CRC,-
+chiken,Eating,2022/9/28,Costa Rica,PalmarNorte,2000,CRC,-
+finca 6 museum,inspection,2022/9/28,Costa Rica,PalmarNorte,7,USD,-
+Departure tax,tax,2022/9/29,Costa Rica,border,8,USD,-
+cola,Eating,2022/9/29,panama,border,2,USD,-
+I couldn't pay depature tax on online,accident,2022/9/29,Costa Rica,border,0,USD,-
+lunch,Eating,2022/9/30,panama,David,5,USD,-
+coffee + sweets,Eating,2022/10/1,panama,David,4,USD,-
+Boquete,walikng,2022/10/1,panama,Boquete,0,USD,-
+Santa Catalina beach,walikng,2022/10/3,panama,Santa Catalina,0,USD,-
+Tuna and pineapple salda,Eating,2022/10/4,panama,Coiba,0,USD,-
+island coiba,tour,2022/10/4,panama,Coiba,60,USD,-
+Island entry tax,tax,2022/10/4,panama,Coiba,20,USD,-
+first snokling,accident,2022/10/4,panama,Coiba,0,USD,-
+grapefruit jiurce,Eating,2022/10/5,panama,Coiba,1.5,USD,-
+lunch,Eating,2022/10/5,panama,Panama City,9.5,USD,-
+Santa fe,walking,2022/10/6,panama,Santa fe,0,USD,-
+metro card,ticket,2022/10/6,panama,Panama City,3,USD,-
+Gatun Gate,walking,2022/10/7,panama,Colin,0,USD,-
+Questioning,accident,2022/10/7,panama,Colin,0,USD,Gatun Gate
+panama canal,inspection,2022/10/8,panama,Panama City,10,USD,-
+panama canal,walking,2022/10/8,panama,Panama City,0,USD,-
+amador beack,walking,2022/10/8,panama,Panama City,0,USD,-
+panama catheddral,inspection,2022/10/8,panama,Panama City,0,USD,-
+old town,walking,2022/10/8,panama,Panama City,0,USD,-
+lemonade,eating,2022/10/8,panama,Panama City,2,USD,-
+beer +seafood,eating,2022/10/8,panama,Panama City,12,USD,-
+sim card,shopping,2022/10/9,Colombia,Bogota,20000,COP,-
+pizza,eating,2022/10/10,Colombia,Bogota,7000,COP,dinner with yo san
+meeting with yo san ,accident,2022/10/10,Colombia,Bogota,0,COP,-
+recharge to sim caard,accident,2022/10/11,Colombia,Bogota,20000,COP,-
+rice ball,eating,2022/10/11,Colombia,Bogota,2500,COP,-
+coffee,eating,2022/10/11,Colombia,Bogota,4000,COP,-
+walking to waterfall for 12 km by round trip,accident,2022/10/12,Colombia,Santa Sofia,0,COP,-
+hayal waterfall,walikng,2022/10/12,Colombia,Santa Sofia,0,COP,-
+comnitario Museum,inspection,2022/10/12,Colombia,Santa Sofia,20000,COP,-
+cheese,Eating,2022/10/13,Colombia,bus,2000,COP,-
+cathedral of salt,inspection,2022/10/13,Colombia,Zipaquira,77500,COP,-
+cola,Eating,2022/10/14,Colombia,Melgar,3000,COP,-
+bogota metro card,ticket,2022/10/14,Colombia,Bogota,5000,COP,-
+went to the police,accident,2022/10/14,Colombia,Melgar,0,COP,there isn't today's accomodation
+cap of swimming,shopping,2022/10/14,Colombia,Melgar,2000,COP,-
+Swimming in the hotel,accident,2022/10/14,Colombia,Melgar,0,COP,-
+went to the city at night,accident,2022/10/14,Colombia,Melgar,0,COP,with colombian couple
+breakfast,Eating,2022/10/15,Colombia,Melgar,12000,COP,-
+cap of swimming,shopping,2022/10/15,Colombia,Melgar,2000,COP,paid again
+opening the festibal until 3:00,shopping,2022/10/15,Colombia,Ibage,0,COP,-
+lunch,Eating,2022/10/16,Colombia,Ibage,25000,COP,-
+ibage walking,walking,2022/10/16,Colombia,Ibage,0,COP,-
+Pereira metro card,shopping,2022/10/17,Colombia,Pereira,7000,COP,-
+lunch,shopping,2022/10/19,Colombia,kari,27000,COP,in zoo
+kari zoo,inspection,2022/10/19,Colombia,kari,27000,COP,-
+coffee,Eating,2022/10/21,Colombia,Manizales,1000,COP,-
+konoha don,Eating,2022/10/23,Colombia,Bogota,40000,COP,-
+I bought a dummy ticket from ecuador,accident,2022/10/24,Colombia,Bogota,60000,JPY,-
+seafood soup,Eating,2022/10/25,Ecuador,Quito,6,USD,-
+burger,Eating,2022/10/25,Ecuador,Quito,2,USD,-
+vito national cathedral,inspection,2022/10/25,Ecuador,Quito,2,USD,-
+tower fee,inspection,2022/10/25,Ecuador,Quito,3,USD,vito national cathedral
+sim card,shopping,2022/10/25,Ecuador,Quito,5,USD,not used
+went to a hospital,accident,2022/10/27,Ecuador,ibara,0,USD,paid 97 USD
+soup,Eating,2022/10/28,Ecuador,Otavalo,3,USD,-
+orange juiice,Eating,2022/10/29,Ecuador,Otavalo,1.5,USD,-
+soup,Eating,2022/10/29,Ecuador,Otavalo,3,USD,-
+sim card,shopping,2022/10/31,Ecuador,manta,5,USD,-
+manta beawch,walking,2022/10/31,Ecuador,manta,0,USD,-
+salinas beawch,walking,2022/11/2,Ecuador,salinas,0,USD,-
+rope way card,ticket,2022/11/2,Ecuador,Santiago de Guayaquil,3.4,USD,-
+transport card,ticket,2022/11/2,Ecuador,Santiago de Guayaquil,2,USD,-
+lunch,Eating,2022/11/3,Ecuador,Santiago de Guayaquil,0,USD,-
+cancel a ticket,accident,2022/11/3,Ecuador,Santiago de Guayaquil,0,USD,airport
+Whole roasted pig,Eating,2022/11/4,Ecuador,bus,1.5,USD,-
+lunch,Eating,2022/11/5,Ecuador,arausi,5,USD,-
+dinner,Eating,2022/11/5,Ecuador,arausi,10,USD,-
+alausi walking,walking,2022/11/5,Ecuador,arausi,0,USD,-
+coffee,Eating,2022/11/7,Ecuador,Cuenca,2,USD,-
+humberger,Eating,2022/11/7,Ecuador,Cuenca,5,USD,-
+meeting with yuranora san,accident,2022/11/7,Ecuador,Cuenca,0,USD,-
+clture museum,inspection,2022/11/7,Ecuador,Cuenca,4,USD,-
+modern art museum,inspection,2022/11/7,Ecuador,Cuenca,0,USD,-
+city museum,inspection,2022/11/7,Ecuador,Cuenca,0,USD,-
+cathedral museum,inspection,2022/11/7,Ecuador,Cuenca,1,USD,-
+enpalada,eating,2022/11/7,Peru,Tumbes,1,USD,-
+happen earthquake,accident,2022/11/8,Peru,Tumbes,0,USD,-
+talking with owner couple,accident,2022/11/8,Peru,Tumbes,0,USD,-
+there are a lot of Seal carcass,accident,2022/11/9,Peru,Tumbes,0,USD,-
+Tumbes beach,walking,2022/11/9,Peru,Tumbes,0,USD,-
+mancora beach,walking,2022/11/9,Peru,Mancora,0,USD,-
+The smell of garlic makes me want to vomit,accident,2022/11/11,Peru,Chiclayo,0,USD,-
+mango juice,Eating,2022/11/13,Peru,Cajamarca,5,PEN,-
+soft cream,Eating,2022/11/13,Peru,Cajamarca,5,PEN,-
+last room of inka,inspection,2022/11/13,Peru,Cajamarca,5,PEN,-
+Cajamarca high ground,inspection,2022/11/13,Peru,Cajamarca,1,PEN,-
+Cajamarca hot spring,inspection,2022/11/13,Peru,Cajamarca,9,PEN,-
+lunch,Eating,2022/11/15,Peru,Trujillo,30,PEN,-
+pre inka tour,tour,2022/11/15,Peru,Trujillo,60,PEN,-
+mocho museum,inspection,2022/11/15,Peru,Trujillo,0,PEN,-
+wanchako beach,walking,2022/11/15,Peru,Trujillo,0,PEN,-
+sun and moon heritage,inspection,2022/11/15,Peru,Trujillo,0,PEN,-
+heritage entry fee,ticket,2022/11/15,Peru,Trujillo,25,PEN,-
+chimu museum,inspection,2022/11/15,Peru,Trujillo,0,PEN,-
+chanchan heritage,inspection,2022/11/15,Peru,Trujillo,0,PEN,-
+traditional dance,Viewing,2022/11/15,Peru,Trujillo,0,PEN,-
+jetty,ticket,2022/11/15,Peru,Trujillo,1,PEN,-
+lunch,Eating,2022/11/17,Peru,Huaraz,16,PEN,-
+Huaraz,inspection,2022/11/17,Peru,Huaraz,7,PEN,-
+Wilcawine heritage,inspection,2022/11/17,Peru,Huaraz,7,PEN,-
+lunch,Eating,2022/11/17,Peru,Huaraz,16,PEN,-
+Lima transport card,ticket,2022/11/18,Peru,Lima,5,PEN,-
+recharge to a transporrt card,ticket,2022/11/18,Peru,Lima,3,PEN,-
+popcorn,Eating,2022/11/19,Peru,Lima,5,PEN,-
+lunch,Eating,2022/11/19,Peru,Lima,10,PEN,-
+national Archaeology museum,inspection,2022/11/19,Peru,Lima,5,PEN,-
+rarco museum,inspection,2022/11/19,Peru,Lima,35,PEN,-
+renewal national Archaeology museum,accident,2022/11/19,Peru,Lima,0,PEN,-
+I missed to go to north bus terminal,accident,2022/11/19,Peru,Lima,0,PEN,-
+chicha zerry,Eating,2022/11/20,Peru,ika,2,PEN,-
+meeting with yuranora san,accident,2022/11/21,Peru,Nazca,0,PEN,-
+nazca tour,tour,2022/11/22,Peru,Nazca,70,USD,-
+first sesna,accident,2022/11/22,Peru,Nazca,0,USD,-
+antonini museum,accident,2022/11/22,Peru,Nazca,20,PEN,-
+the bus to Arequipa,ticket,2022/11/22,Peru,Nazca,110,PEN,throw the bus
+the bus couldn' come because strike,accident,2022/11/22,Peru,Nazca,0,PEN,-
+the bus couldn' come because strike,accident,2022/11/23,Peru,Nazca,0,PEN,-
+played karaoke with franch man speaks japanese well,accident,2022/11/25,Peru,Arequipa,0,PEN,-
+saint andes museum,inspection,2022/11/25,Peru,Arequipa,30,PEN,-
+city museum,inspection,2022/11/25,Peru,Arequipa,0,PEN,-
+water bridge,inspection,2022/11/25,Peru,Arequipa,0,PEN,-
+coffee,eating,2022/11/25,Peru,Arequipa,6,PEN,-
+carmen overviewing,inspection,2022/11/25,Peru,Arequipa,5,PEN,-
+toilet,toilet,2022/11/26,Peru,Arequipa,1.5,PEN,-
+exchange from peru sols to chille pesos,exchange,2022/11/26,Peru,border,150,PEN,36000CLP
+lunch,eating,2022/11/26,Chile,Arica,11000,CLP,shopping morl
+alicca museum,inspection,2022/11/27,Chile,Arica,2000,CLP,shopping morl
+alica fortless,walking,2022/11/27,Chile,Arica,0,CLP,-
+ear plug,shopping,2022/11/28,Chile,Arica,4000,CLP,-
+sim card,shopping,2022/11/28,Chile,Arica,4990,CLP,-
+Iquique museum,inspection,2022/11/29,Chile,Iquique,0,CLP,-
+ceviche,Eating,2022/12/2,Chile,La Serena,11000,CLP,-
+bread,Eating,2022/12/2,Chile,La Serena,1000,CLP,-
+Pisco Sour,Eating,2022/12/2,Chile,La Serena,3500,CLP,-
+Archaeological Museum,inspection,2022/12/2,Chile,La Serena,0,CLP,-
+hot dog,Eating,2022/12/4,Chile,Santiago de Chile,2500,CLP,-
+closed sience museum,accident,2022/12/4,Chile,Santiago de Chile,0,CLP,-
+santarsia overviewing,walking,2022/12/4,Chile,Santiago de Chile,0,CLP,-
+chicken,Eating,2022/12/5,Chile,Valparaiso,2000,CLP,-
+hot dog,Eating,2022/12/5,Chile,Valparaiso,2000,CLP,-
+cola,Eating,2022/12/7,Chile,Antofagasta,2000,CLP,-
+pukla heritage,inspection,2022/12/9,Chile,San Pedro de Atacama,5650,CLP,-
+bolivia border tour,tour,2022/12/9,Chile,San Pedro de Atacama,34155,CLP,-
+Pisco Sour,Eating,2022/12/9,Chile,San Pedro de Atacama,0,CLP,-
+border hot spring,hot spring,2022/12/9,Chile,San Pedro de Atacama,0,CLP,-
+dinner,Eating,2022/12/10,Chile,Calama,14850,CLP,Restrant
+bolivian food,Eating,2022/12/12,Bolivia,Uyuni,15,BOB,-
+meeting with yuranora san,accident,2022/12/12,Bolivia,Uyuni,0,BOB,-
+meeting with sasa san,accident,2022/12/12,Bolivia,Uyuni,0,BOB,-
+train Graveyard,inspection,2022/12/12,Bolivia,Uyuni,0,BOB,-
+washing fee,washing,2022/12/12,Bolivia,Uyuni,15,BOB,-
+uyuni night tour,tour,2022/12/12,Bolivia,Uyuni,150,BOB,-
+uyuni salt lake,inspection,2022/12/12,Bolivia,Uyuni,0,BOB,-
+picking up garbage,accident,2022/12/12,Bolivia,Uyuni,0,BOB,be watched strange man
+umita 5s,Eating,2022/12/14,Bolivia,Potosi,10,BOB,-
+cutting my hair,shopping,2022/12/14,Bolivia,Sucre,30,BOB,-
+not taking the bus,accident,2022/12/14,Bolivia,Potosi,20,BOB,-
+washing fee,washing,2022/12/14,Bolivia,Sucre,30,BOB,-
+colonial museum,inspection,2022/12/15,Bolivia,Sucre,45,BOB,-
+dinasour foot stamp,inspection,2022/12/15,Bolivia,Sucre,0,BOB,-
+shower fee,shopping,2022/12/16,Bolivia,Sucre,10,BOB,-
+breakfast,Eating,2022/12/17,Bolivia,La Paz,35,BOB,terminal
+la Paz metro card,ticket,2022/12/17,Bolivia,La Paz,30,BOB,-
+national museum,ticket,2022/12/17,Bolivia,La Paz,20,BOB,-
+returned my lundury,accident,2022/12/17,Bolivia,La Paz,0,BOB,-
+chicha zerry,Eating,2022/12/19,Bolivia,Copacabana,1,BOB,-
+copacabana beach,walking,2022/12/19,Bolivia,Copacabana,0,BOB,-
+boat fee,ticket,2022/12/20,Bolivia,Copacabana,5,BOB,-
+Pisco Sour,Eating,2022/12/21,Peru,Puno,16,PEN,-
+Puno beach,walking,2022/12/21,Peru,Puno,0,PEN,-
+Puno museum,walking,2022/12/21,Peru,Puno,15,PEN,-
+blockade bus terminal,accident,2022/12/21,Peru,Puno,0,PEN,-
+exchanged to 224BOB,exchange,2022/12/22,Bolivia,Copacabana,120,PEN,-
+pudding,eating,2022/12/23,Bolivia,Copacabana,3,BOB,-
+terminal fee,ticket,2022/12/23,Bolivia,La Paz,2.5,BOB,-
+Statue of Christ,inspection,2022/12/24,Bolivia,Ciudad de Cochabamba,0,BOB,-
+metting with japanese 2 women,accident,2022/12/24,Bolivia,Ciudad de Cochabamba,0,BOB,-
+joined at xmas party,accident,2022/12/24,Bolivia,Ciudad de Cochabamba,0,BOB,-
+lunch,Eating,2022/12/25,Bolivia,Ciudad de Cochabamba,15,BOB,-
+joined xmas misa,accident,2022/12/25,Bolivia,Ciudad de Cochabamba,0,BOB,-
+cochabamba catedral,inspection,2022/12/25,Bolivia,Ciudad de Cochabamba,0,BOB,-
+lake cochabamba,walking,2022/12/26,Bolivia,Ciudad de Cochabamba,0,BOB,-
+ice cream,Eating,2022/12/26,Bolivia,Ciudad de Cochabamba,5,BOB,-
+lunch,Eating,2022/12/26,Bolivia,Ciudad de Cochabamba,15,BOB,-
+lunch,Eating,2022/12/26,Bolivia,Santa Cruz de la Sierra,15,BOB,-
+I collapsed from poor health,accident,2022/12/26,Bolivia,Santa Cruz de la Sierra,0,BOB,-
+terminal fee,ticket,2022/12/29,Bolivia,Santa Cruz de la Sierra,3,BOB,-
+stopped for 2 hours because demonstration,accident,2022/12/29,Bolivia,bus,0,BOB,-
+ramen + juice,Eating,2023/1/1,Bolivia,Tarija,27,BOB,-
+Tarija cathedral,inspection,2023/1/1,Bolivia,Tarija,0,BOB,-
+joined new year misa,accident,2023/1/1,Bolivia,Tarija,0,BOB,-
+exchanged to 63000ARP,exchange,2023/1/1,Bolivia,Tarija,200,USD,-
+lunch,Eating,2023/1/2,Bolivia,Tarija,20,BOB,marcket
+shower fee,shopping,2023/1/2,Bolivia,Tarija,10,BOB,-
+meeting up with my family,shopping,2023/1/2,Bolivia,Tarija,0,BOB,online
+tarija overviewing,walking,2023/1/2,Bolivia,Tarija,0,BOB,-
+rainbow hill,inspection,2023/1/3,Argentina,purmamarca,100,ARS,-
+sweets,Eating,2023/1/3,Argentina,purmamarca,300,ARS,-
+baggage,tips,2023/1/4,Argentina,jujuy,100,ARS,-
+bread + coffee,Eating,2023/1/4,Argentina,Salta,500,ARS,-
+salta overviewing,inspection,2023/1/5,Argentina,Salta,0,ARS,-
+salta historial museum,inspection,2023/1/6,Argentina,Salta,0,ARS,-
+cabild museum,inspection,2023/1/6,Argentina,Salta,0,ARS,-
+anhel's museum,inspection,2023/1/6,Argentina,Salta,700,ARS,-
+keeping bagage fee,shopping,2023/1/6,Argentina,Salta,500,ARS,-
+bread,Eating,2023/1/8,Argentina,Corrientes,300,ARS,-
+along parana river,walking,2023/1/8,Argentina,Corrientes,0,ARS,-
+lunch,Eating,2023/1/10,Argentina,Puerto Iguazu,1500,ARS,-
+Iguaz waterfall,inspection,2023/1/10,Argentina,Puerto Iguazu,5500,ARS,1USD = 255ARS
+Iguaz waterfall,inspection,2023/1/10,Brazil,fozz do Iguazu,86,BRL,-
+meeting up with madoka san,accident,2023/1/11,Paraguay,Yguazu,0,PYG,-
+meeting up with the man returned south poke,accident,2023/1/11,Paraguay,Yguazu,0,PYG,-
+ygazu japanese regidence,walking,2023/1/12,Paraguay,Yguazu,0,PYG,-
+lunch,eating,2023/1/12,Paraguay,Yguazu,15000,PYG,-
+around minsyuku kobayashi,eating,2023/1/12,Paraguay,Yguazu,0,PYG,-
+japanese dish,eating,2023/1/13,Paraguay,Yguazu,30000,PYG,-
+ito park,walking,2023/1/13,Paraguay,Yguazu,0,PYG,-
+itaipu dam,inspection,2023/1/14,Paraguay,itaipu,0,PYG,-
+Grilled Skewers,eating,2023/1/15,Paraguay,itaipu,100,PYG,-
+Encarnacion beach,eating,2023/1/15,Paraguay,Encarnacion,0,PYG,-
+Trinidad heritage,inspection,2023/1/16,Paraguay,Trinidad,25000,PYG,-
+lunch,eating,2023/1/16,Paraguay,Trinidad,20000,PYG,-
+ice cream,eating,2023/1/16,Paraguay,Trinidad,500,PYG,-
+lunch,eating,2023/1/18,Paraguay,Ciudad de Asuncion,100000,PYG,-
+barubero museum,inspection,2023/1/18,Paraguay,Ciudad de Asuncion,0,PYG,-
+exchanged to ?? ARS,exchange,2023/1/18,Paraguay,Ciudad de Asuncion,400000,PYG,-
+exchanged to ?? ARS,exchange,2023/1/20,Argentina,Santa Fe de la Vera Cruz,100,USD,1USD = 360ARS
+cashing from atm,cashing,2023/1/20,Argentina,Santa Fe de la Vera Cruz,10000,ARS,-
+joined birthday party,cashing,2023/1/21,Argentina,Santa Fe de la Vera Cruz,0,ARS,-
+around santa fe,walking,2023/1/21,Argentina,Santa Fe de la Vera Cruz,0,ARS,-
+coffee+bread,Eating,2023/1/23,Argentina,VillaCaropas,450,ARS,-
+ice cream,Eating,2023/1/23,Argentina,VillaCaropas,200,ARS,-
+exchanged to ?? ARS,exchange,2023/1/23,Argentina,cordoba,100,USD,1USD=370ARS
+VillaCaropas,walking ,2023/1/23,Argentina,VillaCaropas,0,ARS,-
+regional museum,inspection,2023/1/24,Argentina,cordoba,100,ARS,-
+cabird museum,inspection,2023/1/24,Argentina,cordoba,0,ARS,-
+currency museim,inspection,2023/1/24,Argentina,cordoba,0,ARS,-
+Observation deck,inspection,2023/1/24,Argentina,cordoba,0,ARS,-
+lunch,Eating,2023/1/25,Argentina,Bahia Blanca,1600,ARS,-
+Sube card,ticket,2023/1/25,Argentina,Bahia Blanca,490,ARS,-
+pasta without source,accident,2023/1/25,Argentina,Bahia Blanca,0,ARS,-
+Mar del Plata beach,walking,2023/1/26,Argentina,Mar del Plata,0,ARS,-
+I couldn't stay the hotel I reserved,accident,2023/1/28,Argentina,La Plata,0,ARS,-
+cashing from atm,cashing,2023/1/29,Argentina,La Plata,15000,ARS,-
+manjyu,Eating,2023/1/30,Argentina,Ciudad Aut?noma de Buenos Aires,500,ARS,-
+japanese garden,inspection,2023/1/30,Argentina,Ciudad Aut?noma de Buenos Aires,690,ARS,-
+clock tower,inspection,2023/1/30,Argentina,Ciudad Aut?noma de Buenos Aires,500,ARS,-
+chyoripan,Eating,2023/1/30,Argentina,Ciudad Aut?noma de Buenos Aires,700,ARS,-
+I was impressed by kids when I folded a carne by paper ,accident,2023/1/30,Argentina,Ciudad Aut?noma de Buenos Aires,0,ARS,-
