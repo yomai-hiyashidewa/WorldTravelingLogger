@@ -264,7 +264,7 @@ coffee,Eating,2022/9/26,Costa Rica,San Jose,500,CRC,-
 Lost my every money,accident,2022/9/26,Costa Rica,Alajuela,0,CRC,by taxi driver
 diner,Eating,2022/9/27,Costa Rica,San Jose,3000,CRC,-
 the national museum,inspection,2022/9/27,Costa Rica,San Jose,11,USD,-
-cutting my hair,shopping,2022/9/27,Costa Rica,San Jose,3,USD,-
+haircut,haircut,2022/9/27,Costa Rica,San Jose,3,USD,-
 breakfast,Eating,2022/9/28,Costa Rica,San Jose,5000,CRC,marcket
 pupuka,Eating,2022/9/28,Costa Rica,bus,2000,CRC,-
 chiken,Eating,2022/9/28,Costa Rica,PalmarNorte,2000,CRC,-
@@ -428,7 +428,7 @@ uyuni night tour,tour,2022/12/12,Bolivia,Uyuni,150,BOB,-
 uyuni salt lake,inspection,2022/12/12,Bolivia,Uyuni,0,BOB,-
 picking up garbage,accident,2022/12/12,Bolivia,Uyuni,0,BOB,be watched strange man
 umita 5s,Eating,2022/12/14,Bolivia,Potosi,10,BOB,-
-cutting my hair,shopping,2022/12/14,Bolivia,Sucre,30,BOB,-
+haircut,haircut,2022/12/14,Bolivia,Sucre,30,BOB,-
 not taking the bus,accident,2022/12/14,Bolivia,Potosi,20,BOB,-
 washing fee,washing,2022/12/14,Bolivia,Sucre,30,BOB,-
 colonial museum,inspection,2022/12/15,Bolivia,Sucre,45,BOB,-
@@ -956,3 +956,450 @@ Pantheon,inspection,2023/9/15,Italy,Roma,0,EURO,-
 Mouth of Truth,inspection,2023/9/15,Italy,Roma,1,EURO,-
 Colosseum,inspection,2023/9/15,Italy,Roma,0,EURO,-
 I was scammed in navona park,inspection,2023/9/15,Italy,Roma,20,EURO,-
+Margarita,Eating,2023/9/16,Italy,naples,2.5,EURO,-
+Naples cathedral,inspection,2023/9/16,Italy,naples,0,EURO,-
+coast 24 hour ticket,ticket,2023/9/16,Italy,Sorrento,10,EURO,-
+Amalfitana cathedral,inspection,2023/9/16,Italy,Amalfitana,0,EURO,-
+Lemon Gelato,Eating,2023/9/16,Italy,Amalfitana,8,EURO,-
+espresso and bread,Eating,2023/9/16,Italy,Salerno,5,EURO,-
+walked to my inn by 4km,accident,2023/9/16,Italy,vallo scaro,0,EURO,-
+Gave pasta from italian ofbollona,accident,2023/9/16,Italy,vallo scaro,0,EURO,-
+espresso,Eating,2023/9/17,Italy,vallo scaro,1,EURO,-
+returned to train station by 4km,accident,2023/9/17,Italy,vallo scaro,0,EURO,-
+pizza,Eating,2023/9/17,Italy,Pompei,0,EURO,shopping morl
+toilet,toilet,2023/9/17,Italy,Pompei,1,EURO,-
+pompei heritage,inspection,2023/9/17,Italy,Pompei,21,EURO,-
+pompei heritage audio guide,shopping,2023/9/17,Italy,Pompei,8,EURO,-
+coffee + water,Eating,2023/9/18,Italy,Pompei,5,EURO,-
+cola,Eating,2023/9/18,Italy,Salerno,2.5,EURO,-
+espresso,Eating,2023/9/18,Italy,Salerno,1.6,EURO,-
+dinner,Eating,2023/9/18,-,ferry,20,EURO,-
+dinner additional fee,accident,2023/9/18,-,ferry,34,EURO,-
+45 min ticket,ticket,2023/9/18,Italy,Salerno,2.5,EURO,-
+salerno cathedral,inspection,2023/9/18,Italy,Salerno,0,EURO,-
+breakfast,Eating,2023/9/18,-,ferry,10,EURO,-
+haircut,haircut,2023/9/19,tunisia,tunis,20,TND,-
+tea,Eating,2023/9/20,tunisia,tunis,5,TND,-
+baldo museum,inspection,2023/9/20,tunisia,tunis,13,TND,-
+kuskus,Eating,2023/9/20,tunisia,Sousse,5.6,EURO,-
+snacks,Eating,2023/9/21,tunisia,Sfax,5,TND,-
+Colosseum,inspection,2023/9/21,tunisia,El Djem,12,TND,-
+Sousse beach,walking,2023/9/21,tunisia,Sousse,0,TND,-
+crepe,Eating,2023/9/22,tunisia,Kairouan,6,TND,-
+coffee,Eating,2023/9/22,tunisia,tunis,3,TND,-
+kairoan common ticket,ticket,2023/9/22,tunisia,Kairouan,12,TND,-
+kairoan pond,inspection,2023/9/22,tunisia,Kairouan,0,TND,-
+kairoan grand mosk,inspection,2023/9/22,tunisia,Kairouan,0,TND,-
+kairoan Mausoleum,inspection,2023/9/22,tunisia,Kairouan,0,TND,-
+japanese garden,inspection,2023/9/22,tunisia,tunis,0,TND,-
+tipical menu,Eating,2023/9/23,tunisia,Sidi Bou Said,3,TND,-
+cola,Eating,2023/9/23,tunisia,Carthago,5,TND,heritage
+esspresso,Eating,2023/9/23,tunisia,La Goletta,3.5,TND,-
+seafood dish,Eating,2023/9/23,tunisia,La Goletta,15,TND,-
+carthago common ticket,ticket,2023/9/23,tunisia,Carthago,12,TND,-
+road map fee,accident,2023/9/23,tunisia,La Goletta,3,TND,Beggar
+carthago heritage,inspection,2023/9/23,tunisia,Carthago,0,TND,-
+roman theather,inspection,2023/9/23,tunisia,Carthago,0,TND,-
+roman residence,inspection,2023/9/23,tunisia,Carthago,0,TND,-
+roman termae,inspection,2023/9/23,tunisia,Carthago,0,TND,-
+carthago port ruin,inspection,2023/9/23,tunisia,Carthago,0,TND,-
+finikian temple,inspection,2023/9/23,tunisia,Carthago,0,TND,-
+Gelato,Eating,2023/9/24,Italy,Palermo,3,EURO,-
+Palermo cathedral,inspection,2023/9/24,Italy,Palermo,0,EURO,-
+Palermo beach,inspection,2023/9/24,Italy,Palermo,0,EURO,-
+Arancini,Eating,2023/9/25,Italy,Siracusa,3,EURO,-
+Siracusa cathedral,inspection,2023/9/25,Italy,Siracusa,3,EURO,-
+greece heritage,inspection,2023/9/25,Italy,Siracusa,0,EURO,-
+Arancini,Eating,2023/9/26,Italy,Taormina,2.5,EURO,-
+Sicily tipical food,Eating,2023/9/26,Italy,Catania,3,EURO,-
+Messina cathedral,inspection,2023/9/26,Italy,Messina,0,EURO,-
+Messina chruch,inspection,2023/9/26,Italy,Messina,0,EURO,-
+Messina overviewing,inspection,2023/9/26,Italy,Messina,0,EURO,-
+Taormina cathedral,inspection,2023/9/26,Italy,Taormina,0,EURO,-
+Taormina cathedral,ticket,2023/9/27,Malta,Valletta,6,EURO,-
+saint elmo fortless,inspection,2023/9/27,Malta,Valletta,0,EURO,-
+bread,Eating,2023/9/27,Malta,Valletta,2,EURO,-
+canned coffee,Eating,2023/9/27,Malta,Valletta,2,EURO,-
+americano,Eating,2023/9/27,Malta,Valletta,1.8,EURO,-
+malta archelogical museum,Eating,2023/9/27,Malta,Valletta,5,EURO,-
+malta 2 hour ticket,ticket,2023/9/27,Malta,Valletta,2,EURO,-
+jeans,shopping,2023/9/27,Malta,Valletta,30,EURO,-
+lunch,Eating,2023/9/28,Italy,Catania,4,EURO,-
+Arancini,Eating,2023/9/28,Italy,Catania,3.5,EURO,-
+Arancini,Eating,2023/9/28,Italy,Taranto,4,EURO,-
+bread,Eating,2023/9/29,Italy,Brindisi,6,EURO,-
+water,Eating,2023/9/29,Italy,Brindisi,0.3,EURO,-
+espresso,Eating,2023/9/29,Italy,Brindisi,1.2,EURO,-
+cola,Eating,2023/9/29,Italy,Brindisi,3,EURO,port
+Lecce ticket,ticket,2023/9/29,Italy,Lecce,1.1,EURO,-
+Taranto port,ticket,2023/9/29,Italy,Taranto,0,EURO,-
+Lecce cathedral,inspection,2023/9/29,Italy,Lecce,0,EURO,-
+roman Amphitheater,inspection,2023/9/29,Italy,Lecce,0,EURO,-
+Brindisi port,inspection,2023/9/29,Italy,Brindisi,0,EURO,-
+americano,Eating,2023/9/30,greece,Igoumenitsa,3,EURO,-
+bread,Eating,2023/9/30,greece,Ioannina,2.9,EURO,-
+americano,Eating,2023/9/30,greece,Ioannina,2,EURO,-
+bread,Eating,2023/9/30,greece,Ioannina,3,EURO,-
+ioania archilogical museum,inspection,2023/9/30,greece,Ioannina,6,EURO,-
+ioania fortless,inspection,2023/9/30,greece,Ioannina,0,EURO,-
+lake ioania,walking,2023/9/30,greece,Ioannina,0,EURO,-
+Arc de Triomphe,inspection,2023/10/1,greece,Thessalonikii,0,EURO,-
+Thessalonikii cathedral,inspection,2023/10/1,greece,Thessalonikii,0,EURO,-
+Thessalonikii port,walking,2023/10/1,greece,Thessalonikii,0,EURO,-
+white tower,inspection,2023/10/1,greece,Thessalonikii,0,EURO,-
+Thessalonikii archelogical museum,inspection,2023/10/1,greece,Thessalonikii,8,EURO,-
+beer,Eating,2023/10/2,north macedonia,Skopje,150,MKD,-
+tipical food,Eating,2023/10/2,north macedonia,Skopje,620,MKD,-
+bread,Eating,2023/10/2,north macedonia,Skopje,80,MKD,-
+coffee,Eating,2023/10/2,north macedonia,Skopje,90,MKD,-
+skopke fortless,inspection,2023/10/2,north macedonia,Skopje,0,MKD,-
+lunch,Eating,2023/10/3,north macedonia,Skopje,350,JPY,-
+coffee,Eating,2023/10/3,north macedonia,Skopje,70,MKD,-
+Macedonia museum,inspection,2023/10/3,north macedonia,Skopje,100,MKD,-
+archelogical museum,inspection,2023/10/3,north macedonia,Skopje,200,MKD,-
+Skopje chruch,inspection,2023/10/3,north macedonia,Skopje,0,MKD,-
+dinner,Eating,2023/10/4,north macedonia,Skopje,200,MKD,-
+bread,Eating,2023/10/5,north macedonia,Ohrid,100,MKD,-
+esspresso,Eating,2023/10/5,north macedonia,Ohrid,100,JPY,-
+St sophea cathedral,inspection,2023/10/5,north macedonia,Ohrid,0,JPY,-
+lake ohrid,walking,2023/10/5,north macedonia,Ohrid,0,JPY,-
+coffee,walking,2023/10/6,north macedonia,Ohrid,100,ALL,-
+Berat castle,walking,2023/10/6,Albania,Berat,0,ALL,-
+water 2 L,Eating,2023/10/7,Albania,Berat,55,ALL,-
+espresso,Eating,2023/10/7,Albania,Berat,100,ALL,-
+Gjirokastor castle,inspection,2023/10/7,Albania,Gjirokastor,400,ALL,-
+washing fee,washing,2023/10/7,Albania,Saranda,580,ALL,-
+Saranda beach,walking,2023/10/7,Albania,Saranda,0,ALL,-
+esspresso,Eating,2023/10/7,Albania,Saranda,100,ALL,-
+Vlora,Eating,2023/10/8,Albania,Saranda,150,ALL,-
+Vlora beach,walking,2023/10/8,Albania,Vlora,0,ALL,-
+esspresso,Eating,2023/10/9,Albania,Tirana,80,ALL,-
+Lake Tirana,walking,2023/10/9,Albania,Tirana,0,ALL,-
+esspresso,Eating,2023/10/10,kosovo,Prizren,1,EURO,-
+Prizren castle,inspection,2023/10/10,kosovo,Prizren,0,EURO,-
+Prizren castle,inspection,2023/10/10,kosovo,Prizren,0,EURO,-
+Prizren history museum,inspection,2023/10/10,kosovo,Prizren,0,EURO,-
+Albania union museum,inspection,2023/10/10,kosovo,Prizren,1,EURO,-
+mother telesa cathedral,inspection,2023/10/11,kosovo,Prishtina,0,EURO,-
+archelogical museum,inspection,2023/10/11,kosovo,Prishtina,0,EURO,-
+peja chruch,inspection,2023/10/11,kosovo,Peja ,0,EURO,-
+americano,Eating,2023/10/12,kosovo,Prishtina,1.5,EURO,-
+snacks,Eating,2023/10/12,kosovo,Prishtina,1.5,EURO,-
+bread,Eating,2023/10/13,Montenegro,Ulcinj,1.8,EURO,-
+mini bread,Eating,2023/10/13,Montenegro,Ulcinj,0.9,EURO,-
+Ulcinj beach,walking,2023/10/13,Montenegro,Ulcinj,0,EURO,-
+Ulcinj fortless,walking,2023/10/13,Montenegro,Ulcinj,0,EURO,-
+Podgorica cathedral,walking,2023/10/13,Montenegro,Podgorica,0,EURO,-
+Podgorica castle,walking,2023/10/13,Montenegro,Podgorica,0,EURO,-
+bread + coffee,Eating,2023/10/14,Montenegro,jabljak,1.3,EURO,-
+water,Eating,2023/10/14,Montenegro,jabljak,0.6,EURO,-
+black lake national park,inspection,2023/10/14,Montenegro,jabljak,5,EURO,-
+Kotor fortless,inspection,2023/10/15,Montenegro,Kotor,8,EURO,-
+espresso,Eating,2023/10/16,Montenegro,Cetinje,2,EURO,-
+bread,Eating,2023/10/16,Montenegro,Podgorica,4,EURO,-
+national museum,inspection,2023/10/17,Bosna i Hercegovina,Sarajevo,8,BAM,-
+Banja Luka chruch,inspection,2023/10/19,Bosna i Hercegovina,Banja Luka,0,BAM,-
+Banja Luka fortless,inspection,2023/10/19,Bosna i Hercegovina,Banja Luka,0,BAM,-
+Sored throat,accident,2023/10/20,Bosna i Hercegovina,Banja Luka,0,BAM,-
+Jajce fortless,inspection,2023/10/20,Bosna i Hercegovina,Jajce,2,BAM,-
+Jajce waterfall,inspection,2023/10/21,Bosna i Hercegovina,Jajce,5,BAM,-
+coffee,Eating,2023/10/22,Bosna i Hercegovina,Tuzla,2,BAM,-
+esspresso,Eating,2023/10/22,Bosna i Hercegovina,Tuzla,2,BAM,-
+lunch,Eating,2023/10/22,Bosna i Hercegovina,Tuzla,12.5,BAM,-
+beograd 24 hour ticket,ticket,2023/10/23,Srbija,Beograd,2,EURO,-
+Feeling fatigued,accident,2023/10/23,Srbija,Beograd,0,EURO,-
+S sawa cathedral,inspection,2023/10/23,Srbija,Beograd,0,EURO,-
+S marco chruch,inspection,2023/10/23,Srbija,Beograd,0,EURO,-
+Beograd fortless,inspection,2023/10/23,Srbija,Beograd,0,EURO,-
+coffee and milk,Eating,2023/10/24,Srbija,novi sad,200,RSD,-
+soup,Eating,2023/10/24,Srbija,novi sad,300,RSD,-
+novi sad cathedral,inspection,2023/10/24,Srbija,novi sad,0,RSD,-
+donau river,walking,2023/10/24,Srbija,novi sad,0,RSD,-
+rested by the river,accident,2023/10/24,Srbija,novi sad,0,RSD,-
+esspresso,accident,2023/10/25,Srbija,Beograd,155,RSD,-
+T-shirt,shopping,2023/10/25,Srbija,Nis,962,JPY,-
+Mediana heritage,inspection,2023/10/26,Srbija,Nis,500,RSD,-
+Gave 5 north irland currency to a student in UK,accident,2023/10/26,Srbija,Nis,0,RSD,-
+sofia  24 hour ticket,ticket,2023/10/27,Bulgaria,Sofia,4.8,BGN,-
+humberger,Eating,2023/10/27,Bulgaria,Sofia,8.5,BGN,-
+S Sofia chruch,inspection,2023/10/27,Bulgaria,Sofia,6,BGN,-
+Bulgaria national museum,inspection,2023/10/27,Bulgaria,Sofia,12,BGN,-
+washing fee,washing,2023/10/27,Bulgaria,Sofia,15,BGN,-
+pizza,Eating,2023/10/28,Bulgaria,Sofia,3.5,BGN,-
+coffee,Eating,2023/10/28,Bulgaria,Sofia,2,BGN,-
+rested on the bed,accident,2023/10/28,Bulgaria,Sofia,0,BGN,-
+bread,Eating,2023/10/29,Bulgaria,Plovdiv,2.5,BGN,-
+bread,Eating,2023/10/31,Bulgaria,Ruse,1.5,BGN,-
+exchanged to 245 rei,exchange,2023/10/31,Bulgaria,Ruse,50,EURO,-
+historical museum,inspection,2023/11/1,Romania,Bucharest,20,RON,-
+Arc de Triomphe,inspection,2023/11/1,Romania,Bucharest,0,RON,-
+musiccal hall,inspection,2023/11/1,Romania,Bucharest,0,RON,-
+black chruch,inspection,2023/11/1,Romania,Brasov,0,RON,-
+pizza,Eating,2023/11/1,Romania,Brasov,12,RON,-
+Pizza fried,Eating,2023/11/2,Romania,Sighisoara,10,RON,-
+coffee,Eating,2023/11/2,Romania,Sighisoara,4,RON,-
+Sighisoara fortless,inspection,2023/11/2,Romania,Sighisoara,0,RON,-
+coffee,Eating,2023/11/3,Romania,Sibiu,5.5,RON,-
+Cluj-Napoca cathedral,inspection,2023/11/3,Romania,Cluj-Napoca,0,RON,-
+Cluj-Napoca fortless,inspection,2023/11/3,Romania,Cluj-Napoca,0,RON,-
+bread + cola,Eating,2023/11/5,Romania,lasi,9,RON,-
+toilet,toilet,2023/11/5,Romania,lasi,1,RON,-
+Chisiinau cathedral,inspection,2023/11/6,Moldova,Chisiinau,0,RON,-
+lake Chisiinau,inspection,2023/11/6,Moldova,Chisiinau,0,RON,-
+Arc de Triomphe,inspection,2023/11/6,Moldova,Chisiinau,0,RON,-
+bread,Eating,2023/11/7,Moldova,Cahul,6,MDL,-
+espresso,Eating,2023/11/7,Moldova,Cahul,14,MDL,-
+bread,Eating,2023/11/7,Moldova,Cahul,12,MDL,-
+toilet,toilet,2023/11/7,Moldova,Cahul,3,MDL,-
+esspresso,Eating,2023/11/8,Romania,Constanta,5,RON,-
+Constanta port,walking,2023/11/8,Romania,Constanta,0,RON,-
+Constanta 24 hour ticket,ticket,2023/11/9,Romania,Constanta,10,RON,-
+Ethnographic Museum,inspection,2023/11/9,Romania,Constanta,10,RON,-
+Constanta beach,inspection,2023/11/9,Romania,Constanta,0,RON,-
+coffee and milk,Eating,2023/11/9,Romania,Constanta,6,RON,-
+throw my flifht ticket to bayroot,accident,2023/11/10,Bulgaria,Barna,9470,JPY,-
+Shumen mosk,inspection,2023/11/10,Bulgaria,Shumen,0,BGN,-
+Barna 24 hour ticket,ticket,2023/11/10,Bulgaria,Barna,4,BGN,-
+Roman termae,inspection,2023/11/10,Bulgaria,Barna,5,BGN,-
+exchanged to 815lira,exchange,2023/11/11,Bulgaria,Burgas,55,BGN,-
+istanbul transit card,ticket,2023/11/11,Turkiye,Istanbul,20,TRY,-
+washing fee,washing,2023/11/12,Turkiye,Istanbul,150,TRY,-
+blue mosk,inspection,2023/11/12,Turkiye,Istanbul,0,TRY,-
+slaiman mosk,inspection,2023/11/12,Turkiye,Istanbul,0,TRY,-
+bread,Eating,2023/11/12,Turkiye,Istanbul,10,TRY,-
+kebab,Eating,2023/11/12,Turkiye,Istanbul,185,TRY,-
+cola,Eating,2023/11/12,Turkiye,Istanbul,40,TRY,-
+snacks,Eating,2023/11/12,Turkiye,Istanbul,15,TRY,-
+chay,Eating,2023/11/12,Turkiye,Istanbul,10,TRY,-
+electric cable,shopping,2023/11/13,Turkiye,canakkale,100,TRY,-
+chay,Eating,2023/11/13,Turkiye,canakkale,7,TRY,-
+dinner,Eating,2023/11/13,Turkiye,canakkale,120,TRY,-
+snacks,Eating,2023/11/13,Turkiye,canakkale,30,TRY,-
+canakkale port,walking,2023/11/13,Turkiye,canakkale,0,TRY,-
+Izmir transit card,ticket,2023/11/14,Turkiye,izmir,70,TRY,-
+bag,shopping,2023/11/15,Turkiye,izmir,300,TRY,-
+S yohane cathedral,inspection,2023/11/15,Turkiye,Seluuk,130,TRY,-
+chay,Eating,2023/11/15,Turkiye,Seluuk,5,TRY,-
+dinner,Eating,2023/11/15,Turkiye,Denizli,120,TRY,-
+kabab,Eating,2023/11/16,Turkiye,Denizli,90,TRY,-
+dinner,Eating,2023/11/16,Turkiye,Antalya,120,TRY,-
+pamukkale heritage,inspection,2023/11/16,Turkiye,Pamukkale,700,TRY,-
+pamukkale Lime shelf,inspection,2023/11/16,Turkiye,Pamukkale,0,TRY,pamukkale heritage
+rain wear,shopping,2023/11/16,Turkiye,Pamukkale,150,TRY,-
+broken the bus,accident,2023/11/16,Turkiye,bus,0,TRY,-
+Turkiye ice cream,accident,2023/11/17,Turkiye,Antalya,150,TRY,-
+bread,Eating,2023/11/17,Turkiye,Antalya,12,TRY,-
+dinner,Eating,2023/11/17,Turkiye,Antalya,90,TRY,rokanta
+Stayed a room for sarvants,accident,2023/11/17,Turkiye,Antalya,0,TRY,-
+throwed my ticket to northan qupuros,accident,2023/11/17,Turkiye,Antalya,1030,JPY,-
+Antalya archerogical museum,inspection,2023/11/17,Turkiye,Antalya,340,TRY,-
+Antalya beach,walking,2023/11/17,Turkiye,Antalya,0,TRY,-
+kebab,Eating,2023/11/18,Turkiye,Isparta,50,TRY,-
+chay,Eating,2023/11/18,Turkiye,Isparta,7,TRY,-
+dinner,Eating,2023/11/18,Turkiye,Konya,85,TRY,-
+lunch,Eating,2023/11/19,Turkiye,Konya,35,TRY,-
+mevrana mosk,inspection,2023/11/19,Turkiye,Konya,0,TRY,-
+mevrana mosk audio guide,shopping,2023/11/19,Turkiye,Konya,70,TRY,-
+Theological Seminary,inspection,2023/11/19,Turkiye,Konya,60,TRY,-
+chay,Eating,2023/11/19,Turkiye,Konya,15,TRY,-
+Ankara transit card,ticket,2023/11/19,Turkiye,Ankara,40,TRY,-
+chay x2,Eating,2023/11/20,Turkiye,Ankara,15,TRY,-
+Anatoria civilization museum,inspection,2023/11/20,Turkiye,Ankara,280,TRY,-
+Anatoria castle,inspection,2023/11/20,Turkiye,Ankara,0,TRY,-
+remaining 50 lira in anlkara card,accident,2023/11/21,Turkiye,Ankara,50,TRY,-
+Abu Dhabi transit card,accident,2023/11/21,UAE,Abu Dhabi,20,AED,-
+dinner,Eating,2023/11/21,UAE,Abu Dhabi,5,AED,-
+breakfast,Eating,2023/11/22,UAE,Abu Dhabi,6,AED,-
+lunch,Eating,2023/11/22,UAE,Abu Dhabi,2,AED,-
+ice cream,Eating,2023/11/22,UAE,Abu Dhabi,2,AED,-
+egg curry,Eating,2023/11/22,UAE,Abu Dhabi,6,AED,-
+macdonald,Eating,2023/11/22,UAE,Abu Dhabi,25,AED,airport
+Abu Dhabi beach,Eating,2023/11/22,UAE,Abu Dhabi,6,AED,-
+cyprus transit card,Eating,2023/11/22,cyprus,Larnaca,5,EURO,-
+cashing from atm,cashing,2023/11/22,cyprus,Larnaca,50,EURO,-
+dinner,cashing,2023/11/22,cyprus,Larnaca,5,EURO,-
+Larnaca beach,walking,2023/11/23,cyprus,Larnaca,0,EURO,-
+S razaro chruch,inspection,2023/11/23,cyprus,Larnaca,0,EURO,-
+Churros,Eating,2023/11/23,cyprus,Nicosia,20,TRY,-
+cyprus coffee,Eating,2023/11/23,cyprus,Nicosia,1.2,EURO,-
+bread,Eating,2023/11/23,cyprus,Nicosia,3,EURO,-
+cyprus museum,inspection,2023/11/23,cyprus,Nicosia,0,EURO,-
+paphos heritage,inspection,2023/11/24,cyprus,paphos,4.5,EURO,-
+paphos port,walking,2023/11/24,cyprus,paphos,0,EURO,-
+Limassol port,walking,2023/11/24,cyprus,Limassol,0,EURO,-
+remaining 5 Euro ,accident,2023/11/24,cyprus,Larnaca,0,EURO,-
+arrival visa,tax,2023/11/25,Egypt,alexandria,25,USD,-
+haricut,haircut,2023/11/25,Egypt,alexandria,130,EGP,-
+dinner,Eating,2023/11/25,Egypt,alexandria,500,JPY,-
+tea,Eating,2023/11/26,Egypt,alexandria,15,EGP,-
+lunch,Eating,2023/11/26,Egypt,alexandria,70,EGP,-
+bread,Eating,2023/11/26,Egypt,alexandria,10,EGP,-
+alexandria museum,inspection,2023/11/26,Egypt,alexandria,120,EGP,-
+alexandria beach,inspection,2023/11/26,Egypt,alexandria,0,EGP,-
+lunch,Eating,2023/11/27,Egypt,alexandria,25,EGP,-
+coffee,Eating,2023/11/27,Egypt,alexandria,80,EGP,Terminal
+KFC,Eating,2023/11/27,Egypt,Port Said,84,EGP,-
+suez canal,inspection,2023/11/27,Egypt,Port Said,0,EGP,-
+returned 500 pond from inn's ower,accident,2023/11/27,Egypt,Port Said,0,EGP,-
+lunch,Eating,2023/11/28,Egypt,Suez,87,EGP,-
+Suez bay,walking,2023/11/28,Egypt,Suez,0,EGP,-
+suez canal,walking,2023/11/28,Egypt,Suez,0,EGP,-
+kojari,Eating,2023/11/28,Egypt,Cairo,15,EGP,-
+cola,Eating,2023/11/29,Egypt,Cairo,12,EGP,-
+old cairo chruch,inspection,2023/11/29,Egypt,Cairo,0,EGP,-
+old cairo mosk,inspection,2023/11/29,Egypt,Cairo,0,EGP,-
+Egypt national museum,inspection,2023/11/29,Egypt,Cairo,300,EGP,-
+dinner,Eating,2023/11/29,Egypt,Cairo,60,EGP,-
+it was dengerous to ride a motorcycle,accident,2023/11/29,Egypt,giza,0,EGP,-
+I ate dinner with egptian and sudanian of my accomodation,accident,2023/11/29,Egypt,giza,0,EGP,-
+piramid,inspection,2023/11/30,Egypt,giza,360,EGP,-
+I was taken a picture by a camel rider,inspection,2023/11/30,Egypt,giza,150,EGP,-
+lunch,Eating,2023/11/30,Egypt,giza,10,EGP,-
+coffee,Eating,2023/11/30,Egypt,giza,12,EGP,-
+bread,Eating,2023/11/30,Egypt,Cairo,25,EGP,-
+Shrimp sandwich,Eating,2023/11/30,Egypt,Cairo,25,EGP,-
+juice,Eating,2023/11/30,Egypt,Cairo,10,EGP,-
+coffee,Eating,2023/11/30,Egypt,Cairo,15,EGP,-
+kojari,Eating,2023/11/30,Egypt,Cairo,25,EGP,-
+bread x 3,Eating,2023/12/1,Egypt,Cairo,25,EGP,-
+bread,Eating,2023/12/1,Egypt,Sohag,5,EGP,-
+coffee,Eating,2023/12/1,Egypt,Sohag,15,EGP,-
+dinner,Eating,2023/12/1,Egypt,Sohag,80,EGP,-
+sohag museum,inspection,2023/12/2,Egypt,Sohag,150,EGP,-
+coffee,Eating,2023/12/2,Egypt,Sohag,10,EGP,-
+lunch,Eating,2023/12/2,Egypt,Sohag,30,EGP,-
+dinner,Eating,2023/12/2,Egypt,Sohag,15,EGP,-
+coffee,Eating,2023/12/2,Egypt,Sohag,28,EGP,airport
+I was doubted a fake passport,accident,2023/12/3,uzbekistan,Toshkent,0,UZS,-
+bread x 3,Eating,2023/12/3,uzbekistan,Toshkent,6000,UZS,-
+cola,Eating,2023/12/3,uzbekistan,Toshkent,6000,UZS,-
+coffee,Eating,2023/12/3,uzbekistan,Toshkent,17000,UZS,-
+exchanged to 17000S,exchange,2023/12/3,uzbekistan,Toshkent,14,USD,-
+Sim card,shopping,2023/12/3,uzbekistan,Toshkent,8,USD,-
+bread X2,Eating,2023/12/4,uzbekistan,Toshkent,10000,UZS,-
+non,Eating,2023/12/4,uzbekistan,Samarkand,15000,UZS,-
+yogurt,Eating,2023/12/4,uzbekistan,Samarkand,15000,UZS,-
+"I had to change the bus 3 times,  because I missed  my accomodation",accident,2023/12/4,uzbekistan,Samarkand,0,UZS,-
+lunch,Eating,2023/12/5,uzbekistan,Samarkand,10000,UZS,-
+tea+sweets,Eating,2023/12/5,uzbekistan,Samarkand,27000,UZS,-
+uzubeku ovesabvation,inspection,2023/12/5,uzbekistan,Samarkand,30000,UZS,-
+S daniel Mausoleum,inspection,2023/12/5,uzbekistan,Samarkand,0,UZS,-
+banana,Eating,2023/12/6,uzbekistan,Toshkent,4000,UZS,-
+croquette,Eating,2023/12/6,uzbekistan,Toshkent,3000,UZS,-
+lunch,Eating,2023/12/6,uzbekistan,Toshkent,30000,UZS,-
+uzbekistan national museum,inspection,2023/12/6,uzbekistan,Toshkent,50000,UZS,-
+I argued at ticket counter and immigration,accident,2023/12/6,uzbekistan,Toshkent,0,UZS,-
+lottelia,Eating,2023/12/7,South Korea,Incheon,6400,KRW,-
+exchanged 50000 won,exchange,2023/12/7,South Korea,Incheon,40,USD,-
+korean transit card,ticket,2023/12/7,South Korea,Seoul,5000,KRW,-
+mini taiyaki,Eating,2023/12/7,South Korea,Seoul,3000,KRW,-
+coffee,Eating,2023/12/7,South Korea,Seoul,3500,KRW,-
+dinner,Eating,2023/12/7,South Korea,Seoul,7000,KRW,-
+onigiri,Eating,2023/12/8,South Korea,Seoul,1200,KRW,-
+dinner,Eating,2023/12/8,South Korea,Daejeon,4000,KRW,-
+oden,Eating,2023/12/8,South Korea,Daejeon,2000,KRW,-
+korean nationa museum,inspection,2023/12/8,South Korea,Seoul,0,KRW,-
+bento,Eating,2023/12/9,South Korea,Buyo,5500,KRW,convinience store
+buyo castle,inspection,2023/12/9,South Korea,Buyo,2000,KRW,-
+kudara heritage,inspection,2023/12/9,South Korea,Buyo,0,KRW,-
+tomyankun,Eating,2023/12/9,South Korea,Gwangju,5000,KRW,-
+insect tukudani,Eating,2023/12/9,South Korea,Gwangju,1000,KRW,-
+lunch,Eating,2023/12/10,South Korea,Suncheon,9000,KRW,-
+sunchoen wet land,inspection,2023/12/10,South Korea,Suncheon,7000,KRW,-
+gorosima,inspection,2023/12/11,South Korea,Busan,0,KRW,-
+coffee,Eating,2023/12/11,South Korea,Busan,6000,KRW,-
+lunch,Eating,2023/12/11,South Korea,Busan,7500,KRW,-
+karaage,Eating,2023/12/11,South Korea,Busan,5900,KRW,-
+bread x 3,Eating,2023/12/11,South Korea,Busan,8600,KRW,-
+sandwich,Eating,2023/12/12,Japan,Hakata,850,JPY,komeda coffee
+ramen,Eating,2023/12/12,Japan,Hakata,720,JPY,-
+exchanged to 26000 Yen,exchange,2023/12/12,Japan,Hakata,200,USD,-
+100kin,Shopping,2023/12/12,Japan,Hakata,1000,JPY,-
+hakozaki shirne,inspection,2023/12/13,Japan,Hakata,0,JPY,-
+hakata bay,walking,2023/12/13,Japan,Hakata,0,JPY,-
+shofukuji temple,inspection,2023/12/13,Japan,Hakata,0,JPY,-
+beppu bay,walking,2023/12/13,Japan,beppu,0,JPY,-
+beppu onsen,inspection,2023/12/14,Japan,beppu,100,JPY,-
+dagoziru,Eating,2023/12/14,Japan,beppu,900,JPY,-
+yukemuri overviewing,Eating,2023/12/14,Japan,beppu,0,JPY,-
+dogo onsen,inspection,2023/12/15,Japan,dogo,460,JPY,-
+matsuyama castle,inspection,2023/12/15,Japan,matsuyama,0,JPY,-
+bread X 3,Eating,2023/12/15,Japan,yashirohma,450,JPY,-
+donatts and onigiri,Eating,2023/12/15,Japan,yashirohma,200,JPY,-
+coffee,Eating,2023/12/16,Japan,onomichi,170,JPY,-
+taiyaki,Eating,2023/12/16,Japan,onomichi,220,JPY,-
+ramen,Eating,2023/12/16,Japan,onomichi,980,JPY,-
+sento,inspection,2023/12/16,Japan,onomichi,480,JPY,-
+meet with my friend,accident,2023/12/16,Japan,onomichi,0,JPY,-
+seikokuji temple,inspection,2023/12/16,Japan,onomichi,0,JPY,-
+sennkokuji temple,inspection,2023/12/16,Japan,onomichi,0,JPY,-
+fukuyama castle,inspection,2023/12/17,Japan,Fukuyama,0,JPY,-
+taiyaki,Eating,2023/12/17,Japan,bus,200,JPY,-
+coffee,Eating,2023/12/17,Japan,osaka,270,JPY,-
+coffee,Eating,2023/12/17,Japan,osaka,100,JPY,macdonald
+waffle,Eating,2023/12/17,Japan,osaka,190,JPY,-
+seisyun 18 ticket,ticket,2023/12/17,Japan,osaka,12050,JPY,-
+overglass,shopping,2023/12/17,Japan,osaka,3250,JPY,-
+mee up with yo san and talked for 3hours,accident,2023/12/17,Japan,osaka,0,JPY,-
+biwako,walking,2023/12/19,Japan,shiga,0,JPY,-
+mee up with my friend,accident,2023/12/19,Japan,shiga,0,JPY,-
+1st day of seisyun 18 ticket,accident,2023/12/19,Japan,shiga,0,JPY,-
+gyudon,Eating,2023/12/19,Japan,nagoya,0,JPY,-
+2nd day of seisyunn 18 ticket,accident,2023/12/21,Japan,nagoya,0,JPY,-
+suwa taisya harusya shirne,inspection,2023/12/21,Japan,suwa,0,JPY,-
+suwa taisya akisya shirne,inspection,2023/12/21,Japan,suwa,0,JPY,-
+3th day of seisyunn 18 ticket,accident,2023/12/22,Japan,suwa,0,JPY,-
+takeda jinjya shrine,inspection,2023/12/22,Japan,Kofu,0,JPY,-
+kofu castle,inspection,2023/12/22,Japan,Kofu,0,JPY,-
+chichibu jinnjya shirne,inspection,2023/12/22,Japan,chichibu,0,JPY,-
+coroqetto soba,Eating,2023/12/22,Japan,yachiouji,530,JPY,-
+Cream puffs,Eating,2023/12/22,Japan,yachiouji,160,JPY,-
+meet up with sasa san,accident,2023/12/22,Japan,shibuya,0,JPY,-
+Tokyo national museum,inspection,2023/12/23,Japan,ueno,1000,JPY,-
+sumidagawa river,walking,2023/12/23,Japan,akabane,0,JPY,-
+yakisoba,Eating,2023/12/23,Japan,kamakura,400,JPY,-
+washing fee,washing,2023/12/23,Japan,kamakura,550,JPY,-
+4th day of seisyunn 18 ticket,accident,2023/12/24,Japan,kamakura,0,JPY,-
+tsuruokahachimangu shirne,inspection,2023/12/24,Japan,kamakura,0,JPY,-
+Jaxa tsukuba center,inspection,2023/12/24,Japan,tsukuba,0,JPY,-
+lake kasumigaura,walking,2023/12/24,Japan,tsuchiura,0,JPY,-
+meet up with my friend,walking,2023/12/24,Japan,tsuchiura,0,JPY,-
+coffee zerry,Eating,2023/12/24,Japan,odawara,128,JPY,-
+sukiya,Eating,2023/12/24,Japan,odawara,630,JPY,-
+onsen manjyu,Eating,2023/12/25,Japan,hakone,80,JPY,-
+odawara beach,walking,2023/12/25,Japan,odawara,-,JPY,-
+odawara castle,inspection,2023/12/25,Japan,odawara,-,JPY,-
+hakone mountain,walking,2023/12/25,Japan,hakone,-,JPY,-
+5th day of seisyunn 18 ticket,accident,2023/12/26,Japan,hakone,-,JPY,-
+anmaki,Eating,2023/12/26,Japan,toyohashi,210,JPY,-
+I started resort part time job,accident,2024/1/12,Japan,atami,-,JPY,-
+I finished resort part time job,accident,2024/2/28,Japan,atami,-,JPY,-
+miyashima entry fee,tax,2024/4/1,Japan,hiroshima,100,JPY,-
+istsukushima jinnjya shirne,inspection,2024/4/1,Japan,hiroshima,300,JPY,-
+gozasouro x 2,Eating,2024/4/1,Japan,himeji,220,JPY,-
+ekisoba,Eating,2024/4/1,Japan,okayama,640,JPY,-
+bento,Eating,2024/4/1,Japan,okayama,500,JPY,-
+momiji manjyu,Eating,2024/4/1,Japan,hiroshima,120,JPY,-
+lunch,Eating,2024/4/2,Japan,shimonoseki,500,JPY,-
+fugusen,Eating,2024/4/2,Japan,shimonoseki,500,JPY,-
+bread,Eating,2024/4/2,Japan,shimonoseki,260,JPY,-
+istanbul transit card,ticket,2024/4/3,Turkiye,Istanbul,50,TRY,-
+vegitable,Eating,2024/4/3,Turkiye,Istanbul,8,TRY,-
+Honey 40 g,Eating,2024/4/3,Turkiye,Istanbul,26,TRY,-
+yorgurt salad,Eating,2024/4/3,Turkiye,Istanbul,50,TRY,-
+simit X 3,Eating,2024/4/3,Turkiye,Istanbul,30,TRY,-
+bread,Eating,2024/4/3,Turkiye,Istanbul,36,TRY,-
+simit ,Eating,2024/4/4,Turkiye,Istanbul,10,TRY,-
+kebab,Eating,2024/4/4,Turkiye,Bursa,60,TRY,-
+bread,Eating,2024/4/4,Turkiye,Bursa,20,TRY,-
+supermarcket,Eating,2024/4/4,Turkiye,Eskisehir,20,TRY,-
+lokanta,Eating,2024/4/4,Turkiye,Eskisehir,175,TRY,-
+sweets,Eating,2024/4/4,Turkiye,Eskisehir,5,TRY,-
+chay,Eating,2024/4/5,Turkiye,Eskisehir,20,TRY,-
+lokanta,Eating,2024/4/5,Turkiye,Ankara,100,TRY,-
+simit,Eating,2024/4/5,Turkiye,Ankara,10,TRY,-
+simit donauts,Eating,2024/4/5,Turkiye,Ankara,10,TRY,-
+meat,Eating,2024/4/5,Turkiye,Ankara,168.27,TRY,-
+simit,Eating,2024/4/6,Turkiye,Ankara,10,TRY,-
+lokanta,Eating,2024/4/6,Turkiye,corum,68,TRY,-
+sweets,Eating,2024/4/6,Turkiye,corum,25,TRY,-
