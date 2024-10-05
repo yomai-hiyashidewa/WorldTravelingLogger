@@ -6,18 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorldTravelLogger.Models
 {
-    internal class MainModel
+    internal class accomodation
     {
-        public MainModel()
-        {
-
-        }
-        
-        public void Init()
-        {
-
-        }
     }
-
-    
 }

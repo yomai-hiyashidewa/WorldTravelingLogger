@@ -1,723 +1,716 @@
 ﻿date,country,region,accomodation type,price,currency,memo
-2022/5/16,Japan,Sanda,parents' home,0,JPY,-
+2022/5/16,JPN,Sanda,parents' home,0,JPY,-
 2022/5/17,-,-,airplane,-,-,-
-2022/5/18,Australia,Sydney,dormitory,3165,JPY,-
-2022/5/19,Australia,katoomba,dormitory,26.5,AUD,-
-2022/5/20,Australia,katoomba,dormitory,26.5,AUD,-
-2022/5/21,Australia,-,bus,-,-,-
-2022/5/22,Australia,Melbourne,single room,50,AUD,-
-2022/5/23,Australia,Melbourne,dormitory,30,AUD,-
-2022/5/24,Australia,philip island,dormitory,33.75,AUD,-
-2022/5/25,Australia,philip island,dormitory,33.75,AUD,-
-2022/5/26,Australia,Melbourne,dormitory,25.11,AUD,-
-2022/5/27,Australia,Adelaide,dormitory,28.24,AUD,-
-2022/5/28,Australia,Adelaide,single room,89,AUD,-
-2022/5/29,Australia,Adelaide,dormitory,26.99,AUD,-
-2022/5/30,Australia,-,bus,-,-,-
-2022/5/31,Australia,Alice springs,dormitory,31,AUD,-
-2022/6/1,Australia,Alice springs,dormitory,31,AUD,-
-2022/6/2,Australia,Alice springs,dormitory,31,AUD,-
-2022/6/3,Australia,-,bus,-,-,-
-2022/6/4,Australia,darwin,dormitory,32.4,AUD,-
-2022/6/5,Australia,darwin,dormitory,32.4,AUD,-
-2022/6/6,Australia,darwin,dormitory,32.4,AUD,-
-2022/6/7,Australia,cairns,dormitory,20.16,AUD,-
-2022/6/8,Australia,cairns,dormitory,22,AUD,-
-2022/6/9,Australia,palm cove beach,dormitory,43,AUD,-
-2022/6/10,Australia,cairns,dormitory,22,AUD,-
-2022/6/11,Australia,cairns,dormitory,22,AUD,-
-2022/6/12,Australia,townsville,dormitory,27,AUD,-
-2022/6/13,Australia,Airlie Beach,dormitory,27,AUD,-
-2022/6/14,Australia,Airlie Beach,dormitory,27,AUD,-
-2022/6/15,Australia,Airlie Beach,dormitory,27,AUD,-
-2022/6/16,Australia,-,bus,-,-,-
-2022/6/17,Australia,Brisbane,dormitory,41.16,AUD,-
-2022/6/18,Australia,Gold coast,dormitory,19.44,AUD,-
-2022/6/19,Australia,Gold coast,dormitory,19.44,AUD,-
-2022/6/20,Australia,Brisbane,dormitory,27.72,AUD,-
-2022/6/21,Australia,Coffs Harbour,dormitory,27,AUD,-
-2022/6/22,Australia,Newcastle,dormitory,28.5,AUD,-
-2022/6/23,Australia,Newcastle,dormitory,28.5,AUD,-
-2022/6/24,Australia,Sydney,dormitory,23.49,AUD,-
-2022/6/25,Australia,Sydney,dormitory,23.49,AUD,-
-2022/6/26,Australia,Sydney,dormitory,32.76,AUD,-
-2022/6/27,Japan,Sanda,parents' home,0,JPY,-
-2022/6/28,Japan,Sanda,parents' home,0,JPY,-
-2022/6/29,Japan,Sanda,parents' home,0,JPY,-
-2022/6/30,Japan,Sanda,parents' home,0,JPY,-
-2022/7/1,Japan,-,ferry,-,-,-
-2022/7/2,Japan,Hakata,dormitory,2640,JPY,-
-2022/7/3,Japan,-,ferry,-,-,-
-2022/7/4,Japan,Sanda,parents' home,0,JPY,-
-2022/7/5,Japan,Sanda,parents' home,0,JPY,-
-2022/7/6,Japan,Sanda,parents' home,0,JPY,-
-2022/7/7,Japan,Sanda,parents' home,0,JPY,-
-2022/7/8,Japan,Toyoka,dormitory,2673,JPY,-
-2022/7/9,Japan,Toyoka,dormitory,4200,JPY,-
-2022/7/10,Japan,Sanda,parents' home,0,JPY,-
-2022/7/11,Japan,Sanda,parents' home,0,JPY,-
-2022/7/12,Japan,Sanda,parents' home,0,JPY,-
+2022/5/18,AUS,Sydney,dormitory,3165,JPY,-
+2022/5/19,AUS,katoomba,dormitory,26.5,AUD,-
+2022/5/20,AUS,katoomba,dormitory,26.5,AUD,-
+2022/5/21,AUS,-,bus,-,-,-
+2022/5/22,AUS,Melbourne,single room,50,AUD,-
+2022/5/23,AUS,Melbourne,dormitory,30,AUD,-
+2022/5/24,AUS,philip island,dormitory,33.75,AUD,-
+2022/5/25,AUS,philip island,dormitory,33.75,AUD,-
+2022/5/26,AUS,Melbourne,dormitory,25.11,AUD,-
+2022/5/27,AUS,Adelaide,dormitory,28.24,AUD,-
+2022/5/28,AUS,Adelaide,single room,89,AUD,-
+2022/5/29,AUS,Adelaide,dormitory,26.99,AUD,-
+2022/5/30,AUS,-,bus,-,-,-
+2022/5/31,AUS,Alice springs,dormitory,31,AUD,-
+2022/6/1,AUS,Alice springs,dormitory,31,AUD,-
+2022/6/2,AUS,Alice springs,dormitory,31,AUD,-
+2022/6/3,AUS,-,bus,-,-,-
+2022/6/4,AUS,darwin,dormitory,32.4,AUD,-
+2022/6/5,AUS,darwin,dormitory,32.4,AUD,-
+2022/6/6,AUS,darwin,dormitory,32.4,AUD,-
+2022/6/7,AUS,cairns,dormitory,20.16,AUD,-
+2022/6/8,AUS,cairns,dormitory,22,AUD,-
+2022/6/9,AUS,palm cove beach,dormitory,43,AUD,-
+2022/6/10,AUS,cairns,dormitory,22,AUD,-
+2022/6/11,AUS,cairns,dormitory,22,AUD,-
+2022/6/12,AUS,townsville,dormitory,27,AUD,-
+2022/6/13,AUS,Airlie Beach,dormitory,27,AUD,-
+2022/6/14,AUS,Airlie Beach,dormitory,27,AUD,-
+2022/6/15,AUS,Airlie Beach,dormitory,27,AUD,-
+2022/6/16,AUS,-,bus,-,-,-
+2022/6/17,AUS,Brisbane,dormitory,41.16,AUD,-
+2022/6/18,AUS,Gold coast,dormitory,19.44,AUD,-
+2022/6/19,AUS,Gold coast,dormitory,19.44,AUD,-
+2022/6/20,AUS,Brisbane,dormitory,27.72,AUD,-
+2022/6/21,AUS,Coffs Harbour,dormitory,27,AUD,-
+2022/6/22,AUS,Newcastle,dormitory,28.5,AUD,-
+2022/6/23,AUS,Newcastle,dormitory,28.5,AUD,-
+2022/6/24,AUS,Sydney,dormitory,23.49,AUD,-
+2022/6/25,AUS,Sydney,dormitory,23.49,AUD,-
+2022/6/26,AUS,Sydney,dormitory,32.76,AUD,-
+2022/6/27,JPN,Sanda,parents' home,0,JPY,-
+2022/6/28,JPN,Sanda,parents' home,0,JPY,-
+2022/6/29,JPN,Sanda,parents' home,0,JPY,-
+2022/6/30,JPN,Sanda,parents' home,0,JPY,-
+2022/7/1,JPN,-,ferry,-,-,-
+2022/7/2,JPN,Hakata,dormitory,2640,JPY,-
+2022/7/3,JPN,-,ferry,-,-,-
+2022/7/4,JPN,Sanda,parents' home,0,JPY,-
+2022/7/5,JPN,Sanda,parents' home,0,JPY,-
+2022/7/6,JPN,Sanda,parents' home,0,JPY,-
+2022/7/7,JPN,Sanda,parents' home,0,JPY,-
+2022/7/8,JPN,Toyoka,dormitory,2673,JPY,-
+2022/7/9,JPN,Toyoka,dormitory,4200,JPY,-
+2022/7/10,JPN,Sanda,parents' home,0,JPY,-
+2022/7/11,JPN,Sanda,parents' home,0,JPY,-
+2022/7/12,JPN,Sanda,parents' home,0,JPY,-
 2022/7/13,USA,Anchorage,dormitory,59.83,USD,airplane night
 2022/7/14,USA,Anchorage,single room,150,USD,-
 2022/7/15,USA,Anchorage,single room,150,USD,-
 2022/7/16,USA,Anchorage,single room,150,USD,-
-2022/7/17,Canada,Vancouver,dormitory,54.27,CAD,-
-2022/7/18,Canada,Vancouver,dormitory,5532,円,-
-2022/7/19,Canada,Vancouver,dormitory,5532,円,-
-2022/7/20,Canada,Nanaimo,dormitory,55.68,CAD,-
-2022/7/21,Canada,Vancouver,dormitory,46.99,CAD,-
-2022/7/22,Canada,-,train,-,-,-
-2022/7/23,Canada,Edomonton,dormitory,39.81,CAD,-
-2022/7/24,Canada,Edomonton,dormitory,39.81,CAD,-
-2022/7/25,Canada,Saskatoon,single room,66.6,CAD,-
-2022/7/26,Canada,Saskatoon,single room,66.6,CAD,-
-2022/7/27,Canada,Regina,single room,66.6,CAD,-
-2022/7/28,Canada,Regina,single room,66.6,CAD,-
-2022/7/29,Canada,-,bus,-,-,-
-2022/7/30,Canada,Winnipeg,single room,46.79,CAD,-
-2022/7/31,Canada,-,train,-,-,-
-2022/8/1,Canada,-,train,-,-,-
-2022/8/2,Canada,Toronto,dormitory,46,CAD,-
-2022/8/3,Canada,Toronto,dormitory,46.68,CAD,-
-2022/8/4,Canada,Toronto,dormitory,46.68,CAD,-
-2022/8/5,Canada,Montréal,dormitory,56.93,CAD,-
-2022/8/6,Canada,Québec,dormitory,36,CAD,-
-2022/8/7,Canada,Montréal,dormitory,56.93,CAD,-
-2022/8/8,Mexico,Mexico City,single room,300,MXP,-
-2022/8/9,Mexico,Mexico City,dormitory,178.5,MXP,-
-2022/8/10,Mexico,Mexico City,dormitory,178.5,MXP,-
-2022/8/11,Mexico,Mexico City,dormitory,178.5,MXP,-
-2022/8/12,Mexico,Querétaro,dormitory,173.2,MXP,-
-2022/8/13,Mexico,Guanajuato,dormitory,280.5,MXP,-
-2022/8/14,Mexico,Guanajuato,dormitory,280.5,MXP,-
-2022/8/15,Mexico,Morelia,dormitory,200,MXP,-
-2022/8/16,Mexico,Puebla,dormitory,114.7,MXP,-
-2022/8/17,Mexico,Puebla,dormitory,114.7,MXP,-
-2022/8/18,Mexico,Veracruz,dormitory,143.67,MXP,-
-2022/8/19,Mexico,Veracruz,dormitory,143.67,MXP,-
-2022/8/20,Mexico,Coatzacoalcos,single room,400,MXP,-
-2022/8/21,Mexico,Palenque,dormitory,236,MXP,-
-2022/8/22,Mexico,Palenque,dormitory,236,MXP,-
-2022/8/23,Mexico,Campeche,dormitory,152.16,MXP,-
-2022/8/24,Mexico,Merida,dormitory,140.5,MXP,-
-2022/8/25,Mexico,Merida,dormitory,140.5,MXP,-
-2022/8/26,Mexico,Cancun,dormitory,180.635,MXP,-
-2022/8/27,Mexico,Playa del Carmen,dormitory,227.7,MXP,-
-2022/8/28,Mexico,Cancun,dormitory,274.59,MXP,-
-2022/8/29,Cuba,habana,single room,1572,JPY,-
-2022/8/30,Cuba,habana,single room,25,USD,-
-2022/8/31,Cuba,habana,single room,25,USD,-
-2022/9/1,Cuba,habana,single room,8278,JPY,-
-2022/9/2,Cuba,habana,single room,8278,JPY,-
-2022/9/3,Mexico,Cancun,dormitory,283.5,MXP,-
-2022/9/4,Mexico,Cancun,dormitory,283.5,MXP,-
-2022/9/5,Mexico,Chetumal,dormitory,185.28,MXP,-
-2022/9/6,Belize,Belize city,dormitory,26,USD,-
-2022/9/7,Belize,San Ignacio,dormitory,11.25,USD,-
-2022/9/8,Belize,San Ignacio,dormitory,11.25,USD,-
-2022/9/9,Guatemala,Flores,dormitory,8.57,USD,-
-2022/9/10,Guatemala,Flores,dormitory,8.57,USD,-
-2022/9/11,Guatemala,Cobán,single room,15.99,USD,-
-2022/9/12,Guatemala,Antigua,dormitory,6.65,USD,-
-2022/9/13,El Salvador,Santa Ana,dormitory,5.13,USD,-
-2022/9/14,El Salvador,Santa Ana,dormitory,5.13,USD,-
-2022/9/15,El Salvador,Santa Ana,dormitory,7.14,USD,-
-2022/9/16,El Salvador,Santa Ana,dormitory,7.14,USD,-
-2022/9/17,El Salvador,El Tunco,dormitory,15,USD,-
-2022/9/18,Nicaragua,Leon,dormitory,6,USD,-
-2022/9/19,Nicaragua,Leon,dormitory,6,USD,-
-2022/9/20,Nicaragua,Managua,dormitory,11,USD,-
-2022/9/21,Nicaragua,Guranada,dormitory,6,USD,-
-2022/9/22,Nicaragua,Ometepe island,single room,8,USD,-
-2022/9/23,Nicaragua,Ometepe island,single room,8,USD,-
-2022/9/24,Costa Rica,Liberia,dormitory,10,USD,-
-2022/9/25,Costa Rica,Puntarenas,single room,21.64,USD,-
-2022/9/26,Costa Rica,Alajuela,single room,30,USD,-
-2022/9/27,Costa Rica,San José,dormitory,9.26,USD,-
-2022/9/28,Panama,PalmarNorte,single room,28,USD,-
-2022/9/29,Panama,David,dormitory,12,USD,-
-2022/9/30,Panama,David,dormitory,12,USD,-
-2022/10/1,Panama,Boquete,dormitory,10,USD,-
-2022/10/2,Panama,Santiago de Veraguas,dormitory,14.42,USD,-
-2022/10/3,Panama,Santa Catalina,dormitory,14.85,USD,-
-2022/10/4,Panama,Santa Catalina,dormitory,14.85,USD,-
-2022/10/5,Panama,Santiago de Veraguas,dormitory,14.42,USD,-
-2022/10/6,Panama,Panama City,dormitory,10.22,USD,-
-2022/10/7,Panama,Panama City,dormitory,10.22,USD,-
-2022/10/8,Colombia,Panama City,dormitory,10.22,USD,-
-2022/10/9,Colombia,Bogota,single room,22,USD,
-2022/10/10,Colombia,Bogota,dormitory,24300,COP,
-2022/10/11,Colombia,Villa de Leyva,dormitory,5.05,USD,
-2022/10/12,Colombia,Villa de Leyva,dormitory,5.05,USD,
-2022/10/13,Colombia,Zipaquirá ,single room,14.22,USD,
-2022/10/14,Colombia,Melgar,single room,200000,COP,
-2022/10/15,Colombia,Ibage,dormitory,56000,COP,
-2022/10/16,Colombia,Ibage,dormitory,56000,COP,
-2022/10/17,Colombia,Pereira,dormitory,10.51,USD,
-2022/10/18,Colombia,kari,dormitory,6.47,USD,
-2022/10/19,Colombia,kari,dormitory,6.47,USD,
-2022/10/20,Colombia,Manizales,dormitory,10.28,USD,
-2022/10/21,Colombia,Honda,single room,60000,COP,
-2022/10/22,Colombia,Bogota,dormitory,5.59,USD,
-2022/10/23,Colombia,Bogota,dormitory,5.59,USD,
-2022/10/24,Ecuador,Quito,dormitory,6.3,USD,
-2022/10/25,Ecuador,Quito,dormitory,6.3,USD,
-2022/10/26,Ecuador,ibara,single room,8.1,USD,
-2022/10/27,Ecuador,Otavalo,dormitory,8.5,USD,
-2022/10/28,Ecuador,Otavalo,dormitory,8.5,USD,
-2022/10/29,Ecuador,Quito,dormitory,5.4,USD,
-2022/10/30,Ecuador,Santo Domingo,single room,10.8,USD,
-2022/10/31,Ecuador,manta,single room,10,USD,
-2022/11/1,Ecuador,Salinas,dormitory,7,USD,
-2022/11/2,Ecuador,Santiago de Guayaquil,dormitory,9,USD,
-2022/11/3,Ecuador,Santiago de Guayaquil,dormitory,9,USD,
-2022/11/4,Ecuador,riobamba,single room,10.3,USD,
-2022/11/5,Ecuador,arausi,dormitory,10,USD,
-2022/11/6,Ecuador,Cuenca,dormitory,6.3,USD,
-2022/11/7,Ecuador,Cuenca,dormitory,6.3,USD,
-2022/11/8,Peru,Tumbes,single room,25,USD,
-2022/11/9,Peru,Máncora,dormitory,8.5,USD,
-2022/11/10,Peru,Piura,single room,11.48,USD,
-2022/11/11,Peru,Chiclayo,single room,9.72,UD,
-2022/11/12,Peru,Cajamarca,dormitory,3.83,USD,
-2022/11/13,Peru,Cajamarca,dormitory,4.59,USD,
-2022/11/14,Peru,Trujillo,dormitory,6.5,USD,
-2022/11/15,Peru,Trujillo,dormitory,6.5,USD,
-2022/11/16,Peru,Huaraz,dormitory,3,USD,
-2022/11/17,Peru,Huaraz,dormitory,3,USD,
-2022/11/18,Peru,Lima,dormitory,7.22,USD,
-2022/11/19,Peru,Lima,dormitory,7.22,USD,
-2022/11/20,Peru,Ika,dormitory,5.95,USD,
-2022/11/21,Peru,Nazca,dormitory,8.1,USD,
-2022/11/22,Peru,Nazca,dormitory,8.1,USD,
-2022/11/23,Peru,-,bus,-,-,
-2022/11/24,Peru,Arequipa,dormitory,6,USD,
-2022/11/25,Peru,Arequipa,dormitory,6,USD,
-2022/11/26,Chile,Arica,dormitory,12.102,CLP,
-2022/11/27,Chile,Arica,dormitory,12.102,CLP,
-2022/11/28,Chile,Iquique,dormitory,14,USD,
-2022/11/29,Chile,Iquique,dormitory,14,USD,
-2022/11/30,Chile,Antofagasta,single room,20.306,CLP,
-2022/12/1,Chile,La Serena,single room,18.439,CLP,
-2022/12/2,Chile,La Serena,dormitory,16.19,CLP,
-2022/12/3,Chile,Santiago de Chile,dormitory,11.83,CLP,
-2022/12/4,Chile,Santiago de Chile,dormitory,11.83,CLP,
-2022/12/5,Chile,Santiago de Chile,dormitory,11.83,CLP,
-2022/12/6,Chile,Copiapó,single room,18.813,CLP,
-2022/12/7,Chile,Antofagasta,single room,20.306,CLP,
-2022/12/8,Chile,San Pedro de Atacama,dormitory,11.637,CLP,
-2022/12/9,Chile,San Pedro de Atacama,dormitory,11.637,CLP,
-2022/12/10,Chile,Calama,single room,12.93,CLP,
-2022/12/11,Bolivia,Uyuni,dormitory,10.87,USD,
-2022/12/12,Bolivia,Uyuni,dormitory,10.87,USD,
-2022/12/13,Bolivia,Potosí,single room,13.04,USD,
-2022/12/14,Bolivia,Sucre,dormitory,7.96,USD,
-2022/12/15,Bolivia,Sucre,dormitory,7.96,USD,
-2022/12/16,Bolivia,-,bus,-,-,
-2022/12/17,Bolivia,La Paz,dormitory,6.89,USD,
-2022/12/18,Bolivia,La Paz,dormitory,6.89,USD,
-2022/12/19,Bolivia,Copacabana,single room,5.5,USD,
-2022/12/20,peru,Puno,dormitory,5.76,USD,
-2022/12/21,peru,Puno,dormitory,5.76,USD,
-2022/12/22,Bolivia,La Paz,dormitory,8.75,USD,
-2022/12/23,Bolivia,Ciudad de Cochabamba,dormitory,11.5,USD,
-2022/12/24,Bolivia,Ciudad de Cochabamba,dormitory,11.5,USD,
-2022/12/25,Bolivia,Ciudad de Cochabamba,dormitory,11.5,USD,
-2022/12/26,Bolivia,Santa Cruz de la Sierra,dormitory,10,USD,
-2022/12/27,Bolivia,Santa Cruz de la Sierra,dormitory,10,USD,
-2022/12/28,Bolivia,Santa Cruz de la Sierra,dormitory,10,USD,
-2022/12/29,Bolivia,-,bus,-,-,
-2022/12/30,Bolivia,Tarija,single room,11.57,USD,
-2022/12/31,Bolivia,Tarija,single room,11.57,USD,
-2023/1/1,Bolivia,Tarija,single room,11.57,USD,
-2023/1/2,Bolivia,-,bus,-,-,
-2023/1/3,Argentina,Jujuy,dormitory,9474.56,ARS,
-2023/1/4,Argentina,Salta,dormitory,10675,ARS,
-2023/1/5,Argentina,Salta,dormitory,10675,ARS,
-2023/1/6,Argentina,Cafayate,dormitory,12583,ARS,
-2023/1/7,Argentina,-,bus,-,-,
-2023/1/8,Argentina,Corrientes,single room,24000,ARS,
-2023/1/9,Argentina,Puerto Iguazu,dormitory,12386,ARS,
-2023/1/10,Argentina,Puerto Iguazu,dormitory,12386,ARS,
-2023/1/11,Paraguay,Yguazú ,single room,20,USD,Minsyuku Kobayashi
-2023/1/12,Paraguay,Yguazú ,single room,20,USD,Minsyuku Kobayashi
-2023/1/13,Paraguay,Yguazú ,single room,20,USD,Minsyuku Kobayashi
-2023/1/14,Paraguay,Yguazú ,single room,10,USD,Pension Sonoda
-2023/1/15,Paraguay,Encarnación,dormitory,7.2,USD,
-2023/1/16,Paraguay,Encarnación,dormitory,7.2,USD,
-2023/1/17,Paraguay,Ciudad de Asunción,dormitory,9.5,USD,
-2023/1/18,Paraguay,Ciudad de Asunción,dormitory,9.5,USD,
-2023/1/19,Argentina,Resistencia,single room,20388.39,ARS,
-2023/1/20,Argentina,Santa Fe de la Vera Cruz,dormitory,8882.4,ARS,
-2023/1/21,Argentina,Santa Fe de la Vera Cruz,dormitory,8882.4,ARS,
-2023/1/22,Argentina,Córdoba,dormitory,10362.8,ARS,
-2023/1/23,Argentina,Córdoba,dormitory,10362.8,ARS,
-2023/1/24,Argentina,-,bus,-,-,
-2023/1/25,Argentina,Bahía Blanca,single room,25906.99,ARS,
-2023/1/26,Argentina,Mar del Plata,dormitory,17024.6,ARS,
-2023/1/27,Argentina,Mar del Plata,dormitory,5000,ARS,
-2023/1/28,Argentina,La Plata,single room,76000,ARS,
-2023/1/29,Argentina,Ciudad Autónoma de Buenos Aires,dormitory,11843,ARS,
-2023/1/30,Argentina,Ciudad Autónoma de Buenos Aires,dormitory,11843,ARS,
-2023/1/31,Uruguay,Colonia del Sacramento,dormitory,17.665,ARS,
-2023/2/1,Uruguay,Colonia del Sacramento,dormitory,17.665,ARS,
-2023/2/2,Uruguay,Montevideo,dormitory,14.5,USD,
-2023/2/3,Uruguay,Montevideo,dormitory,14.5,USD,
-2023/2/4,Uruguay,Punta del Este,dormitory,14.4,USD,
-2023/2/5,Uruguay,Cabo Polonio,dormitory,13,USD,
-2023/2/6,Uruguay,Punta del Diablo,dormitory,18,USD,
-2023/2/7,Uruguay,Punta del Diablo,dormitory,18,USD,
-2023/2/8,Brazil,Pelotas,dormitory,55,BRL,
-2023/2/9,Brazil,Pelotas,dormitory,55,BRL,
-2023/2/10,Brazil,Porto Alegre,dormitory,46.8,BRL,
-2023/2/11,Brazil,Porto Alegre,dormitory,46.8,BRL,
-2023/2/12,Brazil,Criciúma,single room,79,BRL,
-2023/2/13,Brazil,Florianópolis,dormitory,45,BRL,
-2023/2/14,Brazil,Florianópolis,dormitory,45,BRL,
-2023/2/15,Brazil,Blumenau,dormitory,59,BRL,
-2023/2/16,Brazil,Curitiba,dormitory,48.13,BRL,
-2023/2/17,Brazil,Curitiba,dormitory,48.13,BRL,
-2023/2/18,Brazil,Londrina,single room,75,BRL,
-2023/2/19,Brazil,Presidente Prudente,single room,75,BRL,
-2023/2/20,Brazil,Campo Grande,dormitory,60,BRL,
-2023/2/21,Brazil,Campo Grande,dormitory,60,BRL,
-2023/2/22,Brazil,Bonito,dormitory,64.8,BRL,
-2023/2/23,Brazil,Corumbá,dormitory,63.36,BRL,
-2023/2/24,Brazil,Corumbá,dormitory,63.36,BRL,
-2023/2/25,Brazil,Campo Grande,single room,80,BRL,
-2023/2/26,Brazil,aracatuba,single room,89.1,BRL,
-2023/2/27,Brazil,Ribeirão Preto,single room,45,BRL,
-2023/2/28,Brazil,Belo Horizonte,dormitory,35,BRL,
-2023/3/1,Brazil,Ouro Preto,dormitory,51.6,BRL,
-2023/3/2,Brazil,Ouro Preto,dormitory,51.6,BRL,
-2023/3/3,Brazil,Belo Horizonte,dormitory,45,BRL,
-2023/3/4,Brazil,Campinas,single room,100,BRL,
-2023/3/5,Brazil,Campinas,single room,100,BRL,
+2022/7/17,CAN,Vancouver,dormitory,54.27,CAD,-
+2022/7/18,CAN,Vancouver,dormitory,5532,円,-
+2022/7/19,CAN,Vancouver,dormitory,5532,円,-
+2022/7/20,CAN,Nanaimo,dormitory,55.68,CAD,-
+2022/7/21,CAN,Vancouver,dormitory,46.99,CAD,-
+2022/7/22,CAN,-,train,-,-,-
+2022/7/23,CAN,Edomonton,dormitory,39.81,CAD,-
+2022/7/24,CAN,Edomonton,dormitory,39.81,CAD,-
+2022/7/25,CAN,Saskatoon,single room,66.6,CAD,-
+2022/7/26,CAN,Saskatoon,single room,66.6,CAD,-
+2022/7/27,CAN,Regina,single room,66.6,CAD,-
+2022/7/28,CAN,Regina,single room,66.6,CAD,-
+2022/7/29,CAN,-,bus,-,-,-
+2022/7/30,CAN,Winnipeg,single room,46.79,CAD,-
+2022/7/31,CAN,-,train,-,-,-
+2022/8/1,CAN,-,train,-,-,-
+2022/8/2,CAN,Toronto,dormitory,46,CAD,-
+2022/8/3,CAN,Toronto,dormitory,46.68,CAD,-
+2022/8/4,CAN,Toronto,dormitory,46.68,CAD,-
+2022/8/5,CAN,Montréal,dormitory,56.93,CAD,-
+2022/8/6,CAN,Québec,dormitory,36,CAD,-
+2022/8/7,CAN,Montréal,dormitory,56.93,CAD,-
+2022/8/8,MEX,Mexico City,single room,300,MXP,-
+2022/8/9,MEX,Mexico City,dormitory,178.5,MXP,-
+2022/8/10,MEX,Mexico City,dormitory,178.5,MXP,-
+2022/8/11,MEX,Mexico City,dormitory,178.5,MXP,-
+2022/8/12,MEX,Querétaro,dormitory,173.2,MXP,-
+2022/8/13,MEX,Guanajuato,dormitory,280.5,MXP,-
+2022/8/14,MEX,Guanajuato,dormitory,280.5,MXP,-
+2022/8/15,MEX,Morelia,dormitory,200,MXP,-
+2022/8/16,MEX,Puebla,dormitory,114.7,MXP,-
+2022/8/17,MEX,Puebla,dormitory,114.7,MXP,-
+2022/8/18,MEX,Veracruz,dormitory,143.67,MXP,-
+2022/8/19,MEX,Veracruz,dormitory,143.67,MXP,-
+2022/8/20,MEX,Coatzacoalcos,single room,400,MXP,-
+2022/8/21,MEX,Palenque,dormitory,236,MXP,-
+2022/8/22,MEX,Palenque,dormitory,236,MXP,-
+2022/8/23,MEX,Campeche,dormitory,152.16,MXP,-
+2022/8/24,MEX,Merida,dormitory,140.5,MXP,-
+2022/8/25,MEX,Merida,dormitory,140.5,MXP,-
+2022/8/26,MEX,Cancun,dormitory,180.635,MXP,-
+2022/8/27,MEX,Playa del Carmen,dormitory,227.7,MXP,-
+2022/8/28,MEX,Cancun,dormitory,274.59,MXP,-
+2022/8/29,CUB,habana,single room,1572,JPY,-
+2022/8/30,CUB,habana,single room,25,USD,-
+2022/8/31,CUB,habana,single room,25,USD,-
+2022/9/1,CUB,habana,single room,8278,JPY,-
+2022/9/2,CUB,habana,single room,8278,JPY,-
+2022/9/3,MEX,Cancun,dormitory,283.5,MXP,-
+2022/9/4,MEX,Cancun,dormitory,283.5,MXP,-
+2022/9/5,MEX,Chetumal,dormitory,185.28,MXP,-
+2022/9/6,BLZ,Belize city,dormitory,26,USD,-
+2022/9/7,BLZ,San Ignacio,dormitory,11.25,USD,-
+2022/9/8,BLZ,San Ignacio,dormitory,11.25,USD,-
+2022/9/9,GTM,Flores,dormitory,8.57,USD,-
+2022/9/10,GTM,Flores,dormitory,8.57,USD,-
+2022/9/11,GTM,Cobán,single room,15.99,USD,-
+2022/9/12,GTM,Antigua,dormitory,6.65,USD,-
+2022/9/13,SLV,Santa Ana,dormitory,5.13,USD,-
+2022/9/14,SLV,Santa Ana,dormitory,5.13,USD,-
+2022/9/15,SLV,Santa Ana,dormitory,7.14,USD,-
+2022/9/16,SLV,Santa Ana,dormitory,7.14,USD,-
+2022/9/17,SLV,El Tunco,dormitory,15,USD,-
+2022/9/18,NIC,Leon,dormitory,6,USD,-
+2022/9/19,NIC,Leon,dormitory,6,USD,-
+2022/9/20,NIC,Managua,dormitory,11,USD,-
+2022/9/21,NIC,Guranada,dormitory,6,USD,-
+2022/9/22,NIC,Ometepe island,single room,8,USD,-
+2022/9/23,NIC,Ometepe island,single room,8,USD,-
+2022/9/24,CRI,Liberia,dormitory,10,USD,-
+2022/9/25,CRI,Puntarenas,single room,21.64,USD,-
+2022/9/26,CRI,Alajuela,single room,30,USD,-
+2022/9/27,CRI,San José,dormitory,9.26,USD,-
+2022/9/28,PAN,PalmarNorte,single room,28,USD,-
+2022/9/29,PAN,David,dormitory,12,USD,-
+2022/9/30,PAN,David,dormitory,12,USD,-
+2022/10/1,PAN,Boquete,dormitory,10,USD,-
+2022/10/2,PAN,Santiago de Veraguas,dormitory,14.42,USD,-
+2022/10/3,PAN,Santa Catalina,dormitory,14.85,USD,-
+2022/10/4,PAN,Santa Catalina,dormitory,14.85,USD,-
+2022/10/5,PAN,Santiago de Veraguas,dormitory,14.42,USD,-
+2022/10/6,PAN,Panama City,dormitory,10.22,USD,-
+2022/10/7,PAN,Panama City,dormitory,10.22,USD,-
+2022/10/8,PAN,Panama City,dormitory,10.22,USD,-
+2022/10/9,COL,Bogota,single room,22,USD,
+2022/10/10,COL,Bogota,dormitory,24300,COP,
+2022/10/11,COL,Villa de Leyva,dormitory,5.05,USD,
+2022/10/12,COL,Villa de Leyva,dormitory,5.05,USD,
+2022/10/13,COL,Zipaquirá ,single room,14.22,USD,
+2022/10/14,COL,Melgar,single room,200000,COP,
+2022/10/15,COL,Ibage,dormitory,56000,COP,
+2022/10/16,COL,Ibage,dormitory,56000,COP,
+2022/10/17,COL,Pereira,dormitory,10.51,USD,
+2022/10/18,COL,kari,dormitory,6.47,USD,
+2022/10/19,COL,kari,dormitory,6.47,USD,
+2022/10/20,COL,Manizales,dormitory,10.28,USD,
+2022/10/21,COL,Honda,single room,60000,COP,
+2022/10/22,COL,Bogota,dormitory,5.59,USD,
+2022/10/23,COL,Bogota,dormitory,5.59,USD,
+2022/10/24,ECU,Quito,dormitory,6.3,USD,
+2022/10/25,ECU,Quito,dormitory,6.3,USD,
+2022/10/26,ECU,ibara,single room,8.1,USD,
+2022/10/27,ECU,Otavalo,dormitory,8.5,USD,
+2022/10/28,ECU,Otavalo,dormitory,8.5,USD,
+2022/10/29,ECU,Quito,dormitory,5.4,USD,
+2022/10/30,ECU,Santo Domingo,single room,10.8,USD,
+2022/10/31,ECU,manta,single room,10,USD,
+2022/11/1,ECU,Salinas,dormitory,7,USD,
+2022/11/2,ECU,Santiago de Guayaquil,dormitory,9,USD,
+2022/11/3,ECU,Santiago de Guayaquil,dormitory,9,USD,
+2022/11/4,ECU,riobamba,single room,10.3,USD,
+2022/11/5,ECU,arausi,dormitory,10,USD,
+2022/11/6,ECU,Cuenca,dormitory,6.3,USD,
+2022/11/7,ECU,Cuenca,dormitory,6.3,USD,
+2022/11/8,PER,Tumbes,single room,25,USD,
+2022/11/9,PER,Máncora,dormitory,8.5,USD,
+2022/11/10,PER,Piura,single room,11.48,USD,
+2022/11/11,PER,Chiclayo,single room,9.72,USD,
+2022/11/12,PER,Cajamarca,dormitory,3.83,USD,
+2022/11/13,PER,Cajamarca,dormitory,4.59,USD,
+2022/11/14,PER,Trujillo,dormitory,6.5,USD,
+2022/11/15,PER,Trujillo,dormitory,6.5,USD,
+2022/11/16,PER,Huaraz,dormitory,3,USD,
+2022/11/17,PER,Huaraz,dormitory,3,USD,
+2022/11/18,PER,Lima,dormitory,7.22,USD,
+2022/11/19,PER,Lima,dormitory,7.22,USD,
+2022/11/20,PER,Ika,dormitory,5.95,USD,
+2022/11/21,PER,Nazca,dormitory,8.1,USD,
+2022/11/22,PER,Nazca,dormitory,8.1,USD,
+2022/11/23,PER,-,bus,0,USD,
+2022/11/24,PER,Arequipa,dormitory,6,USD,
+2022/11/25,PER,Arequipa,dormitory,6,USD,
+2022/11/26,CHL,Arica,dormitory,12.102,CLP,
+2022/11/27,CHL,Arica,dormitory,12.102,CLP,
+2022/11/28,CHL,Iquique,dormitory,14,USD,
+2022/11/29,CHL,Iquique,dormitory,14,USD,
+2022/11/30,CHL,Antofagasta,single room,20.306,CLP,
+2022/12/1,CHL,La Serena,single room,18.439,CLP,
+2022/12/2,CHL,La Serena,dormitory,16.19,CLP,
+2022/12/3,CHL,Santiago de Chile,dormitory,11.83,CLP,
+2022/12/4,CHL,Santiago de Chile,dormitory,11.83,CLP,
+2022/12/5,CHL,Santiago de Chile,dormitory,11.83,CLP,
+2022/12/6,CHL,Copiapó,single room,18.813,CLP,
+2022/12/7,CHL,Antofagasta,single room,20.306,CLP,
+2022/12/8,CHL,San Pedro de Atacama,dormitory,11.637,CLP,
+2022/12/9,CHL,San Pedro de Atacama,dormitory,11.637,CLP,
+2022/12/10,CHL,Calama,single room,12.93,CLP,
+2022/12/11,BOL,Uyuni,dormitory,10.87,USD,
+2022/12/12,BOL,Uyuni,dormitory,10.87,USD,
+2022/12/13,BOL,Potosí,single room,13.04,USD,
+2022/12/14,BOL,Sucre,dormitory,7.96,USD,
+2022/12/15,BOL,Sucre,dormitory,7.96,USD,
+2022/12/16,BOL,-,bus,-,-,
+2022/12/17,BOL,La Paz,dormitory,6.89,USD,
+2022/12/18,BOL,La Paz,dormitory,6.89,USD,
+2022/12/19,BOL,Copacabana,single room,5.5,USD,
+2022/12/20,PER,Puno,dormitory,5.76,USD,
+2022/12/21,PER,Puno,dormitory,5.76,USD,
+2022/12/22,BOL,La Paz,dormitory,8.75,USD,
+2022/12/23,BOL,Ciudad de Cochabamba,dormitory,11.5,USD,
+2022/12/24,BOL,Ciudad de Cochabamba,dormitory,11.5,USD,
+2022/12/25,BOL,Ciudad de Cochabamba,dormitory,11.5,USD,
+2022/12/26,BOL,Santa Cruz de la Sierra,dormitory,10,USD,
+2022/12/27,BOL,Santa Cruz de la Sierra,dormitory,10,USD,
+2022/12/28,BOL,Santa Cruz de la Sierra,dormitory,10,USD,
+2022/12/29,BOL,-,bus,-,-,
+2022/12/30,BOL,Tarija,single room,11.57,USD,
+2022/12/31,BOL,Tarija,single room,11.57,USD,
+2023/1/1,BOL,Tarija,single room,11.57,USD,
+2023/1/2,BOL,-,bus,-,-,
+2023/1/3,ARG,Jujuy,dormitory,9474.56,ARS,
+2023/1/4,ARG,Salta,dormitory,10675,ARS,
+2023/1/5,ARG,Salta,dormitory,10675,ARS,
+2023/1/6,ARG,Cafayate,dormitory,12583,ARS,
+2023/1/7,ARG,-,bus,-,-,
+2023/1/8,ARG,Corrientes,single room,24000,ARS,
+2023/1/9,ARG,Puerto Iguazu,dormitory,12386,ARS,
+2023/1/10,ARG,Puerto Iguazu,dormitory,12386,ARS,
+2023/1/11,PRY,Yguazú ,single room,20,USD,Minsyuku Kobayashi
+2023/1/12,PRY,Yguazú ,single room,20,USD,Minsyuku Kobayashi
+2023/1/13,PRY,Yguazú ,single room,20,USD,Minsyuku Kobayashi
+2023/1/14,PRY,Yguazú ,single room,10,USD,Pension Sonoda
+2023/1/15,PRY,Encarnación,dormitory,7.2,USD,
+2023/1/16,PRY,Encarnación,dormitory,7.2,USD,
+2023/1/17,PRY,Ciudad de Asunción,dormitory,9.5,USD,
+2023/1/18,PRY,Ciudad de Asunción,dormitory,9.5,USD,
+2023/1/19,ARG,Resistencia,single room,20388.39,ARS,
+2023/1/20,ARG,Santa Fe de la Vera Cruz,dormitory,8882.4,ARS,
+2023/1/21,ARG,Santa Fe de la Vera Cruz,dormitory,8882.4,ARS,
+2023/1/22,ARG,Córdoba,dormitory,10362.8,ARS,
+2023/1/23,ARG,Córdoba,dormitory,10362.8,ARS,
+2023/1/24,ARG,-,bus,-,-,
+2023/1/25,ARG,Bahía Blanca,single room,25906.99,ARS,
+2023/1/26,ARG,Mar del Plata,dormitory,17024.6,ARS,
+2023/1/27,ARG,Mar del Plata,dormitory,5000,ARS,
+2023/1/28,ARG,La Plata,single room,76000,ARS,
+2023/1/29,ARG,Ciudad Autónoma de Buenos Aires,dormitory,11843,ARS,
+2023/1/30,ARG,Ciudad Autónoma de Buenos Aires,dormitory,11843,ARS,
+2023/1/31,URY,Colonia del Sacramento,dormitory,17.665,ARS,
+2023/2/1,URY,Colonia del Sacramento,dormitory,17.665,ARS,
+2023/2/2,URY,Montevideo,dormitory,14.5,USD,
+2023/2/3,URY,Montevideo,dormitory,14.5,USD,
+2023/2/4,URY,Punta del Este,dormitory,14.4,USD,
+2023/2/5,URY,Cabo Polonio,dormitory,13,USD,
+2023/2/6,URY,Punta del Diablo,dormitory,18,USD,
+2023/2/7,URY,Punta del Diablo,dormitory,18,USD,
+2023/2/8,BRA,Pelotas,dormitory,55,BRL,
+2023/2/9,BRA,Pelotas,dormitory,55,BRL,
+2023/2/10,BRA,Porto Alegre,dormitory,46.8,BRL,
+2023/2/11,BRA,Porto Alegre,dormitory,46.8,BRL,
+2023/2/12,BRA,Criciúma,single room,79,BRL,
+2023/2/13,BRA,Florianópolis,dormitory,45,BRL,
+2023/2/14,BRA,Florianópolis,dormitory,45,BRL,
+2023/2/15,BRA,Blumenau,dormitory,59,BRL,
+2023/2/16,BRA,Curitiba,dormitory,48.13,BRL,
+2023/2/17,BRA,Curitiba,dormitory,48.13,BRL,
+2023/2/18,BRA,Londrina,single room,75,BRL,
+2023/2/19,BRA,Presidente Prudente,single room,75,BRL,
+2023/2/20,BRA,Campo Grande,dormitory,60,BRL,
+2023/2/21,BRA,Campo Grande,dormitory,60,BRL,
+2023/2/22,BRA,Bonito,dormitory,64.8,BRL,
+2023/2/23,BRA,Corumbá,dormitory,63.36,BRL,
+2023/2/24,BRA,Corumbá,dormitory,63.36,BRL,
+2023/2/25,BRA,Campo Grande,single room,80,BRL,
+2023/2/26,BRA,aracatuba,single room,89.1,BRL,
+2023/2/27,BRA,Ribeirão Preto,single room,45,BRL,
+2023/2/28,BRA,Belo Horizonte,dormitory,35,BRL,
+2023/3/1,BRA,Ouro Preto,dormitory,51.6,BRL,
+2023/3/2,BRA,Ouro Preto,dormitory,51.6,BRL,
+2023/3/3,BRA,Belo Horizonte,dormitory,45,BRL,
+2023/3/4,BRA,Campinas,single room,100,BRL,
+2023/3/5,BRA,Campinas,single room,100,BRL,
 2023/3/6,-,-,airplane,-,-,-
-2023/3/7,Portugal,Lisbon,dormitory,1011,JPY,
-2023/3/8,Portugal,Lisbon,dormitory,14.46,EURO,
-2023/3/9,Portugal,Lisbon,dormitory,14.46,EURO,
-2023/3/10,Portugal,Porto,dormitory,15.3,EURO,
-2023/3/11,Spain,Vigo,dormitory,21.6,EURO,
-2023/3/12,Spain,Leon,dormitory,22.63,EURO,
-2023/3/13,Spain,Madrid,dormitory,15.19,EURO,
-2023/3/14,Spain,Madrid,dormitory,15.19,EURO,
-2023/3/15,Spain,Madrid,dormitory,15.19,EURO,
-2023/3/16,Spain,Madrid,dormitory,15.19,EURO,
-2023/3/17,Spain,Córdoba,dormitory,22.76,EURO,
-2023/3/18,Spain,Málaga,dormitory,17.1,EURO,
-2023/3/19,Spain,Madrid,dormitory,18.2,EURO,
+2023/3/7,PRT,Lisbon,dormitory,1011,JPY,
+2023/3/8,PRT,Lisbon,dormitory,14.46,EUR,
+2023/3/9,PRT,Lisbon,dormitory,14.46,EUR,
+2023/3/10,PRT,Porto,dormitory,15.3,EUR,
+2023/3/11,ESP,Vigo,dormitory,21.6,EUR,
+2023/3/12,ESP,Leon,dormitory,22.63,EUR,
+2023/3/13,ESP,Madrid,dormitory,15.19,EUR,
+2023/3/14,ESP,Madrid,dormitory,15.19,EUR,
+2023/3/15,ESP,Madrid,dormitory,15.19,EUR,
+2023/3/16,ESP,Madrid,dormitory,15.19,EUR,
+2023/3/17,ESP,Córdoba,dormitory,22.76,EUR,
+2023/3/18,ESP,Málaga,dormitory,17.1,EUR,
+2023/3/19,ESP,Madrid,dormitory,18.2,EUR,
 2023/3/20,-,-,airplane,-,-,-
 2023/3/21,-,-,airplane,-,-,-
-2023/3/22,Japan,Sanda,parents' home,0,JPY,-
-2023/3/23,Japan,Sanda,parents' home,0,JPY,-
-2023/3/24,Japan,Sanda,parents' home,0,JPY,-
-2023/3/25,Japan,Sanda,parents' home,0,JPY,-
-2023/3/26,Japan,Sanda,parents' home,0,JPY,-
-2023/3/27,Japan,Sanda,parents' home,0,JPY,-
-2023/3/28,Japan,Sanda,parents' home,0,JPY,-
-2023/3/29,Japan,Sanda,parents' home,0,JPY,-
-2023/3/30,Japan,Sanda,parents' home,0,JPY,-
-2023/3/31,Japan,Sanda,parents' home,0,JPY,-
-2023/4/1,Japan,Sanda,parents' home,0,JPY,-
-2023/4/2,Japan,Sanda,parents' home,0,JPY,-
-2023/4/3,Japan,Sanda,parents' home,0,JPY,-
-2023/4/4,Japan,Sanda,parents' home,0,JPY,-
-2023/4/5,Japan,Sanda,parents' home,0,JPY,-
-2023/4/6,Japan,Sanda,parents' home,0,JPY,-
-2023/4/7,Japan,Sanda,parents' home,0,JPY,-
-2023/4/8,Japan,Sanda,parents' home,0,JPY,-
-2023/4/9,Japan,Sanda,parents' home,0,JPY,-
-2023/4/10,Japan,Sanda,parents' home,0,JPY,-
-2023/4/11,Japan,Sanda,parents' home,0,JPY,-
-2023/4/12,Japan,Sanda,parents' home,0,JPY,-
-2023/4/13,Japan,Sanda,parents' home,0,JPY,-
-2023/4/14,Japan,Sanda,parents' home,0,JPY,-
-2023/4/15,Japan,Sanda,parents' home,0,JPY,-
-2023/4/16,Japan,Sanda,parents' home,0,JPY,-
-2023/4/17,Japan,Sanda,parents' home,0,JPY,-
-2023/4/18,Japan,Sanda,parents' home,0,JPY,-
-2023/4/19,Japan,Sanda,parents' home,0,JPY,-
-2023/4/20,Japan,Sanda,parents' home,0,JPY,-
-2023/4/21,Japan,Sanda,parents' home,0,JPY,-
-2023/4/22,Japan,Sanda,parents' home,0,JPY,-
-2023/4/23,Japan,Sanda,parents' home,0,JPY,-
-2023/4/24,Japan,Sanda,parents' home,0,JPY,-
-2023/4/25,Japan,Sanda,parents' home,0,JPY,-
-2023/4/26,Japan,Sanda,parents' home,0,JPY,-
-2023/4/27,Japan,Sanda,parents' home,0,JPY,-
-2023/4/28,Japan,Sanda,parents' home,0,JPY,-
-2023/4/29,Japan,Sanda,parents' home,0,JPY,-
-2023/4/30,Japan,Sanda,parents' home,0,JPY,-
-2023/5/1,Japan,Sanda,parents' home,0,JPY,-
-2023/5/2,Japan,Sanda,parents' home,0,JPY,-
-2023/5/3,Japan,Sanda,parents' home,0,JPY,-
-2023/5/4,Japan,Sanda,parents' home,0,JPY,-
-2023/5/5,Japan,Sanda,parents' home,0,JPY,-
-2023/5/6,Japan,Sanda,parents' home,0,JPY,-
-2023/5/7,Japan,Sanda,parents' home,0,JPY,-
-2023/5/8,Japan,Sanda,parents' home,0,JPY,-
-2023/5/9,Japan,Sanda,parents' home,0,JPY,-
-2023/5/10,Japan,Sanda,parents' home,0,JPY,-
-2023/5/11,Japan,Sanda,parents' home,0,JPY,-
-2023/5/12,Japan,Sanda,parents' home,0,JPY,-
-2023/5/13,Japan,Sanda,parents' home,0,JPY,-
-2023/5/14,Japan,Sanda,parents' home,0,JPY,-
-2023/5/15,Japan,Sanda,parents' home,0,JPY,-
-2023/5/16,Japan,Sanda,parents' home,0,JPY,-
-2023/5/17,Japan,Sanda,parents' home,0,JPY,-
-2023/5/18,Japan,Sanda,parents' home,0,JPY,-
-2023/5/19,Japan,Sanda,parents' home,0,JPY,-
-2023/5/20,Japan,Sanda,parents' home,0,JPY,-
-2023/5/21,Japan,Sanda,parents' home,0,JPY,-
-2023/5/22,Japan,Sanda,parents' home,0,JPY,-
-2023/5/23,Japan,Sanda,parents' home,0,JPY,-
-2023/5/24,Japan,Sanda,parents' home,0,JPY,-
-2023/5/25,Japan,Sanda,parents' home,0,JPY,-
-2023/5/26,Japan,Sanda,parents' home,0,JPY,-
-2023/5/27,Japan,Sanda,parents' home,0,JPY,-
-2023/5/28,Japan,Osaka,Airport,0,JPY,-
-2023/5/29,Taiwan,Taipei,dormitory,2134,JPY,
-2023/5/30,Taiwan,Taipei,dormitory,2134,JPY,
-2023/5/31,Taiwan,Taichung ,dormitory,1537,JPY,
-2023/6/1,Taiwan,Tainan,dormitory,1897,JPY,
-2023/6/2,Taiwan,Kaohsiung,dormitory,1579,JPY,
-2023/6/3,Philippines,Manila,single room,3250,JPY,
-2023/6/4,Philippines,Manila,dormitory,888,JPY,
-2023/6/5,Philippines,Manila,dormitory,888,JPY,
-2023/6/6,Philippines,Puerto Galera,dormitory,959,JPY,
-2023/6/7,Philippines,Puerto Galera,dormitory,959,JPY,
-2023/6/8,Philippines,Mabini,dormitory,959,JPY,
-2023/6/9,Philippines,Angeles,single room,1586,JPY,
-2023/6/10,Philippines,Balanga,single room,1425,JPY,
-2023/6/11,Philippines,Manila,dormitory,1597,JPY,
-2023/6/12,Japan,Sanda,parents' home,0,JPY,-
-2023/6/13,Japan,Sanda,parents' home,0,JPY,-
-2023/6/14,Japan,Sanda,parents' home,0,JPY,-
-2023/6/15,Japan,Sanda,parents' home,0,JPY,-
-2023/6/16,Japan,Sanda,parents' home,0,JPY,-
-2023/6/17,Japan,Sanda,parents' home,0,JPY,-
-2023/6/18,Japan,Sanda,parents' home,0,JPY,-
-2023/6/19,Japan,Sanda,parents' home,0,JPY,-
-2023/6/20,Japan,Sanda,parents' home,0,JPY,-
-2023/6/21,Vietnam,Hà Nội ,single room,1723,JPY,
-2023/6/22,UK,London,dormitory,18.71,EURO,
-2023/6/23,UK,London,Air port,0,EURO,
-2023/6/24,Ísland,Reykjavík,dormitory,47.4,EURO,
-2023/6/25,Ísland,Reykjavík,dormitory,47.4,EURO,
-2023/6/26,Ísland,Reykjavík,dormitory,47.4,EURO,
-2023/6/27,Ísland,Reykjavík,dormitory,39.89,EURO,
-2023/6/28,Ireland,Dublin,dormitory,33.36,EURO,
-2023/6/29,UK,Belfast,dormitory,22.68,EURO,
-2023/6/30,UK,Belfast,dormitory,33.91,EURO,
-2023/7/1,UK,Glasgow,dormitory,30.4,EURO,
-2023/7/2,UK,Cardiff,dormitory,20.35,EURO,
-2023/7/3,UK,Bath,dormitory,21.05,EURO,
-2023/7/4,UK,London,dormitory,24.05,EURO,
-2023/7/5,France,Lille,dormitory,19.87,EURO,
-2023/7/6,France,Lille,dormitory,19.87,EURO,
-2023/7/7,Belgien,Namur,dormitory,31,EURO,
-2023/7/8,Belgien,Leuven,dormitory,31,EURO,
-2023/7/9,Nederland,Amsterdam,dormitory,20.69,EURO,
-2023/7/10,Germany,Osnabrück,dormitory,19,EURO,
-2023/7/11,Germany,Flensburg,dormitory,24.3,EURO,
-2023/7/12,Danmark,Kopenhagen,dormitory,24.79,EURO,
-2023/7/13,Sweden,Helsingborg,single room,30.33,EURO,
-2023/7/14,Norway,Oslo,dormitory,29.8,EURO,
-2023/7/15,Norway,-,train,-,-,
-2023/7/16,Norway,Narvik,dormitory,26.03,EURO,
-2023/7/17,Norway,Narvik,dormitory,26.03,EURO,
-2023/7/18,Sweden,Luleå,single room,32.04,EURO,
-2023/7/19,Finland,Rovaniemi,dormitory,29.6,EURO,
-2023/7/20,Finland,Helsinki,dormitory,16.14,EURO,
-2023/7/21,Finland,Helsinki,dormitory,16.14,EURO,
-2023/7/22,Estonia,Tallinn,dormitory,13.86,EURO,
-2023/7/23,Latvia,Riga,dormitory,12.03,EURO,
-2023/7/24,Lithuania,Vilnius,dormitory,15,EURO,
-2023/7/25,Lithuania,Kaunas,dormitory,13.82,EURO,
-2023/7/26,Poland,Białystok,dormitory,6.84,EURO,
-2023/7/27,Poland,Kraków,dormitory,10.99,EURO,
-2023/7/28,Poland,Wrocław,dormitory,14.81,EURO,
-2023/7/29,Germany,Leipzig,dormitory,19.13,EURO,
-2023/7/30,Germany, Stuttgart,dormitory,16.79,EURO,
-2023/7/31,czech,tabor,dormitory,14.69,EURO,
-2023/8/1,Slovakia,Banska Bystrica,dormitory,18.45,EURO,
-2023/8/2,Slovakia,Kurompachy,single room,17.5,EURO,
-2023/8/3,Hungary,Budapest,dormitory,15.32,EURO,
-2023/8/4,Hungary,Budapest,dormitory,15.32,EURO,
-2023/8/5,czech,Brno,dormitory,18.94,EURO,
-2023/8/6,Austria,Innsbruck,dormitory,38,EURO,
-2023/8/7,Switzerland,Lugano,dormitory,33.21,EURO,
-2023/8/8,France,Lyon,dormitory,26.03,EURO,
-2023/8/9,France,Clermont-Ferrand,dormitory,19,EURO,
-2023/8/10,France,Colomiers,dormitory,22,EURO,
-2023/8/11,France,La Réole,dormitory,27.9,EURO,
-2023/8/12,Spain,pamplona,dormitory,20.7,EURO,
-2023/8/13,Spain,toledo,dormitory,18.36,EURO,
-2023/8/14,Spain,Sevilla,dormitory,12,EURO,
-2023/8/15,Morocco,Tangier,dormitory,14.5,EURO,
-2023/8/16,Morocco,Chefchaouen,dormitory,5.76,EURO,
-2023/8/17,Morocco,Fes,dormitory,4.56,EURO,
-2023/8/18,Morocco,Meknès,dormitory,9.72,EURO,
-2023/8/19,Morocco,Rabat,single room,15,EURO,
-2023/8/20,Morocco,Essaouira,dormitory,10.14,EURO,
-2023/8/21,Morocco,Tiznit,single room,11.35,EURO,
-2023/8/22,Morocco,marrakech,dormitory,7.7,EURO,
-2023/8/23,Morocco,marrakech,dormitory,7.7,EURO,
-2023/8/24,Morocco,marrakech,dormitory,7.7,EURO,
-2023/8/25,Morocco,Ouarzazate,dormitory,6.12,EURO,
-2023/8/26,Morocco,Errachidia,single room,18.23,EURO,
-2023/8/27,Morocco,Meknès,dormitory,9.72,EURO,
-2023/8/28,Morocco,Fes,dormitory,4.28,EURO,
-2023/8/29,Morocco,Oujda,single room,18,EURO,
-2023/8/30,Spain,Almería,dormitory,21,EURO,
-2023/8/31,Spain,Granada,dormitory,13.02,EURO,
-2023/9/1,Spain,Valencia,dormitory,18.66,EURO,
-2023/9/2,Andorra,Andorra la Vieja,dormitory,27,EURO,
-2023/9/3,France,Carcassonne,dormitory,25.92,EURO,
-2023/9/4,France,Nice,dormitory,5364,JPY,
-2023/9/5,Italy,Milano,Friend's house,0,EURO,Mruco
-2023/9/6,Italy,Pisa,dormitory,23.04,EURO,
-2023/9/7,San Marino,San Marino,dormitory,18.54,EURO,
-2023/9/8,Italy,San Vito al Tagliamento,dormitory,19,EURO,
-2023/9/9,Slovenia,Lubiana,dormitory,19.9,EURO,
-2023/9/10,Croatia,zagreb,dormitory,17.64,EURO,
-2023/9/11,Croatia,split,dormitory,17.01,EURO,
-2023/9/12,Croatia,dubrovnik,dormitory,26,EURO,
-2023/9/13,Italy,Bari ,dormitory,30.64,EURO,
-2023/9/14,Italy,Roma,dormitory,27.49,EURO,
-2023/9/15,Italy,naples,dormitory,11.52,EURO,
-2023/9/16,Italy,vallo scaro,dormitory,24,EURO,
-2023/9/17,Italy,Pompei,dormitory,9.36,EURO,
+2023/3/22,JPN,Sanda,parents' home,0,JPY,-
+2023/3/23,JPN,Sanda,parents' home,0,JPY,-
+2023/3/24,JPN,Sanda,parents' home,0,JPY,-
+2023/3/25,JPN,Sanda,parents' home,0,JPY,-
+2023/3/26,JPN,Sanda,parents' home,0,JPY,-
+2023/3/27,JPN,Sanda,parents' home,0,JPY,-
+2023/3/28,JPN,Sanda,parents' home,0,JPY,-
+2023/3/29,JPN,Sanda,parents' home,0,JPY,-
+2023/3/30,JPN,Sanda,parents' home,0,JPY,-
+2023/3/31,JPN,Sanda,parents' home,0,JPY,-
+2023/4/1,JPN,Sanda,parents' home,0,JPY,-
+2023/4/2,JPN,Sanda,parents' home,0,JPY,-
+2023/4/3,JPN,Sanda,parents' home,0,JPY,-
+2023/4/4,JPN,Sanda,parents' home,0,JPY,-
+2023/4/5,JPN,Sanda,parents' home,0,JPY,-
+2023/4/6,JPN,Sanda,parents' home,0,JPY,-
+2023/4/7,JPN,Sanda,parents' home,0,JPY,-
+2023/4/8,JPN,Sanda,parents' home,0,JPY,-
+2023/4/9,JPN,Sanda,parents' home,0,JPY,-
+2023/4/10,JPN,Sanda,parents' home,0,JPY,-
+2023/4/11,JPN,Sanda,parents' home,0,JPY,-
+2023/4/12,JPN,Sanda,parents' home,0,JPY,-
+2023/4/13,JPN,Sanda,parents' home,0,JPY,-
+2023/4/14,JPN,Sanda,parents' home,0,JPY,-
+2023/4/15,JPN,Sanda,parents' home,0,JPY,-
+2023/4/16,JPN,Sanda,parents' home,0,JPY,-
+2023/4/17,JPN,Sanda,parents' home,0,JPY,-
+2023/4/18,JPN,Sanda,parents' home,0,JPY,-
+2023/4/19,JPN,Sanda,parents' home,0,JPY,-
+2023/4/20,JPN,Sanda,parents' home,0,JPY,-
+2023/4/21,JPN,Sanda,parents' home,0,JPY,-
+2023/4/22,JPN,Sanda,parents' home,0,JPY,-
+2023/4/23,JPN,Sanda,parents' home,0,JPY,-
+2023/4/24,JPN,Sanda,parents' home,0,JPY,-
+2023/4/25,JPN,Sanda,parents' home,0,JPY,-
+2023/4/26,JPN,Sanda,parents' home,0,JPY,-
+2023/4/27,JPN,Sanda,parents' home,0,JPY,-
+2023/4/28,JPN,Sanda,parents' home,0,JPY,-
+2023/4/29,JPN,Sanda,parents' home,0,JPY,-
+2023/4/30,JPN,Sanda,parents' home,0,JPY,-
+2023/5/1,JPN,Sanda,parents' home,0,JPY,-
+2023/5/2,JPN,Sanda,parents' home,0,JPY,-
+2023/5/3,JPN,Sanda,parents' home,0,JPY,-
+2023/5/4,JPN,Sanda,parents' home,0,JPY,-
+2023/5/5,JPN,Sanda,parents' home,0,JPY,-
+2023/5/6,JPN,Sanda,parents' home,0,JPY,-
+2023/5/7,JPN,Sanda,parents' home,0,JPY,-
+2023/5/8,JPN,Sanda,parents' home,0,JPY,-
+2023/5/9,JPN,Sanda,parents' home,0,JPY,-
+2023/5/10,JPN,Sanda,parents' home,0,JPY,-
+2023/5/11,JPN,Sanda,parents' home,0,JPY,-
+2023/5/12,JPN,Sanda,parents' home,0,JPY,-
+2023/5/13,JPN,Sanda,parents' home,0,JPY,-
+2023/5/14,JPN,Sanda,parents' home,0,JPY,-
+2023/5/15,JPN,Sanda,parents' home,0,JPY,-
+2023/5/16,JPN,Sanda,parents' home,0,JPY,-
+2023/5/17,JPN,Sanda,parents' home,0,JPY,-
+2023/5/18,JPN,Sanda,parents' home,0,JPY,-
+2023/5/19,JPN,Sanda,parents' home,0,JPY,-
+2023/5/20,JPN,Sanda,parents' home,0,JPY,-
+2023/5/21,JPN,Sanda,parents' home,0,JPY,-
+2023/5/22,JPN,Sanda,parents' home,0,JPY,-
+2023/5/23,JPN,Sanda,parents' home,0,JPY,-
+2023/5/24,JPN,Sanda,parents' home,0,JPY,-
+2023/5/25,JPN,Sanda,parents' home,0,JPY,-
+2023/5/26,JPN,Sanda,parents' home,0,JPY,-
+2023/5/27,JPN,Sanda,parents' home,0,JPY,-
+2023/5/28,JPN,Osaka,Airport,0,JPY,-
+2023/5/29,TWN,Taipei,dormitory,2134,JPY,
+2023/5/30,TWN,Taipei,dormitory,2134,JPY,
+2023/5/31,TWN,Taichung ,dormitory,1537,JPY,
+2023/6/1,TWN,Tainan,dormitory,1897,JPY,
+2023/6/2,TWN,Kaohsiung,dormitory,1579,JPY,
+2023/6/3,PHL,Manila,single room,3250,JPY,
+2023/6/4,PHL,Manila,dormitory,888,JPY,
+2023/6/5,PHL,Manila,dormitory,888,JPY,
+2023/6/6,PHL,Puerto Galera,dormitory,959,JPY,
+2023/6/7,PHL,Puerto Galera,dormitory,959,JPY,
+2023/6/8,PHL,Mabini,dormitory,959,JPY,
+2023/6/9,PHL,Angeles,single room,1586,JPY,
+2023/6/10,PHL,Balanga,single room,1425,JPY,
+2023/6/11,PHL,Manila,dormitory,1597,JPY,
+2023/6/12,JPN,Sanda,parents' home,0,JPY,-
+2023/6/13,JPN,Sanda,parents' home,0,JPY,-
+2023/6/14,JPN,Sanda,parents' home,0,JPY,-
+2023/6/15,JPN,Sanda,parents' home,0,JPY,-
+2023/6/16,JPN,Sanda,parents' home,0,JPY,-
+2023/6/17,JPN,Sanda,parents' home,0,JPY,-
+2023/6/18,JPN,Sanda,parents' home,0,JPY,-
+2023/6/19,JPN,Sanda,parents' home,0,JPY,-
+2023/6/20,JPN,Sanda,parents' home,0,JPY,-
+2023/6/21,VNM,Hà Nội ,single room,1723,JPY,
+2023/6/22,GBR,London,dormitory,18.71,EUR,
+2023/6/23,GBR,London,Air port,0,EUR,
+2023/6/24,ISL,Reykjavík,dormitory,47.4,EUR,
+2023/6/25,ISL,Reykjavík,dormitory,47.4,EUR,
+2023/6/26,ISL,Reykjavík,dormitory,47.4,EUR,
+2023/6/27,ISL,Reykjavík,dormitory,39.89,EUR,
+2023/6/28,IRL,Dublin,dormitory,33.36,EUR,
+2023/6/29,GBR,Belfast,dormitory,22.68,EUR,
+2023/6/30,GBR,Belfast,dormitory,33.91,EUR,
+2023/7/1,GBR,Glasgow,dormitory,30.4,EUR,
+2023/7/2,GBR,Cardiff,dormitory,20.35,EUR,
+2023/7/3,GBR,Bath,dormitory,21.05,EUR,
+2023/7/4,GBR,London,dormitory,24.05,EUR,
+2023/7/5,FRA,Lille,dormitory,19.87,EUR,
+2023/7/6,FRA,Lille,dormitory,19.87,EUR,
+2023/7/7,BEL,Namur,dormitory,31,EUR,
+2023/7/8,BEL,Leuven,dormitory,31,EUR,
+2023/7/9,NLD,Amsterdam,dormitory,20.69,EUR,
+2023/7/10,DEU,Osnabrück,dormitory,19,EUR,
+2023/7/11,DEU,Flensburg,dormitory,24.3,EUR,
+2023/7/12,DNK,Kopenhagen,dormitory,24.79,EUR,
+2023/7/13,SWE,Helsingborg,single room,30.33,EUR,
+2023/7/14,NOR,Oslo,dormitory,29.8,EUR,
+2023/7/15,NOR,-,train,-,-,
+2023/7/16,NOR,Narvik,dormitory,26.03,EUR,
+2023/7/17,NOR,Narvik,dormitory,26.03,EUR,
+2023/7/18,SWE,Luleå,single room,32.04,EUR,
+2023/7/19,FIN,Rovaniemi,dormitory,29.6,EUR,
+2023/7/20,FIN,Helsinki,dormitory,16.14,EUR,
+2023/7/21,FIN,Helsinki,dormitory,16.14,EUR,
+2023/7/22,EST,Tallinn,dormitory,13.86,EUR,
+2023/7/23,LVA,Riga,dormitory,12.03,EUR,
+2023/7/24,LTU,Vilnius,dormitory,15,EUR,
+2023/7/25,LTU,Kaunas,dormitory,13.82,EUR,
+2023/7/26,POL,Białystok,dormitory,6.84,EUR,
+2023/7/27,POL,Kraków,dormitory,10.99,EUR,
+2023/7/28,POL,Wrocław,dormitory,14.81,EUR,
+2023/7/29,DEU,Leipzig,dormitory,19.13,EUR,
+2023/7/30,DEU, Stuttgart,dormitory,16.79,EUR,
+2023/7/31,CZE,tabor,dormitory,14.69,EUR,
+2023/8/1,SVK,Banska Bystrica,dormitory,18.45,EUR,
+2023/8/2,SVK,Kurompachy,single room,17.5,EUR,
+2023/8/3,HUN,Budapest,dormitory,15.32,EUR,
+2023/8/4,HUN,Budapest,dormitory,15.32,EUR,
+2023/8/5,CZE,Brno,dormitory,18.94,EUR,
+2023/8/6,AUT,Innsbruck,dormitory,38,EUR,
+2023/8/7,CHE,Lugano,dormitory,33.21,EUR,
+2023/8/8,FRA,Lyon,dormitory,26.03,EUR,
+2023/8/9,FRA,Clermont-Ferrand,dormitory,19,EUR,
+2023/8/10,FRA,Colomiers,dormitory,22,EUR,
+2023/8/11,FRA,La Réole,dormitory,27.9,EUR,
+2023/8/12,ESP,pamplona,dormitory,20.7,EUR,
+2023/8/13,ESP,toledo,dormitory,18.36,EUR,
+2023/8/14,ESP,Sevilla,dormitory,12,EUR,
+2023/8/15,MAR,Tangier,dormitory,14.5,EUR,
+2023/8/16,MAR,Chefchaouen,dormitory,5.76,EUR,
+2023/8/17,MAR,Fes,dormitory,4.56,EUR,
+2023/8/18,MAR,Meknès,dormitory,9.72,EUR,
+2023/8/19,MAR,Rabat,single room,15,EUR,
+2023/8/20,MAR,Essaouira,dormitory,10.14,EUR,
+2023/8/21,MAR,Tiznit,single room,11.35,EUR,
+2023/8/22,MAR,marrakech,dormitory,7.7,EUR,
+2023/8/23,MAR,marrakech,dormitory,7.7,EUR,
+2023/8/24,MAR,marrakech,dormitory,7.7,EUR,
+2023/8/25,MAR,Ouarzazate,dormitory,6.12,EUR,
+2023/8/26,MAR,Errachidia,single room,18.23,EUR,
+2023/8/27,MAR,Meknès,dormitory,9.72,EUR,
+2023/8/28,MAR,Fes,dormitory,4.28,EUR,
+2023/8/29,MAR,Oujda,single room,18,EUR,
+2023/8/30,ESP,Almería,dormitory,21,EUR,
+2023/8/31,ESP,Granada,dormitory,13.02,EUR,
+2023/9/1,ESP,Valencia,dormitory,18.66,EUR,
+2023/9/2,AND,Andorra la Vieja,dormitory,27,EUR,
+2023/9/3,FRA,Carcassonne,dormitory,25.92,EUR,
+2023/9/4,FRA,Nice,dormitory,5364,JPY,
+2023/9/5,ITA,Milano,Friend's house,0,EUR,Mruco
+2023/9/6,ITA,Pisa,dormitory,23.04,EUR,
+2023/9/7,SMR,San Marino,dormitory,18.54,EUR,
+2023/9/8,ITA,San Vito al Tagliamento,dormitory,19,EUR,
+2023/9/9,SVN,Lubiana,dormitory,19.9,EUR,
+2023/9/10,HRV,zagreb,dormitory,17.64,EUR,
+2023/9/11,HRV,split,dormitory,17.01,EUR,
+2023/9/12,HRV,dubrovnik,dormitory,26,EUR,
+2023/9/13,ITA,Bari ,dormitory,30.64,EUR,
+2023/9/14,ITA,Roma,dormitory,27.49,EUR,
+2023/9/15,ITA,naples,dormitory,11.52,EUR,
+2023/9/16,ITA,vallo scaro,dormitory,24,EUR,
+2023/9/17,ITA,Pompei,dormitory,9.36,EUR,
 2023/9/18,-,-,ferry,-,-,-
-2023/9/19,tunisia,tunis,single room,20,EURO,
-2023/9/20,tunisia,Sousse,dormitory,16.2,EURO,
-2023/9/21,tunisia,Sousse,dormitory,1937,JPY,
-2023/9/22,tunisia,tunis,dormitory,19,EURO,
+2023/9/19,TUN,tunis,single room,20,EUR,
+2023/9/20,TUN,Sousse,dormitory,16.2,EUR,
+2023/9/21,TUN,Sousse,dormitory,1937,JPY,
+2023/9/22,TUN,tunis,dormitory,19,EUR,
 2023/9/23,-,-,ferry,-,-,
-2023/9/24,Italy,Palermo,dormitory,19.8,EURO,
-2023/9/25,Italy,Siracusa,dormitory,24,EURO,
-2023/9/26,Italy,Catania,dormitory,17,EURO,
-2023/9/27,Italy,Catania,dormitory,17,EURO,
-2023/9/28,Italy,Taranto,single room,21.45,EURO,
+2023/9/24,ITA,Palermo,dormitory,19.8,EUR,
+2023/9/25,ITA,Siracusa,dormitory,24,EUR,
+2023/9/26,ITA,Catania,dormitory,17,EUR,
+2023/9/27,ITA,Catania,dormitory,17,EUR,
+2023/9/28,ITA,Taranto,single room,21.45,EUR,
 2023/9/29,-,-,ferry,-,-,
-2023/9/30,greece,Ioannina,dormitory,18,EURO,
-2023/10/1,greece,Thessaloníki,dormitory,16,EURO,
-2023/10/2,north macedonia,Skopje,dormitory,9.9,EURO,
-2023/10/3,north macedonia,Skopje,dormitory,9.9,EURO,
-2023/10/4,north macedonia,Ohrid,dormitory,10,EURO,
-2023/10/5,north macedonia,Ohrid,dormitory,10,EURO,
-2023/10/6,Albania,Berat,dormitory,11,EURO,
-2023/10/7,Albania,Sarandë,dormitory,7.49,EURO,
-2023/10/8,Albania,Vlorë,dormitory,9.9,EURO,
-2023/10/9,Albania,Tirana,dormitory,9.18,EURO,
-2023/10/10,kosovo,Prizren,dormitory,8.57,EURO,
-2023/10/11,kosovo,Peja ,dormitory,11.46,EURO,
-2023/10/12,Montenegro,Ulcinj,dormitory,7.14,EURO,
-2023/10/13,Montenegro,Podgorica,dormitory,11.49,EURO,
-2023/10/14,Montenegro,Žabljak,single room,11.7,EURO,
-2023/10/15,Montenegro,Cetinje,single room,10,EURO,
-2023/10/16,Bosna i Hercegovina,Sarajevo,dormitory,7.2,EURO,
-2023/10/17,Bosna i Hercegovina,Sarajevo,dormitory,7.2,EURO,
-2023/10/18,Bosna i Hercegovina,Mostar,dormitory,11.58,EURO,
-2023/10/19,Bosna i Hercegovina,Banja Luka,dormitory,13,EURO,
-2023/10/20,Bosna i Hercegovina,Jajce,dormitory,8,EURO,
-2023/10/21,Bosna i Hercegovina,Tuzla,single room,12.6,EURO,
-2023/10/22,Srbija,Beograd,dormitory,11.25,EURO,
-2023/10/23,Srbija,Novi Sad,dormitory,11.7,EURO,
-2023/10/24,Srbija,Novi Sad,dormitory,11.7,EURO,
-2023/10/25,Srbija,Niš,dormitory,10,EURO,
-2023/10/26,Srbija,Niš,dormitory,12,EURO,
-2023/10/27,Bulgaria,Sofia,dormitory,12.42,EURO,
-2023/10/28,Bulgaria,Sofia,dormitory,12.42,EURO,
-2023/10/29,Bulgaria,Plovdiv,dormitory,8.09,EURO,
-2023/10/30,Bulgaria,Veliko Tarnovo,dormitory,11.25,EURO,
-2023/10/31,Romania,Bucharest,dormitory,8.86,EURO,
-2023/11/1,Romania,Brașov,dormitory,11.65,EURO,
-2023/11/2,Romania,Sibiu,dormitory,10.31,EURO,
-2023/11/3,Romania,Cluj-Napoca,dormitory,16.64 €,EURO,
-2023/11/4,Romania,Iași,dormitory,16.07 €,EURO,
-2023/11/5,Moldova,Chișinău,dormitory,10.98,EURO,
-2023/11/6,Moldova,Comrat,single room,12.75,EURO,
-2023/11/7,Romania,Galaţi,single room,25.12,EURO,
-2023/11/8,Romania,Constanța,single room,19.89,EURO,
-2023/11/9,Bulgaria,Varna,dormitory,10.12,EURO,
-2023/11/10,Bulgaria,Varna,dormitory,8.28,EURO,
-2023/11/11,Türkiye,istanbul,dormitory,7.72,EURO,
-2023/11/12,Türkiye,istanbul,dormitory,1861,JPY,
-2023/11/13,Türkiye,Çanakkale,single room,503.24,TRY,
-2023/11/14,Türkiye,İzmir,dormitory,2190,JPY,
-2023/11/15,Türkiye,Denizli,single room,366.02,TRY,
-2023/11/16,Türkiye,Antalya,dormitory,309.25,TRY,
-2023/11/17,Türkiye,Antalya,single room,276.91,TRY,
-2023/11/18,Türkiye, Konya,dormitory,231.58,TRY,
-2023/11/19,Türkiye,Ankara,dormitory,431.45,TRY,
-2023/11/20,Türkiye,Ankara,dormitory,431.45,TRY,
-2023/11/21,UAE,Abu Dhabi,dormitory,15.76,EURO,
-2023/11/22,cyprus,Larnaca,dormitory,14,EURO,
-2023/11/23,cyprus,paphos,dormitory,23,EURO,
+2023/9/30,GRC,Ioannina,dormitory,18,EUR,
+2023/10/1,GRC,Thessaloníki,dormitory,16,EUR,
+2023/10/2,MKD,Skopje,dormitory,9.9,EUR,
+2023/10/3,MKD,Skopje,dormitory,9.9,EUR,
+2023/10/4,MKD,Ohrid,dormitory,10,EUR,
+2023/10/5,MKD,Ohrid,dormitory,10,EUR,
+2023/10/6,ALB,Berat,dormitory,11,EUR,
+2023/10/7,ALB,Sarandë,dormitory,7.49,EUR,
+2023/10/8,ALB,Vlorë,dormitory,9.9,EUR,
+2023/10/9,ALB,Tirana,dormitory,9.18,EUR,
+2023/10/10,KVX,Prizren,dormitory,8.57,EUR,
+2023/10/11,KVX,Peja ,dormitory,11.46,EUR,
+2023/10/12,MNE,Ulcinj,dormitory,7.14,EUR,
+2023/10/13,MNE,Podgorica,dormitory,11.49,EUR,
+2023/10/14,MNE,Žabljak,single room,11.7,EUR,
+2023/10/15,MNE,Cetinje,single room,10,EUR,
+2023/10/16,BIH,Sarajevo,dormitory,7.2,EUR,
+2023/10/17,BIH,Sarajevo,dormitory,7.2,EUR,
+2023/10/18,BIH,Mostar,dormitory,11.58,EUR,
+2023/10/19,BIH,Banja Luka,dormitory,13,EUR,
+2023/10/20,BIH,Jajce,dormitory,8,EUR,
+2023/10/21,BIH,Tuzla,single room,12.6,EUR,
+2023/10/22,SRB,Beograd,dormitory,11.25,EUR,
+2023/10/23,SRB,Novi Sad,dormitory,11.7,EUR,
+2023/10/24,SRB,Novi Sad,dormitory,11.7,EUR,
+2023/10/25,SRB,Niš,dormitory,10,EUR,
+2023/10/26,SRB,Niš,dormitory,12,EUR,
+2023/10/27,BGR,Sofia,dormitory,12.42,EUR,
+2023/10/28,BGR,Sofia,dormitory,12.42,EUR,
+2023/10/29,BGR,Plovdiv,dormitory,8.09,EUR,
+2023/10/30,BGR,Veliko Tarnovo,dormitory,11.25,EUR,
+2023/10/31,ROU,Bucharest,dormitory,8.86,EUR,
+2023/11/1,ROU,Brașov,dormitory,11.65,EUR,
+2023/11/2,ROU,Sibiu,dormitory,10.31,EUR,
+2023/11/3,ROU,Cluj-Napoca,dormitory,16.64 €,EUR,
+2023/11/4,ROU,Iași,dormitory,16.07 €,EUR,
+2023/11/5,MDA,Chișinău,dormitory,10.98,EUR,
+2023/11/6,MDA,Comrat,single room,12.75,EUR,
+2023/11/7,ROU,Galaţi,single room,25.12,EUR,
+2023/11/8,ROU,Constanța,single room,19.89,EUR,
+2023/11/9,BGR,Varna,dormitory,10.12,EUR,
+2023/11/10,BGR,Varna,dormitory,8.28,EUR,
+2023/11/11,TUR,istanbul,dormitory,7.72,EUR,
+2023/11/12,TUR,istanbul,dormitory,1861,JPY,
+2023/11/13,TUR,Çanakkale,single room,503.24,TRY,
+2023/11/14,TUR,İzmir,dormitory,2190,JPY,
+2023/11/15,TUR,Denizli,single room,366.02,TRY,
+2023/11/16,TUR,Antalya,dormitory,309.25,TRY,
+2023/11/17,TUR,Antalya,single room,276.91,TRY,
+2023/11/18,TUR, Konya,dormitory,231.58,TRY,
+2023/11/19,TUR,Ankara,dormitory,431.45,TRY,
+2023/11/20,TUR,Ankara,dormitory,431.45,TRY,
+2023/11/21,UAE,Abu Dhabi,dormitory,15.76,EUR,
+2023/11/22,CYP,Larnaca,dormitory,14,EUR,
+2023/11/23,CYP,paphos,dormitory,23,EUR,
 2023/11/24,UAE,Abu Dhabi,Airport,-,-,
-2023/11/25,Egypt,alexandria,single room,7.79,USD,
-2023/11/26,Egypt,alexandria,single room,7.85,USD,
-2023/11/27,Egypt,Port Said,single room,823,EGP,
-2023/11/28,Egypt,Cairo,dormitory,6.04,USD,
-2023/11/29,Egypt,Giza,dormitory,3,EURO,
-2023/11/30,Egypt,Cairo,single room,8.98,USD,
-2023/12/1,Egypt,Sohag,single room,15,EURO,
+2023/11/25,EGY,alexandria,single room,7.79,USD,
+2023/11/26,EGY,alexandria,single room,7.85,USD,
+2023/11/27,EGY,Port Said,single room,823,EGP,
+2023/11/28,EGY,Cairo,dormitory,6.04,USD,
+2023/11/29,EGY,Giza,dormitory,3,EUR,
+2023/11/30,EGY,Cairo,single room,8.98,USD,
+2023/12/1,EGY,Sohag,single room,15,EUR,
 2023/12/2,UAE,Abu Dhabi,Airport,-,-,
-2023/12/3,uzbekistan,Toshkent,dormitory,7.06,USD,
-2023/12/4,uzbekistan,Samarkand,dormitory,7.06,USD,
-2023/12/5,uzbekistan,Toshkent,dormitory,6.87,USD,
+2023/12/3,UZB,Toshkent,dormitory,7.06,USD,
+2023/12/4,UZB,Samarkand,dormitory,7.06,USD,
+2023/12/5,UZB,Toshkent,dormitory,6.87,USD,
 2023/12/6,-,-,airplane,-,-,
-2023/12/7,South Korea,Seoul,dormitory,16756,KRW,
-2023/12/8,South Korea,Daejeon,dormitory,17915,KRW,
-2023/12/9,South Korea,Gwangju,dormitory,20188,KRW,
-2023/12/10,South Korea,Busan,dormitory,15562,KRW,
+2023/12/7,KOR,Seoul,dormitory,16756,KRW,
+2023/12/8,KOR,Daejeon,dormitory,17915,KRW,
+2023/12/9,KOR,Gwangju,dormitory,20188,KRW,
+2023/12/10,KOR,Busan,dormitory,15562,KRW,
 2023/12/11,-,-,ferry,-,-,
-2023/12/12,Japan,Hakata,brother's house,0,JPY,
-2023/12/13,Japan,Beppu,dormitory,2200,JPY,
-2023/12/14,Japan,Beppu,dormitory,2200,JPY,
-2023/12/15,Japan,Matsuyama,dormitory,2397,JPY,
-2023/12/16,Japan,Onomichi,dormitory,3000,JPY,
-2023/12/17,Japn,Sanda,parents' home,0,JPY,
-2023/12/18,Japn,Sanda,parents' home,0,JPY,
-2023/12/19,Japn,Nagoya,dormitory,2559,JPY,
-2023/12/20,Japn,Nagoya,dormitory,2559,JPY,
-2023/12/21,Japn,Kofu,dormitory,2690,JPY,
-2023/12/22,Japn,Akabane,dormitory,2583,JPY,
-2023/12/23,Japn,Kamakura,dormitory,3022,JPY,
-2023/12/24,Japn,Odawara,dormitory,3089,JPY,
-2023/12/25,Japan,Hakone,dormitory,2999,JPY,
-2023/12/26,Japan,Sanda,parents' home,0,JPY,
-2023/12/27,Japan,Sanda,parents' home,0,JPY,
-2023/12/28,Japan,Sanda,parents' home,0,JPY,
-2023/12/29,Japan,Sanda,parents' home,0,JPY,
-2023/12/30,Japan,Sanda,parents' home,0,JPY,
-2023/12/31,Japan,Sanda,parents' home,0,JPY,
-2024/1/1,Japan,Sanda,parents' home,0,JPY,
-2024/1/2,Japan,Sanda,parents' home,0,JPY,
-2024/1/3,Japan,Sanda,parents' home,0,JPY,
-2024/1/4,Japan,Sanda,parents' home,0,JPY,
-2024/1/5,Japan,Sanda,parents' home,0,JPY,
-2024/1/6,Japan,Sanda,parents' home,0,JPY,
-2024/1/7,Japan,Sanda,parents' home,0,JPY,
-2024/1/8,Japan,Sanda,parents' home,0,JPY,
-2024/1/9,Japan,Sanda,parents' home,0,JPY,
-2024/1/10,Japan,Atami,Hotel,0,JPY,
-2024/1/11,Japan,Atami,Hotel,0,JPY,
-2024/1/12,Japan,Atami,Hotel,0,JPY,
-2024/1/13,Japan,Atami,Hotel,0,JPY,
-2024/1/14,Japan,Atami,Hotel,0,JPY,
-2024/1/15,Japan,Atami,Hotel,0,JPY,
-2024/1/16,Japan,Atami,Hotel,0,JPY,
-2024/1/17,Japan,Atami,Hotel,0,JPY,
-2024/1/18,Japan,Atami,Hotel,0,JPY,
-2024/1/19,Japan,Atami,Hotel,0,JPY,
-2024/1/20,Japan,Atami,Hotel,0,JPY,
-2024/1/21,Japan,Atami,Hotel,0,JPY,
-2024/1/22,Japan,Atami,Hotel,0,JPY,
-2024/1/23,Japan,Atami,Hotel,0,JPY,
-2024/1/24,Japan,Atami,Hotel,0,JPY,
-2024/1/25,Japan,Atami,Hotel,0,JPY,
-2024/1/26,Japan,Atami,Hotel,0,JPY,
-2024/1/27,Japan,Atami,Hotel,0,JPY,
-2024/1/28,Japan,Atami,Hotel,0,JPY,
-2024/1/29,Japan,Atami,Hotel,0,JPY,
-2024/1/30,Japan,Atami,Hotel,0,JPY,
-2024/1/31,Japan,Atami,Hotel,0,JPY,
-2024/2/1,Japan,Atami,Hotel,0,JPY,
-2024/2/2,Japan,Atami,Hotel,0,JPY,
-2024/2/3,Japan,Atami,Hotel,0,JPY,
-2024/2/4,Japan,Atami,Hotel,0,JPY,
-2024/2/5,Japan,Atami,Hotel,0,JPY,
-2024/2/6,Japan,Atami,Hotel,0,JPY,
-2024/2/7,Japan,Atami,Hotel,0,JPY,
-2024/2/8,Japan,Atami,Hotel,0,JPY,
-2024/2/9,Japan,Atami,Hotel,0,JPY,
-2024/2/10,Japan,Atami,Hotel,0,JPY,
-2024/2/11,Japan,Atami,Hotel,0,JPY,
-2024/2/12,Japan,Atami,Hotel,0,JPY,
-2024/2/13,Japan,Atami,Hotel,0,JPY,
-2024/2/14,Japan,Atami,Hotel,0,JPY,
-2024/2/15,Japan,Atami,Hotel,0,JPY,
-2024/2/16,Japan,Atami,Hotel,0,JPY,
-2024/2/17,Japan,Atami,Hotel,0,JPY,
-2024/2/18,Japan,Atami,Hotel,0,JPY,
-2024/2/19,Japan,Atami,Hotel,0,JPY,
-2024/2/20,Japan,Atami,Hotel,0,JPY,
-2024/2/21,Japan,Atami,Hotel,0,JPY,
-2024/2/22,Japan,Atami,Hotel,0,JPY,
-2024/2/23,Japan,Atami,Hotel,0,JPY,
-2024/2/24,Japan,Atami,Hotel,0,JPY,
-2024/2/25,Japan,Atami,Hotel,0,JPY,
-2024/2/26,Japan,Atami,Hotel,0,JPY,
-2024/2/27,Japan,Atami,Hotel,0,JPY,
-2024/2/28,Japan,Atami,Hotel,0,JPY,
-2024/2/29,Japan,Yokohama,dormitory,2078,JPY,
-2024/3/1,Japan,Sanda,parents' home,0,JPY,
-2024/3/2,Japan,Sanda,parents' home,0,JPY,
-2024/3/3,Japan,Sanda,parents' home,0,JPY,
-2024/3/4,Japan,Sanda,parents' home,0,JPY,
-2024/3/5,Japan,Sanda,parents' home,0,JPY,
-2024/3/6,Japan,Sanda,parents' home,0,JPY,
-2024/3/7,Japan,Sanda,parents' home,0,JPY,
-2024/3/8,Japan,Sanda,parents' home,0,JPY,
-2024/3/9,Japan,Sanda,parents' home,0,JPY,
-2024/3/10,Japan,Sanda,parents' home,0,JPY,
-2024/3/11,Japan,Sanda,parents' home,0,JPY,
-2024/3/12,Japan,Sanda,parents' home,0,JPY,
-2024/3/13,Japan,Sanda,parents' home,0,JPY,
-2024/3/14,Japan,Sanda,parents' home,0,JPY,
-2024/3/15,Japan,Sanda,parents' home,0,JPY,
-2024/3/16,Japan,Sanda,parents' home,0,JPY,
-2024/3/17,Japan,Sanda,parents' home,0,JPY,
-2024/3/18,Japan,Sanda,parents' home,0,JPY,
-2024/3/19,Japan,Sanda,parents' home,0,JPY,
-2024/3/20,Japan,Sanda,parents' home,0,JPY,
-2024/3/21,Japan,Sanda,parents' home,0,JPY,
-2024/3/22,Japan,Sanda,parents' home,0,JPY,
-2024/3/23,Japan,Sanda,parents' home,0,JPY,
-2024/3/24,Japan,Sanda,parents' home,0,JPY,
-2024/3/25,Japan,Sanda,parents' home,0,JPY,
-2024/3/26,Japan,Sanda,parents' home,0,JPY,
-2024/3/27,Japan,Sanda,parents' home,0,JPY,
-2024/3/28,Japan,Sanda,parents' home,0,JPY,
-2024/3/29,Japan,Sanda,parents' home,0,JPY,
-2024/3/30,Japan,Sanda,parents' home,0,JPY,
-2024/3/31,Japan,Sanda,parents' home,0,JPY,
-2024/4/1,Japan,Hiroshima,dormitory,1944,JPY,
+2023/12/12,JPN,Hakata,brother's house,0,JPY,
+2023/12/13,JPN,Beppu,dormitory,2200,JPY,
+2023/12/14,JPN,Beppu,dormitory,2200,JPY,
+2023/12/15,JPN,Matsuyama,dormitory,2397,JPY,
+2023/12/16,JPN,Onomichi,dormitory,3000,JPY,
+2023/12/17,JPN,Sanda,parents' home,0,JPY,
+2023/12/18,JPN,Sanda,parents' home,0,JPY,
+2023/12/19,JPN,Nagoya,dormitory,2559,JPY,
+2023/12/20,JPN,Nagoya,dormitory,2559,JPY,
+2023/12/21,JPN,Kofu,dormitory,2690,JPY,
+2023/12/22,JPN,Akabane,dormitory,2583,JPY,
+2023/12/23,JPN,Kamakura,dormitory,3022,JPY,
+2023/12/24,JPN,Odawara,dormitory,3089,JPY,
+2023/12/25,JPN,Hakone,dormitory,2999,JPY,
+2023/12/26,JPN,Sanda,parents' home,0,JPY,
+2023/12/27,JPN,Sanda,parents' home,0,JPY,
+2023/12/28,JPN,Sanda,parents' home,0,JPY,
+2023/12/29,JPN,Sanda,parents' home,0,JPY,
+2023/12/30,JPN,Sanda,parents' home,0,JPY,
+2023/12/31,JPN,Sanda,parents' home,0,JPY,
+2024/1/1,JPN,Sanda,parents' home,0,JPY,
+2024/1/2,JPN,Sanda,parents' home,0,JPY,
+2024/1/3,JPN,Sanda,parents' home,0,JPY,
+2024/1/4,JPN,Sanda,parents' home,0,JPY,
+2024/1/5,JPN,Sanda,parents' home,0,JPY,
+2024/1/6,JPN,Sanda,parents' home,0,JPY,
+2024/1/7,JPN,Sanda,parents' home,0,JPY,
+2024/1/8,JPN,Sanda,parents' home,0,JPY,
+2024/1/9,JPN,Sanda,parents' home,0,JPY,
+2024/1/10,JPN,Atami,Hotel,0,JPY,
+2024/1/11,JPN,Atami,Hotel,0,JPY,
+2024/1/12,JPN,Atami,Hotel,0,JPY,
+2024/1/13,JPN,Atami,Hotel,0,JPY,
+2024/1/14,JPN,Atami,Hotel,0,JPY,
+2024/1/15,JPN,Atami,Hotel,0,JPY,
+2024/1/16,JPN,Atami,Hotel,0,JPY,
+2024/1/17,JPN,Atami,Hotel,0,JPY,
+2024/1/18,JPN,Atami,Hotel,0,JPY,
+2024/1/19,JPN,Atami,Hotel,0,JPY,
+2024/1/20,JPN,Atami,Hotel,0,JPY,
+2024/1/21,JPN,Atami,Hotel,0,JPY,
+2024/1/22,JPN,Atami,Hotel,0,JPY,
+2024/1/23,JPN,Atami,Hotel,0,JPY,
+2024/1/24,JPN,Atami,Hotel,0,JPY,
+2024/1/25,JPN,Atami,Hotel,0,JPY,
+2024/1/26,JPN,Atami,Hotel,0,JPY,
+2024/1/27,JPN,Atami,Hotel,0,JPY,
+2024/1/28,JPN,Atami,Hotel,0,JPY,
+2024/1/29,JPN,Atami,Hotel,0,JPY,
+2024/1/30,JPN,Atami,Hotel,0,JPY,
+2024/1/31,JPN,Atami,Hotel,0,JPY,
+2024/2/1,JPN,Atami,Hotel,0,JPY,
+2024/2/2,JPN,Atami,Hotel,0,JPY,
+2024/2/3,JPN,Atami,Hotel,0,JPY,
+2024/2/4,JPN,Atami,Hotel,0,JPY,
+2024/2/5,JPN,Atami,Hotel,0,JPY,
+2024/2/6,JPN,Atami,Hotel,0,JPY,
+2024/2/7,JPN,Atami,Hotel,0,JPY,
+2024/2/8,JPN,Atami,Hotel,0,JPY,
+2024/2/9,JPN,Atami,Hotel,0,JPY,
+2024/2/10,JPN,Atami,Hotel,0,JPY,
+2024/2/11,JPN,Atami,Hotel,0,JPY,
+2024/2/12,JPN,Atami,Hotel,0,JPY,
+2024/2/13,JPN,Atami,Hotel,0,JPY,
+2024/2/14,JPN,Atami,Hotel,0,JPY,
+2024/2/15,JPN,Atami,Hotel,0,JPY,
+2024/2/16,JPN,Atami,Hotel,0,JPY,
+2024/2/17,JPN,Atami,Hotel,0,JPY,
+2024/2/18,JPN,Atami,Hotel,0,JPY,
+2024/2/19,JPN,Atami,Hotel,0,JPY,
+2024/2/20,JPN,Atami,Hotel,0,JPY,
+2024/2/21,JPN,Atami,Hotel,0,JPY,
+2024/2/22,JPN,Atami,Hotel,0,JPY,
+2024/2/23,JPN,Atami,Hotel,0,JPY,
+2024/2/24,JPN,Atami,Hotel,0,JPY,
+2024/2/25,JPN,Atami,Hotel,0,JPY,
+2024/2/26,JPN,Atami,Hotel,0,JPY,
+2024/2/27,JPN,Atami,Hotel,0,JPY,
+2024/2/28,JPN,Atami,Hotel,0,JPY,
+2024/2/29,JPN,Yokohama,dormitory,2078,JPY,
+2024/3/1,JPN,Sanda,parents' home,0,JPY,
+2024/3/2,JPN,Sanda,parents' home,0,JPY,
+2024/3/3,JPN,Sanda,parents' home,0,JPY,
+2024/3/4,JPN,Sanda,parents' home,0,JPY,
+2024/3/5,JPN,Sanda,parents' home,0,JPY,
+2024/3/6,JPN,Sanda,parents' home,0,JPY,
+2024/3/7,JPN,Sanda,parents' home,0,JPY,
+2024/3/8,JPN,Sanda,parents' home,0,JPY,
+2024/3/9,JPN,Sanda,parents' home,0,JPY,
+2024/3/10,JPN,Sanda,parents' home,0,JPY,
+2024/3/11,JPN,Sanda,parents' home,0,JPY,
+2024/3/12,JPN,Sanda,parents' home,0,JPY,
+2024/3/13,JPN,Sanda,parents' home,0,JPY,
+2024/3/14,JPN,Sanda,parents' home,0,JPY,
+2024/3/15,JPN,Sanda,parents' home,0,JPY,
+2024/3/16,JPN,Sanda,parents' home,0,JPY,
+2024/3/17,JPN,Sanda,parents' home,0,JPY,
+2024/3/18,JPN,Sanda,parents' home,0,JPY,
+2024/3/19,JPN,Sanda,parents' home,0,JPY,
+2024/3/20,JPN,Sanda,parents' home,0,JPY,
+2024/3/21,JPN,Sanda,parents' home,0,JPY,
+2024/3/22,JPN,Sanda,parents' home,0,JPY,
+2024/3/23,JPN,Sanda,parents' home,0,JPY,
+2024/3/24,JPN,Sanda,parents' home,0,JPY,
+2024/3/25,JPN,Sanda,parents' home,0,JPY,
+2024/3/26,JPN,Sanda,parents' home,0,JPY,
+2024/3/27,JPN,Sanda,parents' home,0,JPY,
+2024/3/28,JPN,Sanda,parents' home,0,JPY,
+2024/3/29,JPN,Sanda,parents' home,0,JPY,
+2024/3/30,JPN,Sanda,parents' home,0,JPY,
+2024/3/31,JPN,Sanda,parents' home,0,JPY,
+2024/4/1,JPN,Hiroshima,dormitory,1944,JPY,
 2024/4/2,-,-,airplane,0,JPY,
-2024/4/3,Türkiye,istanbul,dormitory,350,TRY,
-2024/4/4,Türkiye,Eskişehir,dormitory,2739,JPY,
-2024/4/5,Türkiye,Ankara,dormitory,2707,JPY,
-2024/4/6,Türkiye,Çorum,single room,13,EURO,
-2024/4/7,Türkiye,Samsun,single room,720,TRY,
-2024/4/8,Türkiye,Trabzon,Single room,512,TRY,
-2024/4/9,Türkiye,Erzurum,single room,15.73,EURO,
-2024/4/10,Georgia,batumi,dormitory,15,GEL,
-2024/4/11,Georgia,Kutaisi,dormitory,20,GEL,
-2024/4/12,Georgia,Tbilisi,dormitory,15.3,GEL,
-2024/4/13,Armenia,Yerevan,dormitory,2000,AMD,
-2024/4/14,Armenia,Gyumri,dormitory,4000,AMD,
-2024/4/15,Georgia,Tbilisi,dormitory,13.5,GEL,
+2024/4/3,TUR,istanbul,dormitory,350,TRY,
+2024/4/4,TUR,Eskişehir,dormitory,2739,JPY,
+2024/4/5,TUR,Ankara,dormitory,2707,JPY,
+2024/4/6,TUR,Çorum,single room,13,EUR,
+2024/4/7,TUR,Samsun,single room,720,TRY,
+2024/4/8,TUR,Trabzon,Single room,512,TRY,
+2024/4/9,TUR,Erzurum,single room,15.73,EUR,
+2024/4/10,GEO,batumi,dormitory,15,GEL,
+2024/4/11,GEO,Kutaisi,dormitory,20,GEL,
+2024/4/12,GEO,Tbilisi,dormitory,15.3,GEL,
+2024/4/13,ARM,Yerevan,dormitory,2000,AMD,
+2024/4/14,ARM,Gyumri,dormitory,4000,AMD,
+2024/4/15,GEO,Tbilisi,dormitory,13.5,GEL,
 2024/4/16,-,-,airplane,0,JPY,
-2024/4/17,India,New Delhi,dormitory,1106,INR,
-2024/4/18,India,New Delhi,dormitory,1106,INR,
-2024/4/19,India,New Delhi,Airport,0,JPY,
-2024/4/20,Japan,Sanda,parents' home,0,JPY,
-2024/4/21,Japan,Sanda,parents' home,0,JPY,
-2024/4/22,Japan,Sanda,parents' home,0,JPY,
-2024/4/23,Japan,Sanda,parents' home,0,JPY,
-2024/4/24,Japan,Sanda,parents' home,0,JPY,
-2024/4/25,Japan,Sanda,parents' home,0,JPY,
-2024/4/26,Japan,Sanda,parents' home,0,JPY,
-2024/4/27,Japan,Sanda,parents' home,0,JPY,
-2024/4/28,Japan,Sanda,parents' home,0,JPY,
-2024/4/29,Japan,Sanda,parents' home,0,JPY,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
-,,,,,,
+2024/4/17,IND,New Delhi,dormitory,1106,INR,
+2024/4/18,IND,New Delhi,dormitory,1106,INR,
+2024/4/19,IND,New Delhi,Airport,0,JPY,
+2024/4/20,JPN,Sanda,parents' home,0,JPY,
+2024/4/21,JPN,Sanda,parents' home,0,JPY,
+2024/4/22,JPN,Sanda,parents' home,0,JPY,
+2024/4/23,JPN,Sanda,parents' home,0,JPY,
+2024/4/24,JPN,Sanda,parents' home,0,JPY,
+2024/4/25,JPN,Sanda,parents' home,0,JPY,
+2024/4/26,JPN,Sanda,parents' home,0,JPY,
+2024/4/27,JPN,Sanda,parents' home,0,JPY,
+2024/4/28,JPN,Sanda,parents' home,0,JPY,
+2024/4/29,JPN,Sanda,parents' home,0,JPY,
