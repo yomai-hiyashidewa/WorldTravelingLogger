@@ -124,7 +124,7 @@ namespace WorldTravelLogger.Models
         DMA,    // Dominica
         TTO,    // Trinidad and Tobago
         TKM,    // Turkmenistan
-        TUR,    // Turkey
+        TUR,    // Turkiye
         TON,    // Tonga
         NGA,    // Nigeria
         NRU,    // Nauru
@@ -215,7 +215,7 @@ namespace WorldTravelLogger.Models
         LSO,    // Lesotho
         LBN,    // Lebanon
         RUS,    // Russian Federation
-
+        KVX,    // Kosovo
 
 
 
