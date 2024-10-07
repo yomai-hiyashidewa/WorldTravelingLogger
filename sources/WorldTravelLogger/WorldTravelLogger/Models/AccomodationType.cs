@@ -14,7 +14,7 @@ namespace WorldTravelLogger.Models
         Airplane,   // 飛行機
         Bus,        // バス
         Ferry,      // フェリー
-        train,      // 電車
+        Train,      // 電車
         Airport,    // 空港
         FriendHouse,// 友達の家
         Hotel,      // ホテル

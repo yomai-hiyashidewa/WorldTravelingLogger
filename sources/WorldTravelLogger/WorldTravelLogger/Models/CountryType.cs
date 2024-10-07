@@ -216,6 +216,7 @@ namespace WorldTravelLogger.Models
         LBN,    // Lebanon
         RUS,    // Russian Federation
         KVX,    // Kosovo
+        UNK,    // unknown
 
 
 
