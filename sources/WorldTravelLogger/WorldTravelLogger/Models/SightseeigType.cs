@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorldTravelLogger.Models
 {
-    public enum SightseeigTypecs
+    public enum SightseeigType
     {
         Insurance,      // 保険
         Ticket,         // チケット
