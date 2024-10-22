@@ -8,5 +8,11 @@ namespace WorldTravelLogger.Models
 {
     internal class TranspotationList
     {
+        private List<TransportationModel> list_;
+
+        public TranspotationList()
+        {
+            list_ = new List<TransportationModel>();
+        }
     }
 }

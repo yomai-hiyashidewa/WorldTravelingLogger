@@ -22,7 +22,7 @@ namespace WorldTravelLogger.Models
                 while (!reader.EndOfStream)
                 {
                     string line = reader.ReadLine();
-                    string[] values = line.Split(',');
+                    string[] values = line.Split(',',StringSplitOptions.RemoveEmptyEntries);
                     list.Add(values);
                    
                 }

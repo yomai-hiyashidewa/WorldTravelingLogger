@@ -8,5 +8,11 @@ namespace WorldTravelLogger.Models
 {
     internal class AccomodationList
     {
+        private List<AccomodationModel> list_;
+
+        public AccomodationList()
+        {
+            list_ = new List<AccomodationModel>();
+        }
     }
 }
