@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorldTravelLogger.Views"
         mc:Ignorable="d"
-        Title="Option" Height="450" Width="800">
+        Title="Option" Height="300" Width="400">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -19,8 +19,8 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox IsReadOnly="True" Margin="10,10,10,10" />
-                <Button Grid.Column="1" Content="open" Margin="10,10,10,10" />
+                <TextBox Name="txt_accomodation_list" AllowDrop="True" IsReadOnly="True" Margin="10,10,1,10" Text="{Binding AccomodationPath}" />
+                <Button Name="btn_accomodation_list" Click="btn_accomodation_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
             </Grid>
         </GroupBox>
         <GroupBox Grid.Row="1" Header="transportations">
@@ -29,8 +29,8 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox IsReadOnly="True" Margin="10,10,10,10" />
-                <Button Grid.Column="1" Content="open" Margin="10,10,10,10" />
+                <TextBox Name="txt_transportation_list" IsReadOnly="True" Margin="10,10,10,10" Text="{Binding TransportationPath}" />
+                <Button Name="btn_transportation_list" Click="btn_transportation_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
             </Grid>
         </GroupBox>
         <GroupBox Grid.Row="2" Header="sightseeings">
@@ -39,8 +39,8 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox IsReadOnly="True" Margin="10,10,10,10" />
-                <Button Grid.Column="1" Content="open" Margin="10,10,10,10" />
+                <TextBox Name="txt_sightseeing_list" IsReadOnly="True" Margin="10,10,10,10" Text="{Binding SigntseeingPath}" />
+                <Button Name="btn_sightseeing_list" Click="btn_sightseeing_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
             </Grid>
         </GroupBox>
         <GroupBox Grid.Row="3" Header="exchange_rates">
@@ -49,8 +49,8 @@
                     <ColumnDefinition Width="4*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox IsReadOnly="True" Margin="10,10,10,10" />
-                <Button Grid.Column="1" Content="open" Margin="10,10,10,10" />
+                <TextBox Name="txt_exchange_rate_list" IsReadOnly="True" Margin="10,10,10,10" Text="{Binding ExchangeRatePath}" />
+                <Button Name="btn_exchange_rate_list" Click="btn_exchange_rate_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
             </Grid>
         </GroupBox>
     </Grid>

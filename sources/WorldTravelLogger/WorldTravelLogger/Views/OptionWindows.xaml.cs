@@ -1,5 +1,7 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WorldTravelLogger.Models;
 using WorldTravelLogger.ViewModels;
 
 namespace WorldTravelLogger.Views
@@ -20,10 +23,62 @@ namespace WorldTravelLogger.Views
     /// </summary>
     public partial class OptionWindows : Window
     {
+
+        private const string CSVFILE = "CSVファイル（*.csv）|*.csv";
+
         public OptionWindows(OptionWindowViewModel vm)
         {
             InitializeComponent();
             this.DataContext = vm;
+        }
+
+        private OpenFileDialog CreateOpenFileDialog()
+        {
+            var ofd = new OpenFileDialog();
+            ofd.Filter = CSVFILE;
+            return ofd;
+        }
+
+
+        private void btn_accomodation_list_Click(object sender, RoutedEventArgs e)
+        {
+
+            var ofd = CreateOpenFileDialog();
+            if (ofd.ShowDialog() == true)
+            {
+                var vm = (OptionWindowViewModel)this.DataContext;
+                vm.AccomodationPath = ofd.FileName;
+            }
+        }
+
+        private void btn_transportation_list_Click(object sender, RoutedEventArgs e)
+        {
+            var ofd = CreateOpenFileDialog();
+            if (ofd.ShowDialog() == true)
+            {
+                var vm = (OptionWindowViewModel)this.DataContext;
+                vm.TransportationPath = ofd.FileName;
+            }
+        }
+
+        private void btn_sightseeing_list_Click(object sender, RoutedEventArgs e)
+        {
+            var ofd = CreateOpenFileDialog();
+            if (ofd.ShowDialog() == true)
+            {
+                var vm = (OptionWindowViewModel)this.DataContext;
+                vm.SigntseeingPath = ofd.FileName;
+            }
+        }
+
+        private void btn_exchange_rate_list_Click(object sender, RoutedEventArgs e)
+        {
+            var ofd = CreateOpenFileDialog();
+            if (ofd.ShowDialog() == true)
+            {
+                var vm = (OptionWindowViewModel)this.DataContext;
+                vm.ExchangeRatePath = ofd.FileName;
+            }
         }
     }
 }
