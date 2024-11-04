@@ -27,7 +27,7 @@ namespace WorldTravelLogger.Models
 
         private void SetRate(string[] dateList, string[] stringList)
         {
-            var type = (CurrencyType)Enum.Parse(typeof(CurrencyType), stringList[0]);
+            var type = base.ConvertCurrency(stringList[0]);
             if (type == CurrencyType.JPY)
             {
                 // none
@@ -37,14 +37,13 @@ namespace WorldTravelLogger.Models
                 var dic = new Dictionary<string, double>();
                 for (int i = 1; i < dateList.Length; i++)
                 {
-                   
                     double value = 0;
                     if (double.TryParse(stringList[i + 1], out value))
                     {
                         dic.Add(dateList[i], value);
                     }
                 }
-                rateList_.Add(type, dic);
+                rateList_.Add((CurrencyType)type, dic);
 
             }
         }
@@ -57,7 +56,6 @@ namespace WorldTravelLogger.Models
             for (var d = 0; d < length; d++)
             {
                 var row = (string[])arrays[d];
-                var list = new List<string>();
                 if (d == 0)
                 {
                     dateList = GetDateList(row);
@@ -73,7 +71,6 @@ namespace WorldTravelLogger.Models
         protected override bool CheckFormat(object[] arrays)
         {
             var length = arrays.Length;
-            var list = new List<int[]>();
             for (var i = 0; i < length; i++)
             {
                 var row = (string[])arrays[i];
@@ -81,8 +78,8 @@ namespace WorldTravelLogger.Models
                     // 通貨コード
                     if (j == 0)
                     {
-                        CurrencyType type;
-                        if (!Enum.TryParse(row[j], out type))
+                        var type = base.ConvertCurrency(row[j]);
+                        if (type == null)
                         {
                             base.SetErrorList(i, j);
                         }
@@ -92,8 +89,8 @@ namespace WorldTravelLogger.Models
                         // 時期
                         if (i == 0)
                         {
-                            DateTime date;
-                            if (!DateTime.TryParse(row[j], out date))
+                            var date = base.ConvertDate(row[j]);
+                            if (date == null)
                             {
                                 base.SetErrorList(i, j);
                             }
@@ -101,8 +98,8 @@ namespace WorldTravelLogger.Models
                         // レート
                         else
                         {
-                            double val;
-                            if (!double.TryParse(row[j], out val))
+                            var val = base.ConvertDouble(row[j]);
+                            if (val == null)
                             {
                                 base.SetErrorList(i, j);
                             }
@@ -110,7 +107,7 @@ namespace WorldTravelLogger.Models
                     }
 
             }
-            return ErrorList.Count != 0;
+            return base.IsError;
         }
 
 

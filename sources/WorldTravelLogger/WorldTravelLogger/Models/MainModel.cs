@@ -9,9 +9,11 @@ namespace WorldTravelLogger.Models
     internal class MainModel
     {
         private ExchangeRater exchangeRater_;
+        private AccomodationList accomodationList_;
         private OptionModel option_;
 
         public event EventHandler<ErrorTypes> ExchangeRateLoaded_;
+        public event EventHandler<ErrorTypes> AccomodationLoaded_;
 
         private void SetOptionModel()
         {
@@ -55,13 +57,22 @@ namespace WorldTravelLogger.Models
 
         private void Option__AccomodationPathChanged(object? sender, EventArgs e)
         {
-            // not yet
+
+            if (!string.IsNullOrWhiteSpace(option_.AccomodationPath))
+            {
+                var result = accomodationList_.Load(option_.AccomodationPath, FileNames.AccomodationFile);
+                if (AccomodationLoaded_ != null)
+                {
+                    AccomodationLoaded_.Invoke(this, result);
+                }
+            }
         }
 
         public MainModel()
         {
             SetOptionModel();
             exchangeRater_ = new ExchangeRater();
+            accomodationList_ = new AccomodationList();
            
         }
         
