@@ -9,15 +9,11 @@ using System.Windows.Documents;
 
 namespace WorldTravelLogger.Models
 {
-    public class ExchangeRater
+    public class ExchangeRater : BaseList
     {
 
         private Dictionary<CurrencyType, Dictionary<string, double>> rateList_;
-        public List<int[]> ErrorList
-        {
-            get;
-            private set;
-        }
+      
 
         private string[] GetDateList(string[] stringList)
         {
@@ -54,7 +50,7 @@ namespace WorldTravelLogger.Models
         }
 
         //　為替表を設定する
-        private void Set(object[] arrays)
+        protected override void Set(object[] arrays)
         {
             var length = arrays.Length;
             string[] dateList = null;
@@ -73,13 +69,8 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        private void SetErrorList(int i, int j)
-        {
-            int[] error = { i, j };
-            ErrorList.Add(error);
-        }
 
-        private bool CheckFormat(object[] arrays)
+        protected override bool CheckFormat(object[] arrays)
         {
             var length = arrays.Length;
             var list = new List<int[]>();
@@ -93,7 +84,7 @@ namespace WorldTravelLogger.Models
                         CurrencyType type;
                         if (!Enum.TryParse(row[j], out type))
                         {
-                            SetErrorList(i, j);
+                            base.SetErrorList(i, j);
                         }
                     }
                     else
@@ -104,7 +95,7 @@ namespace WorldTravelLogger.Models
                             DateTime date;
                             if (!DateTime.TryParse(row[j], out date))
                             {
-                                SetErrorList(i, j);
+                                base.SetErrorList(i, j);
                             }
                         }
                         // レート
@@ -113,7 +104,7 @@ namespace WorldTravelLogger.Models
                             double val;
                             if (!double.TryParse(row[j], out val))
                             {
-                                SetErrorList(i, j);
+                                base.SetErrorList(i, j);
                             }
                         }
                     }
@@ -123,16 +114,16 @@ namespace WorldTravelLogger.Models
         }
 
 
-        public ExchangeRater()
+        public ExchangeRater() 
         {
             rateList_ = new Dictionary<CurrencyType, Dictionary<string, double>>();
-            ErrorList = new List<int[]>();
+           
         }
 
-        public void Init()
+        public override void Init()
         {
+            base.Init();
             rateList_.Clear();
-            ErrorList.Clear();
         }
 
         // 為替を取得する
@@ -155,39 +146,6 @@ namespace WorldTravelLogger.Models
 
         }
 
-
-
-
-
-        public ErrorTypes Load(string filePath)
-        {
-            if (string.IsNullOrWhiteSpace(filePath))
-            {
-                return ErrorTypes.None;
-            }
-            if (!File.Exists(filePath))
-            {
-                return ErrorTypes.FileNotFound;
-            }
-
-            var filename = Path.GetFileNameWithoutExtension(filePath);
-            if (!string.Equals(filename, FileNames.ExchangeRateFile))
-            {
-                return ErrorTypes.FileWrong;
-            }
-            var result = CSVReader.ReadCSV(filePath);
-            if (result == null)
-            {
-                return ErrorTypes.FileNotOpen;
-            }
-            if (CheckFormat(result))
-            {
-                return ErrorTypes.FormatError;
-            }
-
-            this.Set(result);
-            return ErrorTypes.None;
-        }
 
     }
 }

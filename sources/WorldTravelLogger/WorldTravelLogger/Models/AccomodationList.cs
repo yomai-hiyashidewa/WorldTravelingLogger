@@ -14,5 +14,7 @@ namespace WorldTravelLogger.Models
         {
             list_ = new List<AccomodationModel>();
         }
+
+
     }
 }

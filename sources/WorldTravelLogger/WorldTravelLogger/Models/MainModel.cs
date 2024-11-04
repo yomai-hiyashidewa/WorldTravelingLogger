@@ -35,7 +35,7 @@ namespace WorldTravelLogger.Models
         {
            if(!string.IsNullOrWhiteSpace( option_.ExchangeRatePath))
             {
-                var result = exchangeRater_.Load(option_.ExchangeRatePath);
+                var result = exchangeRater_.Load(option_.ExchangeRatePath,FileNames.ExchangeRateFile);
                 if(ExchangeRateLoaded_ != null)
                 {
                     ExchangeRateLoaded_.Invoke(this, result);
