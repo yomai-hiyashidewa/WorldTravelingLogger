@@ -96,6 +96,34 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        public void Reload(ListType type)
+        {
+            string buff = "";
+            switch (type)
+            {
+                case ListType.AccomodationList:
+                    buff = accomodationPath_;
+                    accomodationPath_ = null;
+                    AccomodationPath = buff;
+                    break;
+                case ListType.TransportationList:
+                    buff = transportationPath_;
+                    transportationPath_ = null;
+                    TransportationPath = buff;
+                    break;
+                case ListType.SightSeeingList:
+                    buff = sightseeingPath_;
+                    sightseeingPath_ = null;
+                    SightseeingPath = buff;
+                    break;
+                case ListType.ExchangeRateList:
+                    buff = exchangeRatePath_;
+                    exchangeRatePath_ = null;
+                    ExchangeRatePath = buff;
+                    break;
+            }
+        }
+
 
     }
 }

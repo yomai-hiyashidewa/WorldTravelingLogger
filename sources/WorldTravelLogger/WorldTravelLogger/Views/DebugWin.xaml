@@ -1,0 +1,34 @@
+﻿<Window x:Class="WorldTravelLogger.Views.DebugWin"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WorldTravelLogger.Views"
+        mc:Ignorable="d"
+        Title="DebugWin" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="4*"/>
+        </Grid.RowDefinitions>
+        <GroupBox Header="file">
+            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Lists}" SelectedItem="{Binding CurrentListType,Mode=TwoWay}" />
+        </GroupBox>
+        <GroupBox Grid.Row="1">
+            <TabControl>
+                <TabItem Header="accomodation">
+                    <DataGrid ItemsSource="{Binding Accomodations}"/>
+                </TabItem>
+                <TabItem Header="transportation">
+                    <DataGrid ItemsSource="{Binding Transportations}"/>
+                </TabItem>
+                <TabItem Header="sightseeing">
+                    <DataGrid ItemsSource="{Binding Sightseeings}"/>
+                </TabItem>
+                <TabItem Header="exchange rate">
+                    <DataGrid ItemsSource="{Binding ExchangeRates}"/>
+                </TabItem>
+            </TabControl>
+        </GroupBox>
+    </Grid>
+</Window>

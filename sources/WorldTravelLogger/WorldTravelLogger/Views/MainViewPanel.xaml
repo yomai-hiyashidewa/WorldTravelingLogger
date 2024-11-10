@@ -10,6 +10,7 @@
     <Grid>
         <Menu>
             <MenuItem Name="OptionMenu" Header="option" Click="OptionMenu_Click"/>
+            <MenuItem Name="DebugMenu" Header="debug" Click="DebugMenu_Click"/>
         </Menu>
        
     </Grid>

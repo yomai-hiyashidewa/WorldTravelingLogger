@@ -22,11 +22,28 @@ namespace WorldTravelLogger.Views
     public partial class MainViewPanel : UserControl
     {
         private OptionWindows optionWin_;
+        private DebugWin debugWin_;
 
         public MainViewPanel()
         {
             InitializeComponent();
             this.DataContext = new MainViewPanelVM();
+            var vm = (MainViewPanelVM)this.DataContext;
+            vm.FileLoaded_ += Vm_FileLoaded_;
+        }
+
+        private void Vm_FileLoaded_(object? sender, Models.FileLoadedEventArgs e)
+        {
+            Dispatcher.Invoke(() =>
+            { 
+                if(e.ErrorTypes != Models.ErrorTypes.None)
+                {
+                    var vm = (MainViewPanelVM)this.DataContext;
+                    var filename = vm.GetFilename(e.Type);
+                    string messege = string.Format("this system can't open {0} because {1}", filename, e.ErrorTypes);
+                    MessageBox.Show(messege, "Errored Opening file", MessageBoxButton.OK, MessageBoxImage.Error);
+                }
+            });
         }
 
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
@@ -42,12 +59,41 @@ namespace WorldTravelLogger.Views
             {
                 var vm = (MainViewPanelVM)this.DataContext;
                 optionWin_ = new OptionWindows(vm.GetOptionWindowViewModel());
+                optionWin_.Closed += OptionWin__Closed;
                 optionWin_.Show();
             }
             else
             {
                 optionWin_.Activate();
             }
+        }
+
+        private void OptionWin__Closed(object? sender, EventArgs e)
+        {
+            optionWin_.Closed -= OptionWin__Closed;
+            optionWin_ = null;
+        }
+
+        private void DebugMenu_Click(object sender, RoutedEventArgs e)
+        {
+            if(debugWin_ == null)
+            {
+                var vm = (MainViewPanelVM)this.DataContext;
+                debugWin_ = new DebugWin(vm.GetDebugWinViewModel());
+                debugWin_.Closed += DebugWin__Closed;
+                debugWin_.Show();
+            }
+            else
+            {
+                debugWin_.Activate();
+            }
+        }
+
+        private void DebugWin__Closed(object? sender, EventArgs e)
+        {
+            debugWin_.Closed -= DebugWin__Closed;
+            debugWin_.Delete();
+            debugWin_ = null;
         }
     }
 }

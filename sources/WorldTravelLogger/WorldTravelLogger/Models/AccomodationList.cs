@@ -15,6 +15,11 @@ namespace WorldTravelLogger.Models
             list_ = new List<AccomodationModel>();
         }
 
+        public AccomodationModel[] GetArray()
+        {
+            return list_.ToArray();
+        }
+
 
         
 

@@ -11,7 +11,7 @@ namespace WorldTravelLogger.Models
         Station,        // 駅
         Terminal,       // バスターミナル
         Inn,            // 宿
-        Airport,        // 空港
+        AirPort,        // 空港
         Port,           // 港
         Central,        // 町中央
         Stop,           // 停留所

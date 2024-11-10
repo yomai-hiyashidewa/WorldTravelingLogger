@@ -37,7 +37,7 @@ namespace WorldTravelLogger.Models
         }
 
 
-        public  DateTime Date { get { return Date; } }         // 日付
+        public  DateTime Date { get { return date_; } }         // 日付
         public CountryType Country { get { return country_; } }   // 国
         public string? Region { get { return region_; } }        // 地域
         public double Price { get { return price_; } }             // 値段

@@ -45,7 +45,7 @@
 2022/6/28,JPN,Sanda,ParentsHouse,0,JPY,-
 2022/6/29,JPN,Sanda,ParentsHouse,0,JPY,-
 2022/6/30,JPN,Sanda,ParentsHouse,0,JPY,-
-2022/7/1,JPN,-,Ferry,-,JPY,-
+2022/7/1,JPN,-,Ferry,0,JPY,-
 2022/7/2,JPN,Hakata,Domitory,2640,JPY,-
 2022/7/3,JPN,-,Ferry,0,JPY,-
 2022/7/4,JPN,Sanda,ParentsHouse,0,JPY,-
@@ -213,7 +213,7 @@
 2022/12/13,BOL,Potosí,SingleRoom,13.04,USD,-
 2022/12/14,BOL,Sucre,Domitory,7.96,USD,-
 2022/12/15,BOL,Sucre,Domitory,7.96,USD,-
-2022/12/16,BOL,-,Bus,-,JPY,-
+2022/12/16,BOL,-,Bus,0,JPY,-
 2022/12/17,BOL,La Paz,Domitory,6.89,USD,-
 2022/12/18,BOL,La Paz,Domitory,6.89,USD,-
 2022/12/19,BOL,Copacabana,SingleRoom,5.5,USD,-
@@ -424,7 +424,7 @@
 2023/7/12,DNK,Kopenhagen,Domitory,24.79,EUR,-
 2023/7/13,SWE,Helsingborg,SingleRoom,30.33,EUR,-
 2023/7/14,NOR,Oslo,Domitory,29.8,EUR,-
-2023/7/15,NOR,-,Train,-,JPY,-
+2023/7/15,NOR,-,Train,0,JPY,-
 2023/7/16,NOR,Narvik,Domitory,26.03,EUR,-
 2023/7/17,NOR,Narvik,Domitory,26.03,EUR,-
 2023/7/18,SWE,Luleå,SingleRoom,32.04,EUR,-
@@ -535,8 +535,8 @@
 2023/10/31,ROU,Bucharest,Domitory,8.86,EUR,-
 2023/11/1,ROU,Brașov,Domitory,11.65,EUR,-
 2023/11/2,ROU,Sibiu,Domitory,10.31,EUR,-
-2023/11/3,ROU,Cluj-Napoca,Domitory,16.64 €,EUR,-
-2023/11/4,ROU,Iași,Domitory,16.07 €,EUR,-
+2023/11/3,ROU,Cluj-Napoca,Domitory,16.64,EUR,-
+2023/11/4,ROU,Iași,Domitory,16.07,EUR,-
 2023/11/5,MDA,Chișinău,Domitory,10.98,EUR,-
 2023/11/6,MDA,Comrat,SingleRoom,12.75,EUR,-
 2023/11/7,ROU,Galaţi,SingleRoom,25.12,EUR,-
@@ -553,10 +553,10 @@
 2023/11/18,TUR, Konya,Domitory,231.58,TRY,-
 2023/11/19,TUR,Ankara,Domitory,431.45,TRY,-
 2023/11/20,TUR,Ankara,Domitory,431.45,TRY,-
-2023/11/21,UAE,Abu Dhabi,Domitory,15.76,EUR,-
+2023/11/21,ARE,Abu Dhabi,Domitory,15.76,EUR,-
 2023/11/22,CYP,Larnaca,Domitory,14,EUR,-
 2023/11/23,CYP,paphos,Domitory,23,EUR,-
-2023/11/24,UAE,Abu Dhabi,Airport,0,JPY,-
+2023/11/24,ARE,Abu Dhabi,Airport,0,JPY,-
 2023/11/25,EGY,alexandria,SingleRoom,7.79,USD,-
 2023/11/26,EGY,alexandria,SingleRoom,7.85,USD,-
 2023/11/27,EGY,Port Said,SingleRoom,823,EGP,-
@@ -564,7 +564,7 @@
 2023/11/29,EGY,Giza,Domitory,3,EUR,-
 2023/11/30,EGY,Cairo,SingleRoom,8.98,USD,-
 2023/12/1,EGY,Sohag,SingleRoom,15,EUR,-
-2023/12/2,UAE,Abu Dhabi,Airport,0,JPY,-
+2023/12/2,ARE,Abu Dhabi,Airport,0,JPY,-
 2023/12/3,UZB,Toshkent,Domitory,7.06,USD,-
 2023/12/4,UZB,Samarkand,Domitory,7.06,USD,-
 2023/12/5,UZB,Toshkent,Domitory,6.87,USD,-

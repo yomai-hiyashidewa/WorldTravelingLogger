@@ -6,13 +6,237 @@ using System.Threading.Tasks;
 
 namespace WorldTravelLogger.Models
 {
-    internal class TranspotationList
+    internal class TranspotationList : BaseList
     {
         private List<TransportationModel> list_;
 
         public TranspotationList()
         {
             list_ = new List<TransportationModel>();
+        }
+
+        public TransportationModel[] GetArray()
+        {
+            return list_.ToArray();
+        }
+
+        public override void Init()
+        {
+            base.Init();
+            list_.Clear();
+        }
+
+        private void CheckFormats(int index, string[] row)
+        {
+            for (var j = 0; j < row.Length; j++)
+            {
+                var str = row[j];
+                bool flag = false;
+                switch (j)
+                {
+                    // type
+                    case 0:
+                        var sttype = base.ConvertTransportationType(str);
+                        flag = sttype == null;
+                        break;
+                        // start
+                        // date
+                    case 1:
+                        var sdate = base.ConvertDate(str);
+                        flag = sdate == null;
+                        break;
+                        // Country
+                    case 2:
+                        var countury = base.ConvertCountry(str);
+                        flag = countury == null;
+                        break;
+                        // place
+                    case 3:
+                        flag = string.IsNullOrWhiteSpace(str);
+                        break;
+                        // place type
+                    case 4:
+                        var sptype = base.ConvertPlaceType(str);
+                        flag = sptype == null;
+                        break;
+                    // start
+                    // date
+                    case 5:
+                        var edate = base.ConvertDate(str);
+                        flag = edate == null;
+                        break;
+                    // Country
+                    case 6:
+                        var ecountry = base.ConvertCountry(str);
+                        flag = ecountry == null;
+                        break;
+                    // place
+                    case 7:
+                        string.IsNullOrWhiteSpace(str);
+                        break;
+                    // place type
+                    case 8:
+                        var eptype = base.ConvertPlaceType(str);
+                        flag = eptype == null;
+                        break;
+                    // distance
+                    case 9:
+                        var val = base.ConvertDouble(str);
+                        flag = val == null;
+                        break;
+                    // time
+                    case 10:
+                        var time = base.ConvertInt(str);
+                        flag = time == null;
+                        break;
+                    // price
+                    case 11:
+                        var place = base.ConvertDouble(str);
+                        flag = place == null;
+                        break;
+                    // currency
+                    case 12:
+                        var currency = base.ConvertCurrency(str);
+                        flag = currency == null;
+                        break;
+                    // memo
+                    case 13:
+                        // none
+                        break;
+                }
+                if (flag)
+                {
+                    base.SetErrorList(index, j);
+                }
+            }
+        }
+
+        private void SetContext(string[] row)
+        {
+            for (var j = 0; j < row.Length; j++)
+            {
+                var str = row[j];
+
+                Transportationtype? ttype = null;
+                DateTime? startDate = null; ;
+                CountryType? startCountry = null;
+                string? startPlace = null;
+                PlaceType? startPlaceType = null;
+                DateTime? endDate = null;
+                CountryType? endCountry = null;
+                string? endPlace = null;
+                PlaceType? endPlaceType = null;
+                double? distance = null;
+                int? time = null;
+                double? price = null;
+                CurrencyType? currencyType = null;
+                string? memo = null;
+                switch (j)
+                {
+                    // type
+                    case 0:
+                        ttype = base.ConvertTransportationType(str);
+                        break;
+                    // start
+                    // date
+                    case 1:
+                        startDate = base.ConvertDate(str);
+                        break;
+                    // Country
+                    case 2:
+                        startCountry = base.ConvertCountry(str);
+                        break;
+                    // place
+                    case 3:
+                        startPlace = str;
+                        break;
+                    // place type
+                    case 4:
+                        startPlaceType = base.ConvertPlaceType(str);
+                        break;
+                    // start
+                    // date
+                    case 5:
+                        endDate = base.ConvertDate(str);
+                        break;
+                    // Country
+                    case 6:
+                        endCountry = base.ConvertCountry(str);
+                        break;
+                    // place
+                    case 7:
+                        endPlace = str;
+                        break;
+                    // place type
+                    case 8:
+                        endPlaceType = base.ConvertPlaceType(str);
+                        break;
+                    // distance
+                    case 9:
+                        distance = base.ConvertDouble(str);
+                        break;
+                    // time
+                    case 10:
+                        time = base.ConvertInt(str);
+                        break;
+                    // price
+                    case 11:
+                        price = base.ConvertDouble(str);
+                        break;
+                    // currency
+                    case 12:
+                        currencyType = base.ConvertCurrency(str);
+                        break;
+                    // memo
+                    case 13:
+                        memo = str;
+                        break;
+                }
+                if (ttype != null &&
+                    startDate != null &&
+                    startCountry != null &&
+                    startPlace != null &&
+                    startPlaceType != null &&
+                    endDate != null &&
+                    endCountry != null &&
+                    endPlace != null &&
+                    endPlaceType != null &&
+                    distance != null &&
+                    time != null &&
+                    price != null &&
+                    currencyType != null
+                    )
+                {
+                    var model = new TransportationModel((Transportationtype)ttype, (DateTime)startDate, (CountryType)startCountry, startPlace, (PlaceType)startPlaceType,
+                        (DateTime)endDate, (CountryType)endCountry, endPlace, (PlaceType)endPlaceType,
+                        (double)distance, (int)time, (double)price, (CurrencyType)currencyType, memo);
+                    list_.Add(model);
+                }
+
+            }
+        }
+
+        protected override bool CheckFormat(object[] arrays)
+        {
+            var length = arrays.Length;
+            for (var i = 2; i < length; i++)
+            {
+                CheckFormats(i, (string[])arrays[i]);
+
+            }
+            return base.IsError;
+        }
+
+
+
+        protected override void Set(object[] arrays)
+        {
+            var length = arrays.Length;
+            for (var i = 2; i < length; i++)
+            {
+                SetContext((string[])arrays[i]);
+
+            }
         }
     }
 }

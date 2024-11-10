@@ -4,12 +4,14 @@ using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
 
 namespace WorldTravelLogger.ViewModels
 {
     public class ViewModelBase : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
+        public event EventHandler? CanExecuteChanged;
 
         protected virtual void RaisePropertyChanged(string propertyName)
         {

@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
+using System.Windows.Input;
 using WorldTravelLogger.Models;
 
 namespace WorldTravelLogger.ViewModels
@@ -16,6 +18,71 @@ namespace WorldTravelLogger.ViewModels
         {
             model_ = model;
         }
+
+        private void ReloadAccomodation()
+        {
+            model_.Reload(ListType.AccomodationList);
+        }
+
+
+
+        private DelegateCommand reloadAccomodationsCommand_;
+        public DelegateCommand ReloadAccomodationsCommand
+        {
+            get
+            {
+                return reloadAccomodationsCommand_
+                 ?? (reloadAccomodationsCommand_ = new DelegateCommand(
+                 () =>
+                 {
+                     model_.Reload(ListType.AccomodationList);
+                 }));
+            }
+        }
+
+        private DelegateCommand reloadTransportsCommand_;
+        public DelegateCommand ReloadTransportsCommand
+        {
+            get
+            {
+                return reloadTransportsCommand_
+                 ?? (reloadTransportsCommand_ = new DelegateCommand(
+                 () =>
+                 {
+                     model_.Reload(ListType.TransportationList);
+                 }));
+            }
+        }
+
+        private DelegateCommand reloadSightseeingsCommand_;
+        public DelegateCommand ReloadSightseeingsCommand
+        {
+            get
+            {
+                return reloadSightseeingsCommand_
+                 ?? (reloadSightseeingsCommand_ = new DelegateCommand(
+                 () =>
+                 {
+                     model_.Reload(ListType.SightSeeingList);
+                 }));
+            }
+        }
+
+        private DelegateCommand reloadExchangeRatesCommand_;
+        public DelegateCommand ReloadExchangeRatesCommand
+        {
+            get
+            {
+                return reloadExchangeRatesCommand_
+                 ?? (reloadExchangeRatesCommand_ = new DelegateCommand(
+                 () =>
+                 {
+                     model_.Reload(ListType.ExchangeRateList);
+                 }));
+            }
+        }
+
+
 
         public string? AccomodationPath 
         { 

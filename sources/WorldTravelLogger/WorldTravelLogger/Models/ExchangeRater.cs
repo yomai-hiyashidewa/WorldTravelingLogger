@@ -13,6 +13,7 @@ namespace WorldTravelLogger.Models
     {
 
         private Dictionary<CurrencyType, Dictionary<string, double>> rateList_;
+
       
 
         private string[] GetDateList(string[] stringList)
