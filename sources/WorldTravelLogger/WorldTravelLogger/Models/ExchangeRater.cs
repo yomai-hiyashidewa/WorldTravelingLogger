@@ -14,7 +14,7 @@ namespace WorldTravelLogger.Models
 
         private Dictionary<CurrencyType, Dictionary<string, double>> rateList_;
 
-      
+
 
         private string[] GetDateList(string[] stringList)
         {
@@ -82,7 +82,7 @@ namespace WorldTravelLogger.Models
                         var type = base.ConvertCurrency(row[j]);
                         if (type == null)
                         {
-                            base.SetErrorList(i, j);
+                            base.SetErrorList(i, j, row[j]);
                         }
                     }
                     else
@@ -93,7 +93,7 @@ namespace WorldTravelLogger.Models
                             var date = base.ConvertDate(row[j]);
                             if (date == null)
                             {
-                                base.SetErrorList(i, j);
+                                base.SetErrorList(i, j, row[j]);
                             }
                         }
                         // レート
@@ -102,7 +102,7 @@ namespace WorldTravelLogger.Models
                             var val = base.ConvertDouble(row[j]);
                             if (val == null)
                             {
-                                base.SetErrorList(i, j);
+                                base.SetErrorList(i, j, row[j]);
                             }
                         }
                     }

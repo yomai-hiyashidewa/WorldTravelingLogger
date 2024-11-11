@@ -20,7 +20,8 @@
                     <DataGrid ItemsSource="{Binding Accomodations}"/>
                 </TabItem>
                 <TabItem Header="transportation">
-                    <DataGrid ItemsSource="{Binding Transportations}"/>
+                    <DataGrid ItemsSource="{Binding Transportations}">
+                    </DataGrid>
                 </TabItem>
                 <TabItem Header="sightseeing">
                     <DataGrid ItemsSource="{Binding Sightseeings}"/>

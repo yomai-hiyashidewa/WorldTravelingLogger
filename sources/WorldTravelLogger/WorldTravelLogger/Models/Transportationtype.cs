@@ -23,7 +23,7 @@ namespace WorldTravelLogger.Models
         Tuktuk,     //
         BycleTaxi,  //
         Boat,       //
-        Roapway,   //
+        Ropeway,   //
         Cesna,     //
         Track,     //
         Geepny,    //

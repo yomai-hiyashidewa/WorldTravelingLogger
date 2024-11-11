@@ -106,31 +106,32 @@ namespace WorldTravelLogger.Models
                 }
                 if (flag)
                 {
-                    base.SetErrorList(index, j);
+                    base.SetErrorList(index, j, str);
                 }
             }
         }
 
         private void SetContext(string[] row)
         {
+            Transportationtype? ttype = null;
+            DateTime? startDate = null; ;
+            CountryType? startCountry = null;
+            string? startPlace = null;
+            PlaceType? startPlaceType = null;
+            DateTime? endDate = null;
+            CountryType? endCountry = null;
+            string? endPlace = null;
+            PlaceType? endPlaceType = null;
+            double? distance = null;
+            int? time = null;
+            double? price = null;
+            CurrencyType? currencyType = null;
+            string? memo = null;
             for (var j = 0; j < row.Length; j++)
             {
                 var str = row[j];
 
-                Transportationtype? ttype = null;
-                DateTime? startDate = null; ;
-                CountryType? startCountry = null;
-                string? startPlace = null;
-                PlaceType? startPlaceType = null;
-                DateTime? endDate = null;
-                CountryType? endCountry = null;
-                string? endPlace = null;
-                PlaceType? endPlaceType = null;
-                double? distance = null;
-                int? time = null;
-                double? price = null;
-                CurrencyType? currencyType = null;
-                string? memo = null;
+               
                 switch (j)
                 {
                     // type
@@ -192,27 +193,26 @@ namespace WorldTravelLogger.Models
                         memo = str;
                         break;
                 }
-                if (ttype != null &&
-                    startDate != null &&
-                    startCountry != null &&
-                    startPlace != null &&
-                    startPlaceType != null &&
-                    endDate != null &&
-                    endCountry != null &&
-                    endPlace != null &&
-                    endPlaceType != null &&
-                    distance != null &&
-                    time != null &&
-                    price != null &&
-                    currencyType != null
-                    )
-                {
-                    var model = new TransportationModel((Transportationtype)ttype, (DateTime)startDate, (CountryType)startCountry, startPlace, (PlaceType)startPlaceType,
-                        (DateTime)endDate, (CountryType)endCountry, endPlace, (PlaceType)endPlaceType,
-                        (double)distance, (int)time, (double)price, (CurrencyType)currencyType, memo);
-                    list_.Add(model);
-                }
-
+            }
+            if (ttype != null &&
+                   startDate != null &&
+                   startCountry != null &&
+                   startPlace != null &&
+                   startPlaceType != null &&
+                   endDate != null &&
+                   endCountry != null &&
+                   endPlace != null &&
+                   endPlaceType != null &&
+                   distance != null &&
+                   time != null &&
+                   price != null &&
+                   currencyType != null
+                   )
+            {
+                var model = new TransportationModel((Transportationtype)ttype, (DateTime)startDate, (CountryType)startCountry, startPlace, (PlaceType)startPlaceType,
+                    (DateTime)endDate, (CountryType)endCountry, endPlace, (PlaceType)endPlaceType,
+                    (double)distance, (int)time, (double)price, (CurrencyType)currencyType, memo);
+                list_.Add(model);
             }
         }
 

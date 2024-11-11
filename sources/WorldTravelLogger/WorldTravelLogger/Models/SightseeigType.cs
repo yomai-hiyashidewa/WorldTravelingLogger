@@ -31,6 +31,7 @@ namespace WorldTravelLogger.Models
         Haircut,        // 散髪
         Tips,           // チップ
         PartTimeJob,    // アルバイト
+        Toilet,         // トイレ
 
     }
 }

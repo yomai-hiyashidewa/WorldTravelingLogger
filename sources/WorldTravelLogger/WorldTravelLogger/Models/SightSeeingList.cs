@@ -79,24 +79,25 @@ namespace WorldTravelLogger.Models
                 }
                 if (flag)
                 {
-                    base.SetErrorList(index, j);
+                    base.SetErrorList(index, j, str);
                 }
             }
         }
 
         private void SetContext(string[] row)
         {
+            string? context = null;
+            SightseeigType? sType = null;
+            DateTime? date = null; ;
+            CountryType? country = null;
+            string? region = null;
+            double? price = null;
+            CurrencyType? currencyType = null;
+            string? memo = null;
             for (var j = 0; j < row.Length; j++)
             {
                 var str = row[j];
-                string? context = null;
-                SightseeigType? sType = null;
-                DateTime? date = null; ;
-                CountryType? country = null;
-                string? region = null;
-                double? price = null;
-                CurrencyType? currencyType = null;
-                string? memo = null;
+                
                 switch (j)
                 {
                     // context
@@ -134,20 +135,19 @@ namespace WorldTravelLogger.Models
                   
                  
                 }
-                if (context != null &&
-                    sType != null &&
-                    date != null &&
-                    country != null &&
-                    region != null &&
-                    price != null &&
-                    currencyType != null
-                    )
-                {
-                    var model = new SightseeingModel(context, (SightseeigType)sType, (DateTime)date, (CountryType)country,
-                        region, (double)price, (CurrencyType)currencyType, memo);
-                    list_.Add(model);
-                }
-
+            }
+            if (context != null &&
+                   sType != null &&
+                   date != null &&
+                   country != null &&
+                   region != null &&
+                   price != null &&
+                   currencyType != null
+                   )
+            {
+                var model = new SightseeingModel(context, (SightseeigType)sType, (DateTime)date, (CountryType)country,
+                    region, (double)price, (CurrencyType)currencyType, memo);
+                list_.Add(model);
             }
         }
 

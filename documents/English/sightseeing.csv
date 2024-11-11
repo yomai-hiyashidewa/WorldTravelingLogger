@@ -368,7 +368,7 @@ sun and moon heritage,Visiting,2022/11/15,PER,Trujillo,0,PEN,-
 heritage entry fee,Ticket,2022/11/15,PER,Trujillo,25,PEN,-
 chimu museum,Visiting,2022/11/15,PER,Trujillo,0,PEN,-
 chanchan heritage,Visiting,2022/11/15,PER,Trujillo,0,PEN,-
-traditional dance,Viewing,2022/11/15,PER,Trujillo,0,PEN,-
+traditional dance,Other,2022/11/15,PER,Trujillo,0,PEN,-
 jetty,Ticket,2022/11/15,PER,Trujillo,1,PEN,-
 lunch,Eating,2022/11/17,PER,Huaraz,16,PEN,-
 Huaraz,Visiting,2022/11/17,PER,Huaraz,7,PEN,-
@@ -883,7 +883,7 @@ coffee,Eating,2023/8/28,MAR,Meknes,15,MAD,-
 tea,Eating,2023/8/28,MAR,Oujda,10,MAD,-
 tajin,Eating,2023/8/29,MAR,Oujda,40,MAD,-
 juice,Eating,2023/8/29,MAR,Oujda,14,MAD,-
-beer + snack,Eating,2023/8/30,-,ferry,3.5,EUR,-
+beer + snack,Eating,2023/8/30,MAR,ferry,3.5,EUR,-
 nador beach,Walking,2023/8/30,MAR,nador,0,MAD,-
 Exchanged to 31 eur,Exchange,2023/8/30,MAR,nador,340,MAD,-
 missed deparute port,Accident,2023/8/30,MAR,nador,0,MAD,-
@@ -973,11 +973,11 @@ pompei heritage audio guide,Shopping,2023/9/17,ITA,Pompei,8,EUR,-
 coffee + water,Eating,2023/9/18,ITA,Pompei,5,EUR,-
 cola,Eating,2023/9/18,ITA,Salerno,2.5,EUR,-
 espresso,Eating,2023/9/18,ITA,Salerno,1.6,EUR,-
-dinner,Eating,2023/9/18,-,ferry,20,EUR,-
-dinner additional fee,Accident,2023/9/18,-,ferry,34,EUR,-
+dinner,Eating,2023/9/18,ITA,ferry,20,EUR,-
+dinner additional fee,Accident,2023/9/18,ITA,ferry,34,EUR,-
 45 min Ticket,Ticket,2023/9/18,ITA,Salerno,2.5,EUR,-
 salerno cathedral,Visiting,2023/9/18,ITA,Salerno,0,EUR,-
-breakfast,Eating,2023/9/18,-,ferry,10,EUR,-
+breakfast,Eating,2023/9/18,ITA,ferry,10,EUR,-
 Haircut,Haircut,2023/9/19,TUN,tunis,20,TND,-
 tea,Eating,2023/9/20,TUN,tunis,5,TND,-
 baldo museum,Visiting,2023/9/20,TUN,tunis,13,TND,-
@@ -1279,7 +1279,7 @@ Sim card,Shopping,2023/12/3,UZB,Toshkent,8,USD,-
 bread X2,Eating,2023/12/4,UZB,Toshkent,10000,UZS,-
 non,Eating,2023/12/4,UZB,Samarkand,15000,UZS,-
 yogurt,Eating,2023/12/4,UZB,Samarkand,15000,UZS,-
-"I had to change the bus 3 times,  because I missed  my accomodation",Accident,2023/12/4,UZB,Samarkand,0,UZS,-
+I had to change the bus 3 times because I missed  my accomodation,Accident,2023/12/4,UZB,Samarkand,0,UZS,-
 lunch,Eating,2023/12/5,UZB,Samarkand,10000,UZS,-
 tea+sweets,Eating,2023/12/5,UZB,Samarkand,27000,UZS,-
 uzubeku ovesabvation,Visiting,2023/12/5,UZB,Samarkand,30000,UZS,-
@@ -1367,13 +1367,13 @@ meet up with my friend,Walking,2023/12/24,JPN,tsuchiura,0,JPY,-
 coffee zerry,Eating,2023/12/24,JPN,odawara,128,JPY,-
 sukiya,Eating,2023/12/24,JPN,odawara,630,JPY,-
 onsen manjyu,Eating,2023/12/25,JPN,hakone,80,JPY,-
-odawara beach,Walking,2023/12/25,JPN,odawara,-,JPY,-
-odawara castle,Visiting,2023/12/25,JPN,odawara,-,JPY,-
-hakone mountain,Walking,2023/12/25,JPN,hakone,-,JPY,-
-5th day of seisyunn 18 Ticket,Accident,2023/12/26,JPN,hakone,-,JPY,-
+odawara beach,Walking,2023/12/25,JPN,odawara,0,JPY,-
+odawara castle,Visiting,2023/12/25,JPN,odawara,0,JPY,-
+hakone mountain,Walking,2023/12/25,JPN,hakone,0,JPY,-
+5th day of seisyunn 18 Ticket,Accident,2023/12/26,JPN,hakone,0,JPY,-
 anmaki,Eating,2023/12/26,JPN,toyohashi,210,JPY,-
-I started resort PartTimeJob,Accident,2024/1/12,JPN,atami,-,JPY,-
-I finished resort PartTimeJob,Accident,2024/2/28,JPN,atami,-,JPY,-
+I started resort PartTimeJob,Accident,2024/1/12,JPN,atami,0,JPY,-
+I finished resort PartTimeJob,Accident,2024/2/28,JPN,atami,0,JPY,-
 miyashima entry fee,Tax,2024/4/1,JPN,hiroshima,100,JPY,-
 istsukushima jinnjya shirne,Visiting,2024/4/1,JPN,hiroshima,300,JPY,-
 gozasouro x 2,Eating,2024/4/1,JPN,himeji,220,JPY,-

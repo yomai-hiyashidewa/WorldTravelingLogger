@@ -23,5 +23,11 @@ namespace WorldTravelLogger.Models
         Border,         // 国境
         Hospital,       // 病院
         Lake,           // 湖
+        Castle,         // 城
+        Catedral,       // 大聖堂
+        Palace,         // 宮殿
+        Church,         // 教会
+
+
     }
 }

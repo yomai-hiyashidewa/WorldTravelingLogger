@@ -12,6 +12,7 @@ namespace WorldTravelLogger.Models
         USD,    // アメリカドル
         EUR,    // ユーロ
         AUD,    // オーストラリアドル
+        AED,    // UAEディルハム
         CAD,    // カナダドル
         MXP,    // メキシコペソ
         CUP,    // キューバペソ
@@ -31,6 +32,7 @@ namespace WorldTravelLogger.Models
         COP,    // コロンビアペソ
         GEL,    // ジョージアラリ
         CHF,    // スイスフラン
+        RSD,    // セルビアディナール
         SEK,    // スウェーデンクローナ
         NOK,    // ノルウェークローネ
         CZK,    // チェココルナ

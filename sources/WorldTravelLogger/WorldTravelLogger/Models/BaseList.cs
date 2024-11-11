@@ -27,10 +27,11 @@ namespace WorldTravelLogger.Models
             return ErrorList.ToArray();
         }
 
-        protected void SetErrorList(int i, int j)
+
+        protected void SetErrorList(int i, int j,string context)
         {
             
-            ErrorList.Add(new FileErrorContext(i,j));
+            ErrorList.Add(new FileErrorContext(i,j,context));
         }
 
         public bool IsError

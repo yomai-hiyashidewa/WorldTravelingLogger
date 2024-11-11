@@ -10,11 +10,13 @@ namespace WorldTravelLogger.Models
     {
         public int X { get; set; }
         public int Y { get; set; }
+        public string Context { get; set; }
 
-        public FileErrorContext(int x, int y)
+        public FileErrorContext(int x, int y, string context)
         {
             X = x;
             Y = y;
+            Context = context;
         }
     }
 }

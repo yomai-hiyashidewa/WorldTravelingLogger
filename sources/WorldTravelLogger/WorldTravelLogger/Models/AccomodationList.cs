@@ -68,7 +68,7 @@ namespace WorldTravelLogger.Models
                 }
                 if (flag)
                 {
-                    base.SetErrorList(index, j);
+                    base.SetErrorList(index, j,str);
                 }
 
             }

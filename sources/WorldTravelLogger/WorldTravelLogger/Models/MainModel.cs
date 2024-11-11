@@ -43,6 +43,7 @@ namespace WorldTravelLogger.Models
         {
             if (!string.IsNullOrWhiteSpace(option_.ExchangeRatePath))
             {
+                exchangeRater_.Init();
                 var result = exchangeRater_.Load(option_.ExchangeRatePath, FileNames.ExchangeRateFile);
                 if (FileLoaded_ != null)
                 {
@@ -55,6 +56,7 @@ namespace WorldTravelLogger.Models
         {
             if (!string.IsNullOrWhiteSpace(option_.SightseeingPath))
             {
+                sightSeeingList_.Init();
                 var result = sightSeeingList_.Load(option_.SightseeingPath, FileNames.SightseeingFile);
                 if (FileLoaded_ != null)
                 {
@@ -67,6 +69,7 @@ namespace WorldTravelLogger.Models
         {
             if (!string.IsNullOrWhiteSpace(option_.TransportationPath))
             {
+                transpotationList_.Init();
                 var result = transpotationList_.Load(option_.TransportationPath, FileNames.TransportationFile);
                 if (FileLoaded_ != null)
                 {
@@ -80,6 +83,7 @@ namespace WorldTravelLogger.Models
 
             if (!string.IsNullOrWhiteSpace(option_.AccomodationPath))
             {
+                accomodationList_.Init();
                 var result = accomodationList_.Load(option_.AccomodationPath, FileNames.AccomodationFile);
                 if (FileLoaded_ != null)
                 {
@@ -145,7 +149,7 @@ namespace WorldTravelLogger.Models
                 }
                 else
                 {
-                    transpotationList_.GetArray();
+                    return transpotationList_.GetArray();
                 }
                 return null;
             }
@@ -176,7 +180,7 @@ namespace WorldTravelLogger.Models
                 }
                 else
                 {
-                    return [];
+                    return null;
                 }
             }
 
