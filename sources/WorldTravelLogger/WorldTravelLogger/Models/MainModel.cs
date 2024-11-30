@@ -10,6 +10,8 @@ namespace WorldTravelLogger.Models
 {
     public class MainModel
     {
+
+        private const string SAVE_FILE_NAME = "WorldTravelLogger.csv";
         private ExchangeRater exchangeRater_;
         private AccomodationList accomodationList_;
         private TranspotationList transpotationList_;
@@ -45,6 +47,10 @@ namespace WorldTravelLogger.Models
             {
                 exchangeRater_.Init();
                 var result = exchangeRater_.Load(option_.ExchangeRatePath, FileNames.ExchangeRateFile);
+                if (result != ErrorTypes.None)
+                {
+                    option_.ExchangeRatePath = null;
+                }
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.ExchangeRateList, result));
@@ -58,6 +64,10 @@ namespace WorldTravelLogger.Models
             {
                 sightSeeingList_.Init();
                 var result = sightSeeingList_.Load(option_.SightseeingPath, FileNames.SightseeingFile);
+                if (result != ErrorTypes.None)
+                {
+                    option_.SightseeingPath = null;
+                }
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.SightSeeingList, result));
@@ -71,6 +81,10 @@ namespace WorldTravelLogger.Models
             {
                 transpotationList_.Init();
                 var result = transpotationList_.Load(option_.TransportationPath, FileNames.TransportationFile);
+                if (result != ErrorTypes.None)
+                {
+                    option_.TransportationPath = null;
+                }
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.TransportationList, result));
@@ -85,6 +99,10 @@ namespace WorldTravelLogger.Models
             {
                 accomodationList_.Init();
                 var result = accomodationList_.Load(option_.AccomodationPath, FileNames.AccomodationFile);
+                if(result != ErrorTypes.None)
+                {
+                    option_.AccomodationPath = null;
+                }
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.AccomodationList, result));
@@ -107,6 +125,22 @@ namespace WorldTravelLogger.Models
             accomodationList_.Init();
             transpotationList_.Init();
             sightSeeingList_.Init();
+            this.Load();
+        }
+
+        private void Load()
+        {
+            var data = CSVReader.ReadCSV(SAVE_FILE_NAME);
+            if (data != null)
+            {
+                option_.Load(data);
+            }
+        }
+
+        public void Exit()
+        {
+            var data = option_.GetSaveData();
+            CSVWriter.WriteCSV(SAVE_FILE_NAME, data);
         }
 
         public OptionModel GetOptionModel()

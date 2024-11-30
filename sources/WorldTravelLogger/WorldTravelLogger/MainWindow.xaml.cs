@@ -20,5 +20,10 @@ namespace WorldTravelLogger
         {
             InitializeComponent();
         }
+
+        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            MainViewModel.Exit();
+        }
     }
 }

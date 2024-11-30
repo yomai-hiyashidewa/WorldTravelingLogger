@@ -27,6 +27,7 @@ namespace WorldTravelLogger.Views
         public MainViewPanel()
         {
             InitializeComponent();
+            
             this.DataContext = new MainViewPanelVM();
             var vm = (MainViewPanelVM)this.DataContext;
             vm.FileLoaded_ += Vm_FileLoaded_;
@@ -95,5 +96,13 @@ namespace WorldTravelLogger.Views
             debugWin_.Delete();
             debugWin_ = null;
         }
+
+        public void Exit()
+        {
+            var vm = (MainViewPanelVM)this.DataContext;
+            vm.Exit();
+        }
+     
+
     }
 }

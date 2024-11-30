@@ -32,6 +32,11 @@ namespace WorldTravelLogger.ViewModels
             model_.Init();
         }
 
+        public void Exit()
+        {
+            model_.Exit();
+        }
+
         public OptionWindowViewModel GetOptionWindowViewModel()
         {
             return new OptionWindowViewModel(model_.GetOptionModel());
