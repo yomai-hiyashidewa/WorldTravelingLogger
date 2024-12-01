@@ -160,6 +160,8 @@ namespace WorldTravelLogger.Models
 
         protected abstract void Set(object[] arrays);
 
+        public abstract void ConvertAnotherCurrency(ExchangeRater rater);
+
         public virtual void Init()
         {
             ErrorList.Clear();
@@ -197,7 +199,11 @@ namespace WorldTravelLogger.Models
             }
             return ErrorTypes.None;
         }
+        public abstract bool IsLoaded { get; }
+
     }
+
+    
 
 
    

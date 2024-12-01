@@ -41,6 +41,35 @@ namespace WorldTravelLogger.Models
             option_ = null;
         }
 
+        private void ConvertAccomodationPrices()
+        {
+            if (exchangeRater_ != null && exchangeRater_.IsLoaded)
+            {
+                if (accomodationList_.IsLoaded)
+                {
+                    accomodationList_.ConvertAnotherCurrency(exchangeRater_);
+                }
+            }
+        }
+
+        private void ConvertTransportationPrices()
+        {
+            if (exchangeRater_ != null && exchangeRater_.IsLoaded)
+            {
+                if (transpotationList_.IsLoaded) { }
+                transpotationList_.ConvertAnotherCurrency(exchangeRater_);
+            }
+        }
+
+        private void ConvertSightSeeingPrices()
+        {
+            if (exchangeRater_ != null && exchangeRater_.IsLoaded)
+            {
+                if (sightSeeingList_.IsLoaded) { }
+                sightSeeingList_.ConvertAnotherCurrency(exchangeRater_);
+            }
+        }
+
         private void Option__ExchangeRatePathChanged(object? sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(option_.ExchangeRatePath))
@@ -50,6 +79,12 @@ namespace WorldTravelLogger.Models
                 if (result != ErrorTypes.None)
                 {
                     option_.ExchangeRatePath = null;
+                }
+                else
+                {
+                    ConvertAccomodationPrices();
+                    ConvertTransportationPrices();
+                    ConvertSightSeeingPrices();
                 }
                 if (FileLoaded_ != null)
                 {
@@ -68,6 +103,10 @@ namespace WorldTravelLogger.Models
                 {
                     option_.SightseeingPath = null;
                 }
+                else
+                {
+                    ConvertSightSeeingPrices();
+                }
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.SightSeeingList, result));
@@ -85,6 +124,10 @@ namespace WorldTravelLogger.Models
                 {
                     option_.TransportationPath = null;
                 }
+                else
+                {
+                    ConvertTransportationPrices();
+                }
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.TransportationList, result));
@@ -99,9 +142,14 @@ namespace WorldTravelLogger.Models
             {
                 accomodationList_.Init();
                 var result = accomodationList_.Load(option_.AccomodationPath, FileNames.AccomodationFile);
+              
                 if(result != ErrorTypes.None)
                 {
                     option_.AccomodationPath = null;
+                }
+                else
+                {
+                    ConvertAccomodationPrices();
                 }
                 if (FileLoaded_ != null)
                 {
@@ -136,6 +184,8 @@ namespace WorldTravelLogger.Models
                 option_.Load(data);
             }
         }
+
+
 
         public void Exit()
         {

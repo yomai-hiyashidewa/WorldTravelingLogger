@@ -10,6 +10,11 @@ namespace WorldTravelLogger.Models
     {
         private List<TransportationModel> list_;
 
+        public override bool IsLoaded
+        {
+            get { return list_.Count > 0; }
+        }
+
         public TranspotationList()
         {
             list_ = new List<TransportationModel>();
@@ -236,6 +241,14 @@ namespace WorldTravelLogger.Models
             {
                 SetContext((string[])arrays[i]);
 
+            }
+        }
+
+        public override void ConvertAnotherCurrency(ExchangeRater rater)
+        {
+            foreach(var model in list_)
+            {
+                model.ConvertPrice(rater);
             }
         }
     }

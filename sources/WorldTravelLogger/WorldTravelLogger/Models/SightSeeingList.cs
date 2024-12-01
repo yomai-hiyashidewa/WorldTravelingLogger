@@ -13,6 +13,11 @@ namespace WorldTravelLogger.Models
     {
         private List<SightseeingModel> list_;
 
+        public override bool IsLoaded
+        {
+            get { return list_.Count > 0; }
+        }
+
         public SightSeeingList()
         {
             list_ = new List<SightseeingModel>();
@@ -171,6 +176,14 @@ namespace WorldTravelLogger.Models
             {
                 SetContext((string[])arrays[i]);
 
+            }
+        }
+
+        public override void ConvertAnotherCurrency(ExchangeRater rater)
+        {
+            foreach(var model in list_)
+            {
+                model.ConvertPrice(rater);
             }
         }
     }

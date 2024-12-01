@@ -10,6 +10,11 @@ namespace WorldTravelLogger.Models
     {
         private List<AccomodationModel> list_;
 
+        public override bool IsLoaded
+        {
+            get { return list_.Count > 0;}
+        }
+
         public AccomodationList()
         {
             list_ = new List<AccomodationModel>();
@@ -165,6 +170,15 @@ namespace WorldTravelLogger.Models
         {
             base.Init();
             list_.Clear();
+        }
+
+        // 別通貨へ両替する
+        public override void ConvertAnotherCurrency(ExchangeRater rater)
+        {
+            foreach(var model in list_)
+            {
+                model.ConvertPrice(rater);
+            }
         }
     }
 }

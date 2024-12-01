@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Markup.Localizer;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WorldTravelLogger.Models
 {
@@ -34,7 +37,23 @@ namespace WorldTravelLogger.Models
             price_ = price;
             currency_ = currency;
             memo_ = memo;
+            switch (currency_)
+            {
+                case CurrencyType.JPY:
+                    JPYPrice = price;
+                    break;
+                case CurrencyType.EUR:
+                    EURPrice = price;
+                    break;
+                case CurrencyType.USD:
+                    USDPrice = price;
+                    break;
+                default:
+                    break;
+            }
         }
+
+       
 
 
         public  DateTime Date { get { return date_; } }         // 日付
@@ -44,25 +63,79 @@ namespace WorldTravelLogger.Models
         public CurrencyType Currency { get { return currency_; } } // 通貨
         public string? Memo { get { return memo_; } }          // メモ
 
-        public int JPYPrice
+        public double JPYPrice
         {
             get;
             private set;
 
         }
 
-        public int EURPrice
+        public double EURPrice
         {
             get;
             private set;
 
         }
 
-        public int USDPrice
+        public double USDPrice
         {
             get;
             private set;
 
+        }
+
+        public void ConvertPrice(ExchangeRater rater)
+        {
+            if (Currency == CurrencyType.JPY)
+            {
+                var rate = rater.GetRate(CurrencyType.EUR, date_);
+                if (rate != 0)
+                {
+                    EURPrice = Price / rate;
+                }
+                rate = rater.GetRate(CurrencyType.USD, date_);
+                if (rate != 0)
+                {
+                    USDPrice = Price / rate;
+                }
+
+            }
+            else
+            {
+                JPYPrice = Price * rater.GetRate(currency_, date_);
+                if(Currency != CurrencyType.EUR)
+                {
+                    var rate = rater.GetRate(CurrencyType.EUR, date_);
+                    if (rate != 0)
+                    {
+                        EURPrice = JPYPrice / rate;
+                    }
+                }
+                if (Currency != CurrencyType.USD)
+                {
+                    var rate = rater.GetRate(CurrencyType.USD, date_);
+                    if (rate != 0)
+                    {
+                        USDPrice = JPYPrice / rate;
+                    }
+                }
+
+            }
+        }
+
+        protected void ConvertJPYPrice(double rate)
+        {
+            JPYPrice = Price * rate;
+        }
+
+        protected void ConvertEurPrice(double rate)
+        {
+            EURPrice = Price / rate;
+        }
+
+        protected void ConvertUSDPrice(double rate)
+        {
+            EURPrice = Price / rate;
         }
 
 

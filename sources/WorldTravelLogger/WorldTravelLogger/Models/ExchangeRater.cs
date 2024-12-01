@@ -14,7 +14,10 @@ namespace WorldTravelLogger.Models
 
         private Dictionary<CurrencyType, Dictionary<string, double>> rateList_;
 
-
+        public override bool IsLoaded
+        {
+            get { return rateList_.Count > 0; }
+        }
 
         private string[] GetDateList(string[] stringList)
         {
@@ -144,6 +147,9 @@ namespace WorldTravelLogger.Models
 
         }
 
-
+        public override void ConvertAnotherCurrency(ExchangeRater rater)
+        {
+            // not need(そもそもこの処理いらない。別の継承クラスに別けるべきかも)
+        }
     }
 }
