@@ -193,21 +193,21 @@
 2022/11/23,PER,-,Bus,0,USD,-
 2022/11/24,PER,Arequipa,Domitory,6,USD,-
 2022/11/25,PER,Arequipa,Domitory,6,USD,-
-2022/11/26,CHL,Arica,Domitory,12.102,CLP,-
-2022/11/27,CHL,Arica,Domitory,12.102,CLP,-
+2022/11/26,CHL,Arica,Domitory,12102,CLP,-
+2022/11/27,CHL,Arica,Domitory,12102,CLP,-
 2022/11/28,CHL,Iquique,Domitory,14,USD,-
 2022/11/29,CHL,Iquique,Domitory,14,USD,-
-2022/11/30,CHL,Antofagasta,SingleRoom,20.306,CLP,-
-2022/12/1,CHL,La Serena,SingleRoom,18.439,CLP,-
-2022/12/2,CHL,La Serena,Domitory,16.19,CLP,-
-2022/12/3,CHL,Santiago de Chile,Domitory,11.83,CLP,-
-2022/12/4,CHL,Santiago de Chile,Domitory,11.83,CLP,-
-2022/12/5,CHL,Santiago de Chile,Domitory,11.83,CLP,-
-2022/12/6,CHL,Copiapó,SingleRoom,18.813,CLP,-
-2022/12/7,CHL,Antofagasta,SingleRoom,20.306,CLP,-
-2022/12/8,CHL,San Pedro de Atacama,Domitory,11.637,CLP,-
-2022/12/9,CHL,San Pedro de Atacama,Domitory,11.637,CLP,-
-2022/12/10,CHL,Calama,SingleRoom,12.93,CLP,-
+2022/11/30,CHL,Antofagasta,SingleRoom,20306,CLP,-
+2022/12/1,CHL,La Serena,SingleRoom,18439,CLP,-
+2022/12/2,CHL,La Serena,Domitory,16.19,USD,-
+2022/12/3,CHL,Santiago de Chile,Domitory,11.83,USD,-
+2022/12/4,CHL,Santiago de Chile,Domitory,11.83,USD,-
+2022/12/5,CHL,Santiago de Chile,Domitory,11.83,USD,-
+2022/12/6,CHL,Copiapó,SingleRoom,18813,CLP,-
+2022/12/7,CHL,Antofagasta,SingleRoom,20306,CLP,-
+2022/12/8,CHL,San Pedro de Atacama,Domitory,11637,CLP,-
+2022/12/9,CHL,San Pedro de Atacama,Domitory,11637,CLP,-
+2022/12/10,CHL,Calama,SingleRoom,12.93,USD,-
 2022/12/11,BOL,Uyuni,Domitory,10.87,USD,-
 2022/12/12,BOL,Uyuni,Domitory,10.87,USD,-
 2022/12/13,BOL,Potosí,SingleRoom,13.04,USD,-
@@ -259,8 +259,8 @@
 2023/1/28,ARG,La Plata,SingleRoom,76000,ARS,-
 2023/1/29,ARG,Ciudad Autónoma de Buenos Aires,Domitory,11843,ARS,-
 2023/1/30,ARG,Ciudad Autónoma de Buenos Aires,Domitory,11843,ARS,-
-2023/1/31,URY,Colonia del Sacramento,Domitory,17.665,ARS,-
-2023/2/1,URY,Colonia del Sacramento,Domitory,17.665,ARS,-
+2023/1/31,URY,Colonia del Sacramento,Domitory,17.665,USD,-
+2023/2/1,URY,Colonia del Sacramento,Domitory,17.665,USD,-
 2023/2/2,URY,Montevideo,Domitory,14.5,USD,-
 2023/2/3,URY,Montevideo,Domitory,14.5,USD,-
 2023/2/4,URY,Punta del Este,Domitory,14.4,USD,-
