@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -9,21 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace WorldTravelLogger
+namespace WorldTravelLogger.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// SightseeingView.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SightseeingView : UserControl
     {
-        public MainWindow()
+        public SightseeingView()
         {
             InitializeComponent();
-        }
-
-        private void Window_Closing(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            MainView.Exit();
         }
     }
 }

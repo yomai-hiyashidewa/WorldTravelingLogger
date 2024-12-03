@@ -59,4 +59,11 @@ namespace WorldTravelLogger.Models
         HKD,    // 香港ドル
 
     }
+
+    public enum MajorCurrencytype
+    {
+        JPN,    // 日本円
+        USD,    // USドル
+        EUR,    // ユーロ
+    }
 }

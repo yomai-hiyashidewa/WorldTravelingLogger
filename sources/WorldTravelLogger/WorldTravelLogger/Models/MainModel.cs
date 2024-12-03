@@ -268,8 +268,24 @@ namespace WorldTravelLogger.Models
                 }
             }
 
-     
         }
+
+        public DateTime StartDate { get; set; }
+
+        public DateTime EndDate { get; set; }
+
+        public MajorCurrencytype CurrentMajorCurrencyType { get; set; }
+
+        public AccomodationType CurrentAccomodationType { get; set; }
+
+        public Transportationtype CurrentTransportationType { get; set; }
+
+        public SightseeigType CurrentSightseeingType { get; set; }
+
+        
+
+
+
 
 
 

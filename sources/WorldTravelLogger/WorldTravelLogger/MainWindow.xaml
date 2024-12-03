@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:WorldTravelLogger"
         xmlns:views="clr-namespace:WorldTravelLogger.Views"
         mc:Ignorable="d" Closing="Window_Closing"
-        Title="Worl Traveling Logger" Height="450" Width="800">
+        Title="Worl Traveling Logger" Height="600" Width="800">
     <Grid>
-        <views:MainViewPanel x:Name="MainViewModel"/>
+        <views:MainViewPanel x:Name="MainView"/>
     </Grid>
 </Window>

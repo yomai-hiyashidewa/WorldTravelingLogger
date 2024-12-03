@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\AccomodationView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\DebugWin.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -16,9 +19,21 @@
     <Compile Update="Views\OptionWindows.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\SideView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SightseeingView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\TransportationView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\AccomodationView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DebugWin.xaml">
@@ -28,6 +43,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\OptionWindows.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SideView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SightseeingView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\TransportationView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
