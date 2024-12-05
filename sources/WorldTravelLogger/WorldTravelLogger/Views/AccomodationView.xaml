@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WorldTravelLogger.Views"
+             xmlns:converter="clr-namespace:WorldTravelLogger.Converters"
+             xmlns:models="clr-namespace:WorldTravelLogger.Models"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -11,10 +13,20 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <DataGrid/>
+        <DataGrid ItemsSource="{Binding TypeAccomodations}"/>
         <StackPanel Grid.Row="1">
-            <ComboBox />
-            <DataGrid/>
+            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Source={local:EnumList {x:Type models:AccomodationType}}}" SelectedItem="{Binding CurrentAccomodationType,Mode=TwoWay}">
+                <ComboBox.Resources>
+                    <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
+                </ComboBox.Resources>
+
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Converter={StaticResource EnumDisplayConv}}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <DataGrid ItemsSource="{Binding Accomodations}"/>
         </StackPanel>
     </Grid>
 </UserControl>

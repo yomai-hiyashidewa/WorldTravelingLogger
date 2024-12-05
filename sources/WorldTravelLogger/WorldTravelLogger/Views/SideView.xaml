@@ -4,6 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WorldTravelLogger.Views"
+             xmlns:converter="clr-namespace:WorldTravelLogger.Converters"
+             xmlns:models="clr-namespace:WorldTravelLogger.Models"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="200">
     <Grid>
@@ -13,7 +15,19 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <ComboBox />
+            <CheckBox Content="world" IsChecked="{Binding IsWorld,Mode=TwoWay}"/>
+            <TextBlock Text="country:"/>
+            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Source={local:EnumList {x:Type models:CountryType}}}" SelectedItem="{Binding CurrentCountry,Mode=TwoWay}" IsEnabled="{Binding IsCountryMode}">
+                <ComboBox.Resources>
+                    <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
+                </ComboBox.Resources>
+
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Converter={StaticResource EnumDisplayConv}}" />
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
 
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -21,38 +35,38 @@
                     <ColumnDefinition Width="20"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <DatePicker/>
+                <DatePicker SelectedDate="{Binding StartDate,Mode=TwoWay}"/>
                 <TextBlock Grid.Column="1" Text="～"/>
-                <DatePicker Grid.Column="2"/>
+                <DatePicker Grid.Column="2" SelectedDate="{Binding EndDate,Mode=TwoWay}"/>
             </Grid>
             <DockPanel>
                 <TextBlock Text="days:"/>
-                <TextBlock/>
+                <TextBlock Text="{Binding TotalDays}"/>
             </DockPanel>
             <DockPanel>
                 <TextBlock Text=":countries:"/>
-                <TextBlock/>
+                <TextBlock Text="{Binding Countries}"/>
             </DockPanel>
         </StackPanel>
         <GroupBox Grid.Row="1" Header="currency">
             <DockPanel>
-                <RadioButton Content="\"/>
-                <RadioButton Content="$"/>
-                <RadioButton Content="€"/>
+                <RadioButton Content="\" IsChecked="{Binding IsCurrencyJPY,Mode=TwoWay}"/>
+                <RadioButton Content="$" IsChecked="{Binding IsCurrencyUSD,Mode=TwoWay}"/>
+                <RadioButton Content="€" IsChecked="{Binding IsCurrencyEUR,Mode=TwoWay}"/>
             </DockPanel>
         </GroupBox>
         <StackPanel Grid.Row="2">
             <DockPanel>
                 <TextBlock Text="Total cost:"/>
-                <TextBlock />
+                <TextBlock Text="{Binding TotalCost}" />
             </DockPanel>
             <DockPanel>
                 <TextBlock Text="Total distance:"/>
-                <TextBlock />
+                <TextBlock Text="{Binding TotalMovingDistance}" />
             </DockPanel>
             <DockPanel>
                 <TextBlock Text="Total time:"/>
-                <TextBlock />
+                <TextBlock Text="{Binding TotalMovingTime}" />
             </DockPanel>
         </StackPanel>
 

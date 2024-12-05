@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,213 +10,313 @@ namespace WorldTravelLogger.Models
     //ISO 3166-1 
     public enum CountryType
     {
+        [Display(Name = "Japan")]
         JPN,    // 	Japan
+        
+        // East Asia
+        [Display(Name = "South Korea")]
+        KOR,    // Korea (the Republic of)
+        [Display(Name = "TTaiwan")]
+        TWN,    // TTaiwan, Province of China
+        [Display(Name = "Hong Kong")]
+        HKG,    // Hong Kong
+        [Display(Name = "Philippines")]
+        PHL,    // Philippines
+        [Display(Name = "Viet Nam")]
+        VNM,    // Viet Nam
+        
+        // oceania
+        [Display(Name = "Australia")]
+        AUS,    // Australia
+        
+        // north america
+        [Display(Name = "United States of America")]
+        USA,    // United States of America
+        [Display(Name = "Canada")]
+        CAN,    // Canada
+
+        // central america
+        [Display(Name = "Mexico")]
+        MEX,    // Mexico
+        [Display(Name = "Guatemala")]
+        GTM,    // Guatemala
+        [Display(Name = "Belize")]
+        BLZ,    // Belize
+        [Display(Name = "El Salvador")]
+        SLV,    // El Salvador
+        [Display(Name = "Honduras")]
+        HND,    // Honduras
+        [Display(Name = "Nicaragua")]
+        NIC,    // Nicaragua
+        [Display(Name = "Costa Rica")]
+        CRI,    // Costa Rica
+        [Display(Name = "Panama")]
+        PAN,    // Panama
+        [Display(Name = "Cuba")]
+        CUB,    // Cuba
+        // south america
+        [Display(Name = "Colombia")]
+        COL,    // Colombia
+        [Display(Name = "Ecuador")]
+        ECU,    // Ecuador
+        [Display(Name = "Pérou")]
+        PER,    // Pérou
+        [Display(Name = "Bolivia")]
+        BOL,    // Bolivia (Plurinational State of)
+        [Display(Name = "Chile")]
+        CHL,    // Chile
+        [Display(Name = "Paraguay")]
+        PRY,    // Paraguay
+        [Display(Name = "Argentina")]
+        ARG,    // Argentina
+        [Display(Name = "Uruguay")]
+        URY,    // Uruguay
+        [Display(Name = "Brazil")]
+        BRA,    // Brazil
+
+        
+        // Europe
+        [Display(Name = "Iceland")]
         ISL,    // Iceland
+        // UK
+        [Display(Name = "Ireland")]
         IRL,    // Ireland
+        [Display(Name = "UK")]
+        GBR,    // United Kingdom of Great Britain and Northern Ireland
+        // north Europe
+        [Display(Name = "Norway")]
+        NOR,    // Norway
+        [Display(Name = "Sweden")]
+        SWE,    // Sweden
+        [Display(Name = "Finland")]
+        FIN,    // Finland
+        [Display(Name = "Denmark")]
+        DNK,    // Denmark
+                // west Europe
+        [Display(Name = "Portugal")]
+        PRT,    // Portugal
+        [Display(Name = "Spain")]
+        ESP,    // Spain
+        [Display(Name = "Andorra")]
+        AND,    // Andorra
+        [Display(Name = "France")]
+        FRA,    // France
+        [Display(Name = "Monaco")]
+        MCO,    // Monaco
+        [Display(Name = "Belgium")]
+        BEL,    // Belgium
+        [Display(Name = "Luxembourg")]
+        LUX,    // Luxembourg
+        [Display(Name = "Netherlands")]
+        NLD,    // Netherlands
+        [Display(Name = "Germany")]
+        DEU,    // Germany
+        [Display(Name = "Switzerland")]
+        CHE,    // Switzerland
+        [Display(Name = "Liechtenstein")]
+        LIE,    // Liechtenstein
+        [Display(Name = "Austria")]
+        AUT,    // Austria
+        [Display(Name = "Hungary")]
+        HUN,    // Hungary
+        [Display(Name = "Czechia")]
+        CZE,    // Czechia
+        [Display(Name = "Slovakia")]
+        SVK,    // Slovakia
+        [Display(Name = "Poland")]
+        POL,    // Poland
+        [Display(Name = "Italy")]
+        ITA,    // Italy
+        [Display(Name = "San Marino")]
+        SMR,    // San Marino
+        [Display(Name = "Estonia")]
+        EST,    // Estonia
+        [Display(Name = "Latvia")]
+        LVA,    // Latvia
+        [Display(Name = "Lithuania")]
+        LTU,    // Lithuania
+        [Display(Name = "Croatia")]
+        HRV,    // Croatia
+        [Display(Name = "Slovenia")]
+        SVN,    // Slovenia
+        [Display(Name = "Bosnia and Herzegovina")]
+        BIH,    // Bosnia and Herzegovina
+        [Display(Name = "Serbia")]
+        SRB,    // Serbia
+        [Display(Name = "Kosovo")]
+        KVX,    // Kosovo
+        [Display(Name = "Montenegro")]
+        MNE,    // Montenegro
+        [Display(Name = "North Macedonia")]
+        MKD,    // North Macedonia
+        [Display(Name = "Bulgaria")]
+        BGR,    // Bulgaria
+        [Display(Name = "Romania")]
+        ROU,    // Romania
+        [Display(Name = "Moldova")]
+        MDA,    // Moldova, Republic of
+        [Display(Name = "Albania")]
+        ALB,    // Albania
+        [Display(Name = "Greece")]
+        GRC,    // Greece
+       
+        [Display(Name = "Cyprus")]
+        CYP,    // Cyprus
+        [Display(Name = "Malta")]
+        MLT,    // Malta
+        // north africa
+        [Display(Name = "Egypt")]
+        EGY,    // Egypt
+        [Display(Name = "Tunisia")]
+        TUN,    // Tunisia
+        [Display(Name = "Morocco")]
+        MAR,    // Morocco
+                // Central Asia
+        [Display(Name = "Turkiye")]
+        TUR,    // Turkiye
+        [Display(Name = "Qatar")]
+        QAT,    // Qatar
+        [Display(Name = "United Arab Emirates")]
+        ARE,    // United Arab Emirates
+        [Display(Name = "Georgia")]
+        GEO,    // Georgia
+        [Display(Name = "Armenia")]
+        ARM,    // Armenia
+        [Display(Name = "Uzbekistan")]
+        UZB,    // Uzbekistan
+        // South Asia
+        [Display(Name = "India")]
+        IND,    // India
+        // not yet
         AZE,    // Azerbaijan
         AFG,    // Afghanistan
-        USA,    // United States of America
-        ARE,    // United Arab Emirates
         DZA,    // Algeria
-        ARG,    // Argentina
         ABW,    // Aruba
-        ALB,    // Albania
-        ARM,    // Armenia
+        
         AIA,    // Anguilla
         AGO,    // Angola
         ATG,    // Antigua and Barbuda
-        AND,    // Andorra
         YEM,    // Yemen
-        GBR,    // United Kingdom of Great Britain and Northern Ireland
         ISR,    // Israel
-        ITA,    // Italy
         IRQ,    // Iraq
         IRN,    // Iran (Islamic Republic of)
-        IND,    // India
         IDN,    // Indonesia
         WLF,    // Wallis and Futuna
         UGA,    // Uganda
         UKR,    // Ukraine
-        UZB,    // Uzbekistan
-        URY,    // Uruguay
-        ECU,    // Ecuador
-        EGY,    // Egypt
-        EST,    // Estonia
         SWZ,    // Eswatini
         ETH,    // Ethiopia
         ERI,    // Eritrea
-        SLV,    // El Salvador
-        AUS,    // Australia
-        AUT,    // Austria
         OMN,    // Oman
-        NLD,    // Netherlands
         GHA,    // Ghana
         CPV,    // Cabo Verde
         GUY,    // Guyana
         KAZ,    // Kazakhstan
-        QAT,    // Qatar
-        CAN,    // Canada
         GAB,    // Gabon
         CMR,    // Cameroon
         GMB,    // Gambia
         KHM,    // Cambodia
-        MKD,    // North Macedonia
         GIN,    // Guinea
         GNB,    // Guinea-Bissau
-        CYP,    // Cyprus
-        CUB,    // Cuba
         CUW,    // Curaçao
-        GRC,    // Greece
         KIR,    // Kiribati
         KGZ,    // Kyrgyzstan
-        GTM,    // Guatemala
         KWT,    // Kuwait
         GRD,    // Grenada
-        HRV,    // Croatia
         KEN,    // Kenya
         CIV,    // Côte d'Ivoire
-        CRI,    // Costa Rica
         COM,    // Comoros
-        COL,    // Colombia
         COG,    // Congo
         COD,    // Congo, Democratic Republic of the
         SAU,    // Saudi Arabia
         WSM,    // Samoa
         ZMB,    // Zambia
-        SMR,    // San Marino
         SLE,    // Sierra Leone
         DJI,    // 	Djibouti
         JAM,    // Jamaica
-        GEO,    // Georgia
         SYR,    // Syrian Arab Republic
         SGP,    // Singapore
         ZWE,    // Zimbabwe
-        CHE,    // Switzerland
-        SWE,    // Sweden
         SDN,    // Sudan
-        ESP,    // Spain
         SUR,    // Suriname
         LKA,    // Sri Lanka
-        SVK,    // Slovakia
-        SVN,    // Slovenia
         SYC,    // Seychelles
         SEN,    // Senegal
-        SRB,    // Serbia
         LCA,    // Saint Lucia
         SOM,    // Somalia
         THA,    // Thailand
-        KOR,    // Korea (the Republic of)
-        TWN,    // TTaiwan, Province of China
         TJK,    // Tajikistan
         TZA,    // Tanzania, United Republic of
-        CZE,    // Czechia
         TCD,    // Chad
         CAF,    // Central African Republic
         CHN,    // China
-        TUN,    // Tunisia
         PRK,    // Korea (the Democratic People's Republic of)
-        CHL,    // Chile
         TUV,    // Tuvalu
-        DNK,    // Denmark
-        DEU,    // Germany
         TGO,    // Togo
         TKL,    // Tokelau
         DOM,    // Dominican Republic
         DMA,    // Dominica
         TTO,    // Trinidad and Tobago
         TKM,    // Turkmenistan
-        TUR,    // Turkiye
         TON,    // Tonga
         NGA,    // Nigeria
         NRU,    // Nauru
         NAM,    // Namibia
         ATA,    // Antarctica
         NIU,    // Niue
-        NIC,    // Nicaragua
         NER,    // Niger
         ESH,    // Western Sahara
         NCL,    // New Caledonia
         NZL,    // New Zealand
         NPL,    // Népal
-        NOR,    // Norway
         BHR,    // Bahrain
         HTI,    // Haiti
         PAK,    // Pakistan
         VAT,    // Holy See
-        PAN,    // Panama
         VUT,    // Vanuatu
         BHS,    // Bahamas
         PNG,    // Papua New Guinea
         BMU,    // Bermuda
         PLW,    // Palau
-        PRY,    // Paraguay
         BRB,    // Barbados
         PSE,    // Palestine, State of	
-        HUN,    // Hungary
         BGD,    // Bangladesh
         TLS,    // Timor-Leste
         PCN,    // Pitcairn
         FJI,    // Fiji
-        PHL,    // Philippines
-        FIN,    // Finland
         BTN,    // Bhutan
         PRI,    // Puerto Rico
         FRO,    // Faroe Islands
-        BRA,    // Brazil
-        FRA,    // France
-        BGR,    // Bulgaria
         BFA,    // Burkina Faso
         BRN,    // Brunei Darussalam
         BDI,    // Burundi
-        VNM,    // Viet Nam
         BEN,    // Benin
         VEN,    // Venezuela (Bolivarian Republic of)
         BLR,    // Belarus
-        BLZ,    // Belize
-        PER,    // Pérou
-        BEL,    // Belgium
-        POL,    // Poland
-        BIH,    // Bosnia and Herzegovina
         BWA,    // Botswana
-        BOL,    // Bolivia (Plurinational State of)
-        PRT,    // Portugal
-        HKG,    // Hong Kong
-        HND,    // Honduras
         MAC,    // Macau
         MDG,    // Madagascar
         MYT,    // Mayotte
         MWI,    // Malawi
         MLI,    // Mali
-        MLT,    // Malta
         MYS,    // Malaysia
         FSM,    // Micronesia (Federated States of)
         ZAF,    // South Africa
         SSD,    // South Sudan
         MMR,    // Myanmar
-        MEX,    // Mexico
         MUS,    // Mauritius
         MRT,    // Mauritania
         MOZ,    // Mozambique
-        MCO,    // Monaco
         MDV,    // Maldives
-        MDA,    // Moldova, Republic of
-        MAR,    // Morocco
         MNG,    // Mongolia
-        MNE,    // Montenegro
         JOR,    // Jordan
         LAO,    // Lao People's Democratic Republic
-        LVA,    // Latvia
-        LTU,    // Lithuania
         LBY,    // Libya
-        LIE,    // Liechtenstein
         LBR,    // Liberia
-        ROU,    // Romania
-        LUX,    // Luxembourg
         RWA,    // Rwanda
         LSO,    // Lesotho
         LBN,    // Lebanon
         RUS,    // Russian Federation
-        KVX,    // Kosovo
         UNK,    // unknown
 
 

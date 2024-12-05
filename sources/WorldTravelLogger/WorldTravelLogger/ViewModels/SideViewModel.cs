@@ -7,33 +7,245 @@ using WorldTravelLogger.Models;
 
 namespace WorldTravelLogger.ViewModels
 {
-    internal class SideViewModel : ViewModelBase
+    public class SideViewModel : ViewModelBase
     {
-        private MainModel model_;
+        private MainModel? model_;
+        public SideViewModel()
+        {
+            // dummy   
+        }
+
         public SideViewModel(MainModel model)
         {
             model_ = model;
         }
 
-        public DateTime StartDate { get; set; }
 
-        public DateTime EndDate { get; set; }
 
-        public bool IsCurrencyJPY { get; set; }
+        public bool IsWorld
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return model_.IsWorldMode;
+                }
+            }
+            set
+            {
+                model_.IsWorldMode = value;
+            }
+        }
 
-        public bool IsCurrencyUSD { get; set; }
+        public bool IsCountryMode
+        {
+            get
+            {
+                return !IsWorld;
+            }
+        }
 
-        public bool IsCurrencyEUR { get; set; }
+        
 
-        public int Countries { get; set; }
+        public CountryType CurrentCountry
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return CountryType.JPN;
+                }
+                else
+                {
+                    return model_.CurrentCountryType;
+                }
+            }
+            set
+            {
+                model_.CurrentCountryType = value;
+            }
+        }
 
-        public int TotalDays { get; set; }
+        public DateTime StartDate
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return DateTime.Now;
+                }
+                else
+                {
+                    return model_.StartDate;
+                }
+            }
+            set
+            {
+                model_.StartDate = value;
+            }
+        }
 
-        public int TotalCost { get; set; }
+        public DateTime EndDate
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return DateTime.Now;
+                }
+                else
+                {
+                    return model_.EndDate;
+                }
+            }
+            set
+            {
+                model_.EndDate = value;
+            }
+        }
 
-        public int TotalMovingDistance { get; set; }
+        public int TotalDays
+        {
+            get
+            {
+                if(model_ == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    var date = EndDate - StartDate;
+                    return (int)date.TotalDays;
+                }
+            }
+        }
 
-        public int TotalMovingTime { get; set; }
+
+        public int Countries
+        {
+            get
+            {
+                if(model_ == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 0;   // not yet
+                }
+            }
+        }
+
+       
+
+        public bool IsCurrencyJPY
+        {
+            get
+            {
+                if(model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return model_.CurrentMajorCurrencyType == MajorCurrencytype.JPN;
+                }
+
+            }
+            set
+            {
+                model_.CurrentMajorCurrencyType = MajorCurrencytype.JPN;
+            }
+        }
+
+        public bool IsCurrencyUSD
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return model_.CurrentMajorCurrencyType == MajorCurrencytype.USD;
+                }
+
+            }
+            set
+            {
+                model_.CurrentMajorCurrencyType = MajorCurrencytype.USD;
+            }
+        }
+
+        public bool IsCurrencyEUR
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return model_.CurrentMajorCurrencyType == MajorCurrencytype.EUR;
+                }
+
+            }
+            set
+            {
+                model_.CurrentMajorCurrencyType = MajorCurrencytype.EUR;
+            }
+        }
+
+        public int TotalCost
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 0;   // not yet
+                }
+            }
+        }
+
+        public int TotalMovingDistance
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 0;   // not yet
+                }
+            }
+        }
+
+        public int TotalMovingTime
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return 0;   // not yet
+                }
+            }
+        }
 
 
 

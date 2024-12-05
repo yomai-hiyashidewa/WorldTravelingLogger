@@ -21,10 +21,10 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
-            <local:SideView/>
+            <local:SideView x:Name="SideView"/>
             <TabControl Grid.Column="1">
                 <TabItem Header="accomodation">
-                    <local:AccomodationView/>
+                    <local:AccomodationView x:Name="AcomodationViewPanel"/>
                 </TabItem>
                 <TabItem Header="Transportation">
                     <local:TransportationView/>

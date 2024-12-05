@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WorldTravelLogger.ViewModels;
 
 namespace WorldTravelLogger.Views
 {
@@ -23,6 +24,15 @@ namespace WorldTravelLogger.Views
         public SideView()
         {
             InitializeComponent();
+            this.DataContext = new SideViewModel();
         }
+
+        public void SetVM(SideViewModel vm)
+        {
+            this.DataContext = vm;
+        }
+
+
+        
     }
 }

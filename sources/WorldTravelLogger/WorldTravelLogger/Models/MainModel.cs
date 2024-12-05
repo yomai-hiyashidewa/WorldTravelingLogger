@@ -158,9 +158,19 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        private void InitParameter()
+        {
+            IsWorldMode = true;
+            StartDate = new DateTime(2022, 5, 16);
+            EndDate = new DateTime(2024, 5, 1);
+            CurrentCountryType = CountryType.JPN;
+            CurrentMajorCurrencyType = MajorCurrencytype.JPN;
+        }
+
         public MainModel()
         {
             SetOptionModel();
+            InitParameter();
             exchangeRater_ = new ExchangeRater();
             accomodationList_ = new AccomodationList();
             transpotationList_ = new TranspotationList();
@@ -223,6 +233,12 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        public AccomodationModel[] GetAccomodations(AccomodationType type)
+        {
+            var value = accomodationList_.GetArray().Where(j => j.Accomodation == type);
+            return value.ToArray();
+        }
+
         public object[] Transportations
         {
             get
@@ -270,6 +286,10 @@ namespace WorldTravelLogger.Models
 
         }
 
+        public bool IsWorldMode { get; set; }
+
+        public CountryType CurrentCountryType { get; set; }
+
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }
@@ -282,7 +302,12 @@ namespace WorldTravelLogger.Models
 
         public SightseeigType CurrentSightseeingType { get; set; }
 
-        
+        // accomodation
+
+        public AccomodationTypeModel[] GetAccomodationTypeArray()
+        {
+            return accomodationList_.GetTypeArray();
+        }
 
 
 
@@ -293,7 +318,9 @@ namespace WorldTravelLogger.Models
 
 
 
-    }
+
+
+        }
 
 
 

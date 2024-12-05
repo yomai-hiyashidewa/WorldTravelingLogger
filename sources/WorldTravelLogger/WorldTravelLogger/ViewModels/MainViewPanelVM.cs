@@ -47,6 +47,18 @@ namespace WorldTravelLogger.ViewModels
             return new DebugWinViewModel(model_);
         }
 
+        public SideViewModel GetSideViewModel()
+        {
+            return new SideViewModel(model_);
+        }
+
+        public AccomodationViewModel GetAccomodationViewModel()
+        {
+            return new AccomodationViewModel(model_);
+        }
+
+    
+
         public string GetFilename(ListType type)
         {
             switch(type)

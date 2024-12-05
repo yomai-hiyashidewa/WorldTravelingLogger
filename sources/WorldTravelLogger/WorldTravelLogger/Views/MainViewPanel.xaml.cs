@@ -50,6 +50,8 @@ namespace WorldTravelLogger.Views
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             var vm = (MainViewPanelVM)this.DataContext;
+            SideView.SetVM(vm.GetSideViewModel());
+            AcomodationViewPanel.SetVM(vm.GetAccomodationViewModel());
             vm.Init();
         }
 

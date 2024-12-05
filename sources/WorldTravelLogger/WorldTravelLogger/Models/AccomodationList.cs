@@ -9,6 +9,7 @@ namespace WorldTravelLogger.Models
     internal class AccomodationList : BaseList
     {
         private List<AccomodationModel> list_;
+        private Dictionary<AccomodationType, AccomodationTypeModel> calcDic_;
 
         public override bool IsLoaded
         {
@@ -18,6 +19,7 @@ namespace WorldTravelLogger.Models
         public AccomodationList()
         {
             list_ = new List<AccomodationModel>();
+            calcDic_ = new Dictionary<AccomodationType, AccomodationTypeModel>();
         }
 
         public AccomodationModel[] GetArray()
@@ -179,6 +181,39 @@ namespace WorldTravelLogger.Models
             {
                 model.ConvertPrice(rater);
             }
+            CalcModels();
         }
+
+        private void CalcModels()
+        {
+            calcDic_.Clear();
+            foreach(var model in list_)
+            {
+                var type = model.Accomodation;
+                AccomodationTypeModel tModel;
+                if(calcDic_.TryGetValue(type,out tModel))
+                {
+                    tModel.Set(model.JPYPrice);
+                }
+                else
+                {
+                    tModel = new AccomodationTypeModel(type);
+                    tModel.Set(model.JPYPrice);
+                    calcDic_.Add(type, tModel);
+                }
+            }
+        }
+
+        public AccomodationTypeModel[] GetTypeArray()
+        {
+            var list = new List<AccomodationTypeModel>();
+            foreach(var pair in calcDic_)
+            {
+                list.Add(pair.Value);
+            }
+            return list.ToArray();
+        }
+
+        
     }
 }
