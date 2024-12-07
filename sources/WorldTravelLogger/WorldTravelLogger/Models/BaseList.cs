@@ -201,7 +201,8 @@ namespace WorldTravelLogger.Models
         }
         public abstract bool IsLoaded { get; }
 
-        protected abstract void CalcModels();
+        // memo interfaceで実装すべきかも
+        public abstract void CalcModels(bool isWorld,CountryType type, DateTime start, DateTime end);
 
     }
 

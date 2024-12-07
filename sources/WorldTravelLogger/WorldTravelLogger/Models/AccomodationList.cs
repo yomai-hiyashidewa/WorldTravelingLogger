@@ -9,6 +9,7 @@ namespace WorldTravelLogger.Models
     public class AccomodationList : BaseList
     {
         private List<AccomodationModel> list_;
+        private List<AccomodationModel> calcList_;
         private Dictionary<AccomodationType, AccomodationTypeModel> calcDic_;
 
         public override bool IsLoaded
@@ -19,6 +20,7 @@ namespace WorldTravelLogger.Models
         public AccomodationList()
         {
             list_ = new List<AccomodationModel>();
+            calcList_ = new List<AccomodationModel>();
             calcDic_ = new Dictionary<AccomodationType, AccomodationTypeModel>();
         }
 
@@ -181,28 +183,46 @@ namespace WorldTravelLogger.Models
             {
                 model.ConvertPrice(rater);
             }
-            CalcModels();
+           
         }
 
-        protected override void CalcModels()
+        public override void CalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
         {
+            calcList_.Clear();
             calcDic_.Clear();
-            foreach(var model in list_)
+            if (isWorld)
             {
-                var type = model.Accomodation;
+                foreach(var model in list_.Where(m => start <= m.Date && m.Date <= end))
+                {
+                    calcList_.Add(model);
+                }
+            }
+            else
+            {
+                foreach (var model in list_.Where(m => m.Country == type &&
+                start <= m.Date && m.Date <= end))
+                {
+                    calcList_.Add(model);
+                }
+            }
+            foreach (var model in calcList_)
+            {
+               
                 AccomodationTypeModel tModel;
-                if(calcDic_.TryGetValue(type,out tModel))
+                if (calcDic_.TryGetValue(model.Accomodation, out tModel))
                 {
                     tModel.Set(model.JPYPrice);
                 }
                 else
                 {
-                    tModel = new AccomodationTypeModel(type);
+                    tModel = new AccomodationTypeModel(model.Accomodation);
                     tModel.Set(model.JPYPrice);
-                    calcDic_.Add(type, tModel);
+                    calcDic_.Add(model.Accomodation, tModel);
                 }
             }
         }
+
+        
 
         public AccomodationTypeModel[] GetTypeArray()
         {
@@ -214,6 +234,11 @@ namespace WorldTravelLogger.Models
             return list.ToArray();
         }
 
-        
+        public AccomodationModel[] GetCalcArray()
+        {
+            return calcList_.ToArray();
+        }
+
+
     }
 }

@@ -360,7 +360,10 @@ namespace WorldTravelLogger.Models
 
         private void FireControlChangd()
         {
-            if(ControlChanged_ != null)
+            accomodationList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
+            transpotationList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
+            sightSeeingList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
+            if (ControlChanged_ != null)
             {
                 ControlChanged_.Invoke(this, EventArgs.Empty);
             }
@@ -372,12 +375,13 @@ namespace WorldTravelLogger.Models
         {
             // controlに依存するので追記
             return accomodationList_.GetTypeArray();
+            
         }
 
         public AccomodationModel[] GetAccomodations()
         {
             // controlに依存するので追記
-            return accomodationList_.GetArray();
+            return accomodationList_.GetCalcArray();
         }
 
         // transportation
@@ -390,7 +394,7 @@ namespace WorldTravelLogger.Models
         public TransportationModel[] GetTransportations()
         {
             // controlに依存するので追記
-            return transpotationList_.GetArray();
+            return transpotationList_.GetCalcArray();
         }
 
         // Sightseeing
@@ -404,7 +408,7 @@ namespace WorldTravelLogger.Models
         public SightseeingModel[] GetSightseeings()
         {
             // controlに依存するので追記
-            return sightSeeingList_.GetArray();
+            return sightSeeingList_.GetCalcArray();
         }
 
 

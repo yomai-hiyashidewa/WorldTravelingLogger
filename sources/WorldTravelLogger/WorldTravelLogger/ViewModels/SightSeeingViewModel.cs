@@ -19,7 +19,19 @@ namespace WorldTravelLogger.ViewModels
         public SightSeeingViewModel(MainModel model)
         {
             model_ = model;
+            model.ControlChanged_ += Model_ControlChanged_;
             currentSightSeeingType_ = SightseeigType.Tour;
+        }
+
+        private void UpdeteAll()
+        {
+            this.RaisePropertyChanged("TypeSightseeings");
+            this.RaisePropertyChanged("Sightseeings");
+        }
+
+        private void Model_ControlChanged_(object? sender, EventArgs e)
+        {
+            UpdeteAll();
         }
 
         public SightseeingTypeModel[] TypeSightseeings
@@ -48,7 +60,6 @@ namespace WorldTravelLogger.ViewModels
                 if (currentSightSeeingType_ != value)
                 {
                     currentSightSeeingType_ = value;
-                    this.RaisePropertyChanged("TypeSightseeings");
                     this.RaisePropertyChanged("Sightseeings");
                 }
             }

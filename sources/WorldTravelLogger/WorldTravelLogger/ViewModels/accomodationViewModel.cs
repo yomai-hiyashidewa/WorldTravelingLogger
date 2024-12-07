@@ -18,9 +18,27 @@ namespace WorldTravelLogger.ViewModels
         public AccomodationViewModel(MainModel model)
         {
             model_ = model;
+            model_.FileLoaded_ += Model__FileLoaded_;
+            model_.ControlChanged_ += Model__ControlChanged_;
             currentAccomodationtype_ = AccomodationType.Domitory;
         }
 
+     
+        private void UpdateAll()
+        {
+            this.RaisePropertyChanged("TypeAccomodations");
+            this.RaisePropertyChanged("Accomodations");
+        }
+
+        private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
+        {
+            //this.UpdateAll();
+        }
+
+        private void Model__ControlChanged_(object? sender, EventArgs e)
+        {
+            this.UpdateAll();
+        }
 
 
         public AccomodationTypeModel[] TypeAccomodations
@@ -45,10 +63,9 @@ namespace WorldTravelLogger.ViewModels
             get { return currentAccomodationtype_; }
             set
             {
-                if(currentAccomodationtype_ != value)
+                if (currentAccomodationtype_ != value)
                 {
                     currentAccomodationtype_ = value;
-                    this.RaisePropertyChanged("TypeAccomodations");
                     this.RaisePropertyChanged("Accomodations");
                 }
             }

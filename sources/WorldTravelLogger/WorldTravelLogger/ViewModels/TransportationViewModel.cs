@@ -19,7 +19,19 @@ namespace WorldTravelLogger.ViewModels
         public TransportationViewModel(MainModel model)
         {
             model_ = model;
+            model.ControlChanged_ += Model_ControlChanged_;
             currentTransportationType_ = Transportationtype.Train;
+        }
+
+        private void UpdateAll()
+        {
+            this.RaisePropertyChanged("TypeTransportations");
+            this.RaisePropertyChanged("Transportations");
+        }
+
+        private void Model_ControlChanged_(object? sender, EventArgs e)
+        {
+            UpdateAll();
         }
 
         public TransportationTypeModel[] TypeTransportations

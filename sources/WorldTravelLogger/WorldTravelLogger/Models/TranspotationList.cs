@@ -9,6 +9,7 @@ namespace WorldTravelLogger.Models
     public class TranspotationList : BaseList
     {
         private List<TransportationModel> list_;
+        private List<TransportationModel> calcList_;
         private Dictionary<Transportationtype, TransportationTypeModel> calcDic_;
 
         public override bool IsLoaded
@@ -19,6 +20,7 @@ namespace WorldTravelLogger.Models
         public TranspotationList()
         {
             list_ = new List<TransportationModel>();
+            calcList_ = new List<TransportationModel>();
             calcDic_ = new Dictionary<Transportationtype, TransportationTypeModel>();
         }
 
@@ -252,30 +254,9 @@ namespace WorldTravelLogger.Models
             {
                 model.ConvertPrice(rater);
             }
-            CalcModels();
         }
 
-        protected override void CalcModels()
-        {
-            calcDic_.Clear();
-            foreach (var model in list_)
-            {
-                var type = model.Transportationtype;
-                TransportationTypeModel tModel;
-                if (calcDic_.TryGetValue(type, out tModel))
-                {
-                    tModel.Set(model.JPYPrice);
-                    tModel.SetParameter(model.Distance, model.Time);
-                }
-                else
-                {
-                    tModel = new TransportationTypeModel(type);
-                    tModel.Set(model.JPYPrice);
-                    calcDic_.Add(type, tModel);
-                    tModel.SetParameter(model.Distance, model.Time);
-                }
-            }
-        }
+       
 
         public TransportationTypeModel[] GetTypeArray()
         {
@@ -287,6 +268,48 @@ namespace WorldTravelLogger.Models
             return list.ToArray();
         }
 
+        public TransportationModel[] GetCalcArray()
+        {
+            return calcList_.ToArray();
+        }
 
+        public override void CalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
+        {
+            calcList_.Clear();
+            calcDic_.Clear();
+            // dateの設定に関してはまた後で考える
+            if (isWorld)
+            {
+                foreach (var model in list_.Where(m => start <= m.Date && m.Date <= end))
+                {
+                    calcList_.Add(model);
+                }
+            }
+            else
+            {
+                foreach (var model in list_.Where(m => (m.StartCountry == type || m.EndCountry == type) &&
+                start <= m.Date && m.Date <= end))
+                {
+                    calcList_.Add(model);
+                }
+            }
+
+            foreach (var model in calcList_)
+            {                
+                TransportationTypeModel tModel;
+                if (calcDic_.TryGetValue(model.Transportationtype, out tModel))
+                {
+                    tModel.Set(model.JPYPrice);
+                    tModel.SetParameter(model.Distance, model.Time);
+                }
+                else
+                {
+                    tModel = new TransportationTypeModel(model.Transportationtype);
+                    tModel.Set(model.JPYPrice);
+                    calcDic_.Add(model.Transportationtype, tModel);
+                    tModel.SetParameter(model.Distance, model.Time);
+                }
+            }
+        }
     }
 }

@@ -152,9 +152,11 @@ namespace WorldTravelLogger.Models
             // not need(そもそもこの処理いらない。別の継承クラスに別けるべきかも)
         }
 
-        protected override void CalcModels()
+     
+
+        public override void CalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
         {
-            // not need
+            throw new NotImplementedException();
         }
     }
 }

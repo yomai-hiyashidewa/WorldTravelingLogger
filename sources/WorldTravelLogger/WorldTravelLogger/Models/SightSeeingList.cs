@@ -12,6 +12,7 @@ namespace WorldTravelLogger.Models
     public class SightSeeingList : BaseList
     {
         private List<SightseeingModel> list_;
+        private List<SightseeingModel> calcList_;
         private Dictionary<SightseeigType, SightseeingTypeModel> calcDic_;
 
         public override bool IsLoaded
@@ -22,6 +23,7 @@ namespace WorldTravelLogger.Models
         public SightSeeingList()
         {
             list_ = new List<SightseeingModel>();
+            calcList_ = new List<SightseeingModel>();
             calcDic_ = new Dictionary<SightseeigType, SightseeingTypeModel>();
         }
 
@@ -187,28 +189,9 @@ namespace WorldTravelLogger.Models
             {
                 model.ConvertPrice(rater);
             }
-            CalcModels();
         }
 
-        protected override void CalcModels()
-        {
-            calcDic_.Clear();
-            foreach (var model in list_)
-            {
-                var type = model.SightseeigType;
-                SightseeingTypeModel tModel;
-                if (calcDic_.TryGetValue(type, out tModel))
-                {
-                    tModel.Set(model.JPYPrice);
-                }
-                else
-                {
-                    tModel = new SightseeingTypeModel(type);
-                    tModel.Set(model.JPYPrice);
-                    calcDic_.Add(type, tModel);
-                }
-            }
-        }
+     
 
         public SightseeingTypeModel[] GetTypeArray()
         {
@@ -219,5 +202,49 @@ namespace WorldTravelLogger.Models
             }
             return list.ToArray();
         }
+
+        public SightseeingModel[] GetCalcArray()
+        {
+            return calcList_.ToArray();
+        }
+
+        public override void CalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
+        {
+            calcList_.Clear();
+            calcDic_.Clear();
+            if (isWorld)
+            {
+                foreach (var model in list_.Where(m => start <= m.Date && m.Date <= end))
+                {
+                    calcList_.Add(model);
+                }
+            }
+            else
+            {
+                foreach (var model in list_.Where(m => m.Country == type &&
+                start <= m.Date && m.Date <= end))
+                {
+                    calcList_.Add(model);
+                }
+            }
+            foreach (var model in calcList_)
+            {
+
+                SightseeingTypeModel tModel;
+                if (calcDic_.TryGetValue(model.SightseeigType, out tModel))
+                {
+                    tModel.Set(model.JPYPrice);
+                }
+                else
+                {
+                    tModel = new SightseeingTypeModel(model.SightseeigType);
+                    tModel.Set(model.JPYPrice);
+                    calcDic_.Add(model.SightseeigType, tModel);
+                }
+            }
+        }
+
+      
+           
     }
 }
