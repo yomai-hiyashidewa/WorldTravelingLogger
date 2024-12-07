@@ -201,6 +201,8 @@ namespace WorldTravelLogger.Models
         }
         public abstract bool IsLoaded { get; }
 
+        protected abstract void CalcModels();
+
     }
 
     

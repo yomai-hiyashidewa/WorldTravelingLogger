@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace WorldTravelLogger.Models
 {
-    internal class TranspotationList : BaseList
+    public class TranspotationList : BaseList
     {
         private List<TransportationModel> list_;
+        private Dictionary<Transportationtype, TransportationTypeModel> calcDic_;
 
         public override bool IsLoaded
         {
@@ -18,6 +19,7 @@ namespace WorldTravelLogger.Models
         public TranspotationList()
         {
             list_ = new List<TransportationModel>();
+            calcDic_ = new Dictionary<Transportationtype, TransportationTypeModel>();
         }
 
         public TransportationModel[] GetArray()
@@ -250,6 +252,41 @@ namespace WorldTravelLogger.Models
             {
                 model.ConvertPrice(rater);
             }
+            CalcModels();
         }
+
+        protected override void CalcModels()
+        {
+            calcDic_.Clear();
+            foreach (var model in list_)
+            {
+                var type = model.Transportationtype;
+                TransportationTypeModel tModel;
+                if (calcDic_.TryGetValue(type, out tModel))
+                {
+                    tModel.Set(model.JPYPrice);
+                    tModel.SetParameter(model.Distance, model.Time);
+                }
+                else
+                {
+                    tModel = new TransportationTypeModel(type);
+                    tModel.Set(model.JPYPrice);
+                    calcDic_.Add(type, tModel);
+                    tModel.SetParameter(model.Distance, model.Time);
+                }
+            }
+        }
+
+        public TransportationTypeModel[] GetTypeArray()
+        {
+            var list = new List<TransportationTypeModel>();
+            foreach (var pair in calcDic_)
+            {
+                list.Add(pair.Value);
+            }
+            return list.ToArray();
+        }
+
+
     }
 }

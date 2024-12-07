@@ -151,5 +151,10 @@ namespace WorldTravelLogger.Models
         {
             // not need(そもそもこの処理いらない。別の継承クラスに別けるべきかも)
         }
+
+        protected override void CalcModels()
+        {
+            // not need
+        }
     }
 }

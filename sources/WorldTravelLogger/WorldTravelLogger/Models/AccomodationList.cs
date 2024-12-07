@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorldTravelLogger.Models
 {
-    internal class AccomodationList : BaseList
+    public class AccomodationList : BaseList
     {
         private List<AccomodationModel> list_;
         private Dictionary<AccomodationType, AccomodationTypeModel> calcDic_;
@@ -184,7 +184,7 @@ namespace WorldTravelLogger.Models
             CalcModels();
         }
 
-        private void CalcModels()
+        protected override void CalcModels()
         {
             calcDic_.Clear();
             foreach(var model in list_)

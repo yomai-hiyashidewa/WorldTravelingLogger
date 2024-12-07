@@ -27,10 +27,10 @@
                     <local:AccomodationView x:Name="AcomodationViewPanel"/>
                 </TabItem>
                 <TabItem Header="Transportation">
-                    <local:TransportationView/>
+                    <local:TransportationView x:Name="TransporationViewPanel"/>
                 </TabItem>
                 <TabItem Header="SightSeeing">
-                    <local:SightseeingView/>
+                    <local:SightseeingView x:Name="SightseeingViewPanel"/>
                 </TabItem>
             </TabControl>
         </Grid>

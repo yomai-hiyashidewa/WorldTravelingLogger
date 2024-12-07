@@ -9,15 +9,15 @@ namespace WorldTravelLogger.ViewModels
 {
     public class AccomodationViewModel : ViewModelBase
     {
-        MainModel model_;
+        AccomodationList list_;
         public AccomodationViewModel()
         {
             // dummy
         }
 
-        public AccomodationViewModel(MainModel model)
+        public AccomodationViewModel(AccomodationList list)
         {
-            model_ = model;
+            list_ = list;
             currentAccomodationtype_ = AccomodationType.Domitory;
         }
 
@@ -26,13 +26,13 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if(model_ == null)
+                if(list_ == null)
                 {
                     return null;
                 }
                 else
                 {
-                    return model_.GetAccomodationTypeArray();
+                    return list_.GetTypeArray();
                 }
             }
         }
@@ -57,13 +57,14 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if(model_ == null)
+                if(list_ == null)
                 {
                     return null;
                 }
                 else
                 {
-                    return model_.GetAccomodations(CurrentAccomodationType);
+                    var value = list_.GetArray().Where(j => j.Accomodation == CurrentAccomodationType);
+                    return value.ToArray();
                 }
             }
         }

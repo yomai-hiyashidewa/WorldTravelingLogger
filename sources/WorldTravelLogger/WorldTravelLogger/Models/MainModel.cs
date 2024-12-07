@@ -233,11 +233,7 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public AccomodationModel[] GetAccomodations(AccomodationType type)
-        {
-            var value = accomodationList_.GetArray().Where(j => j.Accomodation == type);
-            return value.ToArray();
-        }
+  
 
         public object[] Transportations
         {
@@ -304,23 +300,29 @@ namespace WorldTravelLogger.Models
 
         // accomodation
 
-        public AccomodationTypeModel[] GetAccomodationTypeArray()
+        public AccomodationList GetAccomodationList()
         {
-            return accomodationList_.GetTypeArray();
+            return accomodationList_;
         }
 
+        // transportation
 
-
-
-
-
-
-
-
-
-
-
+        public TranspotationList GetTransportationList()
+        {
+            return transpotationList_;
         }
+
+      
+
+
+
+
+
+
+
+
+
+    }
 
 
 

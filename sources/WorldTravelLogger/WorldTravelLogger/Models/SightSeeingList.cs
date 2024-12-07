@@ -186,5 +186,10 @@ namespace WorldTravelLogger.Models
                 model.ConvertPrice(rater);
             }
         }
+
+        protected override void CalcModels()
+        {
+            // notyet
+        }
     }
 }
