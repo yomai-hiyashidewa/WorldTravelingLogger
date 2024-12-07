@@ -20,6 +20,8 @@ namespace WorldTravelLogger.Models
             get { return list_.Count > 0; }
         }
 
+       
+
         public SightSeeingList()
         {
             list_ = new List<SightseeingModel>();
@@ -244,7 +246,20 @@ namespace WorldTravelLogger.Models
             }
         }
 
-      
-           
+        public override double TotalCost
+        {
+            get
+            {
+                double sum = 0;
+                foreach (var pair in calcDic_)
+                {
+                    sum += pair.Value.TotalCost;
+                }
+                return sum;
+            }
+        }
+
+
+
     }
 }

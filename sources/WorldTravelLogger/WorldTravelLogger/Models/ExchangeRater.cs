@@ -19,6 +19,8 @@ namespace WorldTravelLogger.Models
             get { return rateList_.Count > 0; }
         }
 
+       
+
         private string[] GetDateList(string[] stringList)
         {
             var dateList = new List<string>();
@@ -158,5 +160,7 @@ namespace WorldTravelLogger.Models
         {
             throw new NotImplementedException();
         }
+
+        public override double TotalCost => throw new NotImplementedException();
     }
 }

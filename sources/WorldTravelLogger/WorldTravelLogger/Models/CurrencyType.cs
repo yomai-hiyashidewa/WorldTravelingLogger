@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -62,8 +63,12 @@ namespace WorldTravelLogger.Models
 
     public enum MajorCurrencytype
     {
+
+        [Display(Name = "円")]
         JPN,    // 日本円
+        [Display(Name = "$")]
         USD,    // USドル
+        [Display(Name = "€")]
         EUR,    // ユーロ
     }
 }

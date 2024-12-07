@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WorldTravelLogger.Converters;
 using WorldTravelLogger.Models;
 
 namespace WorldTravelLogger.ViewModels
@@ -33,8 +35,9 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("IsCurrencyJPY");
             this.RaisePropertyChanged("IsCurrencyUSD");
             this.RaisePropertyChanged("IsCurrencyEUR");
-            this.RaisePropertyChanged("TotalMovingDistance");
-            this.RaisePropertyChanged("TotalMovingTime");
+            this.RaisePropertyChanged("TotalCost");
+            this.RaisePropertyChanged("CurrentMajorCurrencyType");
+            
 
 
         }
@@ -176,6 +179,8 @@ namespace WorldTravelLogger.ViewModels
             set
             {
                 model_.CurrentMajorCurrencyType = MajorCurrencytype.JPN;
+                this.RaisePropertyChanged("TotalCost");
+               
             }
         }
 
@@ -196,6 +201,7 @@ namespace WorldTravelLogger.ViewModels
             set
             {
                 model_.CurrentMajorCurrencyType = MajorCurrencytype.USD;
+                this.RaisePropertyChanged("TotalCost");
             }
         }
 
@@ -216,54 +222,51 @@ namespace WorldTravelLogger.ViewModels
             set
             {
                 model_.CurrentMajorCurrencyType = MajorCurrencytype.EUR;
+                this.RaisePropertyChanged("TotalCost");
             }
         }
 
-        public int TotalCost
+
+        private string CurrencyStr
         {
             get
             {
-                if (model_ == null)
+                string culture = "ja-JP";
+                if(model_.CurrentMajorCurrencyType == MajorCurrencytype.USD)
                 {
-                    return 0;
+                    culture = "en-US";
                 }
-                else
+                else if(model_.CurrentMajorCurrencyType == MajorCurrencytype.EUR)
                 {
-                    return 0;   // not yet
+                    culture = "fr-FR";
                 }
+                return culture;
             }
         }
 
-        public int TotalMovingDistance
+
+
+
+
+        public string TotalCost
         {
             get
             {
+
                 if (model_ == null)
                 {
-                    return 0;
+                    
+                    return "0";
                 }
                 else
                 {
-                    return 0;   // not yet
+
+                    return model_.CalcTotalCost().ToString("C", CultureInfo.CreateSpecificCulture(CurrencyStr));                   
                 }
             }
         }
 
-        public int TotalMovingTime
-        {
-            get
-            {
-                if (model_ == null)
-                {
-                    return 0;
-                }
-                else
-                {
-                    return 0;   // not yet
-                }
-            }
-        }
-
+       
 
 
     }

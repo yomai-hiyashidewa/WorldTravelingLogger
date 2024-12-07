@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using WorldTravelLogger.Models;
 
 namespace WorldTravelLogger.ViewModels
@@ -27,12 +28,46 @@ namespace WorldTravelLogger.ViewModels
         {
             this.RaisePropertyChanged("TypeTransportations");
             this.RaisePropertyChanged("Transportations");
+            this.RaisePropertyChanged("TotalMovingDistance");
+            this.RaisePropertyChanged("TotalMovingTime");
         }
 
         private void Model_ControlChanged_(object? sender, EventArgs e)
         {
             UpdateAll();
         }
+
+        public string TotalMovingDistance
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return "0";
+                }
+                else
+                {
+                    return string.Format("{0:#,0}", model_.GetTotalDistance()) + "km";   
+                }
+            }
+        }
+
+        public string TotalMovingTime
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return "0";
+                }
+                else
+                {
+                    var ts = new TimeSpan(0, model_.GetTotalTime(), 0);
+                    return string.Format("{0}days {1}hours {2}mins",ts.TotalDays,ts.TotalHours,ts.TotalMinutes);
+                }
+            }
+        }
+
 
         public TransportationTypeModel[] TypeTransportations
         {

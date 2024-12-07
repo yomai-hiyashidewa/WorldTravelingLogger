@@ -204,6 +204,8 @@ namespace WorldTravelLogger.Models
         // memo interfaceで実装すべきかも
         public abstract void CalcModels(bool isWorld,CountryType type, DateTime start, DateTime end);
 
+        public abstract double TotalCost { get; }
+
     }
 
     

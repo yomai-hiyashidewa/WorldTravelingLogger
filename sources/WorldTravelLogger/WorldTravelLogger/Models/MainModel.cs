@@ -354,6 +354,8 @@ namespace WorldTravelLogger.Models
 
         public MajorCurrencytype CurrentMajorCurrencyType { get; set; }
 
+        
+
        
         // control
 
@@ -368,6 +370,13 @@ namespace WorldTravelLogger.Models
                 ControlChanged_.Invoke(this, EventArgs.Empty);
             }
         }
+
+        public double CalcTotalCost()
+        {
+            return accomodationList_.TotalCost + transpotationList_.TotalCost + sightSeeingList_.TotalCost;
+        }
+
+       
 
         // accomodation
 
@@ -397,6 +406,15 @@ namespace WorldTravelLogger.Models
             return transpotationList_.GetCalcArray();
         }
 
+        public double GetTotalDistance()
+        {
+            return transpotationList_.TotalDistance;
+        }
+
+        public int GetTotalTime()
+        {
+            return transpotationList_.TotalTime;
+        }
         // Sightseeing
 
         public SightseeingTypeModel[] GetTypeSightseeings()

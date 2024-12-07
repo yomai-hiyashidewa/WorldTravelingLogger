@@ -60,14 +60,6 @@
                 <TextBlock Text="Total cost:"/>
                 <TextBlock Text="{Binding TotalCost}" />
             </DockPanel>
-            <DockPanel>
-                <TextBlock Text="Total distance:"/>
-                <TextBlock Text="{Binding TotalMovingDistance}" />
-            </DockPanel>
-            <DockPanel>
-                <TextBlock Text="Total time:"/>
-                <TextBlock Text="{Binding TotalMovingTime}" />
-            </DockPanel>
         </StackPanel>
 
     </Grid>

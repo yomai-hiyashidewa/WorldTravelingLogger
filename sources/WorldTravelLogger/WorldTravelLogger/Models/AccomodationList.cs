@@ -17,6 +17,8 @@ namespace WorldTravelLogger.Models
             get { return list_.Count > 0;}
         }
 
+       
+
         public AccomodationList()
         {
             list_ = new List<AccomodationModel>();
@@ -237,6 +239,19 @@ namespace WorldTravelLogger.Models
         public AccomodationModel[] GetCalcArray()
         {
             return calcList_.ToArray();
+        }
+
+        public override double TotalCost
+        {
+            get
+            {
+                double sum = 0;
+                foreach (var pair in calcDic_)
+                {
+                    sum += pair.Value.TotalCost;
+                }
+                return sum;
+            }
         }
 
 

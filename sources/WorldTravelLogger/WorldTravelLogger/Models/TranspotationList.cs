@@ -17,6 +17,9 @@ namespace WorldTravelLogger.Models
             get { return list_.Count > 0; }
         }
 
+       
+     
+
         public TranspotationList()
         {
             list_ = new List<TransportationModel>();
@@ -310,6 +313,50 @@ namespace WorldTravelLogger.Models
                     tModel.SetParameter(model.Distance, model.Time);
                 }
             }
+
+
+
         }
+
+        public double TotalDistance
+        {
+            get
+            {
+                double sum = 0;
+                foreach (var pair in calcDic_)
+                {
+                    sum += pair.Value.TotalDistance;
+                }
+                return sum;
+            }
+        }
+
+        public int TotalTime
+        {
+            get
+            {
+                int sum = 0;
+                foreach (var pair in calcDic_)
+                {
+                    sum += pair.Value.TotalTime;
+                }
+                return sum;
+            }
+
+        }
+
+        public override double TotalCost
+        {
+            get
+            {
+                double sum = 0;
+                foreach (var pair in calcDic_)
+                {
+                    sum += pair.Value.TotalCost;
+                }
+                return sum;
+            }
+        }
+
     }
 }

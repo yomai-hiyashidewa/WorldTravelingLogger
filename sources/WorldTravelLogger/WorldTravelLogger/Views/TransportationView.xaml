@@ -11,10 +11,22 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <DataGrid ItemsSource="{Binding TypeTransportations}"/>
-        <StackPanel Grid.Row="1">
+        <StackPanel>
+            <DockPanel>
+                <TextBlock Text="Total distance:"/>
+                <TextBlock Text="{Binding TotalMovingDistance}" />
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="Total time:"/>
+                <TextBlock Text="{Binding TotalMovingTime}" />
+            </DockPanel>
+        </StackPanel>
+        
+        <DataGrid Grid.Row="1" ItemsSource="{Binding TypeTransportations}"/>
+        <StackPanel Grid.Row="2">
             <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Source={local:EnumList {x:Type models:Transportationtype}}}" SelectedItem="{Binding CurrentTransportationType,Mode=TwoWay}">
                 <ComboBox.Resources>
                     <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
