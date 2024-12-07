@@ -9,9 +9,10 @@ using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WorldTravelLogger.Models
 {
-    internal class SightSeeingList : BaseList
+    public class SightSeeingList : BaseList
     {
         private List<SightseeingModel> list_;
+        private Dictionary<SightseeigType, SightseeingTypeModel> calcDic_;
 
         public override bool IsLoaded
         {
@@ -21,6 +22,7 @@ namespace WorldTravelLogger.Models
         public SightSeeingList()
         {
             list_ = new List<SightseeingModel>();
+            calcDic_ = new Dictionary<SightseeigType, SightseeingTypeModel>();
         }
 
         public SightseeingModel[] GetArray()
@@ -185,11 +187,37 @@ namespace WorldTravelLogger.Models
             {
                 model.ConvertPrice(rater);
             }
+            CalcModels();
         }
 
         protected override void CalcModels()
         {
-            // notyet
+            calcDic_.Clear();
+            foreach (var model in list_)
+            {
+                var type = model.SightseeigType;
+                SightseeingTypeModel tModel;
+                if (calcDic_.TryGetValue(type, out tModel))
+                {
+                    tModel.Set(model.JPYPrice);
+                }
+                else
+                {
+                    tModel = new SightseeingTypeModel(type);
+                    tModel.Set(model.JPYPrice);
+                    calcDic_.Add(type, tModel);
+                }
+            }
+        }
+
+        public SightseeingTypeModel[] GetTypeArray()
+        {
+            var list = new List<SightseeingTypeModel>();
+            foreach (var pair in calcDic_)
+            {
+                list.Add(pair.Value);
+            }
+            return list.ToArray();
         }
     }
 }

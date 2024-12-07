@@ -312,6 +312,12 @@ namespace WorldTravelLogger.Models
             return transpotationList_;
         }
 
+        // Sightseeing
+        public SightSeeingList GetSightseeingList()
+        {
+            return sightSeeingList_;
+        }
+
       
 
 

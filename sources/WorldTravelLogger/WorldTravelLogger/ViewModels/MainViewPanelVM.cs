@@ -62,6 +62,11 @@ namespace WorldTravelLogger.ViewModels
             return new TransportationViewModel(model_.GetTransportationList());
         }
 
+
+        public SightSeeingViewModel GetSightseeingViewModel()
+        {
+            return new SightSeeingViewModel(model_.GetSightseeingList());
+        }
     
 
         public string GetFilename(ListType type)
