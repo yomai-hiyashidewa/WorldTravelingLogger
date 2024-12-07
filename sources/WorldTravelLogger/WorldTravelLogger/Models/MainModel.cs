@@ -22,6 +22,8 @@ namespace WorldTravelLogger.Models
         private ListType currentListType_;
 
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
+        public event EventHandler ControlChanged_;
+        public event EventHandler CalcCompleted_;
 
         private void SetOptionModel()
         {
@@ -160,10 +162,10 @@ namespace WorldTravelLogger.Models
 
         private void InitParameter()
         {
-            IsWorldMode = true;
-            StartDate = new DateTime(2022, 5, 16);
-            EndDate = new DateTime(2024, 5, 1);
-            CurrentCountryType = CountryType.JPN;
+            isWorldMode_ = true;
+            startDate_ = new DateTime(2022, 5, 16);
+            endDate_ = new DateTime(2024, 5, 1);
+            currentCountryType_ = CountryType.JPN;
             CurrentMajorCurrencyType = MajorCurrencytype.JPN;
         }
 
@@ -281,44 +283,130 @@ namespace WorldTravelLogger.Models
             }
 
         }
+        private bool isWorldMode_;
 
-        public bool IsWorldMode { get; set; }
+        private CountryType currentCountryType_;
 
-        public CountryType CurrentCountryType { get; set; }
+        private DateTime startDate_;
 
-        public DateTime StartDate { get; set; }
+        private DateTime endDate_;
 
-        public DateTime EndDate { get; set; }
+        public bool IsWorldMode
+        {
+            get
+            {
+                return isWorldMode_;
+            }
+            set
+            {
+                if(isWorldMode_ != value)
+                {
+                    isWorldMode_ = value;
+                    FireControlChangd();
+                }
+            }
+        }
+
+        public CountryType CurrentCountryType
+        {
+            get { return currentCountryType_; }
+            set
+            {
+                if(currentCountryType_ != value)
+                {
+                    currentCountryType_ = value;
+                    FireControlChangd();
+                }
+            }
+        }
+
+        public DateTime StartDate
+        {
+            get
+            {
+                return startDate_;
+            }
+            set
+            {
+                if(startDate_ != value)
+                {
+                    startDate_ = value;
+                    FireControlChangd();
+                }
+            }
+        }
+
+        public DateTime EndDate
+        {
+            get
+            {
+                return endDate_;
+            }
+            set
+            {
+                if(endDate_ != value)
+                {
+                    endDate_ = value;
+                    FireControlChangd();
+                }
+            }
+        }
 
         public MajorCurrencytype CurrentMajorCurrencyType { get; set; }
 
-        public AccomodationType CurrentAccomodationType { get; set; }
+       
+        // control
 
-        public Transportationtype CurrentTransportationType { get; set; }
 
-        public SightseeigType CurrentSightseeingType { get; set; }
+        private void FireControlChangd()
+        {
+            if(ControlChanged_ != null)
+            {
+                ControlChanged_.Invoke(this, EventArgs.Empty);
+            }
+        }
 
         // accomodation
 
-        public AccomodationList GetAccomodationList()
+        public AccomodationTypeModel[] GetTypeAccomodations()
         {
-            return accomodationList_;
+            // controlに依存するので追記
+            return accomodationList_.GetTypeArray();
+        }
+
+        public AccomodationModel[] GetAccomodations()
+        {
+            // controlに依存するので追記
+            return accomodationList_.GetArray();
         }
 
         // transportation
-
-        public TranspotationList GetTransportationList()
+        public TransportationTypeModel[] GetTypeTransportations()
         {
-            return transpotationList_;
+            // controlに依存するので追記
+            return transpotationList_.GetTypeArray();
+        }
+
+        public TransportationModel[] GetTransportations()
+        {
+            // controlに依存するので追記
+            return transpotationList_.GetArray();
         }
 
         // Sightseeing
-        public SightSeeingList GetSightseeingList()
+
+        public SightseeingTypeModel[] GetTypeSightseeings()
         {
-            return sightSeeingList_;
+            // controlに依存するので追記
+            return sightSeeingList_.GetTypeArray();
         }
 
-      
+        public SightseeingModel[] GetSightseeings()
+        {
+            // controlに依存するので追記
+            return sightSeeingList_.GetArray();
+        }
+
 
 
 

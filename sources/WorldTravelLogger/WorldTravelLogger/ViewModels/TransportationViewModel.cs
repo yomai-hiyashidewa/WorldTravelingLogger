@@ -9,16 +9,16 @@ namespace WorldTravelLogger.ViewModels
 {
     public class TransportationViewModel : ViewModelBase
     {
-        TranspotationList list_;
+        MainModel model_;
 
         public TransportationViewModel()
         {
             // dummy
         }
 
-        public TransportationViewModel(TranspotationList list)
+        public TransportationViewModel(MainModel model)
         {
-            list_ = list;
+            model_ = model;
             currentTransportationType_ = Transportationtype.Train;
         }
 
@@ -26,13 +26,13 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (list_ == null)
+                if (model_ == null)
                 {
                     return null;
                 }
                 else
                 {
-                    return list_.GetTypeArray();
+                    return model_.GetTypeTransportations();
                     
                 }
             }
@@ -58,13 +58,13 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (list_ == null)
+                if (model_ == null)
                 {
                     return null;
                 }
                 else
                 {
-                    var value = list_.GetArray().Where(j => j.Transportationtype == CurrentTransportationType);
+                    var value = model_.GetTransportations().Where(j => j.Transportationtype == CurrentTransportationType);
                     return value.ToArray();
 
                 }

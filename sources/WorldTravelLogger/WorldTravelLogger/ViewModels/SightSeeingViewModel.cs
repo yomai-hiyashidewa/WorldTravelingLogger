@@ -9,16 +9,16 @@ namespace WorldTravelLogger.ViewModels
 {
     public class SightSeeingViewModel : ViewModelBase
     {
-        SightSeeingList list_;
+        MainModel model_;
 
         public SightSeeingViewModel()
         {
             // dummy
         }
 
-        public SightSeeingViewModel(SightSeeingList list)
+        public SightSeeingViewModel(MainModel model)
         {
-            list_ = list;
+            model_ = model;
             currentSightSeeingType_ = SightseeigType.Tour;
         }
 
@@ -26,13 +26,13 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (list_ == null)
+                if (model_ == null)
                 {
                     return null;
                 }
                 else
                 {
-                    return list_.GetTypeArray();
+                    return model_.GetTypeSightseeings();
 
                 }
             }
@@ -58,13 +58,13 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (list_ == null)
+                if (model_ == null)
                 {
                     return null;
                 }
                 else
                 {
-                    var value = list_.GetArray().Where(j => j.SightseeigType == currentSightSeeingType_);
+                    var value = model_.GetSightseeings().Where(j => j.SightseeigType == currentSightSeeingType_);
                     return value.ToArray();
 
                 }

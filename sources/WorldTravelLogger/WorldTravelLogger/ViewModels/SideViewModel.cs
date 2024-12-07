@@ -18,9 +18,26 @@ namespace WorldTravelLogger.ViewModels
         public SideViewModel(MainModel model)
         {
             model_ = model;
+            model_.ControlChanged_ += Model__ControlChanged_;
         }
 
+        private void Model__ControlChanged_(object? sender, EventArgs e)
+        {
+            this.RaisePropertyChanged("IsWorld");
+            this.RaisePropertyChanged("IsCountryMode");
+            this.RaisePropertyChanged("CurrentCountry");
+            this.RaisePropertyChanged("StartDate");
+            this.RaisePropertyChanged("EndDate");
+            this.RaisePropertyChanged("TotalDays");
+            this.RaisePropertyChanged("Countries");
+            this.RaisePropertyChanged("IsCurrencyJPY");
+            this.RaisePropertyChanged("IsCurrencyUSD");
+            this.RaisePropertyChanged("IsCurrencyEUR");
+            this.RaisePropertyChanged("TotalMovingDistance");
+            this.RaisePropertyChanged("TotalMovingTime");
 
+
+        }
 
         public bool IsWorld
         {
