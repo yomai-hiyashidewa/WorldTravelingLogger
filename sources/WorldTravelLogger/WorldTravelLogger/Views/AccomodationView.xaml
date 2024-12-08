@@ -23,7 +23,7 @@
                 <TextBlock Text="{Binding TotalCost}" />
             </DockPanel>
         </StackPanel>
-        <DataGrid Grid.Row="1" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" ItemsSource="{Binding TypeAccomodations}">
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding TypeAccomodations}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Type" Binding="{Binding Type}"/>
                 <DataGridTextColumn Header="Count" Binding="{Binding Count}"/>
@@ -38,9 +38,8 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="9*"/>
             </Grid.RowDefinitions>
-            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Source={local:EnumList {x:Type models:AccomodationType}}}" SelectedItem="{Binding CurrentAccomodationType,Mode=TwoWay}">
-            </ComboBox>
-            <DataGrid Grid.Row="1" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" ItemsSource="{Binding Accomodations}">
+            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Source={local:EnumList {x:Type models:AccomodationType}}}" SelectedItem="{Binding CurrentAccomodationType,Mode=TwoWay}"/>
+            <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Accomodations}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="date" Binding="{Binding DateString}"/>
                     <DataGridTextColumn Header="country" Binding="{Binding Country,Converter={StaticResource EnumDisplayConv}}" />
@@ -48,7 +47,7 @@
                     <DataGridTextColumn Header="cost" Binding="{Binding Price}"/>
                     <DataGridTextColumn Header="currency" Binding="{Binding Currency}"/>
                     <DataGridTextColumn Header="Yen cost" Binding="{Binding JPYPriceString}"/>
-                    <DataGridTextColumn Header="memo" Binding="{Binding Memo}" Width="*"/>
+                    <DataGridTextColumn Header="memo" Binding="{Binding Memo}" />
                 </DataGrid.Columns>
             </DataGrid>
         </Grid>

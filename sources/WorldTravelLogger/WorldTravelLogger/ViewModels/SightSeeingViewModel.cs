@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -27,7 +28,27 @@ namespace WorldTravelLogger.ViewModels
         {
             this.RaisePropertyChanged("TypeSightseeings");
             this.RaisePropertyChanged("Sightseeings");
+            this.RaisePropertyChanged("TotalCost");
         }
+
+        public string TotalCost
+        {
+            get
+            {
+
+                if (model_ == null)
+                {
+
+                    return "0";
+                }
+                else
+                {
+                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
+                    return model_.CalcSightseeingCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
+                }
+            }
+        }
+
 
         private void Model_ControlChanged_(object? sender, EventArgs e)
         {

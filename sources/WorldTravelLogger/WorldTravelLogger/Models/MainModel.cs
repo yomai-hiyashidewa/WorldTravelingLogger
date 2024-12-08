@@ -399,6 +399,11 @@ namespace WorldTravelLogger.Models
         }
 
         // transportation
+        public double CalcTransportationCost()
+        {
+            return transpotationList_.TotalCost;
+        }
+
         public TransportationTypeModel[] GetTypeTransportations()
         {
             // controlに依存するので追記
@@ -421,6 +426,11 @@ namespace WorldTravelLogger.Models
             return transpotationList_.TotalTime;
         }
         // Sightseeing
+
+        public double CalcSightseeingCost()
+        {
+            return sightSeeingList_.TotalCost;
+        }
 
         public SightseeingTypeModel[] GetTypeSightseeings()
         {

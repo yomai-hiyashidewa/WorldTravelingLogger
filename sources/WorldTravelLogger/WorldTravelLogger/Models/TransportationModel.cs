@@ -100,6 +100,14 @@ namespace WorldTravelLogger.Models
             }
         }                      // 終了日時
 
+        public string EndDateString
+        {
+            get
+            {
+                return endDate_.ToString("yyyy/MM/dd");
+            }
+        }
+
         public CountryType EndCountry
         {
             get
