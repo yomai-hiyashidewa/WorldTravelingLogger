@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using WorldTravelLogger.Models;
 
 namespace WorldTravelLogger.ViewModels
 {
@@ -20,6 +21,20 @@ namespace WorldTravelLogger.ViewModels
             {
                 h(this, new PropertyChangedEventArgs(propertyName));
             }
+        }
+
+        protected string GetCurrencyStr(MajorCurrencytype type)
+        {
+            string culture = "ja-JP";
+            if (type == MajorCurrencytype.USD)
+            {
+                culture = "en-US";
+            }
+            else if (type == MajorCurrencytype.EUR)
+            {
+                culture = "fr-FR";
+            }
+            return culture;
         }
     }
 }

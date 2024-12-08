@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,6 +29,7 @@ namespace WorldTravelLogger.ViewModels
         {
             this.RaisePropertyChanged("TypeAccomodations");
             this.RaisePropertyChanged("Accomodations");
+            this.RaisePropertyChanged("TotalCost");
         }
 
         private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
@@ -38,6 +40,24 @@ namespace WorldTravelLogger.ViewModels
         private void Model__ControlChanged_(object? sender, EventArgs e)
         {
             this.UpdateAll();
+        }
+
+        public string TotalCost
+        {
+            get
+            {
+
+                if (model_ == null)
+                {
+
+                    return "0";
+                }
+                else
+                {
+                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
+                    return model_.CalcAccomodationTotalCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
+                }
+            }
         }
 
 

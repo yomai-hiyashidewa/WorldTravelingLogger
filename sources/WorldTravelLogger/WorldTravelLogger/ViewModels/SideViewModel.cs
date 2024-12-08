@@ -227,22 +227,7 @@ namespace WorldTravelLogger.ViewModels
         }
 
 
-        private string CurrencyStr
-        {
-            get
-            {
-                string culture = "ja-JP";
-                if(model_.CurrentMajorCurrencyType == MajorCurrencytype.USD)
-                {
-                    culture = "en-US";
-                }
-                else if(model_.CurrentMajorCurrencyType == MajorCurrencytype.EUR)
-                {
-                    culture = "fr-FR";
-                }
-                return culture;
-            }
-        }
+   
 
 
 
@@ -260,8 +245,8 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-
-                    return model_.CalcTotalCost().ToString("C", CultureInfo.CreateSpecificCulture(CurrencyStr));                   
+                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
+                    return model_.CalcTotalCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));                   
                 }
             }
         }

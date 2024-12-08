@@ -380,6 +380,11 @@ namespace WorldTravelLogger.Models
 
         // accomodation
 
+        public double CalcAccomodationTotalCost()
+        {
+            return accomodationList_.TotalCost;
+        }
+
         public AccomodationTypeModel[] GetTypeAccomodations()
         {
             // controlに依存するので追記

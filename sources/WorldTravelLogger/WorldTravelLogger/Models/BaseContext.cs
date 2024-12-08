@@ -138,6 +138,21 @@ namespace WorldTravelLogger.Models
             EURPrice = Price / rate;
         }
 
+        public string DateString
+        {
+            get
+            {
+                return Date.ToString("yyyy/MM/dd");
+            }
+        }
+
+        public string JPYPriceString
+        {
+            get
+            {
+                return JPYPrice.ToString("C");
+            }
+        }
 
     }
 }

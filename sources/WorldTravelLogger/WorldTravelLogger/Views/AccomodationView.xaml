@@ -9,24 +9,48 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.Resources>
+            <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
         </Grid.RowDefinitions>
-        <DataGrid ItemsSource="{Binding TypeAccomodations}"/>
-        <StackPanel Grid.Row="1">
-            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Source={local:EnumList {x:Type models:AccomodationType}}}" SelectedItem="{Binding CurrentAccomodationType,Mode=TwoWay}">
-                <ComboBox.Resources>
-                    <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
-                </ComboBox.Resources>
-
-                <ComboBox.ItemTemplate>
-                    <DataTemplate>
-                        <TextBlock Text="{Binding Converter={StaticResource EnumDisplayConv}}" />
-                    </DataTemplate>
-                </ComboBox.ItemTemplate>
-            </ComboBox>
-            <DataGrid ItemsSource="{Binding Accomodations}"/>
+        <StackPanel>
+            <DockPanel>
+                <TextBlock Text="Total cost:"/>
+                <TextBlock Text="{Binding TotalCost}" />
+            </DockPanel>
         </StackPanel>
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" ItemsSource="{Binding TypeAccomodations}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Type" Binding="{Binding Type}"/>
+                <DataGridTextColumn Header="Count" Binding="{Binding Count}"/>
+                <DataGridTextColumn Header="Total" Binding="{Binding TotalCostString}"/>
+                <DataGridTextColumn Header="Max" Binding="{Binding MaxCostString}"/>
+                <DataGridTextColumn Header="Min" Binding="{Binding MinCostString}"/>
+                <DataGridTextColumn Header="Ave" Binding="{Binding AveCoastString}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Source={local:EnumList {x:Type models:AccomodationType}}}" SelectedItem="{Binding CurrentAccomodationType,Mode=TwoWay}">
+            </ComboBox>
+            <DataGrid Grid.Row="1" AutoGenerateColumns="False" VerticalScrollBarVisibility="Visible" ItemsSource="{Binding Accomodations}">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="date" Binding="{Binding DateString}"/>
+                    <DataGridTextColumn Header="country" Binding="{Binding Country,Converter={StaticResource EnumDisplayConv}}" />
+                    <DataGridTextColumn Header="region" Binding="{Binding Region}"/>
+                    <DataGridTextColumn Header="cost" Binding="{Binding Price}"/>
+                    <DataGridTextColumn Header="currency" Binding="{Binding Currency}"/>
+                    <DataGridTextColumn Header="Yen cost" Binding="{Binding JPYPriceString}"/>
+                    <DataGridTextColumn Header="memo" Binding="{Binding Memo}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
     </Grid>
 </UserControl>

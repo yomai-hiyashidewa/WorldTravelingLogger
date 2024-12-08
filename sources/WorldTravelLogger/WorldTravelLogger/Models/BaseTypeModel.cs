@@ -13,12 +13,22 @@ namespace WorldTravelLogger.Models
             Type = type;
             Count = 0;
             TotalCost = 0;
+            MaxCost = 0;
+            MinCost = 0;
         }
 
         public virtual void Set(double cost)
         {
             Count++;
             TotalCost += cost;
+            if(MaxCost == 0 || MaxCost < cost)
+            {
+                MaxCost = cost;
+            }
+            if(MinCost == 0 || cost < MinCost)
+            {
+                MinCost = cost;
+            }
         }
 
         public string Type { get; protected set; }
@@ -27,18 +37,44 @@ namespace WorldTravelLogger.Models
 
         public double TotalCost { get; protected set; }
 
-        public double AveCoast
+        public double MaxCost { get; protected set; }
+
+        public double MinCost { get; protected set; }
+
+        public string TotalCostString
         {
             get
             {
+                return TotalCost.ToString("C");
+            }
+        }
+
+        public string MaxCostString
+        {
+            get
+            {
+                return MaxCost.ToString("C");
+            }
+        }
+
+        public string MinCostString
+        {
+            get
+            {
+                return MinCost.ToString("C");
+            }
+        }
+
+        public string AveCoastString
+        {
+            get
+            {
+                double ave = 0;
                 if (Count > 0)
                 {
-                    return TotalCost / Count;
+                    ave = TotalCost / Count;
                 }
-                else
-                {
-                    return 0;
-                }
+                return ave.ToString("C");
             }
         }
 
