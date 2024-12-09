@@ -17,6 +17,13 @@ namespace WorldTravelLogger.Models
             get { return list_.Count > 0; }
         }
 
+        
+
+        public bool IsWithAirplane { get; set; }
+
+        public bool IsWithCrossBorder { get; set; }
+       
+
        
      
 
@@ -25,6 +32,8 @@ namespace WorldTravelLogger.Models
             list_ = new List<TransportationModel>();
             calcList_ = new List<TransportationModel>();
             calcDic_ = new Dictionary<Transportationtype, TransportationTypeModel>();
+            IsWithAirplane = true;
+            IsWithCrossBorder = true;
         }
 
         public TransportationModel[] GetArray()
@@ -276,29 +285,75 @@ namespace WorldTravelLogger.Models
             return calcList_.ToArray();
         }
 
-        public override void CalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
+        public bool GetNeedingEndDate()
         {
-            calcList_.Clear();
-            calcDic_.Clear();
+            var model = calcList_.FirstOrDefault(m => m.IsSameDate);
+            return model != null;
+        }
+
+        private IEnumerable<TransportationModel> GetList(bool isWorld, CountryType type, DateTime start, DateTime end)
+        {
             // dateの設定に関してはまた後で考える
             if (isWorld)
             {
-                foreach (var model in list_.Where(m => start <= m.Date && m.Date <= end))
+                if (IsWithAirplane)
                 {
-                    calcList_.Add(model);
+                    return list_.Where(m => start <= m.Date && m.Date <= end);
+                }
+                else
+                {
+                    return list_.Where(m => start <= m.Date && m.Date <= end && m.Transportationtype != Transportationtype.AirPlane);
                 }
             }
+            
             else
             {
-                foreach (var model in list_.Where(m => (m.StartCountry == type || m.EndCountry == type) &&
-                start <= m.Date && m.Date <= end))
+                if (IsWithAirplane)
                 {
-                    calcList_.Add(model);
+                    if (IsWithCrossBorder)
+                    {
+                        return list_.Where(m => (m.StartCountry == type || m.EndCountry == type) &&
+                       start <= m.Date && m.Date <= end);
+                    }
+                    else
+                    {
+                        return list_.Where(m => (m.StartCountry == type && m.EndCountry == type) &&
+                    start <= m.Date && m.Date <= end);
+                       
+                    }
+                }
+                else
+                {
+                    if (IsWithCrossBorder)
+                    {
+                        return list_.Where(m => (m.StartCountry == type || m.EndCountry == type) &&
+                       start <= m.Date && m.Date <= end && m.Transportationtype != Transportationtype.AirPlane);
+                    }
+                    else
+                    {
+                        return list_.Where(m => (m.StartCountry == type && m.EndCountry == type) &&
+                        start <= m.Date && m.Date <= end && m.Transportationtype != Transportationtype.AirPlane);
+                       
+                    }
                 }
             }
+        }
+
+        private void SetCalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
+        {
+            calcList_.Clear();
+            foreach(var model in GetList(isWorld, type, start, end))
+            {
+                calcList_.Add(model);
+            }
+        }
+
+        private void SetCalcDic()
+        {
+            calcDic_.Clear();
 
             foreach (var model in calcList_)
-            {                
+            {
                 TransportationTypeModel tModel;
                 if (calcDic_.TryGetValue(model.Transportationtype, out tModel))
                 {
@@ -313,9 +368,12 @@ namespace WorldTravelLogger.Models
                     tModel.SetParameter(model.Distance, model.Time);
                 }
             }
+        }
 
-
-
+        public override void CalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
+        {
+            SetCalcModels(isWorld, type, start, end);
+            SetCalcDic();
         }
 
         public double TotalDistance

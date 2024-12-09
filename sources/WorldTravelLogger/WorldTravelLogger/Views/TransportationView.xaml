@@ -11,25 +11,43 @@
     <Grid>
         <Grid.Resources>
             <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
+            <BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="3*"/>
-            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel>
-            <DockPanel>
-                <TextBlock Text="Total cost:"/>
-                <TextBlock Text="{Binding TotalCost}" />
-            </DockPanel>
-            <DockPanel>
-                <TextBlock Text="Total distance:"/>
-                <TextBlock Text="{Binding TotalMovingDistance}" />
-            </DockPanel>
-            <DockPanel>
-                <TextBlock Text="Total time:"/>
-                <TextBlock Text="{Binding TotalMovingTime}" />
-            </DockPanel>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <DockPanel>
+                    <TextBlock Text="Total cost:"/>
+                    <TextBlock Text="{Binding TotalCost}" />
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="Total distance:"/>
+                    <TextBlock Text="{Binding TotalMovingDistance}" />
+                </DockPanel>
+                <DockPanel>
+                    <TextBlock Text="Total time:"/>
+                    <TextBlock Text="{Binding TotalMovingTime}" />
+                </DockPanel>
+            </StackPanel>
+            <StackPanel Grid.Column="1">
+                <StackPanel>
+                    <CheckBox Content="with airplane" IsChecked="{Binding IsWithAirplane,Mode=TwoWay}"/>
+                    <CheckBox Content="with cross boder" IsChecked="{Binding IsWithCrossBorder,Mode=TwoWay}"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        
+        <StackPanel Grid.Column="1">
+    
         </StackPanel>
         <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding TypeTransportations}">
             <DataGrid.Columns>
@@ -47,14 +65,12 @@
                 <RowDefinition Height="9*"/>
             </Grid.RowDefinitions>
             <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Source={local:EnumList {x:Type models:Transportationtype}}}" SelectedItem="{Binding CurrentTransportationType,Mode=TwoWay}"/>
-            <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Transportations}">
+            <DataGrid Grid.Row="1" AutoGenerateColumns="False" ItemsSource="{Binding Transportations}" Margin="1,1,-1,-1">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="start date" Binding="{Binding DateString}"/>
                     <DataGridTextColumn Header="start country" Binding="{Binding Country,Converter={StaticResource EnumDisplayConv}}" />
                     <DataGridTextColumn Header="start region" Binding="{Binding Region}"/>
                     <DataGridTextColumn Header="start place" Binding="{Binding StartPlace}"/>
-                    <DataGridTextColumn Header="end date" Binding="{Binding EndDateString}"/>
-                    <DataGridTextColumn Header="end country" Binding="{Binding EndCountry,Converter={StaticResource EnumDisplayConv}}" />
                     <DataGridTextColumn Header="end region" Binding="{Binding EndRegion}"/>
                     <DataGridTextColumn Header="end place" Binding="{Binding EndPlace}"/>
                     <DataGridTextColumn Header="distance" Binding="{Binding Distance}"/>
@@ -62,6 +78,8 @@
                     <DataGridTextColumn Header="cost" Binding="{Binding Price}"/>
                     <DataGridTextColumn Header="currency" Binding="{Binding Currency}"/>
                     <DataGridTextColumn Header="Yen cost" Binding="{Binding JPYPriceString}"/>
+                    <DataGridTextColumn Header="end date" Binding="{Binding EndDateString}" />
+                    <DataGridTextColumn Header="end country" Binding="{Binding EndCountry,Converter={StaticResource EnumDisplayConv}}" />
                     <DataGridTextColumn Header="memo" Binding="{Binding Memo}" />
                 </DataGrid.Columns>
             </DataGrid>

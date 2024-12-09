@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 
 namespace WorldTravelLogger.Models
 {
@@ -98,7 +99,19 @@ namespace WorldTravelLogger.Models
             {
                 return endDate_;
             }
-        }                      // 終了日時
+        }
+        
+       // 終了日時
+
+        public bool IsSameDate
+        {
+            get
+            {
+                return StartDate.Year == EndDate.Year &&
+                    StartDate.Month == EndDate.Month &&
+                    StartDate.Day == EndDate.Day;
+            }
+        }
 
         public string EndDateString
         {
@@ -129,6 +142,7 @@ namespace WorldTravelLogger.Models
             get
             {
                 return endPlace_;
+                
             }
         }                    // 終了場所
 
@@ -142,5 +156,6 @@ namespace WorldTravelLogger.Models
             get { return time_; }
         }                           // 移動時間(min)
 
+        
     }
 }

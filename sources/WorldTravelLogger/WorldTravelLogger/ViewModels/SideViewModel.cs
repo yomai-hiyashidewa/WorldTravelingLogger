@@ -21,6 +21,12 @@ namespace WorldTravelLogger.ViewModels
         {
             model_ = model;
             model_.ControlChanged_ += Model__ControlChanged_;
+            model.TransportationChanged_ += Model_TransportationChanged_;
+        }
+
+        private void Model_TransportationChanged_(object? sender, EventArgs e)
+        {
+            UpdateView();
         }
 
         private void Model__ControlChanged_(object? sender, EventArgs e)
@@ -35,11 +41,14 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("IsCurrencyJPY");
             this.RaisePropertyChanged("IsCurrencyUSD");
             this.RaisePropertyChanged("IsCurrencyEUR");
-            this.RaisePropertyChanged("TotalCost");
             this.RaisePropertyChanged("CurrentMajorCurrencyType");
-            
+            UpdateView();
 
+        }
 
+        private void UpdateView()
+        {
+            this.RaisePropertyChanged("TotalCost");
         }
 
         public bool IsWorld

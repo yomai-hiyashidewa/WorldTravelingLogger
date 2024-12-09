@@ -23,6 +23,7 @@ namespace WorldTravelLogger.Models
 
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
         public event EventHandler ControlChanged_;
+        public event EventHandler TransportationChanged_;
         public event EventHandler CalcCompleted_;
 
         private void SetOptionModel()
@@ -399,6 +400,43 @@ namespace WorldTravelLogger.Models
         }
 
         // transportation
+        public bool IsWithAirplane
+        {
+            get { return transpotationList_.IsWithAirplane; }
+            set
+            {
+                if(transpotationList_.IsWithAirplane != value)
+                {
+                    transpotationList_.IsWithAirplane = value;
+                    transpotationList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
+                    if(TransportationChanged_ != null)
+                    {
+                        TransportationChanged_.Invoke(this, EventArgs.Empty);
+                    }
+                }
+            }
+        }
+
+        public bool IsWithCrossBorder
+        {
+            get
+            {
+                return transpotationList_.IsWithCrossBorder;
+            }
+            set
+            {
+                if (transpotationList_.IsWithCrossBorder != value)
+                {
+                    transpotationList_.IsWithCrossBorder = value;
+                    transpotationList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
+                    if (TransportationChanged_ != null)
+                    {
+                        TransportationChanged_.Invoke(this, EventArgs.Empty);
+                    }
+                }
+            }
+        }
+
         public double CalcTransportationCost()
         {
             return transpotationList_.TotalCost;
@@ -416,6 +454,11 @@ namespace WorldTravelLogger.Models
             return transpotationList_.GetCalcArray();
         }
 
+        public bool GetNeedingTransportationEndDate()
+        {
+            return transpotationList_.GetNeedingEndDate();
+        }
+
         public double GetTotalDistance()
         {
             return transpotationList_.TotalDistance;
@@ -425,6 +468,8 @@ namespace WorldTravelLogger.Models
         {
             return transpotationList_.TotalTime;
         }
+
+
         // Sightseeing
 
         public double CalcSightseeingCost()

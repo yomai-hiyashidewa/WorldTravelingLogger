@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Documents;
 using WorldTravelLogger.Models;
 
@@ -22,7 +23,13 @@ namespace WorldTravelLogger.ViewModels
         {
             model_ = model;
             model.ControlChanged_ += Model_ControlChanged_;
+            model_.TransportationChanged_ += Model__TransportationChanged_;
             currentTransportationType_ = Transportationtype.Train;
+        }
+
+        private void Model__TransportationChanged_(object? sender, EventArgs e)
+        {
+            UpdateAll();
         }
 
         private void UpdateAll()
@@ -32,6 +39,9 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("TotalCost");
             this.RaisePropertyChanged("TotalMovingDistance");
             this.RaisePropertyChanged("TotalMovingTime");
+            this.RaisePropertyChanged("IsWithAirplane");
+            this.RaisePropertyChanged("IsWithCrossBorder");
+                        
         }
 
         private void Model_ControlChanged_(object? sender, EventArgs e)
@@ -39,6 +49,44 @@ namespace WorldTravelLogger.ViewModels
             UpdateAll();
         }
 
+        public bool IsWithAirplane
+        {
+            get
+            {
+                if(model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return model_.IsWithAirplane;
+                }
+            }
+            set
+            {
+                model_.IsWithAirplane = value;
+            }
+        }
+
+        public bool IsWithCrossBorder
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return model_.IsWithCrossBorder;
+                }
+            }
+            set
+            {
+                model_.IsWithCrossBorder = value;
+            }
+
+        }
         public string TotalCost
         {
             get
@@ -137,6 +185,9 @@ namespace WorldTravelLogger.ViewModels
                 }
             }
         }
+
+
+
 
 
     }
