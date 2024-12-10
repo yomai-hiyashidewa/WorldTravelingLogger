@@ -24,7 +24,9 @@ namespace WorldTravelLogger.Models
         PHL,    // Philippines
         [Display(Name = "Viet Nam")]
         VNM,    // Viet Nam
-        
+        [Display(Name = "Malaysia")]
+        MYS,    // Malaysia
+
         // oceania
         [Display(Name = "Australia")]
         AUS,    // Australia
@@ -299,7 +301,6 @@ namespace WorldTravelLogger.Models
         MYT,    // Mayotte
         MWI,    // Malawi
         MLI,    // Mali
-        MYS,    // Malaysia
         FSM,    // Micronesia (Federated States of)
         ZAF,    // South Africa
         SSD,    // South Sudan

@@ -32,6 +32,7 @@ namespace WorldTravelLogger.Models
         Tips,           // チップ
         PartTimeJob,    // アルバイト
         Toilet,         // トイレ
+        Museum,         // 博物館
 
     }
 }

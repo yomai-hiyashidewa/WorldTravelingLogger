@@ -57,6 +57,14 @@
                 <DataGridTextColumn Header="Max" Binding="{Binding MaxCostString}"/>
                 <DataGridTextColumn Header="Min" Binding="{Binding MinCostString}"/>
                 <DataGridTextColumn Header="Ave" Binding="{Binding AveCoastString}"/>
+                <DataGridTextColumn Header="Total d" Binding="{Binding TotalDistance}"/>
+                <DataGridTextColumn Header="Max d" Binding="{Binding MaxDistance}"/>
+                <DataGridTextColumn Header="Min d" Binding="{Binding MinDistance}"/>
+                <DataGridTextColumn Header="Ave d" Binding="{Binding AveDistance}"/>
+                <DataGridTextColumn Header="Total t" Binding="{Binding TotalTime}"/>
+                <DataGridTextColumn Header="Max t" Binding="{Binding MaxTime}"/>
+                <DataGridTextColumn Header="Min t" Binding="{Binding MinTime}"/>
+                <DataGridTextColumn Header="Ave t" Binding="{Binding AveTime}"/>
             </DataGrid.Columns>
         </DataGrid>
         <Grid Grid.Row="2">
@@ -73,10 +81,10 @@
                     <DataGridTextColumn Header="start place" Binding="{Binding StartPlace}"/>
                     <DataGridTextColumn Header="end region" Binding="{Binding EndRegion}"/>
                     <DataGridTextColumn Header="end place" Binding="{Binding EndPlace}"/>
-                    <DataGridTextColumn Header="distance" Binding="{Binding Distance}"/>
-                    <DataGridTextColumn Header="time" Binding="{Binding Time}"/>
                     <DataGridTextColumn Header="cost" Binding="{Binding Price}"/>
                     <DataGridTextColumn Header="currency" Binding="{Binding Currency}"/>
+                    <DataGridTextColumn Header="distance" Binding="{Binding Distance}"/>
+                    <DataGridTextColumn Header="time" Binding="{Binding Time}"/>
                     <DataGridTextColumn Header="Yen cost" Binding="{Binding JPYPriceString}"/>
                     <DataGridTextColumn Header="end date" Binding="{Binding EndDateString}" />
                     <DataGridTextColumn Header="end country" Binding="{Binding EndCountry,Converter={StaticResource EnumDisplayConv}}" />

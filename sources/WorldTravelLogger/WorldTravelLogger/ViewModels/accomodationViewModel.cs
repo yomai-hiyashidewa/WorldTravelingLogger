@@ -34,7 +34,13 @@ namespace WorldTravelLogger.ViewModels
 
         private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
         {
-            //this.UpdateAll();
+            if(e.Type == ListType.AccomodationList || e.Type == ListType.ExchangeRateList)
+            {
+                if (model_.ReadyAccomodations)
+                {
+                    UpdateAll();
+                }
+            }
         }
 
         private void Model__ControlChanged_(object? sender, EventArgs e)

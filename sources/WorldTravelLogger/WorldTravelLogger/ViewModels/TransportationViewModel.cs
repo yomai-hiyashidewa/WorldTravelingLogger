@@ -23,8 +23,20 @@ namespace WorldTravelLogger.ViewModels
         {
             model_ = model;
             model.ControlChanged_ += Model_ControlChanged_;
+            model_.FileLoaded_ += Model__FileLoaded_;
             model_.TransportationChanged_ += Model__TransportationChanged_;
             currentTransportationType_ = Transportationtype.Train;
+        }
+
+        private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
+        {
+            if (e.Type == ListType.TransportationList || e.Type == ListType.ExchangeRateList)
+            {
+                if (model_.ReadyTransportations)
+                {
+                    UpdateAll();
+                }
+            }
         }
 
         private void Model__TransportationChanged_(object? sender, EventArgs e)

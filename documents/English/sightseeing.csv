@@ -22,8 +22,7 @@ St.Petro Cathedral,Visiting,2022/5/30,AUS,Adelade,0,AUD,-
 Adelade library,Visiting,2022/5/30,AUS,Adelade,0,AUD,-
 light Viewing spot,Walking,2022/5/30,AUS,Adelade,0,AUD,-
 Alice springs mountans,Trekking,2022/6/1,AUS,Alice Springs,0,AUD,-
-"lost my mountain 
-hoodie",Accident,2022/6/2,AUS,Alice Springs,0,AUD,-
+lost my mountain jacket,Accident,2022/6/2,AUS,Alice Springs,0,AUD,-
 Alice springs dessert park,Cycring,2022/6/2,AUS,Alice Springs,45,AUD,-
 Burgar king,Eating,2022/6/3,AUS,Alice Springs,11.5,AUD,-
 telegraph station,Visiting,2022/6/3,AUS,Alice Springs,16,AUD,-
@@ -63,8 +62,7 @@ city cat,Boat,2022/6/17,AUS,Brisbane,0,AUD,-
 margarita,Eating,2022/6/18,AUS,gold coast,8,AUD,-
 around gold coast,Walking,2022/6/18,AUS,gold coast,0,AUD,-
 around gold coast,Walking,2022/6/19,AUS,gold coast,0,AUD,-
-"addidas mountain 
-hoodie",Shopping,2022/6/19,AUS,gold coast,30,AUD,-
+addidas mountain jacket,Shopping,2022/6/19,AUS,gold coast,30,AUD,-
 ice cream and coffee,Eating,2022/6/20,AUS,Brisbane,9.5,AUD,-
 woodly point jetty,Walking,2022/6/20,AUS,Brisbane,0,AUD,-
 mount coot tha,Walking,2022/6/20,AUS,Brisbane,0,AUD,-
@@ -625,7 +623,7 @@ lunch,Eating,2023/6/6,PHL,paratero,80,PHP,-
 lunch,Eating,2023/6/7,PHL,paratero,92,PHP,-
 coconats juice,Eating,2023/6/7,PHL,paratero,60,PHP,-
 Rental motorcycle,Shopping,2023/6/7,PHL,paratero,500,PHP,-
-terminal fee,Tax,2023/6/8,PHL,paratero,10,PHP,-
+terminal fee,Ticket,2023/6/8,PHL,paratero,10,PHP,-
 sweets,Eating,2023/6/9,PHL,Mabini,25,PHP,-
 hot dog,Eating,2023/6/10,PHL,Balanga,50,PHP,-
 jory bee,Eating,2023/6/10,PHL,Balanga,75,PHP,-
@@ -1313,7 +1311,7 @@ karaage,Eating,2023/12/11,KOR,Busan,5900,KRW,-
 bread x 3,Eating,2023/12/11,KOR,Busan,8600,KRW,-
 sandwich,Eating,2023/12/12,JPN,Hakata,850,JPY,komeda coffee
 ramen,Eating,2023/12/12,JPN,Hakata,720,JPY,-
-Exchanged to 26000 Yen,Exchange,2023/12/12,JPN,Hakata,200,USD,-
+Exchanged to 26000 Yen,Exchange,2023/12/12,JPN,Hakata,0,USD,from 200USD
 100kin,Shopping,2023/12/12,JPN,Hakata,1000,JPY,-
 hakozaki shirne,Visiting,2023/12/13,JPN,Hakata,0,JPY,-
 hakata bay,Walking,2023/12/13,JPN,Hakata,0,JPY,-
@@ -1321,7 +1319,7 @@ shofukuji temple,Visiting,2023/12/13,JPN,Hakata,0,JPY,-
 beppu bay,Walking,2023/12/13,JPN,beppu,0,JPY,-
 beppu onsen,Visiting,2023/12/14,JPN,beppu,100,JPY,-
 dagoziru,Eating,2023/12/14,JPN,beppu,900,JPY,-
-yukemuri overviewing,Eating,2023/12/14,JPN,beppu,0,JPY,-
+yukemuri overviewing,Visiting,2023/12/14,JPN,beppu,0,JPY,-
 dogo onsen,Visiting,2023/12/15,JPN,dogo,460,JPY,-
 matsuyama castle,Visiting,2023/12/15,JPN,matsuyama,0,JPY,-
 bread X 3,Eating,2023/12/15,JPN,yashirohma,450,JPY,-
@@ -1344,7 +1342,7 @@ mee up with yo san and talked for 3hours,Accident,2023/12/17,JPN,osaka,0,JPY,-
 biwako,Walking,2023/12/19,JPN,shiga,0,JPY,-
 mee up with my friend,Accident,2023/12/19,JPN,shiga,0,JPY,-
 1st day of seisyun 18 Ticket,Accident,2023/12/19,JPN,shiga,0,JPY,-
-gyudon,Eating,2023/12/19,JPN,nagoya,0,JPY,-
+gyudon,Eating,2023/12/19,JPN,nagoya,460,JPY,-
 2nd day of seisyunn 18 Ticket,Accident,2023/12/21,JPN,nagoya,0,JPY,-
 suwa taisya harusya shirne,Visiting,2023/12/21,JPN,suwa,0,JPY,-
 suwa taisya akisya shirne,Visiting,2023/12/21,JPN,suwa,0,JPY,-

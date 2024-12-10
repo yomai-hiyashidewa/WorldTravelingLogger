@@ -20,8 +20,17 @@ namespace WorldTravelLogger.ViewModels
         public SideViewModel(MainModel model)
         {
             model_ = model;
+            model_.FileLoaded_ += Model__FileLoaded_;
             model_.ControlChanged_ += Model__ControlChanged_;
             model.TransportationChanged_ += Model_TransportationChanged_;
+        }
+
+        private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
+        {
+            if (model_.ReadyApplication)
+            {
+                UpdateView();
+            }
         }
 
         private void Model_TransportationChanged_(object? sender, EventArgs e)

@@ -88,7 +88,9 @@ namespace WorldTravelLogger.Models
                     ConvertAccomodationPrices();
                     ConvertTransportationPrices();
                     ConvertSightSeeingPrices();
+
                 }
+                CalcListAll();
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.ExchangeRateList, result));
@@ -110,6 +112,7 @@ namespace WorldTravelLogger.Models
                 {
                     ConvertSightSeeingPrices();
                 }
+                CalcListAll();
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.SightSeeingList, result));
@@ -131,6 +134,7 @@ namespace WorldTravelLogger.Models
                 {
                     ConvertTransportationPrices();
                 }
+                CalcListAll();
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.TransportationList, result));
@@ -154,6 +158,7 @@ namespace WorldTravelLogger.Models
                 {
                     ConvertAccomodationPrices();
                 }
+                CalcListAll();
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.AccomodationList, result));
@@ -355,17 +360,41 @@ namespace WorldTravelLogger.Models
 
         public MajorCurrencytype CurrentMajorCurrencyType { get; set; }
 
-        
 
-       
+
+
         // control
+        public bool ReadyApplication
+        {
+            get
+            {
+                return accomodationList_.IsLoaded &&
+                    transpotationList_.IsLoaded &&
+                    sightSeeingList_.IsLoaded &&
+                     exchangeRater_.IsLoaded;
+            }
+        }
 
+
+        private void CalcListAll()
+        {
+            if (ReadyAccomodations)
+            {
+                accomodationList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
+            }
+            if (ReadyTransportations)
+            {
+                transpotationList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
+            }
+            if (ReadySightseeings)
+            {
+                sightSeeingList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
+            }
+        }
 
         private void FireControlChangd()
         {
-            accomodationList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
-            transpotationList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
-            sightSeeingList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
+            CalcListAll();
             if (ControlChanged_ != null)
             {
                 ControlChanged_.Invoke(this, EventArgs.Empty);
@@ -377,9 +406,20 @@ namespace WorldTravelLogger.Models
             return accomodationList_.TotalCost + transpotationList_.TotalCost + sightSeeingList_.TotalCost;
         }
 
+
        
 
         // accomodation
+
+        public bool ReadyAccomodations
+        {
+            get
+            {
+                return accomodationList_.IsLoaded && exchangeRater_.IsLoaded;
+            }
+        }
+
+
 
         public double CalcAccomodationTotalCost()
         {
@@ -400,6 +440,14 @@ namespace WorldTravelLogger.Models
         }
 
         // transportation
+
+        public bool ReadyTransportations
+        {
+            get
+            {
+                return transpotationList_.IsLoaded && exchangeRater_.IsLoaded;
+            }
+        }
         public bool IsWithAirplane
         {
             get { return transpotationList_.IsWithAirplane; }
@@ -471,6 +519,14 @@ namespace WorldTravelLogger.Models
 
 
         // Sightseeing
+
+        public bool ReadySightseeings
+        {
+            get
+            {
+                return sightSeeingList_.IsLoaded && exchangeRater_.IsLoaded;
+            }
+        }
 
         public double CalcSightseeingCost()
         {
