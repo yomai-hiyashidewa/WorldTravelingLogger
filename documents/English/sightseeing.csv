@@ -79,7 +79,7 @@ harber bridge,Visiting,2022/6/25,AUS,Sydney,0,AUD,-
 opera house,Visiting,2022/6/25,AUS,Sydney,0,AUD,-
 watson bay,Visiting,2022/6/25,AUS,Sydney,0,AUD,-
 Sydney bay,Boat,2022/6/25,AUS,Sydney,0,AUD,-
-Eating seafood in fish marcket,Eating,2022/6/26,AUS,Sydney,20,AUD,-
+Eating seafood in fish market,Eating,2022/6/26,AUS,Sydney,20,AUD,-
 beer in bar,Eating,2022/6/25,AUS,Sydney,10,AUD,-
 yakiudon,Eating,2022/7/3,JPN,Kokura,600,JPY,-
 kokura castle,Visiting,2022/7/3,JPN,Kokura,350,JPY,-
@@ -235,7 +235,7 @@ El Tunco beach,Walking,2022/9/17,SLV,El Tunco,0,USD,-
 Honduras depature taz,Tax,2022/9/18,HND,Guasaule,21,USD,-
 dinner,Eating,2022/9/18,HND,anywhere,3.25,USD,-
 lunch,Eating,2022/9/19,NIC,Leon,150,NIO,-
-the food in the marcket,Eating,2022/9/19,NIC,Leon,50,NIO,-
+the food in the market,Eating,2022/9/19,NIC,Leon,50,NIO,-
 coffee,Eating,2022/9/19,NIC,Leon,100,NIO,-
 Leon Cathedral,Visiting,2022/9/19,NIC,Leon,0,NIO,-
 go back to walk to my accomodation,Accident,2022/9/20,NIC,Managua,0,NIO,-
@@ -335,8 +335,8 @@ Whole roasted pig,Eating,2022/11/4,ECU,bus,1.5,USD,-
 lunch,Eating,2022/11/5,ECU,arausi,5,USD,-
 dinner,Eating,2022/11/5,ECU,arausi,10,USD,-
 alausi Walking,Walking,2022/11/5,ECU,arausi,0,USD,-
-coffee,Eating,2022/11/7,ECU,Cuenca,2,USD,-
-humberger,Eating,2022/11/7,ECU,Cuenca,5,USD,-
+coffee,Eating,2022/11/7,ECU,Cuenca,2,USD,with yuranora san
+humberger,Eating,2022/11/7,ECU,Cuenca,5,USD,with yuranora san
 meeting with yuranora san,Accident,2022/11/7,ECU,Cuenca,0,USD,-
 clture museum,Visiting,2022/11/7,ECU,Cuenca,4,USD,-
 modern art museum,Visiting,2022/11/7,ECU,Cuenca,0,USD,-
@@ -380,7 +380,7 @@ chicha zerry,Eating,2022/11/20,PER,ika,2,PEN,-
 meeting with yuranora san,Accident,2022/11/21,PER,Nazca,0,PEN,-
 nazca Tour,Tour,2022/11/22,PER,Nazca,70,USD,-
 first sesna,Accident,2022/11/22,PER,Nazca,0,USD,-
-antonini museum,Accident,2022/11/22,PER,Nazca,20,PEN,-
+antonini museum,Visiting,2022/11/22,PER,Nazca,20,PEN,-
 the bus to Arequipa,Ticket,2022/11/22,PER,Nazca,110,PEN,throw the bus
 the bus couldn' come because strike,Accident,2022/11/22,PER,Nazca,0,PEN,-
 the bus couldn' come because strike,Accident,2022/11/23,PER,Nazca,0,PEN,-
@@ -391,7 +391,7 @@ water bridge,Visiting,2022/11/25,PER,Arequipa,0,PEN,-
 coffee,Eating,2022/11/25,PER,Arequipa,6,PEN,-
 carmen overviewing,Visiting,2022/11/25,PER,Arequipa,5,PEN,-
 Toilet,Toilet,2022/11/26,PER,Arequipa,1.5,PEN,-
-Exchange from peru sols to chille pesos,Exchange,2022/11/26,PER,border,150,PEN,36000CLP
+Exchange from peru sols to chille pesos,Exchange,2022/11/26,PER,border,0,PEN,150 PEN => 36000CLP
 lunch,Eating,2022/11/26,CHL,Arica,11000,CLP,Shopping morl
 alicca museum,Visiting,2022/11/27,CHL,Arica,2000,CLP,Shopping morl
 alica fortless,Walking,2022/11/27,CHL,Arica,0,CLP,-
@@ -410,8 +410,8 @@ hot dog,Eating,2022/12/5,CHL,Valparaiso,2000,CLP,-
 cola,Eating,2022/12/7,CHL,Antofagasta,2000,CLP,-
 pukla heritage,Visiting,2022/12/9,CHL,San Pedro de Atacama,5650,CLP,-
 bolivia border Tour,Tour,2022/12/9,CHL,San Pedro de Atacama,34155,CLP,-
-Pisco Sour,Eating,2022/12/9,CHL,San Pedro de Atacama,0,CLP,-
-border HotSpring,HotSpring,2022/12/9,CHL,San Pedro de Atacama,0,CLP,-
+Pisco Sour,Eating,2022/12/9,CHL,San Pedro de Atacama,0,CLP,tour
+border HotSpring,HotSpring,2022/12/9,CHL,San Pedro de Atacama,0,CLP,tour
 dinner,Eating,2022/12/10,CHL,Calama,14850,CLP,Restrant
 bolivian food,Eating,2022/12/12,BOL,Uyuni,15,BOB,-
 meeting with yuranora san,Accident,2022/12/12,BOL,Uyuni,0,BOB,-
@@ -423,14 +423,14 @@ uyuni salt lake,Visiting,2022/12/12,BOL,Uyuni,0,BOB,-
 picking up garbage,Accident,2022/12/12,BOL,Uyuni,0,BOB,be watched strange man
 umita 5s,Eating,2022/12/14,BOL,Potosi,10,BOB,-
 Haircut,Haircut,2022/12/14,BOL,Sucre,30,BOB,-
-not taking the bus,Accident,2022/12/14,BOL,Potosi,20,BOB,-
+missed the bus,Accident,2022/12/14,BOL,Potosi,20,BOB,-
 Washing fee,Washing,2022/12/14,BOL,Sucre,30,BOB,-
 colonial museum,Visiting,2022/12/15,BOL,Sucre,45,BOB,-
 dinasour foot stamp,Visiting,2022/12/15,BOL,Sucre,0,BOB,-
 shower fee,Shopping,2022/12/16,BOL,Sucre,10,BOB,-
 breakfast,Eating,2022/12/17,BOL,La Paz,35,BOB,terminal
 la Paz metro card,Ticket,2022/12/17,BOL,La Paz,30,BOB,-
-national museum,Ticket,2022/12/17,BOL,La Paz,20,BOB,-
+national museum,Visiting,2022/12/17,BOL,La Paz,20,BOB,-
 returned my lundury,Accident,2022/12/17,BOL,La Paz,0,BOB,-
 chicha zerry,Eating,2022/12/19,BOL,Copacabana,1,BOB,-
 copacabana beach,Walking,2022/12/19,BOL,Copacabana,0,BOB,-
@@ -439,7 +439,7 @@ Pisco Sour,Eating,2022/12/21,PER,Puno,16,PEN,-
 Puno beach,Walking,2022/12/21,PER,Puno,0,PEN,-
 Puno museum,Walking,2022/12/21,PER,Puno,15,PEN,-
 blockade bus terminal,Accident,2022/12/21,PER,Puno,0,PEN,-
-Exchanged to 224BOB,Exchange,2022/12/22,BOL,Copacabana,120,PEN,-
+Exchanged to 224BOB,Exchange,2022/12/22,BOL,Copacabana,0,PEN,120PEN => 224BOB
 pudding,Eating,2022/12/23,BOL,Copacabana,3,BOB,-
 terminal fee,Ticket,2022/12/23,BOL,La Paz,2.5,BOB,-
 Statue of Christ,Visiting,2022/12/24,BOL,Ciudad de Cochabamba,0,BOB,-
@@ -458,10 +458,10 @@ stopped for 2 hours because demonstration,Accident,2022/12/29,BOL,bus,0,BOB,-
 ramen + juice,Eating,2023/1/1,BOL,Tarija,27,BOB,-
 Tarija cathedral,Visiting,2023/1/1,BOL,Tarija,0,BOB,-
 joined new year misa,Accident,2023/1/1,BOL,Tarija,0,BOB,-
-Exchanged to 63000ARP,Exchange,2023/1/1,BOL,Tarija,200,USD,-
-lunch,Eating,2023/1/2,BOL,Tarija,20,BOB,marcket
+Exchanged to 63000ARP,Exchange,2023/1/1,BOL,Tarija,0,USD,200USD => 63000ARP
+lunch,Eating,2023/1/2,BOL,Tarija,20,BOB,market
 shower fee,Shopping,2023/1/2,BOL,Tarija,10,BOB,-
-meeting up with my family,Shopping,2023/1/2,BOL,Tarija,0,BOB,online
+meeting up with my family,Accident,2023/1/2,BOL,Tarija,0,BOB,online
 tarija overviewing,Walking,2023/1/2,BOL,Tarija,0,BOB,-
 rainbow hill,Visiting,2023/1/3,ARG,purmamarca,100,ARS,-
 sweets,Eating,2023/1/3,ARG,purmamarca,300,ARS,-
@@ -481,25 +481,25 @@ meeting up with madoka san,Accident,2023/1/11,PRY,Yguazu,0,PYG,-
 meeting up with the man returned south poke,Accident,2023/1/11,PRY,Yguazu,0,PYG,-
 ygazu JPNese regidence,Walking,2023/1/12,PRY,Yguazu,0,PYG,-
 lunch,Eating,2023/1/12,PRY,Yguazu,15000,PYG,-
-around minsyuku kobayashi,Eating,2023/1/12,PRY,Yguazu,0,PYG,-
-JPNese dish,Eating,2023/1/13,PRY,Yguazu,30000,PYG,-
+around minsyuku kobayashi,Walking,2023/1/12,PRY,Yguazu,0,PYG,-
+Japanese meal,Eating,2023/1/13,PRY,Yguazu,30000,PYG,-
 ito park,Walking,2023/1/13,PRY,Yguazu,0,PYG,-
 itaipu dam,Visiting,2023/1/14,PRY,itaipu,0,PYG,-
-Grilled Skewers,Eating,2023/1/15,PRY,itaipu,100,PYG,-
-Encarnacion beach,Eating,2023/1/15,PRY,Encarnacion,0,PYG,-
+Grilled Skewers,Eating,2023/1/15,PRY,itaipu,100,JPY,-
+Encarnacion beach,Walking,2023/1/15,PRY,Encarnacion,0,PYG,-
 Trinidad heritage,Visiting,2023/1/16,PRY,Trinidad,25000,PYG,-
 lunch,Eating,2023/1/16,PRY,Trinidad,20000,PYG,-
-ice cream,Eating,2023/1/16,PRY,Trinidad,500,PYG,-
+ice cream,Eating,2023/1/16,PRY,Trinidad,5000,PYG,-
 lunch,Eating,2023/1/18,PRY,Ciudad de Asuncion,100000,PYG,-
 barubero museum,Visiting,2023/1/18,PRY,Ciudad de Asuncion,0,PYG,-
-Exchanged to ?? ARS,Exchange,2023/1/18,PRY,Ciudad de Asuncion,400000,PYG,-
-Exchanged to ?? ARS,Exchange,2023/1/20,ARG,Santa Fe de la Vera Cruz,100,USD,1USD = 360ARS
-Cashing from atm,Cashing,2023/1/20,ARG,Santa Fe de la Vera Cruz,10000,ARS,-
+Exchanged to ?? ARS,Exchange,2023/1/18,PRY,Ciudad de Asuncion,0,PYG,from 400000 to ?? ARS
+Exchanged to ?? ARS,Exchange,2023/1/20,ARG,Santa Fe de la Vera Cruz,0,USD,from 100USD 1USD = 360ARS
+Cashing from atm,Cashing,2023/1/20,ARG,Santa Fe de la Vera Cruz,0,ARS,10000ARS
 joined birthday party,Cashing,2023/1/21,ARG,Santa Fe de la Vera Cruz,0,ARS,-
 around santa fe,Walking,2023/1/21,ARG,Santa Fe de la Vera Cruz,0,ARS,-
 coffee+bread,Eating,2023/1/23,ARG,VillaCaropas,450,ARS,-
 ice cream,Eating,2023/1/23,ARG,VillaCaropas,200,ARS,-
-Exchanged to ?? ARS,Exchange,2023/1/23,ARG,cordoba,100,USD,1USD=370ARS
+Exchanged to ?? ARS,Exchange,2023/1/23,ARG,cordoba,0,USD,from 100USD 1USD=370ARS
 VillaCaropas,Walking ,2023/1/23,ARG,VillaCaropas,0,ARS,-
 regional museum,Visiting,2023/1/24,ARG,cordoba,100,ARS,-
 cabird museum,Visiting,2023/1/24,ARG,cordoba,0,ARS,-
@@ -713,7 +713,7 @@ bodo port,Walking,2023/7/16,NOR,Bodo,0,JPY,-
 bodo mountain,Walking,2023/7/16,NOR,Bodo,0,JPY,-
 meeting up with german company,Accident,2023/7/17,NOR,Narvik,0,JPY,-
 narvik charch,Visiting,2023/7/17,NOR,Narvik,0,JPY,-
-supermarcket,Shopping,2023/7/18,SWE,Lulea,105,SEK,-
+supermarket,Shopping,2023/7/18,SWE,Lulea,105,SEK,-
 Kiruna chruch,Visiting,2023/7/18,SWE,Kiruna,0,SEK,-
 dinner,Eating,2023/7/20,FIN,Helsinki,5.6,EUR,-
 bread,Eating,2023/7/21,FIN,Joensuu,1.2,EUR,-
@@ -1386,7 +1386,7 @@ bread,Eating,2024/4/3,TUR,Istanbul,36,TRY,-
 simit ,Eating,2024/4/4,TUR,Istanbul,10,TRY,-
 kebab,Eating,2024/4/4,TUR,Bursa,60,TRY,-
 bread,Eating,2024/4/4,TUR,Bursa,20,TRY,-
-supermarcket,Eating,2024/4/4,TUR,Eskisehir,20,TRY,-
+supermarket,Eating,2024/4/4,TUR,Eskisehir,20,TRY,-
 lokanta,Eating,2024/4/4,TUR,Eskisehir,175,TRY,-
 sweets,Eating,2024/4/4,TUR,Eskisehir,5,TRY,-
 chay,Eating,2024/4/5,TUR,Eskisehir,20,TRY,-
@@ -1405,7 +1405,7 @@ simit,Eating,2024/4/7,TUR,Samsun,10,TRY,-
 boiled corn,Eating,2024/4/7,TUR,Samsun,60,TRY,-
 bread,Eating,2024/4/7,TUR,Samsun,25,TRY,-
 suger sweets,Eating,2024/4/7,TUR,Samsun,20,TRY,-
-supermarcket,Eating,2024/4/7,TUR,Samsun,20,TRY,-
+supermarket,Eating,2024/4/7,TUR,Samsun,20,TRY,-
 bread,Eating,2024/4/8,TUR,Samsun,100,TRY,Terminal
 chay,Eating,2024/4/8,TUR,Samsun,15,TRY,-
 sweets,Eating,2024/4/8,TUR,Trabzon,80,TRY,-
@@ -1415,7 +1415,7 @@ sweets,Eating,2024/4/9,TUR,Trabzon,36,TRY,-
 Toilet,Toilet,2024/4/9,TUR,Trabzon,7,TRY,-
 Cashing from atm,Cashing,2024/4/9,TUR,Trabzon,1000,TRY,-
 Erzurum castle,Visiting,2024/4/9,TUR,Erzurum,105,TRY,-
-supermarcket,Eating,2024/4/9,TUR,Erzurum,7,TRY,-
+supermarket,Eating,2024/4/9,TUR,Erzurum,7,TRY,-
 lokanta,Eating,2024/4/9,TUR,Erzurum,265,TRY,-
 lokanta,Eating,2024/4/10,TUR,Erzurum,120,TRY,-
 bread X 2,Eating,2024/4/10,TUR,Erzurum,30,TRY,-
@@ -1428,12 +1428,12 @@ coffee,Eating,2024/4/11,GEO,batumi,1,GEL,-
 bread,Eating,2024/4/11,GEO,batumi,3,GEL,-
 bread,Eating,2024/4/11,GEO,batumi,1.2,GEL,-
 bread,Eating,2024/4/11,GEO,batumi,1.5,GEL,-
-supermarcket,Eating,2024/4/11,GEO,Kutaisi,6.53,GEL,-
+supermarket,Eating,2024/4/11,GEO,Kutaisi,6.53,GEL,-
 bread,Eating,2024/4/11,GEO,Kutaisi,1,GEL,-
 cola,Eating,2024/4/12,GEO,Kutaisi,1.35,GEL,-
 donauts,Eating,2024/4/12,GEO,Kutaisi,1,GEL,-
 bread,Eating,2024/4/12,GEO,Tbilisi,1.5,GEL,-
-supermarcket,Eating,2024/4/12,GEO,Tbilisi,7.3,GEL,-
+supermarket,Eating,2024/4/12,GEO,Tbilisi,7.3,GEL,-
 Toilet,Toilet,2024/4/12,GEO,Tbilisi,0.5,GEL,-
 ear plug,Shopping,2024/4/12,GEO,Tbilisi,2.3,GEL,-
 coffee,Eating,2024/4/13,GEO,Tbilisi,1.5,GEL,-
@@ -1448,8 +1448,8 @@ bread,Eating,2024/4/14,ARM,Sevan,200,AMD,-
 bread,Eating,2024/4/14,ARM,Sevan,240,AMD,-
 lake sevan,Eating,2024/4/14,ARM,Sevan,240,AMD,-
 I was took a car,Accident,2024/4/14,ARM,Sevan,0,AMD,-
-supermarcket,Eating,2024/4/14,ARM,Gyumri,400,AMD,-
-supermarcket,Eating,2024/4/14,ARM,Gyumri,890,AMD,-
+supermarket,Eating,2024/4/14,ARM,Gyumri,400,AMD,-
+supermarket,Eating,2024/4/14,ARM,Gyumri,890,AMD,-
 beer,Eating,2024/4/14,ARM,Gyumri,400,AMD,-
 bread,Eating,2024/4/15,ARM,Gyumri,200,AMD,-
 juice,Eating,2024/4/15,ARM,Gyumri,320,AMD,-
