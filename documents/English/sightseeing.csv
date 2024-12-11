@@ -31,8 +31,7 @@ Alice springs mountans,Trekking,2022/6/3,AUS,Alice Springs,0,AUD,-
 anzac hill,Trekking,2022/6/3,AUS,Alice Springs,0,AUD,-
 shower fee,Other,2022/6/3,AUS,Alice Springs,5,AUD,-
 waintg a bus in gas station for 1 hour,Accident,2022/6/3,AUS,Alice Springs,0,AUD,-
-"Practing a
-boomerang with old man ",Walking,2022/6/5,AUS,Darwin,0,AUD,-
+Practing a boomerang with old man ,Walking,2022/6/5,AUS,Darwin,0,AUD,-
 1 day pass for darwin,Ticket,2022/6/6,AUS,Darwin,7,AUD,-
 ice cream and cola,Eating,2022/6/6,AUS,Darwin,9,AUD,-
 around with water front,Walking,2022/6/6,AUS,Darwin,0,AUD,-
@@ -100,12 +99,11 @@ kinosaki HotSpring,HotSpring,2022/7/10,JPN,kinosaki,0,JPY,-
 immigration was so hard for 1 hours,Accident,2022/7/13,USA,seattle,0,JPY,-
 Anchorage Mmuseum,Visiting,2022/7/14,USA,Anchorage,20,USD,-
 Anchorage Mmuseum planetarium,Visiting,2022/7/14,USA,Anchorage,6,USD,-
-campbell creak,Walking,2022/7/15,USA,Anchorage,6,USD,-
+campbell creak,Walking,2022/7/15,USA,Anchorage,0,USD,-
 swward bus Ticket,Ticket,2022/7/16,USA,Anchorage,144,USD,overslept
 oversleeping,Accident,2022/7/16,USA,Anchorage,0,USD,-
 alaska zoo,Visiting,2022/7/16,USA,Anchorage,17,USD,-
-"noface mountain 
-hoodie",Shopping,2022/7/16,USA,Anchorage,97.2,USD,-
+noface mountain hoodie,Shopping,2022/7/16,USA,Anchorage,97.2,USD,-
 along to Anchorage sea,Walking,2022/7/17,USA,Anchorage,0,USD,hard rain
 stan lee park,Walking,2022/7/18,CAN,Vancouver,0,CAD,-
 around point roberts,Walking,2022/7/19,CAN,Vancouver,0,CAD,-
@@ -124,8 +122,7 @@ Buying annual bus Ticket,Accident,2022/7/26,CAN,Saskatoon,0,CAD,cancel in shop
 bus Ticket,Ticket,2022/7/27,CAN,Saskatoon,3.25,CAD,-
 around Saskatoon,Walking,2022/7/27,CAN,Saskatoon,0,CAD,-
 around Regina,Walking,2022/7/28,CAN,Regina,0,CAD,-
-"
-state hall",Visiting,2022/7/28,CAN,Regina,0,CAD,-
+state hall,Visiting,2022/7/28,CAN,Regina,0,CAD,-
 A&W,Eating,2022/7/29,CAN,Regina,10,CAD,-
 Regina museum,Visiting,2022/7/29,CAN,Regina,0,CAD,-
 waiting a bus with homeless,Accident,2022/7/29,CAN,Regina,0,CAD,-
@@ -183,7 +180,7 @@ island cozmel,Walking,2022/8/28,MEX,Cozumel,0,MXP,-
 Cancun beach,Walking,2022/8/29,MEX,Cancun,0,MXP,-
 additional baggage for airplane,Accident,2022/8/29,MEX,Cancun,80,USD,-
 cuba Tourist card,Tax,2022/8/29,MEX,Cancun,25,USD,-
-6000CUP,Exchange,2022/8/29,CUB,habana,1000,MXP,-
+6000CUP,Exchange,2022/8/29,CUB,habana,0,MXP,from 1000 MXP
 breakfast,Eating,2022/8/30,CUB,habana,7,USD,-
 wifi card,Shopping,2022/8/30,CUB,habana,125,CUP,-
 Mojito,Eating,2022/8/30,CUB,habana,1500,CUP,-
@@ -192,27 +189,26 @@ alcohol fee,Eating,2022/8/30,CUB,habana,2500,CUP,-
 meeting with strange,Accident,2022/8/30,CUB,habana,0,CUP,-
 Vinales drive,Tour,2022/8/30,CUB,habana,120,USD,-
 Sim card,Shopping,2022/8/30,CUB,habana,3900,CUP,-
-Getting 10000 CUP,Cashing,2022/8/30,CUB,habana,83,USD,-
-Getting 20000 CUP,Cashing,2022/8/30,CUB,habana,166,USD,-
+Getting 10000 CUP,Cashing,2022/8/30,CUB,habana,0,USD,from 83 USD
+Getting 20000 CUP,Cashing,2022/8/30,CUB,habana,0,USD,from 166 USD
 breakfast,Eating,2022/8/31,CUB,service area,0,USD,-
 lunch,Eating,2022/8/31,CUB,Vinales,1900,CUP,paying his wife and friend 
-Vinales vally,Visiting,2022/8/31,CUB,Vinales,0,CUP,rour
-limestone cave,Visiting,2022/8/31,CUB,Vinales,0,CUP,rour
-wall image,Visiting,2022/8/31,CUB,Vinales,0,CUP,rour
+Vinales vally,Visiting,2022/8/31,CUB,Vinales,0,CUP,tour
+limestone cave,Visiting,2022/8/31,CUB,Vinales,0,CUP,tour
+wall image,Visiting,2022/8/31,CUB,Vinales,0,CUP,tour
 Sim card,Shopping,2022/9/1,CUB,habana,125,CUP,-
 breakfast,Eating,2022/9/2,CUB,habana,7,USD,-
 breakfast,Eating,2022/9/3,CUB,habana,7,USD,-
 throwing my flight Ticket from camagway to cancun,Accident,2022/9/3,CUB,habana,5870,MXP,-
 contacting my parents,Accident,2022/9/3,CUB,habana,0,MXP,-
-"
-asked my parents to buy me a Ticket.",Accident,2022/9/3,CUB,habana,120000,JPY,-
+asked my parents to buy me a Ticket.,Accident,2022/9/3,CUB,habana,0,JPY,-
 coffee and milk,Eating,2022/9/6,MEX,Chetumal,7,MXP,-
 Drinking with young people,Accident,2022/9/7,BLZ,San Ignacio,0,BRD,-
 Belize city beach,Walking,2022/9/7,BLZ,San Ignacio,0,BRD,-
 Cahal Pech heritage,Visiting,2022/9/7,BLZ,San Ignacio,10,BRD,-
 Xunantunich heritage,Visiting,2022/9/8,BLZ,Xunantunich,10,BRD,-
 Departure Tax,Tax,2022/9/9,BLZ,border,20,USD,-
-Getting 30 GTQ,Exchange,2022/9/9,BLZ,border,9,BRD,-
+Getting 30 GTQ,Exchange,2022/9/9,BLZ,border,0,BRD,from 9 BRZ
 dinner's chicken,Eating,2022/9/9,GTM,Flores,25,GTQ,-
 tikal heritage,Tour,2022/9/10,GTM,tikal,150,GTQ,-
 cola,Eating,2022/9/10,GTM,tikal,10,GTQ,-
@@ -228,16 +224,16 @@ electric cable,Shopping,2022/9/14,SLV,Santa Ana,5,USD,-
 throwing my bus Ticket,Accident,2022/9/14,SLV,Santa Ana,80,USD,lost a bus to leon
 independence day,Accident,2022/9/15,SLV,Santa Ana,0,USD,-
 chnaging a accomodation,Accident,2022/9/15,SLV,Santa Ana,0,USD,-
-big poteto fries,Eating,2022/9/16,SLV,Santa Ana,0,USD,-
-Santa ana volcano entrance fee,Walking,2022/9/16,SLV,Santa Ana,10,USD,With guide
+big poteto fries,Eating,2022/9/16,SLV,Santa Ana,1,USD,-
+Santa ana volcano entrance fee,Trekking,2022/9/16,SLV,Santa Ana,10,USD,With guide
 I saw like a ded man,Accident,2022/9/16,SLV,Santa Ana,0,USD,-
-The cake for presents,Accident,2022/9/16,SLV,Santa Ana,0,USD,happy birthdayof the owner
+The cake for presents,Accident,2022/9/16,SLV,Santa Ana,0,USD,happy birthday of the owner
 Meeting with yo san,Accident,2022/9/17,SLV,El Tunco,0,USD,-
 Exchange from cuban pesos to Kyrgyzstan sums,Accident,2022/9/17,SLV,El Tunco,0,USD,-
 dinner,Accident,2022/9/17,SLV,El Tunco,5,USD,with yo san
 El Tunco beach,Walking,2022/9/17,SLV,El Tunco,0,USD,-
 Honduras depature taz,Tax,2022/9/18,HND,Guasaule,21,USD,-
-dinner,Tax,2022/9/18,HND,anywhere,3.25,USD,-
+dinner,Eating,2022/9/18,HND,anywhere,3.25,USD,-
 lunch,Eating,2022/9/19,NIC,Leon,150,NIO,-
 the food in the marcket,Eating,2022/9/19,NIC,Leon,50,NIO,-
 coffee,Eating,2022/9/19,NIC,Leon,100,NIO,-
@@ -245,7 +241,7 @@ Leon Cathedral,Visiting,2022/9/19,NIC,Leon,0,NIO,-
 go back to walk to my accomodation,Accident,2022/9/20,NIC,Managua,0,NIO,-
 lake Managua,Walking,2022/9/20,NIC,Managua,0,NIO,-
 Boat in lake nicaragua,Tour,2022/9/21,NIC,Guranada,12,USD,-
-"""I hate JPNese"" was said by my accomodation",Accident,2022/9/21,NIC,Guranada,0,USD,-
+"""I hate Japanese"" was said by my accomodation",Accident,2022/9/21,NIC,Guranada,0,USD,-
 lunch,Eating,2022/9/22,NIC,San Jorge,150,NIO,-
 Island entry Tax,Tax,2022/9/22,NIC,San Jorge,1,USD,-
 coffee,Eating,2022/9/23,NIC,Onopete,70,NIO,-
@@ -260,10 +256,10 @@ Puntarenas beach,Walking,2022/9/25,CRI,Puntarenas,0,CRC,-
 Liberia cathedral,Visiting,2022/9/25,CRI,Liberia,0,CRC,-
 coffee,Eating,2022/9/26,CRI,San Jose,500,CRC,-
 Lost my every money,Accident,2022/9/26,CRI,Alajuela,0,CRC,by Taxi driver
-diner,Eating,2022/9/27,CRI,San Jose,3000,CRC,-
+dinner,Eating,2022/9/27,CRI,San Jose,3000,CRC,-
 the national museum,Visiting,2022/9/27,CRI,San Jose,11,USD,-
 Haircut,Haircut,2022/9/27,CRI,San Jose,3,USD,-
-breakfast,Eating,2022/9/28,CRI,San Jose,5000,CRC,marcket
+breakfast,Eating,2022/9/28,CRI,San Jose,5000,CRC,market
 pupuka,Eating,2022/9/28,CRI,bus,2000,CRC,-
 chiken,Eating,2022/9/28,CRI,PalmarNorte,2000,CRC,-
 finca 6 museum,Visiting,2022/9/28,CRI,PalmarNorte,7,USD,-
@@ -274,7 +270,7 @@ lunch,Eating,2022/9/30,PAN,David,5,USD,-
 coffee + sweets,Eating,2022/10/1,PAN,David,4,USD,-
 Boquete,Walking,2022/10/1,PAN,Boquete,0,USD,-
 Santa Catalina beach,Walking,2022/10/3,PAN,Santa Catalina,0,USD,-
-Tuna and pineapple salda,Eating,2022/10/4,PAN,Coiba,0,USD,-
+Tuna and pineapple salda,Eating,2022/10/4,PAN,Coiba,0,USD,tour
 island coiba,Tour,2022/10/4,PAN,Coiba,60,USD,-
 Island entry Tax,Tax,2022/10/4,PAN,Coiba,20,USD,-
 first snokling,Accident,2022/10/4,PAN,Coiba,0,USD,-
