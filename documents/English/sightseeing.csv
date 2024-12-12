@@ -554,10 +554,10 @@ coffee,Eating,2023/3/4,BRA,Belo Horizonte,7,BRL,-
 new shoes,Shopping,2023/3/7,PRT,Lisbon,6649,JPY,-
 lunch,Eating,2023/3/8,PRT,Lisbon,43,EUR,-
 start My side hurts,Accident,2023/3/8,PRT,Lisbon,0,EUR,-
-lisbon overviewing,Accident,2023/3/9,PRT,Lisbon,0,EUR,-
+lisbon overviewing,Visting,2023/3/9,PRT,Lisbon,0,EUR,-
 left my bus to leon,Accident,2023/3/11,PRT,Lisbon,15,EUR,-
 paid two days in leon,Accident,2023/3/12,PRT,Lisbon,23.63,EUR,-
-Leon Cathedral,Accident,2023/3/13,ESP,leon,7,EUR,-
+Leon Cathedral,Visiting,2023/3/13,ESP,leon,7,EUR,-
 Washing fee,Washing,2023/3/13,ESP,leon,10,EUR,-
 national museum,Visiting,2023/3/14,ESP,Madrid,3,EUR,-
 hospital,Accident,2023/3/14,ESP,Madrid,0,EUR,-
@@ -634,7 +634,7 @@ coffee,Eating,2023/6/18,JPN,kobe,450,JPY,with my friend
 kobe forign people museum,Visiting,2023/6/18,JPN,kobe,2100,JPY,with my friend
 hospital,Accident,2023/6/19,JPN,sanda,0,JPY,with my friend
 vetnam barger ,Shopping,2023/6/21,VNM,Ha Noi ,17100,VND,-
-Cashing from atm,Cashing,2023/6/22,GBR,London,20,GBP,-
+Cashing from atm,Cashing,2023/6/22,GBR,London,0,GBP,20 GBP
 macdnard,Eating,2023/6/23,GBR,London,10,GBP,-
 Washing fee,Washing,2023/6/23,GBR,London,5,GBP,-
 great ingland museum,Visiting,2023/6/23,GBR,London,5,GBP,-
@@ -664,7 +664,7 @@ Edinburgh,Walking,2023/7/1,GBR,Edinburgh,0,GBP,-
 costa coffee,Eating,2023/7/4,GBR,Swansea,2.75,GBP,-
 breefs x 3,Shopping,2023/7/4,GBR,Southampton,5,GBP,-
 Washing fee,Washing,2023/7/4,GBR,London,7.5,GBP,-
-I cant't Exchange my northan irland currency,Accident,2023/7/5,GBR,London,7.5,GBP,-
+I cant't Exchange my northan irland currency,Accident,2023/7/5,GBR,London,0,GBP,7.5 GBP
 bread,Eating,2023/7/5,FRA,Amiens,3.5,EUR,-
 Croissant,Eating,2023/7/6,FRA,Amiens,1.1,EUR,-
 Lille 24 hour Ticket,Ticket,2023/7/6,FRA,Amiens,5.4,EUR,-
@@ -673,7 +673,6 @@ Lille cathedral,Visiting,2023/7/6,FRA,Lille,0,EUR,-
 Amiens cathedral,Visiting,2023/7/6,FRA,Amiens,0,EUR,-
 ice candy,Eating,2023/7/7,LUX,Luxembourg,2.2,EUR,-
 Belgium waffle,Eating,2023/7/7,BEL,Namur,3,EUR,-
-Luxembourg cathedral,Eating,2023/7/7,LUX,Luxembourg,0,EUR,-
 Luxembourg cathedral,Visiting,2023/7/7,LUX,Luxembourg,0,EUR,-
 Luxembourg,Walking,2023/7/7,LUX,Luxembourg,0,EUR,-
 Arlon cathedral,Visiting,2023/7/7,BEL,Arlon,0,EUR,-
@@ -708,7 +707,7 @@ Toilet,Toilet,2023/7/15,NOR,Trondheim,10,NOK,-
 starting fortless,Visiting,2023/7/15,NOR,Trondheim,0,NOK,-
 nidaross fortless,Visiting,2023/7/15,NOR,Trondheim,0,NOK,-
 saint ruder chruch,Visiting,2023/7/16,NOR,Bodo,0,NOK,-
-super,Eating,2023/7/15,NOR,Bodo,1000,JPY,-
+supermarket,Eating,2023/7/15,NOR,Bodo,1000,JPY,-
 bodo port,Walking,2023/7/16,NOR,Bodo,0,JPY,-
 bodo mountain,Walking,2023/7/16,NOR,Bodo,0,JPY,-
 meeting up with german company,Accident,2023/7/17,NOR,Narvik,0,JPY,-
