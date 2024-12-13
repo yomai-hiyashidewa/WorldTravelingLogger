@@ -1,6 +1,6 @@
 Transpotation,Start,-,-,-,End,-,-,-,-,-,-,-,-,,
 Type,Date,Countury,Place,Type,Date,Countury,Place,Type,Distance(KM),Time(Min),Price,Currency,Memo,,
-Train,2022/5/17,JPN,Sanda,Station,2022/5/17,JPN,Osaka,Station,92,120,2230,JPY,-,,
+Train,2022/5/17,JPN,Sanda,Station,2022/5/17,JPN,Osaka,Station,92,120,2230,JPY,test,,
 AirPlane,2022/5/17,JPN,Osaka,AirPort,2022/5/17,JPN,Tokyo,AirPort,537,60,10000,JPY,-,,
 AirPlane,2022/5/17,JPN,Tokyo,AirPort,2022/5/18,AUS,Sydney,AirPort,7821,590,37685,JPY,-,,
 Subway,2022/5/18,AUS,Sydney,AirPort,2022/5/18,AUS,Sydney,Central,11.4,10,16,AUD,-,,
