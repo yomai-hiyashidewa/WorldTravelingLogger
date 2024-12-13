@@ -554,7 +554,7 @@ coffee,Eating,2023/3/4,BRA,Belo Horizonte,7,BRL,-
 new shoes,Shopping,2023/3/7,PRT,Lisbon,6649,JPY,-
 lunch,Eating,2023/3/8,PRT,Lisbon,43,EUR,-
 start My side hurts,Accident,2023/3/8,PRT,Lisbon,0,EUR,-
-lisbon overviewing,Visting,2023/3/9,PRT,Lisbon,0,EUR,-
+lisbon overviewing,Visiting,2023/3/9,PRT,Lisbon,0,EUR,-
 left my bus to leon,Accident,2023/3/11,PRT,Lisbon,15,EUR,-
 paid two days in leon,Accident,2023/3/12,PRT,Lisbon,23.63,EUR,-
 Leon Cathedral,Visiting,2023/3/13,ESP,leon,7,EUR,-
@@ -738,7 +738,7 @@ Trakai lakeside,Walking,2023/7/25,LTU,Trakai,0,EUR,-
 Kaunas castle,Visiting,2023/7/25,LTU,Kaunas,0,EUR,-
 ice cream,Eating,2023/7/25,LTU,Kaunas,2,EUR,-
 vitautas grand duke war museum,Visiting,2023/7/26,LTU,Kaunas,5,EUR,-
-hes buger,Visiting,2023/7/26,LTU,Kaunas,2.8,EUR,-
+hes buger,Eating,2023/7/26,LTU,Kaunas,2.8,EUR,-
 dounats,Eating,2023/7/27,POL,Warszawa,11,PLN,-
 20 minutes Ticket,Ticket,2023/7/27,POL,Warszawa,3.4,PLN,-
 75 minutes Ticket,Ticket,2023/7/27,POL,Warszawa,4.4,PLN,-
@@ -746,7 +746,7 @@ statue of shopan,Visiting,2023/7/27,POL,Warszawa,0,PLN,-
 wajenki palese,Visiting,2023/7/27,POL,Warszawa,0,PLN,-
 wajenki palese,Visiting,2023/7/27,POL,Warszawa,0,PLN,-
 bread,Eating,2023/7/28,POL,Krakuw,2,PLN,-
-Exchanged to 22 zl,Exchange,2023/7/28,POL,Krakuw,5,EUR,-
+Exchanged to 22 zl,Exchange,2023/7/28,POL,Krakuw,0,EUR,from 5 EUR
 krakuw cathedral,Visiting,2023/7/28,POL,Krakuw,22,PLN,-
 krakuw castle,Visiting,2023/7/28,POL,Krakuw,0,PLN,-
 guness beer,Eating,2023/7/28,POL,Wrocaw,26,PLN,-
@@ -763,12 +763,12 @@ niamberg castle,Visiting,2023/7/31,DEU,Niamberg,0,EUR,-
 30 min Ticket x 2,Ticket,2023/7/31,CZE,Praha,60,CZK,-
 praha chruch,Visiting,2023/7/31,CZE,Praha,0,CZK,-
 praha castle,Visiting,2023/7/31,CZE,Praha,0,CZK,-
-praha castle,Eating,2023/8/1,SVK,vrutky,1.2,EUR,-
+cake,Eating,2023/8/1,SVK,vrutky,1.2,EUR,-
 ice cream,Eating,2023/8/2,SVK,Kosice,1.5,EUR,-
 took the train to oppacite direction,Accident,2023/8/3,HUN,Miskolc,0,EUR,-
 adapter for EU,Shopping,2023/8/3,HUN,Budapest,3000,HUF,-
 24 hour Ticket,Ticket,2023/8/4,HUN,Budapest,2500,HUF,-
-Exchanged to 700ft,Exchange,2023/8/4,HUN,Esztergom,2,EUR,-
+Exchanged to 700ft,Exchange,2023/8/4,HUN,Esztergom,0,EUR,from 2EUR 
 Esztergom cathedral,Visiting,2023/8/4,HUN,Esztergom,0,HUF,-
 Esztergom tresure room,Visiting,2023/8/4,HUN,Esztergom,1500,HUF,-
 Washing fee,Washing,2023/8/4,HUN,Budapest,8,EUR,-
@@ -782,10 +782,10 @@ saint isutborn cathedral,Visiting,2023/8/4,HUN,Budapest,0,HUF,-
 shutefun cathedral,Visiting,2023/8/6,AUT,Wien,0,EUR,-
 royal palece,Visiting,2023/8/6,AUT,Wien,0,EUR,-
 60 min Ticket,Ticket,2023/8/6,AUT,Salzburg,2.2,EUR,-
-mirabel garden,Ticket,2023/8/6,AUT,Salzburg,0,EUR,-
-hoenzalzburg castle,Ticket,2023/8/6,AUT,Salzburg,0,EUR,-
+mirabel garden,Visiting,2023/8/6,AUT,Salzburg,0,EUR,-
+hoenzalzburg castle,Visiting,2023/8/6,AUT,Salzburg,0,EUR,-
 Tourlist visa,Shopping,2023/8/7,LIE,Vaduz,3,EUR,-
-Liechtenstein cathedral,Shopping,2023/8/7,LIE,Vaduz,0,EUR,-
+Liechtenstein cathedral,Visiting,2023/8/7,LIE,Vaduz,0,EUR,-
 60 min Ticket,Ticket,2023/8/7,CHE,Zurich,4.4,CHF,-
 banana x 2,Eating,2023/8/7,CHE,Zurich,160,JPY,-
 sweets,Eating,2023/8/7,CHE,Zurich,1.2,CHF,-
@@ -901,7 +901,7 @@ macdonald,Eating,2023/9/5,ITA,Milano,5,EUR,-
 Mirano cathedral,Visiting,2023/9/5,ITA,Milano,0,EUR,-
 Mirano fortless,Visiting,2023/9/5,ITA,Milano,0,EUR,-
 dinner,Eating,2023/9/5,ITA,Milano,0,EUR,marco's house
-stayed in marco's house,Eating,2023/9/5,ITA,Milano,0,EUR,-
+stayed in marco's house,Accident,2023/9/5,ITA,Milano,0,EUR,-
 espresso,Eating,2023/9/6,ITA,Milano,2.2,EUR,-
 panini,Eating,2023/9/6,ITA,Genova,4.5,EUR,-
 Toilet,Toilet,2023/9/6,ITA,Genova,1,EUR,-
@@ -910,7 +910,7 @@ Genova Cthedral,Visiting,2023/9/6,ITA,Genova,0,EUR,-
 Tower of Pisa,Visiting,2023/9/7,ITA,Pisa,0,EUR,-
 Pisa cathedral,Visiting,2023/9/7,ITA,Pisa,0,EUR,-
 took the train to oppacite direction,Accident,2023/9/7,ITA,Pisa,0,EUR,-
-Firenze Cathedral,Accident,2023/9/7,ITA,Firenze,0,EUR,-
+Firenze Cathedral,Visiting,2023/9/7,ITA,Firenze,0,EUR,-
 Kebab,Eating,2023/9/7,ITA,Firenze,4.5,EUR,-
 San Marino palece,Visiting,2023/9/7,SMR,San Marino,0,EUR,-
 dinner,Eating,2023/9/7,SMR,San Marino,6,EUR,-
@@ -941,14 +941,14 @@ split heritage,Walking,2023/9/12,HRV,split,0,EUR,-
 dubrovnik fortless,Visiting,2023/9/12,HRV,dubrovnik,0,EUR,-
 espresso,Eating,2023/9/14,ITA,Bari,1.2,EUR,-
 24 hour Ticket,Ticket,2023/9/14,ITA,Roma,7,EUR,-
-baggage,Shopping,2023/9/15,ITA,Roma,2,EUR,-
+baggage keep fee,Accident,2023/9/15,ITA,Roma,2,EUR,-
 san pietro cathedral,Visiting,2023/9/15,VAT,Vaticanae,0,EUR,-
-marta knight Headquarters,Shopping,2023/9/15,ITA,Roma,0,EUR,-
+marta knight Headquarters,Visiting,2023/9/15,ITA,Roma,0,EUR,-
 Trevi Fountain,Visiting,2023/9/15,ITA,Roma,0,EUR,-
 Pantheon,Visiting,2023/9/15,ITA,Roma,0,EUR,-
 Mouth of Truth,Visiting,2023/9/15,ITA,Roma,1,EUR,-
 Colosseum,Visiting,2023/9/15,ITA,Roma,0,EUR,-
-I was scammed in navona park,Visiting,2023/9/15,ITA,Roma,20,EUR,-
+I was scammed in navona park,Accident,2023/9/15,ITA,Roma,20,EUR,-
 Margarita,Eating,2023/9/16,ITA,naples,2.5,EUR,-
 Naples cathedral,Visiting,2023/9/16,ITA,naples,0,EUR,-
 coast 24 hour Ticket,Ticket,2023/9/16,ITA,Sorrento,10,EUR,-
@@ -959,7 +959,7 @@ walked to my inn by 4km,Accident,2023/9/16,ITA,vallo scaro,0,EUR,-
 Gave pasta from italian ofbollona,Accident,2023/9/16,ITA,vallo scaro,0,EUR,-
 espresso,Eating,2023/9/17,ITA,vallo scaro,1,EUR,-
 returned to train station by 4km,Accident,2023/9/17,ITA,vallo scaro,0,EUR,-
-pizza,Eating,2023/9/17,ITA,Pompei,0,EUR,Shopping morl
+pizza,Eating,2023/9/17,ITA,Pompei,6.3,EUR,Shopping morl
 Toilet,Toilet,2023/9/17,ITA,Pompei,1,EUR,-
 pompei heritage,Visiting,2023/9/17,ITA,Pompei,21,EUR,-
 pompei heritage audio guide,Shopping,2023/9/17,ITA,Pompei,8,EUR,-
@@ -1009,12 +1009,12 @@ Messina cathedral,Visiting,2023/9/26,ITA,Messina,0,EUR,-
 Messina chruch,Visiting,2023/9/26,ITA,Messina,0,EUR,-
 Messina overviewing,Visiting,2023/9/26,ITA,Messina,0,EUR,-
 Taormina cathedral,Visiting,2023/9/26,ITA,Taormina,0,EUR,-
-Taormina cathedral,Ticket,2023/9/27,MLT,Valletta,6,EUR,-
+Transport card,Ticket,2023/9/27,MLT,Valletta,6,EUR,-
 saint elmo fortless,Visiting,2023/9/27,MLT,Valletta,0,EUR,-
 bread,Eating,2023/9/27,MLT,Valletta,2,EUR,-
 canned coffee,Eating,2023/9/27,MLT,Valletta,2,EUR,-
 americano,Eating,2023/9/27,MLT,Valletta,1.8,EUR,-
-malta archelogical museum,Eating,2023/9/27,MLT,Valletta,5,EUR,-
+malta archelogical museum,Visiting,2023/9/27,MLT,Valletta,5,EUR,-
 malta 2 hour Ticket,Ticket,2023/9/27,MLT,Valletta,2,EUR,-
 jeans,Shopping,2023/9/27,MLT,Valletta,30,EUR,-
 lunch,Eating,2023/9/28,ITA,Catania,4,EUR,-
@@ -1025,7 +1025,7 @@ water,Eating,2023/9/29,ITA,Brindisi,0.3,EUR,-
 espresso,Eating,2023/9/29,ITA,Brindisi,1.2,EUR,-
 cola,Eating,2023/9/29,ITA,Brindisi,3,EUR,port
 Lecce Ticket,Ticket,2023/9/29,ITA,Lecce,1.1,EUR,-
-Taranto port,Ticket,2023/9/29,ITA,Taranto,0,EUR,-
+Taranto port,Walking,2023/9/29,ITA,Taranto,0,EUR,-
 Lecce cathedral,Visiting,2023/9/29,ITA,Lecce,0,EUR,-
 roman Amphitheater,Visiting,2023/9/29,ITA,Lecce,0,EUR,-
 Brindisi port,Visiting,2023/9/29,ITA,Brindisi,0,EUR,-
@@ -1056,7 +1056,7 @@ bread,Eating,2023/10/5,MKD,Ohrid,100,MKD,-
 esspresso,Eating,2023/10/5,MKD,Ohrid,100,JPY,-
 St sophea cathedral,Visiting,2023/10/5,MKD,Ohrid,0,JPY,-
 lake ohrid,Walking,2023/10/5,MKD,Ohrid,0,JPY,-
-coffee,Walking,2023/10/6,MKD,Ohrid,100,ALL,-
+coffee,Eating,2023/10/6,ALB,Elbasan,100,ALL,-
 Berat castle,Walking,2023/10/6,ALB,Berat,0,ALL,-
 water 2 L,Eating,2023/10/7,ALB,Berat,55,ALL,-
 espresso,Eating,2023/10/7,ALB,Berat,100,ALL,-
@@ -1109,7 +1109,7 @@ soup,Eating,2023/10/24,SRB,novi sad,300,RSD,-
 novi sad cathedral,Visiting,2023/10/24,SRB,novi sad,0,RSD,-
 donau river,Walking,2023/10/24,SRB,novi sad,0,RSD,-
 rested by the river,Accident,2023/10/24,SRB,novi sad,0,RSD,-
-esspresso,Accident,2023/10/25,SRB,Beograd,155,RSD,-
+esspresso,Eating,2023/10/25,SRB,Beograd,155,RSD,-
 T-shirt,Shopping,2023/10/25,SRB,Nis,962,JPY,-
 Mediana heritage,Visiting,2023/10/26,SRB,Nis,500,RSD,-
 Gave 5 north irland currency to a student in UK,Accident,2023/10/26,SRB,Nis,0,RSD,-
@@ -1123,7 +1123,7 @@ coffee,Eating,2023/10/28,BGR,Sofia,2,BGN,-
 rested on the bed,Accident,2023/10/28,BGR,Sofia,0,BGN,-
 bread,Eating,2023/10/29,BGR,Plovdiv,2.5,BGN,-
 bread,Eating,2023/10/31,BGR,Ruse,1.5,BGN,-
-Exchanged to 245 rei,Exchange,2023/10/31,BGR,Ruse,50,EUR,-
+Exchanged to 245 rei,Exchange,2023/10/31,BGR,Ruse,0,EUR,from 50 EUR
 historical museum,Visiting,2023/11/1,ROU,Bucharest,20,RON,-
 Arc de Triomphe,Visiting,2023/11/1,ROU,Bucharest,0,RON,-
 musiccal hall,Visiting,2023/11/1,ROU,Bucharest,0,RON,-
@@ -1154,7 +1154,7 @@ throw my flifht Ticket to bayroot,Accident,2023/11/10,BGR,Barna,9470,JPY,-
 Shumen mosk,Visiting,2023/11/10,BGR,Shumen,0,BGN,-
 Barna 24 hour Ticket,Ticket,2023/11/10,BGR,Barna,4,BGN,-
 Roman termae,Visiting,2023/11/10,BGR,Barna,5,BGN,-
-Exchanged to 815lira,Exchange,2023/11/11,BGR,Burgas,55,BGN,-
+Exchanged to 815lira,Exchange,2023/11/11,BGR,Burgas,0,BGN,from 55 BGN
 istanbul transit card,Ticket,2023/11/11,TUR,Istanbul,20,TRY,-
 Washing fee,Washing,2023/11/12,TUR,Istanbul,150,TRY,-
 blue mosk,Visiting,2023/11/12,TUR,Istanbul,0,TRY,-
@@ -1208,9 +1208,9 @@ ice cream,Eating,2023/11/22,ARE,Abu Dhabi,2,AED,-
 egg curry,Eating,2023/11/22,ARE,Abu Dhabi,6,AED,-
 macdonald,Eating,2023/11/22,ARE,Abu Dhabi,25,AED,airport
 Abu Dhabi beach,Eating,2023/11/22,ARE,Abu Dhabi,6,AED,-
-cyprus transit card,Eating,2023/11/22,CYP,Larnaca,5,EUR,-
-Cashing from atm,Cashing,2023/11/22,CYP,Larnaca,50,EUR,-
-dinner,Cashing,2023/11/22,CYP,Larnaca,5,EUR,-
+cyprus transit card,Ticket,2023/11/22,CYP,Larnaca,5,EUR,-
+Cashing from atm,Cashing,2023/11/22,CYP,Larnaca,0,EUR,get 50 EUR
+dinner,Eating,2023/11/22,CYP,Larnaca,5,EUR,-
 Larnaca beach,Walking,2023/11/23,CYP,Larnaca,0,EUR,-
 S razaro chruch,Visiting,2023/11/23,CYP,Larnaca,0,EUR,-
 Churros,Eating,2023/11/23,CYP,Nicosia,20,TRY,-
