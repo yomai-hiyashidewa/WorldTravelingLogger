@@ -191,12 +191,12 @@ Vinales drive,Tour,2022/8/30,CUB,habana,120,USD,-
 Sim card,Shopping,2022/8/30,CUB,habana,3900,CUP,-
 Getting 10000 CUP,Cashing,2022/8/30,CUB,habana,0,USD,from 83 USD
 Getting 20000 CUP,Cashing,2022/8/30,CUB,habana,0,USD,from 166 USD
-breakfast,Eating,2022/8/31,CUB,service area,0,USD,-
+breakfast,Eating,2022/8/31,CUB,service area,0,USD,tour
 lunch,Eating,2022/8/31,CUB,Vinales,1900,CUP,paying his wife and friend 
 Vinales vally,Visiting,2022/8/31,CUB,Vinales,0,CUP,tour
 limestone cave,Visiting,2022/8/31,CUB,Vinales,0,CUP,tour
 wall image,Visiting,2022/8/31,CUB,Vinales,0,CUP,tour
-Sim card,Shopping,2022/9/1,CUB,habana,125,CUP,-
+wifi card,Shopping,2022/9/1,CUB,habana,125,CUP,-
 breakfast,Eating,2022/9/2,CUB,habana,7,USD,-
 breakfast,Eating,2022/9/3,CUB,habana,7,USD,-
 throwing my flight Ticket from camagway to cancun,Accident,2022/9/3,CUB,habana,5870,MXP,-
@@ -471,7 +471,7 @@ salta overviewing,Visiting,2023/1/5,ARG,Salta,0,ARS,-
 salta historial museum,Visiting,2023/1/6,ARG,Salta,0,ARS,-
 cabild museum,Visiting,2023/1/6,ARG,Salta,0,ARS,-
 anhel's museum,Visiting,2023/1/6,ARG,Salta,700,ARS,-
-keeping bagage fee,Shopping,2023/1/6,ARG,Salta,500,ARS,-
+keeping bagage fee,Other,2023/1/6,ARG,Salta,500,ARS,-
 bread,Eating,2023/1/8,ARG,Corrientes,300,ARS,-
 along parana river,Walking,2023/1/8,ARG,Corrientes,0,ARS,-
 lunch,Eating,2023/1/10,ARG,Puerto Iguazu,1500,ARS,-
@@ -495,7 +495,7 @@ barubero museum,Visiting,2023/1/18,PRY,Ciudad de Asuncion,0,PYG,-
 Exchanged to ?? ARS,Exchange,2023/1/18,PRY,Ciudad de Asuncion,0,PYG,from 400000 to ?? ARS
 Exchanged to ?? ARS,Exchange,2023/1/20,ARG,Santa Fe de la Vera Cruz,0,USD,from 100USD 1USD = 360ARS
 Cashing from atm,Cashing,2023/1/20,ARG,Santa Fe de la Vera Cruz,0,ARS,10000ARS
-joined birthday party,Cashing,2023/1/21,ARG,Santa Fe de la Vera Cruz,0,ARS,-
+joined birthday party,Accident,2023/1/21,ARG,Santa Fe de la Vera Cruz,0,ARS,-
 around santa fe,Walking,2023/1/21,ARG,Santa Fe de la Vera Cruz,0,ARS,-
 coffee+bread,Eating,2023/1/23,ARG,VillaCaropas,450,ARS,-
 ice cream,Eating,2023/1/23,ARG,VillaCaropas,200,ARS,-
@@ -510,7 +510,7 @@ Sube card,Ticket,2023/1/25,ARG,Bahia Blanca,490,ARS,-
 pasta without source,Accident,2023/1/25,ARG,Bahia Blanca,0,ARS,-
 Mar del Plata beach,Walking,2023/1/26,ARG,Mar del Plata,0,ARS,-
 I couldn't stay the hotel I reserved,Accident,2023/1/28,ARG,La Plata,0,ARS,-
-Cashing from atm,Cashing,2023/1/29,ARG,La Plata,15000,ARS,-
+Cashing from atm,Cashing,2023/1/29,ARG,La Plata,0,ARS,15000ARS
 manjyu,Eating,2023/1/30,ARG,Ciudad Aut?noma de Buenos Aires,500,ARS,-
 JPNese garden,Visiting,2023/1/30,ARG,Ciudad Aut?noma de Buenos Aires,690,ARS,-
 clock tower,Visiting,2023/1/30,ARG,Ciudad Aut?noma de Buenos Aires,500,ARS,-
