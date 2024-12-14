@@ -878,7 +878,7 @@ tajin,Eating,2023/8/29,MAR,Oujda,40,MAD,-
 juice,Eating,2023/8/29,MAR,Oujda,14,MAD,-
 beer + snack,Eating,2023/8/30,MAR,ferry,3.5,EUR,-
 nador beach,Walking,2023/8/30,MAR,nador,0,MAD,-
-Exchanged to 31 eur,Exchange,2023/8/30,MAR,nador,340,MAD,-
+Exchanged to 31 eur,Exchange,2023/8/30,MAR,nador,340,MAD,from 340 MAD
 missed deparute port,Accident,2023/8/30,MAR,nador,0,MAD,-
 Almeria cathedral,Visiting,2023/8/31,ESP,Almeria,0,MAD,-
 Almeria beach,Walking,2023/8/31,ESP,Almeria,0,MAD,-
@@ -1180,7 +1180,7 @@ pamukkale heritage,Visiting,2023/11/16,TUR,Pamukkale,700,TRY,-
 pamukkale Lime shelf,Visiting,2023/11/16,TUR,Pamukkale,0,TRY,pamukkale heritage
 rain wear,Shopping,2023/11/16,TUR,Pamukkale,150,TRY,-
 broken the bus,Accident,2023/11/16,TUR,bus,0,TRY,-
-Turkiye ice cream,Accident,2023/11/17,TUR,Antalya,150,TRY,-
+Turkiye ice cream,Eating,2023/11/17,TUR,Antalya,150,TRY,-
 bread,Eating,2023/11/17,TUR,Antalya,12,TRY,-
 dinner,Eating,2023/11/17,TUR,Antalya,90,TRY,rokanta
 Stayed a room for sarvants,Accident,2023/11/17,TUR,Antalya,0,TRY,-
@@ -1200,14 +1200,14 @@ chay x2,Eating,2023/11/20,TUR,Ankara,15,TRY,-
 Anatoria civilization museum,Visiting,2023/11/20,TUR,Ankara,280,TRY,-
 Anatoria castle,Visiting,2023/11/20,TUR,Ankara,0,TRY,-
 remaining 50 lira in anlkara card,Accident,2023/11/21,TUR,Ankara,50,TRY,-
-Abu Dhabi transit card,Accident,2023/11/21,ARE,Abu Dhabi,20,AED,-
+Abu Dhabi transit card,Ticket,2023/11/21,ARE,Abu Dhabi,20,AED,-
 dinner,Eating,2023/11/21,ARE,Abu Dhabi,5,AED,-
 breakfast,Eating,2023/11/22,ARE,Abu Dhabi,6,AED,-
 lunch,Eating,2023/11/22,ARE,Abu Dhabi,2,AED,-
 ice cream,Eating,2023/11/22,ARE,Abu Dhabi,2,AED,-
 egg curry,Eating,2023/11/22,ARE,Abu Dhabi,6,AED,-
 macdonald,Eating,2023/11/22,ARE,Abu Dhabi,25,AED,airport
-Abu Dhabi beach,Eating,2023/11/22,ARE,Abu Dhabi,6,AED,-
+Abu Dhabi beach,Walking,2023/11/22,ARE,Abu Dhabi,0,AED,-
 cyprus transit card,Ticket,2023/11/22,CYP,Larnaca,5,EUR,-
 Cashing from atm,Cashing,2023/11/22,CYP,Larnaca,0,EUR,get 50 EUR
 dinner,Eating,2023/11/22,CYP,Larnaca,5,EUR,-
@@ -1246,7 +1246,7 @@ dinner,Eating,2023/11/29,EGY,Cairo,60,EGP,-
 it was dengerous to ride a motorcycle,Accident,2023/11/29,EGY,giza,0,EGP,-
 I ate dinner with egptian and sudanian of my accomodation,Accident,2023/11/29,EGY,giza,0,EGP,-
 piramid,Visiting,2023/11/30,EGY,giza,360,EGP,-
-I was taken a picture by a camel rider,Visiting,2023/11/30,EGY,giza,150,EGP,-
+I was taken a picture by a camel rider,Accident,2023/11/30,EGY,giza,150,EGP,-
 lunch,Eating,2023/11/30,EGY,giza,10,EGP,-
 coffee,Eating,2023/11/30,EGY,giza,12,EGP,-
 bread,Eating,2023/11/30,EGY,Cairo,25,EGP,-
@@ -1263,11 +1263,11 @@ coffee,Eating,2023/12/2,EGY,Sohag,10,EGP,-
 lunch,Eating,2023/12/2,EGY,Sohag,30,EGP,-
 dinner,Eating,2023/12/2,EGY,Sohag,15,EGP,-
 coffee,Eating,2023/12/2,EGY,Sohag,28,EGP,airport
-I was doubted a fake passport,Accident,2023/12/3,EGY,Toshkent,0,UZS,-
+I was doubted a fake passport,Accident,2023/12/3,UZB,Toshkent,0,UZS,-
 bread x 3,Eating,2023/12/3,UZB,Toshkent,6000,UZS,-
 cola,Eating,2023/12/3,UZB,Toshkent,6000,UZS,-
 coffee,Eating,2023/12/3,UZB,Toshkent,17000,UZS,-
-Exchanged to 17000S,Exchange,2023/12/3,UZB,Toshkent,14,USD,-
+Exchanged to 17000S,Exchange,2023/12/3,UZB,Toshkent,14,USD,from 14 USD
 Sim card,Shopping,2023/12/3,UZB,Toshkent,8,USD,-
 bread X2,Eating,2023/12/4,UZB,Toshkent,10000,UZS,-
 non,Eating,2023/12/4,UZB,Samarkand,15000,UZS,-
@@ -1412,7 +1412,7 @@ lokanta,Eating,2024/4/8,TUR,Trabzon,130,TRY,-
 bread X 3,Eating,2024/4/9,TUR,Trabzon,20,TRY,-
 sweets,Eating,2024/4/9,TUR,Trabzon,36,TRY,-
 Toilet,Toilet,2024/4/9,TUR,Trabzon,7,TRY,-
-Cashing from atm,Cashing,2024/4/9,TUR,Trabzon,1000,TRY,-
+Cashing from atm,Cashing,2024/4/9,TUR,Trabzon,0,TRY,1000 TRY
 Erzurum castle,Visiting,2024/4/9,TUR,Erzurum,105,TRY,-
 supermarket,Eating,2024/4/9,TUR,Erzurum,7,TRY,-
 lokanta,Eating,2024/4/9,TUR,Erzurum,265,TRY,-
@@ -1506,7 +1506,7 @@ bager,Eating,2024/4/19,IND,New Delhi,149,INR,-
 lemon soda,Eating,2024/4/19,IND,New Delhi,50,INR,-
 cola,Eating,2024/4/19,IND,New Delhi,70,INR,-
 sweets,Eating,2024/4/19,IND,New Delhi,30,INR,-
-Souvenirs,Eating,2024/4/19,IND,New Delhi,249,INR,-
+Souvenirs,Shopping,2024/4/19,IND,New Delhi,249,INR,-
 quibe mizar,Visiting,2024/4/19,IND,New Delhi,550,INR,-
 meheroli heritage park,Visiting,2024/4/19,IND,New Delhi,500,INR,-
 macdonald,Eating,2024/4/20,HKG,Hong Kong,32,HKD,-
