@@ -12,6 +12,8 @@ namespace WorldTravelLogger.Models
         private List<AccomodationModel> calcList_;
         private Dictionary<AccomodationType, AccomodationTypeModel> calcDic_;
 
+        public AccomodationType CurrentAccomodationtype { get; set; }
+
         public override bool IsLoaded
         {
             get { return list_.Count > 0;}
@@ -222,6 +224,11 @@ namespace WorldTravelLogger.Models
                     calcDic_.Add(model.Accomodation, tModel);
                 }
             }
+            if (calcDic_.Count >= 0 && !calcDic_.ContainsKey(CurrentAccomodationtype))
+            {
+                CurrentAccomodationtype = calcDic_.Keys.FirstOrDefault();
+            }
+
         }
 
         
@@ -239,6 +246,11 @@ namespace WorldTravelLogger.Models
         public AccomodationModel[] GetCalcArray()
         {
             return calcList_.ToArray();
+        }
+
+        public IEnumerable<AccomodationType> GetCurrentAccomodationTypes()
+        {
+            return calcDic_.Keys;
         }
 
         public override double TotalCost

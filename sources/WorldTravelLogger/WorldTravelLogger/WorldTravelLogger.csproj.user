@@ -19,6 +19,9 @@
     <Compile Update="Views\OptionWindows.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\OtherView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\SideView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -43,6 +46,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\OptionWindows.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\OtherView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SideView.xaml">

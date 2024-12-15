@@ -67,7 +67,12 @@ namespace WorldTravelLogger.ViewModels
         {
             return new SightSeeingViewModel(model_);
         }
-    
+
+        public OtherViewModel GetOtherViewModel()
+        {
+            return new OtherViewModel(model_);
+        }
+
 
         public string GetFilename(ListType type)
         {

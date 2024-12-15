@@ -32,6 +32,9 @@
                 <TabItem Header="SightSeeing">
                     <local:SightseeingView x:Name="SightseeingViewPanel"/>
                 </TabItem>
+                <TabItem Header="Other">
+                    <local:OtherView x:Name="OtherViewPanel"/>
+                </TabItem>
             </TabControl>
         </Grid>
         

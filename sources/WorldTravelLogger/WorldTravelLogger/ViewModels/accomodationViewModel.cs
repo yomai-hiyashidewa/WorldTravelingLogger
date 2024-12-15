@@ -21,20 +21,24 @@ namespace WorldTravelLogger.ViewModels
             model_ = model;
             model_.FileLoaded_ += Model__FileLoaded_;
             model_.ControlChanged_ += Model__ControlChanged_;
-            currentAccomodationtype_ = AccomodationType.Domitory;
         }
 
-     
+
         private void UpdateAll()
         {
             this.RaisePropertyChanged("TypeAccomodations");
+            this.RaisePropertyChanged("CurrentAccomodationTypes");
+            this.RaisePropertyChanged("CurrentAccomodationType");
+            this.RaisePropertyChanged("EnableCurrentAccomodationType");
+            this.RaisePropertyChanged("TypeAccomodations");
             this.RaisePropertyChanged("Accomodations");
             this.RaisePropertyChanged("TotalCost");
+
         }
 
         private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
         {
-            if(e.Type == ListType.AccomodationList || e.Type == ListType.ExchangeRateList)
+            if (e.Type == ListType.AccomodationList || e.Type == ListType.ExchangeRateList)
             {
                 if (model_.ReadyAccomodations)
                 {
@@ -71,7 +75,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if(model_ == null)
+                if (model_ == null)
                 {
                     return null;
                 }
@@ -82,17 +86,61 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        private AccomodationType currentAccomodationtype_;
+
 
         public AccomodationType CurrentAccomodationType
         {
-            get { return currentAccomodationtype_; }
+            get
+            {
+                if (model_ == null)
+                {
+                    return AccomodationType.Domitory;
+                }
+                else
+                {
+                    return model_.CurrentAccomodationtype;
+                }
+
+            }
             set
             {
-                if (currentAccomodationtype_ != value)
+                if (model_.CurrentAccomodationtype != value)
                 {
-                    currentAccomodationtype_ = value;
+
+                    model_.CurrentAccomodationtype = value;
                     this.RaisePropertyChanged("Accomodations");
+                }
+            }
+        }
+
+        public bool EnableCurrentAccomodationType
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return CurrentAccomodationTypes.Count() > 0;
+                }
+            }
+        }
+
+        public AccomodationType[] CurrentAccomodationTypes
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return [];
+                }
+                else
+                {
+                    var list = new List<AccomodationType>();
+                    list.AddRange(model_.GetCurrentAccomodationTypes());
+                    return list.ToArray();
                 }
             }
         }
@@ -101,7 +149,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if(model_ == null)
+                if (model_ == null)
                 {
                     return null;
                 }
@@ -115,7 +163,7 @@ namespace WorldTravelLogger.ViewModels
 
 
     }
-       
+
 
 
 }

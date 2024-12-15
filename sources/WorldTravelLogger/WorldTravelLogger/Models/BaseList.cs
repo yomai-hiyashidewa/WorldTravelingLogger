@@ -206,6 +206,7 @@ namespace WorldTravelLogger.Models
 
         public abstract double TotalCost { get; }
 
+        
     }
 
     

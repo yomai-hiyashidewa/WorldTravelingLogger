@@ -1,4 +1,4 @@
-﻿<UserControl x:Class="WorldTravelLogger.Views.SightseeingView"
+﻿<UserControl x:Class="WorldTravelLogger.Views.OtherView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -26,7 +26,7 @@
         <DataGrid Grid.Row="1" 
                   AutoGenerateColumns="False"
                   IsReadOnly="True"
-                  ItemsSource="{Binding TypeSightseeings}">
+                  ItemsSource="{Binding TypeOthers}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Type" Binding="{Binding Type}"/>
                 <DataGridTextColumn Header="Count" Binding="{Binding Count}"/>
@@ -41,15 +41,15 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="9*"/>
             </Grid.RowDefinitions>
-            <ComboBox HorizontalAlignment="Right"
-                      IsEnabled="{Binding EnableCurrentSightseeingType}"
-                      ItemsSource="{Binding CurrentSightseeingTypes}" 
-                      SelectedItem="{Binding CurrentSightSeeingType,Mode=TwoWay}"/>
+            <ComboBox HorizontalAlignment="Right" 
+                      ItemsSource="{Binding CurrentOtherTypes}"
+                      IsEnabled="{Binding EnableCurrentOtherType}"
+                      SelectedItem="{Binding CurrentOtherType,Mode=TwoWay}"/>
             <DataGrid Grid.Row="1" 
-                      HorizontalScrollBarVisibility="Auto"
-                      AutoGenerateColumns="False" 
-                      IsReadOnly="True"
-                      ItemsSource="{Binding Sightseeings}" >
+                   HorizontalScrollBarVisibility="Auto"
+                   AutoGenerateColumns="False" 
+                   IsReadOnly="True"
+                   ItemsSource="{Binding Others}" >
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="date" Binding="{Binding DateString}"/>
                     <DataGridTextColumn Header="country" Binding="{Binding Country,Converter={StaticResource EnumDisplayConv}}" />

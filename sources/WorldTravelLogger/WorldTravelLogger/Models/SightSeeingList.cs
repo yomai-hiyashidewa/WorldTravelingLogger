@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Runtime.CompilerServices;
 
 namespace WorldTravelLogger.Models
 {
@@ -20,7 +21,8 @@ namespace WorldTravelLogger.Models
             get { return list_.Count > 0; }
         }
 
-       
+        public SightseeigType CurrentSightSeeingType { get; set; }
+
 
         public SightSeeingList()
         {
@@ -244,6 +246,10 @@ namespace WorldTravelLogger.Models
                     calcDic_.Add(model.SightseeigType, tModel);
                 }
             }
+            if (calcDic_.Count >= 0 && !calcDic_.ContainsKey(CurrentSightSeeingType))
+            {
+                CurrentSightSeeingType = calcDic_.Keys.FirstOrDefault();
+            }
         }
 
         public override double TotalCost
@@ -261,5 +267,51 @@ namespace WorldTravelLogger.Models
 
 
 
+        // others
+        private bool CheckOthers(SightseeigType type)
+        {
+            if (type == SightseeigType.Insurance ||
+                type == SightseeigType.Ticket ||
+                type == SightseeigType.Accident ||
+                type == SightseeigType.Other ||
+                type == SightseeigType.Shopping ||
+                type == SightseeigType.Medical ||
+                type == SightseeigType.Washing ||
+                type == SightseeigType.Tax ||
+                type == SightseeigType.Exchange ||
+                type == SightseeigType.Cashing ||
+                type == SightseeigType.Haircut ||
+                type == SightseeigType.Tips ||
+                type == SightseeigType.PartTimeJob ||
+                type == SightseeigType.Toilet)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public List<SightseeingModel> ExportOthers()
+        {
+            var list = new List<SightseeingModel>();
+            foreach(var model in list_.Where(m => CheckOthers(m.SightseeigType)).ToArray())
+            {
+                list.Add(model);
+                list_.Remove(model);
+            }
+            return list;
+        }
+
+        public void ImportOthers(List<SightseeingModel> list)
+        {
+            list_ = list;
+        }
+
+        public IEnumerable<SightseeigType> GetCurrentSightSeeingTypes()
+        {
+            return calcDic_.Keys;
+        }
     }
 }

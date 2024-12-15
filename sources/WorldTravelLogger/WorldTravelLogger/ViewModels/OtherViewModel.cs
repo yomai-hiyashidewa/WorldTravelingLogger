@@ -8,16 +8,15 @@ using WorldTravelLogger.Models;
 
 namespace WorldTravelLogger.ViewModels
 {
-    public class SightSeeingViewModel : ViewModelBase
+    public class OtherViewModel : ViewModelBase
     {
         MainModel model_;
-
-        public SightSeeingViewModel()
+        public OtherViewModel()
         {
-            // dummy
+            // dummy;
         }
 
-        public SightSeeingViewModel(MainModel model)
+        public OtherViewModel(MainModel model)
         {
             model_ = model;
             model_.FileLoaded_ += Model__FileLoaded_;
@@ -28,7 +27,7 @@ namespace WorldTravelLogger.ViewModels
         {
             if (e.Type == ListType.SightSeeingList || e.Type == ListType.ExchangeRateList)
             {
-                if (model_.ReadySightseeings)
+                if (model_.ReadyOthers)
                 {
                     UpdateAll();
                 }
@@ -37,11 +36,11 @@ namespace WorldTravelLogger.ViewModels
 
         private void UpdateAll()
         {
-            this.RaisePropertyChanged("TypeSightseeings");
-            this.RaisePropertyChanged("CurrentSightseeingTypes");
-            this.RaisePropertyChanged("CurrentSightSeeingType");
-            this.RaisePropertyChanged("EnableCurrentSightseeingType");
-            this.RaisePropertyChanged("Sightseeings");
+            this.RaisePropertyChanged("TypeOthers");
+            this.RaisePropertyChanged("CurrentOtherTypes");
+            this.RaisePropertyChanged("CurrentOtherType");
+            this.RaisePropertyChanged("EnableCurrentOtherType");
+            this.RaisePropertyChanged("Others");
             this.RaisePropertyChanged("TotalCost");
         }
 
@@ -58,18 +57,17 @@ namespace WorldTravelLogger.ViewModels
                 else
                 {
                     var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
-                    return model_.CalcSightseeingCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
+                    return model_.CalcOtherCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
                 }
             }
         }
-
 
         private void Model_ControlChanged_(object? sender, EventArgs e)
         {
             UpdateAll();
         }
 
-        public SightseeingTypeModel[] TypeSightseeings
+        public SightseeingTypeModel[] TypeOthers
         {
             get
             {
@@ -79,38 +77,38 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-                    return model_.GetTypeSightseeings();
+                    return model_.GetTypeOthers();
 
                 }
             }
         }
 
-        
+       
 
-        public SightseeigType CurrentSightSeeingType
+        public SightseeigType CurrentOtherType
         {
             get 
             {
                 if(model_ == null)
                 {
-                    return SightseeigType.HotSpring;
+                    return SightseeigType.Accident;
                 }
                 else
                 {
-                    return model_.CurrentSightSeeingType;
+                    return model_.CurrentOtherType;
                 }
             }
             set
             {
-                if (model_.CurrentSightSeeingType != value)
+                if (model_.CurrentOtherType != value)
                 {
-                    model_.CurrentSightSeeingType = value;
-                    this.RaisePropertyChanged("Sightseeings");
+                    model_.CurrentOtherType = value;
+                    this.RaisePropertyChanged("Others");
                 }
             }
         }
 
-        public SightseeigType[] CurrentSightseeingTypes
+        public SightseeigType[] CurrentOtherTypes
         {
             get
             {
@@ -121,13 +119,13 @@ namespace WorldTravelLogger.ViewModels
                 else
                 {
                     var list = new List<SightseeigType>();
-                    list.AddRange(model_.GetCurrentSightseeingTypes());
+                    list.AddRange(model_.GetCurrentOtherTypes());
                     return list.ToArray();
                 }
             }
         }
 
-        public bool EnableCurrentSightseeingType
+        public bool EnableCurrentOtherType
         {
             get
             {
@@ -137,13 +135,12 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-                    return CurrentSightseeingTypes.Count() > 0;
+                    return CurrentOtherTypes.Count() > 0;
                 }
             }
         }
 
-
-        public SightseeingModel[] Sightseeings
+        public SightseeingModel[] Others
         {
             get
             {
@@ -153,13 +150,11 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-                    var value = model_.GetSightseeings().Where(j => j.SightseeigType == CurrentSightSeeingType);
+                    var value = model_.GetOthers().Where(j => j.SightseeigType == CurrentOtherType);
                     return value.ToArray();
 
                 }
             }
         }
-
-
     }
 }

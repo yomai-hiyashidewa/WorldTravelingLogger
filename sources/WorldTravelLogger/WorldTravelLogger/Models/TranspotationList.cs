@@ -22,10 +22,12 @@ namespace WorldTravelLogger.Models
         public bool IsWithAirplane { get; set; }
 
         public bool IsWithCrossBorder { get; set; }
-       
 
-       
-     
+        public Transportationtype CurrentTransportationType { get; set; }
+
+
+
+
 
         public TranspotationList()
         {
@@ -285,6 +287,11 @@ namespace WorldTravelLogger.Models
             return calcList_.ToArray();
         }
 
+        public IEnumerable<Transportationtype> GetCurrentTransportationTypes()
+        {
+            return calcDic_.Keys;
+        }
+
         public bool GetNeedingEndDate()
         {
             var model = calcList_.FirstOrDefault(m => m.IsSameDate);
@@ -367,6 +374,10 @@ namespace WorldTravelLogger.Models
                     calcDic_.Add(model.Transportationtype, tModel);
                     tModel.SetParameter(model.Distance, model.Time);
                 }
+            }
+            if (calcDic_.Count >= 0 && !calcDic_.ContainsKey( CurrentTransportationType))
+            {
+                CurrentTransportationType = calcDic_.Keys.FirstOrDefault();
             }
         }
 

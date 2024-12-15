@@ -25,7 +25,6 @@ namespace WorldTravelLogger.ViewModels
             model.ControlChanged_ += Model_ControlChanged_;
             model_.FileLoaded_ += Model__FileLoaded_;
             model_.TransportationChanged_ += Model__TransportationChanged_;
-            currentTransportationType_ = Transportationtype.Train;
         }
 
         private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
@@ -47,6 +46,9 @@ namespace WorldTravelLogger.ViewModels
         private void UpdateAll()
         {
             this.RaisePropertyChanged("TypeTransportations");
+            this.RaisePropertyChanged("CurrentTransportationTypes");
+            this.RaisePropertyChanged("CurrentTransportationType");
+            this.RaisePropertyChanged("EnableCurrentTransportationType");
             this.RaisePropertyChanged("Transportations");
             this.RaisePropertyChanged("TotalCost");
             this.RaisePropertyChanged("TotalMovingDistance");
@@ -165,18 +167,60 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        private Transportationtype currentTransportationType_;
+       
 
         public Transportationtype CurrentTransportationType
         {
-            get { return currentTransportationType_; }
+            get 
+            {
+                if(model_ == null)
+                {
+                    return Transportationtype.Train;
+                }
+                else
+                {
+                    return model_.CurrentTransportationType;
+                }
+                 
+            }
             set
             {
-                if (currentTransportationType_ != value)
+                if (model_.CurrentTransportationType != value)
                 {
-                    currentTransportationType_ = value;
-                    this.RaisePropertyChanged("TypeTransportations");
+                    model_.CurrentTransportationType = value;
                     this.RaisePropertyChanged("Transportations");
+                }
+            }
+        }
+
+        public Transportationtype[] CurrentTransportationTypes
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return [];
+                }
+                else
+                {
+                    var list = new List<Transportationtype>();
+                    list.AddRange(model_.GetCurrentTransportationTypes());
+                    return list.ToArray();
+                }
+            }
+        }
+
+        public bool EnableCurrentTransportationType
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return CurrentTransportationTypes.Count() > 0;
                 }
             }
         }
