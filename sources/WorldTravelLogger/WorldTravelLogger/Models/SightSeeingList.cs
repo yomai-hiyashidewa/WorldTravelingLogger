@@ -161,6 +161,7 @@ namespace WorldTravelLogger.Models
                 var model = new SightseeingModel(context, (SightseeigType)sType, (DateTime)date, (CountryType)country,
                     region, (double)price, (CurrencyType)currencyType, memo);
                 list_.Add(model);
+                base.SetCountry(model.Country);
             }
         }
 
@@ -265,7 +266,7 @@ namespace WorldTravelLogger.Models
             }
         }
 
-
+       
 
         // others
         private bool CheckOthers(SightseeigType type)
@@ -312,6 +313,22 @@ namespace WorldTravelLogger.Models
         public IEnumerable<SightseeigType> GetCurrentSightSeeingTypes()
         {
             return calcDic_.Keys;
+        }
+
+        public override IEnumerable<CountryType> GetCalcCounties()
+        {
+            var sets = new HashSet<CountryType>();
+            foreach (var model in calcList_)
+            {
+                if (!sets.Contains(model.Country))
+                {
+                    sets.Add(model.Country);
+                }
+            }
+            foreach (var c in sets)
+            {
+                yield return c;
+            }
         }
     }
 }

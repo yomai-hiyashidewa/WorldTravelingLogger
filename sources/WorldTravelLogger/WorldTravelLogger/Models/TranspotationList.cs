@@ -236,6 +236,7 @@ namespace WorldTravelLogger.Models
                     (DateTime)endDate, (CountryType)endCountry, endPlace, (PlaceType)endPlaceType,
                     (double)distance, (int)time, (double)price, (CurrencyType)currencyType, memo);
                 list_.Add(model);
+                base.SetCountry(model.Country);
             }
         }
 
@@ -387,6 +388,22 @@ namespace WorldTravelLogger.Models
             SetCalcDic();
         }
 
+        public override IEnumerable<CountryType> GetCalcCounties()
+        {
+            var sets = new HashSet<CountryType>();
+            foreach (var model in calcList_)
+            {
+                if (!sets.Contains(model.Country))
+                {
+                    sets.Add(model.Country);
+                }
+            }
+            foreach (var c in sets)
+            {
+                yield return c;
+            }
+        }
+
         public double TotalDistance
         {
             get
@@ -427,5 +444,6 @@ namespace WorldTravelLogger.Models
             }
         }
 
+      
     }
 }

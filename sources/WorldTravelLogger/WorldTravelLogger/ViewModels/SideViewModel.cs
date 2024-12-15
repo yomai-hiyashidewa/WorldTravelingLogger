@@ -4,6 +4,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using WorldTravelLogger.Converters;
 using WorldTravelLogger.Models;
 
@@ -46,7 +47,6 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("StartDate");
             this.RaisePropertyChanged("EndDate");
             this.RaisePropertyChanged("TotalDays");
-            this.RaisePropertyChanged("Countries");
             this.RaisePropertyChanged("IsCurrencyJPY");
             this.RaisePropertyChanged("IsCurrencyUSD");
             this.RaisePropertyChanged("IsCurrencyEUR");
@@ -58,6 +58,8 @@ namespace WorldTravelLogger.ViewModels
         private void UpdateView()
         {
             this.RaisePropertyChanged("TotalCost");
+            this.RaisePropertyChanged("TotalCalcCountries");
+            this.RaisePropertyChanged("TotalCountries");
         }
 
         public bool IsWorld
@@ -163,7 +165,24 @@ namespace WorldTravelLogger.ViewModels
         }
 
 
-        public int Countries
+        public CountryType[] Countries
+        {
+            get
+            {
+                var list = new List<CountryType>();
+                if (model_ == null)
+                {
+                    list.Add(CountryType.JPN);
+                }
+                else
+                {
+                    list.AddRange(model_.GetCountries());
+                }
+                return list.ToArray();
+            }
+        }
+
+        public int TotalCalcCountries
         {
             get
             {
@@ -173,7 +192,22 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-                    return 0;   // not yet
+                    return model_.TotalCalcCountries;
+                }
+            }
+        }
+
+        public int TotalCountries
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return model_.GetCountries().Count();
                 }
             }
         }

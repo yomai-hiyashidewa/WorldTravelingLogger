@@ -45,7 +45,9 @@
             </DockPanel>
             <DockPanel>
                 <TextBlock Text=":countries:"/>
-                <TextBlock Text="{Binding Countries}"/>
+                <TextBlock Text="{Binding TotalCalcCountries}"/>
+                <TextBlock Text="/"/>
+                <TextBlock Text="{Binding TotalCountries}"/>
             </DockPanel>
         </StackPanel>
         <GroupBox Grid.Row="1" Header="currency">

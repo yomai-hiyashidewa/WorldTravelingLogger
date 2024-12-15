@@ -17,9 +17,17 @@ namespace WorldTravelLogger.Models
         }
 
 
+        public HashSet<CountryType> Countries
+        {
+            get; 
+            protected set;
+        }
+
+
         protected BaseList()
         {
             ErrorList = new List<FileErrorContext>();
+            Countries = new HashSet<CountryType>();
         }
 
         public FileErrorContext[] GetErrorArray()
@@ -169,6 +177,7 @@ namespace WorldTravelLogger.Models
 
         public virtual ErrorTypes Load(string filePath,string checkFilename)
         {
+            Countries.Clear();
             if (string.IsNullOrWhiteSpace(filePath))
             {
                 return ErrorTypes.None;
@@ -199,12 +208,26 @@ namespace WorldTravelLogger.Models
             }
             return ErrorTypes.None;
         }
+
+        protected void SetCountry(CountryType type)
+        {
+            if (!Countries.Contains(type))
+            {
+                Countries.Add(type);
+            }
+        }
+
+        public abstract IEnumerable<CountryType> GetCalcCounties();
+
+        
         public abstract bool IsLoaded { get; }
 
         // memo interfaceで実装すべきかも
         public abstract void CalcModels(bool isWorld,CountryType type, DateTime start, DateTime end);
 
         public abstract double TotalCost { get; }
+
+        
 
         
     }

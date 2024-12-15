@@ -18,6 +18,9 @@ namespace WorldTravelLogger.Models
         private SightSeeingList sightSeeingList_;
         private SightSeeingList otherList_;
 
+        private HashSet<CountryType> countries_;
+        private HashSet<CountryType> calcCountries_;
+
         private OptionModel option_;
 
         private ListType currentListType_;
@@ -90,6 +93,10 @@ namespace WorldTravelLogger.Models
                     ConvertAccomodationPrices();
                     ConvertTransportationPrices();
                     ConvertSightSeeingPrices();
+                    if (ReadyApplication)
+                    {
+                        SetCountries();
+                    }
 
                 }
                 CalcListAll();
@@ -114,7 +121,10 @@ namespace WorldTravelLogger.Models
                 {
                     otherList_.ImportOthers(sightSeeingList_.ExportOthers());
                     ConvertSightSeeingPrices();
-                    
+                    if (ReadyApplication)
+                    {
+                        SetCountries();
+                    }
                 }
                 CalcListAll();
                 if (FileLoaded_ != null)
@@ -137,6 +147,10 @@ namespace WorldTravelLogger.Models
                 else
                 {
                     ConvertTransportationPrices();
+                    if (ReadyApplication)
+                    {
+                        SetCountries();
+                    }
                 }
                 CalcListAll();
                 if (FileLoaded_ != null)
@@ -161,6 +175,10 @@ namespace WorldTravelLogger.Models
                 else
                 {
                     ConvertAccomodationPrices();
+                    if (ReadyApplication)
+                    {
+                        SetCountries();
+                    }
                 }
                 CalcListAll();
                 if (FileLoaded_ != null)
@@ -188,6 +206,8 @@ namespace WorldTravelLogger.Models
             transpotationList_ = new TranspotationList();
             sightSeeingList_ = new SightSeeingList();
             otherList_ = new SightSeeingList();
+            countries_ = new HashSet<CountryType>();
+            calcCountries_ = new HashSet<CountryType>();
         }
 
         public void Init()
@@ -382,6 +402,55 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        private void SetCountries()
+        {
+            countries_.Clear();
+            foreach(var c in accomodationList_.Countries)
+            {
+                if (!countries_.Contains(c))
+                {
+                    countries_.Add(c);
+                }
+            }
+            foreach (var c in transpotationList_.Countries.Where(c => !countries_.Contains(c)))
+            {
+               countries_.Add(c); 
+            }
+            foreach (var c in sightSeeingList_.Countries.Where(c => !countries_.Contains(c)))
+            {
+                countries_.Add(c);
+            }
+            foreach (var c in otherList_.Countries.Where(c => !countries_.Contains(c)))
+            {
+                countries_.Add(c);
+            }
+        }
+
+        private void CalcCountries()
+        {
+            calcCountries_.Clear();
+           
+            foreach (var c in accomodationList_.GetCalcCounties())
+            {
+                if (!calcCountries_.Contains(c))
+                {
+                    calcCountries_.Add(c);
+                }
+            }
+            foreach (var c in transpotationList_.GetCalcCounties().Where(c => !calcCountries_.Contains(c)))
+            {
+                calcCountries_.Add(c);
+            }
+            foreach (var c in sightSeeingList_.GetCalcCounties().Where(c => !calcCountries_.Contains(c)))
+            {
+                calcCountries_.Add(c);
+            }
+            foreach (var c in otherList_.GetCalcCounties().Where(c => !calcCountries_.Contains(c)))
+            {
+                calcCountries_.Add(c);
+            }
+        }
+
 
         private void CalcListAll()
         {
@@ -398,7 +467,14 @@ namespace WorldTravelLogger.Models
                 sightSeeingList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
                 otherList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
             }
+            if (ReadyApplication)
+            {
+                CalcCountries();
+            }
+            
         }
+
+    
 
         private void FireControlChangd()
         {
@@ -412,6 +488,22 @@ namespace WorldTravelLogger.Models
         public double CalcTotalCost()
         {
             return accomodationList_.TotalCost + transpotationList_.TotalCost + sightSeeingList_.TotalCost;
+        }
+
+        public IEnumerable<CountryType> GetCountries()
+        {
+            foreach (var c in countries_)
+            {
+                yield return c;
+            }
+        }
+
+        public int TotalCalcCountries
+        {
+            get
+            {
+                return calcCountries_.Count;
+            }
         }
 
 

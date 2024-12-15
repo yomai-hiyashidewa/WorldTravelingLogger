@@ -161,7 +161,12 @@ namespace WorldTravelLogger.Models
             throw new NotImplementedException();
         }
 
-     
+        public override IEnumerable<CountryType> GetCalcCounties()
+        {
+            throw new NotImplementedException();
+        }
+
         public override double TotalCost => throw new NotImplementedException();
+
     }
 }

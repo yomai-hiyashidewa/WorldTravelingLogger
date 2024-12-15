@@ -12,7 +12,8 @@ namespace WorldTravelLogger.Models
     {
         [Display(Name = "Japan")]
         JPN,    // 	Japan
-        
+        [Display(Name = "No Country")]
+        UNK,    // unknown
         // East Asia
         [Display(Name = "South Korea")]
         KOR,    // Korea (the Republic of)
@@ -322,7 +323,7 @@ namespace WorldTravelLogger.Models
         LSO,    // Lesotho
         LBN,    // Lebanon
         RUS,    // Russian Federation
-        UNK,    // unknown
+      
 
 
 

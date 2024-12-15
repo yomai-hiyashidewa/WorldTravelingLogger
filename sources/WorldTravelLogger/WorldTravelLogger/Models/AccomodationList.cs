@@ -170,6 +170,7 @@ namespace WorldTravelLogger.Models
                 if(model != null)
                 {
                     list_.Add(model);
+                    base.SetCountry(model.Country);
                 }
             }
         }
@@ -253,6 +254,22 @@ namespace WorldTravelLogger.Models
             return calcDic_.Keys;
         }
 
+        public override IEnumerable<CountryType> GetCalcCounties()
+        {
+            var sets = new HashSet<CountryType>();
+            foreach(var model in calcList_)
+            {
+                if (!sets.Contains(model.Country))
+                {
+                    sets.Add(model.Country);
+                }
+            }
+            foreach(var c in sets)
+            {
+                yield return c;
+            }
+        }
+
         public override double TotalCost
         {
             get
@@ -266,6 +283,6 @@ namespace WorldTravelLogger.Models
             }
         }
 
-
+       
     }
 }
