@@ -31,6 +31,64 @@ namespace WorldTravelLogger.Models
         {
             context_ = context;
             sightseeigTypecs_ = sightseeigType;
+            ResetType();
+        }
+
+        private void ResetType()
+        {
+            if (string.IsNullOrWhiteSpace(context_))
+            {
+                return;
+            }
+            if (sightseeigTypecs_ == SightseeigType.Visiting || sightseeigTypecs_ == SightseeigType.Walking)
+            {
+                var upperC = context_.ToUpper();
+                if (upperC.Contains("BEACH"))
+                {
+                    sightseeigTypecs_ = SightseeigType.Beach;
+                }
+                else if (upperC.Contains("BAY") || upperC.Contains("CAVE") || upperC.Contains("VALLY") ||
+                    upperC.Contains("LAKE"))
+                {
+                    sightseeigTypecs_ = SightseeigType.Nature;
+                }
+                else if (upperC.Contains("MUSEUM"))
+                {
+                    sightseeigTypecs_ = SightseeigType.Museum;
+                }
+                else if (upperC.Contains("CHURCH") || upperC.Contains("CATHEDRAL") || 
+                    upperC.Contains("MOSK") || upperC.Contains("SHRINE"))
+                {
+                    sightseeigTypecs_ = SightseeigType.Church;
+                }
+                else if (upperC.Contains("ZOO"))
+                {
+                    sightseeigTypecs_ = SightseeigType.Zoo;
+                }
+                else if (upperC.Contains("HERITAGE"))
+                {
+                    sightseeigTypecs_ = SightseeigType.Heritage;
+                }
+                else if (upperC.Contains("OVERVIEWING"))
+                {
+                    sightseeigTypecs_ = SightseeigType.Overviewing;
+                }
+                else if (upperC.Contains("WATERFALL"))
+                {
+                    sightseeigTypecs_ = SightseeigType.Waterfall;
+                }
+                else if (upperC.Contains("CASTLE") || upperC.Contains("FORTLESS") ||
+                    upperC.Contains("PALACE"))
+                {
+                    sightseeigTypecs_ = SightseeigType.Castle;
+                }
+                else if (upperC.Contains("PARK") || upperC.Contains("GARDEN"))
+                {
+                    sightseeigTypecs_ = SightseeigType.Park;
+                }
+            }
+            
+
 
         }
 

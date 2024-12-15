@@ -33,6 +33,15 @@ namespace WorldTravelLogger.Models
         PartTimeJob,    // アルバイト
         Toilet,         // トイレ
         Museum,         // 博物館
-
+        Church,         // 教会
+        Beach,          // ビーチ
+        Zoo,            // 動物園
+        Heritage,       // 遺跡
+        Overviewing,    // 展望台
+        Waterfall,      // 滝
+        Castle,         // 城
+        Nature,         // 自然
+        Canal,          // 運河
+        Park,           // 公園
     }
 }

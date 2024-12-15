@@ -55,6 +55,42 @@ namespace WorldTravelLogger.Models
             endPlace_ = endPlace;                  // 終了場所
             distance_ = distance;                                // 移動距離(km)
             time_ = time;                                      // 移動時間(min)
+            ResetType();
+        }
+
+        // 記述内容を更に分類する
+        private void ResetType()
+        {
+            if(transportationtype_ == Transportationtype.Train)
+            {
+                if (distance_ <= 10)
+                {
+                    transportationtype_ = Transportationtype.LocalTrain;
+                }
+                else if(distance_ <= 100)
+                {
+                    transportationtype_ = Transportationtype.MiddleDistanceTrain;
+                }
+                else
+                {
+                    transportationtype_ = Transportationtype.LongDistanceTrain;
+                }
+            }
+            else if(transportationtype_ == Transportationtype.Bus)
+            {
+                if (distance_ <= 10)
+                {
+                    transportationtype_ = Transportationtype.LocalBus;
+                }
+                else if(distance_ <= 100)
+                {
+                    transportationtype_ = Transportationtype.MiddleDistanceBus;
+                }
+                else
+                {
+                    transportationtype_ = Transportationtype.LongDistanceBus;
+                }
+            }
         }
 
 

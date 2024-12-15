@@ -129,6 +129,10 @@ namespace WorldTravelLogger.Models
         POL,    // Poland
         [Display(Name = "Italy")]
         ITA,    // Italy
+        [Display(Name = "Knights of Malta")]
+        MOM,    // Malta Knight
+        [Display(Name = "Vatican City")]
+        VAT,    // Holy See
         [Display(Name = "San Marino")]
         SMR,    // San Marino
         [Display(Name = "Estonia")]
@@ -274,7 +278,7 @@ namespace WorldTravelLogger.Models
         BHR,    // Bahrain
         HTI,    // Haiti
         PAK,    // Pakistan
-        VAT,    // Holy See
+       
         VUT,    // Vanuatu
         BHS,    // Bahamas
         PNG,    // Papua New Guinea

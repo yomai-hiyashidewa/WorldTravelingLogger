@@ -27,9 +27,9 @@ namespace WorldTravelLogger.ViewModels
 
         private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
         {
-            if (e.Type == ListType.SightSeeingList && e.Type == ListType.ExchangeRateList)
+            if (e.Type == ListType.SightSeeingList || e.Type == ListType.ExchangeRateList)
             {
-                if (model_.ReadyAccomodations)
+                if (model_.ReadySightseeings)
                 {
                     UpdateAll();
                 }
