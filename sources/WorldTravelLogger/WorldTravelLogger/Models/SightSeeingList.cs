@@ -357,5 +357,18 @@ namespace WorldTravelLogger.Models
                 return null;
             }
         }
+
+        public override int GetCalcDateCount()
+        {
+            var hSet = new HashSet<DateTime>();
+            foreach (var model in calcList_)
+            {
+                if (!hSet.Contains(model.Date))
+                {
+                    hSet.Add(model.Date);
+                }
+            }
+            return hSet.Count;
+        }
     }
 }

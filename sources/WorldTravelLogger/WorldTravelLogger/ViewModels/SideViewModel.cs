@@ -188,8 +188,7 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-                    var date = EndDate - StartDate;
-                    return (int)date.TotalDays;
+                    return model_.TotalCalcDays;
                 }
             }
         }

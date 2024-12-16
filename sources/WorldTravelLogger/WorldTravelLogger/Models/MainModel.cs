@@ -643,6 +643,30 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        public int TotalCalcDays
+        {
+            get
+            {
+                var count = accomodationList_.GetCalcDateCount();
+                var tCount = transpotationList_.GetCalcDateCount();
+                var sCount = sightSeeingList_.GetCalcDateCount();
+                var oCount = otherList_.GetCalcDateCount();
+                if (count < tCount)
+                {
+                    count = tCount;
+                }
+                if(count < sCount)
+                {
+                    count = sCount;
+                }
+                if(count < oCount)
+                {
+                    count = oCount;
+                }
+                return count;
+            }
+        }
+
 
        
 

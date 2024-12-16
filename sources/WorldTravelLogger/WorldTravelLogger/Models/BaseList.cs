@@ -282,6 +282,8 @@ namespace WorldTravelLogger.Models
 
         public abstract DateTime? GetEndCalcDate();
 
+        public abstract int GetCalcDateCount();
+
         
         public abstract bool IsLoaded { get; }
 

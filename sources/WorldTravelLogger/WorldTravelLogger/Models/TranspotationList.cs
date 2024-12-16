@@ -435,6 +435,24 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        public override int GetCalcDateCount()
+        {
+            var hSet = new HashSet<DateTime>();
+            foreach (var model in calcList_)
+            {
+                if (!hSet.Contains(model.StartDate))
+                {
+                    hSet.Add(model.StartDate);
+                }
+                if (!hSet.Contains(model.EndDate))
+                {
+                    hSet.Add(model.EndDate);
+                }
+
+            }
+            return hSet.Count;
+        }
+
         public double TotalDistance
         {
             get
