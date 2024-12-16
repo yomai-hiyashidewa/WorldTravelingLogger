@@ -21,6 +21,10 @@ namespace WorldTravelLogger.Models
         private HashSet<CountryType> countries_;
         private HashSet<CountryType> calcCountries_;
 
+    
+
+        
+
         private OptionModel option_;
 
         private ListType currentListType_;
@@ -96,6 +100,7 @@ namespace WorldTravelLogger.Models
                     if (ReadyApplication)
                     {
                         SetCountries();
+                        SetDate();
                     }
 
                 }
@@ -124,6 +129,7 @@ namespace WorldTravelLogger.Models
                     if (ReadyApplication)
                     {
                         SetCountries();
+                        SetDate();
                     }
                 }
                 CalcListAll();
@@ -150,6 +156,7 @@ namespace WorldTravelLogger.Models
                     if (ReadyApplication)
                     {
                         SetCountries();
+                        SetDate();
                     }
                 }
                 CalcListAll();
@@ -178,6 +185,7 @@ namespace WorldTravelLogger.Models
                     if (ReadyApplication)
                     {
                         SetCountries();
+                        SetDate();
                     }
                 }
                 CalcListAll();
@@ -193,6 +201,11 @@ namespace WorldTravelLogger.Models
             isWorldMode_ = true;
             startDate_ = new DateTime(2022, 5, 16);
             endDate_ = new DateTime(2024, 5, 1);
+            startSetDate_ = accomodationList_.StartDate;
+            endSetDate_ = accomodationList_.EndDate;
+            startCalcDate_ = accomodationList_.StartDate;
+            endCalcDate_ = accomodationList_.EndDate;
+
             currentCountryType_ = CountryType.JPN;
             CurrentMajorCurrencyType = MajorCurrencytype.JPN;
         }
@@ -200,7 +213,7 @@ namespace WorldTravelLogger.Models
         public MainModel()
         {
             SetOptionModel();
-            InitParameter();
+           
             exchangeRater_ = new ExchangeRater();
             accomodationList_ = new AccomodationList();
             transpotationList_ = new TranspotationList();
@@ -208,6 +221,7 @@ namespace WorldTravelLogger.Models
             otherList_ = new SightSeeingList();
             countries_ = new HashSet<CountryType>();
             calcCountries_ = new HashSet<CountryType>();
+            InitParameter();
         }
 
         public void Init()
@@ -249,6 +263,7 @@ namespace WorldTravelLogger.Models
             set
             {
                 currentListType_ = value;
+                
             }
         }
 
@@ -320,8 +335,17 @@ namespace WorldTravelLogger.Models
         private CountryType currentCountryType_;
 
         private DateTime startDate_;
-
         private DateTime endDate_;
+
+        private DateTime startSetDate_;
+        private DateTime endSetDate_;
+
+        private DateTime? startCalcDate_;
+        private DateTime? endCalcDate_;
+
+
+        public DateTime? StartCalcDate { get { return startCalcDate_; } }
+        public DateTime? EndCalcDate { get { return endCalcDate_; } }
 
         public bool IsWorldMode
         {
@@ -347,6 +371,8 @@ namespace WorldTravelLogger.Models
                 if(currentCountryType_ != value)
                 {
                     currentCountryType_ = value;
+                    startDate_ = startSetDate_;
+                    endDate_ = endSetDate_;
                     FireControlChangd();
                 }
             }
@@ -360,7 +386,7 @@ namespace WorldTravelLogger.Models
             }
             set
             {
-                if(startDate_ != value)
+                if(startDate_ != value && value >= startSetDate_)
                 {
                     startDate_ = value;
                     FireControlChangd();
@@ -376,7 +402,7 @@ namespace WorldTravelLogger.Models
             }
             set
             {
-                if(endDate_ != value)
+                if(endDate_ != value && value <= endSetDate_)
                 {
                     endDate_ = value;
                     FireControlChangd();
@@ -451,6 +477,116 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        private void SetDate()
+        {
+            startSetDate_ = accomodationList_.StartDate;
+            
+            if (startSetDate_ > transpotationList_.StartDate)
+            {
+                startSetDate_ = transpotationList_.StartDate;
+            }
+            if (startSetDate_ > sightSeeingList_.StartDate)
+            {
+                startSetDate_ = sightSeeingList_.StartDate;
+            }
+            if (startSetDate_ > otherList_.StartDate)
+            {
+                startSetDate_ = otherList_.StartDate;
+            }
+            endSetDate_ = accomodationList_.EndDate;
+
+           
+            if (endSetDate_ > transpotationList_.EndDate)
+            {
+                endSetDate_ = transpotationList_.EndDate;
+            }
+            if (endSetDate_ > sightSeeingList_.EndDate)
+            {
+                endSetDate_ = sightSeeingList_.EndDate;
+            }
+            if (endSetDate_ > otherList_.EndDate)
+            {
+                endSetDate_ = otherList_.EndDate;
+            }
+            startDate_ = startSetDate_;
+            endDate_ = endSetDate_;
+        }
+
+        private void CalcDate()
+        {
+            startCalcDate_ = accomodationList_.GetStartCalcDate();
+            var tStartDate = transpotationList_.GetStartCalcDate();
+            var sStartDate = sightSeeingList_.GetStartCalcDate();
+            var oStartDate = otherList_.GetStartCalcDate();
+            if(startCalcDate_ == null)
+            {
+                startCalcDate_ = tStartDate;
+            }
+            else if (startCalcDate_  > tStartDate)
+            {
+                startCalcDate_ = tStartDate;
+            }
+
+            if (startCalcDate_ == null)
+            {
+                startCalcDate_ = sStartDate;
+            }
+            else if (startCalcDate_ > sStartDate)
+            {
+                startCalcDate_ = sStartDate;
+            }
+
+            if (startCalcDate_ == null)
+            {
+                startCalcDate_ = oStartDate;
+            }
+            if (startCalcDate_ > oStartDate)
+            {
+                startCalcDate_ = oStartDate;
+            }
+
+            endCalcDate_ = accomodationList_.GetEndCalcDate(); ;
+            var tEndtDate = transpotationList_.GetEndCalcDate();
+            var sEndDate = sightSeeingList_.GetEndCalcDate();
+            var oEndDate = otherList_.GetEndCalcDate();
+
+            if (endCalcDate_ == null)
+            {
+                endCalcDate_ = tEndtDate;
+            }
+            else if (endCalcDate_ > tEndtDate)
+            {
+                endCalcDate_ = tEndtDate;
+            }
+
+            if (endCalcDate_ == null)
+            {
+                endCalcDate_ = sEndDate;
+            }
+            else if (endCalcDate_ > sEndDate)
+            {
+                endCalcDate_ = sEndDate;
+            }
+
+            if (endCalcDate_ == null)
+            {
+                endCalcDate_ = oEndDate;
+            }
+            else if (endCalcDate_ > oEndDate)
+            {
+                endCalcDate_ = oEndDate;
+            }
+
+            if (startCalcDate_ != null)
+            {
+                startDate_ = (DateTime)startCalcDate_;
+            }
+            if (endCalcDate_ != null)
+            {
+                endDate_ = (DateTime)endCalcDate_;
+            }
+        }
+
 
         private void CalcListAll()
         {
@@ -470,6 +606,7 @@ namespace WorldTravelLogger.Models
             if (ReadyApplication)
             {
                 CalcCountries();
+                CalcDate();
             }
             
         }

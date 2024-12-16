@@ -236,7 +236,10 @@ namespace WorldTravelLogger.Models
                     (DateTime)endDate, (CountryType)endCountry, endPlace, (PlaceType)endPlaceType,
                     (double)distance, (int)time, (double)price, (CurrencyType)currencyType, memo);
                 list_.Add(model);
-                base.SetCountry(model.Country);
+                base.SetCountry(model.StartCountry);
+                base.SetCountry(model.EndCountry);
+                base.SetDate(model.StartDate);
+                base.SetDate(model.EndDate);
             }
         }
 
@@ -393,14 +396,42 @@ namespace WorldTravelLogger.Models
             var sets = new HashSet<CountryType>();
             foreach (var model in calcList_)
             {
-                if (!sets.Contains(model.Country))
+                if (!sets.Contains(model.StartCountry))
                 {
-                    sets.Add(model.Country);
+                    sets.Add(model.StartCountry);
+                }
+                if (!sets.Contains(model.EndCountry))
+                {
+                    sets.Add(model.EndCountry);
                 }
             }
             foreach (var c in sets)
             {
                 yield return c;
+            }
+        }
+
+        public override DateTime? GetStartCalcDate()
+        {
+            if (calcList_.Count > 0)
+            {
+                return calcList_.Min(m => m.StartDate); 
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public override DateTime? GetEndCalcDate()
+        {
+            if (calcList_.Count > 0)
+            {
+                return calcList_.Max(m => m.EndDate);
+            }
+            else
+            {
+                return null;
             }
         }
 

@@ -17,7 +17,7 @@
         <StackPanel>
             <CheckBox Content="world" IsChecked="{Binding IsWorld,Mode=TwoWay}"/>
             <TextBlock Text="country:"/>
-            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Source={local:EnumList {x:Type models:CountryType}}}" SelectedItem="{Binding CurrentCountry,Mode=TwoWay}" IsEnabled="{Binding IsCountryMode}">
+            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Countries}" SelectedItem="{Binding CurrentCountry,Mode=TwoWay}" IsEnabled="{Binding IsCountryMode}">
                 <ComboBox.Resources>
                     <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
                 </ComboBox.Resources>
@@ -39,12 +39,23 @@
                 <TextBlock Grid.Column="1" Text="～"/>
                 <DatePicker Grid.Column="2" SelectedDate="{Binding EndDate,Mode=TwoWay}"/>
             </Grid>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="20"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="{Binding StartCalctDate}"/>
+                <TextBlock Grid.Column="1" Text="～"/>
+                <TextBlock Grid.Column="2" Text="{Binding EndCalcDate}"/>
+            </Grid>
+
             <DockPanel>
                 <TextBlock Text="days:"/>
                 <TextBlock Text="{Binding TotalDays}"/>
             </DockPanel>
             <DockPanel>
-                <TextBlock Text=":countries:"/>
+                <TextBlock Text="countries:"/>
                 <TextBlock Text="{Binding TotalCalcCountries}"/>
                 <TextBlock Text="/"/>
                 <TextBlock Text="{Binding TotalCountries}"/>

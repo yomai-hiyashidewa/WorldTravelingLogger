@@ -171,6 +171,7 @@ namespace WorldTravelLogger.Models
                 {
                     list_.Add(model);
                     base.SetCountry(model.Country);
+                    base.SetDate(model.Date);
                 }
             }
         }
@@ -267,6 +268,32 @@ namespace WorldTravelLogger.Models
             foreach(var c in sets)
             {
                 yield return c;
+            }
+        }
+
+        public override DateTime? GetStartCalcDate()
+        {
+
+
+            if (calcList_.Count > 0)
+            {
+                return calcList_.Min(m => m.Date);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public override DateTime? GetEndCalcDate()
+        {
+            if (calcList_.Count > 0)
+            {
+                return calcList_.Max(m => m.Date);
+            }
+            else
+            {
+                return null;
             }
         }
 

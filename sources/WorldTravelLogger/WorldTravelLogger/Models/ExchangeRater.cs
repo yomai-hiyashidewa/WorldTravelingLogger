@@ -166,6 +166,16 @@ namespace WorldTravelLogger.Models
             throw new NotImplementedException();
         }
 
+        public override DateTime? GetStartCalcDate()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override DateTime? GetEndCalcDate()
+        {
+            throw new NotImplementedException();
+        }
+
         public override double TotalCost => throw new NotImplementedException();
 
     }

@@ -44,8 +44,7 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("IsWorld");
             this.RaisePropertyChanged("IsCountryMode");
             this.RaisePropertyChanged("CurrentCountry");
-            this.RaisePropertyChanged("StartDate");
-            this.RaisePropertyChanged("EndDate");
+  
             this.RaisePropertyChanged("TotalDays");
             this.RaisePropertyChanged("IsCurrencyJPY");
             this.RaisePropertyChanged("IsCurrencyUSD");
@@ -57,9 +56,14 @@ namespace WorldTravelLogger.ViewModels
 
         private void UpdateView()
         {
+            this.RaisePropertyChanged("StartDate");
+            this.RaisePropertyChanged("EndDate");
             this.RaisePropertyChanged("TotalCost");
+            this.RaisePropertyChanged("Countries");
             this.RaisePropertyChanged("TotalCalcCountries");
             this.RaisePropertyChanged("TotalCountries");
+            this.RaisePropertyChanged("StartCalctDate");
+            this.RaisePropertyChanged("EndCalcDate");
         }
 
         public bool IsWorld
@@ -148,6 +152,32 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
+        public string StartCalctDate
+        {
+            get
+            {
+                var date = DateTime.Now;
+                if(model_ != null && model_.StartCalcDate != null)
+                {
+                    date = (DateTime)model_.StartCalcDate;
+                }
+                return date.ToString("yyyy/MM/dd", CultureInfo.CurrentCulture);
+            }
+        }
+
+        public string EndCalcDate
+        {
+            get
+            {
+                var date = DateTime.Now;
+                if (model_ != null && model_.EndCalcDate != null)
+                {
+                    date = (DateTime)model_.EndCalcDate;
+                }
+                return date.ToString("yyyy/MM/dd", CultureInfo.CurrentCulture);
+            }
+        }
+
         public int TotalDays
         {
             get
@@ -169,16 +199,19 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                var list = new List<CountryType>();
-                if (model_ == null)
+                
+                if (model_ != null)
                 {
-                    list.Add(CountryType.JPN);
-                }
-                else
-                {
+                    var list = new List<CountryType>();
                     list.AddRange(model_.GetCountries());
+                    if (list.Count > 0)
+                    {
+                        return list.ToArray();
+                    }
+                    
                 }
-                return list.ToArray();
+                return (CountryType[])Enum.GetValues(typeof(CountryType));
+
             }
         }
 

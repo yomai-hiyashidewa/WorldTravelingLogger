@@ -23,11 +23,19 @@ namespace WorldTravelLogger.Models
             protected set;
         }
 
+        private DateTime? startDate_;
+        private DateTime? endDate_;
+
+       
+
 
         protected BaseList()
         {
             ErrorList = new List<FileErrorContext>();
             Countries = new HashSet<CountryType>();
+            startDate_ = null;
+            endDate_ = null;
+            
         }
 
         public FileErrorContext[] GetErrorArray()
@@ -178,6 +186,8 @@ namespace WorldTravelLogger.Models
         public virtual ErrorTypes Load(string filePath,string checkFilename)
         {
             Countries.Clear();
+            startDate_ = null;
+            endDate_ = null;
             if (string.IsNullOrWhiteSpace(filePath))
             {
                 return ErrorTypes.None;
@@ -217,7 +227,60 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        protected void SetDate(DateTime date)
+        {
+            if(startDate_ == null || endDate_ == null)
+            {
+                startDate_ = date;
+                endDate_ = date;
+            }
+            else if(startDate_ > date)
+            {
+                startDate_ = date;
+            }
+            else if(endDate_ < date)
+            {
+                endDate_ = date;
+            }
+        }
+
+        public DateTime StartDate
+        {
+            get
+            {
+                if(startDate_ == null)
+                {
+                    return DateTime.Now;
+                }
+                else
+                {
+                    return (DateTime)startDate_;
+                }
+            }
+        }
+
+        public DateTime EndDate
+        {
+            get
+            {
+                if (endDate_ == null)
+                {
+                    return DateTime.Now;
+                }
+                else
+                {
+                    return (DateTime)endDate_;
+                }
+            }
+        }
+
+
+
         public abstract IEnumerable<CountryType> GetCalcCounties();
+
+        public abstract DateTime? GetStartCalcDate();
+
+        public abstract DateTime? GetEndCalcDate();
 
         
         public abstract bool IsLoaded { get; }
