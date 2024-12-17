@@ -624,7 +624,10 @@ namespace WorldTravelLogger.Models
 
         public double CalcTotalCost()
         {
-            return accomodationList_.TotalCost + transpotationList_.TotalCost + sightSeeingList_.TotalCost;
+            return accomodationList_.TotalCost +
+                transpotationList_.TotalCost +
+                sightSeeingList_.TotalCost +
+                otherList_.TotalCost;
         }
 
         public IEnumerable<CountryType> GetCountries()
