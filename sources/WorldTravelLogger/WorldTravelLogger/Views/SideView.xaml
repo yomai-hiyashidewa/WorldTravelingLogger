@@ -9,6 +9,10 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="200">
     <Grid>
+        <Grid.Resources>
+            <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -17,11 +21,12 @@
         <StackPanel>
             <CheckBox Content="world" IsChecked="{Binding IsWorld,Mode=TwoWay}"/>
             <TextBlock Text="country:"/>
-            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Countries}" SelectedItem="{Binding CurrentCountry,Mode=TwoWay}" IsEnabled="{Binding IsCountryMode}">
-                <ComboBox.Resources>
-                    <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
-                </ComboBox.Resources>
-
+            <ComboBox HorizontalAlignment="Right"
+                      ItemsSource="{Binding Countries}" 
+                      SelectedItem="{Binding CurrentCountry,Mode=TwoWay}"
+                      IsEnabled="{Binding IsCountryMode}"
+                      FontSize="30"
+                      >
                 <ComboBox.ItemTemplate>
                     <DataTemplate>
                         <TextBlock Text="{Binding Converter={StaticResource EnumDisplayConv}}" />
@@ -61,13 +66,30 @@
                 <TextBlock Text="{Binding TotalCountries}"/>
             </DockPanel>
         </StackPanel>
-        <GroupBox Grid.Row="1" Header="currency">
+        <!--<GroupBox Grid.Row="1" Header="currency">
             <DockPanel>
                 <RadioButton Content="\" IsChecked="{Binding IsCurrencyJPY,Mode=TwoWay}"/>
                 <RadioButton Content="$" IsChecked="{Binding IsCurrencyUSD,Mode=TwoWay}"/>
                 <RadioButton Content="€" IsChecked="{Binding IsCurrencyEUR,Mode=TwoWay}"/>
             </DockPanel>
-        </GroupBox>
+        </GroupBox>-->
+        <Grid Grid.Row="1" Visibility="{Binding IsWorld,Converter={StaticResource BooleanToVisibility}}">
+            <ListView ItemsSource="{Binding Countries}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding Converter={StaticResource EnumDisplayConv}}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
+        <Grid Grid.Row="1" Visibility="{Binding IsCountryMode,Converter={StaticResource BooleanToVisibility}}">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="9*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Text="{Binding RegionsCount}"/>
+            <ListView Grid.Row="1" ItemsSource="{Binding Regions}"/>
+        </Grid>
         <StackPanel Grid.Row="2">
             <DockPanel>
                 <TextBlock Text="Total cost:"/>

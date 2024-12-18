@@ -236,8 +236,8 @@ namespace WorldTravelLogger.Models
                     (DateTime)endDate, (CountryType)endCountry, endPlace, (PlaceType)endPlaceType,
                     (double)distance, (int)time, (double)price, (CurrencyType)currencyType, memo);
                 list_.Add(model);
-                base.SetCountry(model.StartCountry);
-                base.SetCountry(model.EndCountry);
+                base.SetCountry(model.StartCountry,model.StartRegion);
+                base.SetCountry(model.EndCountry,model.EndRegion);
                 base.SetDate(model.StartDate);
                 base.SetDate(model.EndDate);
             }

@@ -17,7 +17,7 @@ namespace WorldTravelLogger.Models
         }
 
 
-        public HashSet<CountryType> Countries
+        public Dictionary<CountryType,HashSet<string>> CountriesAndRegions
         {
             get; 
             protected set;
@@ -32,7 +32,7 @@ namespace WorldTravelLogger.Models
         protected BaseList()
         {
             ErrorList = new List<FileErrorContext>();
-            Countries = new HashSet<CountryType>();
+            CountriesAndRegions = new Dictionary<CountryType, HashSet<string>>();
             startDate_ = null;
             endDate_ = null;
             
@@ -185,7 +185,7 @@ namespace WorldTravelLogger.Models
 
         public virtual ErrorTypes Load(string filePath,string checkFilename)
         {
-            Countries.Clear();
+            CountriesAndRegions.Clear();
             startDate_ = null;
             endDate_ = null;
             if (string.IsNullOrWhiteSpace(filePath))
@@ -219,11 +219,18 @@ namespace WorldTravelLogger.Models
             return ErrorTypes.None;
         }
 
-        protected void SetCountry(CountryType type)
+        protected void SetCountry(CountryType type, string region)
         {
-            if (!Countries.Contains(type))
+            
+            if (!CountriesAndRegions.ContainsKey(type))
             {
-                Countries.Add(type);
+                var context = new HashSet<string>();
+                CountriesAndRegions.Add(type, context);
+            }
+            if (!string.IsNullOrWhiteSpace(region) && 
+                !CountriesAndRegions[type].Contains(region))
+            {
+                CountriesAndRegions[type].Add(region);
             }
         }
 
@@ -243,6 +250,29 @@ namespace WorldTravelLogger.Models
                 endDate_ = date;
             }
         }
+
+        public void SetCoutriesAndRegions(Dictionary<CountryType, HashSet<string>> dic)
+        {
+            foreach (var context in CountriesAndRegions)
+            {
+                if (!dic.ContainsKey(context.Key))
+                {
+                    dic.Add(context.Key, context.Value);
+                }
+                else
+                {
+                    foreach (var region in context.Value)
+                    {
+                        if (!dic[context.Key].Contains(region))
+                        {
+                            dic[context.Key].Add(region);
+                        }
+                    }
+
+                }
+            }
+        }
+
 
         public DateTime StartDate
         {

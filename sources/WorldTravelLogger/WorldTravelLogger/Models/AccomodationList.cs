@@ -170,7 +170,7 @@ namespace WorldTravelLogger.Models
                 if(model != null)
                 {
                     list_.Add(model);
-                    base.SetCountry(model.Country);
+                    base.SetCountry(model.Country,model.Region);
                     base.SetDate(model.Date);
                 }
             }

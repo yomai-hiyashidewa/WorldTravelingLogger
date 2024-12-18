@@ -161,7 +161,7 @@ namespace WorldTravelLogger.Models
                 var model = new SightseeingModel(context, (SightseeigType)sType, (DateTime)date, (CountryType)country,
                     region, (double)price, (CurrencyType)currencyType, memo);
                 list_.Add(model);
-                base.SetCountry(model.Country);
+                base.SetCountry(model.Country,model.Region);
                 base.SetDate(model.Date);
             }
         }

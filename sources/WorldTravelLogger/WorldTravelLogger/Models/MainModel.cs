@@ -18,7 +18,7 @@ namespace WorldTravelLogger.Models
         private SightSeeingList sightSeeingList_;
         private SightSeeingList otherList_;
 
-        private HashSet<CountryType> countries_;
+        private Dictionary<CountryType, HashSet<string>> countriesAndRegions_;
         private HashSet<CountryType> calcCountries_;
 
     
@@ -219,7 +219,7 @@ namespace WorldTravelLogger.Models
             transpotationList_ = new TranspotationList();
             sightSeeingList_ = new SightSeeingList();
             otherList_ = new SightSeeingList();
-            countries_ = new HashSet<CountryType>();
+            countriesAndRegions_ = new Dictionary<CountryType, HashSet<string>>();
             calcCountries_ = new HashSet<CountryType>();
             InitParameter();
         }
@@ -430,26 +430,11 @@ namespace WorldTravelLogger.Models
 
         private void SetCountries()
         {
-            countries_.Clear();
-            foreach(var c in accomodationList_.Countries)
-            {
-                if (!countries_.Contains(c))
-                {
-                    countries_.Add(c);
-                }
-            }
-            foreach (var c in transpotationList_.Countries.Where(c => !countries_.Contains(c)))
-            {
-               countries_.Add(c); 
-            }
-            foreach (var c in sightSeeingList_.Countries.Where(c => !countries_.Contains(c)))
-            {
-                countries_.Add(c);
-            }
-            foreach (var c in otherList_.Countries.Where(c => !countries_.Contains(c)))
-            {
-                countries_.Add(c);
-            }
+            countriesAndRegions_.Clear();
+            accomodationList_.SetCoutriesAndRegions(countriesAndRegions_);
+            transpotationList_.SetCoutriesAndRegions(countriesAndRegions_);
+            sightSeeingList_.SetCoutriesAndRegions((countriesAndRegions_));
+            otherList_.SetCoutriesAndRegions(countriesAndRegions_);
         }
 
         private void CalcCountries()
@@ -632,9 +617,32 @@ namespace WorldTravelLogger.Models
 
         public IEnumerable<CountryType> GetCountries()
         {
-            foreach (var c in countries_)
+            foreach (var c in countriesAndRegions_)
             {
-                yield return c;
+                yield return c.Key;
+            }
+        }
+
+        public string[] GetCurrentRegions()
+        {
+            if (countriesAndRegions_.Count > 0 && 
+                countriesAndRegions_.ContainsKey(currentCountryType_)){
+                return countriesAndRegions_[currentCountryType_].ToArray();
+            }
+            else {
+                return null;
+            }
+        }
+
+        public int GetCurrentRegionCount()
+        {
+            if (countriesAndRegions_.Count > 0 &&
+                countriesAndRegions_.ContainsKey(currentCountryType_)){
+                return countriesAndRegions_[currentCountryType_].Count;
+            }
+            else
+            {
+                return 0;
             }
         }
 

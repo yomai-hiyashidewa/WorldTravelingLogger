@@ -43,19 +43,22 @@ namespace WorldTravelLogger.ViewModels
         {
             this.RaisePropertyChanged("IsWorld");
             this.RaisePropertyChanged("IsCountryMode");
-            this.RaisePropertyChanged("CurrentCountry");
+            
   
-            this.RaisePropertyChanged("TotalDays");
-            this.RaisePropertyChanged("IsCurrencyJPY");
-            this.RaisePropertyChanged("IsCurrencyUSD");
-            this.RaisePropertyChanged("IsCurrencyEUR");
-            this.RaisePropertyChanged("CurrentMajorCurrencyType");
+            
+            //this.RaisePropertyChanged("IsCurrencyJPY");
+            //this.RaisePropertyChanged("IsCurrencyUSD");
+            //this.RaisePropertyChanged("IsCurrencyEUR");
+            //this.RaisePropertyChanged("CurrentMajorCurrencyType");
             UpdateView();
 
         }
 
         private void UpdateView()
         {
+            this.RaisePropertyChanged("TotalDays");
+            
+            this.RaisePropertyChanged("CurrentCountry");
             this.RaisePropertyChanged("StartDate");
             this.RaisePropertyChanged("EndDate");
             this.RaisePropertyChanged("TotalCost");
@@ -64,6 +67,8 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("TotalCountries");
             this.RaisePropertyChanged("StartCalctDate");
             this.RaisePropertyChanged("EndCalcDate");
+            this.RaisePropertyChanged("RegionsCount");
+            this.RaisePropertyChanged("Regions");
         }
 
         public bool IsWorld
@@ -213,6 +218,37 @@ namespace WorldTravelLogger.ViewModels
 
             }
         }
+
+        public string[] Regions
+        {
+            get
+            {
+                if(model_ == null)
+                {
+                    return [];
+                }
+                else
+                {
+                    return model_.GetCurrentRegions(); 
+                }
+            }
+        }
+
+        public int RegionsCount
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return 0;
+                }
+                else
+                {
+                    return model_.GetCurrentRegionCount(); 
+                }
+            }
+        }
+
 
         public int TotalCalcCountries
         {
