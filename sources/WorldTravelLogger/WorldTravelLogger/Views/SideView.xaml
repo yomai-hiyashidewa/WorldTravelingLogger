@@ -19,9 +19,32 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel>
-            <CheckBox Content="world" IsChecked="{Binding IsWorld,Mode=TwoWay}"/>
-            <TextBlock Text="country:"/>
-            <ComboBox HorizontalAlignment="Right"
+            <DockPanel>
+                <CheckBox Content="world" IsChecked="{Binding IsWorld,Mode=TwoWay}"/>
+                <CheckBox Content="with airplane" IsChecked="{Binding IsWithAirplane,Mode=TwoWay}"/>
+                <DockPanel>
+                    <TextBlock Text="{Binding TotalCalcCountries}"/>
+                    <TextBlock Text="/"/>
+                    <TextBlock Text="{Binding TotalCountries}"/>
+                    <TextBlock Text=" countries"/>
+                </DockPanel>
+            </DockPanel>
+            <DockPanel>
+                <DatePicker SelectedDate="{Binding StartDate,Mode=TwoWay}"/>
+                <TextBlock Text="～"/>
+                <DatePicker SelectedDate="{Binding EndDate,Mode=TwoWay}"/>
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="{Binding StartCalctDate}"/>
+                <TextBlock Text="～"/>
+                <TextBlock Text="{Binding EndCalcDate}"/>
+                <DockPanel>
+                    <TextBlock Text="{Binding TotalDays}"/>
+                    <TextBlock Text=" days"/>
+                </DockPanel>
+            </DockPanel>
+            <DockPanel>
+                <ComboBox 
                       ItemsSource="{Binding Countries}" 
                       SelectedItem="{Binding CurrentCountry,Mode=TwoWay}"
                       IsEnabled="{Binding IsCountryMode}"
@@ -33,38 +56,16 @@
                     </DataTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
-
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="20"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <DatePicker SelectedDate="{Binding StartDate,Mode=TwoWay}"/>
-                <TextBlock Grid.Column="1" Text="～"/>
-                <DatePicker Grid.Column="2" SelectedDate="{Binding EndDate,Mode=TwoWay}"/>
-            </Grid>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="20"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBlock Text="{Binding StartCalctDate}"/>
-                <TextBlock Grid.Column="1" Text="～"/>
-                <TextBlock Grid.Column="2" Text="{Binding EndCalcDate}"/>
-            </Grid>
-
-            <DockPanel>
-                <TextBlock Text="days:"/>
-                <TextBlock Text="{Binding TotalDays}"/>
+                <StackPanel>
+                    <CheckBox Content="with cross boder" IsChecked="{Binding IsWithCrossBorder,Mode=TwoWay}"/>
+                    <TextBlock Text="{Binding RegionsCount}"/>
+                </StackPanel>
             </DockPanel>
-            <DockPanel>
-                <TextBlock Text="countries:"/>
-                <TextBlock Text="{Binding TotalCalcCountries}"/>
-                <TextBlock Text="/"/>
-                <TextBlock Text="{Binding TotalCountries}"/>
-            </DockPanel>
+           
+           
+
+           
+            
         </StackPanel>
         <!--<GroupBox Grid.Row="1" Header="currency">
             <DockPanel>
@@ -87,7 +88,7 @@
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="9*"/>
             </Grid.RowDefinitions>
-            <TextBlock Text="{Binding RegionsCount}"/>
+            
             <ListView Grid.Row="1" ItemsSource="{Binding Regions}"/>
         </Grid>
         <StackPanel Grid.Row="2">
@@ -95,7 +96,32 @@
                 <TextBlock Text="Total cost:"/>
                 <TextBlock Text="{Binding TotalCost}" />
             </DockPanel>
+            <DockPanel>
+                <TextBlock Text="accomodation:"/>
+                <TextBlock Text="{Binding TotalAccomodationCost}" />
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="transportation:"/>
+                <TextBlock Text="{Binding TotalTransportationCost}" />
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="Sightseeing:"/>
+                <TextBlock Text="{Binding TotalSightseeingCost}" />
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="Other:"/>
+                <TextBlock Text="{Binding TotalOtherCost}" />
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="Total distance:"/>
+                <TextBlock Text="{Binding TotalMovingDistance}" />
+            </DockPanel>
+            <DockPanel>
+                <TextBlock Text="Total time:"/>
+                <TextBlock Text="{Binding TotalMovingTime}" />
+            </DockPanel>
         </StackPanel>
+       
 
     </Grid>
 </UserControl>

@@ -41,26 +41,10 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("CurrentOtherType");
             this.RaisePropertyChanged("EnableCurrentOtherType");
             this.RaisePropertyChanged("Others");
-            this.RaisePropertyChanged("TotalCost");
+           
         }
 
-        public string TotalCost
-        {
-            get
-            {
-
-                if (model_ == null)
-                {
-
-                    return "0";
-                }
-                else
-                {
-                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
-                    return model_.CalcOtherCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
-                }
-            }
-        }
+       
 
         private void Model_ControlChanged_(object? sender, EventArgs e)
         {

@@ -32,7 +32,7 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("EnableCurrentAccomodationType");
             this.RaisePropertyChanged("TypeAccomodations");
             this.RaisePropertyChanged("Accomodations");
-            this.RaisePropertyChanged("TotalCost");
+           
 
         }
 
@@ -52,23 +52,6 @@ namespace WorldTravelLogger.ViewModels
             this.UpdateAll();
         }
 
-        public string TotalCost
-        {
-            get
-            {
-
-                if (model_ == null)
-                {
-
-                    return "0";
-                }
-                else
-                {
-                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
-                    return model_.CalcAccomodationTotalCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
-                }
-            }
-        }
 
 
         public AccomodationTypeModel[] TypeAccomodations

@@ -42,6 +42,7 @@ namespace WorldTravelLogger.ViewModels
         private void Model__ControlChanged_(object? sender, EventArgs e)
         {
             this.RaisePropertyChanged("IsWorld");
+            this.RaisePropertyChanged("IsWithAirplane");
             this.RaisePropertyChanged("IsCountryMode");
             
   
@@ -57,11 +58,17 @@ namespace WorldTravelLogger.ViewModels
         private void UpdateView()
         {
             this.RaisePropertyChanged("TotalDays");
-            
             this.RaisePropertyChanged("CurrentCountry");
+            this.RaisePropertyChanged("IsWithCrossBorder");
             this.RaisePropertyChanged("StartDate");
             this.RaisePropertyChanged("EndDate");
             this.RaisePropertyChanged("TotalCost");
+            this.RaisePropertyChanged("TotalAccomodationCost");
+            this.RaisePropertyChanged("TotalTransportationCost");
+            this.RaisePropertyChanged("TotalSightseeingCost");
+            this.RaisePropertyChanged("TotalOtherCost");
+            this.RaisePropertyChanged("TotalMovingDistance");
+            this.RaisePropertyChanged("TotalMovingTime");
             this.RaisePropertyChanged("Countries");
             this.RaisePropertyChanged("TotalCalcCountries");
             this.RaisePropertyChanged("TotalCountries");
@@ -87,6 +94,25 @@ namespace WorldTravelLogger.ViewModels
             set
             {
                 model_.IsWorldMode = value;
+            }
+        }
+
+        public bool IsWithAirplane
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return model_.IsWithAirplane;
+                }
+            }
+            set
+            {
+                model_.IsWithAirplane = value;
             }
         }
 
@@ -117,6 +143,26 @@ namespace WorldTravelLogger.ViewModels
             {
                 model_.CurrentCountryType = value;
             }
+        }
+
+        public bool IsWithCrossBorder
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return model_.IsWithCrossBorder;
+                }
+            }
+            set
+            {
+                model_.IsWithCrossBorder = value;
+            }
+
         }
 
         public DateTime StartDate
@@ -371,7 +417,111 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-       
+        public string TotalAccomodationCost
+        {
+            get
+            {
+
+                if (model_ == null)
+                {
+
+                    return "0";
+                }
+                else
+                {
+                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
+                    return model_.CalcAccomodationTotalCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
+                }
+            }
+        }
+
+        public string TotalTransportationCost
+        {
+            get
+            {
+
+                if (model_ == null)
+                {
+
+                    return "0";
+                }
+                else
+                {
+                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
+                    return model_.CalcTransportationCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
+                }
+            }
+        }
+
+        public string TotalSightseeingCost
+        {
+            get
+            {
+
+                if (model_ == null)
+                {
+
+                    return "0";
+                }
+                else
+                {
+                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
+                    return model_.CalcSightseeingCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
+                }
+            }
+        }
+
+        public string TotalOtherCost
+        {
+            get
+            {
+
+                if (model_ == null)
+                {
+
+                    return "0";
+                }
+                else
+                {
+                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
+                    return model_.CalcOtherCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
+                }
+            }
+        }
+
+        public string TotalMovingDistance
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return "0";
+                }
+                else
+                {
+                    return string.Format("{0:#,0}", model_.GetTotalDistance()) + "km";
+                }
+            }
+        }
+
+        public string TotalMovingTime
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return "0";
+                }
+                else
+                {
+                    var ts = new TimeSpan(0, model_.GetTotalTime(), 0);
+                    return string.Format("{0}days {1}hours {2}mins", ts.TotalDays, ts.TotalHours, ts.TotalMinutes);
+                }
+            }
+        }
+
+
+
 
 
     }

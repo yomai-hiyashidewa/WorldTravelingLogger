@@ -15,40 +15,9 @@
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="2*"/>
-            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid Grid.Row="0">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <StackPanel>
-                <DockPanel>
-                    <TextBlock Text="Total cost:"/>
-                    <TextBlock Text="{Binding TotalCost}" />
-                </DockPanel>
-                <DockPanel>
-                    <TextBlock Text="Total distance:"/>
-                    <TextBlock Text="{Binding TotalMovingDistance}" />
-                </DockPanel>
-                <DockPanel>
-                    <TextBlock Text="Total time:"/>
-                    <TextBlock Text="{Binding TotalMovingTime}" />
-                </DockPanel>
-            </StackPanel>
-            <StackPanel Grid.Column="1">
-                <StackPanel>
-                    <CheckBox Content="with airplane" IsChecked="{Binding IsWithAirplane,Mode=TwoWay}"/>
-                    <CheckBox Content="with cross boder" IsChecked="{Binding IsWithCrossBorder,Mode=TwoWay}"/>
-                </StackPanel>
-            </StackPanel>
-        </Grid>
-        
-        <StackPanel Grid.Column="1">
-    
-        </StackPanel>
-        <DataGrid Grid.Row="1" 
+        <DataGrid Grid.Row="0" 
                   AutoGenerateColumns="False" 
                   IsReadOnly="True"
                   ItemsSource="{Binding TypeTransportations}">
@@ -69,7 +38,7 @@
                 <DataGridTextColumn Header="Ave t" Binding="{Binding AveTime}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Grid Grid.Row="2">
+        <Grid Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="9*"/>

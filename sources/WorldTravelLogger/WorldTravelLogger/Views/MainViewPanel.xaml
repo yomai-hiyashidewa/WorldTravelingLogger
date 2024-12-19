@@ -22,21 +22,29 @@
                 <ColumnDefinition Width="2*"/>
             </Grid.ColumnDefinitions>
             <local:SideView x:Name="SideView"/>
-            <TabControl Grid.Column="1">
-                <TabItem Header="accomodation">
-                    <local:AccomodationView x:Name="AcomodationViewPanel"/>
-                </TabItem>
-                <TabItem Header="Transportation">
-                    <local:TransportationView x:Name="TransporationViewPanel"/>
-                </TabItem>
-                <TabItem Header="SightSeeing">
-                    <local:SightseeingView x:Name="SightseeingViewPanel"/>
-                </TabItem>
-                <TabItem Header="Other">
-                    <local:OtherView x:Name="OtherViewPanel"/>
-                </TabItem>
-            </TabControl>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
+
+
+                <TabControl Grid.Row="1">
+                    <TabItem Header="accomodation">
+                        <local:AccomodationView x:Name="AcomodationViewPanel"/>
+                    </TabItem>
+                    <TabItem Header="Transportation">
+                        <local:TransportationView x:Name="TransporationViewPanel"/>
+                    </TabItem>
+                    <TabItem Header="SightSeeing">
+                        <local:SightseeingView x:Name="SightseeingViewPanel"/>
+                    </TabItem>
+                    <TabItem Header="Other">
+                        <local:OtherView x:Name="OtherViewPanel"/>
+                    </TabItem>
+                </TabControl>
+            </Grid>
         </Grid>
-        
+
     </Grid>
 </UserControl>
