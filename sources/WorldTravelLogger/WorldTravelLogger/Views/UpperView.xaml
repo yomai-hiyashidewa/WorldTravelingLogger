@@ -7,31 +7,51 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
-        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+        </Grid.RowDefinitions>
+
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="3*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Text="{Binding StartCalctDate}"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Text="～"/>
-            <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Text="{Binding EndCalcDate}"/>
-            <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Text="{Binding TotalDays}"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="3*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Text="{Binding StartCalctDate}"/>
+                <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Text="～"/>
+                <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Text="{Binding EndCalcDate}"/>
+                <TextBlock Grid.Column="3" HorizontalAlignment="Center" VerticalAlignment="Top" FontSize="15" Text="{Binding TotalDays}"/>
+            </Grid>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="4*"/>
+                </Grid.ColumnDefinitions>
+                <DatePicker Grid.Column="0" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" SelectedDate="{Binding StartDate,Mode=TwoWay}"/>
+                <TextBlock Grid.Column="1" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" Text="～" />
+                <DatePicker Grid.Column="2" FontSize="15" HorizontalAlignment="Center" VerticalAlignment="Top" SelectedDate="{Binding EndDate,Mode=TwoWay}"/>
+            </Grid>
         </Grid>
-        <Grid Grid.Column="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="4*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="4*"/>
-            </Grid.ColumnDefinitions>
-            <DatePicker Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Top" SelectedDate="{Binding StartDate,Mode=TwoWay}"/>
-            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Text="～" />
-            <DatePicker Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Top" SelectedDate="{Binding EndDate,Mode=TwoWay}"/>
+        <Grid Grid.Row="1">
+            <GroupBox FontSize="15" Header="Cost" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding Costs}">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="Total" Binding="{Binding Total}"/>
+                        <DataGridTextColumn Header="Accomodation" Binding="{Binding Accomodation}"/>
+                        <DataGridTextColumn Header="Transportation/" Binding="{Binding Transportation}"/>
+                        <DataGridTextColumn Header="Sightseeing" Binding="{Binding Sightseeing}"/>
+                        <DataGridTextColumn Header="Other" Binding="{Binding Other}"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </GroupBox>
         </Grid>
     </Grid>
 </UserControl>

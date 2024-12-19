@@ -23,18 +23,5 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        protected string GetCurrencyStr(MajorCurrencytype type)
-        {
-            string culture = "ja-JP";
-            if (type == MajorCurrencytype.USD)
-            {
-                culture = "en-US";
-            }
-            else if (type == MajorCurrencytype.EUR)
-            {
-                culture = "fr-FR";
-            }
-            return culture;
-        }
     }
 }

@@ -607,12 +607,14 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public double CalcTotalCost()
+        public CostModel GetCostModel()
         {
-            return accomodationList_.TotalCost +
-                transpotationList_.TotalCost +
-                sightSeeingList_.TotalCost +
-                otherList_.TotalCost;
+            var model = new CostModel(CurrencyType.JPY);
+            model.Set(ListType.AccomodationList, accomodationList_.TotalCost);
+            model.Set(ListType.TransportationList, transpotationList_.TotalCost);
+            model.Set(ListType.SightSeeingList, sightSeeingList_.TotalCost);
+            model.Set(ListType.Other, otherList_.TotalCost);
+            return model;
         }
 
         public IEnumerable<CountryType> GetCountries()

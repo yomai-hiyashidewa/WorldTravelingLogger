@@ -81,26 +81,6 @@
         </Grid>
         <StackPanel Grid.Row="2">
             <DockPanel>
-                <TextBlock Text="Total cost:"/>
-                <TextBlock Text="{Binding TotalCost}" />
-            </DockPanel>
-            <DockPanel>
-                <TextBlock Text="accomodation:"/>
-                <TextBlock Text="{Binding TotalAccomodationCost}" />
-            </DockPanel>
-            <DockPanel>
-                <TextBlock Text="transportation:"/>
-                <TextBlock Text="{Binding TotalTransportationCost}" />
-            </DockPanel>
-            <DockPanel>
-                <TextBlock Text="Sightseeing:"/>
-                <TextBlock Text="{Binding TotalSightseeingCost}" />
-            </DockPanel>
-            <DockPanel>
-                <TextBlock Text="Other:"/>
-                <TextBlock Text="{Binding TotalOtherCost}" />
-            </DockPanel>
-            <DockPanel>
                 <TextBlock Text="Total distance:"/>
                 <TextBlock Text="{Binding TotalMovingDistance}" />
             </DockPanel>

@@ -44,6 +44,8 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("StartCalctDate");
             this.RaisePropertyChanged("EndCalcDate");
             this.RaisePropertyChanged("TotalDays");
+
+            this.RaisePropertyChanged("Costs");
         }
 
         public DateTime StartDate
@@ -122,6 +124,26 @@ namespace WorldTravelLogger.ViewModels
                 else
                 {
                     return model_.TotalCalcDays + " days";
+                }
+            }
+        }
+
+
+        //　2列目
+        public CostModel[] Costs
+        {
+            get
+            {
+                if(model_ == null)
+                {
+                    return [];
+                }
+                else
+                {
+                    var cost = model_.GetCostModel();
+                    var list = new List<CostModel>();
+                    list.Add(cost);
+                    return list.ToArray();
                 }
             }
         }

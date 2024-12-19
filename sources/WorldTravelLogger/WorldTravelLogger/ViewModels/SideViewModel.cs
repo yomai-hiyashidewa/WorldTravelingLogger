@@ -62,11 +62,6 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("IsWithCrossBorder");
             this.RaisePropertyChanged("StartDate");
             this.RaisePropertyChanged("EndDate");
-            this.RaisePropertyChanged("TotalCost");
-            this.RaisePropertyChanged("TotalAccomodationCost");
-            this.RaisePropertyChanged("TotalTransportationCost");
-            this.RaisePropertyChanged("TotalSightseeingCost");
-            this.RaisePropertyChanged("TotalOtherCost");
             this.RaisePropertyChanged("TotalMovingDistance");
             this.RaisePropertyChanged("TotalMovingTime");
             this.RaisePropertyChanged("Countries");
@@ -269,7 +264,7 @@ namespace WorldTravelLogger.ViewModels
             set
             {
                 model_.CurrentMajorCurrencyType = MajorCurrencytype.JPN;
-                this.RaisePropertyChanged("TotalCost");
+                
                
             }
         }
@@ -291,7 +286,7 @@ namespace WorldTravelLogger.ViewModels
             set
             {
                 model_.CurrentMajorCurrencyType = MajorCurrencytype.USD;
-                this.RaisePropertyChanged("TotalCost");
+                
             }
         }
 
@@ -312,104 +307,7 @@ namespace WorldTravelLogger.ViewModels
             set
             {
                 model_.CurrentMajorCurrencyType = MajorCurrencytype.EUR;
-                this.RaisePropertyChanged("TotalCost");
-            }
-        }
 
-
-   
-
-
-
-
-
-        public string TotalCost
-        {
-            get
-            {
-
-                if (model_ == null)
-                {
-                    
-                    return "0";
-                }
-                else
-                {
-                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
-                    return model_.CalcTotalCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));                   
-                }
-            }
-        }
-
-        public string TotalAccomodationCost
-        {
-            get
-            {
-
-                if (model_ == null)
-                {
-
-                    return "0";
-                }
-                else
-                {
-                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
-                    return model_.CalcAccomodationTotalCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
-                }
-            }
-        }
-
-        public string TotalTransportationCost
-        {
-            get
-            {
-
-                if (model_ == null)
-                {
-
-                    return "0";
-                }
-                else
-                {
-                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
-                    return model_.CalcTransportationCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
-                }
-            }
-        }
-
-        public string TotalSightseeingCost
-        {
-            get
-            {
-
-                if (model_ == null)
-                {
-
-                    return "0";
-                }
-                else
-                {
-                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
-                    return model_.CalcSightseeingCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
-                }
-            }
-        }
-
-        public string TotalOtherCost
-        {
-            get
-            {
-
-                if (model_ == null)
-                {
-
-                    return "0";
-                }
-                else
-                {
-                    var cultureStr = base.GetCurrencyStr(model_.CurrentMajorCurrencyType);
-                    return model_.CalcOtherCost().ToString("C", CultureInfo.CreateSpecificCulture(cultureStr));
-                }
             }
         }
 
