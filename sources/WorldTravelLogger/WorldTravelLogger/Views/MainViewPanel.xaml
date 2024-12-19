@@ -27,8 +27,7 @@
                     <RowDefinition Height="2*"/>
                     <RowDefinition Height="8*"/>
                 </Grid.RowDefinitions>
-
-
+                <local:UpperView x:Name="UpperView" Grid.Row="0"/>
                 <TabControl Grid.Row="1">
                     <TabItem Header="accomodation">
                         <local:AccomodationView x:Name="AcomodationViewPanel"/>

@@ -31,6 +31,9 @@
     <Compile Update="Views\TransportationView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\UpperView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Page Update="MainWindow.xaml">
@@ -58,6 +61,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\TransportationView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\UpperView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

@@ -47,6 +47,11 @@ namespace WorldTravelLogger.ViewModels
             return new DebugWinViewModel(model_);
         }
 
+        public UpperViewModel GetUpperViewModel()
+        {
+            return new UpperViewModel(model_);
+        }
+
         public SideViewModel GetSideViewModel()
         {
             return new SideViewModel(model_);

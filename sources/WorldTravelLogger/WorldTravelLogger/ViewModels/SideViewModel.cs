@@ -57,7 +57,7 @@ namespace WorldTravelLogger.ViewModels
 
         private void UpdateView()
         {
-            this.RaisePropertyChanged("TotalDays");
+            
             this.RaisePropertyChanged("CurrentCountry");
             this.RaisePropertyChanged("IsWithCrossBorder");
             this.RaisePropertyChanged("StartDate");
@@ -72,8 +72,7 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("Countries");
             this.RaisePropertyChanged("TotalCalcCountries");
             this.RaisePropertyChanged("TotalCountries");
-            this.RaisePropertyChanged("StartCalctDate");
-            this.RaisePropertyChanged("EndCalcDate");
+ 
             this.RaisePropertyChanged("RegionsCount");
             this.RaisePropertyChanged("Regions");
         }
@@ -165,84 +164,9 @@ namespace WorldTravelLogger.ViewModels
 
         }
 
-        public DateTime StartDate
-        {
-            get
-            {
-                if (model_ == null)
-                {
-                    return DateTime.Now;
-                }
-                else
-                {
-                    return model_.StartDate;
-                }
-            }
-            set
-            {
-                model_.StartDate = value;
-            }
-        }
+       
 
-        public DateTime EndDate
-        {
-            get
-            {
-                if (model_ == null)
-                {
-                    return DateTime.Now;
-                }
-                else
-                {
-                    return model_.EndDate;
-                }
-            }
-            set
-            {
-                model_.EndDate = value;
-            }
-        }
-
-        public string StartCalctDate
-        {
-            get
-            {
-                var date = DateTime.Now;
-                if(model_ != null && model_.StartCalcDate != null)
-                {
-                    date = (DateTime)model_.StartCalcDate;
-                }
-                return date.ToString("yyyy/MM/dd", CultureInfo.CurrentCulture);
-            }
-        }
-
-        public string EndCalcDate
-        {
-            get
-            {
-                var date = DateTime.Now;
-                if (model_ != null && model_.EndCalcDate != null)
-                {
-                    date = (DateTime)model_.EndCalcDate;
-                }
-                return date.ToString("yyyy/MM/dd", CultureInfo.CurrentCulture);
-            }
-        }
-
-        public int TotalDays
-        {
-            get
-            {
-                if(model_ == null)
-                {
-                    return 0;
-                }
-                else
-                {
-                    return model_.TotalCalcDays;
-                }
-            }
-        }
+      
 
 
         public CountryType[] Countries

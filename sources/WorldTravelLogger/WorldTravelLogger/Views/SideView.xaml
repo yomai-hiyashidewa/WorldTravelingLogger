@@ -29,20 +29,8 @@
                     <TextBlock Text=" countries"/>
                 </DockPanel>
             </DockPanel>
-            <DockPanel>
-                <DatePicker SelectedDate="{Binding StartDate,Mode=TwoWay}"/>
-                <TextBlock Text="～"/>
-                <DatePicker SelectedDate="{Binding EndDate,Mode=TwoWay}"/>
-            </DockPanel>
-            <DockPanel>
-                <TextBlock Text="{Binding StartCalctDate}"/>
-                <TextBlock Text="～"/>
-                <TextBlock Text="{Binding EndCalcDate}"/>
-                <DockPanel>
-                    <TextBlock Text="{Binding TotalDays}"/>
-                    <TextBlock Text=" days"/>
-                </DockPanel>
-            </DockPanel>
+            
+           
             <DockPanel>
                 <ComboBox 
                       ItemsSource="{Binding Countries}" 
