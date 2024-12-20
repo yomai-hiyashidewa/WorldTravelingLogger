@@ -21,9 +21,9 @@ namespace WorldTravelLogger.Models
         private Dictionary<CountryType, HashSet<string>> countriesAndRegions_;
         private HashSet<CountryType> calcCountries_;
 
-    
 
-        
+
+
 
         private OptionModel option_;
 
@@ -174,8 +174,8 @@ namespace WorldTravelLogger.Models
             {
                 accomodationList_.Init();
                 var result = accomodationList_.Load(option_.AccomodationPath, FileNames.AccomodationFile);
-              
-                if(result != ErrorTypes.None)
+
+                if (result != ErrorTypes.None)
                 {
                     option_.AccomodationPath = null;
                 }
@@ -213,7 +213,7 @@ namespace WorldTravelLogger.Models
         public MainModel()
         {
             SetOptionModel();
-           
+
             exchangeRater_ = new ExchangeRater();
             accomodationList_ = new AccomodationList();
             transpotationList_ = new TranspotationList();
@@ -263,7 +263,7 @@ namespace WorldTravelLogger.Models
             set
             {
                 currentListType_ = value;
-                
+
             }
         }
 
@@ -282,7 +282,7 @@ namespace WorldTravelLogger.Models
             }
         }
 
-  
+
 
         public object[] Transportations
         {
@@ -355,7 +355,7 @@ namespace WorldTravelLogger.Models
             }
             set
             {
-                if(isWorldMode_ != value)
+                if (isWorldMode_ != value)
                 {
                     isWorldMode_ = value;
                     FireControlChangd();
@@ -368,7 +368,7 @@ namespace WorldTravelLogger.Models
             get { return currentCountryType_; }
             set
             {
-                if(currentCountryType_ != value)
+                if (currentCountryType_ != value)
                 {
                     currentCountryType_ = value;
                     startDate_ = startSetDate_;
@@ -386,7 +386,7 @@ namespace WorldTravelLogger.Models
             }
             set
             {
-                if(startDate_ != value && value >= startSetDate_)
+                if (startDate_ != value && value >= startSetDate_)
                 {
                     startDate_ = value;
                     FireControlChangd();
@@ -402,7 +402,7 @@ namespace WorldTravelLogger.Models
             }
             set
             {
-                if(endDate_ != value && value <= endSetDate_)
+                if (endDate_ != value && value <= endSetDate_)
                 {
                     endDate_ = value;
                     FireControlChangd();
@@ -440,7 +440,7 @@ namespace WorldTravelLogger.Models
         private void CalcCountries()
         {
             calcCountries_.Clear();
-           
+
             foreach (var c in accomodationList_.GetCalcCounties())
             {
                 if (!calcCountries_.Contains(c))
@@ -465,7 +465,7 @@ namespace WorldTravelLogger.Models
         private void SetDate()
         {
             startSetDate_ = accomodationList_.StartDate;
-            
+
             if (startSetDate_ > transpotationList_.StartDate)
             {
                 startSetDate_ = transpotationList_.StartDate;
@@ -480,7 +480,7 @@ namespace WorldTravelLogger.Models
             }
             endSetDate_ = accomodationList_.EndDate;
 
-           
+
             if (endSetDate_ > transpotationList_.EndDate)
             {
                 endSetDate_ = transpotationList_.EndDate;
@@ -503,11 +503,11 @@ namespace WorldTravelLogger.Models
             var tStartDate = transpotationList_.GetStartCalcDate();
             var sStartDate = sightSeeingList_.GetStartCalcDate();
             var oStartDate = otherList_.GetStartCalcDate();
-            if(startCalcDate_ == null)
+            if (startCalcDate_ == null)
             {
                 startCalcDate_ = tStartDate;
             }
-            else if (startCalcDate_  > tStartDate)
+            else if (startCalcDate_ > tStartDate)
             {
                 startCalcDate_ = tStartDate;
             }
@@ -593,10 +593,10 @@ namespace WorldTravelLogger.Models
                 CalcCountries();
                 CalcDate();
             }
-            
+
         }
 
-    
+
 
         private void FireControlChangd()
         {
@@ -617,6 +617,11 @@ namespace WorldTravelLogger.Models
             return model;
         }
 
+        public MovingModel GetMovingModel()
+        {
+            return new MovingModel(transpotationList_.TotalDistance, transpotationList_.TotalTime);
+        }
+
         public IEnumerable<CountryType> GetCountries()
         {
             foreach (var c in countriesAndRegions_)
@@ -627,11 +632,13 @@ namespace WorldTravelLogger.Models
 
         public string[] GetCurrentRegions()
         {
-            if (countriesAndRegions_.Count > 0 && 
-                countriesAndRegions_.ContainsKey(currentCountryType_)){
+            if (countriesAndRegions_.Count > 0 &&
+                countriesAndRegions_.ContainsKey(currentCountryType_))
+            {
                 return countriesAndRegions_[currentCountryType_].ToArray();
             }
-            else {
+            else
+            {
                 return null;
             }
         }
@@ -639,13 +646,25 @@ namespace WorldTravelLogger.Models
         public int GetCurrentRegionCount()
         {
             if (countriesAndRegions_.Count > 0 &&
-                countriesAndRegions_.ContainsKey(currentCountryType_)){
+                countriesAndRegions_.ContainsKey(currentCountryType_))
+            {
                 return countriesAndRegions_[currentCountryType_].Count;
             }
             else
             {
                 return 0;
             }
+        }
+
+        public int GetTotalRegionCount()
+        {
+            var sum = 0;
+            foreach (var pair in countriesAndRegions_)
+            {
+                sum += pair.Value.Count;
+            }
+            return sum;
+
         }
 
         public int TotalCalcCountries
@@ -668,11 +687,11 @@ namespace WorldTravelLogger.Models
                 {
                     count = tCount;
                 }
-                if(count < sCount)
+                if (count < sCount)
                 {
                     count = sCount;
                 }
-                if(count < oCount)
+                if (count < oCount)
                 {
                     count = oCount;
                 }
@@ -681,7 +700,7 @@ namespace WorldTravelLogger.Models
         }
 
 
-       
+
 
         // accomodation
 
@@ -704,7 +723,7 @@ namespace WorldTravelLogger.Models
         {
             // controlに依存するので追記
             return accomodationList_.GetTypeArray();
-            
+
         }
 
         public AccomodationModel[] GetAccomodations()
@@ -738,11 +757,11 @@ namespace WorldTravelLogger.Models
             get { return transpotationList_.IsWithAirplane; }
             set
             {
-                if(transpotationList_.IsWithAirplane != value)
+                if (transpotationList_.IsWithAirplane != value)
                 {
                     transpotationList_.IsWithAirplane = value;
                     transpotationList_.CalcModels(isWorldMode_, currentCountryType_, startDate_, endDate_);
-                    if(TransportationChanged_ != null)
+                    if (TransportationChanged_ != null)
                     {
                         TransportationChanged_.Invoke(this, EventArgs.Empty);
                     }
@@ -792,15 +811,7 @@ namespace WorldTravelLogger.Models
             return transpotationList_.GetNeedingEndDate();
         }
 
-        public double GetTotalDistance()
-        {
-            return transpotationList_.TotalDistance;
-        }
-
-        public int GetTotalTime()
-        {
-            return transpotationList_.TotalTime;
-        }
+        
 
         public IEnumerable<Transportationtype> GetCurrentTransportationTypes()
         {
@@ -900,5 +911,5 @@ namespace WorldTravelLogger.Models
 
 
 
-    
+
 }

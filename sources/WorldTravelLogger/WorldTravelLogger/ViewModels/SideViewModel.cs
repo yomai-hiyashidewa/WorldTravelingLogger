@@ -62,8 +62,8 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("IsWithCrossBorder");
             this.RaisePropertyChanged("StartDate");
             this.RaisePropertyChanged("EndDate");
-            this.RaisePropertyChanged("TotalMovingDistance");
-            this.RaisePropertyChanged("TotalMovingTime");
+
+            this.RaisePropertyChanged("Movings");
             this.RaisePropertyChanged("Countries");
             this.RaisePropertyChanged("TotalCalcCountries");
             //this.RaisePropertyChanged("TotalCountries");
@@ -185,14 +185,23 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
+                var count = 0;
                 if (model_ == null)
                 {
-                    return "0";
+                    count = 0;
                 }
                 else
                 {
-                    return model_.GetCurrentRegionCount() + " regions"; 
+                    if (IsWorld)
+                    {
+                        count = model_.GetTotalRegionCount();
+                    }
+                    else
+                    {
+                        count = model_.GetCurrentRegionCount();
+                    }
                 }
+                return count + " regions";
             }
         }
 
@@ -293,40 +302,21 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        public string TotalMovingDistance
+        public MovingModel[] Movings
         {
             get
             {
-                if (model_ == null)
+                if(model_ == null)
                 {
-                    return "0";
+                    return [];
                 }
                 else
                 {
-                    return string.Format("{0:#,0}", model_.GetTotalDistance()) + "km";
+                    var list = new List<MovingModel>();
+                    list.Add(model_.GetMovingModel());
+                    return list.ToArray();
                 }
             }
         }
-
-        public string TotalMovingTime
-        {
-            get
-            {
-                if (model_ == null)
-                {
-                    return "0";
-                }
-                else
-                {
-                    var ts = new TimeSpan(0, model_.GetTotalTime(), 0);
-                    return string.Format("{0}days {1}hours {2}mins", ts.TotalDays, ts.TotalHours, ts.TotalMinutes);
-                }
-            }
-        }
-
-
-
-
-
     }
 }
