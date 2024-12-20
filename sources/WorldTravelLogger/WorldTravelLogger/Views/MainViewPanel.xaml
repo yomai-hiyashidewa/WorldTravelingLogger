@@ -12,10 +12,28 @@
             <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Menu>
-            <MenuItem Name="OptionMenu" Header="option" Click="OptionMenu_Click"/>
-            <MenuItem Name="DebugMenu" Header="debug" Click="DebugMenu_Click"/>
-        </Menu>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Menu>
+                <MenuItem Name="OptionMenu" Header="option" Click="OptionMenu_Click"/>
+                <MenuItem Name="DebugMenu" Header="debug" Click="DebugMenu_Click"/>
+            </Menu>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.9*"/>
+                    <ColumnDefinition Width="1.1*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <CheckBox Grid.Column="1" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center" Content="with Insurance" IsChecked="{Binding IsWithInsurance,Mode=TwoWay}"/>
+                <CheckBox Grid.Column="2" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center" Content="with Japan" IsChecked="{Binding IsWithJapan,Mode=TwoWay}"/>
+                <CheckBox Grid.Column="3" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center" Content="with Airplane" IsChecked="{Binding IsWithAirplane,Mode=TwoWay}"/>
+            </Grid>
+        </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -28,7 +46,7 @@
                     <RowDefinition Height="8*"/>
                 </Grid.RowDefinitions>
                 <local:UpperView x:Name="UpperView" Grid.Row="0"/>
-                <TabControl Grid.Row="1">
+                <TabControl Grid.Row="1" FontSize="15" Margin="10,10,10,10">
                     <TabItem Header="accomodation">
                         <local:AccomodationView x:Name="AcomodationViewPanel"/>
                     </TabItem>

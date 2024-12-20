@@ -42,7 +42,7 @@ namespace WorldTravelLogger.ViewModels
         private void Model__ControlChanged_(object? sender, EventArgs e)
         {
             this.RaisePropertyChanged("IsWorld");
-            this.RaisePropertyChanged("IsWithAirplane");
+           
             this.RaisePropertyChanged("IsCountryMode");
             
   
@@ -66,7 +66,7 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("TotalMovingTime");
             this.RaisePropertyChanged("Countries");
             this.RaisePropertyChanged("TotalCalcCountries");
-            this.RaisePropertyChanged("TotalCountries");
+            //this.RaisePropertyChanged("TotalCountries");
  
             this.RaisePropertyChanged("RegionsCount");
             this.RaisePropertyChanged("Regions");
@@ -91,24 +91,6 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        public bool IsWithAirplane
-        {
-            get
-            {
-                if (model_ == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return model_.IsWithAirplane;
-                }
-            }
-            set
-            {
-                model_.IsWithAirplane = value;
-            }
-        }
 
         public bool IsCountryMode
         {
@@ -199,48 +181,48 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        public int RegionsCount
+        public string RegionsCount
         {
             get
             {
                 if (model_ == null)
                 {
-                    return 0;
+                    return "0";
                 }
                 else
                 {
-                    return model_.GetCurrentRegionCount(); 
+                    return model_.GetCurrentRegionCount() + " regions"; 
                 }
             }
         }
 
 
-        public int TotalCalcCountries
+        public string TotalCalcCountries
         {
             get
             {
                 if(model_ == null)
                 {
-                    return 0;
+                    return "0";
                 }
                 else
                 {
-                    return model_.TotalCalcCountries;
+                    return model_.TotalCalcCountries + " countries"; ;
                 }
             }
         }
 
-        public int TotalCountries
+        public string TotalCountries
         {
             get
             {
                 if (model_ == null)
                 {
-                    return 0;
+                    return "0";
                 }
                 else
                 {
-                    return model_.GetCountries().Count();
+                    return model_.GetCountries().Count() + " countries";
                 }
             }
         }

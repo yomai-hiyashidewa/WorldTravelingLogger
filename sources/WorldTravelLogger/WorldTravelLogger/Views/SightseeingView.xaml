@@ -13,8 +13,8 @@
             <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
         </Grid.Resources>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="7*"/>
         </Grid.RowDefinitions>
         <DataGrid Grid.Row="0" 
                   AutoGenerateColumns="False"

@@ -24,7 +24,43 @@ namespace WorldTravelLogger.ViewModels
          if(FileLoaded_ != null)
             {
                 FileLoaded_.Invoke(sender, e);
-            }     
+            }
+            if (model_.ReadyApplication)
+            {
+                this.RaisePropertyChanged("IsWithAirplane");
+                this.RaisePropertyChanged("IsWithJapan");
+                this.RaisePropertyChanged("IsWithInsurance");
+            }
+        }
+
+
+        public bool IsWithAirplane
+        {
+            get
+            {
+                if (model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return model_.IsWithAirplane;
+                }
+            }
+            set
+            {
+                model_.IsWithAirplane = value;
+            }
+        }
+
+        public bool IsWithJapan
+        {
+            get; set;
+        }
+
+        public bool IsWithInsurance
+        {
+            get; set;
         }
 
         public void Init()
