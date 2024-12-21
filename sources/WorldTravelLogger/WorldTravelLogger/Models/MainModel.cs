@@ -30,6 +30,7 @@ namespace WorldTravelLogger.Models
         private ListType currentListType_;
 
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
+        public event EventHandler ImageListReady_;
         public event EventHandler ControlChanged_;
         public event EventHandler TransportationChanged_;
         public event EventHandler CalcCompleted_;
@@ -41,7 +42,10 @@ namespace WorldTravelLogger.Models
             option_.TransportationPathChanged += Option__TransportationPathChanged;
             option_.SightseeingPathChanged += Option__SightseeingPathChanged;
             option_.ExchangeRatePathChanged += Option__ExchangeRatePathChanged;
+            option_.ImagePathChanged += Option__ImagePathChanged;
         }
+
+    
 
         private void DeleteOptionModel()
         {
@@ -49,6 +53,7 @@ namespace WorldTravelLogger.Models
             option_.TransportationPathChanged -= Option__TransportationPathChanged;
             option_.SightseeingPathChanged -= Option__SightseeingPathChanged;
             option_.ExchangeRatePathChanged -= Option__ExchangeRatePathChanged;
+            option_.ImagePathChanged -= Option__ImagePathChanged;
             option_ = null;
         }
 
@@ -193,6 +198,18 @@ namespace WorldTravelLogger.Models
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.AccomodationList, result));
                 }
+            }
+        }
+
+        private void Option__ImagePathChanged(object? sender, EventArgs e)
+        {
+            if (!string.IsNullOrWhiteSpace(option_.ImagePath) && Path.Exists(option_.ImagePath))
+            {
+                if (ImageListReady_ != null)
+                {
+                    ImageListReady_.Invoke(this, EventArgs.Empty);
+                }
+
             }
         }
 
@@ -898,6 +915,31 @@ namespace WorldTravelLogger.Models
             set { otherList_.CurrentSightSeeingType = value; }
         }
 
+        public string GetCountryFlagPath()
+        {
+            var imageDir = option_.ImagePath;
+            if (Path.Exists(imageDir))
+            {
+                return Path.Combine(imageDir, "Flags", CountryType.JPN.ToString() + ".png" );
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public string GetCountryImagePath()
+        {
+            var imageDir = option_.ImagePath;
+            if (Path.Exists(imageDir))
+            {
+                return Path.Combine(imageDir, "Countries" , CountryType.JPN.ToString(), "zero.jpg");
+            }
+            else
+            {
+                return null;
+            }
+        }
 
 
 

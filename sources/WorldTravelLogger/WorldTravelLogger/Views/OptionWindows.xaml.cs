@@ -25,6 +25,7 @@ namespace WorldTravelLogger.Views
     {
 
         private const string CSVFILE = "CSVファイル（*.csv）|*.csv";
+        private const string FOLDER = "Folder|.";
 
         public OptionWindows(OptionWindowViewModel vm)
         {
@@ -78,6 +79,20 @@ namespace WorldTravelLogger.Views
             {
                 var vm = (OptionWindowViewModel)this.DataContext;
                 vm.ExchangeRatePath = ofd.FileName;
+            }
+        }
+
+        private void btn_image_list_Click(object sender, RoutedEventArgs e)
+        {
+            // Configure open folder dialog box
+            var ofd = new OpenFolderDialog();
+
+            ofd.Multiselect = false;
+            ofd.Title = "Select a folder";
+            if(ofd.ShowDialog() == true)
+            {
+                var vm = (OptionWindowViewModel)this.DataContext;
+                vm.ImagePath = ofd.FolderName;
             }
         }
     }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,10 +18,13 @@ namespace WorldTravelLogger.Models
 
         private string? exchangeRatePath_;
 
+        private string? imagePath_;
+
         public event EventHandler AccomodationPathChanged;
         public event EventHandler TransportationPathChanged;
         public event EventHandler SightseeingPathChanged;
         public event EventHandler ExchangeRatePathChanged;
+        public event EventHandler ImagePathChanged;
 
 
 
@@ -92,6 +96,25 @@ namespace WorldTravelLogger.Models
                     if (ExchangeRatePathChanged != null)
                     {
                         ExchangeRatePathChanged.Invoke(this, EventArgs.Empty);
+                    }
+                }
+            }
+        }
+
+        public string? ImagePath
+        {
+            get
+            {
+                return imagePath_;
+            }
+            set
+            {
+                if(imagePath_ != value)
+                {
+                    imagePath_ = value;
+                    if(ImagePathChanged != null)
+                    {
+                        ImagePathChanged(this, EventArgs.Empty);
                     }
                 }
             }

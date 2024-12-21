@@ -5,9 +5,10 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorldTravelLogger.Views"
         mc:Ignorable="d"
-        Title="Option" Height="300" Width="400">
+        Title="Option" Height="350" Width="400">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
@@ -59,6 +60,18 @@
                 <TextBox Name="txt_exchange_rate_list" IsReadOnly="True" Margin="10,10,10,10" Text="{Binding ExchangeRatePath}" />
                 <Button Name="btn_exchange_rate_list" Click="btn_exchange_rate_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
                 <Button Grid.Column="2" Content="reload" Command="{Binding ReloadExchangeRatesCommand}" Margin="10,10,10,10" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Grid.Row="4" Header="images">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <TextBox Name="txt_image" IsReadOnly="True" Margin="10,10,10,10" Text="{Binding ImagePath}" />
+                <Button Name="btn_image_list" Click="btn_image_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
+                <Button Grid.Column="2" Content="reload" Margin="10,10,10,10" />
             </Grid>
         </GroupBox>
     </Grid>

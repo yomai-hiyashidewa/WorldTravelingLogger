@@ -82,6 +82,7 @@
                         </ComboBox.ItemTemplate>
                     </ComboBox>
                     <CheckBox Content="with cross border" FontSize="13" IsChecked="{Binding IsWithCrossBorder,Mode=TwoWay}"/>
+                    <Image Source="{Binding CountryFlagPath}"/>
 
                 </StackPanel>
                 <Grid Grid.Column="1">
@@ -94,6 +95,9 @@
                 </Grid>
 
             </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Image Source="{Binding CountryImagePath}"/>
         </Grid>
     </Grid>
 </UserControl>

@@ -22,8 +22,14 @@ namespace WorldTravelLogger.ViewModels
         {
             model_ = model;
             model_.FileLoaded_ += Model__FileLoaded_;
+            model_.ImageListReady_ += Model__ImageListReady_;
             model_.ControlChanged_ += Model__ControlChanged_;
             model.TransportationChanged_ += Model_TransportationChanged_;
+        }
+
+        private void Model__ImageListReady_(object? sender, EventArgs e)
+        {
+            this.RaisePropertyChanged("CountryImagePath");
         }
 
         private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
@@ -32,6 +38,7 @@ namespace WorldTravelLogger.ViewModels
             {
                 UpdateView();
             }
+            
         }
 
         private void Model_TransportationChanged_(object? sender, EventArgs e)
@@ -70,6 +77,8 @@ namespace WorldTravelLogger.ViewModels
  
             this.RaisePropertyChanged("RegionsCount");
             this.RaisePropertyChanged("Regions");
+            this.RaisePropertyChanged("CountryFlagPath");
+            this.RaisePropertyChanged("CountryImagePath");
         }
 
         public bool IsWorld
@@ -316,6 +325,37 @@ namespace WorldTravelLogger.ViewModels
                     list.Add(model_.GetMovingModel());
                     return list.ToArray();
                 }
+            }
+        }
+
+        public string CountryFlagPath
+        {
+            get
+            {
+                if(model_ == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return model_.GetCountryFlagPath();
+                }
+            }
+        }
+
+        public string CountryImagePath
+        {
+            get
+            {
+                if(model_ == null)
+                {
+                    return null;
+                }
+                else
+                {
+                    return model_.GetCountryImagePath();
+                }
+                
             }
         }
     }

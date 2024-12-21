@@ -16,6 +16,8 @@ namespace WorldTravelLogger.Models
         SightSeeingList,
         // exchange rate
         ExchangeRateList,
+        // image list
+        ImageList,
         // other
         Other,
     }

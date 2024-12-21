@@ -164,5 +164,26 @@ namespace WorldTravelLogger.ViewModels
                 this.RaisePropertyChanged("ExchangeRatePath");
             }
         }
+
+        public string? ImagePath
+        {
+            get
+            {
+                if (!string.IsNullOrWhiteSpace(model_.ImagePath))
+                {
+                    return Path.GetDirectoryName(model_.ImagePath);
+                }
+                else
+                {
+                    return null;
+                }
+            }
+            set
+            {
+                model_.ImagePath = value;
+                this.RaisePropertyChanged("ImagePath");
+            }
+        }
+
     }
 }
