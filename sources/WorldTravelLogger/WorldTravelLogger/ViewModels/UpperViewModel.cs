@@ -21,25 +21,15 @@ namespace WorldTravelLogger.ViewModels
         {
             model_ = model;
             control_ = model.GetControlModel();
-            control_.ControlChanged_ += Control__ControlChanged_;
-            model_.FileLoaded_ += Model__FileLoaded_;
+            model_.CalcCompleted_ += Model__CalcCompleted_;
             
         }
 
-        private void Control__ControlChanged_(object? sender, EventArgs e)
+        private void Model__CalcCompleted_(object? sender, EventArgs e)
         {
             UpdateView();
         }
-
-        
-
-        private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
-        {
-            if (model_.ReadyApplication)
-            {
-                UpdateView();
-            }
-        }
+       
 
         private void UpdateView()
         {

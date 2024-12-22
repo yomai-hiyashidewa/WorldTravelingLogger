@@ -21,6 +21,11 @@ namespace WorldTravelLogger.Models
             get { return list_.Count > 0; }
         }
 
+        public override bool IsReady
+        {
+            get { return calcList_.Count > 0; }
+        }
+
         public SightseeigType CurrentSightSeeingType { get; set; }
 
 
@@ -242,6 +247,7 @@ namespace WorldTravelLogger.Models
             {
                 CurrentSightSeeingType = calcDic_.Keys.FirstOrDefault();
             }
+            base.FireListChanged();
         }
 
         public override double TotalCost

@@ -18,7 +18,14 @@ namespace WorldTravelLogger.ViewModels
         {
             model_ = new MainModel();
             control_ = model_.GetControlModel();
-            model_.FileLoaded_ += Model__FileLoaded_; 
+            model_.FileLoaded_ += Model__FileLoaded_;
+            model_.CalcCompleted_ += Model__CalcCompleted_;
+        }
+
+        private void Model__CalcCompleted_(object? sender, EventArgs e)
+        {
+            this.RaisePropertyChanged("IsWithAirplane");
+            this.RaisePropertyChanged("IsWithInsurance");
         }
 
         private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
@@ -26,11 +33,6 @@ namespace WorldTravelLogger.ViewModels
          if(FileLoaded_ != null)
             {
                 FileLoaded_.Invoke(sender, e);
-            }
-            if (model_.ReadyApplication)
-            {
-                this.RaisePropertyChanged("IsWithAirplane");
-                this.RaisePropertyChanged("IsWithInsurance");
             }
         }
 
@@ -106,23 +108,23 @@ namespace WorldTravelLogger.ViewModels
 
         public AccomodationViewModel GetAccomodationViewModel()
         {
-            return new AccomodationViewModel(model_);
+            return new AccomodationViewModel(model_.GetAccomodationList());
         }
 
         public TransportationViewModel GetTransporationViewModel()
         {
-            return new TransportationViewModel(model_);
+            return new TransportationViewModel(model_.GetTransportationList());
         }
 
 
         public SightSeeingViewModel GetSightseeingViewModel()
         {
-            return new SightSeeingViewModel(model_);
+            return new SightSeeingViewModel(model_.GetSightSeeingList());
         }
 
         public OtherViewModel GetOtherViewModel()
         {
-            return new OtherViewModel(model_);
+            return new OtherViewModel(model_.GetOtherList());
         }
 
 

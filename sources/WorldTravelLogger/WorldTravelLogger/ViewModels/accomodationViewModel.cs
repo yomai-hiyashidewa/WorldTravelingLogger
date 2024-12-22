@@ -4,27 +4,26 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using WorldTravelLogger.Models;
 
 namespace WorldTravelLogger.ViewModels
 {
     public class AccomodationViewModel : ViewModelBase
     {
-        MainModel model_;
-        public AccomodationViewModel()
+        AccomodationList list_;
+
+        public AccomodationViewModel(AccomodationList list)
         {
-            // dummy
+            list_ = list;
+            list_.ListChanged += List_ListChanged;
         }
 
-        public AccomodationViewModel(MainModel model)
-        {
-            model_ = model;
-            model_.CalcCompleted_ += Model__CalcCompleted_;
-        }
 
-        private void Model__CalcCompleted_(object? sender, EventArgs e)
+
+        private void List_ListChanged(object? sender, EventArgs e)
         {
-            this.UpdateAll();   
+            this.UpdateAll();
         }
 
         private void UpdateAll()
@@ -35,23 +34,17 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("EnableCurrentAccomodationType");
             this.RaisePropertyChanged("TypeAccomodations");
             this.RaisePropertyChanged("Accomodations");
-           
+
 
         }
+
 
 
         public AccomodationTypeModel[] TypeAccomodations
         {
             get
             {
-                if (model_ == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    return model_.GetTypeAccomodations();
-                }
+                return list_.GetTypeArray();
             }
         }
 
@@ -59,41 +52,17 @@ namespace WorldTravelLogger.ViewModels
 
         public AccomodationType CurrentAccomodationType
         {
-            get
-            {
-                if (model_ == null)
-                {
-                    return AccomodationType.Domitory;
-                }
-                else
-                {
-                    return model_.CurrentAccomodationtype;
-                }
 
-            }
-            set
-            {
-                if (model_.CurrentAccomodationtype != value)
-                {
+            get { return list_.CurrentAccomodationtype; }
+            set { list_.CurrentAccomodationtype = value; }
 
-                    model_.CurrentAccomodationtype = value;
-                    this.RaisePropertyChanged("Accomodations");
-                }
-            }
         }
 
         public bool EnableCurrentAccomodationType
         {
             get
             {
-                if (model_ == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return CurrentAccomodationTypes.Count() > 0;
-                }
+                return CurrentAccomodationTypes.Count() > 0;
             }
         }
 
@@ -101,16 +70,9 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return [];
-                }
-                else
-                {
-                    var list = new List<AccomodationType>();
-                    list.AddRange(model_.GetCurrentAccomodationTypes());
-                    return list.ToArray();
-                }
+                var list = new List<AccomodationType>();
+                list.AddRange(list_.GetCurrentAccomodationTypes());
+                return list.ToArray();
             }
         }
 
@@ -118,19 +80,11 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    var value = model_.GetAccomodations().Where(j => j.Accomodation == CurrentAccomodationType);
-                    return value.ToArray();
-                }
+                var value = list_.GetCalcArray().Where(j => j.Accomodation == CurrentAccomodationType);
+                return value.ToArray();
+
             }
         }
-
-
     }
 
 

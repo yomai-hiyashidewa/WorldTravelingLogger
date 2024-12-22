@@ -23,5 +23,8 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
+       
+
+
     }
 }

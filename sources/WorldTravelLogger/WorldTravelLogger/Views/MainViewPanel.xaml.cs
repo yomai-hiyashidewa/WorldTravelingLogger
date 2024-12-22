@@ -27,9 +27,15 @@ namespace WorldTravelLogger.Views
         public MainViewPanel()
         {
             InitializeComponent();
+            var vm = new MainViewPanelVM();
+            SideView.SetVM(vm.GetSideViewModel());
+            UpperView.SetVM(vm.GetUpperViewModel());
+            AcomodationViewPanel.SetVM(vm.GetAccomodationViewModel());
+            TransporationViewPanel.SetVM(vm.GetTransporationViewModel());
+            SightseeingViewPanel.SetVM(vm.GetSightseeingViewModel());
+            OtherViewPanel.SetVM(vm.GetOtherViewModel());
+            this.DataContext = vm;
             
-            this.DataContext = new MainViewPanelVM();
-            var vm = (MainViewPanelVM)this.DataContext;
             vm.FileLoaded_ += Vm_FileLoaded_;
         }
 
@@ -50,12 +56,8 @@ namespace WorldTravelLogger.Views
         private void UserControl_Loaded(object sender, RoutedEventArgs e)
         {
             var vm = (MainViewPanelVM)this.DataContext;
-            SideView.SetVM(vm.GetSideViewModel());
-            UpperView.SetVM(vm.GetUpperViewModel());
-            AcomodationViewPanel.SetVM(vm.GetAccomodationViewModel());
-            TransporationViewPanel.SetVM(vm.GetTransporationViewModel());
-            SightseeingViewPanel.SetVM(vm.GetSightseeingViewModel());
-            OtherViewPanel.SetVM(vm.GetOtherViewModel());
+           
+            
             vm.Init();
         }
 

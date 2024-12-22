@@ -24,7 +24,6 @@ namespace WorldTravelLogger.Views
         public AccomodationView()
         {
             InitializeComponent();
-            this.DataContext = new AccomodationViewModel();
         }
 
         public void SetVM(AccomodationViewModel vm)

@@ -10,23 +10,21 @@ namespace WorldTravelLogger.ViewModels
 {
     public class SightSeeingViewModel : ViewModelBase
     {
-        MainModel model_;
+        SightSeeingList list_;
 
-        public SightSeeingViewModel()
+
+        public SightSeeingViewModel(SightSeeingList list)
         {
-            // dummy
+            list_ = list;
+            list_.ListChanged += List__ListChanged;
         }
 
-        public SightSeeingViewModel(MainModel model)
-        {
-            model_ = model;
-            model_.CalcCompleted_ += Model__CalcCompleted_;
-        }
-
-        private void Model__CalcCompleted_(object? sender, EventArgs e)
+        private void List__ListChanged(object? sender, EventArgs e)
         {
             UpdateAll();
         }
+
+
 
 
         private void UpdateAll()
@@ -36,45 +34,30 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("CurrentSightSeeingType");
             this.RaisePropertyChanged("EnableCurrentSightseeingType");
             this.RaisePropertyChanged("Sightseeings");
-            
+
         }
 
         public SightseeingTypeModel[] TypeSightseeings
         {
             get
             {
-                if (model_ == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    return model_.GetTypeSightseeings();
-
-                }
+                return list_.GetTypeArray();
             }
         }
 
-        
+
 
         public SightseeigType CurrentSightSeeingType
         {
-            get 
+            get
             {
-                if(model_ == null)
-                {
-                    return SightseeigType.HotSpring;
-                }
-                else
-                {
-                    return model_.CurrentSightSeeingType;
-                }
+                return list_.CurrentSightSeeingType;
             }
             set
             {
-                if (model_.CurrentSightSeeingType != value)
+                if (list_.CurrentSightSeeingType != value)
                 {
-                    model_.CurrentSightSeeingType = value;
+                    list_.CurrentSightSeeingType = value;
                     this.RaisePropertyChanged("Sightseeings");
                 }
             }
@@ -84,16 +67,9 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return [];
-                }
-                else
-                {
-                    var list = new List<SightseeigType>();
-                    list.AddRange(model_.GetCurrentSightseeingTypes());
-                    return list.ToArray();
-                }
+                var list = new List<SightseeigType>();
+                list.AddRange(list_.GetCurrentSightSeeingTypes());
+                return list.ToArray();
             }
         }
 
@@ -101,14 +77,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return CurrentSightseeingTypes.Count() > 0;
-                }
+                return CurrentSightseeingTypes.Count() > 0;
             }
         }
 
@@ -117,16 +86,8 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    var value = model_.GetSightseeings().Where(j => j.SightseeigType == CurrentSightSeeingType);
-                    return value.ToArray();
-
-                }
+                var value = list_.GetCalcArray().Where(j => j.SightseeigType == CurrentSightSeeingType);
+                return value.ToArray();
             }
         }
 

@@ -12,14 +12,22 @@ namespace WorldTravelLogger.ViewModels
     public class DebugWinViewModel : ViewModelBase
     {
         private MainModel model_;
+        private AccomodationList accomodationList_;
+        private TransportationList transportationList_;
+        private SightSeeingList sightseeingList_;
+        private ExchangeRater exchangeRater_;
 
-        public DebugWinViewModel(MainModel model_)
+        public DebugWinViewModel(MainModel model)
         {
-            this.model_ = model_;
-            model_.FileLoaded_ += Model__FileLoaded_;
+            model_ = model;
+            accomodationList_ = model_.GetAccomodationList();
+            transportationList_ = model_.GetTransportationList();
+            sightseeingList_ = model_.GetSightSeeingList();
+            exchangeRater_ = model_.GetExchanger();
+            model_.FileLoaded_ += Model__FileLoaded;
         }
 
-        private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
+        private void Model__FileLoaded(object? sender, FileLoadedEventArgs e)
         {
             switch (e.Type)
             {
@@ -42,31 +50,24 @@ namespace WorldTravelLogger.ViewModels
 
         public void Delete()
         {
-            model_.FileLoaded_ -= Model__FileLoaded_;
+            model_.FileLoaded_ -= Model__FileLoaded;
         }
 
-        public ListType[] Lists
-        {
-            get
-            {
-                return (ListType[])Enum.GetValues(typeof(ListType));
-            }
-        }
 
-        public ListType CurrentListType
-        {
-            get { return model_.CurrentListType; }
-            set
-            {
-                model_.CurrentListType = value; ;
-            }
-        }
+  
 
         public object[] Accomodations
         {
             get
             {
-                return model_.Accomodations;
+                if (accomodationList_.IsError)
+                {
+                    return accomodationList_.GetErrorArray();
+                }
+                else
+                {
+                    return accomodationList_.GetArray();
+                }
             }
         }
 
@@ -74,7 +75,15 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                return model_.Transportations;
+                if (transportationList_.IsError)
+                {
+                    return transportationList_.GetErrorArray();
+                }
+                else
+                {
+                    return transportationList_.GetArray();
+                }
+             
             }
         }
 
@@ -82,7 +91,14 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                return model_.Sightseeings;
+                if (sightseeingList_.IsError)
+                {
+                    return sightseeingList_.GetErrorArray();
+                }
+                else
+                {
+                    return sightseeingList_.GetArray();
+                }
             }
         }
 
@@ -90,7 +106,14 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                return model_.ExchangeRates;
+                if (exchangeRater_.IsError)
+                {
+                    return exchangeRater_.GetErrorArray();
+                }
+                else
+                {
+                    return exchangeRater_.GetExchangeRates();
+                }
             }
         }
 

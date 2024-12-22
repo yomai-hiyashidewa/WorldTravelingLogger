@@ -4,25 +4,22 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using WorldTravelLogger.Models;
 
 namespace WorldTravelLogger.ViewModels
 {
     public class OtherViewModel : ViewModelBase
     {
-        MainModel model_;
-        public OtherViewModel()
+        SightSeeingList list_;
+
+        public OtherViewModel(SightSeeingList list)
         {
-            // dummy;
+            list_ = list;
+            list_.ListChanged += List__ListChanged;
         }
 
-        public OtherViewModel(MainModel model)
-        {
-            model_ = model;
-            model_.CalcCompleted_ += Model__CalcCompleted_;
-        }
-
-        private void Model__CalcCompleted_(object? sender, EventArgs e)
+        private void List__ListChanged(object? sender, EventArgs e)
         {
             UpdateAll();
         }
@@ -42,15 +39,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    return model_.GetTypeOthers();
-
-                }
+                return list_.GetTypeArray();
             }
         }
 
@@ -58,22 +47,15 @@ namespace WorldTravelLogger.ViewModels
 
         public SightseeigType CurrentOtherType
         {
-            get 
+            get
             {
-                if(model_ == null)
-                {
-                    return SightseeigType.Accident;
-                }
-                else
-                {
-                    return model_.CurrentOtherType;
-                }
+                return list_.CurrentSightSeeingType;
             }
             set
             {
-                if (model_.CurrentOtherType != value)
+                if (list_.CurrentSightSeeingType != value)
                 {
-                    model_.CurrentOtherType = value;
+                    list_.CurrentSightSeeingType = value;
                     this.RaisePropertyChanged("Others");
                 }
             }
@@ -83,16 +65,9 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return [];
-                }
-                else
-                {
-                    var list = new List<SightseeigType>();
-                    list.AddRange(model_.GetCurrentOtherTypes());
-                    return list.ToArray();
-                }
+                var list = new List<SightseeigType>();
+                list.AddRange(list_.GetCurrentSightSeeingTypes());
+                return list.ToArray();
             }
         }
 
@@ -100,14 +75,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return CurrentOtherTypes.Count() > 0;
-                }
+                return CurrentOtherTypes.Count() > 0;
             }
         }
 
@@ -115,16 +83,8 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    var value = model_.GetOthers().Where(j => j.SightseeigType == CurrentOtherType);
-                    return value.ToArray();
-
-                }
+                var value = list_.GetCalcArray().Where(j => j.SightseeigType == CurrentOtherType);
+                return value.ToArray();
             }
         }
     }

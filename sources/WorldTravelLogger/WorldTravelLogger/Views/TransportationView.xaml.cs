@@ -24,7 +24,7 @@ namespace WorldTravelLogger.Views
         public TransportationView()
         {
             InitializeComponent();
-            this.DataContext = new TransportationViewModel();
+            
         }
 
         public void SetVM(TransportationViewModel vm)

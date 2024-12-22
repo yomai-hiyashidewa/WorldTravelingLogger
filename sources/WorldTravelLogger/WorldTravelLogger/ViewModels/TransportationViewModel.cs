@@ -12,24 +12,23 @@ namespace WorldTravelLogger.ViewModels
 {
     public class TransportationViewModel : ViewModelBase
     {
-        MainModel model_;
+        TransportationList list_;
 
-        public TransportationViewModel()
+
+
+        public TransportationViewModel(TransportationList list)
         {
-            // dummy
+            list_ = list;
+            list.ListChanged += List_ListChanged;
+
+
         }
 
-        public TransportationViewModel(MainModel model)
-        {
-            model_ = model;
-            model.CalcCompleted_ += Model_CalcCompleted_;
-            
-        }
-
-        private void Model_CalcCompleted_(object? sender, EventArgs e)
+        private void List_ListChanged(object? sender, EventArgs e)
         {
             UpdateAll();
         }
+
 
         private void UpdateAll()
         {
@@ -38,48 +37,32 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("CurrentTransportationType");
             this.RaisePropertyChanged("EnableCurrentTransportationType");
             this.RaisePropertyChanged("Transportations");
-            
-           
-                        
+
+
+
         }
 
         public TransportationTypeModel[] TypeTransportations
         {
             get
             {
-                if (model_ == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    return model_.GetTypeTransportations();
-                    
-                }
+                return list_.GetTypeArray();
             }
         }
 
-       
+
 
         public Transportationtype CurrentTransportationType
         {
-            get 
+            get
             {
-                if(model_ == null)
-                {
-                    return Transportationtype.Train;
-                }
-                else
-                {
-                    return model_.CurrentTransportationType;
-                }
-                 
+                return list_.CurrentTransportationType;
             }
             set
             {
-                if (model_.CurrentTransportationType != value)
+                if (list_.CurrentTransportationType != value)
                 {
-                    model_.CurrentTransportationType = value;
+                    list_.CurrentTransportationType = value;
                     this.RaisePropertyChanged("Transportations");
                 }
             }
@@ -89,16 +72,9 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return [];
-                }
-                else
-                {
-                    var list = new List<Transportationtype>();
-                    list.AddRange(model_.GetCurrentTransportationTypes());
-                    return list.ToArray();
-                }
+                var list = new List<Transportationtype>();
+                list.AddRange(list_.GetCurrentTransportationTypes());
+                return list.ToArray();
             }
         }
 
@@ -106,14 +82,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return CurrentTransportationTypes.Count() > 0;
-                }
+                return CurrentTransportationTypes.Count() > 0;
             }
         }
 
@@ -121,16 +90,8 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    var value = model_.GetTransportations().Where(j => j.Transportationtype == CurrentTransportationType);
-                    return value.ToArray();
-
-                }
+                var value = list_.GetCalcArray().Where(j => j.Transportationtype == CurrentTransportationType);
+                return value.ToArray();
             }
         }
 

@@ -24,7 +24,7 @@ namespace WorldTravelLogger.Views
         public OtherView()
         {
             InitializeComponent();
-            this.DataContext = new OtherViewModel();
+            //this.DataContext = new OtherViewModel();
         }
 
         public void SetVM(OtherViewModel vm)

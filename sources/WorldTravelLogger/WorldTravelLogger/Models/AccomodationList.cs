@@ -19,7 +19,12 @@ namespace WorldTravelLogger.Models
             get { return list_.Count > 0;}
         }
 
-       
+        public override bool IsReady
+        {
+            get { return calcList_.Count > 0; }
+        }
+
+
 
         public AccomodationList()
         {
@@ -33,7 +38,7 @@ namespace WorldTravelLogger.Models
             return list_.ToArray();
         }
 
-
+       
         
 
 
@@ -220,6 +225,7 @@ namespace WorldTravelLogger.Models
             {
                 CurrentAccomodationtype = calcDic_.Keys.FirstOrDefault();
             }
+            base.FireListChanged();
 
         }
 
@@ -300,6 +306,7 @@ namespace WorldTravelLogger.Models
             return hSet;
         }
 
+   
         public override double TotalCost
         {
             get
@@ -313,6 +320,6 @@ namespace WorldTravelLogger.Models
             }
         }
 
-       
+        
     }
 }

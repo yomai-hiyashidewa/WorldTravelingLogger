@@ -15,7 +15,7 @@ namespace WorldTravelLogger.Models
         private ControlModel controllModel_;
         private ExchangeRater exchangeRater_;
         private AccomodationList accomodationList_;
-        private TranspotationList transpotationList_;
+        private TransportationList transportationList_;
         private SightSeeingList sightSeeingList_;
         private SightSeeingList otherList_;
 
@@ -28,8 +28,6 @@ namespace WorldTravelLogger.Models
 
 
         private OptionModel option_;
-
-        private ListType currentListType_;
 
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
         public event EventHandler ImageListReady_;
@@ -72,8 +70,8 @@ namespace WorldTravelLogger.Models
         {
             if (exchangeRater_ != null && exchangeRater_.IsLoaded)
             {
-                if (transpotationList_.IsLoaded) { }
-                transpotationList_.ConvertAnotherCurrency(exchangeRater_);
+                if (transportationList_.IsLoaded) { }
+                transportationList_.ConvertAnotherCurrency(exchangeRater_);
             }
         }
 
@@ -107,9 +105,11 @@ namespace WorldTravelLogger.Models
                         SetCountries();
                         SetDate();
                     }
-
+                    CalcAccomodations();
+                    CalcTransportations();
+                    CalcSightseeings();
+                    CalcOthes();
                 }
-                CalcListAll();
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.ExchangeRateList, result));
@@ -136,8 +136,10 @@ namespace WorldTravelLogger.Models
                         SetCountries();
                         SetDate();
                     }
+                    CalcSightseeings();
+                    CalcOthes();
                 }
-                CalcListAll();
+                
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.SightSeeingList, result));
@@ -149,8 +151,8 @@ namespace WorldTravelLogger.Models
         {
             if (!string.IsNullOrWhiteSpace(option_.TransportationPath))
             {
-                transpotationList_.Init();
-                var result = transpotationList_.Load(option_.TransportationPath, FileNames.TransportationFile);
+                transportationList_.Init();
+                var result = transportationList_.Load(option_.TransportationPath, FileNames.TransportationFile);
                 if (result != ErrorTypes.None)
                 {
                     option_.TransportationPath = null;
@@ -163,8 +165,9 @@ namespace WorldTravelLogger.Models
                         SetCountries();
                         SetDate();
                     }
+                    CalcTransportations();
                 }
-                CalcListAll();
+                
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.TransportationList, result));
@@ -192,8 +195,8 @@ namespace WorldTravelLogger.Models
                         SetCountries();
                         SetDate();
                     }
+                    CalcAccomodations();
                 }
-                CalcListAll();
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.AccomodationList, result));
@@ -215,8 +218,7 @@ namespace WorldTravelLogger.Models
 
         private void InitParameter()
         {
-            controllModel_.InitSetDate(accomodationList_.StartDate, accomodationList_.EndDate);
-            controllModel_.InitCalcDate(accomodationList_.StartDate, accomodationList_.EndDate);
+            
         }
 
         public MainModel()
@@ -225,13 +227,14 @@ namespace WorldTravelLogger.Models
             controllModel_ = new ControlModel();
             exchangeRater_ = new ExchangeRater();
             accomodationList_ = new AccomodationList();
-            transpotationList_ = new TranspotationList();
+            transportationList_ = new TransportationList();
             sightSeeingList_ = new SightSeeingList();
             otherList_ = new SightSeeingList();
             countriesAndRegions_ = new Dictionary<CountryType, HashSet<string>>();
             countriesAndCurrencies_ = new Dictionary<CountryType, HashSet<CurrencyType>>();
             calcCountries_ = new HashSet<CountryType>();
-            InitParameter();
+            controllModel_.InitSetDate(DateTime.Now, DateTime.Now);
+            controllModel_.InitCalcDate(DateTime.Now, DateTime.Now);
             controllModel_.ControlChanged_ += ControllModel__ControlChanged_;
         }
 
@@ -244,7 +247,7 @@ namespace WorldTravelLogger.Models
         {
             exchangeRater_.Init();
             accomodationList_.Init();
-            transpotationList_.Init();
+            transportationList_.Init();
             sightSeeingList_.Init();
             otherList_.Init();
             this.Load();
@@ -272,88 +275,14 @@ namespace WorldTravelLogger.Models
             return option_;
         }
 
-        // debug
-        public ListType CurrentListType
-        {
-            get { return currentListType_; }
-            set
-            {
-                currentListType_ = value;
-
-            }
-        }
-
-        public object[] Accomodations
-        {
-            get
-            {
-                if (accomodationList_.IsError)
-                {
-                    return accomodationList_.GetErrorArray();
-                }
-                else
-                {
-                    return accomodationList_.GetArray();
-                }
-            }
-        }
-
-
-
-        public object[] Transportations
-        {
-            get
-            {
-                if (transpotationList_.IsError)
-                {
-                    return transpotationList_.GetErrorArray();
-                }
-                else
-                {
-                    return transpotationList_.GetArray();
-                }
-                return null;
-            }
-        }
-
-        public object[] Sightseeings
-        {
-            get
-            {
-                if (sightSeeingList_.IsError)
-                {
-                    return sightSeeingList_.GetErrorArray();
-                }
-                else
-                {
-                    return sightSeeingList_.GetArray();
-                }
-            }
-        }
-
-        public object[] ExchangeRates
-        {
-            get
-            {
-                if (exchangeRater_.IsError)
-                {
-                    return exchangeRater_.GetErrorArray();
-                }
-                else
-                {
-                    return null;
-                }
-            }
-
-        }
-
+      
         // control
-        public bool ReadyApplication
+        private bool ReadyApplication
         {
             get
             {
                 return accomodationList_.IsLoaded &&
-                    transpotationList_.IsLoaded &&
+                    transportationList_.IsLoaded &&
                     sightSeeingList_.IsLoaded &&
                     otherList_.IsLoaded &&
                      exchangeRater_.IsLoaded;
@@ -364,14 +293,14 @@ namespace WorldTravelLogger.Models
         {
             countriesAndRegions_.Clear();
             accomodationList_.SetCoutriesAndRegions(countriesAndRegions_);
-            transpotationList_.SetCoutriesAndRegions(countriesAndRegions_);
+            transportationList_.SetCoutriesAndRegions(countriesAndRegions_);
             sightSeeingList_.SetCoutriesAndRegions((countriesAndRegions_));
             otherList_.SetCoutriesAndRegions(countriesAndRegions_);
 
             // currency
             countriesAndCurrencies_.Clear();
             accomodationList_.SetCoutriesAndCurrencies(countriesAndCurrencies_);
-            transpotationList_.SetCoutriesAndCurrencies(countriesAndCurrencies_);
+            transportationList_.SetCoutriesAndCurrencies(countriesAndCurrencies_);
             sightSeeingList_.SetCoutriesAndCurrencies((countriesAndCurrencies_));
             otherList_.SetCoutriesAndCurrencies(countriesAndCurrencies_);
 
@@ -388,7 +317,7 @@ namespace WorldTravelLogger.Models
                     calcCountries_.Add(c);
                 }
             }
-            foreach (var c in transpotationList_.GetCalcCounties().Where(c => !calcCountries_.Contains(c)))
+            foreach (var c in transportationList_.GetCalcCounties().Where(c => !calcCountries_.Contains(c)))
             {
                 calcCountries_.Add(c);
             }
@@ -405,11 +334,11 @@ namespace WorldTravelLogger.Models
         private void SetDate()
         {
             controllModel_.InitSetDate(accomodationList_.StartDate, accomodationList_.EndDate);
-            controllModel_.SetStartSetDate(transpotationList_.StartDate);
+            controllModel_.SetStartSetDate(transportationList_.StartDate);
             controllModel_.SetStartSetDate(sightSeeingList_.StartDate);
             controllModel_.SetStartSetDate(otherList_.StartDate);
 
-            controllModel_.SetEndSetDate(transpotationList_.EndDate);
+            controllModel_.SetEndSetDate(transportationList_.EndDate);
             controllModel_.SetEndSetDate(sightSeeingList_.EndDate);
             controllModel_.SetEndSetDate(otherList_.EndDate);
 
@@ -421,16 +350,67 @@ namespace WorldTravelLogger.Models
         {
             controllModel_.InitCalcDate(accomodationList_.GetStartCalcDate(), accomodationList_.GetEndCalcDate());
 
-            controllModel_.SetStartCalcDate(transpotationList_.GetStartCalcDate());
+            controllModel_.SetStartCalcDate(transportationList_.GetStartCalcDate());
             controllModel_.SetStartCalcDate(sightSeeingList_.GetStartCalcDate());
             controllModel_.SetStartCalcDate(otherList_.GetStartCalcDate());
 
-            controllModel_.SetEndCalcDate(transpotationList_.GetEndCalcDate());
+            controllModel_.SetEndCalcDate(transportationList_.GetEndCalcDate());
             controllModel_.SetEndCalcDate(sightSeeingList_.GetEndCalcDate());
             controllModel_.SetEndCalcDate(otherList_.GetEndCalcDate());
 
             controllModel_.InitDateFromCalc();
         }
+
+        private void CalcAccomodations()
+        {
+            if (ReadyAccomodations && !accomodationList_.IsReady)
+            {
+                accomodationList_.CalcModels(controllModel_);
+            }
+            CalcApplication();
+        }
+
+        private void CalcTransportations()
+        {
+            if (ReadyTransportations && !transportationList_.IsReady)
+            {
+                transportationList_.CalcModels(controllModel_);
+            }
+            CalcApplication();
+        }
+
+        private void CalcSightseeings()
+        {
+            if (ReadySightseeings && !sightSeeingList_.IsReady)
+            {
+                sightSeeingList_.CalcModels(controllModel_);
+            }
+            CalcApplication();
+        }
+
+        private void CalcOthes()
+        {
+            if (ReadyOthers && !otherList_.IsReady)
+            {
+                otherList_.CalcModels(controllModel_);
+            }
+            CalcApplication();
+
+        }
+
+        private void CalcApplication()
+        {
+            if (ReadyApplication)
+            {
+                CalcCountries();
+                CalcDate();
+                if (CalcCompleted_ != null)
+                {
+                    CalcCompleted_.Invoke(this, EventArgs.Empty);
+                }
+            }
+        }
+
 
 
         private void CalcListAll()
@@ -441,22 +421,17 @@ namespace WorldTravelLogger.Models
             }
             if (ReadyTransportations)
             {
-                transpotationList_.CalcModels(controllModel_);
+                transportationList_.CalcModels(controllModel_);
             }
             if (ReadySightseeings)
             {
                 sightSeeingList_.CalcModels(controllModel_);
+            }
+            if (ReadyOthers)
+            {
                 otherList_.CalcModels(controllModel_);
             }
-            if (ReadyApplication)
-            {
-                CalcCountries();
-                CalcDate();
-                if(CalcCompleted_ != null)
-                {
-                    CalcCompleted_.Invoke(this, EventArgs.Empty);
-                }
-            }
+            CalcApplication();
 
         }
 
@@ -464,7 +439,7 @@ namespace WorldTravelLogger.Models
         {
             var model = new CostModel(CurrencyType.JPY);
             model.Set(ListType.AccomodationList, accomodationList_.TotalCost);
-            model.Set(ListType.TransportationList, transpotationList_.TotalCost);
+            model.Set(ListType.TransportationList, transportationList_.TotalCost);
             model.Set(ListType.SightSeeingList, sightSeeingList_.TotalCost);
             model.Set(ListType.Other, otherList_.TotalCost);
             return model;
@@ -472,7 +447,7 @@ namespace WorldTravelLogger.Models
 
         public MovingModel GetMovingModel()
         {
-            return new MovingModel(transpotationList_.TotalDistance, transpotationList_.TotalTime);
+            return new MovingModel(transportationList_.TotalDistance, transportationList_.TotalTime);
         }
 
         public IEnumerable<CountryType> GetCountries()
@@ -565,7 +540,7 @@ namespace WorldTravelLogger.Models
                 {
                     hSet.Add(date);
                 }
-                foreach (var date in transpotationList_.GetCalcDates(hSet))
+                foreach (var date in transportationList_.GetCalcDates(hSet))
                 {
                     hSet.Add(date);
                 }
@@ -587,10 +562,39 @@ namespace WorldTravelLogger.Models
             return controllModel_;
         }
 
+        public AccomodationList GetAccomodationList()
+        {
+            return accomodationList_;
+        }
+    
+
+        public TransportationList GetTransportationList()
+        {
+            return transportationList_;
+        }
+
+        
+
+        public SightSeeingList GetSightSeeingList()
+        {
+            return sightSeeingList_;
+        }
+
+        public SightSeeingList GetOtherList()
+        {
+            return otherList_;
+        }
+
+        public ExchangeRater GetExchanger()
+        {
+            return exchangeRater_;
+        }
 
         // accomodation
 
-        public bool ReadyAccomodations
+
+
+        private bool ReadyAccomodations
         {
             get
             {
@@ -598,87 +602,20 @@ namespace WorldTravelLogger.Models
             }
         }
 
-
-
-        public double CalcAccomodationTotalCost()
-        {
-            return accomodationList_.TotalCost;
-        }
-
-        public AccomodationTypeModel[] GetTypeAccomodations()
-        {
-            // controlに依存するので追記
-            return accomodationList_.GetTypeArray();
-
-        }
-
-        public AccomodationModel[] GetAccomodations()
-        {
-            // controlに依存するので追記
-            return accomodationList_.GetCalcArray();
-        }
-
-        public IEnumerable<AccomodationType> GetCurrentAccomodationTypes()
-        {
-            return accomodationList_.GetCurrentAccomodationTypes();
-        }
-
-        public AccomodationType CurrentAccomodationtype
-        {
-            get { return accomodationList_.CurrentAccomodationtype; }
-            set { accomodationList_.CurrentAccomodationtype = value; }
-        }
-
         // transportation
 
-        public bool ReadyTransportations
+        private bool ReadyTransportations
         {
             get
             {
-                return transpotationList_.IsLoaded && exchangeRater_.IsLoaded;
+                return transportationList_.IsLoaded && exchangeRater_.IsLoaded;
             }
         }
 
-       
-
-        public double CalcTransportationCost()
-        {
-            return transpotationList_.TotalCost;
-        }
-
-        public TransportationTypeModel[] GetTypeTransportations()
-        {
-            // controlに依存するので追記
-            return transpotationList_.GetTypeArray();
-        }
-
-        public TransportationModel[] GetTransportations()
-        {
-            // controlに依存するので追記
-            return transpotationList_.GetCalcArray();
-        }
-
-        public bool GetNeedingTransportationEndDate()
-        {
-            return transpotationList_.GetNeedingEndDate();
-        }
-
-        
-
-        public IEnumerable<Transportationtype> GetCurrentTransportationTypes()
-        {
-            return transpotationList_.GetCurrentTransportationTypes();
-        }
-
-        public Transportationtype CurrentTransportationType
-        {
-            get { return transpotationList_.CurrentTransportationType; }
-            set { transpotationList_.CurrentTransportationType = value; }
-        }
 
         // Sightseeing
 
-        public bool ReadySightseeings
+        private bool ReadySightseeings
         {
             get
             {
@@ -686,35 +623,9 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public double CalcSightseeingCost()
-        {
-            return sightSeeingList_.TotalCost;
-        }
+       
 
-        public SightseeingTypeModel[] GetTypeSightseeings()
-        {
-            // controlに依存するので追記
-            return sightSeeingList_.GetTypeArray();
-        }
-
-        public SightseeingModel[] GetSightseeings()
-        {
-            // controlに依存するので追記
-            return sightSeeingList_.GetCalcArray();
-        }
-
-        public IEnumerable<SightseeigType> GetCurrentSightseeingTypes()
-        {
-            return sightSeeingList_.GetCurrentSightSeeingTypes();
-        }
-
-        public SightseeigType CurrentSightSeeingType
-        {
-            get { return sightSeeingList_.CurrentSightSeeingType; }
-            set { sightSeeingList_.CurrentSightSeeingType = value; }
-        }
-
-        public bool ReadyOthers
+        private bool ReadyOthers
         {
             get
             {
@@ -722,33 +633,7 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public double CalcOtherCost()
-        {
-            return otherList_.TotalCost;
-        }
-
-        public SightseeingTypeModel[] GetTypeOthers()
-        {
-            // controlに依存するので追記
-            return otherList_.GetTypeArray();
-        }
-
-        public SightseeingModel[] GetOthers()
-        {
-            // controlに依存するので追記
-            return otherList_.GetCalcArray();
-        }
-
-        public IEnumerable<SightseeigType> GetCurrentOtherTypes()
-        {
-            return otherList_.GetCurrentSightSeeingTypes();
-        }
-
-        public SightseeigType CurrentOtherType
-        {
-            get { return otherList_.CurrentSightSeeingType; }
-            set { otherList_.CurrentSightSeeingType = value; }
-        }
+       
 
         public string GetCountryFlagPath()
         {

@@ -176,6 +176,23 @@ namespace WorldTravelLogger.Models
             return 0.0;
         }
 
+        public ExchangeRateModel[] GetExchangeRates()
+        {
+            var list = new List<ExchangeRateModel>();
+            foreach(var pair in rateList_)
+            {
+                double sum = 0.0;
+                foreach(var pair2 in pair.Value)
+                {
+                    sum += pair2.Value;
+                }
+                var ave = sum / pair.Value.Count;
+                var model = new ExchangeRateModel(pair.Key, ave);
+                list.Add(model);
+            }
+            return list.ToArray();
+        }
+
         public override void ConvertAnotherCurrency(ExchangeRater rater)
         {
             // not need(そもそもこの処理いらない。別の継承クラスに別けるべきかも)
@@ -210,5 +227,6 @@ namespace WorldTravelLogger.Models
 
         public override double TotalCost => throw new NotImplementedException();
 
+        public override bool IsReady => throw new NotImplementedException();
     }
 }

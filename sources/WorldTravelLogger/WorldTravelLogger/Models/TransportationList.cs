@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WorldTravelLogger.Models
 {
-    public class TranspotationList : BaseList
+    public class TransportationList : BaseList
     {
         private List<TransportationModel> list_;
         private List<TransportationModel> calcList_;
@@ -17,6 +17,10 @@ namespace WorldTravelLogger.Models
             get { return list_.Count > 0; }
         }
 
+        public override bool IsReady
+        {
+            get { return calcList_.Count > 0; }
+        }
 
 
 
@@ -27,7 +31,7 @@ namespace WorldTravelLogger.Models
 
 
 
-        public TranspotationList()
+        public TransportationList()
         {
             list_ = new List<TransportationModel>();
             calcList_ = new List<TransportationModel>();
@@ -345,6 +349,8 @@ namespace WorldTravelLogger.Models
         {
             SetCalcModels(control);
             SetCalcDic();
+            base.FireListChanged();
+
         }
 
         public override IEnumerable<CountryType> GetCalcCounties()
@@ -449,6 +455,6 @@ namespace WorldTravelLogger.Models
             }
         }
 
-
+       
     }
 }

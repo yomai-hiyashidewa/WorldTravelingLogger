@@ -24,7 +24,7 @@ namespace WorldTravelLogger.Views
         public SightseeingView()
         {
             InitializeComponent();
-            this.DataContext = new SightSeeingViewModel();
+           
         }
 
         public void SetVM(SightSeeingViewModel vm)

@@ -23,10 +23,13 @@ namespace WorldTravelLogger.ViewModels
         {
             model_ = model;
             control_ = model.GetControlModel();
-
-
-            model_.FileLoaded_ += Model__FileLoaded_;
+            model_.CalcCompleted_ += Model__CalcCompleted_;
             model_.ImageListReady_ += Model__ImageListReady_;
+        }
+
+        private void Model__CalcCompleted_(object? sender, EventArgs e)
+        {
+            UpdateView();
         }
 
         private void Model__ImageListReady_(object? sender, EventArgs e)
@@ -34,36 +37,12 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("CountryImagePath");
         }
 
-        private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
-        {
-            if (model_.ReadyApplication)
-            {
-                UpdateView();
-            }
-            
-        }
 
-        private void Model_TransportationChanged_(object? sender, EventArgs e)
-        {
-            UpdateView();
-        }
-
-        private void Model__ControlChanged_(object? sender, EventArgs e)
+        private void UpdateView()
         {
             this.RaisePropertyChanged("IsWorld");
             this.RaisePropertyChanged("IsWithJapan");
             this.RaisePropertyChanged("IsCountryMode");
-            
-  
-            
-            //this.RaisePropertyChanged("CurrentMajorCurrencyType");
-            UpdateView();
-
-        }
-
-        private void UpdateView()
-        {
-            
             this.RaisePropertyChanged("CurrentCountry");
             this.RaisePropertyChanged("IsWithCrossBorder");
             this.RaisePropertyChanged("StartDate");

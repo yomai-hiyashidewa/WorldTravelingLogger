@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace WorldTravelLogger.Models
 {
-    public abstract  class BaseList
+    public abstract  class BaseList : IList
     {
+        public event EventHandler ListChanged;
         public List<FileErrorContext> ErrorList
         {
             get;
@@ -226,6 +227,14 @@ namespace WorldTravelLogger.Models
             return ErrorTypes.None;
         }
 
+        protected void FireListChanged()
+        {
+            if(ListChanged != null)
+            {
+                ListChanged(this, EventArgs.Empty);
+            }
+        }
+
         protected void SetCountry(CountryType type, string region)
         {
             
@@ -361,9 +370,12 @@ namespace WorldTravelLogger.Models
         
         public abstract bool IsLoaded { get; }
 
+        public abstract bool IsReady { get; }
+
         // memo interfaceで実装すべきかも
         public abstract void CalcModels(ControlModel control);
 
+       
         public abstract double TotalCost { get; }
 
         

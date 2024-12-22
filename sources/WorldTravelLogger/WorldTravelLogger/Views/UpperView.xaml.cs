@@ -24,7 +24,7 @@ namespace WorldTravelLogger.Views
         public UpperView()
         {
             InitializeComponent();
-            this.DataContext = new UpperViewModel();
+           
         }
 
         public void SetVM(UpperViewModel vm)

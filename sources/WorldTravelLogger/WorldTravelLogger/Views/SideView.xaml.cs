@@ -24,7 +24,7 @@ namespace WorldTravelLogger.Views
         public SideView()
         {
             InitializeComponent();
-            this.DataContext = new SideViewModel();
+            
         }
 
         public void SetVM(SideViewModel vm)
