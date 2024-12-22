@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WorldTravelLogger.Models
 {
@@ -49,6 +50,8 @@ namespace WorldTravelLogger.Models
             currentMajorCurrencyType_ = CurrencyType.JPY;
         }
 
+       
+
         private void FireControlChanged()
         {
             if (ControlChanged_ != null)
@@ -65,6 +68,7 @@ namespace WorldTravelLogger.Models
                 if (this.isWithAirplane_ != value)
                 {
                     this.isWithAirplane_ = value;
+                    InitDate();
                     FireControlChanged();
                 }
             }
@@ -79,6 +83,35 @@ namespace WorldTravelLogger.Models
                 if (isWorldMode_ != value)
                 {
                     isWorldMode_ = value;
+                    InitDate();
+                    FireControlChanged();
+                }
+            }
+        }
+
+        public bool IsWithJapan
+        {
+            get { return isWithJapan_; }
+            set
+            {
+                if (isWithJapan_ != value)
+                {
+                    isWithJapan_ = value;
+                    InitDate();
+                    FireControlChanged();
+                }
+            }
+        }
+
+        public bool IsWithInsurance
+        {
+            get { return isWithInsurance_; }
+            set
+            {
+                if (isWithInsurance_ != value)
+                {
+                    isWithInsurance_ = value;
+                    InitDate();
                     FireControlChanged();
                 }
             }
@@ -95,6 +128,7 @@ namespace WorldTravelLogger.Models
                 if (isWithCrossBorder_ != value)
                 {
                     isWithCrossBorder_ = value;
+                    InitDate();
                     FireControlChanged();
                 }
             }
@@ -108,8 +142,7 @@ namespace WorldTravelLogger.Models
                 if (currentCountryType_ != value)
                 {
                     currentCountryType_ = value;
-                    startDate_ = startSetDate_;
-                    endDate_ = endSetDate_;
+                    InitDate();
                     FireControlChanged();
                 }
             }
@@ -160,15 +193,7 @@ namespace WorldTravelLogger.Models
 
 
 
-        public bool CheckControl(DateTime date, CountryType country)
-        {
-            if (!isWorldMode_ && currentCountryType_ != country)
-            {
-                return false;
-            }
-            return startDate_ <= date && date <= endDate_;
-
-        }
+      
 
         public void InitDate()
         {
@@ -250,22 +275,63 @@ namespace WorldTravelLogger.Models
 
         }
 
+        public bool CheckControl(DateTime date, CountryType country)
+        {
+            if (isWorldMode_ && !isWithJapan_ && country == CountryType.JPN)
+            {
+                return false;
+            }
+            else if (!isWorldMode_ && currentCountryType_ != country)
+            {
+                return false;
+            }
+            return startDate_ <= date && date <= endDate_;
+
+        }
+
         public bool CheckControl(Transportationtype tType, DateTime startDate, DateTime endDate, CountryType startCountry, CountryType endCountry)
         {
+            DateTime date = startDate;
+            CountryType country = startCountry;
             if (!isWithAirplane_ && tType == Transportationtype.AirPlane)
             {
                 return false;
             }
+            // 国モードで国境越えがOFFの時国境越えは落とす
             else if (!isWorldMode_ && !isWithCrossBorder_ && startCountry != endCountry)
             {
                 return false;
             }
-            else if (!isWorldMode_ && currentCountryType_ != startCountry && currentCountryType_ != endCountry)
+            // 国モードで国境越えがONの時出発も到着も選択国でない時は落とす
+            else if (!isWorldMode_ && IsWithCrossBorder && currentCountryType_ != startCountry && currentCountryType_ != endCountry)
             {
                 return false;
             }
-            return CheckControl(startDate, startCountry);
+            // 国境越えで到着国が選択国なら到着国を選択
+            else if(startCountry != endCountry && endCountry == currentCountryType_)
+            {
+                country = endCountry;
+            }
+            // 出発日と到着日が違う場合に到着日が選択範囲に入っているなら到着日を選択
+          
+            if(startDate != endDate)
+            {
+                if(startDate_ <= endDate && endDate <= endDate_)
+                {
+                    date = endDate;
+                }
+            }
+            return CheckControl(date, startCountry);
 
+        }
+
+        public bool CheckControl(SightseeigType type, DateTime date, CountryType country)
+        {
+            if(!isWithInsurance_ && type == SightseeigType.Insurance)
+            {
+                return false;
+            }
+            return CheckControl(date,country);
         }
     }
 

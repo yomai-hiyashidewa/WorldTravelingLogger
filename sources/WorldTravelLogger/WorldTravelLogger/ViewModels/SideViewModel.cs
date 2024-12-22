@@ -14,10 +14,7 @@ namespace WorldTravelLogger.ViewModels
     {
         private MainModel? model_;
         private ControlModel control_;
-        public SideViewModel()
-        {
-            // dummy   
-        }
+      
 
         public SideViewModel(MainModel model)
         {
@@ -81,7 +78,14 @@ namespace WorldTravelLogger.ViewModels
 
         public bool IsWithJapan
         {
-            get; set;
+            get
+            {
+                return control_.IsWithJapan;
+            }
+            set
+            {
+                control_.IsWithJapan = value;
+            }
         }
 
 

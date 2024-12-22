@@ -224,7 +224,7 @@ namespace WorldTravelLogger.Models
         {
             calcList_.Clear();
             calcDic_.Clear();
-            foreach (var model in list_.Where(m => control.CheckControl(m.Date, m.Country)))
+            foreach (var model in list_.Where(m => control.CheckControl(m.SightseeigType , m.Date, m.Country)))
             {
                 calcList_.Add(model);
             }

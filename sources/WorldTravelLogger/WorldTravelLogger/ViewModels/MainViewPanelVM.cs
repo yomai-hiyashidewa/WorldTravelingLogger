@@ -67,12 +67,12 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-                    return false;
+                    return control_.IsWithInsurance;
                 }
             }
             set
             {
-                // mot yet
+                control_.IsWithInsurance = value;
             }
         }
 
