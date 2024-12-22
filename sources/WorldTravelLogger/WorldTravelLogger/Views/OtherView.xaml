@@ -49,7 +49,7 @@
                     <DataGridTextColumn Header="region" Binding="{Binding Region}"/>
                     <DataGridTextColumn Header="context" Binding="{Binding Context}" />
                     <DataGridTextColumn Header="cost" Binding="{Binding Price}"/>
-                    <DataGridTextColumn Header="currency" Binding="{Binding Currency}"/>
+                    <DataGridTextColumn Header="currency" Binding="{Binding Currency,Converter={StaticResource EnumDisplayConv}}"/>
                     <DataGridTextColumn Header="Yen cost" Binding="{Binding JPYPriceString}"/>
                     <DataGridTextColumn Header="memo" Binding="{Binding Memo}" />
                 </DataGrid.Columns>

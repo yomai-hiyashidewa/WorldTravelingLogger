@@ -203,12 +203,12 @@ throwing my flight Ticket from camagway to cancun,Accident,2022/9/3,CUB,habana,5
 contacting my parents,Accident,2022/9/3,CUB,habana,0,MXP,-
 asked my parents to buy me a Ticket.,Accident,2022/9/3,CUB,habana,0,JPY,-
 coffee and milk,Eating,2022/9/6,MEX,Chetumal,7,MXP,-
-Drinking with young people,Accident,2022/9/7,BLZ,San Ignacio,0,BRD,-
-Belize city beach,Walking,2022/9/7,BLZ,San Ignacio,0,BRD,-
-Cahal Pech heritage,Visiting,2022/9/7,BLZ,San Ignacio,10,BRD,-
-Xunantunich heritage,Visiting,2022/9/8,BLZ,Xunantunich,10,BRD,-
+Drinking with young people,Accident,2022/9/7,BLZ,San Ignacio,0,BZD,-
+Belize city beach,Walking,2022/9/7,BLZ,San Ignacio,0,BZD,-
+Cahal Pech heritage,Visiting,2022/9/7,BLZ,San Ignacio,10,BZD,-
+Xunantunich heritage,Visiting,2022/9/8,BLZ,Xunantunich,10,BZD,-
 Departure Tax,Tax,2022/9/9,BLZ,border,20,USD,-
-Getting 30 GTQ,Exchange,2022/9/9,BLZ,border,0,BRD,from 9 BRZ
+Getting 30 GTQ,Exchange,2022/9/9,BLZ,border,0,BZD,from 9 BRZ
 dinner's chicken,Eating,2022/9/9,GTM,Flores,25,GTQ,-
 tikal heritage,Tour,2022/9/10,GTM,tikal,150,GTQ,-
 cola,Eating,2022/9/10,GTM,tikal,10,GTQ,-
@@ -1213,7 +1213,7 @@ Cashing from atm,Cashing,2023/11/22,CYP,Larnaca,0,EUR,get 50 EUR
 dinner,Eating,2023/11/22,CYP,Larnaca,5,EUR,-
 Larnaca beach,Walking,2023/11/23,CYP,Larnaca,0,EUR,-
 S razaro church,Visiting,2023/11/23,CYP,Larnaca,0,EUR,-
-Churros,Eating,2023/11/23,CYP,Nicosia,20,TRY,-
+Churros,Eating,2023/11/23,NCY,Lefkosa,20,TRY,-
 cyprus coffee,Eating,2023/11/23,CYP,Nicosia,1.2,EUR,-
 bread,Eating,2023/11/23,CYP,Nicosia,3,EUR,-
 cyprus museum,Visiting,2023/11/23,CYP,Nicosia,0,EUR,-

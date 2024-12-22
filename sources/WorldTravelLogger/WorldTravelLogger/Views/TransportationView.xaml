@@ -60,7 +60,7 @@
                     <DataGridTextColumn Header="end region" Binding="{Binding EndRegion}"/>
                     <DataGridTextColumn Header="end place" Binding="{Binding EndPlace}"/>
                     <DataGridTextColumn Header="cost" Binding="{Binding Price}"/>
-                    <DataGridTextColumn Header="currency" Binding="{Binding Currency}"/>
+                    <DataGridTextColumn Header="currency" Binding="{Binding Currency,Converter={StaticResource EnumDisplayConv}}"/>
                     <DataGridTextColumn Header="distance" Binding="{Binding Distance}"/>
                     <DataGridTextColumn Header="time" Binding="{Binding Time}"/>
                     <DataGridTextColumn Header="Yen cost" Binding="{Binding JPYPriceString}"/>

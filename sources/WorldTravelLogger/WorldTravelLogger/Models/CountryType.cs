@@ -17,7 +17,7 @@ namespace WorldTravelLogger.Models
         // East Asia
         [Display(Name = "South Korea")]
         KOR,    // Korea (the Republic of)
-        [Display(Name = "TTaiwan")]
+        [Display(Name = "Taiwan")]
         TWN,    // TTaiwan, Province of China
         [Display(Name = "Hong Kong")]
         HKG,    // Hong Kong
@@ -33,7 +33,7 @@ namespace WorldTravelLogger.Models
         AUS,    // Australia
         
         // north america
-        [Display(Name = "United States of America")]
+        [Display(Name = "U.S.A")]
         USA,    // United States of America
         [Display(Name = "Canada")]
         CAN,    // Canada
@@ -146,7 +146,7 @@ namespace WorldTravelLogger.Models
         HRV,    // Croatia
         [Display(Name = "Slovenia")]
         SVN,    // Slovenia
-        [Display(Name = "Bosnia and Herzegovina")]
+        [Display(Name = "B&H")]
         BIH,    // Bosnia and Herzegovina
         [Display(Name = "Serbia")]
         SRB,    // Serbia
@@ -183,7 +183,7 @@ namespace WorldTravelLogger.Models
         TUR,    // Turkiye
         [Display(Name = "Qatar")]
         QAT,    // Qatar
-        [Display(Name = "United Arab Emirates")]
+        [Display(Name = "UAE")]
         ARE,    // United Arab Emirates
         [Display(Name = "Georgia")]
         GEO,    // Georgia
@@ -194,6 +194,8 @@ namespace WorldTravelLogger.Models
         // South Asia
         [Display(Name = "India")]
         IND,    // India
+        [Display(Name = "North Cyprus")]
+        NCY,    // Cyprus
         // not yet
         AZE,    // Azerbaijan
         AFG,    // Afghanistan

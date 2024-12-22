@@ -86,7 +86,13 @@
                     <CheckBox Content="with cross border" FontSize="13" IsChecked="{Binding IsWithCrossBorder,Mode=TwoWay}"/>
                     <TextBlock FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding RegionsCount}"/>
                     <GroupBox Header="Excange Rate">
-                        <DataGrid ItemsSource="{Binding ExchangeRates}"/>
+                        <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding ExchangeRates}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="currency" Binding="{Binding Currency,Converter={StaticResource EnumDisplayConv}}"/>
+                                <DataGridTextColumn Header="Yen" Binding="{Binding Rate}"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
                     </GroupBox>
 
                 </StackPanel>
