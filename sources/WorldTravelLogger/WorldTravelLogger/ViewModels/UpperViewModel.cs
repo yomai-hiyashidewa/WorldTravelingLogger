@@ -11,6 +11,7 @@ namespace WorldTravelLogger.ViewModels
     public class UpperViewModel: ViewModelBase
     {
         private MainModel? model_;
+        private ControlModel control_;
         public UpperViewModel()
         {
             // dummmy
@@ -19,14 +20,18 @@ namespace WorldTravelLogger.ViewModels
         public UpperViewModel(MainModel model)
         {
             model_ = model;
+            control_ = model.GetControlModel();
+            control_.ControlChanged_ += Control__ControlChanged_;
             model_.FileLoaded_ += Model__FileLoaded_;
-            model_.ControlChanged_ += Model__ControlChanged_;
+            
         }
 
-        private void Model__ControlChanged_(object? sender, EventArgs e)
+        private void Control__ControlChanged_(object? sender, EventArgs e)
         {
             UpdateView();
         }
+
+        
 
         private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
         {
@@ -52,18 +57,18 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
+                if (control_ == null)
                 {
                     return DateTime.Now;
                 }
                 else
                 {
-                    return model_.StartDate;
+                    return control_.StartDate;
                 }
             }
             set
             {
-                model_.StartDate = value;
+                control_.StartDate = value;
             }
         }
 
@@ -71,18 +76,18 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
+                if (control_ == null)
                 {
                     return DateTime.Now;
                 }
                 else
                 {
-                    return model_.EndDate;
+                    return control_.EndDate;
                 }
             }
             set
             {
-                model_.EndDate = value;
+                control_.EndDate = value;
             }
         }
 
@@ -92,9 +97,9 @@ namespace WorldTravelLogger.ViewModels
             get
             {
                 var date = DateTime.Now;
-                if (model_ != null && model_.StartCalcDate != null)
+                if (control_ != null && control_.StartCalcDate != null)
                 {
-                    date = (DateTime)model_.StartCalcDate;
+                    date = (DateTime)control_.StartCalcDate;
                 }
                 return date.ToString("yyyy/MM/dd", CultureInfo.CurrentCulture);
             }
@@ -105,9 +110,9 @@ namespace WorldTravelLogger.ViewModels
             get
             {
                 var date = DateTime.Now;
-                if (model_ != null && model_.EndCalcDate != null)
+                if (control_ != null && control_.EndCalcDate != null)
                 {
-                    date = (DateTime)model_.EndCalcDate;
+                    date = (DateTime)control_.EndCalcDate;
                 }
                 return date.ToString("yyyy/MM/dd", CultureInfo.CurrentCulture);
             }

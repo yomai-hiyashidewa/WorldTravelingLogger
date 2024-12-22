@@ -32,6 +32,8 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
+                    <CheckBox Grid.Column="0" HorizontalAlignment="right" VerticalAlignment="top" FontSize="15" Content="with Japan" IsChecked="{Binding IsWithJapan,Mode=TwoWay}" 
+                              Visibility="{Binding IsWorld,Converter={StaticResource BooleanToVisibility}}"/>
                     <CheckBox Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" FontSize="15" Content="world" IsChecked="{Binding IsWorld,Mode=TwoWay}"/>
                 </Grid>
                 <GroupBox Grid.Row="1" Header="Moving" FontSize="15">
@@ -82,7 +84,10 @@
                         </ComboBox.ItemTemplate>
                     </ComboBox>
                     <CheckBox Content="with cross border" FontSize="13" IsChecked="{Binding IsWithCrossBorder,Mode=TwoWay}"/>
-                    <Image Source="{Binding CountryFlagPath}"/>
+                    <TextBlock FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding RegionsCount}"/>
+                    <GroupBox Header="Excange Rate">
+                        <DataGrid ItemsSource="{Binding ExchangeRates}"/>
+                    </GroupBox>
 
                 </StackPanel>
                 <Grid Grid.Column="1">
@@ -90,7 +95,9 @@
                         <RowDefinition Height="2*"/>
                         <RowDefinition Height="8*"/>
                     </Grid.RowDefinitions>
-                    <TextBlock FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding RegionsCount}"/>
+                    <Border BorderThickness="1" BorderBrush="Black">
+                        <Image Source="{Binding CountryFlagPath}"/>
+                    </Border>
                     <ListView Grid.Row="1" ItemsSource="{Binding Regions}"/>
                 </Grid>
 

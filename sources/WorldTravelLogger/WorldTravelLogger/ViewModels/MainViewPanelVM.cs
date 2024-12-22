@@ -10,12 +10,14 @@ namespace WorldTravelLogger.ViewModels
     internal class MainViewPanelVM : ViewModelBase
     {
         private MainModel model_;
+        private ControlModel control_;
 
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
 
         public MainViewPanelVM()
         {
             model_ = new MainModel();
+            control_ = model_.GetControlModel();
             model_.FileLoaded_ += Model__FileLoaded_; 
         }
 
@@ -28,7 +30,6 @@ namespace WorldTravelLogger.ViewModels
             if (model_.ReadyApplication)
             {
                 this.RaisePropertyChanged("IsWithAirplane");
-                this.RaisePropertyChanged("IsWithJapan");
                 this.RaisePropertyChanged("IsWithInsurance");
             }
         }
@@ -44,23 +45,33 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-                    return model_.IsWithAirplane;
+                    return control_.IsWithAirplane;
                 }
             }
             set
             {
-                model_.IsWithAirplane = value;
+                control_.IsWithAirplane = value;
             }
         }
 
-        public bool IsWithJapan
-        {
-            get; set;
-        }
-
+     
         public bool IsWithInsurance
         {
-            get; set;
+            get
+            {
+                if(model_ == null)
+                {
+                    return false;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            set
+            {
+                // mot yet
+            }
         }
 
         public void Init()

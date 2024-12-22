@@ -13,6 +13,7 @@ namespace WorldTravelLogger.ViewModels
     public class SideViewModel : ViewModelBase
     {
         private MainModel? model_;
+        private ControlModel control_;
         public SideViewModel()
         {
             // dummy   
@@ -21,10 +22,11 @@ namespace WorldTravelLogger.ViewModels
         public SideViewModel(MainModel model)
         {
             model_ = model;
+            control_ = model.GetControlModel();
+
+
             model_.FileLoaded_ += Model__FileLoaded_;
             model_.ImageListReady_ += Model__ImageListReady_;
-            model_.ControlChanged_ += Model__ControlChanged_;
-            model.TransportationChanged_ += Model_TransportationChanged_;
         }
 
         private void Model__ImageListReady_(object? sender, EventArgs e)
@@ -49,14 +51,11 @@ namespace WorldTravelLogger.ViewModels
         private void Model__ControlChanged_(object? sender, EventArgs e)
         {
             this.RaisePropertyChanged("IsWorld");
-           
+            this.RaisePropertyChanged("IsWithJapan");
             this.RaisePropertyChanged("IsCountryMode");
             
   
             
-            //this.RaisePropertyChanged("IsCurrencyJPY");
-            //this.RaisePropertyChanged("IsCurrencyUSD");
-            //this.RaisePropertyChanged("IsCurrencyEUR");
             //this.RaisePropertyChanged("CurrentMajorCurrencyType");
             UpdateView();
 
@@ -77,6 +76,7 @@ namespace WorldTravelLogger.ViewModels
  
             this.RaisePropertyChanged("RegionsCount");
             this.RaisePropertyChanged("Regions");
+            this.RaisePropertyChanged("ExchangeRates");
             this.RaisePropertyChanged("CountryFlagPath");
             this.RaisePropertyChanged("CountryImagePath");
         }
@@ -85,20 +85,26 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
+                if (control_ == null)
                 {
                     return false;
                 }
                 else
                 {
-                    return model_.IsWorldMode;
+                    return control_.IsWorldMode;
                 }
             }
             set
             {
-                model_.IsWorldMode = value;
+                control_.IsWorldMode = value;
             }
         }
+
+        public bool IsWithJapan
+        {
+            get; set;
+        }
+
 
 
         public bool IsCountryMode
@@ -115,18 +121,18 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
+                if (control_ == null)
                 {
                     return CountryType.JPN;
                 }
                 else
                 {
-                    return model_.CurrentCountryType;
+                    return control_.CurrentCountryType;
                 }
             }
             set
             {
-                model_.CurrentCountryType = value;
+                control_.CurrentCountryType = value;
             }
         }
 
@@ -134,18 +140,18 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
+                if (control_ == null)
                 {
                     return false;
                 }
                 else
                 {
-                    return model_.IsWithCrossBorder;
+                    return control_.IsWithCrossBorder;
                 }
             }
             set
             {
-                model_.IsWithCrossBorder = value;
+                control_.IsWithCrossBorder = value;
             }
 
         }
@@ -214,6 +220,22 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
+        public ExchangeRateModel[] ExchangeRates
+        {
+            get
+            {
+                if(model_ == null)
+                {
+                    return [];
+                }
+                else
+                {
+                    return model_.GetCurrentExchangeRates();
+                }
+            }
+        }
+
+
 
         public string TotalCalcCountries
         {
@@ -246,70 +268,6 @@ namespace WorldTravelLogger.ViewModels
         }
 
        
-
-        public bool IsCurrencyJPY
-        {
-            get
-            {
-                if(model_ == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return model_.CurrentMajorCurrencyType == MajorCurrencytype.JPN;
-                }
-
-            }
-            set
-            {
-                model_.CurrentMajorCurrencyType = MajorCurrencytype.JPN;
-                
-               
-            }
-        }
-
-        public bool IsCurrencyUSD
-        {
-            get
-            {
-                if (model_ == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return model_.CurrentMajorCurrencyType == MajorCurrencytype.USD;
-                }
-
-            }
-            set
-            {
-                model_.CurrentMajorCurrencyType = MajorCurrencytype.USD;
-                
-            }
-        }
-
-        public bool IsCurrencyEUR
-        {
-            get
-            {
-                if (model_ == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return model_.CurrentMajorCurrencyType == MajorCurrencytype.EUR;
-                }
-
-            }
-            set
-            {
-                model_.CurrentMajorCurrencyType = MajorCurrencytype.EUR;
-
-            }
-        }
 
         public MovingModel[] Movings
         {

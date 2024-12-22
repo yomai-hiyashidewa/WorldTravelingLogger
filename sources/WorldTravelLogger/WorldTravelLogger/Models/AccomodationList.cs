@@ -171,6 +171,7 @@ namespace WorldTravelLogger.Models
                 {
                     list_.Add(model);
                     base.SetCountry(model.Country,model.Region);
+                    base.SetCountryAndCurrency(model.Country, model.Currency);
                     base.SetDate(model.Date);
                 }
             }
@@ -192,24 +193,13 @@ namespace WorldTravelLogger.Models
            
         }
 
-        public override void CalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
+        public override void CalcModels(ControlModel control)
         {
             calcList_.Clear();
             calcDic_.Clear();
-            if (isWorld)
+            foreach (var model in list_.Where(m => control.CheckControl(m.Date, m.Country)))
             {
-                foreach(var model in list_.Where(m => start <= m.Date && m.Date <= end))
-                {
-                    calcList_.Add(model);
-                }
-            }
-            else
-            {
-                foreach (var model in list_.Where(m => m.Country == type &&
-                start <= m.Date && m.Date <= end))
-                {
-                    calcList_.Add(model);
-                }
+                calcList_.Add(model);
             }
             foreach (var model in calcList_)
             {
@@ -297,17 +287,17 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public override int GetCalcDateCount()
+        public override HashSet<DateTime> GetCalcDates(HashSet<DateTime> dates)
         {
             var hSet = new HashSet<DateTime>();
-            foreach(var model in calcList_)
+            foreach(var model in calcList_.Where(m => !dates.Contains(m.Date)))
             {
                 if (!hSet.Contains(model.Date))
                 {
                     hSet.Add(model.Date);
                 }
             }
-            return hSet.Count;
+            return hSet;
         }
 
         public override double TotalCost

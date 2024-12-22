@@ -12,14 +12,14 @@ namespace WorldTravelLogger.Models
     public class ExchangeRater : BaseList
     {
 
-        private Dictionary<CurrencyType, Dictionary<string, double>> rateList_;
+        private Dictionary<CurrencyType, Dictionary<DateTime, double>> rateList_;
 
         public override bool IsLoaded
         {
             get { return rateList_.Count > 0; }
         }
 
-       
+
 
         private string[] GetDateList(string[] stringList)
         {
@@ -40,13 +40,14 @@ namespace WorldTravelLogger.Models
             }
             else
             {
-                var dic = new Dictionary<string, double>();
+                var dic = new Dictionary<DateTime, double>();
                 for (int i = 1; i < dateList.Length; i++)
                 {
                     double value = 0;
+                    var date = base.ConvertDate(dateList[i]);
                     if (double.TryParse(stringList[i + 1], out value))
                     {
-                        dic.Add(dateList[i], value);
+                        dic.Add((DateTime)date, value);
                     }
                 }
                 rateList_.Add((CurrencyType)type, dic);
@@ -117,10 +118,10 @@ namespace WorldTravelLogger.Models
         }
 
 
-        public ExchangeRater() 
+        public ExchangeRater()
         {
-            rateList_ = new Dictionary<CurrencyType, Dictionary<string, double>>();
-           
+            rateList_ = new Dictionary<CurrencyType, Dictionary<DateTime, double>>();
+
         }
 
         public override void Init()
@@ -136,12 +137,11 @@ namespace WorldTravelLogger.Models
             if (rateList_.ContainsKey(type))
             {
                 var value = rateList_.GetValueOrDefault(type);
-                // 1日でデータ格納しているので変換。
-                var searchDate = new DateTime(date.Year, date.Month, 1);
-                string valueStr = searchDate.ToString("yyyy/MM/dd");
-                if (value.ContainsKey(valueStr))
+                // 1日のデータに変更する
+                var searchDate = new DateTime(date.Year, date.Month, 1); 
+                if (value.ContainsKey(searchDate))
                 {
-                    return value.GetValueOrDefault(valueStr);
+                    return value.GetValueOrDefault(searchDate);
                 }
             }
 
@@ -149,14 +149,41 @@ namespace WorldTravelLogger.Models
 
         }
 
+        public double GetAverageRate(CurrencyType type,DateTime start,DateTime end)
+        {
+            if (rateList_.ContainsKey(type))
+            {
+                if (start.Year == end.Year && start.Month == end.Month)
+                {
+                    return this.GetRate(type, start);
+                }
+                else
+                {
+                    var value = rateList_.GetValueOrDefault(type);
+                    double sum = 0.0;
+                    int count = 0;
+                    foreach (var rate in value)
+                    {
+                        if (start <= rate.Key && rate.Key <= end)
+                        {
+                            sum += rate.Value;
+                            count++;
+                        }
+                    }
+                    return sum / (double)count;
+                }
+            }
+            return 0.0;
+        }
+
         public override void ConvertAnotherCurrency(ExchangeRater rater)
         {
             // not need(そもそもこの処理いらない。別の継承クラスに別けるべきかも)
         }
 
-     
 
-        public override void CalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
+
+        public override void CalcModels(ControlModel control)
         {
             throw new NotImplementedException();
         }
@@ -176,7 +203,7 @@ namespace WorldTravelLogger.Models
             throw new NotImplementedException();
         }
 
-        public override int GetCalcDateCount()
+        public override HashSet<DateTime> GetCalcDates(HashSet<DateTime> dates)
         {
             throw new NotImplementedException();
         }

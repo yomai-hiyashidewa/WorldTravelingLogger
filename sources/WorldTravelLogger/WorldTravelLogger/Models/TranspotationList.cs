@@ -17,11 +17,9 @@ namespace WorldTravelLogger.Models
             get { return list_.Count > 0; }
         }
 
-        
 
-        public bool IsWithAirplane { get; set; }
 
-        public bool IsWithCrossBorder { get; set; }
+
 
         public Transportationtype CurrentTransportationType { get; set; }
 
@@ -34,8 +32,7 @@ namespace WorldTravelLogger.Models
             list_ = new List<TransportationModel>();
             calcList_ = new List<TransportationModel>();
             calcDic_ = new Dictionary<Transportationtype, TransportationTypeModel>();
-            IsWithAirplane = true;
-            IsWithCrossBorder = true;
+
         }
 
         public TransportationModel[] GetArray()
@@ -62,22 +59,22 @@ namespace WorldTravelLogger.Models
                         var sttype = base.ConvertTransportationType(str);
                         flag = sttype == null;
                         break;
-                        // start
-                        // date
+                    // start
+                    // date
                     case 1:
                         var sdate = base.ConvertDate(str);
                         flag = sdate == null;
                         break;
-                        // Country
+                    // Country
                     case 2:
                         var countury = base.ConvertCountry(str);
                         flag = countury == null;
                         break;
-                        // place
+                    // place
                     case 3:
                         flag = string.IsNullOrWhiteSpace(str);
                         break;
-                        // place type
+                    // place type
                     case 4:
                         var sptype = base.ConvertPlaceType(str);
                         flag = sptype == null;
@@ -154,7 +151,7 @@ namespace WorldTravelLogger.Models
             {
                 var str = row[j];
 
-               
+
                 switch (j)
                 {
                     // type
@@ -236,8 +233,9 @@ namespace WorldTravelLogger.Models
                     (DateTime)endDate, (CountryType)endCountry, endPlace, (PlaceType)endPlaceType,
                     (double)distance, (int)time, (double)price, (CurrencyType)currencyType, memo);
                 list_.Add(model);
-                base.SetCountry(model.StartCountry,model.StartRegion);
-                base.SetCountry(model.EndCountry,model.EndRegion);
+                base.SetCountry(model.StartCountry, model.StartRegion);
+                base.SetCountry(model.EndCountry, model.EndRegion);
+                base.SetCountryAndCurrency(model.Country, model.Currency);
                 base.SetDate(model.StartDate);
                 base.SetDate(model.EndDate);
             }
@@ -268,13 +266,13 @@ namespace WorldTravelLogger.Models
 
         public override void ConvertAnotherCurrency(ExchangeRater rater)
         {
-            foreach(var model in list_)
+            foreach (var model in list_)
             {
                 model.ConvertPrice(rater);
             }
         }
 
-       
+
 
         public TransportationTypeModel[] GetTypeArray()
         {
@@ -302,58 +300,16 @@ namespace WorldTravelLogger.Models
             return model != null;
         }
 
-        private IEnumerable<TransportationModel> GetList(bool isWorld, CountryType type, DateTime start, DateTime end)
+        private IEnumerable<TransportationModel> GetList(ControlModel control)
         {
-            // dateの設定に関してはまた後で考える
-            if (isWorld)
-            {
-                if (IsWithAirplane)
-                {
-                    return list_.Where(m => start <= m.Date && m.Date <= end);
-                }
-                else
-                {
-                    return list_.Where(m => start <= m.Date && m.Date <= end && m.Transportationtype != Transportationtype.AirPlane);
-                }
-            }
-            
-            else
-            {
-                if (IsWithAirplane)
-                {
-                    if (IsWithCrossBorder)
-                    {
-                        return list_.Where(m => (m.StartCountry == type || m.EndCountry == type) &&
-                       start <= m.Date && m.Date <= end);
-                    }
-                    else
-                    {
-                        return list_.Where(m => (m.StartCountry == type && m.EndCountry == type) &&
-                    start <= m.Date && m.Date <= end);
-                       
-                    }
-                }
-                else
-                {
-                    if (IsWithCrossBorder)
-                    {
-                        return list_.Where(m => (m.StartCountry == type || m.EndCountry == type) &&
-                       start <= m.Date && m.Date <= end && m.Transportationtype != Transportationtype.AirPlane);
-                    }
-                    else
-                    {
-                        return list_.Where(m => (m.StartCountry == type && m.EndCountry == type) &&
-                        start <= m.Date && m.Date <= end && m.Transportationtype != Transportationtype.AirPlane);
-                       
-                    }
-                }
-            }
+            return list_.Where(m =>
+            control.CheckControl(m.Transportationtype, m.StartDate, m.EndDate, m.StartCountry, m.EndCountry));
         }
 
-        private void SetCalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
+        private void SetCalcModels(ControlModel control)
         {
             calcList_.Clear();
-            foreach(var model in GetList(isWorld, type, start, end))
+            foreach (var model in GetList(control))
             {
                 calcList_.Add(model);
             }
@@ -379,15 +335,15 @@ namespace WorldTravelLogger.Models
                     tModel.SetParameter(model.Distance, model.Time);
                 }
             }
-            if (calcDic_.Count >= 0 && !calcDic_.ContainsKey( CurrentTransportationType))
+            if (calcDic_.Count >= 0 && !calcDic_.ContainsKey(CurrentTransportationType))
             {
                 CurrentTransportationType = calcDic_.Keys.FirstOrDefault();
             }
         }
 
-        public override void CalcModels(bool isWorld, CountryType type, DateTime start, DateTime end)
+        public override void CalcModels(ControlModel control)
         {
-            SetCalcModels(isWorld, type, start, end);
+            SetCalcModels(control);
             SetCalcDic();
         }
 
@@ -415,7 +371,7 @@ namespace WorldTravelLogger.Models
         {
             if (calcList_.Count > 0)
             {
-                return calcList_.Min(m => m.StartDate); 
+                return calcList_.Min(m => m.StartDate);
             }
             else
             {
@@ -435,10 +391,10 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public override int GetCalcDateCount()
+        public override HashSet<DateTime> GetCalcDates(HashSet<DateTime> dates)
         {
             var hSet = new HashSet<DateTime>();
-            foreach (var model in calcList_)
+            foreach (var model in calcList_.Where(m => !dates.Contains(m.StartDate) || !dates.Contains(m.EndDate)))
             {
                 if (!hSet.Contains(model.StartDate))
                 {
@@ -450,7 +406,7 @@ namespace WorldTravelLogger.Models
                 }
 
             }
-            return hSet.Count;
+            return hSet;
         }
 
         public double TotalDistance
@@ -493,6 +449,6 @@ namespace WorldTravelLogger.Models
             }
         }
 
-      
+
     }
 }

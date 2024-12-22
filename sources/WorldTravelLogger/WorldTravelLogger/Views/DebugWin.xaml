@@ -8,13 +8,9 @@
         Title="DebugWin" Height="450" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
             <RowDefinition Height="4*"/>
         </Grid.RowDefinitions>
-        <GroupBox Header="file">
-            <ComboBox HorizontalAlignment="Right" ItemsSource="{Binding Lists}" SelectedItem="{Binding CurrentListType,Mode=TwoWay}" />
-        </GroupBox>
-        <GroupBox Grid.Row="1">
+        <GroupBox Grid.Row="0">
             <TabControl>
                 <TabItem Header="accomodation">
                     <DataGrid ItemsSource="{Binding Accomodations}"/>

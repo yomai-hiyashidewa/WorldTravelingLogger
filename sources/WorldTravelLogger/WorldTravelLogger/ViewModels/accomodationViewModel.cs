@@ -19,10 +19,13 @@ namespace WorldTravelLogger.ViewModels
         public AccomodationViewModel(MainModel model)
         {
             model_ = model;
-            model_.FileLoaded_ += Model__FileLoaded_;
-            model_.ControlChanged_ += Model__ControlChanged_;
+            model_.CalcCompleted_ += Model__CalcCompleted_;
         }
 
+        private void Model__CalcCompleted_(object? sender, EventArgs e)
+        {
+            this.UpdateAll();   
+        }
 
         private void UpdateAll()
         {
@@ -35,23 +38,6 @@ namespace WorldTravelLogger.ViewModels
            
 
         }
-
-        private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
-        {
-            if (e.Type == ListType.AccomodationList || e.Type == ListType.ExchangeRateList)
-            {
-                if (model_.ReadyAccomodations)
-                {
-                    UpdateAll();
-                }
-            }
-        }
-
-        private void Model__ControlChanged_(object? sender, EventArgs e)
-        {
-            this.UpdateAll();
-        }
-
 
 
         public AccomodationTypeModel[] TypeAccomodations

@@ -23,6 +23,11 @@ namespace WorldTravelLogger.Models
             protected set;
         }
 
+        public Dictionary<CountryType,HashSet<CurrencyType>> CountriesAndCurrencies
+        {
+            get; protected set;
+        }
+
         private DateTime? startDate_;
         private DateTime? endDate_;
 
@@ -33,6 +38,7 @@ namespace WorldTravelLogger.Models
         {
             ErrorList = new List<FileErrorContext>();
             CountriesAndRegions = new Dictionary<CountryType, HashSet<string>>();
+            CountriesAndCurrencies = new Dictionary<CountryType, HashSet<CurrencyType>>();
             startDate_ = null;
             endDate_ = null;
             
@@ -186,6 +192,7 @@ namespace WorldTravelLogger.Models
         public virtual ErrorTypes Load(string filePath,string checkFilename)
         {
             CountriesAndRegions.Clear();
+            CountriesAndCurrencies.Clear();
             startDate_ = null;
             endDate_ = null;
             if (string.IsNullOrWhiteSpace(filePath))
@@ -234,6 +241,19 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        protected void SetCountryAndCurrency(CountryType type, CurrencyType currencyType)
+        {
+            if (!CountriesAndCurrencies.ContainsKey(type))
+            {
+                var context = new HashSet<CurrencyType>();
+                CountriesAndCurrencies.Add(type, context);
+            }
+            if (!CountriesAndCurrencies[type].Contains(currencyType))
+            {
+                CountriesAndCurrencies[type].Add(currencyType);
+            }
+        }
+
         protected void SetDate(DateTime date)
         {
             if(startDate_ == null || endDate_ == null)
@@ -266,6 +286,28 @@ namespace WorldTravelLogger.Models
                         if (!dic[context.Key].Contains(region))
                         {
                             dic[context.Key].Add(region);
+                        }
+                    }
+
+                }
+            }
+        }
+
+        public void SetCoutriesAndCurrencies(Dictionary<CountryType, HashSet<CurrencyType>> dic)
+        {
+            foreach (var context in CountriesAndCurrencies)
+            {
+                if (!dic.ContainsKey(context.Key))
+                {
+                    dic.Add(context.Key, context.Value);
+                }
+                else
+                {
+                    foreach (var currency in context.Value)
+                    {
+                        if (!dic[context.Key].Contains(currency))
+                        {
+                            dic[context.Key].Add(currency);
                         }
                     }
 
@@ -312,13 +354,15 @@ namespace WorldTravelLogger.Models
 
         public abstract DateTime? GetEndCalcDate();
 
-        public abstract int GetCalcDateCount();
+        public abstract HashSet<DateTime> GetCalcDates(HashSet<DateTime> dates);
+
+        
 
         
         public abstract bool IsLoaded { get; }
 
         // memo interfaceで実装すべきかも
-        public abstract void CalcModels(bool isWorld,CountryType type, DateTime start, DateTime end);
+        public abstract void CalcModels(ControlModel control);
 
         public abstract double TotalCost { get; }
 
