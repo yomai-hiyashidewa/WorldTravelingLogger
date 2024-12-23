@@ -653,7 +653,7 @@ namespace WorldTravelLogger.Models
             var imageDir = option_.ImagePath;
             if (Path.Exists(imageDir))
             {
-                return Path.Combine(imageDir, "Countries" , CountryType.JPN.ToString(), "zero.jpg");
+                return Path.Combine(imageDir, "Countries" , controllModel_.CurrentCountryType.ToString(), "zero.jpg");
             }
             else
             {

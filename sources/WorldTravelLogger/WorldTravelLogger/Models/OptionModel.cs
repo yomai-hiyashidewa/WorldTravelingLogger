@@ -152,7 +152,7 @@ namespace WorldTravelLogger.Models
         {
             var list = new List<string[]>();
 
-            for (var i = 0; i < 5; i++)
+            for (var i = 0; i < 6; i++)
             {
                 var row = new List<string>();
                 switch (i)
@@ -162,18 +162,22 @@ namespace WorldTravelLogger.Models
                         row.Add("path");
                         break;
                     case 1:
+                        row.Add(FileNames.ImageDir);
+                        row.Add(imagePath_);
+                        break;
+                    case 2:
                         row.Add(FileNames.AccomodationFile);
                         row.Add(accomodationPath_);
                         break;
-                    case 2:
+                    case 3:
                         row.Add(FileNames.TransportationFile);
                         row.Add(transportationPath_);
                         break;
-                    case 3:
+                    case 4:
                         row.Add(FileNames.SightseeingFile);
                         row.Add(sightseeingPath_);
                         break;
-                    case 4:
+                    case 5:
                         row.Add(FileNames.ExchangeRateFile);
                         row.Add(exchangeRatePath_);
                         break;
@@ -185,7 +189,7 @@ namespace WorldTravelLogger.Models
 
         public bool Load(object[] arrays)
         {
-            for (var i = 1; i < 5; i++)
+            for (var i = 1; i < 6; i++)
             {
                 string[] row = (string[])arrays[i];
                 if (row.Length > 1)
@@ -193,15 +197,18 @@ namespace WorldTravelLogger.Models
                     switch (i)
                     {
                         case 1:
-                            AccomodationPath = row[1];
+                            ImagePath = row[1];
                             break;
                         case 2:
-                            TransportationPath = row[1];
+                            AccomodationPath = row[1];
                             break;
                         case 3:
-                            SightseeingPath = row[1];
+                            TransportationPath = row[1];
                             break;
                         case 4:
+                            SightseeingPath = row[1];
+                            break;
+                        case 5:
                             ExchangeRatePath = row[1];
                             break;
                     }
