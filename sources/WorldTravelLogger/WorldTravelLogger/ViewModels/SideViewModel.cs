@@ -14,7 +14,7 @@ namespace WorldTravelLogger.ViewModels
     {
         private MainModel? model_;
         private ControlModel control_;
-      
+
 
         public SideViewModel(MainModel model)
         {
@@ -47,9 +47,10 @@ namespace WorldTravelLogger.ViewModels
 
             this.RaisePropertyChanged("Movings");
             this.RaisePropertyChanged("Countries");
+            this.RaisePropertyChanged("CountryModels");
             this.RaisePropertyChanged("TotalCalcCountries");
             //this.RaisePropertyChanged("TotalCountries");
- 
+
             this.RaisePropertyChanged("RegionsCount");
             this.RaisePropertyChanged("Regions");
             this.RaisePropertyChanged("ExchangeRates");
@@ -98,20 +99,14 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        
+
 
         public CountryType CurrentCountry
         {
             get
             {
-                if (control_ == null)
-                {
-                    return CountryType.JPN;
-                }
-                else
-                {
-                    return control_.CurrentCountryType;
-                }
+                return control_.CurrentCountryType;
+
             }
             set
             {
@@ -139,27 +134,41 @@ namespace WorldTravelLogger.ViewModels
 
         }
 
-       
-
-      
-
 
         public CountryType[] Countries
         {
             get
             {
-                
+                var list = new List<CountryType>();
+                list.AddRange(model_.GetCountries());
+                return list.ToArray();
+
+            }
+        }
+
+
+
+        public CountryModel[] CountryModels
+        {
+            get
+            {
+
                 if (model_ != null)
                 {
-                    var list = new List<CountryType>();
-                    list.AddRange(model_.GetCountries());
+                    var list = new List<CountryModel>();
+                    foreach (var c in model_.GetCountries())
+                    {
+                        var cm = new CountryModel(c, model_.ImageDir);
+                        list.Add(cm);
+                    }
+
                     if (list.Count > 0)
                     {
                         return list.ToArray();
                     }
-                    
+
                 }
-                return (CountryType[])Enum.GetValues(typeof(CountryType));
+                return [];
 
             }
         }
@@ -168,13 +177,13 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if(model_ == null)
+                if (model_ == null)
                 {
                     return [];
                 }
                 else
                 {
-                    return model_.GetCurrentRegions(); 
+                    return model_.GetCurrentRegions();
                 }
             }
         }
@@ -207,7 +216,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if(model_ == null)
+                if (model_ == null)
                 {
                     return [];
                 }
@@ -224,7 +233,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if(model_ == null)
+                if (model_ == null)
                 {
                     return "0";
                 }
@@ -250,13 +259,13 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-       
+
 
         public MovingModel[] Movings
         {
             get
             {
-                if(model_ == null)
+                if (model_ == null)
                 {
                     return [];
                 }
@@ -273,14 +282,9 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if(model_ == null)
-                {
-                    return null;
-                }
-                else
-                {
-                    return model_.GetCountryFlagPath();
-                }
+                var cm = new CountryModel(control_.CurrentCountryType, model_.ImageDir7);
+                return cm.ImagePath;
+                
             }
         }
 
@@ -288,7 +292,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if(model_ == null)
+                if (model_ == null)
                 {
                     return null;
                 }
@@ -296,7 +300,7 @@ namespace WorldTravelLogger.ViewModels
                 {
                     return model_.GetCountryImagePath();
                 }
-                
+
             }
         }
     }

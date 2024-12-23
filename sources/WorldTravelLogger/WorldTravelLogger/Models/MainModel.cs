@@ -275,6 +275,14 @@ namespace WorldTravelLogger.Models
             return option_;
         }
 
+        public string ImageDir
+        {
+            get
+            {
+                return option_.ImagePath;
+            }
+        }
+
       
         // control
         private bool ReadyApplication
@@ -635,18 +643,7 @@ namespace WorldTravelLogger.Models
 
        
 
-        public string GetCountryFlagPath()
-        {
-            var imageDir = option_.ImagePath;
-            if (Path.Exists(imageDir))
-            {
-                return Path.Combine(imageDir, "Flags", controllModel_.CurrentCountryType.ToString() + ".png" );
-            }
-            else
-            {
-                return null;
-            }
-        }
+     
 
         public string GetCountryImagePath()
         {

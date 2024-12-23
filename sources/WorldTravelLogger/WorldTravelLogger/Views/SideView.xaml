@@ -55,10 +55,15 @@
            Text="{Binding TotalCalcCountries}"
            />
 
-                <ListView Grid.Row="1" ItemsSource="{Binding Countries}">
+                <ListView Grid.Row="1" ItemsSource="{Binding CountryModels}" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <TextBlock Text="{Binding Converter={StaticResource EnumDisplayConv}}" />
+                            <DockPanel>
+                                <TextBlock Margin="10,0,10,0" Text="{Binding Type,Converter={StaticResource EnumDisplayConv}}" />
+                                <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center">
+                                    <Image Width="22" Height="15" Source="{Binding ImagePath}"/>
+                                </Border>
+                            </DockPanel>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
@@ -79,7 +84,7 @@
           >
                         <ComboBox.ItemTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Converter={StaticResource EnumDisplayConv}}" />
+                                <TextBlock Margin="10,0,10,0" Text="{Binding Converter={StaticResource EnumDisplayConv}}" />
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
