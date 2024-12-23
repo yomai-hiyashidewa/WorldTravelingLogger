@@ -640,7 +640,7 @@ namespace WorldTravelLogger.Models
             var imageDir = option_.ImagePath;
             if (Path.Exists(imageDir))
             {
-                return Path.Combine(imageDir, "Flags", CountryType.JPN.ToString() + ".png" );
+                return Path.Combine(imageDir, "Flags", controllModel_.CurrentCountryType.ToString() + ".png" );
             }
             else
             {
