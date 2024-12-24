@@ -233,7 +233,7 @@ Exchange from cuban pesos to Kyrgyzstan sums,Accident,2022/9/17,SLV,El Tunco,0,U
 dinner,Accident,2022/9/17,SLV,El Tunco,5,USD,with yo san
 El Tunco beach,Walking,2022/9/17,SLV,El Tunco,0,USD,-
 Honduras depature taz,Tax,2022/9/18,HND,Guasaule,21,USD,-
-dinner,Eating,2022/9/18,HND,anywhere,3.25,USD,-
+dinner,Eating,2022/9/18,HND,-,3.25,USD,-
 lunch,Eating,2022/9/19,NIC,Leon,150,NIO,-
 the food in the market,Eating,2022/9/19,NIC,Leon,50,NIO,-
 coffee,Eating,2022/9/19,NIC,Leon,100,NIO,-
@@ -643,12 +643,12 @@ keeping bagage fee,Accident,2023/6/23,GBR,London,5,GBP,great ingland museum
 wentminstar temple,Church,2023/6/23,GBR,London,0,GBP,-
 big ben clock tower,Heritage,2023/6/23,GBR,London,0,GBP,-
 bakkingum palace,Visiting,2023/6/23,GBR,London,0,GBP,-
-Reykjavik cathedral,Visiting,2023/6/24,ISL,Reykjavik,0,ISK,-
-island national museum,Visiting,2023/6/24,ISL,Reykjavik,2500,ISK,-
-daunats,Eating,2023/6/25,ISL,Reykjavik,200,JPY,-
+Reykjavík cathedral,Visiting,2023/6/24,ISL,Reykjavík,0,ISK,-
+island national museum,Visiting,2023/6/24,ISL,Reykjavík,2500,ISK,-
+daunats,Eating,2023/6/25,ISL,Reykjavík,200,JPY,-
 Vorganes,Walking,2023/6/25,ISL,Vorganes,0,ISK,-
-Washing fee,Washing,2023/6/26,ISL,Reykjavik,1500,ISK,-
-meeting up with jeramy,Accident,2023/6/27,ISL,Reykjavik,0,ISK,-
+Washing fee,Washing,2023/6/26,ISL,Reykjavík,1500,ISK,-
+meeting up with jeramy,Accident,2023/6/27,ISL,Reykjavík,0,ISK,-
 Hahunarfi,Walking,2023/6/27,ISL,Hahunarfi,0,ISK,-
 humberger,Eating,2023/6/28,IRL,Dublin,9.5,EUR,-
 irish coffee,Eating,2023/6/28,IRL,Dublin,5,EUR,-
@@ -672,10 +672,10 @@ Lille 24 hour Ticket,Ticket,2023/7/6,FRA,Amiens,5.4,EUR,-
 Lille fortless,Visiting,2023/7/6,FRA,Lille,0,EUR,-
 Lille cathedral,Visiting,2023/7/6,FRA,Lille,0,EUR,-
 Amiens cathedral,Visiting,2023/7/6,FRA,Amiens,0,EUR,-
-ice candy,Eating,2023/7/7,LUX,Luxembourg,2.2,EUR,-
+ice candy,Eating,2023/7/7,LUX,Luxemburg,2.2,EUR,-
 Belgium waffle,Eating,2023/7/7,BEL,Namur,3,EUR,-
-Luxembourg cathedral,Visiting,2023/7/7,LUX,Luxembourg,0,EUR,-
-Luxembourg,Walking,2023/7/7,LUX,Luxembourg,0,EUR,-
+Luxemburg cathedral,Visiting,2023/7/7,LUX,Luxemburg,0,EUR,-
+Luxemburg,Walking,2023/7/7,LUX,Luxemburg,0,EUR,-
 Arlon cathedral,Visiting,2023/7/7,BEL,Arlon,0,EUR,-
 namur fortless,Visiting,2023/7/7,BEL,Namur,0,EUR,-
 poteto fried,Eating,2023/7/8,BEL,Leuven,5,EUR,-
@@ -713,7 +713,7 @@ bodo port,Walking,2023/7/16,NOR,Bodo,0,JPY,-
 bodo mountain,Walking,2023/7/16,NOR,Bodo,0,JPY,-
 meeting up with german company,Accident,2023/7/17,NOR,Narvik,0,JPY,-
 narvik church,Visiting,2023/7/17,NOR,Narvik,0,JPY,-
-supermarket,Shopping,2023/7/18,SWE,Lulea,105,SEK,-
+supermarket,Shopping,2023/7/18,SWE,Luleå,105,SEK,-
 Kiruna church,Visiting,2023/7/18,SWE,Kiruna,0,SEK,-
 dinner,Eating,2023/7/20,FIN,Helsinki,5.6,EUR,-
 bread,Eating,2023/7/21,FIN,Joensuu,1.2,EUR,-
@@ -746,13 +746,13 @@ dounats,Eating,2023/7/27,POL,Warszawa,11,PLN,-
 statue of shopan,Heritage,2023/7/27,POL,Warszawa,0,PLN,-
 wajenki palace,Visiting,2023/7/27,POL,Warszawa,0,PLN,-
 wajenki palace,Visiting,2023/7/27,POL,Warszawa,0,PLN,-
-bread,Eating,2023/7/28,POL,Krakuw,2,PLN,-
-Exchanged to 22 zl,Exchange,2023/7/28,POL,Krakuw,0,EUR,from 5 EUR
-krakuw cathedral,Visiting,2023/7/28,POL,Krakuw,22,PLN,-
-krakuw castle,Visiting,2023/7/28,POL,Krakuw,0,PLN,-
-guness beer,Eating,2023/7/28,POL,Wrocaw,26,PLN,-
-hot dog,Eating,2023/7/28,POL,Wrocaw,8.5,PLN,-
-EU rail pass 15 days,Ticket,2023/7/29,POL,Wrocaw,516,USD,-
+bread,Eating,2023/7/28,POL,Kraków,2,PLN,-
+Exchanged to 22 zl,Exchange,2023/7/28,POL,Kraków,0,EUR,from 5 EUR
+Kraków cathedral,Visiting,2023/7/28,POL,Kraków,22,PLN,-
+Kraków castle,Visiting,2023/7/28,POL,Kraków,0,PLN,-
+guness beer,Eating,2023/7/28,POL,Wrocław,26,PLN,-
+hot dog,Eating,2023/7/28,POL,Wrocław,8.5,PLN,-
+EU rail pass 15 days,Ticket,2023/7/29,POL,Wrocław,516,USD,-
 hot dog,Eating,2023/7/29,DEU,Leipzig,3.5,EUR,-
 beer,Eating,2023/7/29,DEU,Leipzig,1.79,EUR,-
 Meisen cathedral,Visiting,2023/7/29,DEU,Meisen,3,EUR,-
@@ -807,7 +807,7 @@ micheran company,Visiting,2023/8/10,FRA,Clermont-Ferrand,0,EUR,-
 Notre Dame Cathedral,Visiting,2023/8/10,FRA,Clermont-Ferrand,0,EUR,-
 Notre Dame Cathedral,Visiting,2023/8/10,FRA,Clermont-Ferrand,0,EUR,-
 Pau castle,Visiting,2023/8/11,FRA,Pau,0,EUR,-
-wine ,Eating,2023/8/11,FRA,La Reole,2.5,EUR,-
+wine ,Eating,2023/8/11,FRA,La Réole,2.5,EUR,-
 backpack,Shopping,2023/8/11,FRA,Bordeaux,5,EUR,-
 air Pillow,Shopping,2023/8/11,FRA,Bordeaux,13,EUR,-
 great bell,Heritage,2023/8/11,FRA,Bordeaux,0,EUR,-
@@ -849,10 +849,10 @@ fes royal palace,Visiting,2023/8/17,MAR,Fes,0,MAD,-
 the grave of merinideth,Overviewing,2023/8/17,MAR,Fes,0,MAD,-
 coffee,Eating,2023/8/18,MAR,Fes,10,MAD,-
 bread,Eating,2023/8/18,MAR,Fes,16,MAD,-
-dounats,Eating,2023/8/18,MAR,Meknes,16,MAD,-
-panini,Eating,2023/8/18,MAR,Meknes,34,MAD,-
-hot dog,Eating,2023/8/18,MAR,Meknes,6,MAD,-
-meeting up with marco,Accident,2023/8/18,MAR,Meknes,0,MAD,-
+dounats,Eating,2023/8/18,MAR,Meknès,16,MAD,-
+panini,Eating,2023/8/18,MAR,Meknès,34,MAD,-
+hot dog,Eating,2023/8/18,MAR,Meknès,6,MAD,-
+meeting up with marco,Accident,2023/8/18,MAR,Meknès,0,MAD,-
 kuskus,Eating,2023/8/19,MAR,Rabat,50,MAD,-
 Sale beach,Walking,2023/8/19,MAR,Sale,0,MAD,-
 hassan tower,Heritage,2023/8/19,MAR,Rabat,0,MAD,-
@@ -871,13 +871,13 @@ soda,Eating,2023/8/25,MAR,marrakech,10,MAD,-
 soda,Eating,2023/8/25,MAR,Ouarzazate,20,MAD,-
 tea,Eating,2023/8/26,MAR,Ouarzazate,5,MAD,-
 napolitan,Eating,2023/8/26,MAR,Errachidia,15,MAD,-
-panini,Eating,2023/8/27,MAR,bus,45,MAD,-
-panini,Eating,2023/8/28,MAR,Meknes,20,MAD,-
-coffee,Eating,2023/8/28,MAR,Meknes,15,MAD,-
+panini,Eating,2023/8/27,MAR,-,45,MAD,-
+panini,Eating,2023/8/28,MAR,Meknès,20,MAD,-
+coffee,Eating,2023/8/28,MAR,Meknès,15,MAD,-
 tea,Eating,2023/8/28,MAR,Oujda,10,MAD,-
 tajin,Eating,2023/8/29,MAR,Oujda,40,MAD,-
 juice,Eating,2023/8/29,MAR,Oujda,14,MAD,-
-beer + snack,Eating,2023/8/30,MAR,ferry,3.5,EUR,-
+beer + snack,Eating,2023/8/30,MAR,-,3.5,EUR,-
 nador beach,Walking,2023/8/30,MAR,nador,0,MAD,-
 Exchanged to 31 eur,Exchange,2023/8/30,MAR,nador,340,MAD,from 340 MAD
 missed deparute port,Accident,2023/8/30,MAR,nador,0,MAD,-
@@ -967,11 +967,11 @@ pompei heritage audio guide,Shopping,2023/9/17,ITA,Pompei,8,EUR,-
 coffee + water,Eating,2023/9/18,ITA,Pompei,5,EUR,-
 cola,Eating,2023/9/18,ITA,Salerno,2.5,EUR,-
 espresso,Eating,2023/9/18,ITA,Salerno,1.6,EUR,-
-dinner,Eating,2023/9/18,ITA,ferry,20,EUR,-
-dinner additional fee,Accident,2023/9/18,ITA,ferry,34,EUR,-
+dinner,Eating,2023/9/18,ITA,-,20,EUR,-
+dinner additional fee,Accident,2023/9/18,ITA,-,34,EUR,-
 45 min Ticket,Ticket,2023/9/18,ITA,Salerno,2.5,EUR,-
 salerno cathedral,Visiting,2023/9/18,ITA,Salerno,0,EUR,-
-breakfast,Eating,2023/9/18,ITA,ferry,10,EUR,-
+breakfast,Eating,2023/9/18,ITA,-,10,EUR,-
 Haircut,Haircut,2023/9/19,TUN,tunis,20,TND,-
 tea,Eating,2023/9/20,TUN,tunis,5,TND,-
 baldo museum,Visiting,2023/9/20,TUN,tunis,13,TND,-
@@ -1037,11 +1037,11 @@ bread,Eating,2023/9/30,GRC,Ioannina,3,EUR,-
 ioania archilogical museum,Visiting,2023/9/30,GRC,Ioannina,6,EUR,-
 ioania fortless,Visiting,2023/9/30,GRC,Ioannina,0,EUR,-
 lake ioania,Walking,2023/9/30,GRC,Ioannina,0,EUR,-
-Arc de Triomphe,Heritage,2023/10/1,GRC,Thessalonikii,0,EUR,-
-Thessalonikii cathedral,Visiting,2023/10/1,GRC,Thessalonikii,0,EUR,-
-Thessalonikii port,Walking,2023/10/1,GRC,Thessalonikii,0,EUR,-
-white tower,Heritage,2023/10/1,GRC,Thessalonikii,0,EUR,-
-Thessalonikii archelogical museum,Visiting,2023/10/1,GRC,Thessalonikii,8,EUR,-
+Arc de Triomphe,Heritage,2023/10/1,GRC,Thessaloníki,0,EUR,-
+Thessaloníki cathedral,Visiting,2023/10/1,GRC,Thessaloníki,0,EUR,-
+Thessaloníki port,Walking,2023/10/1,GRC,Thessaloníki,0,EUR,-
+white tower,Heritage,2023/10/1,GRC,Thessaloníki,0,EUR,-
+Thessaloníki archelogical museum,Visiting,2023/10/1,GRC,Thessaloníki,8,EUR,-
 beer,Eating,2023/10/2,MKD,Skopje,150,MKD,-
 tipical food,Eating,2023/10/2,MKD,Skopje,620,MKD,-
 bread,Eating,2023/10/2,MKD,Skopje,80,MKD,-
@@ -1105,15 +1105,15 @@ Feeling fatigued,Accident,2023/10/23,SRB,Beograd,0,EUR,-
 S sawa cathedral,Visiting,2023/10/23,SRB,Beograd,0,EUR,-
 S marco church,Visiting,2023/10/23,SRB,Beograd,0,EUR,-
 Beograd fortless,Visiting,2023/10/23,SRB,Beograd,0,EUR,-
-coffee and milk,Eating,2023/10/24,SRB,novi sad,200,RSD,-
-soup,Eating,2023/10/24,SRB,novi sad,300,RSD,-
-novi sad cathedral,Visiting,2023/10/24,SRB,novi sad,0,RSD,-
-donau river,Walking,2023/10/24,SRB,novi sad,0,RSD,-
-rested by the river,Accident,2023/10/24,SRB,novi sad,0,RSD,-
+coffee and milk,Eating,2023/10/24,SRB,Novi Sad,200,RSD,-
+soup,Eating,2023/10/24,SRB,Novi Sad,300,RSD,-
+Novi Sad cathedral,Visiting,2023/10/24,SRB,Novi Sad,0,RSD,-
+donau river,Walking,2023/10/24,SRB,Novi Sad,0,RSD,-
+rested by the river,Accident,2023/10/24,SRB,Novi Sad,0,RSD,-
 esspresso,Eating,2023/10/25,SRB,Beograd,155,RSD,-
-T-shirt,Shopping,2023/10/25,SRB,Nis,962,JPY,-
-Mediana heritage,Visiting,2023/10/26,SRB,Nis,500,RSD,-
-Gave 5 north irland currency to a student in UK,Accident,2023/10/26,SRB,Nis,0,RSD,-
+T-shirt,Shopping,2023/10/25,SRB,Niš,962,JPY,-
+Mediana heritage,Visiting,2023/10/26,SRB,Niš,500,RSD,-
+Gave 5 north irland currency to a student in UK,Accident,2023/10/26,SRB,Niš,0,RSD,-
 sofia  24 hour Ticket,Ticket,2023/10/27,BGR,Sofia,4.8,BGN,-
 humberger,Eating,2023/10/27,BGR,Sofia,8.5,BGN,-
 S Sofia church,Visiting,2023/10/27,BGR,Sofia,6,BGN,-
@@ -1128,29 +1128,29 @@ Exchanged to 245 rei,Exchange,2023/10/31,BGR,Ruse,0,EUR,from 50 EUR
 historical museum,Visiting,2023/11/1,ROU,Bucharest,20,RON,-
 Arc de Triomphe,Heritage,2023/11/1,ROU,Bucharest,0,RON,-
 musical hall,Heritage,2023/11/1,ROU,Bucharest,0,RON,-
-black church,Visiting,2023/11/1,ROU,Brasov,0,RON,-
-pizza,Eating,2023/11/1,ROU,Brasov,12,RON,-
+black church,Visiting,2023/11/1,ROU,Brașov,0,RON,-
+pizza,Eating,2023/11/1,ROU,Brașov,12,RON,-
 Pizza fried,Eating,2023/11/2,ROU,Sighisoara,10,RON,-
 coffee,Eating,2023/11/2,ROU,Sighisoara,4,RON,-
 Sighisoara fortless,Visiting,2023/11/2,ROU,Sighisoara,0,RON,-
 coffee,Eating,2023/11/3,ROU,Sibiu,5.5,RON,-
 Cluj-Napoca cathedral,Visiting,2023/11/3,ROU,Cluj-Napoca,0,RON,-
 Cluj-Napoca fortless,Visiting,2023/11/3,ROU,Cluj-Napoca,0,RON,-
-bread + cola,Eating,2023/11/5,ROU,lasi,9,RON,-
-Toilet,Toilet,2023/11/5,ROU,lasi,1,RON,-
-Chisiinau cathedral,Visiting,2023/11/6,MDA,Chisiinau,0,RON,-
-lake Chisiinau,Visiting,2023/11/6,MDA,Chisiinau,0,RON,-
-Arc de Triomphe,Heritage,2023/11/6,MDA,Chisiinau,0,RON,-
+bread + cola,Eating,2023/11/5,ROU,Iași,9,RON,-
+Toilet,Toilet,2023/11/5,ROU,Iași,1,RON,-
+Chișinău cathedral,Visiting,2023/11/6,MDA,Chișinău,0,RON,-
+lake Chișinău,Visiting,2023/11/6,MDA,Chișinău,0,RON,-
+Arc de Triomphe,Heritage,2023/11/6,MDA,Chișinău,0,RON,-
 bread,Eating,2023/11/7,MDA,Cahul,6,MDL,-
 espresso,Eating,2023/11/7,MDA,Cahul,14,MDL,-
 bread,Eating,2023/11/7,MDA,Cahul,12,MDL,-
 Toilet,Toilet,2023/11/7,MDA,Cahul,3,MDL,-
-esspresso,Eating,2023/11/8,ROU,Constanta,5,RON,-
-Constanta port,Walking,2023/11/8,ROU,Constanta,0,RON,-
-Constanta 24 hour Ticket,Ticket,2023/11/9,ROU,Constanta,10,RON,-
-Ethnographic Museum,Visiting,2023/11/9,ROU,Constanta,10,RON,-
-Constanta beach,Visiting,2023/11/9,ROU,Constanta,0,RON,-
-coffee and milk,Eating,2023/11/9,ROU,Constanta,6,RON,-
+esspresso,Eating,2023/11/8,ROU,Constanța,5,RON,-
+Constanța port,Walking,2023/11/8,ROU,Constanța,0,RON,-
+Constanța 24 hour Ticket,Ticket,2023/11/9,ROU,Constanța,10,RON,-
+Ethnographic Museum,Visiting,2023/11/9,ROU,Constanța,10,RON,-
+Constanța beach,Visiting,2023/11/9,ROU,Constanța,0,RON,-
+coffee and milk,Eating,2023/11/9,ROU,Constanța,6,RON,-
 throw my flifht Ticket to bayroot,Accident,2023/11/10,BGR,Barna,9470,JPY,-
 Shumen mosk,Visiting,2023/11/10,BGR,Shumen,0,BGN,-
 Barna 24 hour Ticket,Ticket,2023/11/10,BGR,Barna,4,BGN,-
@@ -1165,13 +1165,13 @@ kebab,Eating,2023/11/12,TUR,Istanbul,185,TRY,-
 cola,Eating,2023/11/12,TUR,Istanbul,40,TRY,-
 snacks,Eating,2023/11/12,TUR,Istanbul,15,TRY,-
 chay,Eating,2023/11/12,TUR,Istanbul,10,TRY,-
-electric cable,Shopping,2023/11/13,TUR,canakkale,100,TRY,-
-chay,Eating,2023/11/13,TUR,canakkale,7,TRY,-
-dinner,Eating,2023/11/13,TUR,canakkale,120,TRY,-
-snacks,Eating,2023/11/13,TUR,canakkale,30,TRY,-
-canakkale port,Walking,2023/11/13,TUR,canakkale,0,TRY,-
-Izmir transit card,Ticket,2023/11/14,TUR,izmir,70,TRY,-
-bag,Shopping,2023/11/15,TUR,izmir,300,TRY,-
+electric cable,Shopping,2023/11/13,TUR,Çanakkale,100,TRY,-
+chay,Eating,2023/11/13,TUR,Çanakkale,7,TRY,-
+dinner,Eating,2023/11/13,TUR,Çanakkale,120,TRY,-
+snacks,Eating,2023/11/13,TUR,Çanakkale,30,TRY,-
+Çanakkale port,Walking,2023/11/13,TUR,Çanakkale,0,TRY,-
+İzmir transit card,Ticket,2023/11/14,TUR,İzmir,70,TRY,-
+bag,Shopping,2023/11/15,TUR,İzmir,300,TRY,-
 S yohane cathedral,Visiting,2023/11/15,TUR,Seluuk,130,TRY,-
 chay,Eating,2023/11/15,TUR,Seluuk,5,TRY,-
 dinner,Eating,2023/11/15,TUR,Denizli,120,TRY,-
@@ -1180,7 +1180,7 @@ dinner,Eating,2023/11/16,TUR,Antalya,120,TRY,-
 pamukkale heritage,Visiting,2023/11/16,TUR,Pamukkale,700,TRY,-
 pamukkale Lime shelf,Nature,2023/11/16,TUR,Pamukkale,0,TRY,pamukkale heritage
 rain wear,Shopping,2023/11/16,TUR,Pamukkale,150,TRY,-
-broken the bus,Accident,2023/11/16,TUR,bus,0,TRY,-
+broken the bus,Accident,2023/11/16,TUR,-,0,TRY,-
 Turkiye ice cream,Eating,2023/11/17,TUR,Antalya,150,TRY,-
 bread,Eating,2023/11/17,TUR,Antalya,12,TRY,-
 dinner,Eating,2023/11/17,TUR,Antalya,90,TRY,rokanta
@@ -1386,18 +1386,18 @@ bread,Eating,2024/4/3,TUR,Istanbul,36,TRY,-
 simit ,Eating,2024/4/4,TUR,Istanbul,10,TRY,-
 kebab,Eating,2024/4/4,TUR,Bursa,60,TRY,-
 bread,Eating,2024/4/4,TUR,Bursa,20,TRY,-
-supermarket,Eating,2024/4/4,TUR,Eskisehir,20,TRY,-
-lokanta,Eating,2024/4/4,TUR,Eskisehir,175,TRY,-
-sweets,Eating,2024/4/4,TUR,Eskisehir,5,TRY,-
-chay,Eating,2024/4/5,TUR,Eskisehir,20,TRY,-
+supermarket,Eating,2024/4/4,TUR,Eskişehir,20,TRY,-
+lokanta,Eating,2024/4/4,TUR,Eskişehir,175,TRY,-
+sweets,Eating,2024/4/4,TUR,Eskişehir,5,TRY,-
+chay,Eating,2024/4/5,TUR,Eskişehir,20,TRY,-
 lokanta,Eating,2024/4/5,TUR,Ankara,100,TRY,-
 simit,Eating,2024/4/5,TUR,Ankara,10,TRY,-
 simit donauts,Eating,2024/4/5,TUR,Ankara,10,TRY,-
 meat,Eating,2024/4/5,TUR,Ankara,168.27,TRY,-
 simit,Eating,2024/4/6,TUR,Ankara,10,TRY,-
-lokanta,Eating,2024/4/6,TUR,corum,68,TRY,-
-sweets,Eating,2024/4/6,TUR,corum,25,TRY,-
-water,Eating,2024/4/7,TUR,corum,8,TRY,-
+lokanta,Eating,2024/4/6,TUR,Çorum,68,TRY,-
+sweets,Eating,2024/4/6,TUR,Çorum,25,TRY,-
+water,Eating,2024/4/7,TUR,Çorum,8,TRY,-
 pida and iran,Eating,2024/4/7,TUR,Amasya,135,TRY,-
 Toilet,Toilet,2024/4/7,TUR,Amasya,5,TRY,-
 Rock-cut tombs,Heritage,2024/4/7,TUR,Amasya,50,TRY,-
