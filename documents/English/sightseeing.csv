@@ -476,22 +476,22 @@ bread,Eating,2023/1/8,ARG,Corrientes,300,ARS,-
 along parana river,Walking,2023/1/8,ARG,Corrientes,0,ARS,-
 lunch,Eating,2023/1/10,ARG,Puerto Iguazu,1500,ARS,-
 Iguaz waterfall,Visiting,2023/1/10,ARG,Puerto Iguazu,5500,ARS,1USD = 255ARS
-Iguaz waterfall,Visiting,2023/1/10,BRA,fozz do Iguazu,86,BRL,-
-meeting up with madoka san,Accident,2023/1/11,PRY,Yguazu,0,PYG,-
-meeting up with the man returned south poke,Accident,2023/1/11,PRY,Yguazu,0,PYG,-
-ygazu Japanese regidence,Walking,2023/1/12,PRY,Yguazu,0,PYG,-
-lunch,Eating,2023/1/12,PRY,Yguazu,15000,PYG,-
-around minsyuku kobayashi,Walking,2023/1/12,PRY,Yguazu,0,PYG,-
-Japanese meal,Eating,2023/1/13,PRY,Yguazu,30000,PYG,-
-ito park,Walking,2023/1/13,PRY,Yguazu,0,PYG,-
+Iguaz waterfall,Visiting,2023/1/10,BRA,Foz do Iguaçu,86,BRL,-
+meeting up with madoka san,Accident,2023/1/11,PRY,Yguazú,0,PYG,-
+meeting up with the man returned south poke,Accident,2023/1/11,PRY,Yguazú,0,PYG,-
+ygazu Japanese regidence,Walking,2023/1/12,PRY,Yguazú,0,PYG,-
+lunch,Eating,2023/1/12,PRY,Yguazú,15000,PYG,-
+around minsyuku kobayashi,Walking,2023/1/12,PRY,Yguazú,0,PYG,-
+Japanese meal,Eating,2023/1/13,PRY,Yguazú,30000,PYG,-
+ito park,Walking,2023/1/13,PRY,Yguazú,0,PYG,-
 itaipu dam,Heritage,2023/1/14,PRY,itaipu,0,PYG,-
 Grilled Skewers,Eating,2023/1/15,PRY,itaipu,100,JPY,-
-Encarnacion beach,Walking,2023/1/15,PRY,Encarnacion,0,PYG,-
+Encarnación beach,Walking,2023/1/15,PRY,Encarnación,0,PYG,-
 Trinidad heritage,Visiting,2023/1/16,PRY,Trinidad,25000,PYG,-
 lunch,Eating,2023/1/16,PRY,Trinidad,20000,PYG,-
 ice cream,Eating,2023/1/16,PRY,Trinidad,5000,PYG,-
-lunch,Eating,2023/1/18,PRY,Ciudad de Asuncion,100000,PYG,-
-barubero museum,Visiting,2023/1/18,PRY,Ciudad de Asuncion,0,PYG,-
+lunch,Eating,2023/1/18,PRY,Ciudad de Asunción,100000,PYG,-
+barubero museum,Visiting,2023/1/18,PRY,Ciudad de Asunción,0,PYG,-
 Exchanged to ?? ARS,Exchange,2023/1/18,PRY,Ciudad de Asuncion,0,PYG,from 400000 to ?? ARS
 Exchanged to ?? ARS,Exchange,2023/1/20,ARG,Santa Fe de la Vera Cruz,0,USD,from 100USD 1USD = 360ARS
 Cashing from atm,Cashing,2023/1/20,ARG,Santa Fe de la Vera Cruz,0,ARS,10000ARS
@@ -521,7 +521,7 @@ water,Eating,2023/2/1,URY,Colonia del Sacramento,150,JPY,-
 water bottle,Shopping,2023/2/1,URY,Nueva Parmira,500,UYU,-
 Nueva Parmira beach,Walking,2023/2/2,URY,Nueva Parmira,0,UYU,-
 Florida cathedral,Visiting,2023/2/3,URY,Florida,0,UYU,-
-Punta del Este beach,Walking,2023/2/4,URY,Punta del Este beach,0,UYU,-
+Punta del Este beach,Walking,2023/2/4,URY,Punta del Este,0,UYU,-
 Cabo Polonio beach,Walking,2023/2/5,URY,Cabo Polonio,0,UYU,-
 entry Tax,Tax,2023/2/5,URY,Cabo Polonio,350,UYU,-
 Punta del Diablo,Walking,2023/2/6,URY,Punta del Diablo,0,UYU,-
@@ -532,10 +532,10 @@ dinner,Eating,2023/2/7,URY,Punta del Diablo,10,USD,-
 lunch,Eating,2023/2/9,BRA,Pelotas,700,JPY,-
 Pelotas beach,Walking,2023/2/9,BRA,Pelotas,0,JPY,-
 Porto Alegre beach,Walking,2023/2/10,BRA,Porto Alegre,0,JPY,-
-lunch,Eating,2023/2/12,BRA,Criciuma,18,BRL,-
-500ml juice,Eating,2023/2/12,BRA,Criciuma,8,BRL,-
-coffee,Eating,2023/2/13,BRA,Florianopolis,8,BRL,-
-Santa Catalina,Walking,2023/2/14,BRA,Florianopolis,0,BRL,-
+lunch,Eating,2023/2/12,BRA,Criciúma,18,BRL,-
+500ml juice,Eating,2023/2/12,BRA,Criciúma,8,BRL,-
+coffee,Eating,2023/2/13,BRA,Florianópolis,8,BRL,-
+Santa Catalina,Walking,2023/2/14,BRA,Florianópolis,0,BRL,-
 buffee,Eating,2023/2/16,BRA,Curitiba,16,BRL,-
 Japanese food,Eating,2023/2/17,BRA,Curitiba,20,BRL,-
 parana museum,Visiting,2023/2/17,BRA,Curitiba,0,BRL,-
@@ -545,6 +545,7 @@ lunch,Eating,2023/2/21,BRA,Campo Grande,28.9,BRL,-
 dinner,Eating,2023/2/21,BRA,Bonito,50,BRL,with yuranora san
 meeting up with yuranora san,Accident,2023/2/21,BRA,Bonito,0,BRL,-
 Blue cave Tour,Tour,2023/2/22,BRA,Bonito,110,BRL,-
+Pantanal Tropical Wetland,Walking,2023/2/24,BRA,Corumbá,0,BRL,-
 soba,Eating,2023/2/25,BRA,Campo Grande,35,BRL,-
 coffee,Eating,2023/2/28,BRA,Belo Horizonte,2.5,BRL,-
 chocolate,Eating,2023/2/28,BRA,Belo Horizonte,6,BRL,-
@@ -566,7 +567,7 @@ hospital,Accident,2023/3/16,ESP,Madrid,0,EUR,-
 dryer fee,Washing,2023/3/16,ESP,Madrid,5,EUR,-
 keeping bagage fee,Shopping,2023/3/17,ESP,Madrid,5,EUR,-
 navy museum,Visiting,2023/3/17,ESP,Madrid,3,EUR,-
-coffee,Eating,2023/3/18,ESP,Malaga,5,EUR,-
+coffee,Eating,2023/3/18,ESP,Málaga,5,EUR,-
 forign telephone,Accident,2023/3/19,ESP,Madrid,20000,JPY,-
 water,Eating,2023/3/20,ESP,Madrid,3.5,EUR,-
 hospital,Accident,2023/3/22,JPN,Kobe,0,JPY,-
@@ -633,7 +634,7 @@ turkie dish,Eating,2023/6/18,JPN,Kobe,1000,JPY,with my friend
 coffee,Eating,2023/6/18,JPN,Kobe,450,JPY,with my friend
 Kobe forign people museum,Visiting,2023/6/18,JPN,Kobe,2100,JPY,with my friend
 hospital,Accident,2023/6/19,JPN,Kobe,0,JPY,with my friend
-vetnam barger ,Shopping,2023/6/21,VNM,Ha Noi ,17100,VND,-
+vetnam barger ,Shopping,2023/6/21,VNM,Hà Nội,17100,VND,-
 Cashing from atm,Cashing,2023/6/22,GBR,London,0,GBP,20 GBP
 macdnard,Eating,2023/6/23,GBR,London,10,GBP,-
 Washing fee,Washing,2023/6/23,GBR,London,5,GBP,-
@@ -880,8 +881,8 @@ beer + snack,Eating,2023/8/30,MAR,ferry,3.5,EUR,-
 nador beach,Walking,2023/8/30,MAR,nador,0,MAD,-
 Exchanged to 31 eur,Exchange,2023/8/30,MAR,nador,340,MAD,from 340 MAD
 missed deparute port,Accident,2023/8/30,MAR,nador,0,MAD,-
-Almeria cathedral,Visiting,2023/8/31,ESP,Almeria,0,MAD,-
-Almeria beach,Walking,2023/8/31,ESP,Almeria,0,MAD,-
+Almería cathedral,Visiting,2023/8/31,ESP,Almería,0,MAD,-
+Almería beach,Walking,2023/8/31,ESP,Almería,0,MAD,-
 arbaisin overviewing,Walking,2023/8/31,ESP,Granada,0,MAD,-
 granada cathedral,Visiting,2023/8/31,ESP,Granada,0,MAD,-
 paellia,Eating,2023/9/2,ESP,Barcelona,11.8,EUR,-
