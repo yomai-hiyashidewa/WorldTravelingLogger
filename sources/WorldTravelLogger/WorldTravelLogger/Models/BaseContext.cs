@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Security.AccessControl;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Markup.Localizer;
+using static System.Net.Mime.MediaTypeNames;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WorldTravelLogger.Models
@@ -33,7 +35,7 @@ namespace WorldTravelLogger.Models
         {
             date_ = date;
             country_ = country;
-            region_ = region;
+            region_ = ConvertUpperStringOnlyTop(region);
             price_ = price;
             currency_ = currency;
             memo_ = memo;
@@ -82,6 +84,18 @@ namespace WorldTravelLogger.Models
             get;
             private set;
 
+        }
+
+        protected string ConvertUpperStringOnlyTop(string? str)
+        {
+            if (!string.IsNullOrWhiteSpace(str))
+            {
+                return char.ToUpper(str[0]) + str.Substring(1);
+            }
+            else
+            {
+                return str;
+            }
         }
 
         public void ConvertPrice(ExchangeRater rater)

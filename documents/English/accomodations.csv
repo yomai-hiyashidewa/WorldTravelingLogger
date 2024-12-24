@@ -1,5 +1,5 @@
 ﻿date,country,region,accomodation type,price,currency,memo
-2022/5/16,JPN,Sanda,ParentsHouse,0,JPY,-
+2022/5/16,JPN,Kobe,ParentsHouse,0,JPY,-
 2022/5/17,UNK,-,Airplane,0,JPY,-
 2022/5/18,AUS,Sydney,Domitory,3165,JPY,-
 2022/5/19,AUS,katoomba,Domitory,26.5,AUD,-
@@ -7,23 +7,23 @@
 2022/5/21,AUS,-,Bus,0,JPY,-
 2022/5/22,AUS,Melbourne,SingleRoom,50,AUD,-
 2022/5/23,AUS,Melbourne,Domitory,30,AUD,-
-2022/5/24,AUS,philip island,Domitory,33.75,AUD,-
-2022/5/25,AUS,philip island,Domitory,33.75,AUD,-
+2022/5/24,AUS,Island Philip,Domitory,33.75,AUD,-
+2022/5/25,AUS,Island Philip,Domitory,33.75,AUD,-
 2022/5/26,AUS,Melbourne,Domitory,25.11,AUD,-
 2022/5/27,AUS,Adelaide,Domitory,28.24,AUD,-
 2022/5/28,AUS,Adelaide,SingleRoom,89,AUD,-
 2022/5/29,AUS,Adelaide,Domitory,26.99,AUD,-
 2022/5/30,AUS,-,Bus,0,JPY,-
-2022/5/31,AUS,Alice springs,Domitory,31,AUD,-
-2022/6/1,AUS,Alice springs,Domitory,31,AUD,-
-2022/6/2,AUS,Alice springs,Domitory,31,AUD,-
+2022/5/31,AUS,Alice Springs,Domitory,31,AUD,-
+2022/6/1,AUS,Alice Springs,Domitory,31,AUD,-
+2022/6/2,AUS,Alice Springs,Domitory,31,AUD,-
 2022/6/3,AUS,-,Bus,0,JPY,-
 2022/6/4,AUS,darwin,Domitory,32.4,AUD,-
 2022/6/5,AUS,darwin,Domitory,32.4,AUD,-
 2022/6/6,AUS,darwin,Domitory,32.4,AUD,-
 2022/6/7,AUS,cairns,Domitory,20.16,AUD,-
 2022/6/8,AUS,cairns,Domitory,22,AUD,-
-2022/6/9,AUS,palm cove beach,Domitory,43,AUD,-
+2022/6/9,AUS,palm cove,Domitory,43,AUD,-
 2022/6/10,AUS,cairns,Domitory,22,AUD,-
 2022/6/11,AUS,cairns,Domitory,22,AUD,-
 2022/6/12,AUS,townsville,Domitory,27,AUD,-
@@ -41,22 +41,22 @@
 2022/6/24,AUS,Sydney,Domitory,23.49,AUD,-
 2022/6/25,AUS,Sydney,Domitory,23.49,AUD,-
 2022/6/26,AUS,Sydney,Domitory,32.76,AUD,-
-2022/6/27,JPN,Sanda,ParentsHouse,0,JPY,-
-2022/6/28,JPN,Sanda,ParentsHouse,0,JPY,-
-2022/6/29,JPN,Sanda,ParentsHouse,0,JPY,-
-2022/6/30,JPN,Sanda,ParentsHouse,0,JPY,-
+2022/6/27,JPN,Kobe,ParentsHouse,0,JPY,-
+2022/6/28,JPN,Kobe,ParentsHouse,0,JPY,-
+2022/6/29,JPN,Kobe,ParentsHouse,0,JPY,-
+2022/6/30,JPN,Kobe,ParentsHouse,0,JPY,-
 2022/7/1,JPN,-,Ferry,0,JPY,-
 2022/7/2,JPN,Hakata,Domitory,2640,JPY,-
 2022/7/3,JPN,-,Ferry,0,JPY,-
-2022/7/4,JPN,Sanda,ParentsHouse,0,JPY,-
-2022/7/5,JPN,Sanda,ParentsHouse,0,JPY,-
-2022/7/6,JPN,Sanda,ParentsHouse,0,JPY,-
-2022/7/7,JPN,Sanda,ParentsHouse,0,JPY,-
+2022/7/4,JPN,Kobe,ParentsHouse,0,JPY,-
+2022/7/5,JPN,Kobe,ParentsHouse,0,JPY,-
+2022/7/6,JPN,Kobe,ParentsHouse,0,JPY,-
+2022/7/7,JPN,Kobe,ParentsHouse,0,JPY,-
 2022/7/8,JPN,Toyoka,Domitory,2673,JPY,-
 2022/7/9,JPN,Toyoka,Domitory,2100,JPY,with my firend
-2022/7/10,JPN,Sanda,ParentsHouse,0,JPY,-
-2022/7/11,JPN,Sanda,ParentsHouse,0,JPY,-
-2022/7/12,JPN,Sanda,ParentsHouse,0,JPY,-
+2022/7/10,JPN,Kobe,ParentsHouse,0,JPY,-
+2022/7/11,JPN,Kobe,ParentsHouse,0,JPY,-
+2022/7/12,JPN,Kobe,ParentsHouse,0,JPY,-
 2022/7/13,USA,Anchorage,Domitory,59.83,USD,Airplane night
 2022/7/14,USA,Anchorage,SingleRoom,150,USD,-
 2022/7/15,USA,Anchorage,SingleRoom,150,USD,-
@@ -128,8 +128,8 @@
 2022/9/19,NIC,Leon,Domitory,6,USD,-
 2022/9/20,NIC,Managua,Domitory,11,USD,-
 2022/9/21,NIC,Guranada,Domitory,6,USD,-
-2022/9/22,NIC,Ometepe island,SingleRoom,8,USD,-
-2022/9/23,NIC,Ometepe island,SingleRoom,8,USD,-
+2022/9/22,NIC,Island Ometepe,SingleRoom,8,USD,-
+2022/9/23,NIC,Island Ometepe,SingleRoom,8,USD,-
 2022/9/24,CRI,Liberia,Domitory,10,USD,-
 2022/9/25,CRI,Puntarenas,SingleRoom,21.64,USD,-
 2022/9/26,CRI,Alajuela,SingleRoom,30,USD,-
@@ -149,7 +149,7 @@
 2022/10/10,COL,Bogota,Domitory,24300,COP,-
 2022/10/11,COL,Villa de Leyva,Domitory,5.05,USD,-
 2022/10/12,COL,Villa de Leyva,Domitory,5.05,USD,-
-2022/10/13,COL,Zipaquirá ,SingleRoom,14.22,USD,-
+2022/10/13,COL,Zipaquirá,SingleRoom,14.22,USD,-
 2022/10/14,COL,Melgar,SingleRoom,200000,COP,be introduced from police
 2022/10/15,COL,Ibage,Domitory,56000,COP,-
 2022/10/16,COL,Ibage,Domitory,56000,COP,-
@@ -239,10 +239,10 @@
 2023/1/8,ARG,Corrientes,SingleRoom,2400,ARS,-
 2023/1/9,ARG,Puerto Iguazu,Domitory,1238,ARS,-
 2023/1/10,ARG,Puerto Iguazu,Domitory,1238,ARS,-
-2023/1/11,PRY,Yguazú ,SingleRoom,20,USD,Minsyuku Kobayashi
-2023/1/12,PRY,Yguazú ,SingleRoom,20,USD,Minsyuku Kobayashi
-2023/1/13,PRY,Yguazú ,SingleRoom,20,USD,Minsyuku Kobayashi
-2023/1/14,PRY,Yguazú ,SingleRoom,10,USD,Pension Sonoda
+2023/1/11,PRY,Yguazú,SingleRoom,20,USD,Minsyuku Kobayashi
+2023/1/12,PRY,Yguazú,SingleRoom,20,USD,Minsyuku Kobayashi
+2023/1/13,PRY,Yguazú,SingleRoom,20,USD,Minsyuku Kobayashi
+2023/1/14,PRY,Yguazú,SingleRoom,10,USD,Pension Sonoda
 2023/1/15,PRY,Encarnación,Domitory,7.2,USD,-
 2023/1/16,PRY,Encarnación,Domitory,7.2,USD,-
 2023/1/17,PRY,Ciudad de Asunción,Domitory,9.5,USD,-
@@ -257,8 +257,8 @@
 2023/1/26,ARG,Mar del Plata,Domitory,1702,ARS,-
 2023/1/27,ARG,Mar del Plata,Domitory,500,ARS,-
 2023/1/28,ARG,La Plata,SingleRoom,7600,ARS,-
-2023/1/29,ARG,Ciudad Autónoma de Buenos Aires,Domitory,1184,ARS,-
-2023/1/30,ARG,Ciudad Autónoma de Buenos Aires,Domitory,1184,ARS,-
+2023/1/29,ARG,Buenos Aires,Domitory,1184,ARS,-
+2023/1/30,ARG,Buenos Aires,Domitory,1184,ARS,-
 2023/1/31,URY,Colonia del Sacramento,Domitory,17.665,USD,-
 2023/2/1,URY,Colonia del Sacramento,Domitory,17.665,USD,-
 2023/2/2,URY,Montevideo,Domitory,14.5,USD,-
@@ -309,73 +309,73 @@
 2023/3/19,ESP,Madrid,Domitory,18.2,EUR,-
 2023/3/20,UNK,-,Airplane,0,JPY,-
 2023/3/21,UNK,-,Airplane,0,JPY,-
-2023/3/22,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/3/23,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/3/24,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/3/25,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/3/26,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/3/27,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/3/28,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/3/29,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/3/30,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/3/31,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/1,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/2,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/3,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/4,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/5,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/6,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/7,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/8,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/9,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/10,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/11,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/12,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/13,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/14,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/15,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/16,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/17,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/18,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/19,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/20,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/21,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/22,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/23,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/24,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/25,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/26,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/27,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/28,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/29,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/4/30,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/1,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/2,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/3,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/4,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/5,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/6,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/7,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/8,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/9,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/10,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/11,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/12,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/13,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/14,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/15,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/16,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/17,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/18,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/19,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/20,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/21,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/22,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/23,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/24,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/25,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/26,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/5/27,JPN,Sanda,ParentsHouse,0,JPY,-
+2023/3/22,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/3/23,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/3/24,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/3/25,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/3/26,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/3/27,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/3/28,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/3/29,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/3/30,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/3/31,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/1,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/2,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/3,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/4,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/5,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/6,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/7,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/8,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/9,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/10,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/11,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/12,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/13,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/14,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/15,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/16,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/17,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/18,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/19,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/20,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/21,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/22,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/23,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/24,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/25,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/26,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/27,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/28,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/29,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/4/30,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/1,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/2,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/3,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/4,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/5,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/6,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/7,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/8,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/9,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/10,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/11,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/12,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/13,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/14,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/15,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/16,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/17,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/18,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/19,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/20,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/21,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/22,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/23,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/24,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/25,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/26,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/5/27,JPN,Kobe,ParentsHouse,0,JPY,-
 2023/5/28,JPN,Osaka,Airport,0,JPY,-
 2023/5/29,TWN,Taipei,Domitory,2134,JPY,-
 2023/5/30,TWN,Taipei,Domitory,2134,JPY,-
@@ -391,15 +391,15 @@
 2023/6/9,PHL,Angeles,SingleRoom,1586,JPY,-
 2023/6/10,PHL,Balanga,SingleRoom,1425,JPY,-
 2023/6/11,PHL,Manila,Domitory,1597,JPY,-
-2023/6/12,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/6/13,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/6/14,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/6/15,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/6/16,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/6/17,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/6/18,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/6/19,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/6/20,JPN,Sanda,ParentsHouse,0,JPY,-
+2023/6/12,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/6/13,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/6/14,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/6/15,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/6/16,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/6/17,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/6/18,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/6/19,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/6/20,JPN,Kobe,ParentsHouse,0,JPY,-
 2023/6/21,VNM,Hà Nội ,SingleRoom,1723,JPY,-
 2023/6/22,GBR,London,Domitory,18.71,EUR,-
 2023/6/23,GBR,London,Airport,0,EUR,-
@@ -579,8 +579,8 @@
 2023/12/14,JPN,Beppu,Domitory,2200,JPY,-
 2023/12/15,JPN,Matsuyama,Domitory,2397,JPY,-
 2023/12/16,JPN,Onomichi,Domitory,3000,JPY,-
-2023/12/17,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/12/18,JPN,Sanda,ParentsHouse,0,JPY,-
+2023/12/17,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/12/18,JPN,Kobe,ParentsHouse,0,JPY,-
 2023/12/19,JPN,Nagoya,Domitory,2559,JPY,-
 2023/12/20,JPN,Nagoya,Domitory,2559,JPY,-
 2023/12/21,JPN,Kofu,Domitory,2690,JPY,-
@@ -588,21 +588,21 @@
 2023/12/23,JPN,Kamakura,Domitory,3022,JPY,-
 2023/12/24,JPN,Odawara,Domitory,3089,JPY,-
 2023/12/25,JPN,Hakone,Domitory,2999,JPY,-
-2023/12/26,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/12/27,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/12/28,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/12/29,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/12/30,JPN,Sanda,ParentsHouse,0,JPY,-
-2023/12/31,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/1/1,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/1/2,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/1/3,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/1/4,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/1/5,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/1/6,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/1/7,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/1/8,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/1/9,JPN,Sanda,ParentsHouse,0,JPY,-
+2023/12/26,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/12/27,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/12/28,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/12/29,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/12/30,JPN,Kobe,ParentsHouse,0,JPY,-
+2023/12/31,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/1/1,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/1/2,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/1/3,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/1/4,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/1/5,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/1/6,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/1/7,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/1/8,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/1/9,JPN,Kobe,ParentsHouse,0,JPY,-
 2024/1/10,JPN,Atami,Hotel,0,JPY,-
 2024/1/11,JPN,Atami,Hotel,0,JPY,-
 2024/1/12,JPN,Atami,Hotel,0,JPY,-
@@ -654,37 +654,37 @@
 2024/2/27,JPN,Atami,Hotel,0,JPY,-
 2024/2/28,JPN,Atami,Hotel,0,JPY,-
 2024/2/29,JPN,Yokohama,Domitory,2078,JPY,-
-2024/3/1,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/2,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/3,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/4,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/5,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/6,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/7,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/8,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/9,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/10,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/11,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/12,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/13,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/14,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/15,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/16,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/17,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/18,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/19,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/20,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/21,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/22,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/23,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/24,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/25,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/26,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/27,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/28,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/29,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/30,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/3/31,JPN,Sanda,ParentsHouse,0,JPY,-
+2024/3/1,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/2,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/3,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/4,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/5,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/6,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/7,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/8,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/9,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/10,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/11,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/12,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/13,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/14,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/15,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/16,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/17,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/18,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/19,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/20,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/21,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/22,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/23,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/24,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/25,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/26,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/27,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/28,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/29,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/30,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/3/31,JPN,Kobe,ParentsHouse,0,JPY,-
 2024/4/1,JPN,Hiroshima,Domitory,1944,JPY,-
 2024/4/2,UNK,-,Airplane,0,JPY,-
 2024/4/3,TUR,istanbul,Domitory,350,TRY,-
@@ -704,13 +704,13 @@
 2024/4/17,IND,New Delhi,Domitory,1106,INR,-
 2024/4/18,IND,New Delhi,Domitory,1106,INR,-
 2024/4/19,IND,New Delhi,Airport,0,JPY,-
-2024/4/20,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/4/21,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/4/22,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/4/23,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/4/24,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/4/25,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/4/26,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/4/27,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/4/28,JPN,Sanda,ParentsHouse,0,JPY,-
-2024/4/29,JPN,Sanda,ParentsHouse,0,JPY,-
+2024/4/20,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/4/21,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/4/22,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/4/23,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/4/24,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/4/25,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/4/26,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/4/27,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/4/28,JPN,Kobe,ParentsHouse,0,JPY,-
+2024/4/29,JPN,Kobe,ParentsHouse,0,JPY,-

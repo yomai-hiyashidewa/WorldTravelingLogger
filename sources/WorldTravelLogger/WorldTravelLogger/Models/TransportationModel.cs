@@ -51,7 +51,7 @@ namespace WorldTravelLogger.Models
             startPlace_ = startPlace;                  // 開始場所
             endDate_ = endDate;                         // 終了日時
             endCountry_ = endCountry;                  // 終了国
-            endRegion_ = endRegion;                              // 終了地域
+            endRegion_ = ConvertUpperStringOnlyTop(endRegion); // 終了地域
             endPlace_ = endPlace;                  // 終了場所
             distance_ = distance;                                // 移動距離(km)
             time_ = time;                                      // 移動時間(min)

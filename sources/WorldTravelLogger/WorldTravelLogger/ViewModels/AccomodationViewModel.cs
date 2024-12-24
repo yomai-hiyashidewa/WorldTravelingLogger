@@ -54,7 +54,14 @@ namespace WorldTravelLogger.ViewModels
         {
 
             get { return list_.CurrentAccomodationtype; }
-            set { list_.CurrentAccomodationtype = value; }
+            set {
+                if(list_.CurrentAccomodationtype != value)
+                {
+                    list_.CurrentAccomodationtype = value;
+                    this.RaisePropertyChanged("Accomodations");
+                }
+                 
+            }
 
         }
 

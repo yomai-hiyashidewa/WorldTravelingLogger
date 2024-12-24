@@ -282,9 +282,8 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                var cm = new CountryModel(control_.CurrentCountryType, model_.ImageDir7);
+                var cm = new CountryModel(control_.CurrentCountryType, model_.ImageDir);
                 return cm.ImagePath;
-                
             }
         }
 
