@@ -125,11 +125,7 @@ namespace WorldTravelLogger.Models
                 if (isRegionMode_ != value)
                 {
                     isRegionMode_ = value;
-
-
-                    FireControlChanged();
-
-
+                    FireRegionChanged();
                 }
             }
         }
