@@ -236,6 +236,12 @@ namespace WorldTravelLogger.Models
             controllModel_.InitSetDate(DateTime.Now, DateTime.Now);
             controllModel_.InitCalcDate(DateTime.Now, DateTime.Now);
             controllModel_.ControlChanged_ += ControllModel__ControlChanged_;
+            controllModel_.RegionChanged_ += ControllModel__RegionChanged_;
+        }
+
+        private void ControllModel__RegionChanged_(object? sender, EventArgs e)
+        {
+            CalcRegionAll();
         }
 
         private void ControllModel__ControlChanged_(object? sender, EventArgs e)
@@ -441,6 +447,27 @@ namespace WorldTravelLogger.Models
             }
             CalcApplication();
 
+        }
+
+        private void CalcRegionAll()
+        {
+            if (ReadyAccomodations)
+            {
+                accomodationList_.CalcRegion(controllModel_);
+            }
+            if (ReadyTransportations)
+            {
+                //transportationList_.CalcModels(controllModel_);
+            }
+            if (ReadySightseeings)
+            {
+                //sightSeeingList_.CalcModels(controllModel_);
+            }
+            if (ReadyOthers)
+            {
+                //otherList_.CalcModels(controllModel_);
+            }
+            //CalcApplication();
         }
 
         public CostModel GetCostModel()

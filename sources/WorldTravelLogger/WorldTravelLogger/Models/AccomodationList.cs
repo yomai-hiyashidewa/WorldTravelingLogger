@@ -12,6 +12,10 @@ namespace WorldTravelLogger.Models
         private List<AccomodationModel> calcList_;
         private Dictionary<AccomodationType, AccomodationTypeModel> calcDic_;
 
+        private List<AccomodationModel> calcRegionList_;
+        private Dictionary<AccomodationType, AccomodationTypeModel> calcRegionDic_;
+
+
         public AccomodationType CurrentAccomodationtype { get; set; }
 
         public override bool IsLoaded
@@ -31,6 +35,8 @@ namespace WorldTravelLogger.Models
             list_ = new List<AccomodationModel>();
             calcList_ = new List<AccomodationModel>();
             calcDic_ = new Dictionary<AccomodationType, AccomodationTypeModel>();
+            calcRegionList_ = new List<AccomodationModel>();
+            calcRegionDic_ = new Dictionary<AccomodationType, AccomodationTypeModel>();
         }
 
         public AccomodationModel[] GetArray()
@@ -198,6 +204,33 @@ namespace WorldTravelLogger.Models
            
         }
 
+        private void SetCalcDic(List<AccomodationModel> list, Dictionary<AccomodationType,AccomodationTypeModel> dic)
+        {
+            foreach (var model in list)
+            {
+
+                AccomodationTypeModel tModel;
+                if (dic.TryGetValue(model.Accomodation, out tModel))
+                {
+                    tModel.Set(model.JPYPrice);
+                }
+                else
+                {
+                    tModel = new AccomodationTypeModel(model.Accomodation);
+                    tModel.Set(model.JPYPrice);
+                    dic.Add(model.Accomodation, tModel);
+                }
+            }
+        }
+
+        private void SetCurrentAccomodationType(Dictionary<AccomodationType,AccomodationTypeModel> dic)
+        {
+            if (dic.Count >= 0 && !dic.ContainsKey(CurrentAccomodationtype))
+            {
+                CurrentAccomodationtype = dic.Keys.FirstOrDefault();
+            }
+        }
+
         public override void CalcModels(ControlModel control)
         {
             calcList_.Clear();
@@ -206,30 +239,27 @@ namespace WorldTravelLogger.Models
             {
                 calcList_.Add(model);
             }
-            foreach (var model in calcList_)
-            {
-               
-                AccomodationTypeModel tModel;
-                if (calcDic_.TryGetValue(model.Accomodation, out tModel))
-                {
-                    tModel.Set(model.JPYPrice);
-                }
-                else
-                {
-                    tModel = new AccomodationTypeModel(model.Accomodation);
-                    tModel.Set(model.JPYPrice);
-                    calcDic_.Add(model.Accomodation, tModel);
-                }
-            }
-            if (calcDic_.Count >= 0 && !calcDic_.ContainsKey(CurrentAccomodationtype))
-            {
-                CurrentAccomodationtype = calcDic_.Keys.FirstOrDefault();
-            }
+            SetCalcDic(calcList_, calcDic_);
+            SetCurrentAccomodationType(calcDic_);
             base.FireListChanged();
 
         }
 
-        
+        public override void CalcRegion(ControlModel control)
+        {
+            calcRegionList_.Clear();
+            calcRegionDic_.Clear();
+            foreach(var model in calcList_.Where(m => m.Region == control.CurrentRegion))
+            {
+                calcRegionList_.Add(model);
+            }
+            SetCalcDic(calcRegionList_, calcRegionDic_);
+            SetCurrentAccomodationType(calcRegionDic_);
+            base.FireListChanged();
+
+        }
+
+
 
         public AccomodationTypeModel[] GetTypeArray()
         {

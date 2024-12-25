@@ -40,6 +40,10 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("IsWorld");
             this.RaisePropertyChanged("IsWithJapan");
             this.RaisePropertyChanged("IsCountryMode");
+            this.RaisePropertyChanged("IsOnlyBorder");
+            this.RaisePropertyChanged("IsRegion");
+            this.RaisePropertyChanged("IsNotRegion");
+
             this.RaisePropertyChanged("CurrentCountry");
             this.RaisePropertyChanged("IsWithCrossBorder");
             this.RaisePropertyChanged("StartDate");
@@ -99,6 +103,37 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
+        public bool IsOnlyBorder
+        {
+            get { 
+                return control_.IsOnlyBorder; 
+            }
+            set
+            {
+                control_.IsOnlyBorder = value;
+            }
+        }
+
+        public bool IsRegion
+        {
+            get 
+            {
+                return control_.IsRegion;
+            }
+            set
+            {
+                control_.IsRegion = value;
+                CurrentRegion = Regions.FirstOrDefault();
+            }
+        }
+
+        public bool IsNotRegion
+        {
+            get
+            {
+                return !control_.IsRegion;
+            }
+        }
 
 
         public CountryType CurrentCountry
@@ -111,6 +146,18 @@ namespace WorldTravelLogger.ViewModels
             set
             {
                 control_.CurrentCountryType = value;
+            }
+        }
+
+        public string CurrentRegion
+        {
+            get
+            {
+                return control_.CurrentRegion;
+            }
+            set
+            {
+                control_.CurrentRegion = value;
             }
         }
 

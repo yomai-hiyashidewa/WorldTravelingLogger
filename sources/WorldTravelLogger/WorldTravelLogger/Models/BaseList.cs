@@ -375,6 +375,8 @@ namespace WorldTravelLogger.Models
         // memo interfaceで実装すべきかも
         public abstract void CalcModels(ControlModel control);
 
+        public abstract void CalcRegion(ControlModel control);
+
        
         public abstract double TotalCost { get; }
 

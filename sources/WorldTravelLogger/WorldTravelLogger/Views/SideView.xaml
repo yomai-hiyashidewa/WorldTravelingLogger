@@ -49,11 +49,18 @@
                     <RowDefinition Height="8*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
                 <TextBlock Grid.Column="0" HorizontalAlignment="Left" 
            VerticalAlignment="Center" FontSize="20"
            FontWeight="Bold"
            Text="{Binding TotalCalcCountries}"
            />
+                    <CheckBox Grid.Column="1" HorizontalAlignment="Right" VerticalAlignment="Top" Content="only border" IsChecked="{Binding IsOnlyBorder,Mode=TwoWay}"/>
+                </Grid>
 
                 <ListView Grid.Row="1" ItemsSource="{Binding CountryModels}" >
                     <ListView.ItemTemplate>
@@ -90,6 +97,7 @@
                     </ComboBox>
                     <CheckBox Content="with cross border" FontSize="13" IsChecked="{Binding IsWithCrossBorder,Mode=TwoWay}"/>
                     <TextBlock FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding RegionsCount}"/>
+                    <CheckBox FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Content="region" IsChecked="{Binding IsRegion,Mode=TwoWay}"/>
                     <GroupBox Header="Excange Rate">
                         <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding ExchangeRates}">
                             <DataGrid.Columns>
@@ -109,7 +117,9 @@
                     <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Image Source="{Binding CountryFlagPath}"/>
                     </Border>
-                    <ListView Grid.Row="1" ItemsSource="{Binding Regions}"/>
+                    <ListView Grid.Row="1" ItemsSource="{Binding Regions}" Visibility="{Binding IsNotRegion,Converter={StaticResource BooleanToVisibility}}"/>
+                    <ComboBox Grid.Row="1" HorizontalAlignment="Right" VerticalAlignment="Top" ItemsSource="{Binding Regions}" SelectedItem="{Binding CurrentRegion,Mode=TwoWay}"
+                              Visibility="{Binding IsRegion,Converter={StaticResource BooleanToVisibility} }"/>
                 </Grid>
 
             </Grid>

@@ -20,6 +20,8 @@ namespace WorldTravelLogger.Models
 
         private bool isWorldMode_;
         private bool isWithJapan_;
+        private bool isOnlyBorder_;
+        private bool isRegionMode_;
 
 
         private bool isWithAirplane_;
@@ -34,8 +36,10 @@ namespace WorldTravelLogger.Models
         private DateTime endDate_;
 
         private CurrencyType currentMajorCurrencyType_;
+        private string currentRegion_;
 
         public event EventHandler ControlChanged_;
+        public event EventHandler RegionChanged_;
 
         public ControlModel()
         {
@@ -44,19 +48,30 @@ namespace WorldTravelLogger.Models
             isWithJapan_ = true;
             isWithInsurance_ = true;
             isWithCrossBorder_ = true;
+            isOnlyBorder_ = false;
+            isRegionMode_ = false;
+            currentRegion_ = null;
             startDate_ = new DateTime(2022, 5, 16);
             endDate_ = new DateTime(2024, 5, 1);
             currentCountryType_ = CountryType.JPN;
             currentMajorCurrencyType_ = CurrencyType.JPY;
         }
 
-       
+
 
         private void FireControlChanged()
         {
             if (ControlChanged_ != null)
             {
                 ControlChanged_.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        private void FireRegionChanged()
+        {
+            if (RegionChanged_ != null)
+            {
+                RegionChanged_.Invoke(this, EventArgs.Empty);
             }
         }
 
@@ -85,6 +100,36 @@ namespace WorldTravelLogger.Models
                     isWorldMode_ = value;
                     InitDate();
                     FireControlChanged();
+                }
+            }
+        }
+
+        public bool IsOnlyBorder
+        {
+            get { return isOnlyBorder_; }
+            set
+            {
+                if (isOnlyBorder_ != value)
+                {
+                    isOnlyBorder_ = value;
+                    FireControlChanged();
+                }
+            }
+        }
+
+        public bool IsRegion
+        {
+            get { return isRegionMode_; }
+            set
+            {
+                if (isRegionMode_ != value)
+                {
+                    isRegionMode_ = value;
+
+
+                    FireControlChanged();
+
+
                 }
             }
         }
@@ -148,6 +193,22 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        public string CurrentRegion
+        {
+            get
+            {
+                return currentRegion_;
+            }
+            set
+            {
+                if (currentRegion_ != value)
+                {
+                    currentRegion_ = value;
+                    FireRegionChanged();
+                }
+            }
+        }
+
         public DateTime StartDate
         {
             get
@@ -193,7 +254,7 @@ namespace WorldTravelLogger.Models
 
 
 
-      
+
 
         public void InitDate()
         {
@@ -297,6 +358,11 @@ namespace WorldTravelLogger.Models
             {
                 return false;
             }
+            // 世界モードで国境のみの時は国が違ったら落とす
+            else if (isWorldMode_ && isOnlyBorder_ && startCountry == endCountry)
+            {
+                return false;
+            }
             // 国モードで国境越えがOFFの時国境越えは落とす
             else if (!isWorldMode_ && !isWithCrossBorder_ && startCountry != endCountry)
             {
@@ -308,15 +374,15 @@ namespace WorldTravelLogger.Models
                 return false;
             }
             // 国境越えで到着国が選択国なら到着国を選択
-            else if(startCountry != endCountry && endCountry == currentCountryType_)
+            else if (startCountry != endCountry && endCountry == currentCountryType_)
             {
                 country = endCountry;
             }
             // 出発日と到着日が違う場合に到着日が選択範囲に入っているなら到着日を選択
-          
-            if(startDate != endDate)
+
+            if (startDate != endDate)
             {
-                if(startDate_ <= endDate && endDate <= endDate_)
+                if (startDate_ <= endDate && endDate <= endDate_)
                 {
                     date = endDate;
                 }
@@ -327,11 +393,11 @@ namespace WorldTravelLogger.Models
 
         public bool CheckControl(SightseeigType type, DateTime date, CountryType country)
         {
-            if(!isWithInsurance_ && type == SightseeigType.Insurance)
+            if (!isWithInsurance_ && type == SightseeigType.Insurance)
             {
                 return false;
             }
-            return CheckControl(date,country);
+            return CheckControl(date, country);
         }
     }
 
