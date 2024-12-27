@@ -11,12 +11,15 @@ namespace WorldTravelLogger.ViewModels
     public class SightSeeingViewModel : ViewModelBase
     {
         SightSeeingList list_;
+        ControlModel control_;
 
 
-        public SightSeeingViewModel(SightSeeingList list)
+        public SightSeeingViewModel(SightSeeingList list, ControlModel control)
         {
             list_ = list;
+            control_ = control;
             list_.ListChanged += List__ListChanged;
+            
         }
 
         private void List__ListChanged(object? sender, EventArgs e)
@@ -86,7 +89,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                var value = list_.GetCalcArray().Where(j => j.SightseeigType == CurrentSightSeeingType);
+                var value = list_.GetCalcArray(control_.IsCountryRegion).Where(j => j.SightseeigType == CurrentSightSeeingType);
                 return value.ToArray();
             }
         }

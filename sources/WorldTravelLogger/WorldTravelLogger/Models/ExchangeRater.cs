@@ -210,17 +210,22 @@ namespace WorldTravelLogger.Models
             throw new NotImplementedException();
         }
 
-        public override DateTime? GetStartCalcDate()
+        public override DateTime? GetStartCalcDate(bool isRegion)
         {
             throw new NotImplementedException();
         }
 
-        public override DateTime? GetEndCalcDate()
+        public override DateTime? GetEndCalcDate(bool isRegion)
         {
             throw new NotImplementedException();
         }
 
-        public override HashSet<DateTime> GetCalcDates(HashSet<DateTime> dates)
+        public override HashSet<DateTime> GetCalcDates(bool isRegion, HashSet<DateTime> dates)
+        {
+            throw new NotImplementedException();
+        }
+
+        public override void CalcRegion(ControlModel control)
         {
             throw new NotImplementedException();
         }

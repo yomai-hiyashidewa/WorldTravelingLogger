@@ -43,7 +43,7 @@ namespace WorldTravelLogger.Models
             option_.ImagePathChanged += Option__ImagePathChanged;
         }
 
-    
+
 
         private void DeleteOptionModel()
         {
@@ -139,7 +139,7 @@ namespace WorldTravelLogger.Models
                     CalcSightseeings();
                     CalcOthes();
                 }
-                
+
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.SightSeeingList, result));
@@ -167,7 +167,7 @@ namespace WorldTravelLogger.Models
                     }
                     CalcTransportations();
                 }
-                
+
                 if (FileLoaded_ != null)
                 {
                     FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.TransportationList, result));
@@ -218,7 +218,7 @@ namespace WorldTravelLogger.Models
 
         private void InitParameter()
         {
-            
+
         }
 
         public MainModel()
@@ -289,7 +289,7 @@ namespace WorldTravelLogger.Models
             }
         }
 
-      
+
         // control
         private bool ReadyApplication
         {
@@ -303,6 +303,18 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        public void SetCurrentRegion()
+        {
+            if (countriesAndRegions_.Count > 0 && countriesAndRegions_.ContainsKey(controllModel_.CurrentCountryType))
+            {
+                var value = countriesAndRegions_[controllModel_.CurrentCountryType];
+                if (value != null) ;
+                controllModel_.CurrentRegion = value.FirstOrDefault();
+
+            }
+
+        }
+
         private void SetCountries()
         {
             countriesAndRegions_.Clear();
@@ -310,6 +322,7 @@ namespace WorldTravelLogger.Models
             transportationList_.SetCoutriesAndRegions(countriesAndRegions_);
             sightSeeingList_.SetCoutriesAndRegions((countriesAndRegions_));
             otherList_.SetCoutriesAndRegions(countriesAndRegions_);
+            SetCurrentRegion();
 
             // currency
             countriesAndCurrencies_.Clear();
@@ -362,15 +375,15 @@ namespace WorldTravelLogger.Models
 
         private void CalcDate()
         {
-            controllModel_.InitCalcDate(accomodationList_.GetStartCalcDate(), accomodationList_.GetEndCalcDate());
+            controllModel_.InitCalcDate(accomodationList_.GetStartCalcDate(controllModel_.IsCountryRegion), accomodationList_.GetEndCalcDate(controllModel_.IsCountryRegion));
 
-            controllModel_.SetStartCalcDate(transportationList_.GetStartCalcDate());
-            controllModel_.SetStartCalcDate(sightSeeingList_.GetStartCalcDate());
-            controllModel_.SetStartCalcDate(otherList_.GetStartCalcDate());
+            controllModel_.SetStartCalcDate(transportationList_.GetStartCalcDate(controllModel_.IsCountryRegion));
+            controllModel_.SetStartCalcDate(sightSeeingList_.GetStartCalcDate(controllModel_.IsCountryRegion));
+            controllModel_.SetStartCalcDate(otherList_.GetStartCalcDate(controllModel_.IsCountryRegion));
 
-            controllModel_.SetEndCalcDate(transportationList_.GetEndCalcDate());
-            controllModel_.SetEndCalcDate(sightSeeingList_.GetEndCalcDate());
-            controllModel_.SetEndCalcDate(otherList_.GetEndCalcDate());
+            controllModel_.SetEndCalcDate(transportationList_.GetEndCalcDate(controllModel_.IsCountryRegion));
+            controllModel_.SetEndCalcDate(sightSeeingList_.GetEndCalcDate(controllModel_.IsCountryRegion));
+            controllModel_.SetEndCalcDate(otherList_.GetEndCalcDate(controllModel_.IsCountryRegion));
 
             controllModel_.InitDateFromCalc();
         }
@@ -425,6 +438,18 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        private void CalcRegionApplication()
+        {
+            if (ReadyApplication)
+            {
+                CalcDate();
+                if (CalcCompleted_ != null)
+                {
+                    CalcCompleted_.Invoke(this, EventArgs.Empty);
+                }
+            }
+        }
+
 
 
         private void CalcListAll()
@@ -445,6 +470,7 @@ namespace WorldTravelLogger.Models
             {
                 otherList_.CalcModels(controllModel_);
             }
+
             CalcApplication();
 
         }
@@ -457,17 +483,17 @@ namespace WorldTravelLogger.Models
             }
             if (ReadyTransportations)
             {
-                //transportationList_.CalcModels(controllModel_);
+                transportationList_.CalcRegion(controllModel_);
             }
             if (ReadySightseeings)
             {
-                //sightSeeingList_.CalcModels(controllModel_);
+                sightSeeingList_.CalcRegion(controllModel_);
             }
             if (ReadyOthers)
             {
-                //otherList_.CalcModels(controllModel_);
+                otherList_.CalcRegion(controllModel_);
             }
-            //CalcApplication();
+            CalcRegionApplication();
         }
 
         public CostModel GetCostModel()
@@ -525,7 +551,7 @@ namespace WorldTravelLogger.Models
                 countriesAndCurrencies_.ContainsKey(controllModel_.CurrentCountryType))
             {
                 var list = new List<ExchangeRateModel>();
-                foreach(var currency in countriesAndCurrencies_[controllModel_.CurrentCountryType].Where(c => c != CurrencyType.JPY))
+                foreach (var currency in countriesAndCurrencies_[controllModel_.CurrentCountryType].Where(c => c != CurrencyType.JPY))
                 {
                     ExchangeRateModel model = null;
                     if (controllModel_.EnableCalcDate)
@@ -534,7 +560,7 @@ namespace WorldTravelLogger.Models
                     }
                     else
                     {
-                        model = new ExchangeRateModel(currency, exchangeRater_.GetAverageRate(currency,controllModel_.StartDate, controllModel_.EndDate));
+                        model = new ExchangeRateModel(currency, exchangeRater_.GetAverageRate(currency, controllModel_.StartDate, controllModel_.EndDate));
                     }
                     list.Add(model);
                 }
@@ -571,19 +597,19 @@ namespace WorldTravelLogger.Models
             get
             {
                 var hSet = new HashSet<DateTime>();
-                foreach(var date in accomodationList_.GetCalcDates(hSet))
+                foreach (var date in accomodationList_.GetCalcDates(controllModel_.IsCountryRegion,hSet))
                 {
                     hSet.Add(date);
                 }
-                foreach (var date in transportationList_.GetCalcDates(hSet))
+                foreach (var date in transportationList_.GetCalcDates(controllModel_.IsCountryRegion,hSet))
                 {
                     hSet.Add(date);
                 }
-                foreach (var date in sightSeeingList_.GetCalcDates(hSet))
+                foreach (var date in sightSeeingList_.GetCalcDates(controllModel_.IsCountryRegion,hSet))
                 {
                     hSet.Add(date);
                 }
-                foreach (var date in otherList_.GetCalcDates(hSet))
+                foreach (var date in otherList_.GetCalcDates(controllModel_.IsCountryRegion, hSet))
                 {
                     hSet.Add(date);
                 }
@@ -601,14 +627,14 @@ namespace WorldTravelLogger.Models
         {
             return accomodationList_;
         }
-    
+
 
         public TransportationList GetTransportationList()
         {
             return transportationList_;
         }
 
-        
+
 
         public SightSeeingList GetSightSeeingList()
         {
@@ -658,7 +684,7 @@ namespace WorldTravelLogger.Models
             }
         }
 
-       
+
 
         private bool ReadyOthers
         {
@@ -668,16 +694,23 @@ namespace WorldTravelLogger.Models
             }
         }
 
-       
 
-     
+
+
 
         public string GetCountryImagePath()
         {
             var imageDir = option_.ImagePath;
             if (Path.Exists(imageDir))
             {
-                return Path.Combine(imageDir, "Countries" , controllModel_.CurrentCountryType.ToString(), "zero.jpg");
+                if (controllModel_.IsWorldMode)
+                {
+                    return Path.Combine(imageDir, "Countries", "zero.jpg");
+                }
+                else
+                {
+                    return Path.Combine(imageDir, "Countries", controllModel_.CurrentCountryType.ToString(), "zero.jpg");
+                }
             }
             else
             {

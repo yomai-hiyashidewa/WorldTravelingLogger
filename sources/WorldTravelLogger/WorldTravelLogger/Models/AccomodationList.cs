@@ -10,17 +10,18 @@ namespace WorldTravelLogger.Models
     {
         private List<AccomodationModel> list_;
         private List<AccomodationModel> calcList_;
+        private List<AccomodationModel> calcRegionList_;
+
         private Dictionary<AccomodationType, AccomodationTypeModel> calcDic_;
 
-        private List<AccomodationModel> calcRegionList_;
-        private Dictionary<AccomodationType, AccomodationTypeModel> calcRegionDic_;
+
 
 
         public AccomodationType CurrentAccomodationtype { get; set; }
 
         public override bool IsLoaded
         {
-            get { return list_.Count > 0;}
+            get { return list_.Count > 0; }
         }
 
         public override bool IsReady
@@ -34,9 +35,9 @@ namespace WorldTravelLogger.Models
         {
             list_ = new List<AccomodationModel>();
             calcList_ = new List<AccomodationModel>();
-            calcDic_ = new Dictionary<AccomodationType, AccomodationTypeModel>();
             calcRegionList_ = new List<AccomodationModel>();
-            calcRegionDic_ = new Dictionary<AccomodationType, AccomodationTypeModel>();
+            calcDic_ = new Dictionary<AccomodationType, AccomodationTypeModel>();
+
         }
 
         public AccomodationModel[] GetArray()
@@ -44,12 +45,12 @@ namespace WorldTravelLogger.Models
             return list_.ToArray();
         }
 
-       
-        
 
 
 
-        private void CheckFormats(int index,string[] row)
+
+
+        private void CheckFormats(int index, string[] row)
         {
             for (var j = 0; j < row.Length; j++)
             {
@@ -62,37 +63,37 @@ namespace WorldTravelLogger.Models
                         var date = base.ConvertDate(str);
                         flag = date == null;
                         break;
-                        // country
+                    // country
                     case 1:
                         var country = base.ConvertCountry(str);
                         flag = country == null;
                         break;
-                        // region
+                    // region
                     case 2:
                         // none
                         break;
-                        // accomodation
+                    // accomodation
                     case 3:
                         var accomodation = base.ConvertAccomodationType(str);
                         flag = accomodation == null;
                         break;
-                        // price
+                    // price
                     case 4:
                         var price = base.ConvertDouble(str);
                         flag = price == null;
                         break;
-                        /// currency
+                    /// currency
                     case 5:
                         var currency = base.ConvertCurrency(str);
                         flag = currency == null;
                         break;
-                        // memo
+                    // memo
                     case 6:
                         break;
                 }
                 if (flag)
                 {
-                    base.SetErrorList(index, j,str);
+                    base.SetErrorList(index, j, str);
                 }
 
             }
@@ -100,7 +101,7 @@ namespace WorldTravelLogger.Models
 
         private AccomodationModel CreateModel(string[] row)
         {
-            DateTime? date = null; 
+            DateTime? date = null;
             CountryType? country = null;
             string region = null;
             AccomodationType? accomodation = null;
@@ -144,10 +145,10 @@ namespace WorldTravelLogger.Models
                         break;
                 }
             }
-            if(date != null && country != null && region != null && accomodation != null &&
+            if (date != null && country != null && region != null && accomodation != null &&
                 price != null && memo != null)
             {
-                return new AccomodationModel((DateTime)date, (CountryType)country, region, 
+                return new AccomodationModel((DateTime)date, (CountryType)country, region,
                     (AccomodationType)accomodation, (double)price, (CurrencyType)currency, memo);
             }
             else
@@ -156,7 +157,7 @@ namespace WorldTravelLogger.Models
             }
         }
 
-     
+
 
 
 
@@ -166,7 +167,7 @@ namespace WorldTravelLogger.Models
             for (var i = 1; i < length; i++)
             {
                 CheckFormats(i, (string[])arrays[i]);
-                
+
             }
             return base.IsError;
         }
@@ -178,10 +179,10 @@ namespace WorldTravelLogger.Models
             for (var i = 1; i < length; i++)
             {
                 var model = CreateModel((string[])arrays[i]);
-                if(model != null)
+                if (model != null)
                 {
                     list_.Add(model);
-                    base.SetCountry(model.Country,model.Region);
+                    base.SetCountry(model.Country, model.Region);
                     base.SetCountryAndCurrency(model.Country, model.Currency);
                     base.SetDate(model.Date);
                 }
@@ -197,20 +198,21 @@ namespace WorldTravelLogger.Models
         // 別通貨へ両替する
         public override void ConvertAnotherCurrency(ExchangeRater rater)
         {
-            foreach(var model in list_)
+            foreach (var model in list_)
             {
                 model.ConvertPrice(rater);
             }
-           
+
         }
 
-        private void SetCalcDic(List<AccomodationModel> list, Dictionary<AccomodationType,AccomodationTypeModel> dic)
+        private void SetCalcDic(List<AccomodationModel> list)
         {
+            calcDic_.Clear();
             foreach (var model in list)
             {
 
                 AccomodationTypeModel tModel;
-                if (dic.TryGetValue(model.Accomodation, out tModel))
+                if (calcDic_.TryGetValue(model.Accomodation, out tModel))
                 {
                     tModel.Set(model.JPYPrice);
                 }
@@ -218,29 +220,31 @@ namespace WorldTravelLogger.Models
                 {
                     tModel = new AccomodationTypeModel(model.Accomodation);
                     tModel.Set(model.JPYPrice);
-                    dic.Add(model.Accomodation, tModel);
+                    calcDic_.Add(model.Accomodation, tModel);
                 }
+            }
+            SetCurrentAccomodationType();
+        }
+
+        private void SetCurrentAccomodationType()
+        {
+            if (calcDic_.Count >= 0 && !calcDic_.ContainsKey(CurrentAccomodationtype))
+            {
+                CurrentAccomodationtype = calcDic_.Keys.FirstOrDefault();
             }
         }
 
-        private void SetCurrentAccomodationType(Dictionary<AccomodationType,AccomodationTypeModel> dic)
-        {
-            if (dic.Count >= 0 && !dic.ContainsKey(CurrentAccomodationtype))
-            {
-                CurrentAccomodationtype = dic.Keys.FirstOrDefault();
-            }
-        }
+
+
 
         public override void CalcModels(ControlModel control)
         {
             calcList_.Clear();
-            calcDic_.Clear();
             foreach (var model in list_.Where(m => control.CheckControl(m.Date, m.Country)))
             {
                 calcList_.Add(model);
             }
-            SetCalcDic(calcList_, calcDic_);
-            SetCurrentAccomodationType(calcDic_);
+            SetCalcDic(calcList_);
             base.FireListChanged();
 
         }
@@ -248,14 +252,19 @@ namespace WorldTravelLogger.Models
         public override void CalcRegion(ControlModel control)
         {
             calcRegionList_.Clear();
-            calcRegionDic_.Clear();
-            foreach(var model in calcList_.Where(m => m.Region == control.CurrentRegion))
+            if (control.IsCountryRegion)
             {
-                calcRegionList_.Add(model);
+                foreach (var model in calcList_.Where(m => m.Region == control.CurrentRegion))
+                {
+                    calcRegionList_.Add(model);
+                }
+                SetCalcDic(calcRegionList_);
             }
-            SetCalcDic(calcRegionList_, calcRegionDic_);
-            SetCurrentAccomodationType(calcRegionDic_);
-            base.FireListChanged();
+            else
+            {
+                SetCalcDic(calcList_);
+            }
+            FireListChanged();
 
         }
 
@@ -264,16 +273,23 @@ namespace WorldTravelLogger.Models
         public AccomodationTypeModel[] GetTypeArray()
         {
             var list = new List<AccomodationTypeModel>();
-            foreach(var pair in calcDic_)
+            foreach (var pair in calcDic_)
             {
                 list.Add(pair.Value);
             }
             return list.ToArray();
         }
 
-        public AccomodationModel[] GetCalcArray()
+        public AccomodationModel[] GetCalcArray(bool isRegion)
         {
-            return calcList_.ToArray();
+            if (!isRegion)
+            {
+                return calcList_.ToArray();
+            }
+            else
+            {
+                return calcRegionList_.ToArray();
+            }
         }
 
         public IEnumerable<AccomodationType> GetCurrentAccomodationTypes()
@@ -284,26 +300,26 @@ namespace WorldTravelLogger.Models
         public override IEnumerable<CountryType> GetCalcCounties()
         {
             var sets = new HashSet<CountryType>();
-            foreach(var model in calcList_)
+            foreach (var model in calcList_)
             {
                 if (!sets.Contains(model.Country))
                 {
                     sets.Add(model.Country);
                 }
             }
-            foreach(var c in sets)
+            foreach (var c in sets)
             {
                 yield return c;
             }
         }
 
-        public override DateTime? GetStartCalcDate()
+        public override DateTime? GetStartCalcDate(bool isRegion)
         {
+            var array = GetCalcArray(isRegion);
 
-
-            if (calcList_.Count > 0)
+            if (array.Length > 0)
             {
-                return calcList_.Min(m => m.Date);
+                return array.Min(m => m.Date);
             }
             else
             {
@@ -311,11 +327,12 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public override DateTime? GetEndCalcDate()
+        public override DateTime? GetEndCalcDate(bool isRegion)
         {
-            if (calcList_.Count > 0)
+            var array = GetCalcArray(isRegion);
+            if (array.Length > 0)
             {
-                return calcList_.Max(m => m.Date);
+                return array.Max(m => m.Date);
             }
             else
             {
@@ -323,10 +340,11 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public override HashSet<DateTime> GetCalcDates(HashSet<DateTime> dates)
+        public override HashSet<DateTime> GetCalcDates(bool isRegion, HashSet<DateTime> dates)
         {
             var hSet = new HashSet<DateTime>();
-            foreach(var model in calcList_.Where(m => !dates.Contains(m.Date)))
+            var array = GetCalcArray(isRegion);
+            foreach (var model in array.Where(m => !dates.Contains(m.Date)))
             {
                 if (!hSet.Contains(model.Date))
                 {
@@ -336,7 +354,7 @@ namespace WorldTravelLogger.Models
             return hSet;
         }
 
-   
+
         public override double TotalCost
         {
             get
@@ -350,6 +368,6 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        
+
     }
 }

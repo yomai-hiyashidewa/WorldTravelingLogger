@@ -14,7 +14,11 @@ namespace WorldTravelLogger.Models
     {
         private List<SightseeingModel> list_;
         private List<SightseeingModel> calcList_;
+        private List<SightseeingModel> calcRegionList_;
         private Dictionary<SightseeigType, SightseeingTypeModel> calcDic_;
+
+       
+
 
         public override bool IsLoaded
         {
@@ -33,6 +37,7 @@ namespace WorldTravelLogger.Models
         {
             list_ = new List<SightseeingModel>();
             calcList_ = new List<SightseeingModel>();
+            calcRegionList_ = new List<SightseeingModel>();
             calcDic_ = new Dictionary<SightseeigType, SightseeingTypeModel>();
         }
 
@@ -215,20 +220,30 @@ namespace WorldTravelLogger.Models
             return list.ToArray();
         }
 
-        public SightseeingModel[] GetCalcArray()
+        public SightseeingModel[] GetCalcArray(bool isRegion)
         {
-            return calcList_.ToArray();
+            if (!isRegion)
+            {
+                return calcList_.ToArray();
+            }
+            else
+            {
+                return calcRegionList_.ToArray();
+            }
         }
 
-        public override void CalcModels(ControlModel control)
+        private void SetCurrentSightseeingType()
         {
-            calcList_.Clear();
-            calcDic_.Clear();
-            foreach (var model in list_.Where(m => control.CheckControl(m.SightseeigType , m.Date, m.Country)))
+            if (calcDic_.Count >= 0 && !calcDic_.ContainsKey(CurrentSightSeeingType))
             {
-                calcList_.Add(model);
+                CurrentSightSeeingType = calcDic_.Keys.FirstOrDefault();
             }
-            foreach (var model in calcList_)
+        }
+
+        private void SetCalcDic(List<SightseeingModel> list)
+        {
+            calcDic_.Clear();
+            foreach (var model in list)
             {
 
                 SightseeingTypeModel tModel;
@@ -243,11 +258,39 @@ namespace WorldTravelLogger.Models
                     calcDic_.Add(model.SightseeigType, tModel);
                 }
             }
-            if (calcDic_.Count >= 0 && !calcDic_.ContainsKey(CurrentSightSeeingType))
+            SetCurrentSightseeingType();
+        }
+
+        public override void CalcModels(ControlModel control)
+        {
+            calcList_.Clear();
+            calcDic_.Clear();
+            foreach (var model in list_.Where(m => control.CheckControl(m.SightseeigType , m.Date, m.Country)))
             {
-                CurrentSightSeeingType = calcDic_.Keys.FirstOrDefault();
+                calcList_.Add(model);
             }
+            SetCalcDic(calcList_);
+
+
             base.FireListChanged();
+        }
+
+        public override void CalcRegion(ControlModel control)
+        {
+            calcRegionList_.Clear();
+            if (control.IsCountryRegion)
+            {
+                foreach (var model in calcList_.Where(m => m.Region == control.CurrentRegion))
+                {
+                    calcRegionList_.Add(model);
+                }
+                SetCalcDic(calcRegionList_);
+            }
+            else
+            {
+                SetCalcDic(calcList_);
+            }
+            FireListChanged();
         }
 
         public override double TotalCost
@@ -328,13 +371,13 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public override DateTime? GetStartCalcDate()
+        public override DateTime? GetStartCalcDate(bool isRegion)
         {
+            var array = GetCalcArray(isRegion);
 
-
-            if (calcList_.Count > 0)
+            if (array.Length > 0)
             {
-                return calcList_.Min(m => m.Date);
+                return array.Min(m => m.Date);
             }
             else
             {
@@ -342,11 +385,12 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public override DateTime? GetEndCalcDate()
+        public override DateTime? GetEndCalcDate(bool isRegion)
         {
-            if (calcList_.Count > 0)
+            var array = GetCalcArray(isRegion);
+            if (array.Length > 0)
             {
-                return calcList_.Max(m => m.Date);
+                return array.Max(m => m.Date);
             }
             else
             {
@@ -354,10 +398,11 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public override HashSet<DateTime> GetCalcDates(HashSet<DateTime> dates)
+        public override HashSet<DateTime> GetCalcDates(bool isRegion, HashSet<DateTime> dates)
         {
             var hSet = new HashSet<DateTime>();
-            foreach (var model in calcList_.Where(m => !dates.Contains(m.Date)))
+            var array = GetCalcArray(isRegion);
+            foreach (var model in array.Where(m => !dates.Contains(m.Date)))
             {
                 if (!hSet.Contains(model.Date))
                 {
@@ -366,5 +411,7 @@ namespace WorldTravelLogger.Models
             }
             return hSet;
         }
+
+       
     }
 }

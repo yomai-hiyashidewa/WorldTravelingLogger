@@ -11,12 +11,14 @@ namespace WorldTravelLogger.ViewModels
 {
     public class AccomodationViewModel : ViewModelBase
     {
-        AccomodationList list_;
+        private AccomodationList list_;
+        private ControlModel control_;
 
-        public AccomodationViewModel(AccomodationList list)
+        public AccomodationViewModel(AccomodationList list, ControlModel control_)
         {
             list_ = list;
             list_.ListChanged += List_ListChanged;
+            this.control_ = control_;
         }
 
 
@@ -87,7 +89,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                var value = list_.GetCalcArray().Where(j => j.Accomodation == CurrentAccomodationType);
+                var value = list_.GetCalcArray(control_.IsCountryRegion).Where(j => j.Accomodation == CurrentAccomodationType);
                 return value.ToArray();
 
             }

@@ -10,6 +10,8 @@ namespace WorldTravelLogger.Models
     {
         private List<TransportationModel> list_;
         private List<TransportationModel> calcList_;
+        private List<TransportationModel> calcRegionList_;
+
         private Dictionary<Transportationtype, TransportationTypeModel> calcDic_;
 
         public override bool IsLoaded
@@ -35,6 +37,7 @@ namespace WorldTravelLogger.Models
         {
             list_ = new List<TransportationModel>();
             calcList_ = new List<TransportationModel>();
+            calcRegionList_ = new List<TransportationModel>();
             calcDic_ = new Dictionary<Transportationtype, TransportationTypeModel>();
 
         }
@@ -288,9 +291,16 @@ namespace WorldTravelLogger.Models
             return list.ToArray();
         }
 
-        public TransportationModel[] GetCalcArray()
+        public TransportationModel[] GetCalcArray(bool isRegion)
         {
-            return calcList_.ToArray();
+            if (!isRegion)
+            {
+                return calcList_.ToArray();
+            }
+            else
+            {
+                return calcRegionList_.ToArray();
+            }
         }
 
         public IEnumerable<Transportationtype> GetCurrentTransportationTypes()
@@ -319,11 +329,12 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        private void SetCalcDic()
+
+        private void SetCalcDic(List<TransportationModel> list)
         {
             calcDic_.Clear();
 
-            foreach (var model in calcList_)
+            foreach (var model in list)
             {
                 TransportationTypeModel tModel;
                 if (calcDic_.TryGetValue(model.Transportationtype, out tModel))
@@ -348,9 +359,27 @@ namespace WorldTravelLogger.Models
         public override void CalcModels(ControlModel control)
         {
             SetCalcModels(control);
-            SetCalcDic();
+            SetCalcDic(calcList_);
             base.FireListChanged();
 
+        }
+
+        public override void CalcRegion(ControlModel control)
+        {
+            calcRegionList_.Clear();
+            if (control.IsCountryRegion)
+            {
+                foreach (var model in calcList_.Where(m => m.StartRegion == control.CurrentRegion || m.EndRegion == control.CurrentRegion))
+                {
+                    calcRegionList_.Add(model);
+                }
+                SetCalcDic(calcRegionList_);
+            }
+            else
+            {
+                SetCalcDic(calcList_);
+            }
+            FireListChanged();
         }
 
         public override IEnumerable<CountryType> GetCalcCounties()
@@ -373,11 +402,12 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public override DateTime? GetStartCalcDate()
+        public override DateTime? GetStartCalcDate(bool isRegion)
         {
-            if (calcList_.Count > 0)
+            var array = GetCalcArray(isRegion);
+            if (array.Length > 0)
             {
-                return calcList_.Min(m => m.StartDate);
+                return array.Min(m => m.StartDate);
             }
             else
             {
@@ -385,11 +415,12 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public override DateTime? GetEndCalcDate()
+        public override DateTime? GetEndCalcDate(bool isRegion)
         {
-            if (calcList_.Count > 0)
+            var array = GetCalcArray(isRegion);
+            if (array.Length > 0)
             {
-                return calcList_.Max(m => m.EndDate);
+                return array.Max(m => m.EndDate);
             }
             else
             {
@@ -397,10 +428,11 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public override HashSet<DateTime> GetCalcDates(HashSet<DateTime> dates)
+        public override HashSet<DateTime> GetCalcDates(bool isRegion, HashSet<DateTime> dates)
         {
             var hSet = new HashSet<DateTime>();
-            foreach (var model in calcList_.Where(m => !dates.Contains(m.StartDate) || !dates.Contains(m.EndDate)))
+            var array = GetCalcArray(isRegion);
+            foreach (var model in array.Where(m => !dates.Contains(m.StartDate) || !dates.Contains(m.EndDate)))
             {
                 if (!hSet.Contains(model.StartDate))
                 {
@@ -414,6 +446,8 @@ namespace WorldTravelLogger.Models
             }
             return hSet;
         }
+
+
 
         public double TotalDistance
         {

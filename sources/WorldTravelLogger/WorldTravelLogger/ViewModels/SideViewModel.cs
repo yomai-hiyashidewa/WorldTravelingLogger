@@ -122,8 +122,11 @@ namespace WorldTravelLogger.ViewModels
             }
             set
             {
+                if (value)
+                {
+                    model_.SetCurrentRegion();
+                }
                 control_.IsRegion = value;
-                CurrentRegion = Regions.FirstOrDefault();
             }
         }
 

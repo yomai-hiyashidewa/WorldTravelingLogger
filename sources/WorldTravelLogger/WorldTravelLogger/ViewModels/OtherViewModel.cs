@@ -12,10 +12,12 @@ namespace WorldTravelLogger.ViewModels
     public class OtherViewModel : ViewModelBase
     {
         SightSeeingList list_;
+        ControlModel control_;
 
-        public OtherViewModel(SightSeeingList list)
+        public OtherViewModel(SightSeeingList list,ControlModel control)
         {
             list_ = list;
+            control_ = control;
             list_.ListChanged += List__ListChanged;
         }
 
@@ -83,7 +85,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                var value = list_.GetCalcArray().Where(j => j.SightseeigType == CurrentOtherType);
+                var value = list_.GetCalcArray(control_.IsCountryRegion).Where(j => j.SightseeigType == CurrentOtherType);
                 return value.ToArray();
             }
         }

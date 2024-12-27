@@ -13,12 +13,14 @@ namespace WorldTravelLogger.ViewModels
     public class TransportationViewModel : ViewModelBase
     {
         TransportationList list_;
+        ControlModel control_;
 
 
 
-        public TransportationViewModel(TransportationList list)
+        public TransportationViewModel(TransportationList list,ControlModel control)
         {
             list_ = list;
+            control_ = control;
             list.ListChanged += List_ListChanged;
 
 
@@ -90,7 +92,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                var value = list_.GetCalcArray().Where(j => j.Transportationtype == CurrentTransportationType);
+                var value = list_.GetCalcArray(control_.IsCountryRegion).Where(j => j.Transportationtype == CurrentTransportationType);
                 return value.ToArray();
             }
         }

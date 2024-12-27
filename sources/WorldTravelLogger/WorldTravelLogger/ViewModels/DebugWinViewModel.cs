@@ -53,9 +53,6 @@ namespace WorldTravelLogger.ViewModels
             model_.FileLoaded_ -= Model__FileLoaded;
         }
 
-
-  
-
         public object[] Accomodations
         {
             get

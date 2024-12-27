@@ -359,11 +359,11 @@ namespace WorldTravelLogger.Models
 
         public abstract IEnumerable<CountryType> GetCalcCounties();
 
-        public abstract DateTime? GetStartCalcDate();
+        public abstract DateTime? GetStartCalcDate(bool isRegion);
 
-        public abstract DateTime? GetEndCalcDate();
+        public abstract DateTime? GetEndCalcDate(bool isRegion);
 
-        public abstract HashSet<DateTime> GetCalcDates(HashSet<DateTime> dates);
+        public abstract HashSet<DateTime> GetCalcDates(bool isRegion,HashSet<DateTime> dates);
 
         
 

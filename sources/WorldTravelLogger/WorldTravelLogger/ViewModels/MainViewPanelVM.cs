@@ -108,23 +108,23 @@ namespace WorldTravelLogger.ViewModels
 
         public AccomodationViewModel GetAccomodationViewModel()
         {
-            return new AccomodationViewModel(model_.GetAccomodationList());
+            return new AccomodationViewModel(model_.GetAccomodationList(),model_.GetControlModel());
         }
 
         public TransportationViewModel GetTransporationViewModel()
         {
-            return new TransportationViewModel(model_.GetTransportationList());
+            return new TransportationViewModel(model_.GetTransportationList(), model_.GetControlModel());
         }
 
 
         public SightSeeingViewModel GetSightseeingViewModel()
         {
-            return new SightSeeingViewModel(model_.GetSightSeeingList());
+            return new SightSeeingViewModel(model_.GetSightSeeingList(), model_.GetControlModel());
         }
 
         public OtherViewModel GetOtherViewModel()
         {
-            return new OtherViewModel(model_.GetOtherList());
+            return new OtherViewModel(model_.GetOtherList(), model_.GetControlModel());
         }
 
 

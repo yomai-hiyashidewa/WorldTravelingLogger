@@ -130,6 +130,11 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        public bool IsCountryRegion
+        {
+            get { return !isWorldMode_ && isRegionMode_; }
+        }
+
         public bool IsWithJapan
         {
             get { return isWithJapan_; }
@@ -200,7 +205,10 @@ namespace WorldTravelLogger.Models
                 if (currentRegion_ != value)
                 {
                     currentRegion_ = value;
-                    FireRegionChanged();
+                    if (IsCountryRegion)
+                    {
+                        FireRegionChanged();
+                    }
                 }
             }
         }
@@ -256,6 +264,7 @@ namespace WorldTravelLogger.Models
         {
             startDate_ = startSetDate_;
             endDate_ = endSetDate_;
+            isRegionMode_ = false;
         }
 
         public void InitDateFromCalc()
