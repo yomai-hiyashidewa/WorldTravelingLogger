@@ -11,6 +11,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
         </Grid.RowDefinitions>
         <Grid>
             <Grid.ColumnDefinitions>
@@ -29,7 +30,9 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="10"/>
                 </Grid.ColumnDefinitions>
+                
                 <CheckBox Grid.Column="1" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center" Content="with Insurance" IsChecked="{Binding IsWithInsurance,Mode=TwoWay}"/>
+                <CheckBox Grid.Column="2" HorizontalAlignment="center" VerticalAlignment="top" FontSize="13" Content="with Japan" IsChecked="{Binding IsWithJapan,Mode=TwoWay}"/>
                 <CheckBox Grid.Column="3" FontSize="13" HorizontalAlignment="Center" VerticalAlignment="Center" Content="with Airplane" IsChecked="{Binding IsWithAirplane,Mode=TwoWay}"/>
             </Grid>
         </Grid>
@@ -61,6 +64,17 @@
                 </TabControl>
             </Grid>
         </Grid>
-
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <DockPanel Margin="10,0,0,0">
+                <TextBlock HorizontalAlignment="left" Grid.Column="0" VerticalAlignment="Center" Text="version="/>
+                <TextBlock HorizontalAlignment="left" Grid.Column="0" VerticalAlignment="Center" Text="{Binding FileVer}" />
+            </DockPanel>
+            
+            <TextBlock HorizontalAlignment="Right" Grid.Column="1" VerticalAlignment="Center" Text="@2025 Yomai Hiyashidewa" Margin="0,0,10,0"/>
+        </Grid>
     </Grid>
 </UserControl>

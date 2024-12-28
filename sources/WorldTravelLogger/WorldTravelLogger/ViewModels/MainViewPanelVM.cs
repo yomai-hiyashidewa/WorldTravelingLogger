@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,12 +29,13 @@ namespace WorldTravelLogger.ViewModels
         private void Model__CalcCompleted_(object? sender, EventArgs e)
         {
             this.RaisePropertyChanged("IsWithAirplane");
+            this.RaisePropertyChanged("IsWithJapan");
             this.RaisePropertyChanged("IsWithInsurance");
         }
 
         private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
         {
-         if(FileLoaded_ != null)
+            if (FileLoaded_ != null)
             {
                 FileLoaded_.Invoke(sender, e);
             }
@@ -44,14 +46,8 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return control_.IsWithAirplane;
-                }
+                return control_.IsWithAirplane;
+
             }
             set
             {
@@ -59,12 +55,25 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-     
+        public bool IsWithJapan
+        {
+            get
+            {
+                return control_.IsWithJapan;
+            }
+            set
+            {
+                control_.IsWithJapan = value;
+            }
+        }
+
+
+
         public bool IsWithInsurance
         {
             get
             {
-                if(model_ == null)
+                if (model_ == null)
                 {
                     return false;
                 }
@@ -76,6 +85,16 @@ namespace WorldTravelLogger.ViewModels
             set
             {
                 control_.IsWithInsurance = value;
+            }
+        }
+
+        public string FileVer
+        {
+            get
+            {
+                FileVersionInfo ver = FileVersionInfo.GetVersionInfo(
+    System.Reflection.Assembly.GetExecutingAssembly().Location);
+                return ver.FileVersion;
             }
         }
 
@@ -111,7 +130,7 @@ namespace WorldTravelLogger.ViewModels
 
         public AccomodationViewModel GetAccomodationViewModel()
         {
-            return new AccomodationViewModel(model_.GetAccomodationList(),model_.GetControlModel());
+            return new AccomodationViewModel(model_.GetAccomodationList(), model_.GetControlModel());
         }
 
         public TransportationViewModel GetTransporationViewModel()
@@ -133,7 +152,7 @@ namespace WorldTravelLogger.ViewModels
 
         public string GetFilename(ListType type)
         {
-            switch(type)
+            switch (type)
             {
                 case ListType.AccomodationList:
                     return FileNames.AccomodationFile;
@@ -145,7 +164,7 @@ namespace WorldTravelLogger.ViewModels
                     return FileNames.ExchangeRateFile;
                 default:
                     return null;
-            }    
+            }
         }
     }
 }

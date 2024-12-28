@@ -43,7 +43,7 @@ namespace WorldTravelLogger.ViewModels
         private void UpdateView()
         {
             this.RaisePropertyChanged("IsWorld");
-            this.RaisePropertyChanged("IsWithJapan");
+            this.RaisePropertyChanged("IsWorldView");
             this.RaisePropertyChanged("IsCountryMode");
             this.RaisePropertyChanged("IsOnlyBorder");
             this.RaisePropertyChanged("IsRegion");
@@ -71,32 +71,23 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (control_ == null)
-                {
-                    return false;
-                }
-                else
-                {
-                    return control_.IsWorldMode;
-                }
+                return !control_.IsWorldMode;
+
             }
             set
             {
-                control_.IsWorldMode = value;
+                control_.IsWorldMode = !value;
             }
         }
 
-        public bool IsWithJapan
+        public bool IsWorldView
         {
             get
             {
-                return control_.IsWithJapan;
-            }
-            set
-            {
-                control_.IsWithJapan = value;
+                return control_.IsWorldMode;
             }
         }
+
 
 
 
@@ -104,14 +95,15 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                return !IsWorld;
+                return !control_.IsWorldMode;
             }
         }
 
         public bool IsOnlyBorder
         {
-            get { 
-                return control_.IsOnlyBorder; 
+            get
+            {
+                return control_.IsOnlyBorder;
             }
             set
             {
@@ -121,7 +113,7 @@ namespace WorldTravelLogger.ViewModels
 
         public bool IsRegion
         {
-            get 
+            get
             {
                 return control_.IsRegion;
             }
@@ -254,7 +246,7 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-                    if (IsWorld)
+                    if (control_.IsWorldMode)
                     {
                         count = model_.GetTotalRegionCount();
                     }
@@ -294,7 +286,7 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-                    return model_.TotalCalcCountries + " countries"; ;
+                    return model_.GetCountries().Count() + " countries"; ;
                 }
             }
         }
