@@ -6,19 +6,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
 using WorldTravelLogger.Models;
+using WorldTravelLogger.Models.Base;
+using WorldTravelLogger.Models.Context;
+using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.Interface;
+using WorldTravelLogger.Models.List;
+using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
 {
-    public class AccomodationViewModel : ViewModelBase
+    public class AccomodationViewModel : BaseContextListViewModel
     {
         private AccomodationList list_;
-        private ControlModel control_;
+        
 
-        public AccomodationViewModel(AccomodationList list, ControlModel control_)
+
+        public AccomodationViewModel(AccomodationList list, ControlModel control): 
+            base(control)
         {
             list_ = list;
             list_.ListChanged += List_ListChanged;
-            this.control_ = control_;
         }
 
 
@@ -38,31 +45,28 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("Accomodations");
 
 
-        }
-
-
+        }      
 
         public AccomodationTypeModel[] TypeAccomodations
         {
             get
             {
-                return list_.GetTypeArray();
+                return list_.TypeAccomodations;
             }
         }
-
-
 
         public AccomodationType CurrentAccomodationType
         {
 
             get { return list_.CurrentAccomodationtype; }
-            set {
-                if(list_.CurrentAccomodationtype != value)
+            set
+            {
+                if (list_.CurrentAccomodationtype != value)
                 {
                     list_.CurrentAccomodationtype = value;
                     this.RaisePropertyChanged("Accomodations");
                 }
-                 
+
             }
 
         }
@@ -79,9 +83,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                var list = new List<AccomodationType>();
-                list.AddRange(list_.GetCurrentAccomodationTypes());
-                return list.ToArray();
+                return list_.CurrentAccomodationTypes;
             }
         }
 
@@ -89,11 +91,14 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                var value = list_.GetCalcArray(control_.IsCountryRegion).Where(j => j.Accomodation == CurrentAccomodationType);
-                return value.ToArray();
+                return list_.GetCalcs(control_.IsCountryRegion).OfType<AccomodationModel>().
+                    Where(m => m.Accomodation == CurrentAccomodationType).ToArray();
+
 
             }
         }
+
+
     }
 
 

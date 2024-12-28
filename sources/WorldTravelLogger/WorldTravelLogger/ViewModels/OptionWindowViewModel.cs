@@ -8,6 +8,8 @@ using System.Threading.Tasks;
 using System.Windows.Controls;
 using System.Windows.Input;
 using WorldTravelLogger.Models;
+using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
 {

@@ -6,18 +6,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
 using WorldTravelLogger.Models;
+using WorldTravelLogger.Models.Context;
+using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.Interface;
+using WorldTravelLogger.Models.List;
+using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
 {
-    public class OtherViewModel : ViewModelBase
+    public class OtherViewModel : BaseContextListViewModel
     {
         SightSeeingList list_;
-        ControlModel control_;
 
-        public OtherViewModel(SightSeeingList list,ControlModel control)
+        
+
+        public OtherViewModel(SightSeeingList list,ControlModel control):
+            base(control)
         {
             list_ = list;
-            control_ = control;
             list_.ListChanged += List__ListChanged;
         }
 
@@ -36,12 +42,28 @@ namespace WorldTravelLogger.ViewModels
            
         }
 
+       
+        private SightseeigType? ConvertType(string typeStr)
+        {
+            SightseeigType type;
+            if (Enum.TryParse(typeStr, out type))
+            {
+                return type;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        
+
 
         public SightseeingTypeModel[] TypeOthers
         {
             get
             {
-                return list_.GetTypeArray();
+                return list_.TypeSightseeings;
             }
         }
 
@@ -63,16 +85,6 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        public SightseeigType[] CurrentOtherTypes
-        {
-            get
-            {
-                var list = new List<SightseeigType>();
-                list.AddRange(list_.GetCurrentSightSeeingTypes());
-                return list.ToArray();
-            }
-        }
-
         public bool EnableCurrentOtherType
         {
             get
@@ -81,12 +93,23 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
+        public SightseeigType[] CurrentOtherTypes
+        {
+            get
+            {
+                return list_.CurrentSightseeingTypes;
+            }
+
+        }
+
+      
+
         public SightseeingModel[] Others
         {
             get
             {
-                var value = list_.GetCalcArray(control_.IsCountryRegion).Where(j => j.SightseeigType == CurrentOtherType);
-                return value.ToArray();
+                return list_.GetCalcs(control_.IsCountryRegion).OfType<SightseeingModel>().
+                    Where(m => m.SightseeigType == list_.CurrentSightSeeingType).ToArray();
             }
         }
     }

@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WorldTravelLogger.Models;
+using WorldTravelLogger.Models.Context;
+using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
 {

@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Navigation;
+using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.Utility;
 
 namespace WorldTravelLogger.Models
 {
@@ -20,11 +22,17 @@ namespace WorldTravelLogger.Models
 
         private string? imagePath_;
 
-        public event EventHandler AccomodationPathChanged;
-        public event EventHandler TransportationPathChanged;
-        public event EventHandler SightseeingPathChanged;
-        public event EventHandler ExchangeRatePathChanged;
-        public event EventHandler ImagePathChanged;
+        public event EventHandler<FileLoadedEventArgs> FilePathChanged;
+
+        private void FireFilePathChanged(ListType type)
+        {
+            if (FilePathChanged != null)
+            {
+                FilePathChanged.Invoke(this,new FileLoadedEventArgs(type, ErrorTypes.None));
+            }
+
+        }
+
 
 
 
@@ -36,10 +44,7 @@ namespace WorldTravelLogger.Models
                 if (accomodationPath_ != value)
                 {
                     accomodationPath_ = value;
-                    if (AccomodationPathChanged != null)
-                    {
-                        AccomodationPathChanged.Invoke(this, EventArgs.Empty);
-                    }
+                    FireFilePathChanged(ListType.AccomodationList);
                 }
             }
         }
@@ -55,10 +60,7 @@ namespace WorldTravelLogger.Models
                 if (transportationPath_ != value)
                 {
                     transportationPath_ = value;
-                    if (TransportationPathChanged != null)
-                    {
-                        TransportationPathChanged.Invoke(this, EventArgs.Empty);
-                    }
+                    FireFilePathChanged(ListType.TransportationList);
                 }
             }
         }
@@ -74,10 +76,7 @@ namespace WorldTravelLogger.Models
                 if (sightseeingPath_ != value)
                 {
                     sightseeingPath_ = value;
-                    if (sightseeingPath_ != null)
-                    {
-                        SightseeingPathChanged.Invoke(this, EventArgs.Empty);
-                    }
+                    FireFilePathChanged(ListType.SightSeeingList);
                 }
             }
         }
@@ -93,10 +92,7 @@ namespace WorldTravelLogger.Models
                 if (exchangeRatePath_ != value)
                 {
                     exchangeRatePath_ = value;
-                    if (ExchangeRatePathChanged != null)
-                    {
-                        ExchangeRatePathChanged.Invoke(this, EventArgs.Empty);
-                    }
+                    FireFilePathChanged(ListType.ExchangeRateList);
                 }
             }
         }
@@ -112,10 +108,7 @@ namespace WorldTravelLogger.Models
                 if(imagePath_ != value)
                 {
                     imagePath_ = value;
-                    if(ImagePathChanged != null)
-                    {
-                        ImagePathChanged(this, EventArgs.Empty);
-                    }
+                    FireFilePathChanged(ListType.ImageList);
                 }
             }
         }
@@ -152,7 +145,7 @@ namespace WorldTravelLogger.Models
         {
             var list = new List<string[]>();
 
-            for (var i = 0; i < 6; i++)
+            for (var i = 0; i < (int)ListType.Length +1; i++)
             {
                 var row = new List<string>();
                 switch (i)
@@ -189,7 +182,7 @@ namespace WorldTravelLogger.Models
 
         public bool Load(object[] arrays)
         {
-            for (var i = 1; i < 6; i++)
+            for (var i = 1; i < (int)ListType.Length + 1; i++)
             {
                 string[] row = (string[])arrays[i];
                 if (row.Length > 1)
@@ -216,5 +209,54 @@ namespace WorldTravelLogger.Models
             }
             return true;
         }
+
+        public string GetFilePath(ListType type)
+        {
+            string path = null;
+            switch (type)
+            {
+                case ListType.AccomodationList:
+                    path = accomodationPath_;
+                    break;
+                case ListType.TransportationList:
+                    path = transportationPath_;
+                    break;
+                case ListType.SightSeeingList:
+                    path = sightseeingPath_;
+                    break;
+                case ListType.ExchangeRateList:
+                    path = exchangeRatePath_;
+                    break;
+                case ListType.ImageList:
+                    path = imagePath_;
+                    break;
+            }
+            return path;
+        }
+
+        public void SetFilePath(ListType type, string path)
+        {
+           
+            switch (type)
+            {
+                case ListType.AccomodationList:
+                    accomodationPath_ =path;
+                    break;
+                case ListType.TransportationList:
+                    transportationPath_ = path;
+                    break;
+                case ListType.SightSeeingList:
+                    sightseeingPath_ = path;
+                    break;
+                case ListType.ExchangeRateList:
+                    exchangeRatePath_ = path;
+                    break;
+                case ListType.ImageList:
+                    imagePath_ = path;
+                    break;
+            }
+            
+        }
+
     }
 }

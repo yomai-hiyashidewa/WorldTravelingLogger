@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.Utility;
 using WorldTravelLogger.ViewModels;
 
 namespace WorldTravelLogger.Views
@@ -39,11 +41,11 @@ namespace WorldTravelLogger.Views
             vm.FileLoaded_ += Vm_FileLoaded_;
         }
 
-        private void Vm_FileLoaded_(object? sender, Models.FileLoadedEventArgs e)
+        private void Vm_FileLoaded_(object? sender, FileLoadedEventArgs e)
         {
             Dispatcher.Invoke(() =>
             { 
-                if(e.ErrorTypes != Models.ErrorTypes.None)
+                if(e.ErrorTypes != ErrorTypes.None)
                 {
                     var vm = (MainViewPanelVM)this.DataContext;
                     var filename = vm.GetFilename(e.Type);

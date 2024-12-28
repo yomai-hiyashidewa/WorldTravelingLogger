@@ -4,14 +4,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WorldTravelLogger.Models.Enumeration;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace WorldTravelLogger.Models
 {
     public class ControlModel
     {
-        private DateTime startSetDate_;
-        private DateTime endSetDate_;
+        private DateTime? startSetDate_;
+        private DateTime? endSetDate_;
 
         private DateTime? startCalcDate_;
         private DateTime? endCalcDate_;
@@ -32,11 +33,15 @@ namespace WorldTravelLogger.Models
 
         private CountryType currentCountryType_;
 
-        private DateTime startDate_;
-        private DateTime endDate_;
+        private DateTime? startDate_;
+        private DateTime? endDate_;
 
         private CurrencyType currentMajorCurrencyType_;
         private string currentRegion_;
+
+        
+
+       
 
         public event EventHandler ControlChanged_;
         public event EventHandler RegionChanged_;
@@ -51,8 +56,10 @@ namespace WorldTravelLogger.Models
             isOnlyBorder_ = false;
             isRegionMode_ = false;
             currentRegion_ = null;
-            startDate_ = new DateTime(2022, 5, 16);
-            endDate_ = new DateTime(2024, 5, 1);
+           
+            
+            //startDate_ = new DateTime(2022, 5, 16);
+            //endDate_ = new DateTime(2024, 5, 1);
             currentCountryType_ = CountryType.JPN;
             currentMajorCurrencyType_ = CurrencyType.JPY;
         }
@@ -217,7 +224,7 @@ namespace WorldTravelLogger.Models
         {
             get
             {
-                return startDate_;
+                return startDate_ == null ? DateTime.Now: (DateTime)startDate_;
             }
             set
             {
@@ -233,7 +240,7 @@ namespace WorldTravelLogger.Models
         {
             get
             {
-                return endDate_;
+                return endDate_ == null ? DateTime.Now : (DateTime)endDate_;
             }
             set
             {
@@ -279,15 +286,15 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public void InitSetDate(DateTime start, DateTime end)
-        {
-            startSetDate_ = start;
-            endSetDate_ = end;
-        }
+     
 
         public void SetStartSetDate(DateTime date)
         {
-            if (startSetDate_ > date)
+            if(startSetDate_ == null)
+            {
+                startSetDate_ = date;
+            }
+            else if (startSetDate_ > date)
             {
                 startSetDate_ = date;
             }
@@ -296,17 +303,16 @@ namespace WorldTravelLogger.Models
 
         public void SetEndSetDate(DateTime date)
         {
-            if (endSetDate_ > date)
+            if(endSetDate_ == null)
+            {
+                endSetDate_ = date;
+            }
+            else if (endSetDate_ > date)
             {
                 endSetDate_ = date;
             }
         }
 
-        public void InitCalcDate(DateTime? start, DateTime? end)
-        {
-            startCalcDate_ = start;
-            endCalcDate_ = end;
-        }
 
         public void SetStartCalcDate(DateTime? date)
         {
@@ -404,6 +410,13 @@ namespace WorldTravelLogger.Models
             }
             return CheckControl(date, country);
         }
+
+       
+
+       
+       
+
+        
     }
 
 

@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
 using WorldTravelLogger.Converters;
 using WorldTravelLogger.Models;
+using WorldTravelLogger.Models.Context;
+using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
 {
@@ -32,6 +36,7 @@ namespace WorldTravelLogger.ViewModels
         private void Model__ImageListReady_(object? sender, EventArgs e)
         {
             this.RaisePropertyChanged("CountryImagePath");
+            this.RaisePropertyChanged("Countries");
         }
 
 
@@ -341,15 +346,23 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
+
+                var imageDir = model_.ImageDir;
+                if (Path.Exists(imageDir))
                 {
-                    return null;
+                    if (control_.IsWorldMode)
+                    {
+                        return Path.Combine(imageDir, "Countries", "zero.jpg");
+                    }
+                    else
+                    {
+                        return Path.Combine(imageDir, "Countries", control_.CurrentCountryType.ToString(), "zero.jpg");
+                    }
                 }
                 else
                 {
-                    return model_.GetCountryImagePath();
+                    return null;
                 }
-
             }
         }
     }

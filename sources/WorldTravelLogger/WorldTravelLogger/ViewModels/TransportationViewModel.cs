@@ -7,20 +7,23 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Documents;
 using WorldTravelLogger.Models;
+using WorldTravelLogger.Models.Context;
+using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.Interface;
+using WorldTravelLogger.Models.List;
+using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
 {
-    public class TransportationViewModel : ViewModelBase
+    public class TransportationViewModel : BaseContextListViewModel
     {
         TransportationList list_;
-        ControlModel control_;
 
 
-
-        public TransportationViewModel(TransportationList list,ControlModel control)
+        public TransportationViewModel(TransportationList list, ControlModel control) :
+            base(control)
         {
             list_ = list;
-            control_ = control;
             list.ListChanged += List_ListChanged;
 
 
@@ -39,16 +42,13 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("CurrentTransportationType");
             this.RaisePropertyChanged("EnableCurrentTransportationType");
             this.RaisePropertyChanged("Transportations");
-
-
-
         }
 
         public TransportationTypeModel[] TypeTransportations
         {
             get
             {
-                return list_.GetTypeArray();
+                return list_.TypeTransportations;
             }
         }
 
@@ -70,16 +70,6 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        public Transportationtype[] CurrentTransportationTypes
-        {
-            get
-            {
-                var list = new List<Transportationtype>();
-                list.AddRange(list_.GetCurrentTransportationTypes());
-                return list.ToArray();
-            }
-        }
-
         public bool EnableCurrentTransportationType
         {
             get
@@ -88,14 +78,27 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
+        public Transportationtype[] CurrentTransportationTypes
+        {
+            get
+            {
+                return list_.CurrentTransportationTypes;
+            }
+        }
+
+       
+
+
+
         public TransportationModel[] Transportations
         {
             get
             {
-                var value = list_.GetCalcArray(control_.IsCountryRegion).Where(j => j.Transportationtype == CurrentTransportationType);
-                return value.ToArray();
+                return list_.GetCalcs(control_.IsCountryRegion).OfType<TransportationModel>().
+                    Where(m => m.Transportationtype == list_.CurrentTransportationType).ToArray();
             }
         }
+
 
 
 

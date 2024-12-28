@@ -5,19 +5,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using WorldTravelLogger.Models;
+using WorldTravelLogger.Models.Context;
+using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.Interface;
+using WorldTravelLogger.Models.List;
+using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
 {
-    public class SightSeeingViewModel : ViewModelBase
+    public class SightSeeingViewModel : BaseContextListViewModel
     {
         SightSeeingList list_;
-        ControlModel control_;
 
 
-        public SightSeeingViewModel(SightSeeingList list, ControlModel control)
+
+        public SightSeeingViewModel(SightSeeingList list, ControlModel control):
+             base(control)
         {
             list_ = list;
-            control_ = control;
             list_.ListChanged += List__ListChanged;
             
         }
@@ -40,13 +45,17 @@ namespace WorldTravelLogger.ViewModels
 
         }
 
+
+
         public SightseeingTypeModel[] TypeSightseeings
         {
             get
             {
-                return list_.GetTypeArray();
+                return list_.TypeSightseeings;
             }
         }
+
+
 
 
 
@@ -66,16 +75,6 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        public SightseeigType[] CurrentSightseeingTypes
-        {
-            get
-            {
-                var list = new List<SightseeigType>();
-                list.AddRange(list_.GetCurrentSightSeeingTypes());
-                return list.ToArray();
-            }
-        }
-
         public bool EnableCurrentSightseeingType
         {
             get
@@ -84,13 +83,23 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
+        public SightseeigType[] CurrentSightseeingTypes
+        {
+            get
+            {
+                return list_.CurrentSightseeingTypes;
+            }
+        }
+
+       
+
 
         public SightseeingModel[] Sightseeings
         {
             get
             {
-                var value = list_.GetCalcArray(control_.IsCountryRegion).Where(j => j.SightseeigType == CurrentSightSeeingType);
-                return value.ToArray();
+                return list_.GetCalcs(control_.IsCountryRegion).OfType<SightseeingModel>().
+                   Where(m => m.SightseeigType == list_.CurrentSightSeeingType).ToArray();
             }
         }
 

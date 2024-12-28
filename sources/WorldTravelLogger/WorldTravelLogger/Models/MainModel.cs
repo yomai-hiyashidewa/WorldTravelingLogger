@@ -1,10 +1,18 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
+using WorldTravelLogger.Models.Context;
+using WorldTravelLogger.Models.Csv;
+using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.Interface;
+using WorldTravelLogger.Models.List;
+using WorldTravelLogger.Models.Utility;
 
 namespace WorldTravelLogger.Models
 {
@@ -12,199 +20,56 @@ namespace WorldTravelLogger.Models
     {
 
         private const string SAVE_FILE_NAME = "WorldTravelLogger.csv";
+
         private ControlModel controllModel_;
         private ExchangeRater exchangeRater_;
-        private AccomodationList accomodationList_;
-        private TransportationList transportationList_;
-        private SightSeeingList sightSeeingList_;
-        private SightSeeingList otherList_;
+        private OptionModel option_;
+
+        private Dictionary<ContextListType, IContextList> listDic_;
+
 
         private Dictionary<CountryType, HashSet<string>> countriesAndRegions_;
         private Dictionary<CountryType, HashSet<CurrencyType>> countriesAndCurrencies_;
         private HashSet<CountryType> calcCountries_;
-
-
-
-
-
-        private OptionModel option_;
-
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
         public event EventHandler ImageListReady_;
         public event EventHandler CalcCompleted_;
 
-        private void SetOptionModel()
+
+
+        private void Option__FilePathChanged(object? sender, FileLoadedEventArgs e)
         {
-            option_ = new OptionModel();
-            option_.AccomodationPathChanged += Option__AccomodationPathChanged;
-            option_.TransportationPathChanged += Option__TransportationPathChanged;
-            option_.SightseeingPathChanged += Option__SightseeingPathChanged;
-            option_.ExchangeRatePathChanged += Option__ExchangeRatePathChanged;
-            option_.ImagePathChanged += Option__ImagePathChanged;
-        }
-
-
-
-        private void DeleteOptionModel()
-        {
-            option_.AccomodationPathChanged -= Option__AccomodationPathChanged;
-            option_.TransportationPathChanged -= Option__TransportationPathChanged;
-            option_.SightseeingPathChanged -= Option__SightseeingPathChanged;
-            option_.ExchangeRatePathChanged -= Option__ExchangeRatePathChanged;
-            option_.ImagePathChanged -= Option__ImagePathChanged;
-            option_ = null;
-        }
-
-        private void ConvertAccomodationPrices()
-        {
-            if (exchangeRater_ != null && exchangeRater_.IsLoaded)
+            switch (e.Type)
             {
-                if (accomodationList_.IsLoaded)
-                {
-                    accomodationList_.ConvertAnotherCurrency(exchangeRater_);
-                }
+                case ListType.AccomodationList:
+                case ListType.TransportationList:
+                case ListType.SightSeeingList:
+                    LoadList(e.Type);
+                    break;
+                case ListType.ExchangeRateList:
+                    LoadExchange();
+                    break;
+                case ListType.ImageList:
+                    LoadImage();
+                    break;
             }
         }
 
-        private void ConvertTransportationPrices()
+        private void InitSightseeing()
         {
-            if (exchangeRater_ != null && exchangeRater_.IsLoaded)
-            {
-                if (transportationList_.IsLoaded) { }
-                transportationList_.ConvertAnotherCurrency(exchangeRater_);
-            }
+            var sightseeings = (SightSeeingList)listDic_[ContextListType.SightSeeingList];
+            var others = (SightSeeingList)listDic_[ContextListType.Other];
+            others.ImportOthers(sightseeings.ExportOthers());
+            SetExchangeRate(ContextListType.SightSeeingList);
+            SetExchangeRate(ContextListType.Other);
+
+            SetCountries();
+            SetDate();
+            CalcList(ContextListType.SightSeeingList);
+            CalcList(ContextListType.Other);
         }
 
-        private void ConvertSightSeeingPrices()
-        {
-            if (exchangeRater_ != null && exchangeRater_.IsLoaded)
-            {
-                if (sightSeeingList_.IsLoaded) { }
-                sightSeeingList_.ConvertAnotherCurrency(exchangeRater_);
-                otherList_.ConvertAnotherCurrency(exchangeRater_);
-            }
-        }
-
-        private void Option__ExchangeRatePathChanged(object? sender, EventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(option_.ExchangeRatePath))
-            {
-                exchangeRater_.Init();
-                var result = exchangeRater_.Load(option_.ExchangeRatePath, FileNames.ExchangeRateFile);
-                if (result != ErrorTypes.None)
-                {
-                    option_.ExchangeRatePath = null;
-                }
-                else
-                {
-                    ConvertAccomodationPrices();
-                    ConvertTransportationPrices();
-                    ConvertSightSeeingPrices();
-                    if (ReadyApplication)
-                    {
-                        SetCountries();
-                        SetDate();
-                    }
-                    CalcAccomodations();
-                    CalcTransportations();
-                    CalcSightseeings();
-                    CalcOthes();
-                }
-                if (FileLoaded_ != null)
-                {
-                    FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.ExchangeRateList, result));
-                }
-            }
-        }
-
-        private void Option__SightseeingPathChanged(object? sender, EventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(option_.SightseeingPath))
-            {
-                sightSeeingList_.Init();
-                var result = sightSeeingList_.Load(option_.SightseeingPath, FileNames.SightseeingFile);
-                if (result != ErrorTypes.None)
-                {
-                    option_.SightseeingPath = null;
-                }
-                else
-                {
-                    otherList_.ImportOthers(sightSeeingList_.ExportOthers());
-                    ConvertSightSeeingPrices();
-                    if (ReadyApplication)
-                    {
-                        SetCountries();
-                        SetDate();
-                    }
-                    CalcSightseeings();
-                    CalcOthes();
-                }
-
-                if (FileLoaded_ != null)
-                {
-                    FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.SightSeeingList, result));
-                }
-            }
-        }
-
-        private void Option__TransportationPathChanged(object? sender, EventArgs e)
-        {
-            if (!string.IsNullOrWhiteSpace(option_.TransportationPath))
-            {
-                transportationList_.Init();
-                var result = transportationList_.Load(option_.TransportationPath, FileNames.TransportationFile);
-                if (result != ErrorTypes.None)
-                {
-                    option_.TransportationPath = null;
-                }
-                else
-                {
-                    ConvertTransportationPrices();
-                    if (ReadyApplication)
-                    {
-                        SetCountries();
-                        SetDate();
-                    }
-                    CalcTransportations();
-                }
-
-                if (FileLoaded_ != null)
-                {
-                    FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.TransportationList, result));
-                }
-            }
-        }
-
-        private void Option__AccomodationPathChanged(object? sender, EventArgs e)
-        {
-
-            if (!string.IsNullOrWhiteSpace(option_.AccomodationPath))
-            {
-                accomodationList_.Init();
-                var result = accomodationList_.Load(option_.AccomodationPath, FileNames.AccomodationFile);
-
-                if (result != ErrorTypes.None)
-                {
-                    option_.AccomodationPath = null;
-                }
-                else
-                {
-                    ConvertAccomodationPrices();
-                    if (ReadyApplication)
-                    {
-                        SetCountries();
-                        SetDate();
-                    }
-                    CalcAccomodations();
-                }
-                if (FileLoaded_ != null)
-                {
-                    FileLoaded_.Invoke(this, new FileLoadedEventArgs(ListType.AccomodationList, result));
-                }
-            }
-        }
-
-        private void Option__ImagePathChanged(object? sender, EventArgs e)
+        private void LoadImage()
         {
             if (!string.IsNullOrWhiteSpace(option_.ImagePath) && Path.Exists(option_.ImagePath))
             {
@@ -216,25 +81,128 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        private void InitParameter()
+        private void LoadExchange()
         {
+            if (!string.IsNullOrWhiteSpace(option_.ExchangeRatePath))
+            {
+                exchangeRater_.Init();
+                var result = exchangeRater_.Load(option_.ExchangeRatePath, FileNames.ExchangeRateFile);
+                if (result != ErrorTypes.None)
+                {
+                    option_.ExchangeRatePath = null;
+                }
+                else
+                {
+                    SetExchangeRateAll();
+                    CalcListAll();
+                }
+                FireFileLoaded(ListType.ExchangeRateList, result);
+            }
+        }
+
+        private void SetExchangeRate(ContextListType type)
+        {
+
+            if (exchangeRater_ != null && exchangeRater_.IsLoaded)
+            {
+                var list = listDic_[type];
+                if (list.IsLoaded)
+                {
+                    list.ConvertAnotherCurrency(exchangeRater_);
+                }
+            }
+        }
+
+        private void SetExchangeRateAll()
+        {
+            foreach (var type in listDic_.Keys)
+            {
+                SetExchangeRate(type);
+            }
+        }
+
+        private ContextListType? ConvertListType(ListType type)
+        {
+            ContextListType? result = null;
+            switch (type)
+            {
+                case ListType.AccomodationList:
+                    result = ContextListType.AccomodationList;
+                    break;
+                case ListType.TransportationList:
+                    result = ContextListType.TransportationList;
+                    break;
+                case ListType.SightSeeingList:
+                    result = ContextListType.SightSeeingList;
+                    break;
+            }
+            return result;
+        }
+
+        private void FireFileLoaded(ListType type, ErrorTypes error)
+        {
+            if (FileLoaded_ != null)
+            {
+                FileLoaded_.Invoke(this, new FileLoadedEventArgs(type, error));
+            }
+        }
+
+        private void InitList(ContextListType type)
+        {
+            if (type == ContextListType.SightSeeingList)
+            {
+                InitSightseeing();
+            }
+            else
+            {
+                SetExchangeRate(type);
+                SetCountries();
+                SetDate();
+                CalcList(type);
+            }
+        }
+
+        private void LoadList(ListType listType)
+        {
+            var filePath = option_.GetFilePath(listType);
+            if (!string.IsNullOrWhiteSpace(filePath))
+            {
+                var contextListType = ConvertListType(listType);
+                if (contextListType != null)
+                {
+                    var list = listDic_[(ContextListType)contextListType];
+                    list.Init();
+                    var result = list.Load(filePath, FileNames.GetFileName(listType));
+                    if (result != ErrorTypes.None)
+                    {
+                        option_.SetFilePath(listType, null);
+                    }
+                    else
+                    {
+                        InitList((ContextListType)contextListType);
+                    }
+                    FireFileLoaded(listType, result);
+                }
+            }
+
 
         }
 
         public MainModel()
         {
-            SetOptionModel();
+            option_ = new OptionModel();
+            option_.FilePathChanged += Option__FilePathChanged;
             controllModel_ = new ControlModel();
             exchangeRater_ = new ExchangeRater();
-            accomodationList_ = new AccomodationList();
-            transportationList_ = new TransportationList();
-            sightSeeingList_ = new SightSeeingList();
-            otherList_ = new SightSeeingList();
+            listDic_ = new Dictionary<ContextListType, IContextList>();
+            listDic_.Add(ContextListType.AccomodationList, new AccomodationList());
+            listDic_.Add(ContextListType.TransportationList, new TransportationList());
+            listDic_.Add(ContextListType.SightSeeingList, new SightSeeingList());
+            listDic_.Add(ContextListType.Other, new SightSeeingList());
+
             countriesAndRegions_ = new Dictionary<CountryType, HashSet<string>>();
             countriesAndCurrencies_ = new Dictionary<CountryType, HashSet<CurrencyType>>();
             calcCountries_ = new HashSet<CountryType>();
-            controllModel_.InitSetDate(DateTime.Now, DateTime.Now);
-            controllModel_.InitCalcDate(DateTime.Now, DateTime.Now);
             controllModel_.ControlChanged_ += ControllModel__ControlChanged_;
             controllModel_.RegionChanged_ += ControllModel__RegionChanged_;
         }
@@ -252,10 +220,10 @@ namespace WorldTravelLogger.Models
         public void Init()
         {
             exchangeRater_.Init();
-            accomodationList_.Init();
-            transportationList_.Init();
-            sightSeeingList_.Init();
-            otherList_.Init();
+            foreach (var list in listDic_.Values)
+            {
+                list.Init();
+            }
             this.Load();
         }
 
@@ -295,11 +263,8 @@ namespace WorldTravelLogger.Models
         {
             get
             {
-                return accomodationList_.IsLoaded &&
-                    transportationList_.IsLoaded &&
-                    sightSeeingList_.IsLoaded &&
-                    otherList_.IsLoaded &&
-                     exchangeRater_.IsLoaded;
+                bool isLoaded = null == listDic_.Values.FirstOrDefault(l => !l.IsLoaded);
+                return isLoaded && exchangeRater_.IsLoaded;
             }
         }
 
@@ -318,123 +283,73 @@ namespace WorldTravelLogger.Models
         private void SetCountries()
         {
             countriesAndRegions_.Clear();
-            accomodationList_.SetCoutriesAndRegions(countriesAndRegions_);
-            transportationList_.SetCoutriesAndRegions(countriesAndRegions_);
-            sightSeeingList_.SetCoutriesAndRegions((countriesAndRegions_));
-            otherList_.SetCoutriesAndRegions(countriesAndRegions_);
-            SetCurrentRegion();
-
-            // currency
             countriesAndCurrencies_.Clear();
-            accomodationList_.SetCoutriesAndCurrencies(countriesAndCurrencies_);
-            transportationList_.SetCoutriesAndCurrencies(countriesAndCurrencies_);
-            sightSeeingList_.SetCoutriesAndCurrencies((countriesAndCurrencies_));
-            otherList_.SetCoutriesAndCurrencies(countriesAndCurrencies_);
-
+            foreach (var list in listDic_.Values)
+            {
+                list.SetCoutriesAndRegions(countriesAndRegions_);
+                list.SetCoutriesAndCurrencies(countriesAndCurrencies_);
+            }
+            SetCurrentRegion();
         }
 
         private void CalcCountries()
         {
             calcCountries_.Clear();
-
-            foreach (var c in accomodationList_.GetCalcCounties())
+            foreach (var list in listDic_.Values)
             {
-                if (!calcCountries_.Contains(c))
+                foreach (var c in list.GetCalcCounties().Where(c => !calcCountries_.Contains(c)))
                 {
                     calcCountries_.Add(c);
                 }
-            }
-            foreach (var c in transportationList_.GetCalcCounties().Where(c => !calcCountries_.Contains(c)))
-            {
-                calcCountries_.Add(c);
-            }
-            foreach (var c in sightSeeingList_.GetCalcCounties().Where(c => !calcCountries_.Contains(c)))
-            {
-                calcCountries_.Add(c);
-            }
-            foreach (var c in otherList_.GetCalcCounties().Where(c => !calcCountries_.Contains(c)))
-            {
-                calcCountries_.Add(c);
             }
         }
 
         private void SetDate()
         {
-            controllModel_.InitSetDate(accomodationList_.StartDate, accomodationList_.EndDate);
-            controllModel_.SetStartSetDate(transportationList_.StartDate);
-            controllModel_.SetStartSetDate(sightSeeingList_.StartDate);
-            controllModel_.SetStartSetDate(otherList_.StartDate);
-
-            controllModel_.SetEndSetDate(transportationList_.EndDate);
-            controllModel_.SetEndSetDate(sightSeeingList_.EndDate);
-            controllModel_.SetEndSetDate(otherList_.EndDate);
-
-
+            foreach (var list in listDic_.Values)
+            {
+                controllModel_.SetStartSetDate(list.StartDate);
+                controllModel_.SetEndSetDate(list.EndDate);
+            }
             controllModel_.InitDate();
         }
 
         private void CalcDate()
         {
-            controllModel_.InitCalcDate(accomodationList_.GetStartCalcDate(controllModel_.IsCountryRegion), accomodationList_.GetEndCalcDate(controllModel_.IsCountryRegion));
 
-            controllModel_.SetStartCalcDate(transportationList_.GetStartCalcDate(controllModel_.IsCountryRegion));
-            controllModel_.SetStartCalcDate(sightSeeingList_.GetStartCalcDate(controllModel_.IsCountryRegion));
-            controllModel_.SetStartCalcDate(otherList_.GetStartCalcDate(controllModel_.IsCountryRegion));
-
-            controllModel_.SetEndCalcDate(transportationList_.GetEndCalcDate(controllModel_.IsCountryRegion));
-            controllModel_.SetEndCalcDate(sightSeeingList_.GetEndCalcDate(controllModel_.IsCountryRegion));
-            controllModel_.SetEndCalcDate(otherList_.GetEndCalcDate(controllModel_.IsCountryRegion));
-
+            foreach (var list in listDic_.Values)
+            {
+                controllModel_.SetStartCalcDate(list.GetStartCalcDate(controllModel_.IsCountryRegion));
+                controllModel_.SetEndCalcDate(list.GetEndCalcDate(controllModel_.IsCountryRegion));
+            }
             controllModel_.InitDateFromCalc();
         }
 
-        private void CalcAccomodations()
+        private void CalcList(ContextListType type)
         {
-            if (ReadyAccomodations && !accomodationList_.IsReady)
-            {
-                accomodationList_.CalcModels(controllModel_);
-            }
+            var list = listDic_[type];
+            list.CalcModels(controllModel_);
+
             CalcApplication();
         }
 
-        private void CalcTransportations()
+
+        private void CalcListAll()
         {
-            if (ReadyTransportations && !transportationList_.IsReady)
+            foreach (var type in listDic_.Keys)
             {
-                transportationList_.CalcModels(controllModel_);
+                CalcList(type);
             }
-            CalcApplication();
         }
 
-        private void CalcSightseeings()
-        {
-            if (ReadySightseeings && !sightSeeingList_.IsReady)
-            {
-                sightSeeingList_.CalcModels(controllModel_);
-            }
-            CalcApplication();
-        }
-
-        private void CalcOthes()
-        {
-            if (ReadyOthers && !otherList_.IsReady)
-            {
-                otherList_.CalcModels(controllModel_);
-            }
-            CalcApplication();
-
-        }
 
         private void CalcApplication()
         {
-            if (ReadyApplication)
+            CalcCountries();
+            CalcDate();
+            if (CalcCompleted_ != null)
             {
-                CalcCountries();
-                CalcDate();
-                if (CalcCompleted_ != null)
-                {
-                    CalcCompleted_.Invoke(this, EventArgs.Empty);
-                }
+                CalcCompleted_.Invoke(this, EventArgs.Empty);
             }
         }
 
@@ -451,65 +366,18 @@ namespace WorldTravelLogger.Models
         }
 
 
-
-        private void CalcListAll()
-        {
-            if (ReadyAccomodations)
-            {
-                accomodationList_.CalcModels(controllModel_);
-            }
-            if (ReadyTransportations)
-            {
-                transportationList_.CalcModels(controllModel_);
-            }
-            if (ReadySightseeings)
-            {
-                sightSeeingList_.CalcModels(controllModel_);
-            }
-            if (ReadyOthers)
-            {
-                otherList_.CalcModels(controllModel_);
-            }
-
-            CalcApplication();
-
-        }
-
         private void CalcRegionAll()
         {
-            if (ReadyAccomodations)
+            foreach (var pair in listDic_)
             {
-                accomodationList_.CalcRegion(controllModel_);
-            }
-            if (ReadyTransportations)
-            {
-                transportationList_.CalcRegion(controllModel_);
-            }
-            if (ReadySightseeings)
-            {
-                sightSeeingList_.CalcRegion(controllModel_);
-            }
-            if (ReadyOthers)
-            {
-                otherList_.CalcRegion(controllModel_);
+                pair.Value.CalcRegion(controllModel_);
             }
             CalcRegionApplication();
         }
 
-        public CostModel GetCostModel()
-        {
-            var model = new CostModel(CurrencyType.JPY);
-            model.Set(ListType.AccomodationList, accomodationList_.TotalCost);
-            model.Set(ListType.TransportationList, transportationList_.TotalCost);
-            model.Set(ListType.SightSeeingList, sightSeeingList_.TotalCost);
-            model.Set(ListType.Other, otherList_.TotalCost);
-            return model;
-        }
 
-        public MovingModel GetMovingModel()
-        {
-            return new MovingModel(transportationList_.TotalDistance, transportationList_.TotalTime);
-        }
+
+
 
         public IEnumerable<CountryType> GetCountries()
         {
@@ -597,24 +465,33 @@ namespace WorldTravelLogger.Models
             get
             {
                 var hSet = new HashSet<DateTime>();
-                foreach (var date in accomodationList_.GetCalcDates(controllModel_.IsCountryRegion,hSet))
+                foreach (var list in listDic_.Values)
                 {
-                    hSet.Add(date);
-                }
-                foreach (var date in transportationList_.GetCalcDates(controllModel_.IsCountryRegion,hSet))
-                {
-                    hSet.Add(date);
-                }
-                foreach (var date in sightSeeingList_.GetCalcDates(controllModel_.IsCountryRegion,hSet))
-                {
-                    hSet.Add(date);
-                }
-                foreach (var date in otherList_.GetCalcDates(controllModel_.IsCountryRegion, hSet))
-                {
-                    hSet.Add(date);
+                    foreach (var date in list.GetCalcDates(controllModel_.IsCountryRegion, hSet))
+                    {
+                        hSet.Add(date);
+                    }
                 }
                 return hSet.Count;
             }
+        }
+
+        public CostModel GetCostModel()
+        {
+            var cost = new CostModel(CurrencyType.JPY);
+            foreach (var pair in listDic_)
+            {
+                cost.Set(pair.Key, pair.Value.GetTotalCost());
+            }
+            return cost;
+        }
+
+        public MovingModel GetMovingModel()
+        {
+            var model = new MovingModel();
+            var list = (TransportationList)listDic_[ContextListType.TransportationList];
+            model.Set(list.GetTotalDistance(), list.GetTotalTime());
+            return model;
         }
 
         // control
@@ -625,107 +502,32 @@ namespace WorldTravelLogger.Models
 
         public AccomodationList GetAccomodationList()
         {
-            return accomodationList_;
+
+            return (AccomodationList)listDic_[ContextListType.AccomodationList];
         }
 
 
         public TransportationList GetTransportationList()
         {
-            return transportationList_;
+            return (TransportationList)listDic_[ContextListType.TransportationList];
         }
 
 
 
         public SightSeeingList GetSightSeeingList()
         {
-            return sightSeeingList_;
+            return (SightSeeingList)listDic_[ContextListType.SightSeeingList];
         }
 
         public SightSeeingList GetOtherList()
         {
-            return otherList_;
+            return (SightSeeingList)listDic_[ContextListType.Other];
         }
 
         public ExchangeRater GetExchanger()
         {
             return exchangeRater_;
         }
-
-        // accomodation
-
-
-
-        private bool ReadyAccomodations
-        {
-            get
-            {
-                return accomodationList_.IsLoaded && exchangeRater_.IsLoaded;
-            }
-        }
-
-        // transportation
-
-        private bool ReadyTransportations
-        {
-            get
-            {
-                return transportationList_.IsLoaded && exchangeRater_.IsLoaded;
-            }
-        }
-
-
-        // Sightseeing
-
-        private bool ReadySightseeings
-        {
-            get
-            {
-                return sightSeeingList_.IsLoaded && exchangeRater_.IsLoaded;
-            }
-        }
-
-
-
-        private bool ReadyOthers
-        {
-            get
-            {
-                return otherList_.IsLoaded && exchangeRater_.IsLoaded;
-            }
-        }
-
-
-
-
-
-        public string GetCountryImagePath()
-        {
-            var imageDir = option_.ImagePath;
-            if (Path.Exists(imageDir))
-            {
-                if (controllModel_.IsWorldMode)
-                {
-                    return Path.Combine(imageDir, "Countries", "zero.jpg");
-                }
-                else
-                {
-                    return Path.Combine(imageDir, "Countries", controllModel_.CurrentCountryType.ToString(), "zero.jpg");
-                }
-            }
-            else
-            {
-                return null;
-            }
-        }
-
-
-
-
-
-
-
-
-
     }
 
 

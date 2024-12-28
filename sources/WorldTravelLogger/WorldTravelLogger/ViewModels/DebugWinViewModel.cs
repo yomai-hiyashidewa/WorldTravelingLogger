@@ -5,6 +5,10 @@ using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using WorldTravelLogger.Models;
+using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.List;
+using WorldTravelLogger.Models.Utility;
+using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
 {
