@@ -411,12 +411,21 @@ namespace WorldTravelLogger.Models
             return CheckControl(date, country);
         }
 
-       
+        public bool CheckControl(OtherType type, DateTime date, CountryType country)
+        {
+            if (!isWithInsurance_ && type == OtherType.Insurance)
+            {
+                return false;
+            }
+            return CheckControl(date, country);
+        }
 
-       
-       
 
-        
+
+
+
+
+
     }
 
 

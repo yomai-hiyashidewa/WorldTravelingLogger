@@ -11,13 +11,13 @@ namespace WorldTravelLogger.Models.Context
     public class SightseeingModel: BaseContext
     {
         private string? context_;                   // 内容
-        private SightseeigType sightseeigTypecs_;   // 観光種別
+        private SightseeigType sightseeigType_;   // 観光種別
 
         public SightseeingModel() :
             base()
         {
             context_ = null;
-            sightseeigTypecs_ = SightseeigType.Visiting;
+            sightseeigType_ = SightseeigType.Visiting;
 
         }
 
@@ -32,7 +32,7 @@ namespace WorldTravelLogger.Models.Context
             base(date,country, region, price, currency, memo)
         {
             context_ = context;
-            sightseeigTypecs_ = sightseeigType;
+            sightseeigType_ = sightseeigType;
             ResetType();
         }
 
@@ -42,56 +42,53 @@ namespace WorldTravelLogger.Models.Context
             {
                 return;
             }
-            if (sightseeigTypecs_ == SightseeigType.Visiting || sightseeigTypecs_ == SightseeigType.Walking)
+            if (sightseeigType_ == SightseeigType.Visiting || sightseeigType_ == SightseeigType.Walking)
             {
                 var upperC = context_.ToUpper();
                 if (upperC.Contains("BEACH"))
                 {
-                    sightseeigTypecs_ = SightseeigType.Beach;
+                    sightseeigType_ = SightseeigType.Beach;
                 }
                 else if (upperC.Contains("BAY") || upperC.Contains("CAVE") || upperC.Contains("VALLY") ||
                     upperC.Contains("LAKE"))
                 {
-                    sightseeigTypecs_ = SightseeigType.Nature;
+                    sightseeigType_ = SightseeigType.Nature;
                 }
                 else if (upperC.Contains("MUSEUM"))
                 {
-                    sightseeigTypecs_ = SightseeigType.Museum;
+                    sightseeigType_ = SightseeigType.Museum;
                 }
                 else if (upperC.Contains("CHURCH") || upperC.Contains("CATHEDRAL") || 
                     upperC.Contains("MOSK") || upperC.Contains("SHRINE"))
                 {
-                    sightseeigTypecs_ = SightseeigType.Church;
+                    sightseeigType_ = SightseeigType.Church;
                 }
                 else if (upperC.Contains("ZOO"))
                 {
-                    sightseeigTypecs_ = SightseeigType.Zoo;
+                    sightseeigType_ = SightseeigType.Zoo;
                 }
                 else if (upperC.Contains("HERITAGE"))
                 {
-                    sightseeigTypecs_ = SightseeigType.Heritage;
+                    sightseeigType_ = SightseeigType.Heritage;
                 }
                 else if (upperC.Contains("OVERVIEWING"))
                 {
-                    sightseeigTypecs_ = SightseeigType.Overviewing;
+                    sightseeigType_ = SightseeigType.Overviewing;
                 }
                 else if (upperC.Contains("WATERFALL"))
                 {
-                    sightseeigTypecs_ = SightseeigType.Waterfall;
+                    sightseeigType_ = SightseeigType.Waterfall;
                 }
                 else if (upperC.Contains("CASTLE") || upperC.Contains("FORTLESS") ||
                     upperC.Contains("PALACE"))
                 {
-                    sightseeigTypecs_ = SightseeigType.Castle;
+                    sightseeigType_ = SightseeigType.Castle;
                 }
                 else if (upperC.Contains("PARK") || upperC.Contains("GARDEN"))
                 {
-                    sightseeigTypecs_ = SightseeigType.Park;
+                    sightseeigType_ = SightseeigType.Park;
                 }
             }
-            
-
-
         }
 
         public string? Context
@@ -101,7 +98,7 @@ namespace WorldTravelLogger.Models.Context
 
         public SightseeigType SightseeigType
         {
-            get { return sightseeigTypecs_; }
+            get { return sightseeigType_; }
         }
 
 

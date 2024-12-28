@@ -147,18 +147,7 @@ namespace WorldTravelLogger.Models.List
             }
         }
 
-        private SightseeigType? ConvertType(string typeStr)
-        {
-            SightseeigType type;
-            if (Enum.TryParse(typeStr, out type))
-            {
-                return type;
-            }
-            else
-            {
-                return null;
-            }
-        }
+       
 
         private void SetCurrentSightSeingType()
         {
@@ -167,7 +156,7 @@ namespace WorldTravelLogger.Models.List
                 var tModel = hSet_.FirstOrDefault();
                 if (tModel != null)
                 {
-                    var type = ConvertType(tModel.Type);
+                    var type = base.ConvertSightSeeingType(tModel.Type);
                     if (type != null)
                     {
                         CurrentSightSeeingType = (SightseeigType)type;
@@ -249,7 +238,7 @@ namespace WorldTravelLogger.Models.List
                 var list = new List<SightseeigType>();
                 foreach (var model in hSet_)
                 {
-                    var type = ConvertType(model.Type);
+                    var type = base.ConvertSightSeeingType(model.Type);
                     if (type != null)
                     {
                         list.Add((SightseeigType)type);
@@ -266,27 +255,8 @@ namespace WorldTravelLogger.Models.List
         // others
         private bool CheckOthers(SightseeigType type)
         {
-            if (type == SightseeigType.Insurance ||
-                type == SightseeigType.Ticket ||
-                type == SightseeigType.Accident ||
-                type == SightseeigType.Other ||
-                type == SightseeigType.Shopping ||
-                type == SightseeigType.Medical ||
-                type == SightseeigType.Washing ||
-                type == SightseeigType.Tax ||
-                type == SightseeigType.Exchange ||
-                type == SightseeigType.Cashing ||
-                type == SightseeigType.Haircut ||
-                type == SightseeigType.Tips ||
-                type == SightseeigType.PartTimeJob ||
-                type == SightseeigType.Toilet)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            var oType = base.ConvertOtherType(type.ToString());
+            return oType != null;
         }
 
         public List<IContext> ExportOthers()
@@ -301,10 +271,7 @@ namespace WorldTravelLogger.Models.List
             return list;
         }
 
-        public void ImportOthers(List<IContext> list)
-        {
-            list_ = list;
-        }
+        
        
     }
 }

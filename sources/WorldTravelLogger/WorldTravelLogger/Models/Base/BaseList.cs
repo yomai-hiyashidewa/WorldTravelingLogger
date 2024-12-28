@@ -123,6 +123,19 @@ namespace WorldTravelLogger.Models.Base
             }
         }
 
+        protected OtherType? ConvertOtherType(string typeStr)
+        {
+            OtherType type;
+            if (Enum.TryParse(typeStr, out type))
+            {
+                return type;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
         protected PlaceType? ConvertPlaceType(string str)
         {
             PlaceType type;

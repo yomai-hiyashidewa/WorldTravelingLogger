@@ -214,18 +214,6 @@ namespace WorldTravelLogger.Models.List
             }
         }
 
-        private Transportationtype? ConvertType(string typeStr)
-        {
-            Transportationtype type;
-            if (Enum.TryParse(typeStr, out type))
-            {
-                return type;
-            }
-            else
-            {
-                return null;
-            }
-        }
 
         private void SetCurrentTransportationType()
         {
@@ -234,7 +222,7 @@ namespace WorldTravelLogger.Models.List
                 var tModel = hSet_.FirstOrDefault();
                 if (tModel != null)
                 {
-                    var type = ConvertType(tModel.Type);
+                    var type = base.ConvertTransportationType(tModel.Type);
                     if (type != null)
                     {
                         CurrentTransportationType = (Transportationtype)type;
@@ -391,7 +379,7 @@ namespace WorldTravelLogger.Models.List
                 var list = new List<Transportationtype>();
                 foreach (var model in hSet_)
                 {
-                    var type = ConvertType(model.Type);
+                    var type = base.ConvertTransportationType(model.Type);
                     if (type != null)
                     {
                         list.Add((Transportationtype)type);

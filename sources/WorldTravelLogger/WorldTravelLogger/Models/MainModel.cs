@@ -58,7 +58,7 @@ namespace WorldTravelLogger.Models
         private void InitSightseeing()
         {
             var sightseeings = (SightSeeingList)listDic_[ContextListType.SightSeeingList];
-            var others = (SightSeeingList)listDic_[ContextListType.Other];
+            var others = (OtherList)listDic_[ContextListType.Other];
             others.ImportOthers(sightseeings.ExportOthers());
             SetExchangeRate(ContextListType.SightSeeingList);
             SetExchangeRate(ContextListType.Other);
@@ -198,7 +198,7 @@ namespace WorldTravelLogger.Models
             listDic_.Add(ContextListType.AccomodationList, new AccomodationList());
             listDic_.Add(ContextListType.TransportationList, new TransportationList());
             listDic_.Add(ContextListType.SightSeeingList, new SightSeeingList());
-            listDic_.Add(ContextListType.Other, new SightSeeingList());
+            listDic_.Add(ContextListType.Other, new OtherList());
 
             countriesAndRegions_ = new Dictionary<CountryType, HashSet<string>>();
             countriesAndCurrencies_ = new Dictionary<CountryType, HashSet<CurrencyType>>();
@@ -355,13 +355,10 @@ namespace WorldTravelLogger.Models
 
         private void CalcRegionApplication()
         {
-            if (ReadyApplication)
+            CalcDate();
+            if (CalcCompleted_ != null)
             {
-                CalcDate();
-                if (CalcCompleted_ != null)
-                {
-                    CalcCompleted_.Invoke(this, EventArgs.Empty);
-                }
+                CalcCompleted_.Invoke(this, EventArgs.Empty);
             }
         }
 
@@ -519,9 +516,9 @@ namespace WorldTravelLogger.Models
             return (SightSeeingList)listDic_[ContextListType.SightSeeingList];
         }
 
-        public SightSeeingList GetOtherList()
+        public OtherList GetOtherList()
         {
-            return (SightSeeingList)listDic_[ContextListType.Other];
+            return (OtherList)listDic_[ContextListType.Other];
         }
 
         public ExchangeRater GetExchanger()

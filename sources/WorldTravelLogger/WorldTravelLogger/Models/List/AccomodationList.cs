@@ -127,18 +127,6 @@ namespace WorldTravelLogger.Models.List
             }
         }
 
-        private AccomodationType? ConvertType(string typeStr)
-        {
-            AccomodationType type;
-            if (Enum.TryParse(typeStr, out type))
-            {
-                return type;
-            }
-            else
-            {
-                return null;
-            }
-        }
 
         private void SetCurrentAccomodationType()
         {
@@ -146,7 +134,7 @@ namespace WorldTravelLogger.Models.List
             {
                 var tModel = hSet_.FirstOrDefault();
                 if (tModel != null) {
-                    var type = ConvertType(tModel.Type);
+                    var type = base.ConvertAccomodationType(tModel.Type);
                     if (type != null)
                     {
                         CurrentAccomodationtype = (AccomodationType)type;
@@ -224,7 +212,7 @@ namespace WorldTravelLogger.Models.List
                 var list = new List<AccomodationType>();
                 foreach (var model in hSet_)
                 {
-                    var type = ConvertType(model.Type);
+                    var type = base.ConvertAccomodationType(model.Type);
                     if (type != null)
                     {
                         list.Add((AccomodationType)type);

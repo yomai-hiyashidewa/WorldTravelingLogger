@@ -8,30 +8,16 @@ namespace WorldTravelLogger.Models.Enumeration
 {
     public enum SightseeigType
     {
-        Insurance,      // 保険
-        Ticket,         // チケット
         Visiting,       // 訪問
         Trekking,       // トレッキング
         Walking,        // 散歩
-        Accident,       // アクシデント
         Eating,         // 飲食
         KickBoard,      // キックボード
         Cycring,        // サイクリング
-        Other,          // その他
         CableCar,       // ケーブルカー
         Tour,           // ツアー
         Boat,           // ボート
-        Shopping,       // 買い物
-        Medical,        // 医療費
-        Washing,        // 洗濯費
         HotSpring,      // 温泉
-        Tax,            // 税
-        Exchange,       // 両替
-        Cashing,        // キャッシング
-        Haircut,        // 散髪
-        Tips,           // チップ
-        PartTimeJob,    // アルバイト
-        Toilet,         // トイレ
         Museum,         // 博物館
         Church,         // 教会
         Beach,          // ビーチ
@@ -43,5 +29,21 @@ namespace WorldTravelLogger.Models.Enumeration
         Nature,         // 自然
         Canal,          // 運河
         Park,           // 公園
+
+        // other
+        Insurance,      // 保険
+        Ticket,         // チケット
+        Accident,       // アクシデント
+        Other,          // その他
+        Shopping,       // 買い物
+        Medical,        // 医療費
+        Washing,        // 洗濯費
+        Tax,            // 税
+        Exchange,       // 両替
+        Cashing,        // キャッシング
+        Haircut,        // 散髪
+        Tips,           // チップ
+        PartTimeJob,    // アルバイト
+        Toilet,         // トイレ
     }
 }

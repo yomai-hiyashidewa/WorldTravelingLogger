@@ -16,11 +16,11 @@ namespace WorldTravelLogger.ViewModels
 {
     public class OtherViewModel : BaseContextListViewModel
     {
-        SightSeeingList list_;
+        OtherList list_;
 
         
 
-        public OtherViewModel(SightSeeingList list,ControlModel control):
+        public OtherViewModel(OtherList list,ControlModel control):
             base(control)
         {
             list_ = list;
@@ -59,27 +59,27 @@ namespace WorldTravelLogger.ViewModels
         
 
 
-        public SightseeingTypeModel[] TypeOthers
+        public OtherTypeModel[] TypeOthers
         {
             get
             {
-                return list_.TypeSightseeings;
+                return list_.TypeOthers;
             }
         }
 
        
 
-        public SightseeigType CurrentOtherType
+        public OtherType CurrentOtherType
         {
             get
             {
-                return list_.CurrentSightSeeingType;
+                return list_.CurrentOtherType;
             }
             set
             {
-                if (list_.CurrentSightSeeingType != value)
+                if (list_.CurrentOtherType != value)
                 {
-                    list_.CurrentSightSeeingType = value;
+                    list_.CurrentOtherType = value;
                     this.RaisePropertyChanged("Others");
                 }
             }
@@ -93,23 +93,23 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        public SightseeigType[] CurrentOtherTypes
+        public OtherType[] CurrentOtherTypes
         {
             get
             {
-                return list_.CurrentSightseeingTypes;
+                return list_.CurrentOtherTypes;
             }
 
         }
 
       
 
-        public SightseeingModel[] Others
+        public OtherModel[] Others
         {
             get
             {
-                return list_.GetCalcs(control_.IsCountryRegion).OfType<SightseeingModel>().
-                    Where(m => m.SightseeigType == list_.CurrentSightSeeingType).ToArray();
+                return list_.GetCalcs(control_.IsCountryRegion).OfType<OtherModel>().
+                    Where(m => m.OtherType == list_.CurrentOtherType).ToArray();
             }
         }
     }
