@@ -21,149 +21,64 @@ namespace WorldTravelLogger.ViewModels
             model_ = model;
         }
 
-        private void ReloadAccomodation()
-        {
-            model_.Reload(ListType.AccomodationList);
-        }
-
-
-
-        private DelegateCommand reloadAccomodationsCommand_;
-        public DelegateCommand ReloadAccomodationsCommand
+        private DelegateCommand loadCommmand_;
+        public DelegateCommand LoadCommmand
         {
             get
             {
-                return reloadAccomodationsCommand_
-                 ?? (reloadAccomodationsCommand_ = new DelegateCommand(
+                return loadCommmand_
+                 ?? (loadCommmand_ = new DelegateCommand(
                  () =>
                  {
-                     model_.Reload(ListType.AccomodationList);
+                     model_.Load(CurrentListType);
                  }));
             }
         }
 
-        private DelegateCommand reloadTransportsCommand_;
-        public DelegateCommand ReloadTransportsCommand
-        {
-            get
-            {
-                return reloadTransportsCommand_
-                 ?? (reloadTransportsCommand_ = new DelegateCommand(
-                 () =>
-                 {
-                     model_.Reload(ListType.TransportationList);
-                 }));
-            }
-        }
-
-        private DelegateCommand reloadSightseeingsCommand_;
-        public DelegateCommand ReloadSightseeingsCommand
-        {
-            get
-            {
-                return reloadSightseeingsCommand_
-                 ?? (reloadSightseeingsCommand_ = new DelegateCommand(
-                 () =>
-                 {
-                     model_.Reload(ListType.SightSeeingList);
-                 }));
-            }
-        }
-
-        private DelegateCommand reloadExchangeRatesCommand_;
-        public DelegateCommand ReloadExchangeRatesCommand
-        {
-            get
-            {
-                return reloadExchangeRatesCommand_
-                 ?? (reloadExchangeRatesCommand_ = new DelegateCommand(
-                 () =>
-                 {
-                     model_.Reload(ListType.ExchangeRateList);
-                 }));
-            }
-        }
-
-
-
-        public string? AccomodationPath 
-        { 
-            get
-            {
-                if (!string.IsNullOrWhiteSpace(model_.AccomodationPath))
-                {
-                    return Path.GetFileName(model_.AccomodationPath);
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            set
-            {
-                model_.AccomodationPath = value;
-                this.RaisePropertyChanged("AccomodationPath");
-            }
-        }
-
-        public string? TransportationPath
-        {
-            get
-            {
-                if (!string.IsNullOrWhiteSpace(model_.TransportationPath))
-                {
-                    return Path.GetFileName(model_.TransportationPath);
-                }
-                else
-                {
-                    return null;
-                }
-            }
-            set
-            {
-                model_.TransportationPath = value;
-                this.RaisePropertyChanged("TransportationPath");
-            }
-        }
-
-        public string? SigntseeingPath
+        public ListType[] ListTypes
         {
             get
             {
 
-                if (!string.IsNullOrWhiteSpace(model_.SightseeingPath))
+                var list = new List<ListType>();
+                if (Path.Exists(model_.AccomodationPath))
                 {
-                    return Path.GetFileName( model_.SightseeingPath);
+                    list.Add(ListType.AccomodationList);
                 }
-                else
+                if (Path.Exists(model_.TransportationPath))
                 {
-                    return null;
+                    list.Add(ListType.TransportationList);
                 }
-            }
-            set
-            {
-                model_.SightseeingPath = value;
-                this.RaisePropertyChanged("SigntseeingPath");
+                if (Path.Exists(model_.SightseeingPath))
+                {
+                    list.Add(ListType.SightSeeingList);
+                }
+                if (Path.Exists(model_.ExchangeRatePath))
+                {
+                    list.Add(ListType.ExchangeRateList);
+                }
+                return list.ToArray();
             }
         }
 
-        public string? ExchangeRatePath
+        public ListType CurrentListType
         {
-            get
+            get;
+            set;
+        }
+
+
+        private string GetDirName(string path)
+        {
+            if (!string.IsNullOrWhiteSpace(path))
             {
-                if (!string.IsNullOrWhiteSpace(model_.ExchangeRatePath))
-                {
-                    return Path.GetFileName( model_.ExchangeRatePath);
-                }
-                else
-                {
-                    return null;
-                }
+                var dir1 = Directory.GetParent((path));
+                var dir2 = Directory.GetParent(dir1.FullName);
+                return Path.Combine(dir2.Name, dir1.Name, new DirectoryInfo(path).Name);
             }
-            set
+            else
             {
-                model_.ExchangeRatePath = value;
-                this.RaisePropertyChanged("ExchangeRatePath");
+                return null;
             }
         }
 
@@ -171,19 +86,27 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (!string.IsNullOrWhiteSpace(model_.ImagePath))
-                {
-                    return Path.GetDirectoryName(model_.ImagePath);
-                }
-                else
-                {
-                    return null;
-                }
+                return GetDirName(model_.ImagePath);
             }
             set
             {
                 model_.ImagePath = value;
                 this.RaisePropertyChanged("ImagePath");
+            }
+        }
+
+        public string? ListPath
+        {
+            get
+            {
+                return GetDirName(model_.ListPath);
+            }
+            set
+            {
+                model_.ListPath = value;
+                this.RaisePropertyChanged("ListPath");
+                this.RaisePropertyChanged("ListTypes");
+                this.RaisePropertyChanged("CurrentListType");
             }
         }
 

@@ -5,73 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WorldTravelLogger.Views"
         mc:Ignorable="d"
-        Title="Option" Height="350" Width="400">
+        Title="Option" Height="350" Width="400" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <GroupBox Grid.Row="0" Header="accomodations">
+        <GroupBox Grid.Row="0" Header="List">
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="8*"/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox Name="txt_accomodation_list" AllowDrop="True" IsReadOnly="True" Margin="10,10,1,10" Text="{Binding AccomodationPath}" />
-                <Button Name="btn_accomodation_list" Click="btn_accomodation_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
-                <Button Grid.Column="2" Content="reload" Command="{Binding ReloadAccomodationsCommand}" Margin="10,10,10,10" />
+                <TextBox IsReadOnly="True" Text="{Binding ListPath}"/>
+                <Button Grid.Column="1" Name="btn_list_open" Click="btn_list_open_Click" Content="open" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <ListView Grid.Row="1" ItemsSource="{Binding ListTypes}" SelectedItem="{Binding CurrentListType,Mode=TwoWay}" />
+                <Button Grid.Row="1" Grid.Column="1" Content="load" HorizontalAlignment="Left" VerticalAlignment="Top" Command="{Binding LoadCommmand}"/>
             </Grid>
         </GroupBox>
-        <GroupBox Grid.Row="1" Header="transportations">
+        <GroupBox Grid.Row="1" Header="Image">
             <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="8*"/>
+                    <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox Name="txt_transportation_list" IsReadOnly="True" Margin="10,10,10,10" Text="{Binding TransportationPath}" />
-                <Button Name="btn_transportation_list" Click="btn_transportation_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
-                <Button Grid.Column="2" Content="reload" Command="{Binding ReloadTransportsCommand}" Margin="10,10,10,10" />
-            </Grid>
-        </GroupBox>
-        <GroupBox Grid.Row="2" Header="sightseeings">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBox Name="txt_sightseeing_list" IsReadOnly="True" Margin="10,10,10,10" Text="{Binding SigntseeingPath}" />
-                <Button Name="btn_sightseeing_list" Click="btn_sightseeing_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
-                <Button Grid.Column="2" Content="reload" Command="{Binding ReloadSightseeingsCommand}" Margin="10,10,10,10" />
-            </Grid>
-        </GroupBox>
-        <GroupBox Grid.Row="3" Header="exchange_rates">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBox Name="txt_exchange_rate_list" IsReadOnly="True" Margin="10,10,10,10" Text="{Binding ExchangeRatePath}" />
-                <Button Name="btn_exchange_rate_list" Click="btn_exchange_rate_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
-                <Button Grid.Column="2" Content="reload" Command="{Binding ReloadExchangeRatesCommand}" Margin="10,10,10,10" />
-            </Grid>
-        </GroupBox>
-        <GroupBox Grid.Row="4" Header="images">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="4*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                </Grid.ColumnDefinitions>
-                <TextBox Name="txt_image" IsReadOnly="True" Margin="10,10,10,10" Text="{Binding ImagePath}" />
-                <Button Name="btn_image_list" Click="btn_image_list_Click" Grid.Column="1" Content="open" Margin="10,10,10,10" />
-                <Button Grid.Column="2" Content="reload" Margin="10,10,10,10" />
+                <TextBox IsReadOnly="True" Text="{Binding ImagePath}" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+                <Button Grid.Column="1" Name="btn_image_open" Click="btn_image_list_Click" Content="open" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             </Grid>
         </GroupBox>
     </Grid>

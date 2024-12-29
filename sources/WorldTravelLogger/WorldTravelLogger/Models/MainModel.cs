@@ -37,23 +37,7 @@ namespace WorldTravelLogger.Models
 
 
 
-        private void Option__FilePathChanged(object? sender, FileLoadedEventArgs e)
-        {
-            switch (e.Type)
-            {
-                case ListType.AccomodationList:
-                case ListType.TransportationList:
-                case ListType.SightSeeingList:
-                    LoadList(e.Type);
-                    break;
-                case ListType.ExchangeRateList:
-                    LoadExchange();
-                    break;
-                case ListType.ImageList:
-                    LoadImage();
-                    break;
-            }
-        }
+      
 
         private void InitSightseeing()
         {
@@ -83,13 +67,14 @@ namespace WorldTravelLogger.Models
 
         private void LoadExchange()
         {
-            if (!string.IsNullOrWhiteSpace(option_.ExchangeRatePath))
+            var filePath = option_.ExchangeRatePath;
+            if (!string.IsNullOrWhiteSpace(filePath) && Path.Exists(filePath))
             {
                 exchangeRater_.Init();
                 var result = exchangeRater_.Load(option_.ExchangeRatePath, FileNames.ExchangeRateFile);
                 if (result != ErrorTypes.None)
                 {
-                    option_.ExchangeRatePath = null;
+                    
                 }
                 else
                 {
@@ -165,7 +150,8 @@ namespace WorldTravelLogger.Models
         private void LoadList(ListType listType)
         {
             var filePath = option_.GetFilePath(listType);
-            if (!string.IsNullOrWhiteSpace(filePath))
+            var flag = Path.Exists(filePath);
+            if (!string.IsNullOrWhiteSpace(filePath) && Path.Exists(filePath))
             {
                 var contextListType = ConvertListType(listType);
                 if (contextListType != null)
@@ -175,7 +161,7 @@ namespace WorldTravelLogger.Models
                     var result = list.Load(filePath, FileNames.GetFileName(listType));
                     if (result != ErrorTypes.None)
                     {
-                        option_.SetFilePath(listType, null);
+                        
                     }
                     else
                     {
@@ -191,7 +177,7 @@ namespace WorldTravelLogger.Models
         public MainModel()
         {
             option_ = new OptionModel();
-            option_.FilePathChanged += Option__FilePathChanged;
+            option_.ReqLoad += Option__ReqLoad;
             controllModel_ = new ControlModel();
             exchangeRater_ = new ExchangeRater();
             listDic_ = new Dictionary<ContextListType, IContextList>();
@@ -205,6 +191,24 @@ namespace WorldTravelLogger.Models
             calcCountries_ = new HashSet<CountryType>();
             controllModel_.ControlChanged_ += ControllModel__ControlChanged_;
             controllModel_.RegionChanged_ += ControllModel__RegionChanged_;
+        }
+
+        private void Option__ReqLoad(object? sender, FileLoadedEventArgs e)
+        {
+            switch (e.Type)
+            {
+                case ListType.AccomodationList:
+                case ListType.TransportationList:
+                case ListType.SightSeeingList:
+                    LoadList(e.Type);
+                    break;
+                case ListType.ExchangeRateList:
+                    LoadExchange();
+                    break;
+                case ListType.ImageList:
+                    LoadImage();
+                    break;
+            }
         }
 
         private void ControllModel__RegionChanged_(object? sender, EventArgs e)
@@ -234,6 +238,10 @@ namespace WorldTravelLogger.Models
             {
                 option_.Load(data);
             }
+            LoadList(ListType.AccomodationList);
+            LoadList(ListType.TransportationList);
+            LoadList(ListType.SightSeeingList);
+            LoadExchange();
         }
 
 

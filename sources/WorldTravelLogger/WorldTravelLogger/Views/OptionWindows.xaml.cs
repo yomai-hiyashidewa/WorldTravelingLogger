@@ -40,48 +40,6 @@ namespace WorldTravelLogger.Views
             return ofd;
         }
 
-
-        private void btn_accomodation_list_Click(object sender, RoutedEventArgs e)
-        {
-
-            var ofd = CreateOpenFileDialog();
-            if (ofd.ShowDialog() == true)
-            {
-                var vm = (OptionWindowViewModel)this.DataContext;
-                vm.AccomodationPath = ofd.FileName;
-            }
-        }
-
-        private void btn_transportation_list_Click(object sender, RoutedEventArgs e)
-        {
-            var ofd = CreateOpenFileDialog();
-            if (ofd.ShowDialog() == true)
-            {
-                var vm = (OptionWindowViewModel)this.DataContext;
-                vm.TransportationPath = ofd.FileName;
-            }
-        }
-
-        private void btn_sightseeing_list_Click(object sender, RoutedEventArgs e)
-        {
-            var ofd = CreateOpenFileDialog();
-            if (ofd.ShowDialog() == true)
-            {
-                var vm = (OptionWindowViewModel)this.DataContext;
-                vm.SigntseeingPath = ofd.FileName;
-            }
-        }
-
-        private void btn_exchange_rate_list_Click(object sender, RoutedEventArgs e)
-        {
-            var ofd = CreateOpenFileDialog();
-            if (ofd.ShowDialog() == true)
-            {
-                var vm = (OptionWindowViewModel)this.DataContext;
-                vm.ExchangeRatePath = ofd.FileName;
-            }
-        }
-
         private void btn_image_list_Click(object sender, RoutedEventArgs e)
         {
             // Configure open folder dialog box
@@ -93,6 +51,20 @@ namespace WorldTravelLogger.Views
             {
                 var vm = (OptionWindowViewModel)this.DataContext;
                 vm.ImagePath = ofd.FolderName;
+            }
+        }
+
+        private void btn_list_open_Click(object sender, RoutedEventArgs e)
+        {
+            // Configure open folder dialog box
+            var ofd = new OpenFolderDialog();
+
+            ofd.Multiselect = false;
+            ofd.Title = "Select a folder";
+            if (ofd.ShowDialog() == true)
+            {
+                var vm = (OptionWindowViewModel)this.DataContext;
+                vm.ListPath = ofd.FolderName;
             }
         }
     }

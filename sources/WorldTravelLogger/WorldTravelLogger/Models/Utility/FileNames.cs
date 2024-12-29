@@ -10,6 +10,7 @@ namespace WorldTravelLogger.Models.Utility
     public static class FileNames
     {
         public const string ImageDir = "Image";
+        public const string ListDir = "List";
         public const string AccomodationFile = "accomodations";
         public const string TransportationFile = "transpotations";
         public const string SightseeingFile = "sightseeing";
