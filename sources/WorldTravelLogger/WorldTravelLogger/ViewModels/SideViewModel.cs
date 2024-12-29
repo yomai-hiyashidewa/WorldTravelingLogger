@@ -189,7 +189,6 @@ namespace WorldTravelLogger.ViewModels
                 var list = new List<CountryType>();
                 list.AddRange(model_.GetCountries());
                 return list.ToArray();
-
             }
         }
 
