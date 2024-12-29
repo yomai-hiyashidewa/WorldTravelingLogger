@@ -15,6 +15,8 @@ namespace WorldTravelLogger.Models.Utility
         public const string TransportationFile = "transpotations";
         public const string SightseeingFile = "sightseeing";
         public const string ExchangeRateFile = "exchange_rates";
+        public const string ZeroImageFile = "zero.jpg";
+        public const string SAVE_FILE_NAME = "WorldTravelLogger.csv";
 
         public static string GetFileName(ListType type)
         {

@@ -10,6 +10,7 @@ using WorldTravelLogger.Converters;
 using WorldTravelLogger.Models;
 using WorldTravelLogger.Models.Context;
 using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.Utility;
 using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
@@ -343,11 +344,11 @@ namespace WorldTravelLogger.ViewModels
                 {
                     if (control_.IsWorldMode)
                     {
-                        return Path.Combine(imageDir, "Countries", "zero.jpg");
+                        return Path.Combine(imageDir, "Countries", FileNames.ZeroImageFile);
                     }
                     else
                     {
-                        return Path.Combine(imageDir, "Countries", control_.CurrentCountryType.ToString(), "zero.jpg");
+                        return Path.Combine(imageDir, "Countries", control_.CurrentCountryType.ToString(), FileNames.ZeroImageFile);
                     }
                 }
                 else

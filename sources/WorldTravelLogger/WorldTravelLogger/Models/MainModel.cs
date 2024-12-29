@@ -19,7 +19,7 @@ namespace WorldTravelLogger.Models
     public class MainModel
     {
 
-        private const string SAVE_FILE_NAME = "WorldTravelLogger.csv";
+       
 
         private ControlModel controllModel_;
         private ExchangeRater exchangeRater_;
@@ -27,8 +27,11 @@ namespace WorldTravelLogger.Models
 
         private Dictionary<ContextListType, IContextList> listDic_;
 
+        private Dictionary<CountryType, CountryModel> router_;
+
 
         private Dictionary<CountryType, HashSet<string>> countriesAndRegions_;
+        
         private Dictionary<CountryType, HashSet<CurrencyType>> countriesAndCurrencies_;
         private HashSet<CountryType> calcCountries_;
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
@@ -185,6 +188,7 @@ namespace WorldTravelLogger.Models
             listDic_.Add(ContextListType.TransportationList, new TransportationList());
             listDic_.Add(ContextListType.SightSeeingList, new SightSeeingList());
             listDic_.Add(ContextListType.Other, new OtherList());
+            router_ = new Dictionary<CountryType, CountryModel>();
 
             countriesAndRegions_ = new Dictionary<CountryType, HashSet<string>>();
             countriesAndCurrencies_ = new Dictionary<CountryType, HashSet<CurrencyType>>();
@@ -233,7 +237,7 @@ namespace WorldTravelLogger.Models
 
         private void Load()
         {
-            var data = CSVReader.ReadCSV(SAVE_FILE_NAME);
+            var data = CSVReader.ReadCSV(FileNames.SAVE_FILE_NAME);
             if (data != null)
             {
                 option_.Load(data);
@@ -249,7 +253,7 @@ namespace WorldTravelLogger.Models
         public void Exit()
         {
             var data = option_.GetSaveData();
-            CSVWriter.WriteCSV(SAVE_FILE_NAME, data);
+            CSVWriter.WriteCSV(FileNames.SAVE_FILE_NAME, data);
         }
 
         public OptionModel GetOptionModel()
@@ -267,14 +271,7 @@ namespace WorldTravelLogger.Models
 
 
         // control
-        private bool ReadyApplication
-        {
-            get
-            {
-                bool isLoaded = null == listDic_.Values.FirstOrDefault(l => !l.IsLoaded);
-                return isLoaded && exchangeRater_.IsLoaded;
-            }
-        }
+    
 
         public void SetCurrentRegion()
         {
@@ -310,6 +307,17 @@ namespace WorldTravelLogger.Models
                     calcCountries_.Add(c);
                 }
             }
+        }
+
+        private void CalcRoute()
+        {
+            router_.Clear();
+            foreach(var type in calcCountries_)
+            {
+                router_.Add(type, new CountryModel(type, ImageDir));
+            }
+            var list = (TransportationList)listDic_[ContextListType.TransportationList];
+            list.CalcRoute(router_);
         }
 
         private void SetDate()
@@ -378,6 +386,11 @@ namespace WorldTravelLogger.Models
                 pair.Value.CalcRegion(controllModel_);
             }
             CalcRegionApplication();
+            // debug
+            if (!controllModel_.IsRegion)
+            {
+                CalcRoute();
+            }
         }
 
 

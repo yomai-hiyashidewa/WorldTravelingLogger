@@ -33,19 +33,19 @@ namespace WorldTravelLogger.Models.Context
             time_ = 0;                                      // 移動時間(min)
         }
 
-        public TransportationModel(Transportationtype transportationtype, 
-            DateTime startDate, 
-            CountryType startCountry, 
-            string? startRegion, 
-            PlaceType startPlace, 
-            DateTime endDate, 
-            CountryType endCountry, 
-            string? endRegion, 
-            PlaceType endPlace, 
-            double distance, 
-            int time, 
-            double price, 
-            CurrencyType currency, 
+        public TransportationModel(Transportationtype transportationtype,
+            DateTime startDate,
+            CountryType startCountry,
+            string? startRegion,
+            PlaceType startPlace,
+            DateTime endDate,
+            CountryType endCountry,
+            string? endRegion,
+            PlaceType endPlace,
+            double distance,
+            int time,
+            double price,
+            CurrencyType currency,
             string? memo) :
            base(startDate, startCountry, startRegion, price, currency, memo)
         {
@@ -63,13 +63,13 @@ namespace WorldTravelLogger.Models.Context
         // 記述内容を更に分類する
         private void ResetType()
         {
-            if(transportationtype_ == Transportationtype.Train)
+            if (transportationtype_ == Transportationtype.Train)
             {
                 if (distance_ <= 10)
                 {
                     transportationtype_ = Transportationtype.LocalTrain;
                 }
-                else if(distance_ <= 100)
+                else if (distance_ <= 100)
                 {
                     transportationtype_ = Transportationtype.MiddleDistanceTrain;
                 }
@@ -78,13 +78,13 @@ namespace WorldTravelLogger.Models.Context
                     transportationtype_ = Transportationtype.LongDistanceTrain;
                 }
             }
-            else if(transportationtype_ == Transportationtype.Bus)
+            else if (transportationtype_ == Transportationtype.Bus)
             {
                 if (distance_ <= 10)
                 {
                     transportationtype_ = Transportationtype.LocalBus;
                 }
-                else if(distance_ <= 100)
+                else if (distance_ <= 100)
                 {
                     transportationtype_ = Transportationtype.MiddleDistanceBus;
                 }
@@ -138,8 +138,8 @@ namespace WorldTravelLogger.Models.Context
                 return endDate_;
             }
         }
-        
-       // 終了日時
+
+        // 終了日時
 
         public bool IsSameDate
         {
@@ -180,7 +180,7 @@ namespace WorldTravelLogger.Models.Context
             get
             {
                 return endPlace_;
-                
+
             }
         }                    // 終了場所
 
@@ -194,6 +194,70 @@ namespace WorldTravelLogger.Models.Context
             get { return time_; }
         }                           // 移動時間(min)
 
-        
+        public bool SameCountry
+        {
+            get
+            {
+                return StartCountry == EndCountry;
+            }
+
+        }
+
+        public bool IsSameCountry(CountryType type)
+        {
+            return StartCountry == type ||
+                EndCountry == type;
+        }
+
+        public bool SameRegion
+        {
+            get
+            {
+                return StartRegion == EndRegion;
+            }
+        }
+
+        public bool SameDate
+        {
+            get
+            {
+                return StartDate == EndDate;
+            }
+        }
+
+        public string GetRegion(CountryType type)
+        {
+            if (type == StartCountry)
+            {
+                return StartRegion;
+            }
+            else if (type == EndCountry)
+            {
+                return EndRegion;
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public bool IsSameStartRegion(string region)
+        {
+            return StartRegion == region;
+        }
+
+        public bool IsSameEndRegion(string region)
+        {
+            return EndRegion == region;
+        }
+
+        public bool IsSameRegion(string region)
+        {
+            return IsSameStartRegion(region) ||
+                IsSameEndRegion(region);
+        }
+
+
+
     }
 }
