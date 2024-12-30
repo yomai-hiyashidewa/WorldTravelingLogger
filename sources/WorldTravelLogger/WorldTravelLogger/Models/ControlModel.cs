@@ -39,9 +39,9 @@ namespace WorldTravelLogger.Models
         private CurrencyType currentMajorCurrencyType_;
         private string currentRegion_;
 
-        
 
-       
+
+
 
         public event EventHandler ControlChanged_;
         public event EventHandler RegionChanged_;
@@ -56,8 +56,8 @@ namespace WorldTravelLogger.Models
             isOnlyBorder_ = false;
             isRegionMode_ = false;
             currentRegion_ = null;
-           
-            
+
+
             //startDate_ = new DateTime(2022, 5, 16);
             //endDate_ = new DateTime(2024, 5, 1);
             currentCountryType_ = CountryType.JPN;
@@ -224,7 +224,7 @@ namespace WorldTravelLogger.Models
         {
             get
             {
-                return startDate_ == null ? DateTime.Now: (DateTime)startDate_;
+                return startDate_ == null ? DateTime.Now : (DateTime)startDate_;
             }
             set
             {
@@ -286,11 +286,11 @@ namespace WorldTravelLogger.Models
             }
         }
 
-     
+
 
         public void SetStartSetDate(DateTime date)
         {
-            if(startSetDate_ == null)
+            if (startSetDate_ == null)
             {
                 startSetDate_ = date;
             }
@@ -303,7 +303,7 @@ namespace WorldTravelLogger.Models
 
         public void SetEndSetDate(DateTime date)
         {
-            if(endSetDate_ == null)
+            if (endSetDate_ == null)
             {
                 endSetDate_ = date;
             }
@@ -361,42 +361,75 @@ namespace WorldTravelLogger.Models
 
         }
 
-        public bool CheckControl(Transportationtype tType, DateTime startDate, DateTime endDate, CountryType startCountry, CountryType endCountry)
+        private bool CheckAirplaneMode(Transportationtype type)
         {
-            DateTime date = startDate;
-            CountryType country = startCountry;
-            if (!isWithAirplane_ && tType == Transportationtype.AirPlane)
-            {
-                return false;
-            }
-            // 世界モードで国境のみの時は国が違ったら落とす
-            else if (isWorldMode_ && isOnlyBorder_ && startCountry == endCountry)
-            {
-                return false;
-            }
-            // 国モードで国境越えがOFFの時国境越えは落とす
-            else if (!isWorldMode_ && !isWithCrossBorder_ && startCountry != endCountry)
-            {
-                return false;
-            }
-            // 国モードで国境越えがONの時出発も到着も選択国でない時は落とす
-            else if (!isWorldMode_ && IsWithCrossBorder && currentCountryType_ != startCountry && currentCountryType_ != endCountry)
-            {
-                return false;
-            }
-            // 国境越えで到着国が選択国なら到着国を選択
-            else if (startCountry != endCountry && endCountry == currentCountryType_)
-            {
-                country = endCountry;
-            }
-            // 出発日と到着日が違う場合に到着日が選択範囲に入っているなら到着日を選択
+            return !isWithAirplane_ && type == Transportationtype.AirPlane;
+        }
 
+        private bool CheckOnlyCrossBorder(CountryType startCountry, CountryType endCountry)
+        {
+            return isWorldMode_ && isOnlyBorder_ && startCountry == endCountry;
+        }
+
+        private bool CheckWithCrossBorder(CountryType startCountry, CountryType endCountry)
+        {
+            return !isWorldMode_ && !isWithCrossBorder_ && startCountry != endCountry;
+        }
+
+        private bool CheckWithCrossBorderCountry(CountryType startCountry, CountryType endCountry)
+        {
+            return !isWorldMode_ && IsWithCrossBorder && currentCountryType_ != startCountry && currentCountryType_ != endCountry;
+        }
+
+        private bool CheckArrivalCountry(CountryType startCountry, CountryType endCountry)
+        {
+            return startCountry != endCountry && endCountry == currentCountryType_;
+        }
+
+        private bool CheckArrivalDate(DateTime startDate, DateTime endDate)
+        {
             if (startDate != endDate)
             {
                 if (startDate_ <= endDate && endDate <= endDate_)
                 {
-                    date = endDate;
+                    return true;
                 }
+            }
+            return false;
+        }
+
+        private bool CheckInsurance(OtherType type)
+        {
+            return !isWithInsurance_ && type == OtherType.Insurance;
+        }
+
+        public bool CheckControl(Transportationtype tType, DateTime startDate, DateTime endDate, CountryType startCountry, CountryType endCountry)
+        {
+            DateTime date = startDate;
+            CountryType country = startCountry;
+            if (CheckAirplaneMode(tType))
+            {
+                return false;
+            }
+            else if (CheckOnlyCrossBorder(startCountry, endCountry))
+            {
+                return false;
+            }
+            else if (CheckWithCrossBorder(startCountry, endCountry))
+            {
+                return false;
+            }
+            else if (CheckWithCrossBorderCountry(startCountry, endCountry))
+            {
+                return false;
+            }
+            else if (CheckArrivalCountry(startCountry, endCountry))
+            {
+                country = endCountry;
+            }
+            if (CheckArrivalDate(startDate, endDate))
+            {
+                date = endDate;
             }
             return CheckControl(date, startCountry);
 
@@ -404,16 +437,12 @@ namespace WorldTravelLogger.Models
 
         public bool CheckControl(SightseeigType type, DateTime date, CountryType country)
         {
-            if (!isWithInsurance_ && type == SightseeigType.Insurance)
-            {
-                return false;
-            }
             return CheckControl(date, country);
         }
 
         public bool CheckControl(OtherType type, DateTime date, CountryType country)
         {
-            if (!isWithInsurance_ && type == OtherType.Insurance)
+            if (CheckInsurance(type))
             {
                 return false;
             }

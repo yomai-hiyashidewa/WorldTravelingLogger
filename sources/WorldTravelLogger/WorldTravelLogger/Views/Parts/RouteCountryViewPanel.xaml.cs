@@ -14,26 +14,22 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WorldTravelLogger.ViewModels;
 
-namespace WorldTravelLogger.Views
+namespace WorldTravelLogger.Views.Parts
 {
     /// <summary>
-    /// SideView.xaml の相互作用ロジック
+    /// RouteCountryViewPanel.xaml の相互作用ロジック
     /// </summary>
-    public partial class SideView : UserControl
+    public partial class RouteCountryViewPanel : UserControl
     {
-        public SideView()
+        public RouteCountryViewPanel()
         {
             InitializeComponent();
-            
         }
 
-        public void SetVM(SideViewModel vm)
+        public void SetVM(RouteCountryViewModel vm)
         {
             this.countryList.SetVM(vm.GetCountryListViewModel());
             this.DataContext = vm;
         }
-
-
-        
     }
 }

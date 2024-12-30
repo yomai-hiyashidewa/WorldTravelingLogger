@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WorldTravelLogger.ViewModels;
 
 namespace WorldTravelLogger.Views
 {
@@ -23,6 +24,14 @@ namespace WorldTravelLogger.Views
         public RouteView()
         {
             InitializeComponent();
+        }
+
+        public void SetVM(RouteViewModel vm)
+        {
+            arrivals.SetVM(vm.GetRouteCountryViewModel(true));
+            //regions.setVM()
+            departures.SetVM(vm.GetRouteCountryViewModel(false));
+            this.DataContext = vm;
         }
     }
 }

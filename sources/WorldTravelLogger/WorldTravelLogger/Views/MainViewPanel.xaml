@@ -49,6 +49,9 @@
                 </Grid.RowDefinitions>
                 <local:UpperView x:Name="UpperView" Grid.Row="0"/>
                 <TabControl Grid.Row="1" FontSize="15" Margin="10,10,10,10">
+                    <TabItem Header="Route">
+                        <local:RouteView x:Name="RouteViewPanel"/>
+                    </TabItem>
                     <TabItem Header="accomodation">
                         <local:AccomodationView x:Name="AcomodationViewPanel"/>
                     </TabItem>

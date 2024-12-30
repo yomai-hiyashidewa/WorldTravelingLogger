@@ -15,6 +15,7 @@ namespace WorldTravelLogger.ViewModels
     {
         private MainModel model_;
         private ControlModel control_;
+        private RouteViewModel routeVM_;
 
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
 
@@ -22,8 +23,15 @@ namespace WorldTravelLogger.ViewModels
         {
             model_ = new MainModel();
             control_ = model_.GetControlModel();
+            routeVM_ = new RouteViewModel();
             model_.FileLoaded_ += Model__FileLoaded_;
             model_.CalcCompleted_ += Model__CalcCompleted_;
+            model_.CalcRouteCompleted_ += Model__CalcRouteCompleted_;
+        }
+
+        private void Model__CalcRouteCompleted_(object? sender, EventArgs e)
+        {
+            routeVM_.SetModel(model_.GetCurrentCountryModel());
         }
 
         private void Model__CalcCompleted_(object? sender, EventArgs e)
@@ -126,6 +134,11 @@ namespace WorldTravelLogger.ViewModels
         public SideViewModel GetSideViewModel()
         {
             return new SideViewModel(model_);
+        }
+
+        public RouteViewModel GetRouteViewModel()
+        {
+            return routeVM_;
         }
 
         public AccomodationViewModel GetAccomodationViewModel()

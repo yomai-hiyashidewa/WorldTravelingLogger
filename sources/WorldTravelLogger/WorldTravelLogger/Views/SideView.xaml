@@ -4,8 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WorldTravelLogger.Views"
-             xmlns:converter="clr-namespace:WorldTravelLogger.Converters"
+             xmlns:converter="clr-namespace:WorldTravelLogger.Views.Converters"
              xmlns:models="clr-namespace:WorldTravelLogger.Models"
+             xmlns:parts="clr-namespace:WorldTravelLogger.Views.Parts"
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="200">
     <Grid>
@@ -56,19 +57,7 @@ Content="{Binding TotalCalcCountries}"
                     </Grid.ColumnDefinitions>
                     
                 </Grid>
-
-                <ListView Grid.Row="0" ItemsSource="{Binding CountryModels}" >
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <DockPanel>
-                                <TextBlock Margin="10,0,10,0" Text="{Binding Type,Converter={StaticResource EnumDisplayConv}}" />
-                                <Border BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center">
-                                    <Image Width="22" Height="15" Source="{Binding ImagePath}"/>
-                                </Border>
-                            </DockPanel>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                <parts:CountryListView x:Name="countryList"/>
                 <TextBlock Grid.Row="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding RegionsCount}"/>
             </Grid>
 

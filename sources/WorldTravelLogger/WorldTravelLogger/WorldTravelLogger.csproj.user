@@ -22,6 +22,15 @@
     <Compile Update="Views\OtherView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Parts\CountryListView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Parts\RouteCountryViewPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\Parts\RouteRegionsViewPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\RouteView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -55,6 +64,15 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\OtherView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Parts\CountryListView.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Parts\RouteCountryViewPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Parts\RouteRegionsViewPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\RouteView.xaml">

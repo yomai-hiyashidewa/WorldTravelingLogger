@@ -12,27 +12,18 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using WorldTravelLogger.ViewModels;
 
-namespace WorldTravelLogger.Views
+namespace WorldTravelLogger.Views.Parts
 {
     /// <summary>
-    /// SideView.xaml の相互作用ロジック
+    /// RouteRegionsViewPanel.xaml の相互作用ロジック
     /// </summary>
-    public partial class SideView : UserControl
+    public partial class RouteRegionsViewPanel : UserControl
     {
-        public SideView()
+        public RouteRegionsViewPanel()
         {
             InitializeComponent();
-            
         }
-
-        public void SetVM(SideViewModel vm)
-        {
-            this.countryList.SetVM(vm.GetCountryListViewModel());
-            this.DataContext = vm;
-        }
-
 
         
     }

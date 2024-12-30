@@ -6,10 +6,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Documents;
 using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.ViewModels;
 
 namespace WorldTravelLogger.Models.Context
 {
-    public class CountryModel
+    public class CountryModel : CountryViewModel
     {
         private CountryType countryType_;
 
@@ -25,10 +26,9 @@ namespace WorldTravelLogger.Models.Context
 
         private DateTime? endDate_;
 
-        public CountryModel(CountryType countryType_, string imageDir_)
+        public CountryModel(CountryType countryType, string imageDir):
+            base(countryType,imageDir)
         {
-            this.countryType_ = countryType_;
-            this.imageDir_ = imageDir_;
             this.Init();
         }
 
@@ -42,23 +42,59 @@ namespace WorldTravelLogger.Models.Context
             currentRegionModel_ = null;
         }
 
-        public CountryType Type { get { return countryType_; } }
-
-        public string ImagePath
+        public TransportationModel GetTransportationModel(bool isArrival,CountryType type)
         {
-            get
+            if (isArrival)
             {
-                if(!string.IsNullOrWhiteSpace(imageDir_) && Path.Exists(imageDir_))
-                {
-                    var path = Path.Combine(imageDir_, "Flags", countryType_.ToString() + ".png");
-                    if (File.Exists(path))
-                    {
-                        return path;
-                    }
-                }
-                return null;
+                return arrivals_.FirstOrDefault(m => m.StartCountry == type);
+            }
+            else
+            {
+                return departures_.FirstOrDefault(m => m.EndCountry == type);
             }
         }
+
+        public IEnumerable<CountryType> GetCountries(bool isArrival)
+        {
+            if (isArrival)
+            {
+                foreach(var model in arrivals_)
+                {
+                    yield return model.StartCountry;
+                }
+            }
+            else
+            {
+                foreach (var model in departures_)
+                {
+                    yield return model.EndCountry;
+                }
+            }
+        }
+
+        public CountryType? GetFirstCountryType(bool isArrival)
+        {
+            CountryType? type = null;
+            if (isArrival)
+            {
+                var model = arrivals_.FirstOrDefault();
+                if(model != null)
+                {
+                    type = model.StartCountry;
+                }
+            }
+            else
+            {
+                var model = departures_.FirstOrDefault();
+                if (model != null)
+                {
+                    type = model.EndCountry;
+                }
+            }
+            return type;
+        }
+
+
 
         private RegionModel currentRegionModel_;
 

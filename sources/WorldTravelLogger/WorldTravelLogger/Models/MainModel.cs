@@ -37,6 +37,7 @@ namespace WorldTravelLogger.Models
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
         public event EventHandler ImageListReady_;
         public event EventHandler CalcCompleted_;
+        public event EventHandler CalcRouteCompleted_;
 
 
 
@@ -285,6 +286,19 @@ namespace WorldTravelLogger.Models
 
         }
 
+        public CountryModel? GetCurrentCountryModel()
+        {
+            if(router_.ContainsKey(controllModel_.CurrentCountryType))
+            {
+                return router_[controllModel_.CurrentCountryType];
+            }
+            else
+            {
+                return null;
+            }
+
+        }
+
         private void SetCountries()
         {
             countriesAndRegions_.Clear();
@@ -318,6 +332,10 @@ namespace WorldTravelLogger.Models
             }
             var list = (TransportationList)listDic_[ContextListType.TransportationList];
             list.CalcRoute(router_);
+            if(CalcRouteCompleted_ != null)
+            {
+                CalcRouteCompleted_.Invoke(this, EventArgs.Empty);
+            }
         }
 
         private void SetDate()

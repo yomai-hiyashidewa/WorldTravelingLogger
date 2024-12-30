@@ -32,6 +32,7 @@ namespace WorldTravelLogger.Views
             var vm = new MainViewPanelVM();
             SideView.SetVM(vm.GetSideViewModel());
             UpperView.SetVM(vm.GetUpperViewModel());
+            RouteViewPanel.SetVM(vm.GetRouteViewModel());
             AcomodationViewPanel.SetVM(vm.GetAccomodationViewModel());
             TransporationViewPanel.SetVM(vm.GetTransporationViewModel());
             SightseeingViewPanel.SetVM(vm.GetSightseeingViewModel());
