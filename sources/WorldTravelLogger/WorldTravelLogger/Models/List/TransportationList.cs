@@ -411,6 +411,13 @@ namespace WorldTravelLogger.Models.List
             return sum;
         }
 
+        public IEnumerable<TransportationModel> GetRoute(CountryType type)
+        {
+            return calcList_.OfType<TransportationModel>().Where(m => m.IsSameCountry(type) && !m.SameRegion);
+        }
+
+         
+
         public IEnumerable<TransportationModel> GetArrivals(CountryType type)
         {
             return calcList_.OfType<TransportationModel>().Where(m => m.EndCountry == type && !m.SameCountry);

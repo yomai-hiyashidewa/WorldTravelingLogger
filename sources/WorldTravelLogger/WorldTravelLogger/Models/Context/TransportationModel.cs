@@ -155,7 +155,7 @@ namespace WorldTravelLogger.Models.Context
         {
             get
             {
-                return endDate_.ToString("yyyy/MM/dd");
+                return base.GetDataString(endDate_);
             }
         }
 
@@ -203,11 +203,29 @@ namespace WorldTravelLogger.Models.Context
 
         }
 
+        public string DistanceAndTimeStr
+        {
+            get
+            {
+                var moving = GetMovingMoidel();
+                return moving.Distance + "," + moving.Time;
+            }
+        }
+
         public bool SameCountry
         {
             get
             {
                 return StartCountry == EndCountry;
+            }
+
+        }
+
+        public bool AnotherCountry
+        {
+            get
+            {
+                return StartCountry != EndCountry;
             }
 
         }

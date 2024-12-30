@@ -28,11 +28,11 @@
                 </Border>
                 <TextBlock Margin="10,0,10,0" Text="{Binding Type,Converter={StaticResource EnumDisplayConv}}" />
             </DockPanel>
-            <TextBlock Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Text="2022/05/01"/>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Text="{Binding StartDate}"/>
         </Grid>
         <Border Grid.Row="1" BorderThickness="1" BorderBrush="Black">
             <local:RouteRegionMiniViewPanel x:Name="regionMiniPanel"/>
         </Border>
-        <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="top" Text="2022/05/10"/>
+        <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="top" Text="{Binding EndDate}"/>
     </Grid>
 </UserControl>

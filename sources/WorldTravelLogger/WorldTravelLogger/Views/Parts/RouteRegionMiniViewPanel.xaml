@@ -12,7 +12,6 @@
         </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="8*"/>
-            <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Grid.ColumnDefinitions>
@@ -23,49 +22,37 @@
             <TextBlock Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center" Text="=>"/>
             <Grid Grid.Column="1">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="20"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
-                    </Grid.ColumnDefinitions>
-                    <ComboBox Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ItemsSource="{Binding Regions}" SelectedItem="{Binding CurrentRegion,Mode=TwoWay}"/>
-                    <ComboBox Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" ItemsSource="{Binding Dates}" SelectedIndex="{Binding SelectedIndex,Mode=TwoWay}" />
-                </Grid>
-                <Border Grid.Row="1" BorderThickness="1" BorderBrush="Black">
+                <Border Grid.Row="1" BorderThickness="1" BorderBrush="Gray">
                     <Grid>
-                        <GroupBox Header="Event">
-                            <ListView ItemsSource="{Binding Events}"/>
-                        </GroupBox>
+                        <ListView ItemsSource="{Binding Routes}">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid HorizontalAlignment="Center">
+                                        <Grid Visibility="{Binding SameCountry,Converter={StaticResource BooleanToVisibility}}">
+                                            <Grid.RowDefinitions>
+                                                <RowDefinition Height="*"/>
+                                                <RowDefinition Height="2*"/>
+                                            </Grid.RowDefinitions>
+                                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Text="{Binding StartRegion}"/>
+                                            <GroupBox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Header="{Binding Transportationtype}">
+                                                <TextBlock Text="{Binding DistanceAndTimeStr}"/>
+                                            </GroupBox>
+                                        </Grid>
+                                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" Visibility="{Binding AnotherCountry,Converter={StaticResource BooleanToVisibility}}"
+                                                       Text="{Binding DateString}"/>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
                     </Grid>
                 </Border>
             </Grid>
             <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="=>"/>
         </Grid>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-
-            <StackPanel Grid.Column="0" Visibility="{Binding EnableFromRegion,Converter={StaticResource BooleanToVisibility }}">
-                <TextBlock HorizontalAlignment="Center" Text="↑"/>
-                <GroupBox Header="{Binding FromRegion}">
-                    <DataGrid IsReadOnly="True" ItemsSource="{Binding FromMoving}" />
-                </GroupBox>
-            </StackPanel>
 
 
-            <StackPanel Grid.Column="1" Visibility="{Binding EnableToRegion,Converter={StaticResource BooleanToVisibility }}">
-                <TextBlock HorizontalAlignment="Center" Text="↑"/>
-                <GroupBox Header="{Binding ToRegion}">
-                    <DataGrid IsReadOnly="True" ItemsSource="{Binding ToMoving}" />
-                </GroupBox>
-            </StackPanel>
-        </Grid>
 
 
     </Grid>

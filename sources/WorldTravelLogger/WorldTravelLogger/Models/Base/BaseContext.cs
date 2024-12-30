@@ -141,6 +141,11 @@ namespace WorldTravelLogger.Models.Base
             }
         }
 
+        public string GetDataString(DateTime date)
+        {
+            return date.ToString("yyyy/MM/dd");
+        }
+
         protected void ConvertJPYPrice(double rate)
         {
             JPYPrice = Price * rate;
@@ -161,9 +166,11 @@ namespace WorldTravelLogger.Models.Base
         {
             get
             {
-                return Date.ToString("yyyy/MM/dd");
+                return GetDataString(date_);
             }
         }
+
+       
 
         public string JPYPriceString
         {

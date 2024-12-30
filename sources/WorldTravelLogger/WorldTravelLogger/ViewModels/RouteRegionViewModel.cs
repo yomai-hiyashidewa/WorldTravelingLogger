@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using WorldTravelLogger.Models;
 using WorldTravelLogger.Models.Context;
 using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.List;
 using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
@@ -14,6 +15,7 @@ namespace WorldTravelLogger.ViewModels
     {
         ControlModel control_;
         MainModel model_;
+        TransportationList transportationList_;
 
         CountryViewModel cVM_;
 
@@ -25,6 +27,7 @@ namespace WorldTravelLogger.ViewModels
             model.CalcCompleted_ += Model_CalcCompleted_;
             control_ = model.GetControlModel();
             control_.CountryChanged_ += Control__CountryChanged_;
+            transportationList_ = model.GetTransportationList();
             MiniVM = new RouteRegionMiniViewModel(model);
             SetCVM();
         }
@@ -51,6 +54,40 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("Type");
             this.RaisePropertyChanged("EnableImage");
             this.RaisePropertyChanged("CountryFlagPath");
+            this.RaisePropertyChanged("StartDate");
+            this.RaisePropertyChanged("EndDate");
+        }
+
+        public string StartDate
+        {
+            get
+            {
+                var date = transportationList_.GetRoute(control_.CurrentRouteCountryType).FirstOrDefault();
+                if(date != null)
+                {
+                    return date.DateString;
+                }
+                else
+                {
+                    return "";
+                }
+            }
+        }
+
+        public string EndDate
+        {
+            get
+            {
+                var date = transportationList_.GetRoute(control_.CurrentRouteCountryType).LastOrDefault();
+                if (date != null)
+                {
+                    return date.EndDateString;
+                }
+                else
+                {
+                    return "";
+                }
+            }
         }
 
         public CountryType Type
