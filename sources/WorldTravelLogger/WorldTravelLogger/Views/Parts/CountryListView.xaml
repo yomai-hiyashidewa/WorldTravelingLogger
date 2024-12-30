@@ -16,10 +16,10 @@
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <DockPanel>
-                        <TextBlock Margin="10,0,10,0" Text="{Binding Type,Converter={StaticResource EnumDisplayConv}}" />
                         <Border Visibility="{Binding EnableImage,Converter={StaticResource BooleanToVisibility}}" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <Image Width="22" Height="15" Source="{Binding ImagePath}"/>
                         </Border>
+                        <TextBlock Margin="10,0,10,0" Text="{Binding Type,Converter={StaticResource EnumDisplayConv}}" />
                     </DockPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>

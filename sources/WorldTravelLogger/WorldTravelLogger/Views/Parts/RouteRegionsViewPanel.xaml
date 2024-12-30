@@ -23,10 +23,10 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <DockPanel HorizontalAlignment="Left" VerticalAlignment="Bottom">
-                <TextBlock Margin="10,0,10,0" Text="{Binding Type,Converter={StaticResource EnumDisplayConv}}" />
                 <Border Visibility="{Binding EnableImage,Converter={StaticResource BooleanToVisibility}}" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Image Width="22" Height="15" Source="{Binding CountryFlagPath}"/>
                 </Border>
+                <TextBlock Margin="10,0,10,0" Text="{Binding Type,Converter={StaticResource EnumDisplayConv}}" />
             </DockPanel>
             <TextBlock Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Text="2022/05/01"/>
         </Grid>
