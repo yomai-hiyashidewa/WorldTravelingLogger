@@ -32,6 +32,7 @@ namespace WorldTravelLogger.Models
         private bool isWithInsurance_;
 
         private CountryType currentCountryType_;
+        private CountryType currentRouteCountryType_;
 
         private DateTime? startDate_;
         private DateTime? endDate_;
@@ -44,6 +45,7 @@ namespace WorldTravelLogger.Models
 
 
         public event EventHandler ControlChanged_;
+        public event EventHandler CountryChanged_;
         public event EventHandler RegionChanged_;
 
         public ControlModel()
@@ -61,6 +63,7 @@ namespace WorldTravelLogger.Models
             //startDate_ = new DateTime(2022, 5, 16);
             //endDate_ = new DateTime(2024, 5, 1);
             currentCountryType_ = CountryType.JPN;
+            currentRouteCountryType_ = CountryType.JPN;
             currentMajorCurrencyType_ = CurrencyType.JPY;
         }
 
@@ -71,6 +74,14 @@ namespace WorldTravelLogger.Models
             if (ControlChanged_ != null)
             {
                 ControlChanged_.Invoke(this, EventArgs.Empty);
+            }
+        }
+
+        private void FireCountryChanged()
+        {
+            if(CountryChanged_ != null)
+            {
+                CountryChanged_.Invoke(this, EventArgs.Empty);
             }
         }
 
@@ -197,6 +208,19 @@ namespace WorldTravelLogger.Models
                     currentCountryType_ = value;
                     InitDate();
                     FireControlChanged();
+                }
+            }
+        }
+
+        public CountryType CurrentRouteCountryType
+        {
+            get { return currentRouteCountryType_; }
+            set
+            {
+                if(currentRouteCountryType_ != value)
+                {
+                    currentRouteCountryType_ = value;
+                    FireCountryChanged();
                 }
             }
         }

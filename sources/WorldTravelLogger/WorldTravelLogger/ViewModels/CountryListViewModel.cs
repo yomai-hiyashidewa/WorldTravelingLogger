@@ -59,9 +59,9 @@ namespace WorldTravelLogger.ViewModels
                 if(currentCountry_ != value)
                 {
                     currentCountry_ = value;
-                    if(CountryChanged != null)
+                    if(CountryChanged != null && currentCountry_ != null)
                     {
-                        CountryChanged(this, new CountryChangedEventArgs(currentCountry_.Type));
+                        CountryChanged(this, new CountryChangedEventArgs(currentCountry_.Type,list_.IndexOf(currentCountry_)));
                     }
                 }
             }

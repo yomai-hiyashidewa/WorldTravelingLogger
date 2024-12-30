@@ -23,7 +23,7 @@ namespace WorldTravelLogger.ViewModels
         {
             model_ = new MainModel();
             control_ = model_.GetControlModel();
-            routeVM_ = new RouteViewModel();
+            routeVM_ = new RouteViewModel(model_);
             model_.FileLoaded_ += Model__FileLoaded_;
             model_.CalcCompleted_ += Model__CalcCompleted_;
             model_.CalcRouteCompleted_ += Model__CalcRouteCompleted_;
@@ -31,7 +31,7 @@ namespace WorldTravelLogger.ViewModels
 
         private void Model__CalcRouteCompleted_(object? sender, EventArgs e)
         {
-            routeVM_.SetModel(model_.GetCurrentCountryModel());
+            //routeVM_.SetModel(model_.GetCurrentCountryModel());
         }
 
         private void Model__CalcCompleted_(object? sender, EventArgs e)

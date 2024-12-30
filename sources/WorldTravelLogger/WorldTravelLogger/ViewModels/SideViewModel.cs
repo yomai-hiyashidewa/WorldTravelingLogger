@@ -27,8 +27,14 @@ namespace WorldTravelLogger.ViewModels
             model_ = model;
             control_ = model.GetControlModel();
             clVM_ = new CountryListViewModel();
+            clVM_.CountryChanged += ClVM__CountryChanged;
             model_.CalcCompleted_ += Model__CalcCompleted_;
             model_.ImageListReady_ += Model__ImageListReady_;
+        }
+
+        private void ClVM__CountryChanged(object? sender, CountryChangedEventArgs e)
+        {
+            control_.CurrentRouteCountryType = e.Type;
         }
 
         public CountryListViewModel GetCountryListViewModel()

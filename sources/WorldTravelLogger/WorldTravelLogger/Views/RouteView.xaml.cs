@@ -29,7 +29,7 @@ namespace WorldTravelLogger.Views
         public void SetVM(RouteViewModel vm)
         {
             arrivals.SetVM(vm.GetRouteCountryViewModel(true));
-            //regions.setVM()
+            regions.SetVM(vm.GetRegionsViewModel());
             departures.SetVM(vm.GetRouteCountryViewModel(false));
             this.DataContext = vm;
         }

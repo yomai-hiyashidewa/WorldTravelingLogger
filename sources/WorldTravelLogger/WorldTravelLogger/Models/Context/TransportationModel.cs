@@ -192,7 +192,16 @@ namespace WorldTravelLogger.Models.Context
         public int Time
         {
             get { return time_; }
-        }                           // 移動時間(min)
+        }
+        // 移動時間(min)
+
+        public MovingModel GetMovingMoidel()
+        {
+            var moving = new MovingModel();
+            moving.Set(distance_, time_);
+            return moving;
+
+        }
 
         public bool SameCountry
         {

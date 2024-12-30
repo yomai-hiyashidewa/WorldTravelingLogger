@@ -4,8 +4,10 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using WorldTravelLogger.Models;
 using WorldTravelLogger.Models.Context;
 using WorldTravelLogger.Models.Enumeration;
+using WorldTravelLogger.Models.List;
 using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
@@ -13,33 +15,77 @@ namespace WorldTravelLogger.ViewModels
     public class RouteCountryViewModel : ViewModelBase
     {
         private bool isArrival_;
-        private CountryModel? model_;
+
+        private MainModel model_;
+
+        private ControlModel control_;
+
+        private TransportationList transportationList_;
+
+        private List<TransportationModel> transportations_;
 
         private CountryListViewModel clVM_;
 
-        private TransportationModel current_;
-
-        private MovingModel moving_;
+        private TransportationModel? current_;
 
 
-        public RouteCountryViewModel(bool isArrival)
+
+        public RouteCountryViewModel(bool isArrival,MainModel model)
         {
             isArrival_ = isArrival;
-            moving_ = new MovingModel();
+            model_ = model;
+            control_ = model.GetControlModel();
+            transportationList_ = model.GetTransportationList();
+            model.CalcCompleted_ += Model_CalcCompleted_;
+            control_.CountryChanged_ += Control__CountryChanged_;
+            transportations_ = new List<TransportationModel>();
             clVM_ = new CountryListViewModel();
             clVM_.CountryChanged += ClVM__CountryChanged;
         }
 
-        public void SetModel(CountryModel model)
+        private void Set()
         {
-            model_ = model;
-            clVM_.SetCountries(model.GetCountries(isArrival_), model.ImagePath);
-            var type = model.GetFirstCountryType(isArrival_);
-            if (type != null)
+            var cList = new List<CountryType>();
+            transportations_.Clear();
+            foreach (var model in isArrival_ ? transportationList_.GetArrivals(control_.CurrentRouteCountryType) :
+                transportationList_.GetDepartures(control_.CurrentRouteCountryType))
             {
-                SetCurrent((CountryType)type);
+                transportations_.Add(model);
+                if (isArrival_)
+                {
+                    cList.Add(model.StartCountry);
+                }
+                else
+                {
+                    cList.Add(model.EndCountry);
+                }
             }
+            clVM_.SetCountries(cList, model_.ImageDir);
+            current_ = transportations_.FirstOrDefault();
+            this.UpdateAll();
         }
+
+        private void Control__CountryChanged_(object? sender, EventArgs e)
+        {
+            Set();
+
+        }
+
+        private void Model_CalcCompleted_(object? sender, EventArgs e)
+        {
+            Set();
+        }
+
+        //public void SetModel(CountryModel model)
+        //{
+        //    model_ = model;
+       
+        //    var type = model.GetFirstCountryType(isArrival_);
+        //    if (type != null)
+        //    {
+        //        SetCurrent((CountryType)type);
+        //    }
+        //}
 
         public CountryListViewModel GetCountryListViewModel()
         {
@@ -50,18 +96,22 @@ namespace WorldTravelLogger.ViewModels
 
         private void ClVM__CountryChanged(object? sender, Models.Utility.CountryChangedEventArgs e)
         {
-            SetCurrent(e.Type);
+            if (transportations_.Count > e.Index)
+            {
+                current_ = transportations_[e.Index];
+                UpdateAll();
+            }
         }
 
-        private void SetCurrent(CountryType type)
+    
+        public TransportationModel[] Transportations
         {
-            current_ = model_.GetTransportationModel(isArrival_, type);
-            if (current_ != null)
+            get
             {
-                moving_.Set(current_.Distance, current_.Time);
+                return transportations_.ToArray();
             }
-            UpdateAll();
         }
+
 
         private void UpdateAll()
         {
@@ -89,7 +139,14 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                return moving_.Distance;
+               if(current_ != null)
+                {
+                    return current_.GetMovingMoidel().Distance;
+                }
+                else
+                {
+                    return "km";
+                }
             }
         }
 
@@ -97,7 +154,15 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                return moving_.Time;
+
+                if (current_ != null)
+                {
+                    return current_.GetMovingMoidel().Time;
+                }
+                else
+                {
+                    return "min";
+                }
             }
         }
 

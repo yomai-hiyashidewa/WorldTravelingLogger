@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WorldTravelLogger.Models;
+using WorldTravelLogger.ViewModels;
 
 namespace WorldTravelLogger.Views.Parts
 {
@@ -20,10 +22,20 @@ namespace WorldTravelLogger.Views.Parts
     /// </summary>
     public partial class RouteRegionsViewPanel : UserControl
     {
+
         public RouteRegionsViewPanel()
         {
             InitializeComponent();
         }
+
+        public void SetVM(RouteRegionViewModel vm)
+        {
+            regionMiniPanel.SetVM(vm.MiniVM);
+            this.DataContext = vm;
+        }
+
+
+
 
         
     }

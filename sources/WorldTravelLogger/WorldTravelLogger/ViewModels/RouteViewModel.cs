@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WorldTravelLogger.Models;
 using WorldTravelLogger.Models.Context;
 using WorldTravelLogger.ViewModels.Base;
 using WorldTravelLogger.Views.Parts;
@@ -13,23 +14,16 @@ namespace WorldTravelLogger.ViewModels
     {
         private RouteCountryViewModel arrivalsViewModel_;
         private RouteCountryViewModel departuresViewModel_;
-        //private RouteRegionView regionsViewModel_;
+        private RouteRegionViewModel regionsViewModel_;
 
-        public RouteViewModel()
+        public RouteViewModel(MainModel model)
         {
-            arrivalsViewModel_ = new RouteCountryViewModel(true);
-            departuresViewModel_ = new RouteCountryViewModel(false);
-            //regionsViewModel_ = new RouteRegionsViewPanel();
+            arrivalsViewModel_ = new RouteCountryViewModel(true,model);
+            departuresViewModel_ = new RouteCountryViewModel(false,model);
+            regionsViewModel_ = new RouteRegionViewModel(model);
         }
 
-        public void SetModel(CountryModel? model)
-        {
-            if (model != null)
-            {
-                arrivalsViewModel_.SetModel(model);
-                departuresViewModel_.SetModel(model);
-            }
-        }
+       
 
 
         public RouteCountryViewModel GetRouteCountryViewModel(bool isArrive)
@@ -44,10 +38,10 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        //public RouteRegionsViewPanel GetRegionsViewModel()
-        //{
-        //    return regionsViewModel_;
-        //}
+        public RouteRegionViewModel GetRegionsViewModel()
+        {
+            return regionsViewModel_;
+        }
 
     }
 }

@@ -12,9 +12,9 @@ namespace WorldTravelLogger.Models.Context
 
         private string region_;
 
-        private DateTime? startDate_;
+        private DateTime startDate_;
 
-        private DateTime? endDate_;
+        private DateTime endDate_;
 
         private TransportationModel? arrival_;
 
@@ -30,14 +30,20 @@ namespace WorldTravelLogger.Models.Context
 
         public string Region { get { return region_; } }
 
+        public string StartEndDate
+        {
+            get
+            {
+                return startDate_.ToString("yyyy/MM/dd") + endDate_.ToString("yyyy/MM/dd");
+            }
+        }
+
 
         public RegionModel(string region) 
         {
             region_ = region;
 
-            startDate_ = null;
-            endDate_ = null;
-
+          
             arrival_ = null;
             departure_ = null;
 
@@ -46,6 +52,16 @@ namespace WorldTravelLogger.Models.Context
             sightseeings_ = new List<SightseeingModel>();
             others_ = new List<OtherModel>();
 
+        }
+
+        public TransportationModel Arrival
+        {
+            get { return arrival_; }
+        }
+
+        public TransportationModel Departure
+        {
+            get { return departure_; }
         }
 
 

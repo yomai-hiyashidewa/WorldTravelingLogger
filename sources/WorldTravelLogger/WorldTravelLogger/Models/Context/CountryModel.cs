@@ -20,7 +20,7 @@ namespace WorldTravelLogger.Models.Context
 
         private List<TransportationModel> departures_;
 
-        private List<RegionModel> regions_;
+        private Dictionary<string, List<RegionModel>> regionDic_;
 
         private DateTime? startDate_;
 
@@ -36,7 +36,7 @@ namespace WorldTravelLogger.Models.Context
         {
             arrivals_ = new List<TransportationModel>();
             departures_ = new List<TransportationModel>();
-            regions_ = new List<RegionModel>();
+            regionDic_ = new Dictionary<string, List<RegionModel>>();
             startDate_ = null;
             endDate_ = null;
             currentRegionModel_ = null;
@@ -53,6 +53,10 @@ namespace WorldTravelLogger.Models.Context
                 return departures_.FirstOrDefault(m => m.EndCountry == type);
             }
         }
+
+      
+
+
 
         public IEnumerable<CountryType> GetCountries(bool isArrival)
         {
@@ -71,6 +75,8 @@ namespace WorldTravelLogger.Models.Context
                 }
             }
         }
+
+        
 
         public CountryType? GetFirstCountryType(bool isArrival)
         {
@@ -102,7 +108,7 @@ namespace WorldTravelLogger.Models.Context
         {
             if (currentRegionModel_ != null)
             {
-                regions_.Add(currentRegionModel_);
+               // regions_.Add(currentRegionModel_);
                 currentRegionModel_ = null;
             }
         }

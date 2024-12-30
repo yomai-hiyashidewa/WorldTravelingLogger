@@ -7,6 +7,9 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+        </Grid.Resources>
         <Grid.RowDefinitions>
             <RowDefinition Height="8*"/>
             <RowDefinition Height="2*"/>
@@ -22,31 +25,23 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="20"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="20"/>
                 </Grid.RowDefinitions>
 
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" Text="Anckrage"/>
-                    <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text=""/>
-                    <TextBlock Grid.Column="2" HorizontalAlignment="right" VerticalAlignment="Bottom" Text="05/05"/>
+                    <ComboBox Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Bottom" ItemsSource="{Binding Regions}" SelectedItem="{Binding CurrentRegion,Mode=TwoWay}"/>
+                    <ComboBox Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" ItemsSource="{Binding Dates}" SelectedIndex="{Binding SelectedIndex,Mode=TwoWay}" />
                 </Grid>
                 <Border Grid.Row="1" BorderThickness="1" BorderBrush="Black">
                     <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
                         <GroupBox Header="Event">
-                           
+                            <ListView ItemsSource="{Binding Events}"/>
                         </GroupBox>
-
                     </Grid>
                 </Border>
-                <TextBlock Grid.Row="2" HorizontalAlignment="right" VerticalAlignment="Bottom" Text="05/08"/>
             </Grid>
             <TextBlock Grid.Column="2" HorizontalAlignment="Center" VerticalAlignment="Center" Text="=>"/>
         </Grid>
@@ -56,25 +51,19 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <StackPanel Grid.Column="0">
+            <StackPanel Grid.Column="0" Visibility="{Binding EnableFromRegion,Converter={StaticResource BooleanToVisibility }}">
                 <TextBlock HorizontalAlignment="Center" Text="↑"/>
-                <TextBlock Text="{Binding Type}"/>
-                <DockPanel>
-                    <TextBlock Text="{Binding Distance}"/>
-                    <TextBlock Text=","/>
-                    <TextBlock Text="{Binding Time}"/>
-                </DockPanel>
+                <GroupBox Header="{Binding FromRegion}">
+                    <DataGrid IsReadOnly="True" ItemsSource="{Binding FromMoving}" />
+                </GroupBox>
             </StackPanel>
 
 
-            <StackPanel Grid.Column="1">
-                <TextBlock HorizontalAlignment="Center" Text="↓"/>
-                <TextBlock Text="{Binding Type}"/>
-                <DockPanel>
-                    <TextBlock Text="{Binding Distance}"/>
-                    <TextBlock Text=","/>
-                    <TextBlock Text="{Binding Time}"/>
-                </DockPanel>
+            <StackPanel Grid.Column="1" Visibility="{Binding EnableToRegion,Converter={StaticResource BooleanToVisibility }}">
+                <TextBlock HorizontalAlignment="Center" Text="↑"/>
+                <GroupBox Header="{Binding ToRegion}">
+                    <DataGrid IsReadOnly="True" ItemsSource="{Binding ToMoving}" />
+                </GroupBox>
             </StackPanel>
         </Grid>
 
