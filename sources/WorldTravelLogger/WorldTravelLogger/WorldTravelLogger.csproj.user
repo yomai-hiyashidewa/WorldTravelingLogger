@@ -28,6 +28,9 @@
     <Compile Update="Views\Parts\RouteCountryViewPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\Parts\RouteRegionMiniViewPanel.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Parts\RouteRegionsViewPanel.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -70,6 +73,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Parts\RouteCountryViewPanel.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\Parts\RouteRegionMiniViewPanel.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\Parts\RouteRegionsViewPanel.xaml">

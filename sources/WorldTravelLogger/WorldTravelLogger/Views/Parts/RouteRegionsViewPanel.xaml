@@ -4,13 +4,37 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:WorldTravelLogger.Views.Parts"
+             xmlns:converter="clr-namespace:WorldTravelLogger.Views.Converters"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            
-        </Grid.ColumnDefinitions>
-            
+        <Grid.Resources>
+            <converter:EnumDisplayConverter x:Key="EnumDisplayConv"/>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+        </Grid.Resources>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="30"/>
+        </Grid.RowDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <DockPanel HorizontalAlignment="Left" VerticalAlignment="Bottom">
+                <TextBlock Margin="10,0,10,0" Text="{Binding Type,Converter={StaticResource EnumDisplayConv}}" />
+                <Border Visibility="{Binding EnableImage,Converter={StaticResource BooleanToVisibility}}" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image Width="22" Height="15" Source="{Binding ImagePath}"/>
+                </Border>
+            </DockPanel>
+            <TextBlock Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Text=""/>
+            <TextBlock Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Text="2022/05/01"/>
+        </Grid>
+        <Border Grid.Row="1" BorderThickness="1" BorderBrush="Black">
+            <local:RouteRegionMiniViewPanel x:Name="regionMiniPanel"/>
+        </Border>
+        <TextBlock Grid.Row="2" Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="top" Text="2022/05/10"/>
     </Grid>
 </UserControl>
