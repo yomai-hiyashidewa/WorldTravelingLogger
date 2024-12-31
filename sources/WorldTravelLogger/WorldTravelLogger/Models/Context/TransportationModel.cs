@@ -60,6 +60,8 @@ namespace WorldTravelLogger.Models.Context
             ResetType();
         }
 
+
+
         // 記述内容を更に分類する
         private void ResetType()
         {
@@ -292,6 +294,45 @@ namespace WorldTravelLogger.Models.Context
                 IsSameEndRegion(region);
         }
 
+        public bool IsDeparture(CountryType type)
+        {
+            return !SameCountry && StartCountry == type;
+        }
+
+        // for no entry
+
+        public bool IsNoEntry
+        {
+            get
+            {
+                return !string.IsNullOrWhiteSpace(Memo) && Memo == "NO_ENTRY";
+            }
+        }
+
+        // for route
+
+        public bool IsRouteArrival
+        {
+            get
+            {
+                return AnotherCountry && startPlace_ != PlaceType.Dep;
+            }
+        }
+
+        public bool IsRouteDeparture
+        {
+            get
+            {
+                return AnotherCountry && startPlace_ == PlaceType.Dep;
+            }
+        }
+
+        public TransportationModel EndClone()
+        {
+            var cloneModel = (TransportationModel)this.MemberwiseClone();
+            cloneModel.startPlace_ = PlaceType.Dep;
+            return cloneModel;
+        }
 
 
     }

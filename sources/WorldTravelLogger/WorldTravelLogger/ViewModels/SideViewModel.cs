@@ -297,7 +297,7 @@ namespace WorldTravelLogger.ViewModels
                 }
                 else
                 {
-                    return model_.GetCountries().Count() + " countries"; ;
+                    return model_.GetTotalSetCountries() + " countries"; ;
                 }
             }
         }

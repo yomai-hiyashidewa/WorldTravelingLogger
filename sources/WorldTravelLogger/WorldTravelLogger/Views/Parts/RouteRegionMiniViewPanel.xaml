@@ -32,15 +32,22 @@
                                     <Grid>
                                         <StackPanel Visibility="{Binding SameCountry,Converter={StaticResource BooleanToVisibility}}">
                                             <TextBlock HorizontalAlignment="left" VerticalAlignment="Center" FontWeight="Bold" Text="{Binding StartRegion}"/>
+                                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Text="{Binding StartPlace}" />
                                             <GroupBox HorizontalAlignment="left" VerticalAlignment="Center" Grid.Row="1" Header="{Binding Transportationtype}">
                                                 <DockPanel>
                                                     <TextBlock Text="{Binding DistanceAndTimeStr}"/>
                                                     <TextBox Text="zzz" IsReadOnly="True" Visibility="{Binding AnotherDate,Converter={StaticResource BooleanToVisibility}}"/>
                                                 </DockPanel>
                                             </GroupBox>
-                                            <TextBlock HorizontalAlignment="left" VerticalAlignment="Center" FontWeight="Bold" Text="{Binding EndRegion}"/>
+                                            <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Text="{Binding EndPlace}" />
+                                            
                                         </StackPanel>
-                                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" Visibility="{Binding AnotherCountry,Converter={StaticResource BooleanToVisibility}}"
+                                        <StackPanel Visibility="{Binding IsRouteDeparture,Converter={StaticResource BooleanToVisibility}}">
+                                            <TextBlock HorizontalAlignment="left" VerticalAlignment="Center" FontWeight="Bold" Text="{Binding StartRegion}" />
+                                            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" Text="{Binding DateString}"/>
+                                        </StackPanel>
+                                        
+                                        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" Visibility="{Binding IsRouteArrival,Converter={StaticResource BooleanToVisibility}}"
                                                        Text="{Binding DateString}"/>
                                     </Grid>
                                 </DataTemplate>

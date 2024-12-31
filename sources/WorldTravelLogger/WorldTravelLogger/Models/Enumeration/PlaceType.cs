@@ -27,6 +27,7 @@ namespace WorldTravelLogger.Models.Enumeration
         Catedral,       // 大聖堂
         Palace,         // 宮殿
         Church,         // 教会
+        Dep,            // 出発
 
 
     }

@@ -413,7 +413,7 @@ namespace WorldTravelLogger.Models.List
 
         public IEnumerable<TransportationModel> GetRoute(CountryType type)
         {
-            return calcList_.OfType<TransportationModel>().Where(m => m.IsSameCountry(type) && !m.SameRegion);
+            return calcList_.OfType<TransportationModel>().Where(m => m.IsSameCountry(type));
         }
 
          
@@ -428,6 +428,19 @@ namespace WorldTravelLogger.Models.List
             return calcList_.OfType<TransportationModel>().Where(m => m.StartCountry == type && !m.SameCountry);
         }
 
+        public HashSet<CountryType> GetNoEntryCountries()
+        {
+            var shSet = new HashSet<CountryType>();
+            shSet.Add(CountryType.UNK);
+            foreach(var model in list_.OfType<TransportationModel>().Where(m => m.IsNoEntry))
+            {
+                if (!shSet.Contains(model.EndCountry))
+                {
+                    shSet.Add(model.EndCountry);
+                }
+            }
+            return shSet;
+        }
 
 
         

@@ -33,6 +33,8 @@ namespace WorldTravelLogger.Models
         
         private Dictionary<CountryType, HashSet<CurrencyType>> countriesAndCurrencies_;
         private HashSet<CountryType> calcCountries_;
+        private HashSet<CountryType> noEntryCounries_;
+
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
         public event EventHandler ImageListReady_;
         public event EventHandler CalcCompleted_;
@@ -192,6 +194,7 @@ namespace WorldTravelLogger.Models
             countriesAndRegions_ = new Dictionary<CountryType, HashSet<string>>();
             countriesAndCurrencies_ = new Dictionary<CountryType, HashSet<CurrencyType>>();
             calcCountries_ = new HashSet<CountryType>();
+            noEntryCounries_ = new HashSet<CountryType>();
             controllModel_.ControlChanged_ += ControllModel__ControlChanged_;
             controllModel_.RegionChanged_ += ControllModel__RegionChanged_;
         }
@@ -307,6 +310,8 @@ namespace WorldTravelLogger.Models
                     calcCountries_.Add(c);
                 }
             }
+            var tList = (TransportationList)listDic_[ContextListType.TransportationList];
+            noEntryCounries_ = tList.GetNoEntryCountries();
         }
 
       
@@ -400,6 +405,12 @@ namespace WorldTravelLogger.Models
             {
                 yield return c.Key;
             }
+        }
+
+        public int GetTotalSetCountries()
+        {
+
+            return countriesAndRegions_.Keys.Count(c => !noEntryCounries_.Contains(c));
         }
 
         public string[] GetCurrentRegions()

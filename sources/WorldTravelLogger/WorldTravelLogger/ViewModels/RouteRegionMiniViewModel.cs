@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
@@ -42,7 +43,16 @@ namespace WorldTravelLogger.ViewModels
                 var list = new List<TransportationModel>();
                 foreach (var model in transportationList_.GetRoute(control_.CurrentCountryType))
                 {
-                    list.Add(model);
+                    if (model.IsDeparture(control_.CurrentCountryType))
+                    {
+                        var endModel = model.EndClone();
+                        list.Add(endModel);
+                    }
+                    else
+                    {
+                        list.Add(model);
+                    }
+
                 }
                 return list.ToArray();
             }
@@ -53,5 +63,5 @@ namespace WorldTravelLogger.ViewModels
         }
 
     }
-      
+
 }
