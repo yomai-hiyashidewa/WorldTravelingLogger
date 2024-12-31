@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +27,15 @@ namespace WorldTravelLogger.ViewModels
             model_ = new MainModel();
             control_ = model_.GetControlModel();
             routeVM_ = new RouteViewModel(model_);
+            model_.CalcCompleted_ += Model__CalcCompleted_;
             control_.ControlChanged_ += Control__ControlChanged_;
             control_.RegionChanged_ += Control__RegionChanged_;
             model_.FileLoaded_ += Model__FileLoaded_;
+        }
+
+        private void Model__CalcCompleted_(object? sender, EventArgs e)
+        {
+            this.RaisePropertyChanged("SetDate");
         }
 
         private void Control__RegionChanged_(object? sender, EventArgs e)
@@ -123,6 +130,28 @@ namespace WorldTravelLogger.ViewModels
                 }
             }
         }
+
+        public string SetDate
+        {
+            get
+            {
+                var date = DateTime.Now;
+                if (control_ != null && control_.StartSetDate != null &&control_.EndSetDate != null)
+                {
+                    StringBuilder sb = new StringBuilder();
+                   
+                    date = (DateTime)control_.StartSetDate;
+                    sb.Append(date.ToString("yyyy/MM/dd"));
+                    sb.Append("-");
+                   date = (DateTime)control_.EndSetDate;
+                    sb.Append(date.ToString("yyyy/MM/dd"));
+                    return sb.ToString();
+                }
+                return "";
+            }
+        }
+
+      
 
         public string FileVer
         {

@@ -38,8 +38,7 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("StartDate");
             this.RaisePropertyChanged("EndDate");
 
-            this.RaisePropertyChanged("StartCalctDate");
-            this.RaisePropertyChanged("EndCalcDate");
+           
             this.RaisePropertyChanged("TotalDays");
 
             this.RaisePropertyChanged("Costs");
@@ -84,31 +83,7 @@ namespace WorldTravelLogger.ViewModels
         }
 
 
-        public string StartCalctDate
-        {
-            get
-            {
-                var date = DateTime.Now;
-                if (control_ != null && control_.StartCalcDate != null)
-                {
-                    date = (DateTime)control_.StartCalcDate;
-                }
-                return date.ToString("yyyy/MM/dd", CultureInfo.CurrentCulture);
-            }
-        }
-
-        public string EndCalcDate
-        {
-            get
-            {
-                var date = DateTime.Now;
-                if (control_ != null && control_.EndCalcDate != null)
-                {
-                    date = (DateTime)control_.EndCalcDate;
-                }
-                return date.ToString("yyyy/MM/dd", CultureInfo.CurrentCulture);
-            }
-        }
+       
 
         public string TotalDays
         {

@@ -254,6 +254,9 @@ namespace WorldTravelLogger.Models
             }
         }
 
+        public DateTime? StartSetDate { get { return startSetDate_; } }
+        public DateTime? EndSetDate { get { return endSetDate_; } }
+
         public DateTime? StartCalcDate { get { return startCalcDate_; } }
         public DateTime? EndCalcDate { get { return endCalcDate_; } }
 
@@ -313,6 +316,12 @@ namespace WorldTravelLogger.Models
             {
                 endSetDate_ = date;
             }
+        }
+
+        public void ResetCalcDate(DateTime? start, DateTime? end)
+        {
+            startCalcDate_ = start;
+            endCalcDate_ = end;
         }
 
 

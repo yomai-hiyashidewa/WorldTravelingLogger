@@ -52,8 +52,8 @@ namespace WorldTravelLogger.Models
 
             SetCountries();
             SetDate();
-            CalcList(ContextListType.SightSeeingList);
-            CalcList(ContextListType.Other);
+            CalcList(ContextListType.SightSeeingList,false);
+            CalcList(ContextListType.Other,true);
         }
 
         private void LoadImage()
@@ -146,7 +146,7 @@ namespace WorldTravelLogger.Models
                 SetExchangeRate(type);
                 SetCountries();
                 SetDate();
-                CalcList(type);
+                CalcList(type,true);
             }
         }
 
@@ -324,20 +324,30 @@ namespace WorldTravelLogger.Models
         private void CalcDate()
         {
 
-            foreach (var list in listDic_.Values)
+            foreach (var pair in listDic_)
             {
-                controllModel_.SetStartCalcDate(list.GetStartCalcDate(controllModel_.IsCountryRegion));
-                controllModel_.SetEndCalcDate(list.GetEndCalcDate(controllModel_.IsCountryRegion));
+                var list = pair.Value;
+                if (pair.Key == ContextListType.AccomodationList)
+                {
+                    controllModel_.ResetCalcDate(list.GetStartCalcDate(controllModel_.IsCountryRegion), list.GetEndCalcDate(controllModel_.IsCountryRegion));
+                }
+                else
+                {
+                    controllModel_.SetStartCalcDate(list.GetStartCalcDate(controllModel_.IsCountryRegion));
+                    controllModel_.SetEndCalcDate(list.GetEndCalcDate(controllModel_.IsCountryRegion));
+                }
             }
             controllModel_.InitDateFromCalc();
         }
 
-        private void CalcList(ContextListType type)
+        private void CalcList(ContextListType type, bool isLoad)
         {
             var list = listDic_[type];
             list.CalcModels(controllModel_);
-
-            CalcApplication();
+            if (isLoad)
+            {
+                CalcApplication();
+            }
         }
 
 
@@ -345,8 +355,9 @@ namespace WorldTravelLogger.Models
         {
             foreach (var type in listDic_.Keys)
             {
-                CalcList(type);
+                CalcList(type,false);
             }
+            CalcApplication();
         }
 
 
