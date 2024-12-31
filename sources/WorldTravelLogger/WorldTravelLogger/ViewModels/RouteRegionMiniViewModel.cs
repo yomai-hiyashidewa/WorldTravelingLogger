@@ -26,14 +26,9 @@ namespace WorldTravelLogger.ViewModels
             model_ = model;
             model.CalcCompleted_ += Model_CalcCompleted_;
             control_ = model.GetControlModel();
-            control_.CountryChanged_ += Control__CountryChanged_;
             transportationList_ = model.GetTransportationList();
         }
 
-        private void Control__CountryChanged_(object? sender, EventArgs e)
-        {
-            UpdateAll();
-        }
 
         private void Model_CalcCompleted_(object? sender, EventArgs e)
         {
@@ -45,7 +40,7 @@ namespace WorldTravelLogger.ViewModels
             get
             {
                 var list = new List<TransportationModel>();
-                foreach (var model in transportationList_.GetRoute(control_.CurrentRouteCountryType))
+                foreach (var model in transportationList_.GetRoute(control_.CurrentCountryType))
                 {
                     list.Add(model);
                 }

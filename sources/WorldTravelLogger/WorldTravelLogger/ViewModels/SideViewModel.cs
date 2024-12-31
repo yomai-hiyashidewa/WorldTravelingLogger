@@ -32,9 +32,14 @@ namespace WorldTravelLogger.ViewModels
             model_.ImageListReady_ += Model__ImageListReady_;
         }
 
+        private void Control__CountryChanged_(object? sender, EventArgs e)
+        {
+            this.RaisePropertyChanged("CountryImagePath");
+        }
+
         private void ClVM__CountryChanged(object? sender, CountryChangedEventArgs e)
         {
-            control_.CurrentRouteCountryType = e.Type;
+            //control_.CurrentRouteCountryType = e.Type;
         }
 
         public CountryListViewModel GetCountryListViewModel()
@@ -64,6 +69,7 @@ namespace WorldTravelLogger.ViewModels
             this.RaisePropertyChanged("IsWorld");
             this.RaisePropertyChanged("IsWorldView");
             this.RaisePropertyChanged("IsCountryMode");
+            this.RaisePropertyChanged("IsWithJapan");
             this.RaisePropertyChanged("IsOnlyBorder");
             this.RaisePropertyChanged("IsRegion");
             this.RaisePropertyChanged("IsNotRegion");
@@ -117,6 +123,18 @@ namespace WorldTravelLogger.ViewModels
             get
             {
                 return !control_.IsWorldMode;
+            }
+        }
+
+        public bool IsWithJapan
+        {
+            get
+            {
+                return control_.IsWithJapan;
+            }
+            set
+            {
+                control_.IsWithJapan = value;
             }
         }
 

@@ -429,29 +429,6 @@ namespace WorldTravelLogger.Models.List
         }
 
 
-        private IEnumerable<TransportationModel> GetModels(CountryType type)
-        {
-            return calcList_.OfType<TransportationModel>().Where(m => m.IsSameCountry(type));
-        }
-
-
-        private void CalcCoutryRoute(KeyValuePair<CountryType,CountryModel> pair)
-        {
-            pair.Value.Init();
-            foreach (var model in GetModels(pair.Key))
-            {
-                pair.Value.SetTransportationModel(model);       
-            }
-            pair.Value.EndCalc();
-        }
-
-        public void CalcRoute(Dictionary<CountryType,CountryModel> dic)
-        {
-            foreach (var pair in dic)
-            {
-                CalcCoutryRoute(pair);
-            }
-        }
 
         
     }

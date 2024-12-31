@@ -27,7 +27,6 @@ namespace WorldTravelLogger.Models
 
         private Dictionary<ContextListType, IContextList> listDic_;
 
-        private Dictionary<CountryType, CountryModel> router_;
 
 
         private Dictionary<CountryType, HashSet<string>> countriesAndRegions_;
@@ -189,7 +188,6 @@ namespace WorldTravelLogger.Models
             listDic_.Add(ContextListType.TransportationList, new TransportationList());
             listDic_.Add(ContextListType.SightSeeingList, new SightSeeingList());
             listDic_.Add(ContextListType.Other, new OtherList());
-            router_ = new Dictionary<CountryType, CountryModel>();
 
             countriesAndRegions_ = new Dictionary<CountryType, HashSet<string>>();
             countriesAndCurrencies_ = new Dictionary<CountryType, HashSet<CurrencyType>>();
@@ -286,18 +284,6 @@ namespace WorldTravelLogger.Models
 
         }
 
-        public CountryModel? GetCurrentCountryModel()
-        {
-            if(router_.ContainsKey(controllModel_.CurrentCountryType))
-            {
-                return router_[controllModel_.CurrentCountryType];
-            }
-            else
-            {
-                return null;
-            }
-
-        }
 
         private void SetCountries()
         {
@@ -323,20 +309,7 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        private void CalcRoute()
-        {
-            router_.Clear();
-            foreach(var type in calcCountries_)
-            {
-                router_.Add(type, new CountryModel(type, ImageDir));
-            }
-            var list = (TransportationList)listDic_[ContextListType.TransportationList];
-            list.CalcRoute(router_);
-            if(CalcRouteCompleted_ != null)
-            {
-                CalcRouteCompleted_.Invoke(this, EventArgs.Empty);
-            }
-        }
+      
 
         private void SetDate()
         {
@@ -404,11 +377,6 @@ namespace WorldTravelLogger.Models
                 pair.Value.CalcRegion(controllModel_);
             }
             CalcRegionApplication();
-            // debug
-            if (!controllModel_.IsRegion)
-            {
-                CalcRoute();
-            }
         }
 
 

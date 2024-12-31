@@ -7,17 +7,21 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+        </Grid.Resources>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <local:CountryListView x:Name="countryList"/>
         <StackPanel Grid.Row="1">
+            <TextBlock Text="{Binding Region}"/>
             <TextBlock Text="{Binding Type}"/>
+            <TextBlock Text="{Binding Distance}"/>
             <DockPanel>
-                <TextBlock Text="{Binding Distance}"/>
-                <TextBlock Text=","/>
                 <TextBlock Text="{Binding Time}"/>
+                <TextBox Text="zzz" HorizontalAlignment="Left" IsReadOnly="True" Visibility="{Binding AnotherDate,Converter={StaticResource BooleanToVisibility}}"/>
             </DockPanel>
         </StackPanel>
     </Grid>

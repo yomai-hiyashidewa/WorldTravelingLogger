@@ -230,6 +230,14 @@ namespace WorldTravelLogger.Models.Context
 
         }
 
+        public bool AnotherDate
+        {
+            get
+            {
+                return StartDate != EndDate;
+            }
+        }
+
         public bool IsSameCountry(CountryType type)
         {
             return StartCountry == type ||

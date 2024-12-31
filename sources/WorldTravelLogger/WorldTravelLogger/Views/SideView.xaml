@@ -29,14 +29,19 @@
                     <RowDefinition Height="7*"/>
                 </Grid.RowDefinitions>
                 <DockPanel Grid.Row="0" Margin="10,0,10,0">
-                   
+
                     <CheckBox HorizontalAlignment="Left" 
 VerticalAlignment="Center" FontSize="20"
 FontWeight="Bold"
 Content="{Binding TotalCalcCountries}"
                IsChecked="{Binding IsWorld,Mode=TwoWay}"
 />
-                    <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top" Content="only border" IsChecked="{Binding IsOnlyBorder,Mode=TwoWay}"/>
+                    <StackPanel>
+                        <CheckBox HorizontalAlignment="Left" VerticalAlignment="top" Content="with Japan"
+                                  IsChecked="{Binding IsWithJapan,Mode=TwoWay}" Visibility="{Binding IsWorldView,Converter={StaticResource BooleanToVisibility}}"/>
+                        <CheckBox HorizontalAlignment="Left" VerticalAlignment="Top" Content="only border" 
+                                  IsChecked="{Binding IsOnlyBorder,Mode=TwoWay}" Visibility="{Binding IsWorldView,Converter={StaticResource BooleanToVisibility}}"/>
+                    </StackPanel>
                 </DockPanel>
                 <GroupBox Grid.Row="1" Header="Moving" FontSize="15">
                     <DataGrid IsReadOnly="True" Margin="10,10,10,0" ItemsSource="{Binding Movings}" />
@@ -55,7 +60,7 @@ Content="{Binding TotalCalcCountries}"
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    
+
                 </Grid>
                 <parts:CountryListView x:Name="countryList"/>
                 <TextBlock Grid.Row="1" FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Text="{Binding RegionsCount}"/>

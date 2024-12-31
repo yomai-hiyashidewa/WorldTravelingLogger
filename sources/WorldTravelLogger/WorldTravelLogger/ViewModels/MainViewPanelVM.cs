@@ -17,6 +17,8 @@ namespace WorldTravelLogger.ViewModels
         private ControlModel control_;
         private RouteViewModel routeVM_;
 
+        private int tabIndex_;
+
         public event EventHandler<FileLoadedEventArgs> FileLoaded_;
 
         public MainViewPanelVM()
@@ -24,28 +26,56 @@ namespace WorldTravelLogger.ViewModels
             model_ = new MainModel();
             control_ = model_.GetControlModel();
             routeVM_ = new RouteViewModel(model_);
+            control_.ControlChanged_ += Control__ControlChanged_;
+            control_.RegionChanged_ += Control__RegionChanged_;
             model_.FileLoaded_ += Model__FileLoaded_;
-            model_.CalcCompleted_ += Model__CalcCompleted_;
-            model_.CalcRouteCompleted_ += Model__CalcRouteCompleted_;
         }
 
-        private void Model__CalcRouteCompleted_(object? sender, EventArgs e)
+        private void Control__RegionChanged_(object? sender, EventArgs e)
         {
-            //routeVM_.SetModel(model_.GetCurrentCountryModel());
+            this.RaisePropertyChanged("IsCountry");
+            CheckTabIndex();
         }
 
-        private void Model__CalcCompleted_(object? sender, EventArgs e)
+        private void Control__ControlChanged_(object? sender, EventArgs e)
         {
+            this.RaisePropertyChanged("IsCountry");
             this.RaisePropertyChanged("IsWithAirplane");
-            this.RaisePropertyChanged("IsWithJapan");
             this.RaisePropertyChanged("IsWithInsurance");
+            CheckTabIndex();
         }
+
+
+       private void CheckTabIndex()
+        {
+            if (!IsCountry && tabIndex_ > 3)
+            {
+                tabIndex_ = 0;
+                this.RaisePropertyChanged("TabIndex");
+            }
+        }
+        
 
         private void Model__FileLoaded_(object? sender, FileLoadedEventArgs e)
         {
             if (FileLoaded_ != null)
             {
                 FileLoaded_.Invoke(sender, e);
+            }
+        }
+
+        public int TabIndex
+        {
+            get
+            {
+                return tabIndex_;
+            }
+            set
+            {
+                if(tabIndex_ != value)
+                {
+                    tabIndex_ = value;
+                }
             }
         }
 
@@ -63,17 +93,7 @@ namespace WorldTravelLogger.ViewModels
             }
         }
 
-        public bool IsWithJapan
-        {
-            get
-            {
-                return control_.IsWithJapan;
-            }
-            set
-            {
-                control_.IsWithJapan = value;
-            }
-        }
+
 
 
 
@@ -81,18 +101,26 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                if (model_ == null)
+                    return control_.IsWithInsurance;
+            }
+            set
+            {
+                control_.IsWithInsurance = value;
+            }
+        }
+
+        public bool IsCountry
+        {
+            get
+            {
+                if (control_.IsWorldMode)
                 {
                     return false;
                 }
                 else
                 {
-                    return control_.IsWithInsurance;
+                    return !control_.IsRegion;
                 }
-            }
-            set
-            {
-                control_.IsWithInsurance = value;
             }
         }
 

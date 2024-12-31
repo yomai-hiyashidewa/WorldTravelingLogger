@@ -37,7 +37,6 @@ namespace WorldTravelLogger.ViewModels
             control_ = model.GetControlModel();
             transportationList_ = model.GetTransportationList();
             model.CalcCompleted_ += Model_CalcCompleted_;
-            control_.CountryChanged_ += Control__CountryChanged_;
             transportations_ = new List<TransportationModel>();
             clVM_ = new CountryListViewModel();
             clVM_.CountryChanged += ClVM__CountryChanged;
@@ -47,8 +46,8 @@ namespace WorldTravelLogger.ViewModels
         {
             var cList = new List<CountryType>();
             transportations_.Clear();
-            foreach (var model in isArrival_ ? transportationList_.GetArrivals(control_.CurrentRouteCountryType) :
-                transportationList_.GetDepartures(control_.CurrentRouteCountryType))
+            foreach (var model in isArrival_ ? transportationList_.GetArrivals(control_.CurrentCountryType) :
+                transportationList_.GetDepartures(control_.CurrentCountryType))
             {
                 transportations_.Add(model);
                 if (isArrival_)
@@ -76,17 +75,7 @@ namespace WorldTravelLogger.ViewModels
             Set();
         }
 
-        //public void SetModel(CountryModel model)
-        //{
-        //    model_ = model;
-       
-        //    var type = model.GetFirstCountryType(isArrival_);
-        //    if (type != null)
-        //    {
-        //        SetCurrent((CountryType)type);
-        //    }
-        //}
-
+      
         public CountryListViewModel GetCountryListViewModel()
         {
             return clVM_;
@@ -115,10 +104,39 @@ namespace WorldTravelLogger.ViewModels
 
         private void UpdateAll()
         {
+            this.RaisePropertyChanged("Region");
             this.RaisePropertyChanged("Type");
             this.RaisePropertyChanged("Distance");
             this.RaisePropertyChanged("Time");
+            this.RaisePropertyChanged("AnotherDate");
         }
+
+        public string Region
+        {
+            get
+            {
+
+                if (current_ != null)
+                {
+                    if (isArrival_)
+                    {
+                        return current_.StartRegion;
+                    }
+                    else
+                    {
+                        return current_.EndRegion;
+                    }
+                }
+                else
+                {
+                    return "";
+                }
+            }
+        }
+
+
+
+
 
         public Transportationtype Type
         {
@@ -162,6 +180,22 @@ namespace WorldTravelLogger.ViewModels
                 else
                 {
                     return "min";
+                }
+            }
+        }
+
+        public bool AnotherDate
+        {
+            get
+            {
+
+                if (current_ != null)
+                {
+                    return current_.AnotherDate;
+                }
+                else
+                {
+                    return false;
                 }
             }
         }

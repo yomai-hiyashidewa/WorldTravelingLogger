@@ -29,17 +29,17 @@
                         <ListView ItemsSource="{Binding Routes}">
                             <ListView.ItemTemplate>
                                 <DataTemplate>
-                                    <Grid HorizontalAlignment="Center">
-                                        <Grid Visibility="{Binding SameCountry,Converter={StaticResource BooleanToVisibility}}">
-                                            <Grid.RowDefinitions>
-                                                <RowDefinition Height="*"/>
-                                                <RowDefinition Height="2*"/>
-                                            </Grid.RowDefinitions>
-                                            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" FontWeight="Bold" Text="{Binding StartRegion}"/>
-                                            <GroupBox HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Header="{Binding Transportationtype}">
-                                                <TextBlock Text="{Binding DistanceAndTimeStr}"/>
+                                    <Grid>
+                                        <StackPanel Visibility="{Binding SameCountry,Converter={StaticResource BooleanToVisibility}}">
+                                            <TextBlock HorizontalAlignment="left" VerticalAlignment="Center" FontWeight="Bold" Text="{Binding StartRegion}"/>
+                                            <GroupBox HorizontalAlignment="left" VerticalAlignment="Center" Grid.Row="1" Header="{Binding Transportationtype}">
+                                                <DockPanel>
+                                                    <TextBlock Text="{Binding DistanceAndTimeStr}"/>
+                                                    <TextBox Text="zzz" IsReadOnly="True" Visibility="{Binding AnotherDate,Converter={StaticResource BooleanToVisibility}}"/>
+                                                </DockPanel>
                                             </GroupBox>
-                                        </Grid>
+                                            <TextBlock HorizontalAlignment="left" VerticalAlignment="Center" FontWeight="Bold" Text="{Binding EndRegion}"/>
+                                        </StackPanel>
                                         <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" Visibility="{Binding AnotherCountry,Converter={StaticResource BooleanToVisibility}}"
                                                        Text="{Binding DateString}"/>
                                     </Grid>

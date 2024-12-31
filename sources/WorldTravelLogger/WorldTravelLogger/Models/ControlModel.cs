@@ -32,7 +32,6 @@ namespace WorldTravelLogger.Models
         private bool isWithInsurance_;
 
         private CountryType currentCountryType_;
-        private CountryType currentRouteCountryType_;
 
         private DateTime? startDate_;
         private DateTime? endDate_;
@@ -45,7 +44,6 @@ namespace WorldTravelLogger.Models
 
 
         public event EventHandler ControlChanged_;
-        public event EventHandler CountryChanged_;
         public event EventHandler RegionChanged_;
 
         public ControlModel()
@@ -63,7 +61,6 @@ namespace WorldTravelLogger.Models
             //startDate_ = new DateTime(2022, 5, 16);
             //endDate_ = new DateTime(2024, 5, 1);
             currentCountryType_ = CountryType.JPN;
-            currentRouteCountryType_ = CountryType.JPN;
             currentMajorCurrencyType_ = CurrencyType.JPY;
         }
 
@@ -77,13 +74,6 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        private void FireCountryChanged()
-        {
-            if(CountryChanged_ != null)
-            {
-                CountryChanged_.Invoke(this, EventArgs.Empty);
-            }
-        }
 
         private void FireRegionChanged()
         {
@@ -212,18 +202,6 @@ namespace WorldTravelLogger.Models
             }
         }
 
-        public CountryType CurrentRouteCountryType
-        {
-            get { return currentRouteCountryType_; }
-            set
-            {
-                if(currentRouteCountryType_ != value)
-                {
-                    currentRouteCountryType_ = value;
-                    FireCountryChanged();
-                }
-            }
-        }
 
         public string CurrentRegion
         {
@@ -402,7 +380,7 @@ namespace WorldTravelLogger.Models
 
         private bool CheckWithCrossBorderCountry(CountryType startCountry, CountryType endCountry)
         {
-            return !isWorldMode_ && IsWithCrossBorder && currentCountryType_ != startCountry && currentCountryType_ != endCountry;
+            return !isWorldMode_ && IsWithCrossBorder && (currentCountryType_ != startCountry && currentCountryType_ != endCountry);
         }
 
         private bool CheckArrivalCountry(CountryType startCountry, CountryType endCountry)
@@ -455,7 +433,7 @@ namespace WorldTravelLogger.Models
             {
                 date = endDate;
             }
-            return CheckControl(date, startCountry);
+            return CheckControl(date, country);
 
         }
 

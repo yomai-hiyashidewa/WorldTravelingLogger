@@ -26,7 +26,6 @@ namespace WorldTravelLogger.ViewModels
             model_ = model;
             model.CalcCompleted_ += Model_CalcCompleted_;
             control_ = model.GetControlModel();
-            control_.CountryChanged_ += Control__CountryChanged_;
             transportationList_ = model.GetTransportationList();
             MiniVM = new RouteRegionMiniViewModel(model);
             SetCVM();
@@ -34,7 +33,7 @@ namespace WorldTravelLogger.ViewModels
 
         private void SetCVM()
         {
-            cVM_ = new CountryViewModel(control_.CurrentRouteCountryType, model_.ImageDir);
+            cVM_ = new CountryViewModel(control_.CurrentCountryType, model_.ImageDir);
         }
 
         private void Model_CalcCompleted_(object? sender, EventArgs e)
@@ -62,7 +61,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                var date = transportationList_.GetRoute(control_.CurrentRouteCountryType).FirstOrDefault();
+                var date = transportationList_.GetRoute(control_.CurrentCountryType).FirstOrDefault();
                 if(date != null)
                 {
                     return date.DateString;
@@ -78,7 +77,7 @@ namespace WorldTravelLogger.ViewModels
         {
             get
             {
-                var date = transportationList_.GetRoute(control_.CurrentRouteCountryType).LastOrDefault();
+                var date = transportationList_.GetRoute(control_.CurrentCountryType).LastOrDefault();
                 if (date != null)
                 {
                     return date.EndDateString;
