@@ -27,6 +27,7 @@ namespace WorldTravelLogger.Models.Enumeration
         Cesna,     //
         Track,     //
         Geepny,    //
+        Walking,   // 徒歩
         LocalBus,   // busの中で同じ地区移動もしくは移動距離が10km以下
         MiddleDistanceBus,  // busの中で移動距離が100km未満
         LongDistanceBus,// その他
