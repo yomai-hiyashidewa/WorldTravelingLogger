@@ -37,12 +37,12 @@ namespace WorldTravelLogger.Models.Context
             }
         }
 
-        public string Accomodation
+        public string Accommodation
         {
             get
             {
                 return CurrencyConverter.GetCurrencyStr(currencytype_,
-                    costs_[ContextListType.AccomodationList]);
+                    costs_[ContextListType.AccommodationList]);
             }
         }
 

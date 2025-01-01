@@ -7,7 +7,7 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Views\AccomodationView.xaml.cs">
+    <Compile Update="Views\AccommodationView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="Views\DebugWin.xaml.cs">
@@ -54,7 +54,7 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Views\AccomodationView.xaml">
+    <Page Update="Views\AccommodationView.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\DebugWin.xaml">

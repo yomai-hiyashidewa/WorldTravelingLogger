@@ -16,7 +16,7 @@ namespace WorldTravelLogger.ViewModels
     public class DebugWinViewModel : ViewModelBase
     {
         private MainModel model_;
-        private AccomodationList accomodationList_;
+        private AccommodationList accommodationList_;
         private TransportationList transportationList_;
         private SightSeeingList sightseeingList_;
         private ExchangeRater exchangeRater_;
@@ -24,7 +24,7 @@ namespace WorldTravelLogger.ViewModels
         public DebugWinViewModel(MainModel model)
         {
             model_ = model;
-            accomodationList_ = model_.GetAccomodationList();
+            accommodationList_ = model_.GetAccommodationList();
             transportationList_ = model_.GetTransportationList();
             sightseeingList_ = model_.GetSightSeeingList();
             exchangeRater_ = model_.GetExchanger();
@@ -35,8 +35,8 @@ namespace WorldTravelLogger.ViewModels
         {
             switch (e.Type)
             {
-                case ListType.AccomodationList:
-                    this.RaisePropertyChanged("Accomodations");
+                case ListType.AccommodationList:
+                    this.RaisePropertyChanged("Accommodations");
                     break;
                 case ListType.TransportationList:
                     this.RaisePropertyChanged("Transportations");
@@ -57,17 +57,17 @@ namespace WorldTravelLogger.ViewModels
             model_.FileLoaded_ -= Model__FileLoaded;
         }
 
-        public object[] Accomodations
+        public object[] Accommodations
         {
             get
             {
-                if (accomodationList_.IsError)
+                if (accommodationList_.IsError)
                 {
-                    return accomodationList_.GetErrorArray();
+                    return accommodationList_.GetErrorArray();
                 }
                 else
                 {
-                    return accomodationList_.GetArray();
+                    return accommodationList_.GetArray();
                 }
             }
         }

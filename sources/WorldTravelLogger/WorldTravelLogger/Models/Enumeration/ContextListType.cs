@@ -8,8 +8,8 @@ namespace WorldTravelLogger.Models.Enumeration
 {
     public enum ContextListType
     {
-        // acoomodation
-        AccomodationList,
+        // acoommodation
+        AccommodationList,
         // transportation
         TransportationList,
         // sightseeing

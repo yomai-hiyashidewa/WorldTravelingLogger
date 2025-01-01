@@ -11,8 +11,8 @@ namespace WorldTravelLogger.Models.Utility
     {
         public const string ImageDir = "Image";
         public const string ListDir = "List";
-        public const string AccomodationFile = "accomodations";
-        public const string TransportationFile = "transpotations";
+        public const string AccommodationFile = "accommodations";
+        public const string TransportationFile = "transportations";
         public const string SightseeingFile = "sightseeing";
         public const string ExchangeRateFile = "exchange_rates";
         public const string ZeroImageFile = "zero.jpg";
@@ -22,8 +22,8 @@ namespace WorldTravelLogger.Models.Utility
         {
             switch (type)
             {
-                case ListType.AccomodationList:
-                    return AccomodationFile;
+                case ListType.AccommodationList:
+                    return AccommodationFile;
                 case ListType.TransportationList:
                     return TransportationFile;
                 case ListType.SightSeeingList:

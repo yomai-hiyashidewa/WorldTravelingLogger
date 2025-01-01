@@ -116,8 +116,8 @@ namespace WorldTravelLogger.Models
             ContextListType? result = null;
             switch (type)
             {
-                case ListType.AccomodationList:
-                    result = ContextListType.AccomodationList;
+                case ListType.AccommodationList:
+                    result = ContextListType.AccommodationList;
                     break;
                 case ListType.TransportationList:
                     result = ContextListType.TransportationList;
@@ -186,7 +186,7 @@ namespace WorldTravelLogger.Models
             controllModel_ = new ControlModel();
             exchangeRater_ = new ExchangeRater();
             listDic_ = new Dictionary<ContextListType, IContextList>();
-            listDic_.Add(ContextListType.AccomodationList, new AccomodationList());
+            listDic_.Add(ContextListType.AccommodationList, new AccommodationList());
             listDic_.Add(ContextListType.TransportationList, new TransportationList());
             listDic_.Add(ContextListType.SightSeeingList, new SightSeeingList());
             listDic_.Add(ContextListType.Other, new OtherList());
@@ -203,7 +203,7 @@ namespace WorldTravelLogger.Models
         {
             switch (e.Type)
             {
-                case ListType.AccomodationList:
+                case ListType.AccommodationList:
                 case ListType.TransportationList:
                 case ListType.SightSeeingList:
                     LoadList(e.Type);
@@ -244,7 +244,7 @@ namespace WorldTravelLogger.Models
             {
                 option_.Load(data);
             }
-            LoadList(ListType.AccomodationList);
+            LoadList(ListType.AccommodationList);
             LoadList(ListType.TransportationList);
             LoadList(ListType.SightSeeingList);
             LoadExchange();
@@ -332,7 +332,7 @@ namespace WorldTravelLogger.Models
             foreach (var pair in listDic_)
             {
                 var list = pair.Value;
-                if (pair.Key == ContextListType.AccomodationList)
+                if (pair.Key == ContextListType.AccommodationList)
                 {
                     controllModel_.ResetCalcDate(list.GetStartCalcDate(controllModel_.IsCountryRegion), list.GetEndCalcDate(controllModel_.IsCountryRegion));
                 }
@@ -526,10 +526,10 @@ namespace WorldTravelLogger.Models
             return controllModel_;
         }
 
-        public AccomodationList GetAccomodationList()
+        public AccommodationList GetAccommodationList()
         {
 
-            return (AccomodationList)listDic_[ContextListType.AccomodationList];
+            return (AccommodationList)listDic_[ContextListType.AccommodationList];
         }
 
 

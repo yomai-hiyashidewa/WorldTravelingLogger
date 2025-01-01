@@ -43,8 +43,8 @@
                 <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding Costs}">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Total" Binding="{Binding Total}"/>
-                        <DataGridTextColumn Header="Accomodation" Binding="{Binding Accomodation}"/>
-                        <DataGridTextColumn Header="Transportation/" Binding="{Binding Transportation}"/>
+                        <DataGridTextColumn Header="Accommodation" Binding="{Binding Accommodation}"/>
+                        <DataGridTextColumn Header="Transportation" Binding="{Binding Transportation}"/>
                         <DataGridTextColumn Header="Sightseeing" Binding="{Binding Sightseeing}"/>
                         <DataGridTextColumn Header="Other" Binding="{Binding Other}"/>
                     </DataGrid.Columns>

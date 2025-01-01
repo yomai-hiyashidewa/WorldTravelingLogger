@@ -198,9 +198,9 @@ namespace WorldTravelLogger.ViewModels
             return routeVM_;
         }
 
-        public AccomodationViewModel GetAccomodationViewModel()
+        public AccommodationViewModel GetAccommodationViewModel()
         {
-            return new AccomodationViewModel(model_.GetAccomodationList(), model_.GetControlModel());
+            return new AccommodationViewModel(model_.GetAccommodationList(), model_.GetControlModel());
         }
 
         public TransportationViewModel GetTransporationViewModel()
@@ -224,8 +224,8 @@ namespace WorldTravelLogger.ViewModels
         {
             switch (type)
             {
-                case ListType.AccomodationList:
-                    return FileNames.AccomodationFile;
+                case ListType.AccommodationList:
+                    return FileNames.AccommodationFile;
                 case ListType.TransportationList:
                     return FileNames.TransportationFile;
                 case ListType.SightSeeingList:

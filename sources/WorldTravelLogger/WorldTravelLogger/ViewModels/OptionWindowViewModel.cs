@@ -41,9 +41,9 @@ namespace WorldTravelLogger.ViewModels
             {
 
                 var list = new List<ListType>();
-                if (Path.Exists(model_.AccomodationPath))
+                if (Path.Exists(model_.AccommodationPath))
                 {
-                    list.Add(ListType.AccomodationList);
+                    list.Add(ListType.AccommodationList);
                 }
                 if (Path.Exists(model_.TransportationPath))
                 {

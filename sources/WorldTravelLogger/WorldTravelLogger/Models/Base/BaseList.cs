@@ -84,9 +84,9 @@ namespace WorldTravelLogger.Models.Base
             }
         }
 
-        protected AccomodationType? ConvertAccomodationType(string str)
+        protected AccommodationType? ConvertAccommodationType(string str)
         {
-            AccomodationType type;
+            AccommodationType type;
             if (Enum.TryParse(str, out type))
             {
                 return type;

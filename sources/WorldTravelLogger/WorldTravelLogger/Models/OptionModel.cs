@@ -47,9 +47,9 @@ namespace WorldTravelLogger.Models
 
 
 
-        public string? AccomodationPath
+        public string? AccommodationPath
         {
-            get { return GetListPath(ListType.AccomodationList); }
+            get { return GetListPath(ListType.AccommodationList); }
         }
 
         public string? TransportationPath
@@ -95,7 +95,7 @@ namespace WorldTravelLogger.Models
                 if(listPath_ != value)
                 {
                     listPath_ = value;
-                    FireFileReqLoad(ListType.AccomodationList);
+                    FireFileReqLoad(ListType.AccommodationList);
                     FireFileReqLoad(ListType.TransportationList);
                     FireFileReqLoad(ListType.SightSeeingList);
                     FireFileReqLoad(ListType.ExchangeRateList);
@@ -163,7 +163,7 @@ namespace WorldTravelLogger.Models
             string path = null;
             switch (type)
             {
-                case ListType.AccomodationList:
+                case ListType.AccommodationList:
                 case ListType.TransportationList:
                 case ListType.SightSeeingList:
                 case ListType.ExchangeRateList:

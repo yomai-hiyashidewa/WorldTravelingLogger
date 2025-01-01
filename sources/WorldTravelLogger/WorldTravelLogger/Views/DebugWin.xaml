@@ -12,8 +12,8 @@
         </Grid.RowDefinitions>
         <GroupBox Grid.Row="0">
             <TabControl>
-                <TabItem Header="accomodation">
-                    <DataGrid ItemsSource="{Binding Accomodations}"/>
+                <TabItem Header="accommodation">
+                    <DataGrid ItemsSource="{Binding Accommodations}"/>
                 </TabItem>
                 <TabItem Header="transportation">
                     <DataGrid ItemsSource="{Binding Transportations}">
