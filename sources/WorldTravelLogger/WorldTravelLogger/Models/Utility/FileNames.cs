@@ -26,7 +26,7 @@ namespace WorldTravelLogger.Models.Utility
                     return AccommodationFile;
                 case ListType.TransportationList:
                     return TransportationFile;
-                case ListType.SightSeeingList:
+                case ListType.SightseeingList:
                     return SightseeingFile;
                 case ListType.ExchangeRateList:
                     return ExchangeRateFile;

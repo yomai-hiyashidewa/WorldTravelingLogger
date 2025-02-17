@@ -27,7 +27,7 @@ namespace WorldTravelLogger.Views
            
         }
 
-        public void SetVM(SightSeeingViewModel vm)
+        public void SetVM(SightseeingViewModel vm)
         {
             this.DataContext = vm;
         }

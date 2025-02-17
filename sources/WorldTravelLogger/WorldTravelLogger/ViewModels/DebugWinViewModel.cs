@@ -18,7 +18,7 @@ namespace WorldTravelLogger.ViewModels
         private MainModel model_;
         private AccommodationList accommodationList_;
         private TransportationList transportationList_;
-        private SightSeeingList sightseeingList_;
+        private SightseeingList sightseeingList_;
         private ExchangeRater exchangeRater_;
 
         public DebugWinViewModel(MainModel model)
@@ -26,7 +26,7 @@ namespace WorldTravelLogger.ViewModels
             model_ = model;
             accommodationList_ = model_.GetAccommodationList();
             transportationList_ = model_.GetTransportationList();
-            sightseeingList_ = model_.GetSightSeeingList();
+            sightseeingList_ = model_.GetSightseeingList();
             exchangeRater_ = model_.GetExchanger();
             model_.FileLoaded_ += Model__FileLoaded;
         }
@@ -41,7 +41,7 @@ namespace WorldTravelLogger.ViewModels
                 case ListType.TransportationList:
                     this.RaisePropertyChanged("Transportations");
                     break;
-                case ListType.SightSeeingList:
+                case ListType.SightseeingList:
                     this.RaisePropertyChanged("Sightseeings");
                     break;
                 case ListType.ExchangeRateList:

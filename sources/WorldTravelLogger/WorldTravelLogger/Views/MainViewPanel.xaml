@@ -57,7 +57,7 @@
                     <TabItem Header="Transportation">
                         <local:TransportationView x:Name="TransporationViewPanel"/>
                     </TabItem>
-                    <TabItem Header="SightSeeing">
+                    <TabItem Header="Sightseeing">
                         <local:SightseeingView x:Name="SightseeingViewPanel"/>
                     </TabItem>
                     <TabItem Header="Other">

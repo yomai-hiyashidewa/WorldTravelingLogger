@@ -209,9 +209,9 @@ namespace WorldTravelLogger.ViewModels
         }
 
 
-        public SightSeeingViewModel GetSightseeingViewModel()
+        public SightseeingViewModel GetSightseeingViewModel()
         {
-            return new SightSeeingViewModel(model_.GetSightSeeingList(), model_.GetControlModel());
+            return new SightseeingViewModel(model_.GetSightseeingList(), model_.GetControlModel());
         }
 
         public OtherViewModel GetOtherViewModel()
@@ -228,7 +228,7 @@ namespace WorldTravelLogger.ViewModels
                     return FileNames.AccommodationFile;
                 case ListType.TransportationList:
                     return FileNames.TransportationFile;
-                case ListType.SightSeeingList:
+                case ListType.SightseeingList:
                     return FileNames.SightseeingFile;
                 case ListType.ExchangeRateList:
                     return FileNames.ExchangeRateFile;

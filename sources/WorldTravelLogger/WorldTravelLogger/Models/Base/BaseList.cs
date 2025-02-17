@@ -110,7 +110,7 @@ namespace WorldTravelLogger.Models.Base
             }
         }
 
-        protected SightseeigType? ConvertSightSeeingType(string str)
+        protected SightseeigType? ConvertSightseeingType(string str)
         {
             SightseeigType type;
             if(Enum.TryParse(str,out type))
