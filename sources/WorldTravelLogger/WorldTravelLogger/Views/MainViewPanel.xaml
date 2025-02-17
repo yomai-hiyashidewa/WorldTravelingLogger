@@ -51,7 +51,7 @@
                 </Grid.RowDefinitions>
                 <local:UpperView x:Name="UpperView" Grid.Row="0"/>
                 <TabControl Grid.Row="1" FontSize="15" Margin="10,10,10,10" SelectedIndex="{Binding TabIndex,Mode=TwoWay}" >
-                    <TabItem Header="accommodation">
+                    <TabItem Header="Accommodation">
                         <local:AccommodationView x:Name="AccommodationViewPanel"/>
                     </TabItem>
                     <TabItem Header="Transportation">
