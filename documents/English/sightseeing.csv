@@ -1,5 +1,5 @@
 "context	",type,date,country,region,price,currency,memo
-Overseas travel insurance for 2 years,Insurance,2022/5/16,JPN,-,465250,JPY,-
+Overseas travel insurance for 2 years,Insurance,2022/5/16,UNK,-,465250,JPY,-
 with limited pass for 30 days,Ticket,2022/5/19,AUS,-,450,AUD,-
 St.Mery church,Visiting,2022/5/19,AUS,Sydney,0,AUD,-
 Blue Mountains,Trekking,2022/5/20,AUS,katoomba,0,AUD,-
@@ -652,7 +652,7 @@ meeting up with jeramy,Accident,2023/6/27,ISL,Reykjavík,0,ISK,-
 Hahunarfi,Walking,2023/6/27,ISL,Hahunarfi,0,ISK,-
 humberger,Eating,2023/6/28,IRL,Dublin,9.5,EUR,-
 irish coffee,Eating,2023/6/28,IRL,Dublin,5,EUR,-
-EU rail pass 30 days,Ticket,2023/6/28,IRL,Dublin,767,USD,-
+EU rail pass 30 days,Ticket,2023/6/28,UNK,-,767,USD,-
 wickrow beach,Walking,2023/6/29,IRL,Dublin,0,EUR,-
 tea,Eating,2023/6/30,IRL,Dublin,2.5,EUR,-
 keeping bagage fee,Shopping,2023/6/30,GBR,Belfast,1,GBP,-
@@ -752,7 +752,7 @@ Kraków cathedral,Visiting,2023/7/28,POL,Kraków,22,PLN,-
 Kraków castle,Visiting,2023/7/28,POL,Kraków,0,PLN,-
 guness beer,Eating,2023/7/28,POL,Wrocław,26,PLN,-
 hot dog,Eating,2023/7/28,POL,Wrocław,8.5,PLN,-
-EU rail pass 15 days,Ticket,2023/7/29,POL,Wrocław,516,USD,-
+EU rail pass 15 days,Ticket,2023/7/29,UNK,-,516,USD,-
 hot dog,Eating,2023/7/29,DEU,Leipzig,3.5,EUR,-
 beer,Eating,2023/7/29,DEU,Leipzig,1.79,EUR,-
 Meisen cathedral,Visiting,2023/7/29,DEU,Meisen,3,EUR,-
