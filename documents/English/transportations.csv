@@ -1019,7 +1019,7 @@ Subway,2023/9/2,ESP,Barcelona,Port,2023/9/2,ESP,Barcelona,Terminal,5,15,2.55,EUR
 Bus,2023/9/2,ESP,Barcelona,Terminal,2023/9/2,AND,Andorra la Vieja,Terminal,192,170,30.5,EUR,-,,
 Bus,2023/9/3,AND,Andorra la Vieja,Terminal,2023/9/3,FRA,Toulouse,Terminal,186,180,36,EUR,-,,
 Train,2023/9/3,FRA,Toulouse,Station,2023/9/3,FRA,Carcassonne,Station,93.3,70,16.8,EUR,-,,
-Train,2023/9/3,FRA,Carcassonne,Station,2023/9/4,FRA,Narbonne,Station,60.6,35,11.8,EUR,-,,
+Train,2023/9/4,FRA,Carcassonne,Station,2023/9/4,FRA,Narbonne,Station,60.6,35,11.8,EUR,-,,
 Train,2023/9/4,FRA,Narbonne,Station,2023/9/4,FRA,Avignon,Station,185,130,32.1,EUR,-,,
 Bus,2023/9/4,FRA,Avignon,Station,2023/9/4,FRA,Nice,AirPort,302,140,30,EUR,-,,
 Tram,2023/9/4,FRA,Nice,AirPort,2023/9/4,FRA,Nice,Central,7,5,0,EUR,transportaion card,,
