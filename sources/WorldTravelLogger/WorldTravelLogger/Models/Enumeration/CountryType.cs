@@ -196,148 +196,258 @@ namespace WorldTravelLogger.Models.Enumeration
         IND,    // India
         [Display(Name = "North Cyprus")]
         NCY,    // Cyprus
-        // not yet
+                // not yet
+        [Display(Name = "Azerbaijan")]
         AZE,    // Azerbaijan
+        [Display(Name = "Afghanistan")]
         AFG,    // Afghanistan
+        [Display(Name = "Algeria")]
         DZA,    // Algeria
+        [Display(Name = "Aruba")]
         ABW,    // Aruba
-        
+        [Display(Name = "Anguilla")]
         AIA,    // Anguilla
+        [Display(Name = "Angola")]
         AGO,    // Angola
+        [Display(Name = "Antigua and Barbuda")]
         ATG,    // Antigua and Barbuda
+        [Display(Name = "Yemen")]
         YEM,    // Yemen
+        [Display(Name = "Israel")]
         ISR,    // Israel
+        [Display(Name = "Iraq")]
         IRQ,    // Iraq
+        [Display(Name = "Iran")]
         IRN,    // Iran (Islamic Republic of)
+        [Display(Name = "Indonesia")]
         IDN,    // Indonesia
+        [Display(Name = "Wallis and Futuna")]
         WLF,    // Wallis and Futuna
+        [Display(Name = "Uganda")]
         UGA,    // Uganda
+        [Display(Name = "Ukraine")]
         UKR,    // Ukraine
+        [Display(Name = "Eswatini")]
         SWZ,    // Eswatini
+        [Display(Name = "Ethiopia")]
         ETH,    // Ethiopia
+        [Display(Name = "Eritrea")]
         ERI,    // Eritrea
+        [Display(Name = "Oman")]
         OMN,    // Oman
+        [Display(Name = "Ghana")]
         GHA,    // Ghana
+        [Display(Name = "Cabo Verde")]
         CPV,    // Cabo Verde
+        [Display(Name = "Guyana")]
         GUY,    // Guyana
+        [Display(Name = "Kazakhstan")]
         KAZ,    // Kazakhstan
+        [Display(Name = "Gabon")]
         GAB,    // Gabon
+        [Display(Name = "Cameroon")]
         CMR,    // Cameroon
+        [Display(Name = "Gambia")]
         GMB,    // Gambia
+        [Display(Name = "Cambodia")]
         KHM,    // Cambodia
+        [Display(Name = "Guinea")]
         GIN,    // Guinea
+        [Display(Name = "Guinea-Bissau")]
         GNB,    // Guinea-Bissau
+        [Display(Name = "Curaçao")]
         CUW,    // Curaçao
+        [Display(Name = "Kiribati")]
         KIR,    // Kiribati
+        [Display(Name = "Kyrgyzstan")]
         KGZ,    // Kyrgyzstan
+        [Display(Name = "Kuwait")]
         KWT,    // Kuwait
+        [Display(Name = "Grenada")]
         GRD,    // Grenada
+        [Display(Name = "Kenya")]
         KEN,    // Kenya
+        [Display(Name = "Côte d'Ivoire")]
         CIV,    // Côte d'Ivoire
+        [Display(Name = "Comoros")]
         COM,    // Comoros
+        [Display(Name = "Congo")]
         COG,    // Congo
+        [Display(Name = "Congo, Democratic Republic of the")]
         COD,    // Congo, Democratic Republic of the
+        [Display(Name = "Saudi Arabia")]
         SAU,    // Saudi Arabia
+        [Display(Name = "Samoa")]
         WSM,    // Samoa
+        [Display(Name = "Zambia")]
         ZMB,    // Zambia
+        [Display(Name = "Sierra Leone")]
         SLE,    // Sierra Leone
-        DJI,    // 	Djibouti
+        [Display(Name = "Djibouti")]
+        DJI,    // Djibouti
+        [Display(Name = "Jamaica")]
         JAM,    // Jamaica
+        [Display(Name = "Syria")]
         SYR,    // Syrian Arab Republic
+        [Display(Name = "Singapore")]
         SGP,    // Singapore
+        [Display(Name = "Zimbabwe")]
         ZWE,    // Zimbabwe
+        [Display(Name = "Sudan")]
         SDN,    // Sudan
+        [Display(Name = "Suriname")]
         SUR,    // Suriname
+        [Display(Name = "Sri Lanka")]
         LKA,    // Sri Lanka
+        [Display(Name = "Seychelles")]
         SYC,    // Seychelles
+        [Display(Name = "Senegal")]
         SEN,    // Senegal
+        [Display(Name = "Saint Lucia")]
         LCA,    // Saint Lucia
+        [Display(Name = "Somalia")]
         SOM,    // Somalia
+        [Display(Name = "Thailand")]
         THA,    // Thailand
+        [Display(Name = "Tajikistan")]
         TJK,    // Tajikistan
+        [Display(Name = "Tanzania")]
         TZA,    // Tanzania, United Republic of
+        [Display(Name = "Chad")]
         TCD,    // Chad
+        [Display(Name = "Central African Republic")]
         CAF,    // Central African Republic
+        [Display(Name = "China")]
         CHN,    // China
+        [Display(Name = "North Korea")]
         PRK,    // Korea (the Democratic People's Republic of)
+        [Display(Name = "Tuvalu")]
         TUV,    // Tuvalu
+        [Display(Name = "Togo")]
         TGO,    // Togo
+        [Display(Name = "Tokelau")]
         TKL,    // Tokelau
+        [Display(Name = "Dominican Republic")]
         DOM,    // Dominican Republic
+        [Display(Name = "Dominica")]
         DMA,    // Dominica
+        [Display(Name = "Trinidad and Tobago")]
         TTO,    // Trinidad and Tobago
+        [Display(Name = "Turkmenistan")]
         TKM,    // Turkmenistan
+        [Display(Name = "Tonga")]
         TON,    // Tonga
+        [Display(Name = "Nigeria")]
         NGA,    // Nigeria
+        [Display(Name = "Nauru")]
         NRU,    // Nauru
+        [Display(Name = "Namibia")]
         NAM,    // Namibia
+        [Display(Name = "Antarctica")]
         ATA,    // Antarctica
+        [Display(Name = "Niue")]
         NIU,    // Niue
+        [Display(Name = "Niger")]
         NER,    // Niger
+        [Display(Name = "Western Sahara")]
         ESH,    // Western Sahara
+        [Display(Name = "New Caledonia")]
         NCL,    // New Caledonia
+        [Display(Name = "New Zealand")]
         NZL,    // New Zealand
-        NPL,    // Népal
+        [Display(Name = "Nepal")]
+        NPL,    // Nepal
+        [Display(Name = "Bahrain")]
         BHR,    // Bahrain
+        [Display(Name = "Haiti")]
         HTI,    // Haiti
+        [Display(Name = "Pakistan")]
         PAK,    // Pakistan
-       
+        [Display(Name = "Vanuatu")]
         VUT,    // Vanuatu
+        [Display(Name = "Bahamas")]
         BHS,    // Bahamas
+        [Display(Name = "Papua New Guinea")]
         PNG,    // Papua New Guinea
+        [Display(Name = "Bermuda")]
         BMU,    // Bermuda
+        [Display(Name = "Palau")]
         PLW,    // Palau
+        [Display(Name = "Barbados")]
         BRB,    // Barbados
-        PSE,    // Palestine, State of	
+        [Display(Name = "Palestine")]
+        PSE,    // Palestine, State of
+        [Display(Name = "Bangladesh")]
         BGD,    // Bangladesh
+        [Display(Name = "Timor-Leste")]
         TLS,    // Timor-Leste
+        [Display(Name = "Pitcairn")]
         PCN,    // Pitcairn
+        [Display(Name = "Fiji")]
         FJI,    // Fiji
+        [Display(Name = "Bhutan")]
         BTN,    // Bhutan
+        [Display(Name = "Puerto Rico")]
         PRI,    // Puerto Rico
+        [Display(Name = "Faroe Islands")]
         FRO,    // Faroe Islands
+        [Display(Name = "Burkina Faso")]
         BFA,    // Burkina Faso
+        [Display(Name = "Brunei")]
         BRN,    // Brunei Darussalam
+        [Display(Name = "Burundi")]
         BDI,    // Burundi
+        [Display(Name = "Benin")]
         BEN,    // Benin
+        [Display(Name = "Venezuela")]
         VEN,    // Venezuela (Bolivarian Republic of)
+        [Display(Name = "Belarus")]
         BLR,    // Belarus
+        [Display(Name = "Botswana")]
         BWA,    // Botswana
+        [Display(Name = "Macau")]
         MAC,    // Macau
+        [Display(Name = "Madagascar")]
         MDG,    // Madagascar
+        [Display(Name = "Mayotte")]
         MYT,    // Mayotte
+        [Display(Name = "Malawi")]
         MWI,    // Malawi
+        [Display(Name = "Mali")]
         MLI,    // Mali
+        [Display(Name = "Micronesia")]
         FSM,    // Micronesia (Federated States of)
+        [Display(Name = "South Africa")]
         ZAF,    // South Africa
+        [Display(Name = "South Sudan")]
         SSD,    // South Sudan
+        [Display(Name = "Myanmar")]
         MMR,    // Myanmar
+        [Display(Name = "Mauritius")]
         MUS,    // Mauritius
+        [Display(Name = "Mauritania")]
         MRT,    // Mauritania
+        [Display(Name = "Mozambique")]
         MOZ,    // Mozambique
+        [Display(Name = "Maldives")]
         MDV,    // Maldives
+        [Display(Name = "Mongolia")]
         MNG,    // Mongolia
+        [Display(Name = "Jordan")]
         JOR,    // Jordan
+        [Display(Name = "Laos")]
         LAO,    // Lao People's Democratic Republic
+        [Display(Name = "Libya")]
         LBY,    // Libya
+        [Display(Name = "Liberia")]
         LBR,    // Liberia
+        [Display(Name = "Rwanda")]
         RWA,    // Rwanda
+        [Display(Name = "Lesotho")]
         LSO,    // Lesotho
+        [Display(Name = "Lebanon")]
         LBN,    // Lebanon
+        [Display(Name = "Russia")]
         RUS,    // Russian Federation
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
