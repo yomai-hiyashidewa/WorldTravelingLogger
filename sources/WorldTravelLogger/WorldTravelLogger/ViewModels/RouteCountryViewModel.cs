@@ -35,11 +35,17 @@ namespace WorldTravelLogger.ViewModels
             isArrival_ = isArrival;
             model_ = model;
             control_ = model.GetControlModel();
+            control_.ControlChanged_ += Control__ControlChanged_;
             transportationList_ = model.GetTransportationList();
             model.CalcCompleted_ += Model_CalcCompleted_;
             transportations_ = new List<TransportationModel>();
             clVM_ = new CountryListViewModel();
             clVM_.CountryChanged += ClVM__CountryChanged;
+        }
+
+        private void Control__ControlChanged_(object? sender, EventArgs e)
+        {
+            this.RaisePropertyChanged("IsWithCrossBorder");
         }
 
         private void Set()
@@ -197,6 +203,14 @@ namespace WorldTravelLogger.ViewModels
                 {
                     return false;
                 }
+            }
+        }
+
+        public bool IsWithCrossBorder
+        {
+            get
+            {
+                return control_.IsWithCrossBorder;
             }
         }
 
