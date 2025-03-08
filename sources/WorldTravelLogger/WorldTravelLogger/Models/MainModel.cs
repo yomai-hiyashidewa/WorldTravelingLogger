@@ -48,6 +48,8 @@ namespace WorldTravelLogger.Models
         {
             var sightseeings = (SightseeingList)listDic_[ContextListType.SightseeingList];
             var others = (OtherList)listDic_[ContextListType.Other];
+            // otherも初期化
+            others.Init();
             others.ImportOthers(sightseeings.ExportOthers());
             SetExchangeRate(ContextListType.SightseeingList);
             SetExchangeRate(ContextListType.Other);
