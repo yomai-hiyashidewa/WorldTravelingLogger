@@ -1,7 +1,7 @@
 ﻿date,country,region,accomodation type,price,currency,memo
 2022/5/16,JPN,Kobe,ParentsHouse,0,JPY,-
 2022/5/17,UNK,-,Airplane,0,JPY,-
-2022/5/18,AUS,Sydney,Domitory,3165,JPY,-
+2022/5/18,AUS,Sydney,Domitory,3165,JPY,Expedia
 2022/5/19,AUS,katoomba,Domitory,26.5,AUD,-
 2022/5/20,AUS,katoomba,Domitory,26.5,AUD,-
 2022/5/21,AUS,-,Bus,0,JPY,-
@@ -61,7 +61,7 @@
 2022/7/14,USA,Anchorage,SingleRoom,150,USD,-
 2022/7/15,USA,Anchorage,SingleRoom,150,USD,-
 2022/7/16,USA,Anchorage,SingleRoom,150,USD,-
-2022/7/17,CAN,Vancouver,Domitory,54.27,CAD,-
+2022/7/17,CAN,Vancouver,Domitory,54.27,CAD,Expedia
 2022/7/18,CAN,Vancouver,Domitory,5532,JPY,-
 2022/7/19,CAN,Vancouver,Domitory,5532,JPY,-
 2022/7/20,CAN,Nanaimo,Domitory,55.68,CAD,-
@@ -83,7 +83,7 @@
 2022/8/5,CAN,Montréal,Domitory,56.93,CAD,-
 2022/8/6,CAN,Québec,Domitory,36,CAD,-
 2022/8/7,CAN,Montréal,Domitory,56.93,CAD,-
-2022/8/8,MEX,Mexico City,SingleRoom,300,MXP,-
+2022/8/8,MEX,Mexico City,SingleRoom,300,MXP,Expedia
 2022/8/9,MEX,Mexico City,Domitory,178.5,MXP,-
 2022/8/10,MEX,Mexico City,Domitory,178.5,MXP,-
 2022/8/11,MEX,Mexico City,Domitory,178.5,MXP,-
@@ -104,11 +104,11 @@
 2022/8/26,MEX,Cancun,Domitory,180.635,MXP,-
 2022/8/27,MEX,Playa del Carmen,Domitory,227.7,MXP,-
 2022/8/28,MEX,Cancun,Domitory,274.59,MXP,-
-2022/8/29,CUB,habana,SingleRoom,1572,JPY,-
+2022/8/29,CUB,habana,SingleRoom,1572,JPY,Expedia
 2022/8/30,CUB,habana,SingleRoom,25,USD,-
 2022/8/31,CUB,habana,SingleRoom,25,USD,-
-2022/9/1,CUB,habana,SingleRoom,8278,JPY,-
-2022/9/2,CUB,habana,SingleRoom,8278,JPY,-
+2022/9/1,CUB,habana,SingleRoom,8278,JPY,Expedia
+2022/9/2,CUB,habana,SingleRoom,8278,JPY,Expedia
 2022/9/3,MEX,Cancun,Domitory,283.5,MXP,-
 2022/9/4,MEX,Cancun,Domitory,283.5,MXP,-
 2022/9/5,MEX,Chetumal,Domitory,185.28,MXP,-
@@ -145,7 +145,7 @@
 2022/10/6,PAN,Panama City,Domitory,10.22,USD,-
 2022/10/7,PAN,Panama City,Domitory,10.22,USD,-
 2022/10/8,PAN,Panama City,Domitory,10.22,USD,-
-2022/10/9,COL,Bogota,SingleRoom,22,USD,-
+2022/10/9,COL,Bogota,SingleRoom,22,USD,Expedia
 2022/10/10,COL,Bogota,Domitory,24300,COP,-
 2022/10/11,COL,Villa de Leyva,Domitory,5.05,USD,-
 2022/10/12,COL,Villa de Leyva,Domitory,5.05,USD,-
@@ -294,7 +294,7 @@
 2023/3/4,BRA,Campinas,SingleRoom,100,BRL,-
 2023/3/5,BRA,Campinas,SingleRoom,100,BRL,-
 2023/3/6,UNK,-,Airplane,0,JPY,-
-2023/3/7,PRT,Lisbon,Domitory,1011,JPY,-
+2023/3/7,PRT,Lisbon,Domitory,1011,JPY,Expedia
 2023/3/8,PRT,Lisbon,Domitory,14.46,EUR,-
 2023/3/9,PRT,Lisbon,Domitory,14.46,EUR,-
 2023/3/10,PRT,Porto,Domitory,15.3,EUR,-
@@ -382,7 +382,7 @@
 2023/5/31,TWN,Taichung ,Domitory,1537,JPY,-
 2023/6/1,TWN,Tainan,Domitory,1897,JPY,-
 2023/6/2,TWN,Kaohsiung,Domitory,1579,JPY,-
-2023/6/3,PHL,Manila,SingleRoom,3250,JPY,-
+2023/6/3,PHL,Manila,SingleRoom,3250,JPY,Expedia
 2023/6/4,PHL,Manila,Domitory,888,JPY,-
 2023/6/5,PHL,Manila,Domitory,888,JPY,-
 2023/6/6,PHL,Puerto Galera,Domitory,959,JPY,-
@@ -400,7 +400,7 @@
 2023/6/18,JPN,Kobe,ParentsHouse,0,JPY,-
 2023/6/19,JPN,Kobe,ParentsHouse,0,JPY,-
 2023/6/20,JPN,Kobe,ParentsHouse,0,JPY,-
-2023/6/21,VNM,Hà Nội ,SingleRoom,1723,JPY,-
+2023/6/21,VNM,Hà Nội ,SingleRoom,1723,JPY,Expedia
 2023/6/22,GBR,London,Domitory,18.71,EUR,-
 2023/6/23,GBR,London,Airport,0,EUR,-
 2023/6/24,ISL,Reykjavík,Domitory,47.4,EUR,-
@@ -492,7 +492,7 @@
 2023/9/18,UNK,-,Ferry,0,JPY,-
 2023/9/19,TUN,tunis,SingleRoom,20,EUR,-
 2023/9/20,TUN,Sousse,Domitory,16.2,EUR,-
-2023/9/21,TUN,Sousse,Domitory,1937,JPY,-
+2023/9/21,TUN,Sousse,Domitory,1937,JPY,Expedia
 2023/9/22,TUN,tunis,Domitory,19,EUR,-
 2023/9/23,UNK,-,Ferry,0,JPY,-
 2023/9/24,ITA,Palermo,Domitory,19.8,EUR,-
