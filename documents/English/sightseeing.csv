@@ -125,8 +125,8 @@ around Regina,Walking,2022/7/28,CAN,Regina,0,CAD,-
 state hall,Heritage,2022/7/28,CAN,Regina,0,CAD,-
 A&W,Eating,2022/7/29,CAN,Regina,10,CAD,-
 Regina museum,Visiting,2022/7/29,CAN,Regina,0,CAD,-
-waiting a bus with homeless,Accident,2022/7/29,CAN,Regina,0,CAD,-
-joined first misa ,Accident,2022/7/30,CAN,Winnipeg,0,CAD,-
+waiting a bus with homeless,Event,2022/7/29,CAN,Regina,0,CAD,-
+joined first misa ,Event,2022/7/30,CAN,Winnipeg,0,CAD,-
 St.poniface cathedral,Visiting,2022/7/30,CAN,Winnipeg,0,CAD,-
 Manitoba museum,Visiting,2022/7/31,CAN,Winnipeg,0,CAD,-
 around winnipeg,Walking,2022/7/31,CAN,Winnipeg,0,CAD,-
@@ -141,7 +141,7 @@ coffee with milk and maffin,Eating,2022/8/7,CAN,Québec,7.75,CAD,-
 Québec church,Visiting,2022/8/7,CAN,Québec,0,CAD,-
 immigration to USA in CAN,Accident,2022/8/8,CAN,Montréal,0,CAD,-
 Mexico city transport card,Ticket,2022/8/9,MEX,Mexico City,10,MXP,-
-I was helped a Ticket by a mexican man,Accident,2022/8/9,MEX,Mexico City,0,MXP,-
+I was helped a Ticket by a mexican man,Event,2022/8/9,MEX,Mexico City,0,MXP,-
 national museum,Visiting,2022/8/10,MEX,Mexico City,183,MXP,-
 lunch,Eating,2022/8/10,MEX,Mexico City,150,MXP,national museum
 corn,Eating,2022/8/10,MEX,Mexico City,2,MXP,stall
@@ -163,7 +163,7 @@ Veracruz jetty,Walking,2022/8/19,MEX,Veracruz,0,MXP,-
 staying love hotel,Accident,2022/8/20,MEX,Coatzacoalcos,0,MXP,-
 Palenque heritage and senote,Tour,2022/8/22,MEX,Palenque,650,MXP,-
 insecticide,Shopping,2022/8/22,MEX,Palenque,100,MXP,parenque heritage
-talking with girl about hello kitty,Accident,2022/8/23,MEX,-,0,MXP,-
+talking with girl about hello kitty,Event,2022/8/23,MEX,-,0,MXP,-
 Campeche cathedral,Visiting,2022/8/24,MEX,Campeche,0,MXP,-
 Campeche museum,Visiting,2022/8/24,MEX,Campeche,65,MXP,-
 Uxmal heritage,Visiting,2022/8/25,MEX,Uxmal,579,MXP,-
@@ -173,12 +173,12 @@ sweets,Eating,2022/8/26,MEX,Chichen Itza,20,MXP,-
 locker,Other,2022/8/26,MEX,Chichen Itza,100,MXP,-
 Having squall,Accident,2022/8/26,MEX,Chichen Itza,0,MXP,-
 lunch,Eating,2022/8/27,MEX,Playa del Carmen,410,MXP,-
-changeng accomodation fee,Accident,2022/8/27,MEX,Cancun,168.635,MXP,-
+Changeng accomodation fee,Accident,2022/8/27,MEX,Cancun,168.635,MXP,-
 Playa del Carmen beach,Walking,2022/8/27,MEX,Playa del Carmen,0,MXP,-
-water bottle,Shopping,2022/8/28,MEX,Cozumel,150,MXP,-
-island cozmel,Walking,2022/8/28,MEX,Cozumel,0,MXP,-
+Water bottle,Shopping,2022/8/28,MEX,Cozumel,150,MXP,-
+Island cozmel,Walking,2022/8/28,MEX,Cozumel,0,MXP,-
 Cancun beach,Walking,2022/8/29,MEX,Cancun,0,MXP,-
-additional baggage for airplane,Accident,2022/8/29,MEX,Cancun,80,USD,-
+Additional baggage for airplane,Accident,2022/8/29,MEX,Cancun,80,USD,-
 Cuba Tourist Card,Tax,2022/8/29,CUB,habana,25,USD,-
 6000CUP,Exchange,2022/8/29,CUB,habana,0,MXP,from 1000 MXP
 breakfast,Eating,2022/8/30,CUB,habana,7,USD,-
@@ -186,7 +186,7 @@ wifi card,Shopping,2022/8/30,CUB,habana,125,CUP,-
 Mojito,Eating,2022/8/30,CUB,habana,1500,CUP,-
 lunch,Eating,2022/8/30,CUB,habana,1000,CUP,-
 alcohol fee,Eating,2022/8/30,CUB,habana,2500,CUP,-
-meeting with strange,Accident,2022/8/30,CUB,habana,0,CUP,-
+meeting with strange people,Accident,2022/8/30,CUB,habana,0,CUP,-
 Vinales drive,Tour,2022/8/30,CUB,habana,120,USD,-
 Sim card,Shopping,2022/8/30,CUB,habana,3900,CUP,-
 Getting 10000 CUP,Cashing,2022/8/30,CUB,habana,0,USD,from 83 USD
@@ -199,11 +199,11 @@ wall image,Heritage,2022/8/31,CUB,Vinales,0,CUP,tour
 wifi card,Shopping,2022/9/1,CUB,habana,125,CUP,-
 breakfast,Eating,2022/9/2,CUB,habana,7,USD,-
 breakfast,Eating,2022/9/3,CUB,habana,7,USD,-
-throwing my flight Ticket from camagway to cancun,Accident,2022/9/3,CUB,habana,5870,MXP,-
-contacting my parents,Accident,2022/9/3,CUB,habana,0,MXP,-
-asked my parents to buy me a Ticket.,Accident,2022/9/3,CUB,habana,0,JPY,-
+Throwing my flight Ticket from camagway to cancun,Accident,2022/9/3,CUB,habana,5870,MXP,-
+Contacting my parents,Accident,2022/9/3,CUB,habana,0,MXP,-
+Asked my parents to buy me a Ticket.,Accident,2022/9/3,CUB,habana,0,JPY,-
 coffee and milk,Eating,2022/9/6,MEX,Chetumal,7,MXP,-
-Drinking with young people,Accident,2022/9/7,BLZ,San Ignacio,0,BZD,-
+Drinking with young people,Event,2022/9/7,BLZ,San Ignacio,0,BZD,-
 Belize city beach,Walking,2022/9/7,BLZ,San Ignacio,0,BZD,-
 Cahal Pech heritage,Visiting,2022/9/7,BLZ,San Ignacio,10,BZD,-
 Xunantunich heritage,Visiting,2022/9/8,BLZ,Xunantunich,10,BZD,-
@@ -221,15 +221,15 @@ Antigua cathedral,Visiting,2022/9/13,GTM,Antigua,0,USD,-
 Antigua town,Walking,2022/9/13,GTM,Antigua,0,USD,-
 macdnard,Eating,2022/9/13,SLV,Santa Ana,8,USD,-
 electric cable,Shopping,2022/9/14,SLV,Santa Ana,5,USD,-
-throwing my bus Ticket,Accident,2022/9/14,SLV,Santa Ana,80,USD,lost a bus to leon
-independence day,Accident,2022/9/15,SLV,Santa Ana,0,USD,-
-chnaging a accomodation,Accident,2022/9/15,SLV,Santa Ana,0,USD,-
+Throwing my bus Ticket,Accident,2022/9/14,SLV,Santa Ana,80,USD,lost a bus to leon
+Independence day,Event,2022/9/15,SLV,Santa Ana,0,USD,-
+Chnaging a accomodation,Event,2022/9/15,SLV,Santa Ana,0,USD,-
 big poteto fries,Eating,2022/9/16,SLV,Santa Ana,1,USD,-
 Santa ana volcano entrance fee,Trekking,2022/9/16,SLV,Santa Ana,10,USD,With guide
 I saw like a ded man,Accident,2022/9/16,SLV,Santa Ana,0,USD,-
-The cake for presents,Accident,2022/9/16,SLV,Santa Ana,0,USD,happy birthday of the owner
-Meeting with yo san,Accident,2022/9/17,SLV,El Tunco,0,USD,-
-Exchange from cuban pesos to Kyrgyzstan sums,Accident,2022/9/17,SLV,El Tunco,0,USD,-
+The cake for presents in my accommodation,Event,2022/9/16,SLV,Santa Ana,0,USD,happy birthday of the owner
+Meeting with yo san,Event,2022/9/17,SLV,El Tunco,0,USD,-
+Exchange from cuban pesos to Kyrgyzstan sums,Event,2022/9/17,SLV,El Tunco,0,USD,-
 dinner,Eating,2022/9/17,SLV,El Tunco,5,USD,with yo san
 El Tunco beach,Walking,2022/9/17,SLV,El Tunco,0,USD,-
 Honduras depature taz,Tax,2022/9/18,HND,Guasaule,21,USD,-
@@ -245,7 +245,7 @@ Boat in lake nicaragua,Tour,2022/9/21,NIC,Guranada,12,USD,-
 lunch,Eating,2022/9/22,NIC,San Jorge,150,NIO,-
 Island entry Tax,Tax,2022/9/22,NIC,San Jorge,1,USD,-
 coffee,Eating,2022/9/23,NIC,Island Ometepe,70,NIO,-
-first Overseas Touring,Accident,2022/9/23,NIC,Island Ometepe,0,NIO,-
+first Overseas Touring,Event,2022/9/23,NIC,Island Ometepe,0,NIO,-
 I fell and injured myself on the moor.,Accident,2022/9/23,NIC,Island Ometepe,0,NIO,-
 motorcycle fee,Ticket,2022/9/23,NIC,Island Ometepe,20,USD,-
 fixing fee for a motorcycle,Accident,2022/9/23,NIC,Island Ometepe,70,USD,-
@@ -273,7 +273,7 @@ Santa Catalina beach,Walking,2022/10/3,PAN,Santa Catalina,0,USD,-
 Tuna and pineapple salda,Eating,2022/10/4,PAN,Coiba,0,USD,tour
 island coiba,Tour,2022/10/4,PAN,Coiba,60,USD,-
 Island entry Tax,Tax,2022/10/4,PAN,Coiba,20,USD,-
-first snokling,Accident,2022/10/4,PAN,Coiba,0,USD,-
+first snokling,Event,2022/10/4,PAN,Coiba,0,USD,-
 grapefruit jiurce,Eating,2022/10/5,PAN,Coiba,1.5,USD,-
 lunch,Eating,2022/10/5,PAN,Panama City,9.5,USD,-
 Santa Fe,Walking,2022/10/6,PAN,Santa Fe,0,USD,-
@@ -289,8 +289,8 @@ lemonade,Eating,2022/10/8,PAN,Panama City,2,USD,-
 beer +seafood,Eating,2022/10/8,PAN,Panama City,12,USD,-
 sim card,Shopping,2022/10/9,COL,Bogota,20000,COP,-
 pizza,Eating,2022/10/10,COL,Bogota,7000,COP,dinner with yo san
-meeting with yo san ,Accident,2022/10/10,COL,Bogota,0,COP,-
-recharge to sim caard,Accident,2022/10/11,COL,Bogota,20000,COP,-
+meeting with yo san ,Event,2022/10/10,COL,Bogota,0,COP,-
+recharge to sim caard,Event,2022/10/11,COL,Bogota,20000,COP,-
 rice ball,Eating,2022/10/11,COL,Bogota,2500,COP,-
 coffee,Eating,2022/10/11,COL,Bogota,4000,COP,-
 Walking to waterfall for 12 km by round trip,Accident,2022/10/12,COL,Santa Sofia,0,COP,-
@@ -300,10 +300,10 @@ cheese,Eating,2022/10/13,COL,-,2000,COP,-
 cathedral of salt,Visiting,2022/10/13,COL,Zipaquirá,77500,COP,-
 cola,Eating,2022/10/14,COL,Melgar,3000,COP,-
 bogota metro card,Ticket,2022/10/14,COL,Bogota,5000,COP,-
-went to the police,Accident,2022/10/14,COL,Melgar,0,COP,there isn't today's accomodation
+was gone to the police,Accident,2022/10/14,COL,Melgar,0,COP,there isn't today's accomodation
 cap of swimming,Shopping,2022/10/14,COL,Melgar,2000,COP,-
-Swimming in the hotel,Accident,2022/10/14,COL,Melgar,0,COP,-
-went to the city at night,Accident,2022/10/14,COL,Melgar,0,COP,with colombian couple
+Swimming in the hotel,Event,2022/10/14,COL,Melgar,0,COP,-
+went to the city at night,Event,2022/10/14,COL,Melgar,0,COP,with colombian couple
 breakfast,Eating,2022/10/15,COL,Melgar,12000,COP,-
 cap of swimming,Shopping,2022/10/15,COL,Melgar,2000,COP,paid again
 opening the festibal until 3:00,Shopping,2022/10/15,COL,Ibage,0,COP,-
@@ -314,13 +314,13 @@ lunch,Eating,2022/10/19,COL,kari,27000,COP,in zoo
 kari zoo,Visiting,2022/10/19,COL,kari,27000,COP,-
 coffee,Eating,2022/10/21,COL,Manizales,1000,COP,-
 konoha don,Eating,2022/10/23,COL,Bogota,40000,COP,-
-I bought a dummy Ticket from ecuador,Accident,2022/10/24,COL,Bogota,60000,JPY,-
+I had bought a dummy Ticket from ecuador,Accident,2022/10/24,COL,Bogota,60000,JPY,-
 seafood soup,Eating,2022/10/25,ECU,Quito,6,USD,-
 burger,Eating,2022/10/25,ECU,Quito,2,USD,-
 vito national cathedral,Visiting,2022/10/25,ECU,Quito,2,USD,-
 tower fee,Ticket,2022/10/25,ECU,Quito,3,USD,vito national cathedral
 sim card,Shopping,2022/10/25,ECU,Quito,5,USD,not used
-went to a hospital,Accident,2022/10/27,ECU,ibara,0,USD,paid 97 USD
+I went to a hospital,Accident,2022/10/27,ECU,ibara,0,USD,paid 97 USD
 soup,Eating,2022/10/28,ECU,Otavalo,3,USD,-
 orange juiice,Eating,2022/10/29,ECU,Otavalo,1.5,USD,-
 soup,Eating,2022/10/29,ECU,Otavalo,3,USD,-
@@ -330,21 +330,21 @@ salinas beawch,Walking,2022/11/2,ECU,salinas,0,USD,-
 rope way card,Ticket,2022/11/2,ECU,Santiago de Guayaquil,3.4,USD,-
 transport card,Ticket,2022/11/2,ECU,Santiago de Guayaquil,2,USD,-
 lunch,Eating,2022/11/3,ECU,Santiago de Guayaquil,0,USD,-
-cancel a Ticket,Accident,2022/11/3,ECU,Santiago de Guayaquil,0,USD,airport
+I canceled a Ticket but I could't it,Accident,2022/11/3,ECU,Santiago de Guayaquil,0,USD,airport
 Whole roasted pig,Eating,2022/11/4,ECU,-,1.5,USD,-
 lunch,Eating,2022/11/5,ECU,arausi,5,USD,-
 dinner,Eating,2022/11/5,ECU,arausi,10,USD,-
 alausi Walking,Walking,2022/11/5,ECU,arausi,0,USD,-
 coffee,Eating,2022/11/7,ECU,Cuenca,2,USD,with yuranora san
 humberger,Eating,2022/11/7,ECU,Cuenca,5,USD,with yuranora san
-meeting with yuranora san,Accident,2022/11/7,ECU,Cuenca,0,USD,-
+meeting with yuranora san,Event,2022/11/7,ECU,Cuenca,0,USD,-
 clture museum,Visiting,2022/11/7,ECU,Cuenca,4,USD,-
 modern art museum,Visiting,2022/11/7,ECU,Cuenca,0,USD,-
 city museum,Visiting,2022/11/7,ECU,Cuenca,0,USD,-
 cathedral museum,Visiting,2022/11/7,ECU,Cuenca,1,USD,-
 enpalada,Eating,2022/11/7,PER,Tumbes,1,USD,-
 happen earthquake,Accident,2022/11/8,PER,Tumbes,0,USD,-
-talking with owner couple,Accident,2022/11/8,PER,Tumbes,0,USD,-
+talking with owner couple,Event,2022/11/8,PER,Tumbes,0,USD,-
 there are a lot of Seal carcass,Accident,2022/11/9,PER,Tumbes,0,USD,-
 Tumbes beach,Walking,2022/11/9,PER,Tumbes,0,USD,-
 Máncora beach,Walking,2022/11/9,PER,Máncora,0,USD,-
@@ -377,14 +377,14 @@ rarco museum,Visiting,2022/11/19,PER,Lima,35,PEN,-
 renewal national Archaeology museum,Accident,2022/11/19,PER,Lima,0,PEN,-
 I missed to go to north bus terminal,Accident,2022/11/19,PER,Lima,0,PEN,-
 chicha zerry,Eating,2022/11/20,PER,ika,2,PEN,-
-meeting with yuranora san,Accident,2022/11/21,PER,Nazca,0,PEN,-
+meeting with yuranora san,Event,2022/11/21,PER,Nazca,0,PEN,-
 nazca Tour,Tour,2022/11/22,PER,Nazca,70,USD,-
-first sesna,Accident,2022/11/22,PER,Nazca,0,USD,-
+first sesna,Event,2022/11/22,PER,Nazca,0,USD,-
 antonini museum,Visiting,2022/11/22,PER,Nazca,20,PEN,-
 the bus to Arequipa,Ticket,2022/11/22,PER,Nazca,110,PEN,throw the bus
 the bus couldn' come because strike,Accident,2022/11/22,PER,Nazca,0,PEN,-
 the bus couldn' come because strike,Accident,2022/11/23,PER,Nazca,0,PEN,-
-played karaoke with franch man speaks Japanese well,Accident,2022/11/25,PER,Arequipa,0,PEN,-
+played karaoke with franch man speaks Japanese well,Event,2022/11/25,PER,Arequipa,0,PEN,-
 saint andes museum,Visiting,2022/11/25,PER,Arequipa,30,PEN,-
 city museum,Visiting,2022/11/25,PER,Arequipa,0,PEN,-
 water bridge,Heritage,2022/11/25,PER,Arequipa,0,PEN,-
@@ -414,13 +414,13 @@ Pisco Sour,Eating,2022/12/9,CHL,San Pedro de Atacama,0,CLP,tour
 border HotSpring,HotSpring,2022/12/9,CHL,San Pedro de Atacama,0,CLP,tour
 dinner,Eating,2022/12/10,CHL,Calama,14850,CLP,Restrant
 bolivian food,Eating,2022/12/12,BOL,Uyuni,15,BOB,-
-meeting with yuranora san,Accident,2022/12/12,BOL,Uyuni,0,BOB,-
-meeting with sasa san,Accident,2022/12/12,BOL,Uyuni,0,BOB,-
+meeting with yuranora san,Event,2022/12/12,BOL,Uyuni,0,BOB,-
+meeting with sasa san,Event,2022/12/12,BOL,Uyuni,0,BOB,-
 train Graveyard,Heritage,2022/12/12,BOL,Uyuni,0,BOB,-
 Washing fee,Washing,2022/12/12,BOL,Uyuni,15,BOB,-
 uyuni night Tour,Tour,2022/12/12,BOL,Uyuni,150,BOB,-
 uyuni salt lake,Visiting,2022/12/12,BOL,Uyuni,0,BOB,-
-picking up garbage,Accident,2022/12/12,BOL,Uyuni,0,BOB,be watched strange man
+picking up garbage,Event,2022/12/12,BOL,Uyuni,0,BOB,be watched strange man
 umita 5s,Eating,2022/12/14,BOL,Potosi,10,BOB,-
 Haircut,Haircut,2022/12/14,BOL,Sucre,30,BOB,-
 missed the bus,Accident,2022/12/14,BOL,Potosi,20,BOB,-
@@ -431,7 +431,7 @@ shower fee,Shopping,2022/12/16,BOL,Sucre,10,BOB,-
 breakfast,Eating,2022/12/17,BOL,La Paz,35,BOB,terminal
 la Paz metro card,Ticket,2022/12/17,BOL,La Paz,30,BOB,-
 national museum,Visiting,2022/12/17,BOL,La Paz,20,BOB,-
-returned my lundury,Accident,2022/12/17,BOL,La Paz,0,BOB,-
+returned my lundury without washing,Accident,2022/12/17,BOL,La Paz,0,BOB,-
 chicha zerry,Eating,2022/12/19,BOL,Copacabana,1,BOB,-
 copacabana beach,Walking,2022/12/19,BOL,Copacabana,0,BOB,-
 Boat fee,Ticket,2022/12/20,BOL,Copacabana,5,BOB,-
@@ -443,10 +443,10 @@ Exchanged to 224BOB,Exchange,2022/12/22,BOL,Copacabana,0,PEN,120PEN => 224BOB
 pudding,Eating,2022/12/23,BOL,Copacabana,3,BOB,-
 terminal fee,Ticket,2022/12/23,BOL,La Paz,2.5,BOB,-
 Statue of Christ,Overviewing,2022/12/24,BOL,Ciudad de Cochabamba,0,BOB,-
-metting with Japanese 2 women,Accident,2022/12/24,BOL,Ciudad de Cochabamba,0,BOB,-
-joined at xmas party,Accident,2022/12/24,BOL,Ciudad de Cochabamba,0,BOB,-
+metting with Japanese 2 women,Event,2022/12/24,BOL,Ciudad de Cochabamba,0,BOB,-
+joined at xmas party,Event,2022/12/24,BOL,Ciudad de Cochabamba,0,BOB,-
 lunch,Eating,2022/12/25,BOL,Ciudad de Cochabamba,15,BOB,-
-joined xmas misa,Accident,2022/12/25,BOL,Ciudad de Cochabamba,0,BOB,-
+joined xmas misa,Event,2022/12/25,BOL,Ciudad de Cochabamba,0,BOB,-
 cochabamba cathedral,Visiting,2022/12/25,BOL,Ciudad de Cochabamba,0,BOB,-
 lake cochabamba,Walking,2022/12/26,BOL,Ciudad de Cochabamba,0,BOB,-
 ice cream,Eating,2022/12/26,BOL,Ciudad de Cochabamba,5,BOB,-
@@ -457,11 +457,11 @@ terminal fee,Ticket,2022/12/29,BOL,Santa Cruz de la Sierra,3,BOB,-
 stopped for 2 hours because demonstration,Accident,2022/12/29,BOL,-,0,BOB,-
 ramen + juice,Eating,2023/1/1,BOL,Tarija,27,BOB,-
 Tarija cathedral,Visiting,2023/1/1,BOL,Tarija,0,BOB,-
-joined new year misa,Accident,2023/1/1,BOL,Tarija,0,BOB,-
+joined new year misa,Event,2023/1/1,BOL,Tarija,0,BOB,-
 Exchanged to 63000ARP,Exchange,2023/1/1,BOL,Tarija,0,USD,200USD => 63000ARP
 lunch,Eating,2023/1/2,BOL,Tarija,20,BOB,market
 shower fee,Shopping,2023/1/2,BOL,Tarija,10,BOB,-
-meeting up with my family,Accident,2023/1/2,BOL,Tarija,0,BOB,online
+meeting up with my family on network,Event,2023/1/2,BOL,Tarija,0,BOB,online
 tarija overviewing,Walking,2023/1/2,BOL,Tarija,0,BOB,-
 rainbow hill,Nature,2023/1/3,ARG,purmamarca,100,ARS,-
 sweets,Eating,2023/1/3,ARG,purmamarca,300,ARS,-
@@ -477,8 +477,8 @@ along parana river,Walking,2023/1/8,ARG,Corrientes,0,ARS,-
 lunch,Eating,2023/1/10,ARG,Puerto Iguazu,1500,ARS,-
 Iguaz waterfall,Visiting,2023/1/10,ARG,Puerto Iguazu,5500,ARS,1USD = 255ARS
 Iguaz waterfall,Visiting,2023/1/10,BRA,Foz do Iguaçu,86,BRL,-
-meeting up with madoka san,Accident,2023/1/11,PRY,Yguazú,0,PYG,-
-meeting up with the man returned south poke,Accident,2023/1/11,PRY,Yguazú,0,PYG,-
+meeting up with madoka san,Event,2023/1/11,PRY,Yguazú,0,PYG,-
+meeting up with the man returned south poke,Event,2023/1/11,PRY,Yguazú,0,PYG,-
 ygazu Japanese regidence,Walking,2023/1/12,PRY,Yguazú,0,PYG,-
 lunch,Eating,2023/1/12,PRY,Yguazú,15000,PYG,-
 around minsyuku kobayashi,Walking,2023/1/12,PRY,Yguazú,0,PYG,-
@@ -495,7 +495,7 @@ barubero museum,Visiting,2023/1/18,PRY,Ciudad de Asunción,0,PYG,-
 Exchanged to ?? ARS,Exchange,2023/1/18,PRY,Ciudad de Asuncion,0,PYG,from 400000 to ?? ARS
 Exchanged to ?? ARS,Exchange,2023/1/20,ARG,Santa Fe de la Vera Cruz,0,USD,from 100USD 1USD = 360ARS
 Cashing from atm,Cashing,2023/1/20,ARG,Santa Fe de la Vera Cruz,0,ARS,10000ARS
-joined birthday party,Accident,2023/1/21,ARG,Santa Fe de la Vera Cruz,0,ARS,-
+joined birthday party,Event,2023/1/21,ARG,Santa Fe de la Vera Cruz,0,ARS,-
 around santa fe,Walking,2023/1/21,ARG,Santa Fe de la Vera Cruz,0,ARS,-
 coffee+bread,Eating,2023/1/23,ARG,VillaCaropas,450,ARS,-
 ice cream,Eating,2023/1/23,ARG,VillaCaropas,200,ARS,-
@@ -543,7 +543,7 @@ lunch,Eating,2023/2/18,BRA,Curitiba,20,BRL,-
 sushi,Eating,2023/2/19,BRA,Londrina,22,BRL,-
 lunch,Eating,2023/2/21,BRA,Campo Grande,28.9,BRL,-
 dinner,Eating,2023/2/21,BRA,Bonito,50,BRL,with yuranora san
-meeting up with yuranora san,Accident,2023/2/21,BRA,Bonito,0,BRL,-
+meeting up with yuranora san,Event,2023/2/21,BRA,Bonito,0,BRL,-
 Blue cave Tour,Tour,2023/2/22,BRA,Bonito,110,BRL,-
 Pantanal Tropical Wetland,Walking,2023/2/24,BRA,Corumbá,0,BRL,-
 soba,Eating,2023/2/25,BRA,Campo Grande,35,BRL,-
@@ -579,8 +579,8 @@ PartTimeJob,PartTimeJob,2023/4/17,JPN,Kobe,0,JPY,-
 I broke my ribs working at the circus.,Accident,2023/4/17,JPN,Kobe,0,JPY,-
 throwed my Ticket frome greece to egypt,Accident,2023/4/18,JPN,Kobe,16600,JPY,-
 throwed my Ticket frome JPN to greece,Accident,2023/4/18,JPN,Kobe,16600,JPY,-
-completed to cure my pneumonia,Accident,2023/4/27,JPN,Kobe,0,JPY,-
-Meeting up with yuranora san,Accident,2023/5/3,JPN,Kobe,4000,JPY,-
+completed to cure my pneumonia,Event,2023/4/27,JPN,Kobe,0,JPY,-
+Meeting up with yuranora san,Event,2023/5/3,JPN,Kobe,4000,JPY,-
 PartTimeJob,PartTimeJob,2023/5/16,JPN,Kobe,0,JPY,-
 PartTimeJob,PartTimeJob,2023/5/17,JPN,Kobe,0,JPY,-
 PartTimeJob,PartTimeJob,2023/5/18,JPN,Kobe,0,JPY,-
@@ -626,7 +626,7 @@ hot dog,Eating,2023/6/10,PHL,Balanga,50,PHP,-
 jory bee,Eating,2023/6/10,PHL,Balanga,75,PHP,-
 ginger rice,Eating,2023/6/10,PHL,Balanga,50,PHP,-
 national park,Eating,2023/6/10,PHL,Balanga,50,PHP,-
-joined misa,Accident,2023/6/11,PHL,Balanga,0,PHP,-
+joined misa,Event,2023/6/11,PHL,Balanga,0,PHP,-
 keen shoes,Shopping,2023/6/17,JPN,Osaka,20000,JPY,-
 Ikeda castle,Visiting,2023/6/17,JPN,Ikeda,770,JPY,-
 Ikeda overviewing,Walking,2023/6/17,JPN,Ikeda,0,JPY,-
@@ -648,7 +648,7 @@ island national museum,Visiting,2023/6/24,ISL,Reykjavík,2500,ISK,-
 daunats,Eating,2023/6/25,ISL,Reykjavík,200,JPY,-
 Vorganes,Walking,2023/6/25,ISL,Vorganes,0,ISK,-
 Washing fee,Washing,2023/6/26,ISL,Reykjavík,1500,ISK,-
-meeting up with jeramy,Accident,2023/6/27,ISL,Reykjavík,0,ISK,-
+meeting up with jeramy san,Event,2023/6/27,ISL,Reykjavík,0,ISK,-
 Hahunarfi,Walking,2023/6/27,ISL,Hahunarfi,0,ISK,-
 humberger,Eating,2023/6/28,IRL,Dublin,9.5,EUR,-
 irish coffee,Eating,2023/6/28,IRL,Dublin,5,EUR,-
@@ -712,7 +712,7 @@ saint ruder church,Visiting,2023/7/16,NOR,Bodo,0,NOK,-
 supermarket,Eating,2023/7/15,NOR,Bodo,1000,JPY,-
 bodo port,Walking,2023/7/16,NOR,Bodo,0,JPY,-
 bodo mountain,Walking,2023/7/16,NOR,Bodo,0,JPY,-
-meeting up with german company,Accident,2023/7/17,NOR,Narvik,0,JPY,-
+meeting up with german company,Event,2023/7/17,NOR,Narvik,0,JPY,-
 narvik church,Visiting,2023/7/17,NOR,Narvik,0,JPY,-
 supermarket,Shopping,2023/7/18,SWE,Luleå,105,SEK,-
 Kiruna church,Visiting,2023/7/18,SWE,Kiruna,0,SEK,-
@@ -731,7 +731,7 @@ Sigulda overviewing,Walking,2023/7/24,LVA,Sigulda,0,EUR,-
 datumanya cave,Walking,2023/7/24,LVA,Sigulda,0,EUR,-
 transport card,Ticket,2023/7/25,LTU,Vilnius,2,EUR,-
 charge,Ticket,2023/7/25,LTU,Vilnius,3,EUR,-
-free day ,Accident,2023/7/25,LTU,Vilnius,0,EUR,-
+entried free day ,Event,2023/7/25,LTU,Vilnius,0,EUR,-
 sanito petero & paulo church,Visiting,2023/7/25,LTU,Vilnius,0,EUR,-
 saint ann church,Visiting,2023/7/25,LTU,Vilnius,0,EUR,-
 gediminus tower,Overviewing,2023/7/25,LTU,Vilnius,0,EUR,-
@@ -836,7 +836,7 @@ ice cream,Eating,2023/8/15,MAR,Fnideku,10,MAD,-
 cola,Eating,2023/8/15,MAR,Fnideku,5,MAD,-
 bread,Eating,2023/8/15,MAR,Fnideku,6,MAD,-
 dinner,Eating,2023/8/15,MAR,Tangier,20,MAD,-
-Walking around tanginer with morocco's people,Accident,2023/8/15,MAR,Tangier,0,MAD,-
+Walking around tanginer with morocco's people,Event,2023/8/15,MAR,Tangier,0,MAD,-
 coffee,Eating,2023/8/16,MAR,Tangier,14,MAD,-
 lunch,Eating,2023/8/16,MAR,Tangier,20,MAD,-
 tangier beach,Walking,2023/8/16,MAR,Tangier,0,MAD,-
@@ -844,7 +844,7 @@ bread,Eating,2023/8/17,MAR,Chefchaouen,8,MAD,-
 scacks,Eating,2023/8/17,MAR,Chefchaouen,8,MAD,-
 Toilet,Toilet,2023/8/17,MAR,Chefchaouen,1,MAD,-
 Chefchaouen overviewing,Walking,2023/8/17,MAR,Chefchaouen,1,MAD,-
-meeting up with some Japanese,Accident,2023/8/17,MAR,Chefchaouen,0,MAD,-
+meeting up with some Japanese,Event,2023/8/17,MAR,Chefchaouen,0,MAD,-
 rambled the fes labiriz,Accident,2023/8/17,MAR,Fes,0,MAD,-
 fes royal palace,Visiting,2023/8/17,MAR,Fes,0,MAD,-
 the grave of merinideth,Overviewing,2023/8/17,MAR,Fes,0,MAD,-
@@ -853,7 +853,7 @@ bread,Eating,2023/8/18,MAR,Fes,16,MAD,-
 dounats,Eating,2023/8/18,MAR,Meknès,16,MAD,-
 panini,Eating,2023/8/18,MAR,Meknès,34,MAD,-
 hot dog,Eating,2023/8/18,MAR,Meknès,6,MAD,-
-meeting up with marco,Accident,2023/8/18,MAR,Meknès,0,MAD,-
+meeting up with marco,Event,2023/8/18,MAR,Meknès,0,MAD,-
 kuskus,Eating,2023/8/19,MAR,Rabat,50,MAD,-
 Sale beach,Walking,2023/8/19,MAR,Sale,0,MAD,-
 hassan tower,Heritage,2023/8/19,MAR,Rabat,0,MAD,-
@@ -881,7 +881,7 @@ juice,Eating,2023/8/29,MAR,Oujda,14,MAD,-
 beer + snack,Eating,2023/8/30,MAR,-,3.5,EUR,-
 nador beach,Walking,2023/8/30,MAR,nador,0,MAD,-
 Exchanged to 31 eur,Exchange,2023/8/30,MAR,nador,0,MAD,from 340 MAD
-missed deparute port,Accident,2023/8/30,MAR,nador,0,MAD,-
+I had gone to wrong deparute port,Accident,2023/8/30,MAR,nador,0,MAD,-
 Almería cathedral,Visiting,2023/8/31,ESP,Almería,0,MAD,-
 Almería beach,Walking,2023/8/31,ESP,Almería,0,MAD,-
 arbaisin overviewing,Walking,2023/8/31,ESP,Granada,0,MAD,-
@@ -903,7 +903,7 @@ macdonald,Eating,2023/9/5,ITA,Milano,5,EUR,-
 Mirano cathedral,Visiting,2023/9/5,ITA,Milano,0,EUR,-
 Mirano fortless,Visiting,2023/9/5,ITA,Milano,0,EUR,-
 dinner,Eating,2023/9/5,ITA,Milano,0,EUR,marco's house
-stayed in marco's house,Accident,2023/9/5,ITA,Milano,0,EUR,-
+stayed in marco's house,Event,2023/9/5,ITA,Milano,0,EUR,-
 espresso,Eating,2023/9/6,ITA,Milano,2.2,EUR,-
 panini,Eating,2023/9/6,ITA,Genova,4.5,EUR,-
 Toilet,Toilet,2023/9/6,ITA,Genova,1,EUR,-
@@ -958,7 +958,7 @@ Amalfitana cathedral,Visiting,2023/9/16,ITA,Amalfitana,0,EUR,-
 Lemon Gelato,Eating,2023/9/16,ITA,Amalfitana,8,EUR,-
 espresso and bread,Eating,2023/9/16,ITA,Salerno,5,EUR,-
 walked to my inn by 4km,Accident,2023/9/16,ITA,vallo scaro,0,EUR,-
-Gave pasta from italian ofbollona,Accident,2023/9/16,ITA,vallo scaro,0,EUR,-
+Gave pasta from italian ofbollona,Event,2023/9/16,ITA,vallo scaro,0,EUR,-
 espresso,Eating,2023/9/17,ITA,vallo scaro,1,EUR,-
 returned to train station by 4km,Accident,2023/9/17,ITA,vallo scaro,0,EUR,-
 pizza,Eating,2023/9/17,ITA,Pompei,6.3,EUR,Shopping morl
@@ -1110,11 +1110,11 @@ coffee and milk,Eating,2023/10/24,SRB,Novi Sad,200,RSD,-
 soup,Eating,2023/10/24,SRB,Novi Sad,300,RSD,-
 Novi Sad cathedral,Visiting,2023/10/24,SRB,Novi Sad,0,RSD,-
 donau river,Walking,2023/10/24,SRB,Novi Sad,0,RSD,-
-rested by the river,Accident,2023/10/24,SRB,Novi Sad,0,RSD,-
+rested by the river,Event,2023/10/24,SRB,Novi Sad,0,RSD,-
 esspresso,Eating,2023/10/25,SRB,Beograd,155,RSD,-
 T-shirt,Shopping,2023/10/25,SRB,Niš,962,JPY,-
 Mediana heritage,Visiting,2023/10/26,SRB,Niš,500,RSD,-
-Gave 5 north irland currency to a student in UK,Accident,2023/10/26,SRB,Niš,0,RSD,-
+Gave 5 north irland currency to a student in UK,Event,2023/10/26,SRB,Niš,0,RSD,-
 sofia  24 hour Ticket,Ticket,2023/10/27,BGR,Sofia,4.8,BGN,-
 humberger,Eating,2023/10/27,BGR,Sofia,8.5,BGN,-
 S Sofia church,Visiting,2023/10/27,BGR,Sofia,6,BGN,-
@@ -1152,7 +1152,7 @@ Constanța 24 hour Ticket,Ticket,2023/11/9,ROU,Constanța,10,RON,-
 Ethnographic Museum,Visiting,2023/11/9,ROU,Constanța,10,RON,-
 Constanța beach,Visiting,2023/11/9,ROU,Constanța,0,RON,-
 coffee and milk,Eating,2023/11/9,ROU,Constanța,6,RON,-
-throw my flifht Ticket to bayroot,Accident,2023/11/10,BGR,Varna,9470,JPY,-
+throw my flight Ticket to bayroot,Accident,2023/11/10,BGR,Varna,9470,JPY,-
 Shumen mosk,Visiting,2023/11/10,BGR,Shumen,0,BGN,-
 Varna 24 hour Ticket,Ticket,2023/11/10,BGR,Varna,4,BGN,-
 Roman termae,Heritage,2023/11/10,BGR,Varna,5,BGN,-
@@ -1235,7 +1235,7 @@ lunch,Eating,2023/11/27,EGY,alexandria,25,EGP,-
 coffee,Eating,2023/11/27,EGY,alexandria,80,EGP,Terminal
 KFC,Eating,2023/11/27,EGY,Port Said,84,EGP,-
 suez canal,Canal,2023/11/27,EGY,Port Said,0,EGP,-
-returned 500 pond from inn's ower,Accident,2023/11/27,EGY,Port Said,0,EGP,-
+returned 500 pond from inn's ower,Event,2023/11/27,EGY,Port Said,0,EGP,-
 lunch,Eating,2023/11/28,EGY,Suez,87,EGP,-
 Suez bay,Walking,2023/11/28,EGY,Suez,0,EGP,-
 suez canal,Walking,2023/11/28,EGY,Suez,0,EGP,-
@@ -1246,7 +1246,7 @@ old cairo mosk,Visiting,2023/11/29,EGY,Cairo,0,EGP,-
 Egypt national museum,Visiting,2023/11/29,EGY,Cairo,300,EGP,-
 dinner,Eating,2023/11/29,EGY,Cairo,60,EGP,-
 it was dengerous to ride a motorcycle,Accident,2023/11/29,EGY,giza,0,EGP,-
-I ate dinner with egptian and sudanian of my accomodation,Accident,2023/11/29,EGY,giza,0,EGP,-
+I ate dinner with egptian and sudanian of my accomodation,Event,2023/11/29,EGY,giza,0,EGP,-
 piramid,Heritage,2023/11/30,EGY,giza,360,EGP,-
 I was taken a picture by a camel rider,Accident,2023/11/30,EGY,giza,150,EGP,-
 lunch,Eating,2023/11/30,EGY,giza,10,EGP,-
@@ -1325,7 +1325,7 @@ coffee,Eating,2023/12/16,JPN,Onomichi,170,JPY,-
 taiyaki,Eating,2023/12/16,JPN,Onomichi,220,JPY,-
 ramen,Eating,2023/12/16,JPN,Onomichi,980,JPY,-
 sento,HotSpring,2023/12/16,JPN,Onomichi,480,JPY,-
-meet with my friend,Accident,2023/12/16,JPN,Onomichi,0,JPY,-
+meet with my friend,Event,2023/12/16,JPN,Onomichi,0,JPY,-
 seikokuji temple,Church,2023/12/16,JPN,Onomichi,0,JPY,-
 sennkokuji temple,Church,2023/12/16,JPN,Onomichi,0,JPY,-
 fukuyama castle,Visiting,2023/12/17,JPN,Fukuyama,0,JPY,-
@@ -1335,26 +1335,26 @@ coffee,Eating,2023/12/17,JPN,Osaka,100,JPY,macdonald
 waffle,Eating,2023/12/17,JPN,Osaka,190,JPY,-
 seisyun 18 Ticket,Ticket,2023/12/17,JPN,Osaka,12050,JPY,-
 overglass,Shopping,2023/12/17,JPN,Osaka,3250,JPY,-
-mee up with yo san and talked for 3hours,Accident,2023/12/17,JPN,Osaka,0,JPY,-
+mee up with yo san and talked for 3hours,Event,2023/12/17,JPN,Osaka,0,JPY,-
 biwako,Walking,2023/12/19,JPN,Hikone,0,JPY,-
-mee up with my friend,Accident,2023/12/19,JPN,Hikone,0,JPY,-
-1st day of seisyun 18 Ticket,Accident,2023/12/19,JPN,Hikone,0,JPY,-
+mee up with my friend,Event,2023/12/19,JPN,Hikone,0,JPY,-
+1st day of seisyun 18 Ticket,Event,2023/12/19,JPN,Hikone,0,JPY,-
 gyudon,Eating,2023/12/19,JPN,Nagoya,460,JPY,-
-2nd day of seisyunn 18 Ticket,Accident,2023/12/21,JPN,Nagoya,0,JPY,-
+2nd day of seisyunn 18 Ticket,Event,2023/12/21,JPN,Nagoya,0,JPY,-
 Suwa taisya harusya shrine,Visiting,2023/12/21,JPN,Suwa,0,JPY,-
 Suwa taisya akisya shrine,Visiting,2023/12/21,JPN,Suwa,0,JPY,-
-3th day of seisyunn 18 Ticket,Accident,2023/12/22,JPN,Suwa,0,JPY,-
+3th day of seisyunn 18 Ticket,Event,2023/12/22,JPN,Suwa,0,JPY,-
 takeda jinjya shrine,Visiting,2023/12/22,JPN,Kofu,0,JPY,-
 kofu castle,Visiting,2023/12/22,JPN,Kofu,0,JPY,-
 Chichibu jinnjya shrine,Visiting,2023/12/22,JPN,Chichibu,0,JPY,-
 coroqetto soba,Eating,2023/12/22,JPN,Hachioji,530,JPY,-
 Cream puffs,Eating,2023/12/22,JPN,Hachioji,160,JPY,-
-meet up with sasa san,Accident,2023/12/22,JPN,Shibuya,0,JPY,-
+meet up with sasa san,Event,2023/12/22,JPN,Shibuya,0,JPY,-
 Tokyo national museum,Visiting,2023/12/23,JPN,Ueno,1000,JPY,-
 sumidagawa river,Walking,2023/12/23,JPN,Akabane,0,JPY,-
 yakisoba,Eating,2023/12/23,JPN,Kamakura,400,JPY,-
 Washing fee,Washing,2023/12/23,JPN,Kamakura,550,JPY,-
-4th day of seisyunn 18 Ticket,Accident,2023/12/24,JPN,Kamakura,0,JPY,-
+4th day of seisyunn 18 Ticket,Event,2023/12/24,JPN,Kamakura,0,JPY,-
 tsuruokahachimangu shrine,Visiting,2023/12/24,JPN,Kamakura,0,JPY,-
 Jaxa Tsukuba center,Museum,2023/12/24,JPN,Tsukuba,0,JPY,-
 lake kasumigaura,Walking,2023/12/24,JPN,Tsuchiura,0,JPY,-
@@ -1365,10 +1365,10 @@ onsen manjyu,Eating,2023/12/25,JPN,Hakone,80,JPY,-
 Odawara beach,Walking,2023/12/25,JPN,Odawara,0,JPY,-
 Odawara castle,Visiting,2023/12/25,JPN,Odawara,0,JPY,-
 Hakone mountain,Walking,2023/12/25,JPN,Hakone,0,JPY,-
-5th day of seisyunn 18 Ticket,Accident,2023/12/26,JPN,Hakone,0,JPY,-
+5th day of seisyunn 18 Ticket,Event,2023/12/26,JPN,Hakone,0,JPY,-
 anmaki,Eating,2023/12/26,JPN,Toyohashi,210,JPY,-
-I started resort PartTimeJob,Accident,2024/1/12,JPN,Atami,0,JPY,-
-I finished resort PartTimeJob,Accident,2024/2/28,JPN,Atami,0,JPY,-
+I started resort PartTimeJob,Other,2024/1/12,JPN,Atami,0,JPY,-
+I finished resort PartTimeJob,Other,2024/2/28,JPN,Atami,0,JPY,-
 miyashima entry fee,Tax,2024/4/1,JPN,Hiroshima,100,JPY,-
 istsukushima jinnjya shrine,Visiting,2024/4/1,JPN,Hiroshima,300,JPY,-
 gozasouro x 2,Eating,2024/4/1,JPN,Himeji,220,JPY,-
@@ -1423,7 +1423,7 @@ bread X 2,Eating,2024/4/10,TUR,Erzurum,30,TRY,-
 Washing fee,Washing,2024/4/10,GEO,batumi,5,GEL,-
 dinner,Eating,2024/4/10,GEO,batumi,15,GEL,-
 juice,Eating,2024/4/10,GEO,batumi,3,GEL,-
-Meet with an old Japanese,Accident,2024/4/10,GEO,batumi,0,GEL,-
+Meet with an old Japanese,Event,2024/4/10,GEO,batumi,0,GEL,-
 bread,Eating,2024/4/11,GEO,batumi,3,GEL,-
 coffee,Eating,2024/4/11,GEO,batumi,1,GEL,-
 bread,Eating,2024/4/11,GEO,batumi,3,GEL,-
@@ -1444,11 +1444,11 @@ armenia pizza,Eating,2024/4/13,ARM,Yerevan,1300,AMD,restrant
 beer,Eating,2024/4/13,ARM,Yerevan,500,AMD,restrant
 bread,Eating,2024/4/13,ARM,Yerevan,200,AMD,restrant
 water,Eating,2024/4/13,ARM,Yerevan,140,AMD,-
-meet up with a young Japanese,Accident,2024/4/13,ARM,Yerevan,0,AMD,-
+meet up with a young Japanese,Event,2024/4/13,ARM,Yerevan,0,AMD,-
 bread,Eating,2024/4/14,ARM,Sevan,200,AMD,-
 bread,Eating,2024/4/14,ARM,Sevan,240,AMD,-
 lake sevan,Eating,2024/4/14,ARM,Sevan,240,AMD,-
-I was taken a car,Accident,2024/4/14,ARM,Sevan,0,AMD,-
+I was taken a car,Event,2024/4/14,ARM,Sevan,0,AMD,-
 supermarket,Eating,2024/4/14,ARM,Gyumri,400,AMD,-
 supermarket,Eating,2024/4/14,ARM,Gyumri,890,AMD,-
 beer,Eating,2024/4/14,ARM,Gyumri,400,AMD,-
