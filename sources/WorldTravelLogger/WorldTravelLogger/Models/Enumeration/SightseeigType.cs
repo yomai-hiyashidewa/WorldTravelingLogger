@@ -29,11 +29,32 @@ namespace WorldTravelLogger.Models.Enumeration
         Nature,         // 自然
         Canal,          // 運河
         Park,           // 公園
+        Restaurant,     // レストラン
+        Eatery,         // 食堂
+        Stand,          // 屋台
+        Bakery,         // ベーカリー
+        BugerShop,      // バーガーショップ
+        ChainStore,     // チェーン店
+        Cafe,           // カフェ
+        Bar,            // バー
+        Food,           // 食料品
+        Drink,          // 飲料
+        Snack,          // お菓子
+        InnBreakfast,   // 朝食
+        InnDinner,      // 夕食
+        Transportfood,  // 移動中の食事
+        Tourfood,       // ツアー中の食事
+        Fesfood,        // 祭りの食事
+        Supermarket,    // スーパーマーケット
+        Sovnir,         // お土産
+
+
 
         // other
         Insurance,      // 保険
         Ticket,         // チケット
         Accident,       // アクシデント
+        Event,          // イベント
         Other,          // その他
         Shopping,       // 買い物
         Medical,        // 医療費

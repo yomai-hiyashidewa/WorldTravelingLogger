@@ -26,7 +26,7 @@
                 <Border Visibility="{Binding EnableImage,Converter={StaticResource BooleanToVisibility}}" BorderThickness="1" BorderBrush="Black" HorizontalAlignment="Center" VerticalAlignment="Center">
                     <Image Width="22" Height="15" Source="{Binding CountryFlagPath}"/>
                 </Border>
-                <TextBlock Margin="10,0,10,0" Text="{Binding Type,Converter={StaticResource EnumDisplayConv}}" />
+                <TextBlock Margin="10,0,10,0" Text="{Binding Type,Converter={StaticResource EnumDisplayConv}}" TextTrimming="CharacterEllipsis" />
             </DockPanel>
             <TextBlock Grid.Column="2" HorizontalAlignment="Right" VerticalAlignment="Bottom" Text="{Binding StartDate}"/>
         </Grid>
