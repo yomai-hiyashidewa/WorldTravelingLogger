@@ -396,7 +396,7 @@ namespace WorldTravelLogger.Models.List
             double sum = 0;
             foreach (var model in hSet_.OfType<TransportationTypeModel>())
             {
-                sum += model.TotalDistance;
+                sum += model.GetTotalDistance();
             }
             return sum;
         }
@@ -406,7 +406,7 @@ namespace WorldTravelLogger.Models.List
             int sum = 0;
             foreach (var model in hSet_.OfType<TransportationTypeModel>())
             {
-                sum += model.TotalTime;
+                sum += model.GetTotalTime();
             }
             return sum;
         }
