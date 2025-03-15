@@ -43,13 +43,13 @@
                                             <TextBlock HorizontalAlignment="Left" VerticalAlignment="Center" Text="{Binding EndRegion}" />
 
                                         </StackPanel>
-                                        <StackPanel Visibility="{Binding IsRouteDeparture,Converter={StaticResource BooleanToVisibility}}">
-                                            <TextBlock HorizontalAlignment="left" VerticalAlignment="Center" FontWeight="Bold" Text="{Binding StartRegion}" />
-                                            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" Text="{Binding DateString}"/>
+                                        <StackPanel HorizontalAlignment="Right" Visibility="{Binding IsRouteDeparture,Converter={StaticResource BooleanToVisibility}}">
+                                            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" Text="{Binding StartRegion}" />
+                                            <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center" FontWeight="Bold" Text="{Binding DateString}"/>
                                         </StackPanel>
                                         
                                         <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" FontWeight="Bold" Visibility="{Binding IsRouteArrival,Converter={StaticResource BooleanToVisibility}}"
-                                                       Text="{Binding DateString}"/>
+                                                       Text="{Binding EndDateString}"/>
                                     </Grid>
                                 </DataTemplate>
                             </ListView.ItemTemplate>
