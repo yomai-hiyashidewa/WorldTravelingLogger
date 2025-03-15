@@ -37,7 +37,7 @@
             <ComboBox HorizontalAlignment="Right"
                       IsEnabled="{Binding EnableCurrentSightseeingType}"
                       ItemsSource="{Binding CurrentSightseeingTypes}" 
-                      SelectedItem="{Binding CurrentSightSeeingType,Mode=TwoWay}"/>
+                      SelectedItem="{Binding CurrentSightseeingType,Mode=TwoWay}"/>
             <DataGrid Grid.Row="1" 
                       HorizontalScrollBarVisibility="Auto"
                       AutoGenerateColumns="False" 

@@ -14,12 +14,12 @@ using WorldTravelLogger.Models.Context;
 
 namespace WorldTravelLogger.Models.List
 {
-    public class SightSeeingList : BaseContextList
+    public class SightseeingList : BaseContextList
     {
 
-        public SightseeigType CurrentSightSeeingType { get; set; }
+        public SightseeigType CurrentSightseeingType { get; set; }
 
-        public SightSeeingList()
+        public SightseeingList()
         {
             
         }
@@ -39,7 +39,7 @@ namespace WorldTravelLogger.Models.List
                         break;
                     // type
                     case 1:
-                        var sType = base.ConvertSightSeeingType(str);
+                        var sType = base.ConvertSightseeingType(str);
                         flag = sType == null;
                         break;
                     // date
@@ -102,7 +102,7 @@ namespace WorldTravelLogger.Models.List
                         break;
                     // type
                     case 1:
-                        sType = base.ConvertSightSeeingType(str);
+                        sType = base.ConvertSightseeingType(str);
                         break;
                     // date
                     case 2:
@@ -151,15 +151,15 @@ namespace WorldTravelLogger.Models.List
 
         private void SetCurrentSightSeingType()
         {
-            if (!base.ContainType(CurrentSightSeeingType.ToString()))
+            if (!base.ContainType(CurrentSightseeingType.ToString()))
             {
                 var tModel = hSet_.FirstOrDefault();
                 if (tModel != null)
                 {
-                    var type = base.ConvertSightSeeingType(tModel.Type);
+                    var type = base.ConvertSightseeingType(tModel.Type);
                     if (type != null)
                     {
-                        CurrentSightSeeingType = (SightseeigType)type;
+                        CurrentSightseeingType = (SightseeigType)type;
                     }
                 }
             }
@@ -238,7 +238,7 @@ namespace WorldTravelLogger.Models.List
                 var list = new List<SightseeigType>();
                 foreach (var model in hSet_)
                 {
-                    var type = base.ConvertSightSeeingType(model.Type);
+                    var type = base.ConvertSightseeingType(model.Type);
                     if (type != null)
                     {
                         list.Add((SightseeigType)type);

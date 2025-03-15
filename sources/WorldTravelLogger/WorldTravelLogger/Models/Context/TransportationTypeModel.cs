@@ -12,77 +12,130 @@ namespace WorldTravelLogger.Models.Context
     public class TransportationTypeModel : BaseTypeModel
     {
 
-        public double TotalDistance { get; private set; }
-        public int TotalTime { get; private set; }
+        private double totalDistance_;
+        private int totalTime_;
 
-        public double MaxDistance { get; private set; }
+        private double maxDistance_;
 
-        public double MinDistance { get; private set; }
+        private double minDistance_;
 
-        public int MaxTime { get; private set; }
+        private int maxTime_;
 
-        public int MinTime { get; private set; }
+        private int minTime_;
+
+        public string TotalDistance
+        {
+            get
+            {
+                return totalDistance_.ToString("F1") + " km";
+            }
+        }
+        public string TotalTime
+        {
+            get
+            {
+                return totalTime_.ToString() + " min";
+            }
+        }
+
+        public string MaxDistance
+        {
+            get
+            {
+                return maxDistance_.ToString("F1") + " km";
+            }
+        }
+
+        public string MinDistance
+        {
+            get
+            {
+                return minDistance_.ToString("F1") + " km";
+            }
+        }
+
+        public string MaxTime
+        {
+            get { return maxTime_.ToString() + " min"; }
+        }
+
+        public string MinTime
+        {
+            get { return minTime_.ToString() + " min"; }
+        }
+
+        public double GetTotalDistance()
+        {
+            return totalDistance_;
+        }
+
+        public int GetTotalTime()
+        {
+            return totalTime_;
+        }
 
         public TransportationTypeModel(Transportationtype type) : 
             base(type.ToString())
         {
-            TotalDistance = 0.0;
-            TotalTime = 0;
-            MaxDistance = 0.0;
-            MinDistance = 0.0;
-            MaxTime = 0;
-            MinTime = 0;
+            totalDistance_ = 0.0;
+            totalTime_ = 0;
+            maxDistance_ = 0.0;
+            minDistance_ = 0.0;
+            maxTime_ = 0;
+            minTime_ = 0;
         }
 
         public void SetParameter(double distance, int time)
         {
-            TotalDistance += distance;
-            TotalTime += time;
-            if (MaxDistance == 0 || MaxDistance < distance)
+            totalDistance_ += distance;
+            totalTime_ += time;
+            if (maxDistance_ == 0 || maxDistance_ < distance)
             {
-                MaxDistance = distance;
+                maxDistance_ = distance;
             }
-            if (MinDistance == 0 || MinDistance < MinCost)
+            if (minDistance_ == 0 || minDistance_ < MinCost)
             {
-                MinDistance = distance;
+                minDistance_ = distance;
             }
-            if (MaxTime == 0 || MaxTime < time)
+            if (maxTime_ == 0 || maxTime_ < time)
             {
-                MaxTime = time;
+                maxTime_ = time;
             }
-            if (MinTime == 0 || MinTime < time)
+            if (minTime_ == 0 || minTime_ < time)
             {
-                MinTime = time;
+                minTime_ = time;
             }
         }
 
 
-        public double AveDistance
+        public string AveDistance
         {
             get
             {
                 if(Count > 0)
                 {
-                    return TotalDistance / Count;
+                    var ave = totalDistance_ / Count;
+                    return ave.ToString("F1") + " km";
                 }
                 else
                 {
-                    return 0;
+                    return "0 km";
                 }
             }
         }
 
-        public double AveTime
+        public string AveTime
         {
             get
             {
                 if (Count > 0)
                 {
-                    return TotalTime / Count;
+                    var ave = totalTime_ / Count;
+                    return ave.ToString("F1") + " min";
                 }
                 else
                 {
-                    return 0;
+                    return "0 min";
                 }
             }
         }

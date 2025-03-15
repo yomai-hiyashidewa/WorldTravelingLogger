@@ -13,7 +13,7 @@ namespace WorldTravelLogger.Models.Enumeration
         // transportation
         TransportationList,
         // sightseeing
-        SightSeeingList,
+        SightseeingList,
         // exchange rate
         ExchangeRateList,
         // image list

@@ -51,7 +51,7 @@ namespace WorldTravelLogger.ViewModels
                 }
                 if (Path.Exists(model_.SightseeingPath))
                 {
-                    list.Add(ListType.SightSeeingList);
+                    list.Add(ListType.SightseeingList);
                 }
                 if (Path.Exists(model_.ExchangeRatePath))
                 {

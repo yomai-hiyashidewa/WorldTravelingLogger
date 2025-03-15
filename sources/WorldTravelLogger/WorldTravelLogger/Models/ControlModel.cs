@@ -182,7 +182,7 @@ namespace WorldTravelLogger.Models
                 if (isWithCrossBorder_ != value)
                 {
                     isWithCrossBorder_ = value;
-                    InitDate();
+                    //InitDate();
                     FireControlChanged();
                 }
             }

@@ -46,15 +46,17 @@ namespace WorldTravelLogger.Models
 
         private void InitSightseeing()
         {
-            var sightseeings = (SightSeeingList)listDic_[ContextListType.SightSeeingList];
+            var sightseeings = (SightseeingList)listDic_[ContextListType.SightseeingList];
             var others = (OtherList)listDic_[ContextListType.Other];
+            // otherも初期化
+            others.Init();
             others.ImportOthers(sightseeings.ExportOthers());
-            SetExchangeRate(ContextListType.SightSeeingList);
+            SetExchangeRate(ContextListType.SightseeingList);
             SetExchangeRate(ContextListType.Other);
 
             SetCountries();
             SetDate();
-            CalcList(ContextListType.SightSeeingList,false);
+            CalcList(ContextListType.SightseeingList,false);
             CalcList(ContextListType.Other,true);
         }
 
@@ -122,8 +124,8 @@ namespace WorldTravelLogger.Models
                 case ListType.TransportationList:
                     result = ContextListType.TransportationList;
                     break;
-                case ListType.SightSeeingList:
-                    result = ContextListType.SightSeeingList;
+                case ListType.SightseeingList:
+                    result = ContextListType.SightseeingList;
                     break;
             }
             return result;
@@ -139,7 +141,7 @@ namespace WorldTravelLogger.Models
 
         private void InitList(ContextListType type)
         {
-            if (type == ContextListType.SightSeeingList)
+            if (type == ContextListType.SightseeingList)
             {
                 InitSightseeing();
             }
@@ -188,7 +190,7 @@ namespace WorldTravelLogger.Models
             listDic_ = new Dictionary<ContextListType, IContextList>();
             listDic_.Add(ContextListType.AccommodationList, new AccommodationList());
             listDic_.Add(ContextListType.TransportationList, new TransportationList());
-            listDic_.Add(ContextListType.SightSeeingList, new SightSeeingList());
+            listDic_.Add(ContextListType.SightseeingList, new SightseeingList());
             listDic_.Add(ContextListType.Other, new OtherList());
 
             countriesAndRegions_ = new Dictionary<CountryType, HashSet<string>>();
@@ -205,7 +207,7 @@ namespace WorldTravelLogger.Models
             {
                 case ListType.AccommodationList:
                 case ListType.TransportationList:
-                case ListType.SightSeeingList:
+                case ListType.SightseeingList:
                     LoadList(e.Type);
                     break;
                 case ListType.ExchangeRateList:
@@ -246,7 +248,7 @@ namespace WorldTravelLogger.Models
             }
             LoadList(ListType.AccommodationList);
             LoadList(ListType.TransportationList);
-            LoadList(ListType.SightSeeingList);
+            LoadList(ListType.SightseeingList);
             LoadExchange();
         }
 
@@ -540,9 +542,9 @@ namespace WorldTravelLogger.Models
 
 
 
-        public SightSeeingList GetSightSeeingList()
+        public SightseeingList GetSightseeingList()
         {
-            return (SightSeeingList)listDic_[ContextListType.SightSeeingList];
+            return (SightseeingList)listDic_[ContextListType.SightseeingList];
         }
 
         public OtherList GetOtherList()

@@ -20,6 +20,7 @@
         <DataGrid Grid.Row="0" 
                   AutoGenerateColumns="False" 
                   IsReadOnly="True"
+                  FrozenColumnCount="1"
                   ItemsSource="{Binding TypeTransportations}">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Type" Binding="{Binding Type}"/>
@@ -54,7 +55,7 @@
                       ItemsSource="{Binding Transportations}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="start date" Binding="{Binding DateString}"/>
-                    <DataGridTextColumn Header="start country" Binding="{Binding Country,Converter={StaticResource EnumDisplayConv}}" />
+                    <!--<DataGridTextColumn Header="start country" Binding="{Binding Country,Converter={StaticResource EnumDisplayConv}}" />-->
                     <DataGridTextColumn Header="start region" Binding="{Binding Region}"/>
                     <DataGridTextColumn Header="start place" Binding="{Binding StartPlace}"/>
                     <DataGridTextColumn Header="end region" Binding="{Binding EndRegion}"/>
@@ -65,7 +66,7 @@
                     <DataGridTextColumn Header="time" Binding="{Binding Time}"/>
                     <DataGridTextColumn Header="Yen cost" Binding="{Binding JPYPriceString}"/>
                     <DataGridTextColumn Header="end date" Binding="{Binding EndDateString}" />
-                    <DataGridTextColumn Header="end country" Binding="{Binding EndCountry,Converter={StaticResource EnumDisplayConv}}" />
+                    <!--<DataGridTextColumn Header="end country" Binding="{Binding EndCountry,Converter={StaticResource EnumDisplayConv}}" />-->
                     <DataGridTextColumn Header="memo" Binding="{Binding Memo}" />
                 </DataGrid.Columns>
             </DataGrid>

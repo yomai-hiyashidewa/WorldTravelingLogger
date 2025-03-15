@@ -8,13 +8,18 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
+        <Grid.Resources>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibility"/>
+        </Grid.Resources>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <parts:RouteCountryViewPanel x:Name="arrivals"/>
+        <parts:RouteCountryViewPanel x:Name="arrivals" 
+                                     Visibility="{Binding IsWithCrossBorder, Converter={StaticResource BooleanToVisibility}}" />
         <parts:RouteRegionsViewPanel Grid.Column="1" x:Name="regions"/>
-        <parts:RouteCountryViewPanel Grid.Column="2" x:Name="departures"/>
+        <parts:RouteCountryViewPanel Grid.Column="2" x:Name="departures"
+                                     Visibility="{Binding IsWithCrossBorder, Converter={StaticResource BooleanToVisibility}}"/>
     </Grid>
 </UserControl>

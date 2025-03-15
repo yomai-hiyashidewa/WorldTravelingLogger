@@ -13,13 +13,13 @@ using WorldTravelLogger.ViewModels.Base;
 
 namespace WorldTravelLogger.ViewModels
 {
-    public class SightSeeingViewModel : BaseContextListViewModel
+    public class SightseeingViewModel : BaseContextListViewModel
     {
-        SightSeeingList list_;
+        SightseeingList list_;
 
 
 
-        public SightSeeingViewModel(SightSeeingList list, ControlModel control):
+        public SightseeingViewModel(SightseeingList list, ControlModel control):
              base(control)
         {
             list_ = list;
@@ -39,7 +39,7 @@ namespace WorldTravelLogger.ViewModels
         {
             this.RaisePropertyChanged("TypeSightseeings");
             this.RaisePropertyChanged("CurrentSightseeingTypes");
-            this.RaisePropertyChanged("CurrentSightSeeingType");
+            this.RaisePropertyChanged("CurrentSightseeingType");
             this.RaisePropertyChanged("EnableCurrentSightseeingType");
             this.RaisePropertyChanged("Sightseeings");
 
@@ -59,17 +59,17 @@ namespace WorldTravelLogger.ViewModels
 
 
 
-        public SightseeigType CurrentSightSeeingType
+        public SightseeigType CurrentSightseeingType
         {
             get
             {
-                return list_.CurrentSightSeeingType;
+                return list_.CurrentSightseeingType;
             }
             set
             {
-                if (list_.CurrentSightSeeingType != value)
+                if (list_.CurrentSightseeingType != value)
                 {
-                    list_.CurrentSightSeeingType = value;
+                    list_.CurrentSightseeingType = value;
                     this.RaisePropertyChanged("Sightseeings");
                 }
             }
@@ -99,7 +99,7 @@ namespace WorldTravelLogger.ViewModels
             get
             {
                 return list_.GetCalcs(control_.IsCountryRegion).OfType<SightseeingModel>().
-                   Where(m => m.SightseeigType == list_.CurrentSightSeeingType).ToArray();
+                   Where(m => m.SightseeigType == list_.CurrentSightseeingType).ToArray();
             }
         }
 

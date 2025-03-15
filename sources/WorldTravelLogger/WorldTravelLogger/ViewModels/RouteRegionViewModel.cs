@@ -64,7 +64,7 @@ namespace WorldTravelLogger.ViewModels
                 var date = transportationList_.GetRoute(control_.CurrentCountryType).FirstOrDefault();
                 if(date != null)
                 {
-                    return date.DateString;
+                    return date.EndDateString;
                 }
                 else
                 {
@@ -80,7 +80,7 @@ namespace WorldTravelLogger.ViewModels
                 var date = transportationList_.GetRoute(control_.CurrentCountryType).LastOrDefault();
                 if (date != null)
                 {
-                    return date.EndDateString;
+                    return date.DateString;
                 }
                 else
                 {

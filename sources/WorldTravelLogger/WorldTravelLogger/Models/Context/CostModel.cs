@@ -60,7 +60,7 @@ namespace WorldTravelLogger.Models.Context
             get
             {
                 return CurrencyConverter.GetCurrencyStr(currencytype_,
-                  costs_[ContextListType.SightSeeingList]);
+                  costs_[ContextListType.SightseeingList]);
 
             }
         }

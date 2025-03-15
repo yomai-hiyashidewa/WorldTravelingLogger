@@ -11,139 +11,122 @@ namespace WorldTravelLogger.Models.Enumeration
     // https://ja.wikipedia.org/wiki/ISO_4217
     public enum CurrencyType
     {
-        [Display(Name = "yen")]
+        [Display(Name = "¥")]
         JPY,    // 日本円
-        [Display(Name = "Euro")]
+        [Display(Name = "€")]
         EUR,    // ユーロ
         // ドル
-        [Display(Name = "US dollar")]
+        [Display(Name = "$")]
         USD,    // アメリカドル
-        [Display(Name = "A dollar")]
+        [Display(Name = "A$")]
         AUD,    // オーストラリアドル
-        [Display(Name = "C dollar")]
+        [Display(Name = "C$")]
         CAD,    // カナダドル
-        [Display(Name = "B dollar")]
+        [Display(Name = "B$")]
         BZD,    // ベリーズドル
-        [Display(Name = "NT dollar")]
+        [Display(Name = "NT$")]
         TWD,    // 新台湾ドル
-        [Display(Name = "HK dollar")]
+        [Display(Name = "HK$")]
         HKD,    // 香港ドル
         // ペソ
-        [Display(Name = "M peso")]
+        [Display(Name = "M$")]
         MXP,    // メキシコペソ
-        [Display(Name = "C peso")]
+        [Display(Name = "C$")]
         CUP,    // キューバペソ
-        [Display(Name = "Arpeso")]
+        [Display(Name = "Ar$")]
         ARS,    // アルゼンチンペソ
-        [Display(Name = "U peso")]
+        [Display(Name = "U$")]
         UYU,    // ウルグアイペソ
-        [Display(Name = "CO peso")]
+        [Display(Name = "CO$")]
         COP,    // コロンビアペソ
-        [Display(Name = "CL peso")]
+        [Display(Name = "CL$")]
         CLP,    // チリペソ
-        [Display(Name = "P peso")]
+        [Display(Name = "₱")]
         PHP,    // フィリピンペソ
 
         // ポンド
-        [Display(Name = "UK Pound")]
+        [Display(Name = "£")]
         GBP,    // イギリスポンド
-        [Display(Name = "E pound")]
+        [Display(Name = "E£")]
         EGP,    // エジプトポンド
 
         // ディルハム
-        [Display(Name = "UAE dirham")]
+        [Display(Name = "UAED")]
         AED,    // UAEディルハム
-        [Display(Name = "M dirham")]
+        [Display(Name = "MAD")]
         MAD,    // モロッコディルハム
 
         // クローナ
-        [Display(Name = "D krone")]
+        [Display(Name = "Dkr")]
         DKK,    // デンマーククローネ
-        [Display(Name = "I króna")]
+        [Display(Name = "Ikr")]
         ISK,    // アイスランドクローナ
-        [Display(Name = "S krona ")]
+        [Display(Name = "Skr")]
         SEK,    // スウェーデンクローナ
-        [Display(Name = "N krone")]
+        [Display(Name = "Nkr")]
         NOK,    // ノルウェークローネ
 
         // ディナール
-        [Display(Name = "S dinar")]
+        [Display(Name = "Sдин.")]
         RSD,    // セルビアディナール
-        [Display(Name = "T dinar")]
+        [Display(Name = "TD")]
         TND,    // チュニジアディナール
-        [Display(Name = "M denar")]
+        [Display(Name = "Mден")]
         MKD,    // マケドニア・デナール
 
         // レイ
-        [Display(Name = "M leu")]
+        [Display(Name = "L")]
         MDL,    // モルドバレイ
-        [Display(Name = "R leu")]
+        [Display(Name = "lei")]
         RON,    // ルーマニアレイ
 
-
-        [Display(Name = "lek")]
+        [Display(Name = "L")]
         ALL,    // アルバニアレク
-        [Display(Name = "dram")]
+        [Display(Name = "֏")]
         AMD,    // アルメニアドラム
-       
-        [Display(Name = "rupee")]
+        [Display(Name = "₹")]
         INR,    // インドルピー
-        [Display(Name = "U sum")]
+        [Display(Name = "лв")]
         UZS,    // ウズベキスタンスム
-       
-       
-        [Display(Name = "quetzal")]
+        [Display(Name = "Q")]
         GTQ,    // グアテマラケツァル
-       
-        [Display(Name = "colon")]
+        [Display(Name = "₡")]
         CRC,    // コスタリカコロン
-       
-        [Display(Name = "lari")]
+        [Display(Name = "₾")]
         GEL,    // ジョージアラリ
-        [Display(Name = "franc")]
+        [Display(Name = "CHF")]
         CHF,    // スイスフラン
-        
-        
-        [Display(Name = "koruna")]
+        [Display(Name = "Kč")]
         CZK,    // チェココルナ
-      
-        
-        [Display(Name = "lira")]
+        [Display(Name = "₺")]
         TRY,    // トルコリラ
-        [Display(Name = "córdoba")]
+        [Display(Name = "C$")]
         NIO,    // ニカラグアコルドバオロ
-        [Display(Name = "forint")]
+        [Display(Name = "Ft")]
         HUF,    // ハンガリーフォリント
-        [Display(Name = "guaraní")]
+        [Display(Name = "₲")]
         PYG,    // パラグアイグアラニ
-        
-        [Display(Name = "real")]
+        [Display(Name = "R$")]
         BRL,    // ブラジルレアル
-        [Display(Name = "lev")]
+        [Display(Name = "лв")]
         BGN,    // ブルガリアレフ
-        [Display(Name = "đồng")]
+        [Display(Name = "₫")]
         VND,    // ベトナムドン
-        [Display(Name = "sol")]
+        [Display(Name = "S/")]
         PEN,    // ペルーソル
-        [Display(Name = "BH mark")]
+        [Display(Name = "KM")]
         BAM,    // ボスニア・ヘルツェゴビナマルク
-        [Display(Name = "Boliviano")]
+        [Display(Name = "Bs.")]
         BOB,    // ボリビアボリビアノ
-        [Display(Name = "złoty")]
+        [Display(Name = "zł")]
         PLN,    // ポーランドズロチ
-       
-       
-       
-        [Display(Name = "won")]
+        [Display(Name = "₩")]
         KRW,    // 大韓民国ウォン
-       
-
     }
 
     public enum MajorCurrencytype
     {
-
-        [Display(Name = "円")]
+        [Display(Name = "¥")]
         JPN,    // 日本円
         [Display(Name = "$")]
         USD,    // USドル
