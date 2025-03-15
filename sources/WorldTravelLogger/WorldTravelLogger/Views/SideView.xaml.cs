@@ -33,7 +33,9 @@ namespace WorldTravelLogger.Views
             this.DataContext = vm;
         }
 
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
 
-        
+        }
     }
 }

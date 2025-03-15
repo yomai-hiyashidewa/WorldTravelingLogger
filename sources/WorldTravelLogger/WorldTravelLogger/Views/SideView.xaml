@@ -79,7 +79,7 @@ Content="{Binding TotalCalcCountries}"
                             </DataTemplate>
                         </ComboBox.ItemTemplate>
                     </ComboBox>
-                    <CheckBox Content="with cross border" FontSize="13" IsChecked="{Binding IsWithCrossBorder,Mode=TwoWay}"/>
+                    <CheckBox Content="with cross border" FontSize="13" IsChecked="{Binding IsWithCrossBorder,Mode=TwoWay}" Checked="CheckBox_Checked"/>
                     <CheckBox FontSize="15" HorizontalAlignment="Right" VerticalAlignment="Center" Content="{Binding RegionsCount}" IsChecked="{Binding IsRegion,Mode=TwoWay}"/>
                     <GroupBox Header="Excange Rate">
                         <DataGrid AutoGenerateColumns="False" IsReadOnly="True" ItemsSource="{Binding ExchangeRates}">
