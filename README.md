@@ -5,5 +5,4 @@ it's my traveling logger application
 
 please download [here](https://github.com/yomai-hiyashidewa/WorldTravelingLogger/tree/main/Release).
 
-![image](https://github.com/user-attachments/assets/e34f64ee-bd5f-4a34-9ded-d9057d1ed739)
-
+![top2](https://github.com/user-attachments/assets/c77cf895-27ff-4865-84f6-7340387b5927)
